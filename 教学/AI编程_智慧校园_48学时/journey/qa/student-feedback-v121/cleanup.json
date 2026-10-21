@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "本轮作者组装与新目录交接的专属服务",
+  "ports": [
+    8091,
+    5178,
+    23491
+  ],
+  "listenersRemaining": [],
+  "historicalOrSharedServicesStopped": false
+}

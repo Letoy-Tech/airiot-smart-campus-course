@@ -1,0 +1,262 @@
+package edu.campus.course;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.nio.file.Files;
+import java.time.Clock;
+import java.util.*;
+
+@Component
+public class MockCampusProvider implements CampusProvider {
+    private final CatalogReader catalog;
+    private final JsonNode raw;
+    private final JsonNode historyFixture;
+    private final Map<String, JsonNode> historySeries;
+    private final TeachingReadSamples readSamples;
+    private final Clock clock;
+
+    public MockCampusProvider(CatalogReader catalog, ObjectMapper mapper) {
+        this(catalog, mapper, Clock.systemUTC());
+    }
+
+    @Autowired
+    public MockCampusProvider(CatalogReader catalog, ObjectMapper mapper, Clock clock) {
+        this.catalog = catalog;
+        this.clock = clock;
+        raw = catalog.rawPoints();
+        Set<String> refs = new HashSet<>();
+        for (JsonNode p : raw) {
+            var d = device(p.path("deviceId").asText());
+            var t = tag(d, p.path("tagId").asText());
+            if (!p.path("tableId").asText().equals(d.tableId())
+                    || !p.path("unit").asText().equals(t.unit())
+                    || !refs.add(d.id() + "/" + t.id()))
+                throw new IllegalStateException("Invalid teaching point catalog");
+        }
+        JsonNode loaded = null;
+        var path = catalog.directory().resolve("history-cases.json");
+        if (Files.isRegularFile(path)) {
+            try {
+                JsonNode response = mapper.readTree(path.toFile());
+                if (!response.path("code").isIntegralNumber()
+                        || !response.path("code").canConvertToInt()
+                        || response.path("code").intValue() != 0)
+                    throw new IllegalArgumentException();
+                loaded = response.path("data");
+                if (!"TEACHING_MOCK".equals(loaded.path("source").asText())
+                        || !loaded.path("samples").isArray()) throw new IllegalArgumentException();
+                var historyTag =
+                        tag(
+                                device(loaded.path("deviceId").asText()),
+                                loaded.path("tagId").asText());
+                if (!loaded.path("unit").isTextual()
+                        || !historyTag.unit().equals(loaded.path("unit").textValue()))
+                    throw new IllegalArgumentException();
+            } catch (Exception e) {
+                throw new IllegalStateException(
+                        "Invalid teaching history fixture: successful response, source, point,"
+                            + " samples array and matching unit required; samples not relabeled");
+            }
+        }
+        historyFixture = loaded;
+        readSamples = new TeachingReadSamples(catalog, mapper, clock);
+        Map<String, JsonNode> series = new HashMap<>();
+        JsonNode multi = readSamples.read("history-series.json", "MULTI_DEVICE_HISTORY_SAMPLES");
+        if (multi != null) {
+            TeachingReadSamples.require(multi.path("series").isArray());
+            for (JsonNode entry : multi.path("series")) {
+                String deviceId = TeachingReadSamples.text(entry, "deviceId");
+                String tagId = TeachingReadSamples.text(entry, "tagId");
+                var expected = tag(device(deviceId), tagId);
+                TeachingReadSamples.require(entry.path("samples").isArray()
+                        && entry.path("unit").isTextual()
+                        && expected.unit().equals(entry.path("unit").textValue()));
+                String key = deviceId + "/" + tagId;
+                TeachingReadSamples.require(series.putIfAbsent(key, entry) == null);
+                // The original four-point exercise keeps its own unchanged fixture.
+                TeachingReadSamples.require(historyFixture == null
+                        || !key.equals(historyFixture.path("deviceId").asText() + "/"
+                                + historyFixture.path("tagId").asText()));
+                Set<Long> times = new HashSet<>();
+                for (JsonNode sample : entry.path("samples")) {
+                    JsonNode value = sample.get("value");
+                    TeachingReadSamples.require(QualityPolicy.time(sample.get("time"))
+                            && value != null && (value.isNull() || QualityPolicy.value(value))
+                            && times.add(sample.path("time").longValue()));
+                }
+            }
+        }
+        historySeries = Map.copyOf(series);
+    }
+
+    @Override
+    public CatalogReader.Items<CatalogReader.Space> spaces() {
+        return catalog.allSpaces();
+    }
+
+    @Override
+    public CatalogReader.Items<CatalogReader.Device> devices() {
+        return catalog.allDevices();
+    }
+
+    public CatalogReader.Device device(String id) {
+        return devices().items().stream()
+                .filter(d -> d.id().equals(id))
+                .findFirst()
+                .orElseThrow(ApiFailure::missing);
+    }
+
+    public CatalogReader.Tag tag(CatalogReader.Device device, String id) {
+        return device.tags().stream()
+                .filter(t -> t.id().equals(id))
+                .findFirst()
+                .orElseThrow(ApiFailure::missing);
+    }
+
+    @Override
+    public Map<String, Object> latest(String deviceId) {
+        if (deviceId != null) device(deviceId);
+        List<Point> items = new ArrayList<>();
+        List<Issue> issues = new ArrayList<>();
+        for (JsonNode p : raw) {
+            if (deviceId != null && !deviceId.equals(p.path("deviceId").asText())) continue;
+            String q = QualityPolicy.classify(p.get("value"), p.get("time"), spaces().observedAt());
+            String scope = p.path("deviceId").asText() + "/" + p.path("tagId").asText();
+            if (!q.equals("fresh"))
+                issues.add(
+                        new Issue(
+                                "POINT_" + q.toUpperCase(Locale.ROOT),
+                                "Teaching point quality: " + q,
+                                scope));
+            items.add(
+                    new Point(
+                            p.path("deviceId").asText(),
+                            p.path("tableId").asText(),
+                            p.path("tagId").asText(),
+                            QualityPolicy.value(p.get("value"))
+                                    ? p.get("value").doubleValue()
+                                    : null,
+                            QualityPolicy.time(p.get("time")) ? p.get("time").longValue() : null,
+                            q,
+                            p.path("unit").asText()));
+        }
+        return Map.of("items", items, "observedAt", spaces().observedAt(),
+                "queriedAt", clock.millis(), "issues", issues);
+    }
+
+    @Override
+    public History history(String deviceId, String tagId, long from, long to) {
+        return history(deviceId, tagId, from, to, "normal");
+    }
+
+    @Override
+    public History history(String deviceId, String tagId, long from, long to, String scenario) {
+        if (from < 0 || to < from || to > QualityPolicy.MAX_EPOCH || to - from > 21_600_000)
+            throw ApiFailure.bad();
+        var t = tag(device(deviceId), tagId);
+        TeachingReadSamples.scenario(scenario);
+        List<JsonNode> samples = new ArrayList<>();
+        if (scenario.equals("empty")) {
+            // An explicit read-only teaching scenario; it never changes the source fixtures.
+        } else if (historyFixture != null
+                && deviceId.equals(historyFixture.path("deviceId").asText())
+                && tagId.equals(historyFixture.path("tagId").asText()))
+            historyFixture.path("samples").forEach(samples::add);
+        else if (historySeries.containsKey(deviceId + "/" + tagId))
+            historySeries.get(deviceId + "/" + tagId).path("samples").forEach(samples::add);
+        else
+            for (JsonNode p : raw)
+                if (deviceId.equals(p.path("deviceId").asText())
+                        && tagId.equals(p.path("tagId").asText())) samples.add(p);
+        return normalizeHistory(
+                deviceId, tagId, t.unit(), from, to, spaces().observedAt(), clock.millis(), samples);
+    }
+
+    public static History normalizeHistory(
+            String deviceId,
+            String tagId,
+            String unit,
+            long from,
+            long to,
+            long observedAt,
+            List<JsonNode> raw) {
+        return normalizeHistory(deviceId, tagId, unit, from, to, observedAt,
+                Clock.systemUTC().millis(), raw);
+    }
+
+    private static History normalizeHistory(
+            String deviceId, String tagId, String unit, long from, long to,
+            long observedAt, long queriedAt, List<JsonNode> raw) {
+        List<Issue> issues = new ArrayList<>();
+        TreeMap<Long, Sample> samples = new TreeMap<>();
+        for (int i = 0; i < raw.size(); i++) {
+            JsonNode n = raw.get(i), value = n.get("value"), time = n.get("time");
+            if (!QualityPolicy.time(time)
+                    || value == null
+                    || (!value.isNull() && !QualityPolicy.value(value))) {
+                issues.add(
+                        new Issue(
+                                "HISTORY_INVALID_SAMPLE",
+                                "Invalid sample rejected",
+                                "sample[" + i + "]"));
+                continue;
+            }
+            long at = time.longValue();
+            if (at < from || at > to) continue;
+            if (samples.containsKey(at)) {
+                issues.add(
+                        new Issue(
+                                "HISTORY_DUPLICATE_TIME",
+                                "First sample retained",
+                                "sample[" + i + "]"));
+                continue;
+            }
+            samples.put(at, new Sample(at, value.isNull() ? null : value.doubleValue()));
+        }
+        return new History(
+                "TEACHING_MOCK",
+                deviceId,
+                tagId,
+                unit,
+                from,
+                to,
+                observedAt,
+                queriedAt,
+                samples.values().stream().limit(1000).toList(),
+                samples.size() > 1000,
+                List.copyOf(issues));
+    }
+
+    @Override
+    public Map<String, Object> alarms(int limit, int skip) {
+        return alarms(limit, skip, "normal");
+    }
+
+    @Override
+    public Map<String, Object> alarms(int limit, int skip, String scenario) {
+        return readSamples.alarms(limit, skip, scenario);
+    }
+
+    public Map<String, Object> commandAudit(int limit, int skip, String scenario) {
+        return readSamples.audit(limit, skip, scenario);
+    }
+
+    @Override
+    public Map<String, Object> status() {
+        return Map.of(
+                "source",
+                "TEACHING_MOCK",
+                "configured",
+                true,
+                "connected",
+                true,
+                "simulated",
+                true,
+                "observedAt",
+                spaces().observedAt());
+    }
+}

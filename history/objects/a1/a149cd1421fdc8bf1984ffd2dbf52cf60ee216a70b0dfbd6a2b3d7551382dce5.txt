@@ -1,0 +1,34 @@
+@vom 1
+@view 1280x723
+@layers 1 focus=L1
+L1 page
+  RootWebArea "{ \"code\" : 401 , \"message\" : \"未登录：缺少 Bearer 令牌\" , \"data\" : null }"
+    list
+      listitem
+        @e1 link
+      listitem
+        @e2 link "Tree"
+      listitem
+        @e3 link "Chart"
+      listitem
+        @e4 link "JSON Editor"
+      listitem
+        @e5 link "Options" [→ eifflpmocdbdmepbjaopkkhbfmdgijcc]
+    @e6 link "▼" [ctx: Copy path Copy Value { } : , "code" 401 : , "message" "未登录：缺少 Bearer 令牌" : "data" null]
+    list "\"code\" : 401 , \"message\" : \"未登录：缺少 Bearer 令牌\" , \"data\" : null"
+      listitem "\"code\" : 401 ,"
+        StaticText "\"code\""
+        StaticText ":"
+        StaticText "401"
+        StaticText ","
+      listitem "\"message\" : \"未登录：缺少 Bearer 令牌\" ,"
+        StaticText "\"message\""
+        StaticText ":"
+        StaticText "\"未登录：缺少 Bearer 令牌\""
+        StaticText ","
+      listitem "\"data\" : null"
+        StaticText "\"data\""
+        StaticText ":"
+        StaticText "null"
+    StaticText "{"
+    StaticText "}"

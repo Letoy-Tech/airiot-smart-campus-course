@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "stage": 6,
+  "title": "历史与原始报警",
+  "mode": "teacher-db",
+  "goal": "历史表曲线和原始报警只读",
+  "contract": "GET /history固定时间窗口；GET /alarms只读分页；保留原状态/等级",
+  "acceptance": "null断线、0保留；同单位对比；报警有记录/空/失败分开",
+  "businessFiles": [
+    "frontend/src/views/HistoryView.vue",
+    "frontend/src/views/RawAlarmsView.vue"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts",
+    "frontend/src/api/read-models.ts",
+    "frontend/src/types/read-models.ts",
+    "frontend/src/composables/useReadPage.ts"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/HistoryView.vue",
+    "frontend/src/views/RawAlarmsView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808",
+      "bytes": 974,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>历史与原始报警</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>历史与原始报警</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

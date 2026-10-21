@@ -1,0 +1,2295 @@
+{
+  "note": "Originals remain local; these are publication omissions, not validation failures.",
+  "items": [
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/参考工程浏览器实测.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/frontend/validation/initial-browser-diagnostic.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/mobile-devices.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-overview.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-devices.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-case-closed.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-history.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/mobile-owners.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-owners.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/mobile-case-closed.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-cases.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-locations.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/mobile-history.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/full-browser/desktop-case-conflict.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/reader-390.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/reader-1440.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/mobile-ledger.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/desktop-ledger.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/mobile-login.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/desktop-login.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/mobile-failure.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/browser/desktop-failure.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/mobile-ledger.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/desktop-ledger.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/mobile-login.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/desktop-login.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/mobile-failure.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/first-chain-v1/desktop-failure.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch01-01-engineering-cycle.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch06-01-device-wireframe.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch07-03-refresh-lifecycle.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch03-02-local-records-er.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch09-01-state-machine.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/evidence/round5-tools/visual-samples/ch05-01-device-request.png",
+      "action": "withheld",
+      "reason": "unreviewed-screen-pixels"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-06-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-export-reviewed-本组实做记录.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-03-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-02-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-05-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-01-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-06-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-06-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-finder-root.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-input-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-05-original-failed.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-revised-export-reviewed-本组实做记录.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-05-student-note-saved.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-closing-docs-sync.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-finder-backend.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-05-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-revised-export-reviewed-交付说明.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-01-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-06-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-06-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-operator-invalid-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-01-codebuddy-done.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-06-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-operator-focus-check.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-03-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-05-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-06-manual-record.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-reply-mismatch-inspection.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-05-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-06-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-reviewed-交付说明.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-handoff-window.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-context-ack.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-new-chat.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-reviewed-notes_05-历史和报警.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-file-backend_mvnw.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-04-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-06-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-finder-copied.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-06-student-note-saved.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-01-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-05-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-04-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-original-final-sync.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-03-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-06-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-03-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-original-synced.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-06-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-final-source-finder.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-file-compose.yaml.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-06-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-02-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-01-input-data.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-02-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-finder-revised-root.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-new-chat.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-02-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-01-current.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-file-materials_mock-campus.json.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-finder-final-docs.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-06-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-handoff-context-ack.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-partial-after-summary.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-export-reviewed-交付说明.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-reviewed-docs_本组实做记录.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-file-tools_setup-env.mjs.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-reviewed-README.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-05-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/05-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-05-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-03-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-06-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/02-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-context-reply.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/09-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-05-notes-saved.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-04-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-06-attempt1-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-04-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-04-filled-record.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-02-input-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/08-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-05-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-02-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-01-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-05-reviewed-本组实做记录.md.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/04-04-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/01-03-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/10-02-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-04-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-06-submitted-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-01-file-tools_serve.mjs.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-02-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/03-01-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/07-03-input-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-05-actual-remedy-input.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/06-05-actual-remedy-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/11-05-submitted-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/steps/12-03-main-synced.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-ide-terminal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-prefetch-latest.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-prefetch-submitted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-prefetch-buffer.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-agreement-pending.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-ide-terminal-buffer.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-compose-healthy-and-volumes.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-02-original-terminal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-B-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-00-C-services-healthy-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-02-C-database-proof.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-restart-1-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-C-runtime-versions.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-02-C-utf8-database-proof.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-stop-for-visibility-recheck.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-04-C-session-ttl-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-stop-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-A-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-restart-2-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-05-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-final-recovery-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-00-C-mysql-healthy-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-mysql-healthy.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-remedy-live-negatives.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-before-version-remedy-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-A-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-C-accounts-metadata-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-05-B-restarted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-redis-up-actual.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-03-database-start-visible.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/handoff-node22-path.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-01-fixed-existing-env-refusal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-04-C-after-browser-logout-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-03-B-stop-point-failure-check.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-B-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-docker-preflight-complete.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-main-reexport-v4.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-05-C-request-guard-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-03-student-maven-test.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-02-export-boundaries-attempt1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-05-backend-restarted.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-03-B-point-recovery-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-B-test-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-volume-identity.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-02-node-fix-terminal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-00-C-mysql-restore.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-fresh-SQL-counts.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-after-restart-checks.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-B-test-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-B-test-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-stopped-before-start-2.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-A-runtime-version.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-05-C-negative-probe.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-C-live-auth-probe-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-old-stopped-and-project-baseline.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-04-student-test-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-04-C-after-browser-logout.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-redis-start-complete.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-C-database-proof.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-health-diagnostic.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-00-C-service-check.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-B-class-end-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-B-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-mysql-health-fixed-recreate.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-04-backend-stopped-before-change.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-05-new-containers-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-B-runtime.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-04-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-stopped-prompt.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-05-backend-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-mysql-restart-completed.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-B-test-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-final-service-status.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-live-negative-checks.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-03-database-start-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-04-backend-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-05-final-revised-export.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-04-live-space-permissions.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-mysql-recreate-complete.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-00-backend-stopped-before-db.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-00-C-restore.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-final-stopped-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-03-B-point-recovery-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-B-stop-before-auth.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-mysql-initial-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-03-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-redis-runtime-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-03-readonly-sql.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-04-fresh-SQL-closed.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-04-student-maven-test.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-04-live-management-permissions.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-mysql-healthy-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-final-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-06-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-03-C-closed-database-proof.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-03-test-visible-terminal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-redis-restart.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-recovery-ready-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-class-end-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-05-first-final-export.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-C-healthy.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-05-new-A-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-B-runtime-versions.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-03-student-maven-test.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-C-db-and-overview-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-C-accounts-metadata.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-04-backend-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-final-stopped-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-stop-before-mysql.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-01-env-created-terminal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-04-backend-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-00-C-mysql-health.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-mysql-healthy.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-06-A-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-env-generated.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-04-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-03-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-02-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-06-C-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-02-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-02-first-export.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-volume-identity-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-01-env-created.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-02-docker-preflight.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-restart-1-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-recovery-start-1.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-remedy-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-redis-up.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-B-test-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-01-A-running.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-04-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-compose-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-stop-for-stale-check.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-A-class-end-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-services-healthy-final.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-restart-2-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-02-B-final-recovery-start.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-B-test-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-redis-runtime-checks.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-04-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-C-live-auth-probe.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-05-new-B-stopped.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-B-final-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-remedy-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-new-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-06-C-mysql-restart.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-03-handoff-compose-first-up.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-02-export-boundaries-passed.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-02-second-export.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-04-B-stop-before-space-api.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-00-A-restore.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/12-04-fresh-viewer-http-denied.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-03-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-01-existing-env-refusal.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-after-restart-results.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-04-C-session-count-ttl.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-04-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-06-C-class-end-stop.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-02-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-05-B-final-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-00-A-restore.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-01-C-live-db-and-overview.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/10-05-B-ready.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-01-C-services-health.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/11-02-B-tests.ax.txt",
+      "action": "replaced-with-explicit-notice",
+      "reason": "native-desktop-capture"
+    }
+  ]
+}

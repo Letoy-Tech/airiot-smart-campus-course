@@ -1,0 +1,13 @@
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+mysqld  19105 learner   17u  IPv4 0xe5f25275eb243e9d      0t0  TCP 127.0.0.1:23491 (LISTEN)
+java    20012 learner    9u  IPv6 0xc005f746ce790ad1      0t0  TCP 127.0.0.1:8091 (LISTEN)
+node    20163 learner   18u  IPv4 0xc3c1457b50d0a8e9      0t0  TCP 127.0.0.1:5178 (LISTEN)
+p19105
+fcwd
+n/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/.runtime/course-mysql/data
+p20012
+fcwd
+n/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app
+p20163
+fcwd
+n/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/frontend

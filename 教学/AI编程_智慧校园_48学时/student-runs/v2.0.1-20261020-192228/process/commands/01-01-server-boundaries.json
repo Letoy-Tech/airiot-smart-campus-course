@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/.env",
+    "http": 403,
+    "body": "403 该路径不在 frontend 目录的公开范围内。"
+  },
+  {
+    "path": "/.gitignore",
+    "http": 403,
+    "body": "403 该路径不在 frontend 目录的公开范围内。"
+  },
+  {
+    "path": "/materials/约定卡.md",
+    "http": 404,
+    "body": "404 未找到 /materials/%E7%BA%A6%E5%AE%9A%E5%8D%A1.md。"
+  },
+  {
+    "path": "/backend/pom.xml",
+    "http": 404,
+    "body": "404 未找到 /backend/pom.xml。"
+  },
+  {
+    "path": "/api/health",
+    "http": 503,
+    "body": "{\"code\":-1,\"message\":\"后端服务不可用：请确认 127.0.0.1:8098 已启动（终端 B 运行 Spring Boot 后重试）。\",\"data\":null}"
+  }
+]

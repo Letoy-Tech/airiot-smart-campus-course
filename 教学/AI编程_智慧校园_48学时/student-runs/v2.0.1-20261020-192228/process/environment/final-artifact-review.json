@@ -1,0 +1,10 @@
+{
+  "artifactCount": 5,
+  "allZipCrcPassed": true,
+  "allReportLinksResolveInsideEvidenceZip": true,
+  "knownEightLocalCredentialValuesAbsent": true,
+  "frozenV201ArchiveUnchanged": true,
+  "v202BlankStarterFiles": 9,
+  "blankIndexHtmlBytes": 0,
+  "v202StarterChange": "public contract card only; version JSON separate"
+}

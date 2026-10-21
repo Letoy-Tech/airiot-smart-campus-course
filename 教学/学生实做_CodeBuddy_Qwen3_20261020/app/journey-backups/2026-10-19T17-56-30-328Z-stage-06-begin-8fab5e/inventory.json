@@ -1,0 +1,32 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc"
+  },
+  {
+    "path": "frontend/src/views/HistoryView.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/RawAlarmsView.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/api/read-models.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/types/read-models.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/composables/useReadPage.ts",
+    "existed": false
+  }
+]

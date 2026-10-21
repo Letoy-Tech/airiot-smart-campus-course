@@ -1,0 +1,16 @@
+{
+  "compared": 147,
+  "changedExisting": [
+    "frontend/src/views/AuditView.vue",
+    "frontend/src/views/CasesView.vue",
+    "frontend/src/views/DeviceCatalog.vue",
+    "frontend/src/views/EnergyView.vue",
+    "frontend/src/views/HistoryView.vue",
+    "frontend/src/views/OverviewView.vue",
+    "frontend/src/views/OwnersView.vue",
+    "frontend/src/views/RawAlarmsView.vue"
+  ],
+  "testsChanged": [],
+  "publicBackendChanged": [],
+  "apiAndToolsChanged": []
+}

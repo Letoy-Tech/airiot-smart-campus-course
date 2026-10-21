@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-19T14:00:11.407Z",
+  "status": "PASS",
+  "environment": "macOS arm64 / actual localhost HTTP / MySQL 8.4.10 isolated course lab",
+  "source": "TEACHING_MOCK",
+  "externalAiriot": false,
+  "checks": [
+    {
+      "name": "AC01/AC03 full catalogue and explicit mock/zero/missing",
+      "passed": true,
+      "evidence": {
+        "spaces": 4,
+        "devices": 16,
+        "points": 28,
+        "observedAt": 1792303200000,
+        "control": false
+      }
+    },
+    {
+      "name": "AC04 history actual samples and invalid window",
+      "passed": true,
+      "evidence": {
+        "values": [
+          1.2,
+          null,
+          0,
+          1.8
+        ],
+        "nullPreserved": true,
+        "zeroPreserved": true
+      }
+    },
+    {
+      "name": "AC02/AC05 location persistence and independent 400/404/403",
+      "passed": true,
+      "evidence": {
+        "campusId": "d5ec468b-cf5f-4d91-90ab-bf470669ad6a",
+        "buildingId": "3fdc3875-786f-4f1a-ac35-6e16a15fd927",
+        "readAfterWrite": true
+      }
+    },
+    {
+      "name": "AC06/AC07 event lifecycle, independent object denial and idempotent recovery",
+      "passed": true,
+      "evidence": {
+        "id": "d86f6710-3543-47ed-bd32-af1045f5595c",
+        "state": "CLOSED",
+        "version": 6,
+        "timeline": [
+          "DEMO_TRIGGER",
+          "START",
+          "NOTE",
+          "DEMO_RECOVER",
+          "VERIFY_RECOVERY",
+          "CLOSE"
+        ],
+        "bDeniedAndUnchanged": true
+      }
+    },
+    {
+      "name": "AC10 ownership only affects future events and strict versions",
+      "passed": true,
+      "evidence": {
+        "oldEvent": "d86f6710-3543-47ed-bd32-af1045f5595c",
+        "oldAssignee": "manager-a",
+        "newEvent": "82f085b4-9ca1-4695-8794-c7a2ec370eec",
+        "newAssignee": "manager-b",
+        "ownerVersion": 3
+      }
+    },
+    {
+      "name": "server filtering/count/pagination and range rejection",
+      "passed": true,
+      "evidence": {
+        "total": 4,
+        "filteredTotal": 1
+      }
+    },
+    {
+      "name": "AIRIOT honest unconfigured boundary",
+      "passed": true,
+      "evidence": {
+        "configured": false,
+        "connected": false,
+        "controlEnabled": false
+      }
+    }
+  ]
+}

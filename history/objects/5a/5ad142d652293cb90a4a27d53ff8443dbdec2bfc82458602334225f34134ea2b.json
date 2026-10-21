@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-21T00:59:19.041017+08:00",
+  "origin": "http://127.0.0.1:5188",
+  "kind": "operator-live-HTTP-verification",
+  "success": true,
+  "checks": [
+    {
+      "name": "public health",
+      "pass": true,
+      "observation": 200
+    },
+    {
+      "name": "devices need login",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "me needs login",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "invalid token refused",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "wrong password refused",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "unknown user refused",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "uppercase login accepted",
+      "pass": true,
+      "observation": 200
+    },
+    {
+      "name": "token issued without logging",
+      "pass": true,
+      "observation": "present"
+    },
+    {
+      "name": "login identity is database canonical",
+      "pass": true,
+      "observation": {
+        "username": "manager",
+        "role": "MANAGER"
+      }
+    },
+    {
+      "name": "login response has no password fields",
+      "pass": true,
+      "observation": "field names checked"
+    },
+    {
+      "name": "session identity is database canonical",
+      "pass": true,
+      "observation": {
+        "status": 200,
+        "username": "manager",
+        "role": "MANAGER"
+      }
+    },
+    {
+      "name": "authenticated devices",
+      "pass": true,
+      "observation": {
+        "status": 200,
+        "count": 16
+      }
+    },
+    {
+      "name": "unknown and offline preserved",
+      "pass": true,
+      "observation": {
+        "d03": null,
+        "d04": false
+      }
+    },
+    {
+      "name": "logout succeeds",
+      "pass": true,
+      "observation": 200
+    },
+    {
+      "name": "logged out token refused at /api/me",
+      "pass": true,
+      "observation": 401
+    },
+    {
+      "name": "logged out token refused at /api/devices",
+      "pass": true,
+      "observation": 401
+    }
+  ]
+}

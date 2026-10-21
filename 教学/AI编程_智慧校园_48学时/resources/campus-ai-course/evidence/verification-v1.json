@@ -1,0 +1,40 @@
+{
+  "status": "PASS_WITH_EXPLICIT_SCOPE",
+  "version": "1.0",
+  "authorEnvironment": {
+    "os": "macOS",
+    "node": "22.21.1",
+    "java": "17.0.6",
+    "mysql": "8.4.10",
+    "database": "dedicated loopback course lab and test schemas"
+  },
+  "evidence": {
+    "backend": "../backend/evidence/test-summary.json",
+    "mysqlTransactions": "../backend/evidence/mysql-transaction-evidence.json",
+    "runtime": "../backend/evidence/final-runtime-verification.json",
+    "frontend": "../frontend/validation/ROUND4_FRONTEND.md",
+    "browser": "full-browser/verification.json",
+    "fullApi": "full-api/verification.json",
+    "firstChain": "first-chain-v1/verification.json"
+  },
+  "counts": {
+    "backendTests": 29,
+    "frontendTests": 41,
+    "browserGroups": 10,
+    "httpGroups": 7,
+    "firstChainGroups": 6
+  },
+  "scope": [
+    "teacher reference implementation",
+    "database transactions and persistence",
+    "authenticated HTTP and browser interactions"
+  ],
+  "notVerified": [
+    "Windows physical machine",
+    "school teacher remote database",
+    "independent real student reproduction",
+    "classroom duration",
+    "real AIRIOT integration"
+  ],
+  "classroomLabVerified": false
+}

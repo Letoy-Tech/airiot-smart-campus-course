@@ -1,0 +1,369 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI编程 · 第三轮教学资源</title><style>
+:root{--ink:#163343;--muted:#526a76;--line:#d4e3e3;--accent:#14665b;--paper:#f5f8f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}a{color:#145e70;text-underline-offset:4px}button,input,select{font:inherit}header{max-width:1200px;margin:auto;padding:48px 28px 24px}header h1{font-size:clamp(32px,5vw,52px);line-height:1.25;margin:12px 0 18px;letter-spacing:-1px}.eyebrow,.tag{font-size:13px;letter-spacing:1px;color:var(--accent);font-weight:700}.lead{max-width:800px;color:var(--muted);font-size:18px}nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}nav a{border:1px solid var(--line);background:white;padding:8px 13px;border-radius:6px;text-decoration:none}nav a:hover{border-color:var(--accent)}main{max-width:1200px;margin:auto;padding:0 28px 64px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 34px}.card,.document,.preview{background:white;border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}.card b{display:block;font-size:31px;line-height:1.3}.card span{display:block;color:var(--muted);margin-top:7px}.document{margin:25px 0;scroll-margin-top:18px}.document h1{font-size:29px;line-height:1.45}.document h2{font-size:23px;margin-top:30px}.document h3{font-size:19px}.document p,.document li{max-width:100%;overflow-wrap:anywhere}.document blockquote{border-left:3px solid var(--accent);padding-left:16px;color:var(--muted)}.document pre{overflow:auto;padding:17px;background:#112c38;color:#eaf3f0;border-radius:8px;font:14px/1.75 ui-monospace,monospace}.document code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}th{text-align:left;background:#edf4f2}th,td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}td code{white-space:normal}.table-scroll{overflow:auto;max-width:100%}.table-scroll:focus{outline:2px solid var(--accent)}.table-scroll table{min-width:650px}.filters{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}.filters label{display:flex;gap:8px;align-items:center}.filters select{padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:white}.badge{display:inline-block;border-radius:5px;background:#e9f6f0;color:#1b604f;padding:2px 8px;font-size:12px}.unknown{color:#8a6224}.muted{color:var(--muted)}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}.flow div{padding:15px;border-top:4px solid var(--accent);background:#edf5f2;border-radius:4px}.flow b{display:block}.flow small{color:var(--muted)}figure{margin:18px 0}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}figcaption{font-size:14px;color:var(--muted);margin-top:10px}.notice{padding:15px 18px;border-left:4px solid #b77d27;background:#fff6e7;border-radius:0 5px 5px 0}.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.quality-grid>div{padding:16px;background:#f5f8f6;border:1px solid var(--line);border-radius:6px}.quality-grid b{display:block}.quality-grid code{font-size:13px}.footer{font-size:14px;color:var(--muted);padding:16px 0}details{margin:18px 0}summary{cursor:pointer;font-weight:600}@media(max-width:700px){header{padding:28px 18px 16px}main{padding:0 18px 36px}.cards,.quality-grid{grid-template-columns:1fr}.cards{gap:9px}.card{padding:18px}.card b{font-size:25px}.document,.preview{padding:19px}.document h1{font-size:25px}.flow{grid-template-columns:repeat(2,1fr)}.filters{display:block}.filters label{margin:10px 0}nav a{font-size:14px}table{font-size:13px}th,td{padding:10px}.lead{font-size:16px}}
+</style></head><body><header><div class="eyebrow">48 学时 / AI 编程 / V0.4 第三轮资源</div><h1>从教材走到<br>第一条可运行的链路。</h1><p class="lead">为学生自带Windows/macOS电脑、教师提供数据库的课堂准备。先用固定教学数据完成登录与设备读取，再逐章扩展业务。学生使用通义等网页AI工具，无需模型API。</p><nav><a href="../reading/index.html">返回图文教材</a><a href="#preview">运行截图</a><a href="#catalog">查看固定数据</a><a href="#start">启动操作</a><a href="#task">第04章任务</a><a href="#offline">离线AI练习</a><a href="#next">章节资源表</a><a href="#db">教师数据库</a></nav></header><main>
+<div class="cards"><div class="card"><b>1 条真实读取链路</b><span>Vue → Vite代理 → Spring Boot → 固定夹具</span></div><div class="card"><b>2 处学生 TODO</b><span>业务响应解包 · 通信三态标签</span></div><div class="card"><b>6 张离线 AI 练习</b><span>先预测，再审查构造回复，最后记录证据</span></div></div>
+<section class="preview" id="preview"><span class="tag">作者本机实测截图</span><h2>同一条记录，在页面与响应中核对</h2><div class="flow" aria-label="读取链路"><div><b>01 浏览器</b><small>本地登录与设备页</small></div><div><b>02 开发代理</b><small>保留 /api 前缀</small></div><div><b>03 后端</b><small>认证、授权、响应</small></div><div><b>04 夹具文件</b><small>固定时钟与两设备</small></div></div><figure><img src="campus-ai-course/evidence/browser/desktop-ledger.png" alt="作者本机实际运行的设备台账，显示教学模拟来源、固定时钟以及在线和未知两设备"><figcaption>图 R01 · 实际本地浏览器截图，数据为教学模拟；不代表数据库、真实硬件或Windows实机验收。</figcaption></figure><p class="notice">当前仅首次链路实测。教师数据库、完整事件/责任业务、Windows实机、学生独立复现与课堂耗时仍待完成。12章的整体lab_verified仍为false。</p></section>
+<section id="catalog" class="document"><span class="tag">不启动服务也可探索</span><h1>冻结数据：4 空间 · 16 设备 · 28 点</h1><p>下表直接来自本包catalog.json，属于浏览器内的<strong>夹具查看器</strong>；它不请求后端，不能当首次贯通证据。第04章后端仅选一空间两设备，full数据供后续章使用。</p><div class="filters"><label>空间<select id="space"><option value="all">全部空间</option><option value="teaching_space_01">教学空间01（模拟）</option><option value="teaching_space_02">教学空间02（模拟）</option><option value="teaching_space_03">教学空间03（模拟）</option><option value="teaching_space_04">教学空间04（模拟）</option></select></label><label>通信状态<select id="online"><option value="all">全部状态</option><option value="true">在线</option><option value="false">离线</option><option value="null">未知</option></select></label><strong id="count" aria-live="polite"></strong></div><div class="table-scroll" tabindex="0"><table><thead><tr><th>设备 / ID</th><th>空间</th><th>通信状态</th><th>采集点与单位</th></tr></thead><tbody id="devices"></tbody></table></div><h2>质量边界：先预测，再展开</h2><p>以固定观察时刻2026-10-18 14:00（北京时间）计算，不能用电脑当前时间重算这些样例。</p><div class="quality-grid"><div><b>valid-zero</b><code>value=0</code><br><code>Δt=-1000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>零是有效测量，不是缺失</p></details></div><div><b>age-60000ms</b><code>value=24.5</code><br><code>Δt=-60000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>恰好60秒仍新鲜</p></details></div><div><b>age-60001ms</b><code>value=24.5</code><br><code>Δt=-60001ms</code><details><summary>预期质量</summary><span class="badge">stale</span><p>超过60秒才过期</p></details></div><div><b>future-5000ms</b><code>value=24.5</code><br><code>Δt=5000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>恰好5秒仍在容差内</p></details></div><div><b>future-5001ms</b><code>value=24.5</code><br><code>Δt=5001ms</code><details><summary>预期质量</summary><span class="badge">invalid</span><p>超过5秒为无效</p></details></div><div><b>missing-value</b><code>value=null</code><br><code>Δt=-1000ms</code><details><summary>预期质量</summary><span class="badge">missing</span><p>只有值缺失</p></details></div></div><h2>历史中的零和缺失</h2><p>4条原始样本，3个有效数值；null保留断点，0保留为有效测量。不制造没有采样的时刻。下列均为UTC时间。</p><div class="table-scroll" tabindex="0"><table><thead><tr><th>原始时刻（UTC）</th><th>功率 kW</th><th>处理原则</th></tr></thead><tbody><tr><td>2026-10-18T05:46:00.000Z</td><td>1.2</td><td>有限数值</td></tr><tr><td>2026-10-18T05:50:00.000Z</td><td><span class="unknown">null · 断点</span></td><td>保留采样时刻，不补零</td></tr><tr><td>2026-10-18T05:55:00.000Z</td><td>0</td><td>有效零，必须保留</td></tr><tr><td>2026-10-18T05:59:00.000Z</td><td>1.8</td><td>有限数值</td></tr></tbody></table></div><p><a href="campus-ai-course/fixtures/README.md">字段与夹具说明</a> · <a href="campus-ai-course/fixtures/manifest.json">冻结清单</a> · <a href="campus-ai-course/evidence/verification.json">实际验证记录</a></p></section>
+<section id="start" class="document"><span class="tag">可操作材料</span><h1>Windows/macOS 共用启动路径</h1>
+<p>先在教师参考目录跑通，再生成学生工作目录。以下命令均从当前拷贝的工程根目录执行：教师用<code>campus-ai-course/</code>，学生用自己的<code>student-workspace/</code>，不要切回教师参考目录，路径带空格时用双引号。Windows用PowerShell，macOS用终端。不要在原平台<code>system/</code>执行本页命令。</p>
+<h2>一次性准备</h2>
+<p>安装Node22和JDK17；本资源验证基线为Node22.21.1。需要Git。Maven由项目wrapper下载固定版本，不必额外安装全局Maven。第一次安装依赖需要网络；完整离线机房须由教师另行准备并验证依赖缓存，本资料包不捆绑JDK、Node或node_modules。</p>
+<pre><code class="language-text">node --version
+java -version
+git --version
+node tools/course.mjs doctor
+</code></pre>
+<p>doctor检查Node22、JDK17、文件和8091/5178两个端口；不检查教师数据库，也不证明全部实验可运行。运行前必须设置<code>JAVA_HOME</code>到JDK17根目录，让doctor与Maven Wrapper使用同一JDK；不要设成bin目录。Windows PowerShell示例：<code>$env:JAVA_HOME = &quot;C:\你的JDK17根目录&quot;</code>；macOS示例：<code>export JAVA_HOME=&quot;/你的JDK17根目录&quot;</code>。替换为自己的已安装路径，两个启动终端都应设置。示例只修改当前终端环境。</p>
+<p>若在Windows PowerShell中<code>npm</code>脚本受策略限制，使用<code>npm.cmd</code>。本项目的<code>node tools/course.mjs ...</code>内部会选择对应平台入口，无需修改全局脚本执行策略。</p>
+<p>在根目录安装前端依赖并构建：</p>
+<pre><code class="language-text">npm --prefix frontend ci
+node tools/course.mjs init
+node tools/course.mjs build
+</code></pre>
+<p>Windows可将第一行替换为<code>npm.cmd --prefix frontend ci</code>。<code>init</code>为admin、manager-a、manager-b、viewer生成不同随机密码，仅写入<code>.private/accounts.json</code>；用本机编辑器查看。重复执行保留原密码，不打印密码。不要将该文件粘贴给网页AI。</p>
+<p>教师参考工程可以接着运行<code>node tools/course.mjs check</code>；学生起点未填TODO时，其中前端6项任务检查失败是预期。先按第04章操作单补全，再执行check；不要靠关闭测试得到通过。</p>
+<h2>开两个终端</h2>
+<p>终端A，从工程根目录启动后端：</p>
+<pre><code class="language-text">node tools/course.mjs backend
+</code></pre>
+<p>终端B，从同一工程根目录启动前端：</p>
+<pre><code class="language-text">node tools/course.mjs frontend
+</code></pre>
+<p>浏览器打开<code>http://127.0.0.1:5178</code>，用本地账号文件中的用户名和密码登录。全程使用127.0.0.1，避免在localhost与127.0.0.1之间混用会话。后端仅监听127.0.0.1:8091，前端代理<code>/api</code>；浏览器不直连数据库。</p>
+<p>预期：页面明确写教学模拟和固定教学时钟；两设备分别在线、未知。首次链路不会出现“离线”设备；第06章使用full夹具完成页面三态检查。</p>
+<h2>修改与停止</h2>
+<p>前端源码保存后由Vite刷新。后端源码修改后先停止终端A中的进程，再重新build与启动，不能拿旧JAR验证新代码。两个终端分别按Ctrl+C结束各自进程。脚本发现端口被占用会退出，不自动杀进程或修改端口。</p>
+<p>第一次下载较慢并不等于代码失败。先记录失败命令和最后一段不含密码的错误，再交给网页AI分析；禁止让模型通过关闭认证、禁用CSRF或更换真实平台地址“解决”问题。</p>
+<h2>故障定位表</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先看哪里</th>
+<th>处理和证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>doctor提示Node/JDK不符</td>
+<td>node/java版本和JAVA_HOME</td>
+<td>调整本机工具路径后再预检</td>
+</tr>
+<tr>
+<td>wrapper或npm下载失败</td>
+<td>网络、代理、教师依赖缓存</td>
+<td>记录包名与下载错误，不随意升级依赖</td>
+</tr>
+<tr>
+<td>登录失败</td>
+<td>自己的accounts.json、当前后端启动目录</td>
+<td>核对账号，不反复猜密码</td>
+</tr>
+<tr>
+<td>403且提示CSRF</td>
+<td>Network中csrf、login、下一次csrf的顺序</td>
+<td>保留保护并排查token/session，不关闭CSRF</td>
+</tr>
+<tr>
+<td>页面报无法读取</td>
+<td>后端终端、浏览器Network的HTTP与业务code</td>
+<td>首次失败显示错误；已有数据时应标记旧快照</td>
+</tr>
+<tr>
+<td>Java进程启动但页面404</td>
+<td>前端地址是否5178、是否已启动Vite</td>
+<td>本轮JAR不捆绑前端静态页面</td>
+</tr>
+<tr>
+<td>端口已占用</td>
+<td>本机已有进程及其所属项目</td>
+<td>核实后手动停止自己的进程，不能随意结束其他项目</td>
+</tr>
+</tbody></table>
+</div><p>Windows命令已按平台设计，但仅当Windows实机完成以上流程并留下记录后，才能把该环境标为通过。macOS本次实际结果与浏览器证据另见evidence。</p>
+</section><section id="task" class="document"><span class="tag">可操作材料</span><h1>第04章 · 两处修改，验证一次完整读取</h1>
+<p>本单对应原正文的4学时（1+2+1），不自行换算分钟。教师先在参考工程完成安装和预检，再生成学生工作目录；学生课内修改两个任务块。安装依赖与账号初始化安排课前，不把所有环境下载算进模块二。</p>
+<h2>起点和停点</h2>
+<p>起点：<code>student-workspace/</code>已含前后端、登录基础、固定夹具与两处待填任务。第一条链路使用一空间、两设备，数据来自后端读文件，而非浏览器硬编码数组。学生电脑不连接数据库。</p>
+<p>停点：登录成功；两设备显示“在线/未知”；屏蔽设备GET后显示失败并保留已有快照；取消屏蔽后重新读取；提交一份脱敏证据与局部Git提交。第06章才验收完整页面三态和自主筛选。</p>
+<h2>模块一：预测与基线（1学时）</h2>
+<ol>
+<li>按启动说明检查工具、目录和两个端口，保存自己的版本输出。不要抄教师验证记录。</li>
+<li>阅读<code>fixtures/selectors.json</code>与<code>fixtures/catalog.json</code>，预测<code>teaching_env_01</code>和<code>teaching_energy_01</code>的online值及显示文字。</li>
+<li>在自己的学生目录按正文步骤初始化Git；先检查<code>.gitignore</code>，本地密码、target、dist、node_modules均不提交。记录当前两个TODO尚未完成。</li>
+<li>浏览器登录后应看到TODO-A待完成信息。此时认证与接口可能已正常，缺的是学生解包任务；先看Network，再判断错误层次。</li>
+</ol>
+<h2>模块二：完成两个任务（2学时）</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>文件与标记</th>
+<th>教师已经提供</th>
+<th>你要完成</th>
+<th>验收反例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontend/src/api/campus.ts</code> / STUDENT_TODO_A</td>
+<td>HTTP、JSON对象与成功响应字段校验</td>
+<td>业务code非零时报错；成功返回同一批items/observedAt</td>
+<td>code非零不能返回正常空数组</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/FirstDeviceRead.vue</code> / STUDENT_TODO_B</td>
+<td>页面、会话、刷新、失败保留旧快照</td>
+<td>严格区分true/false/null的onlineLabel</td>
+<td>null不能显示离线；字符串不是合法输入</td>
+</tr>
+</tbody></table>
+</div><p>本轮把成功/失败/迟到响应处理收进教师框架，学生重点解释它为何保留旧快照，并验证行为；不要求在第04章从零实现竞态控制。教师参考页面附有筛选供后续演示，第04章不把筛选改写计入必交任务。</p>
+<p>网页AI提示：</p>
+<pre><code class="language-text">我正在做第04章，前后端和登录框架已提供。你不能访问我的本机。
+只改我粘贴的一个STUDENT_TODO块，不重写框架或安装新依赖。
+请先说明输入、输出和一个失败反例，再给最小修改。
+合同：online只能true/false/null；业务code必须为0才可读取data。
+当前文件和类型：[粘贴相应函数与必要类型，不粘贴账号文件]
+执行结果：[我实际运行的结果；尚未执行则明确说明]
+</code></pre>
+<p>一次只处理一个块。A填好后若标签仍显示“待完成TODO-B”，这是B尚未完成，不修改后端数据去掩盖。两块完成后从工程根目录运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+node tools/course.mjs build
+</code></pre>
+<p>在已启动前后端的页面重新读取。Network应看到<code>/api/campus/devices</code>，响应包含<code>code:0</code>、<code>data.items</code>和<code>data.observedAt</code>。<strong>本资源的Vite保留/api前缀，后端入口同样包含/api；不再移除前缀。</strong> 不把教材早期示意的rewrite直接复制过来。</p>
+<p>保持已成功读取的页面不刷新。在Chromium开发者工具中打开命令菜单（Windows Ctrl+Shift+P；macOS Command+Shift+P），搜索Show Network request blocking，打开请求屏蔽面板并启用；新增匹配<code>*127.0.0.1:5178/api/campus/devices*</code>的屏蔽规则。只屏蔽设备GET，不屏蔽登录/空间。点击页面“重新读取”，应出现网络失败并保留旧记录和最后成功时间。取消规则后再次点击，确认恢复。浏览器界面名称以教师预检为准；不要改源码、刷新页面或重启服务来替代这个同会话失败实验。</p>
+<h2>模块三：证据与交接（1学时）</h2>
+<p>一份课堂任务单记录下列结果，不另写重复长报告：</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>检查</th>
+<th>预期</th>
+<th>学生实际结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>设备请求</td>
+<td>API返回两设备，true/null，固定观察时间</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>三态函数</td>
+<td>true在线、false离线、null未知</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>失败路径</td>
+<td>显示错误，保留成功快照，不伪造新时间</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>恢复路径</td>
+<td>取消屏蔽后可重新读取</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>Git差异</td>
+<td>只保留本次任务，不含密码；已关闭请求屏蔽</td>
+<td>待填写</td>
+</tr>
+</tbody></table>
+</div><p>页面只显示true/null，函数测false不等于页面完整三态通过。不要截Cookie、CSRF token或密码；截图只保留响应数据和必要页面区域。将操作系统、资源版本、命令和失败现象交给下一位同学，后续第05章再落实数据库与持久化。</p>
+<h2>教师取证与学生取证的区别</h2>
+<p>本包evidence仅说明作者的指定macOS工具链测试。Windows实机、学生独立操作、数据库实验与课堂时间没有自动被覆盖。未填任务时前端任务测试失败是预期；参考版本全通过也不代表学生版本已完成。</p>
+</section><section id="offline" class="document"><span class="tag">可操作材料</span><h1>网页 AI 不可用时的六张练习卡</h1>
+<p>这些回复均由课程编写者构造，用来练习审查；<strong>不是通义或 Qwen 的真实输出，也不代表任何模型的测评结果</strong>。正常课堂先让学生自行提问；遇到网页不可用、网络中断或输出差异过大，再取相应卡片。每张卡替代所在章节的一次原有练习，不额外占用必修学时。</p>
+<p>先读任务和合同，独立写预期，再审查“待评回复”。提交：问题位置、一个能揭示问题的反例、最小修改建议、实际检查结果。答案留在教师参考，不提前给学生。</p>
+<h2>O01 · 第01章：AI 说完成了，怎样判断</h2>
+<p><strong>任务</strong>：编写设备在线标签函数。输入只能是 <code>true / false / null</code>，分别显示“在线 / 离线 / 未知”。请网页 AI 先给例子，再给实现。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">function onlineLabel(online) {
+  return online ? &#39;在线&#39; : &#39;离线&#39;;
+}
+// 已覆盖三种状态，可以直接上线。
+</code></pre>
+<p><strong>你的检查</strong>：列出三行输入与预期；指出哪个输入能推翻结论。“可以直接上线”的依据是否存在？不要把代码语法合法当成需求满足。</p>
+<p><strong>交付</strong>：三行测试表、一条修订后的任务提示和 AI 使用记录。若未访问网页，模型栏填“离线构造材料”，不要填 Qwen3。</p>
+<h2>O02 · 第02章：需求能否验收</h2>
+<p><strong>任务</strong>：把“方便老师管理设备”改写为一条可验收的用户故事。第一版只要求按设备名称关键词筛选；在线状态组合筛选是第06章任务。</p>
+<p><strong>待评回复</strong>：系统应采用先进技术，界面美观，检索快速，支持各种设备，让所有教师高效管理校园。该需求优先级最高，预计一天完成。</p>
+<p><strong>你的检查</strong>：它有没有规定使用者、数据范围、关键词为空、匹配和无匹配的结果？“一天”依据什么？重写一条故事和三个观察结果，暂不发明性能指标或教学日历。</p>
+<p><strong>交付</strong>：故事、三个 Given/When/Then、依赖于设备接口的一项任务；不把“各种设备”展开成新的必修功能。</p>
+<h2>O03 · 第03—04章：HTTP 成功不等于业务成功</h2>
+<p><strong>已知输入</strong>：网络层已经确认 HTTP 200、JSON 对象和字段基本形状。业务层收到：</p>
+<pre><code class="language-json">{&quot;code&quot;:40001,&quot;message&quot;:&quot;读取失败&quot;,&quot;data&quot;:null}
+</code></pre>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">function unwrap(payload) {
+  return payload.data || { items: [], observedAt: 0 };
+}
+</code></pre>
+<p><strong>你的检查</strong>：界面会把失败显示成什么？使用 <code>code:0</code> 且 <code>data.items:[]</code> 的正常空列表做对照；再设计一个非零 code 但带旧数据的反例。网络层、业务层分别承担哪项检查？</p>
+<p><strong>交付</strong>：正常、失败各一条预期与实际记录；失败不能伪装成“没有设备”。</p>
+<h2>O04 · 第07章：缺失值和有效零</h2>
+<p><strong>合同</strong>：有采样时间而数值缺失，用 <code>null</code> 保留断点；不制造未采样的时刻，不丢弃有效零。</p>
+<pre><code class="language-json">[{&quot;time&quot;:1000,&quot;value&quot;:0},{&quot;time&quot;:2000,&quot;value&quot;:null},{&quot;time&quot;:3000,&quot;value&quot;:1.2},{&quot;time&quot;:4000,&quot;value&quot;:0.8}]
+</code></pre>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">const samples = raw.filter(item =&gt; item.value).map(item =&gt; [item.time, item.value]);
+</code></pre>
+<p><strong>你的检查</strong>：原始样本数、有效数值数、零值数各是多少？返回的序列丢了什么？图表是否还能解释缺失？先在纸上算，再用语言控制台验证。</p>
+<p><strong>交付</strong>：4个原始时刻的转换表，禁止只凭一条平滑曲线宣告正确。</p>
+<h2>O05 · 第08章：按钮隐藏后的接口</h2>
+<p><strong>合同</strong>：只有管理员可以修改设备责任；管理人员只能处理分派给本人的事件。后端作最终判断。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-text">Vue 里把 canAdmin 为 false 的按钮隐藏。
+所有登录者都能调用 PUT /campus/device-owners/{deviceId}，
+因为不显示按钮就不会发请求。
+</code></pre>
+<p><strong>你的检查</strong>：写出同一合法请求由管理员和查看者分别调用的预期；先由查看者用初始版本提交并确认拒绝、数据不变，再由管理员用相同版本提交；或每例独立重置到相同初始状态。除身份外不改变请求体和版本，不能在管理员已写入后拿旧版本当权限反例。怎样同时证明拒绝状态与数据无副作用？本卡是测试设计，不授权向原平台发送写请求。</p>
+<p><strong>交付</strong>：两行角色对照、主记录和时间线的前后检查项。待独立教学写接口实现后再执行。</p>
+<h2>O06 · 第09—11章：冲突后自动重试</h2>
+<p><strong>合同</strong>：两个用户都读取版本 3；A 的合法写入提交为版本 4。B 携带旧版本 3 应得到 409，保留输入、回读记录，由人确认下一步。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-text">遇到409就读取最新版本，把旧请求的expectedVersion换成新版本，
+一直重试到成功。用户不需要知道发生过冲突。
+</code></pre>
+<p><strong>你的检查</strong>：哪个人的判断被绕过？B 是否已经看过 A 的变更？设计一个“B保留输入但不自动提交”的界面过程。说明为什么先返回400并不能证明事务回滚。</p>
+<p><strong>交付</strong>：一次并发时间线草图和一次回读确认过程；数据库测试完成前只标“预期”，不能标“已通过”。</p>
+</section><section id="next" class="document"><span class="tag">可操作材料</span><h1>资源、章次与后续工作</h1>
+<p>本轮优先落实W1中的首次链路和W2的第04章操作；整章状态仍为DRAFT_WRITTEN，不因局部实测把12章升级为LAB_VERIFIED。</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>本轮可用输入</th>
+<th>学生核心产出</th>
+<th>尚需制作或实测</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>离线O01、AI任务卡、两设备场景</td>
+<td>三态预测、有效提示与证据意识</td>
+<td>新手课堂耗时</td>
+</tr>
+<tr>
+<td>02</td>
+<td>离线O02、真实catalog清单</td>
+<td>一个用户故事、三验收条件、依赖任务</td>
+<td>学生访谈与同伴审查</td>
+</tr>
+<tr>
+<td>03</td>
+<td>catalog、统一响应、真实只读API</td>
+<td>区分浏览器/后端/数据源，画字段路径</td>
+<td>对照课堂任务的试讲</td>
+</tr>
+<tr>
+<td>04</td>
+<td>frontend/backend、学生版两TODO、跨平台脚本</td>
+<td>业务解包、标签、成功与失败证据</td>
+<td>Windows实机、学生独立复现</td>
+</tr>
+<tr>
+<td>05</td>
+<td>teacher-db配置与首张表迁移源</td>
+<td>校园创建、关联校验、参数化写入</td>
+<td>教师DB接入、业务接口与数据库验证</td>
+</tr>
+<tr>
+<td>06</td>
+<td>full设备夹具、教师页面参考</td>
+<td>自主UI、三态、关键词与状态筛选</td>
+<td>从最小学生版逐步实现与校准</td>
+</tr>
+<tr>
+<td>07</td>
+<td>质量和历史独立夹具、离线O04</td>
+<td>保留零/null、阈值、图表断点</td>
+<td>provider/监测接口、ECharts与轮询实验</td>
+</tr>
+<tr>
+<td>08</td>
+<td>登录/CSRF/能力基础、四身份、离线O05</td>
+<td>前后端权限、竞态证据</td>
+<td>管理写接口、完整页面延迟与撤权实验</td>
+</tr>
+<tr>
+<td>09</td>
+<td>状态/权限/并发场景规格、离线O06</td>
+<td>合规事件状态机、版本冲突处理</td>
+<td>真实持久化和完整操作闭环</td>
+</tr>
+<tr>
+<td>10</td>
+<td>责任和未来分派规格</td>
+<td>独立责任变更、审计与本人范围</td>
+<td>责任表与历史、真实执行证据</td>
+</tr>
+<tr>
+<td>11</td>
+<td>独立测试样本、并发/回滚规格</td>
+<td>反例定位、两对象并发与真实回滚</td>
+<td>事件/责任两套MySQL集成测试</td>
+</tr>
+<tr>
+<td>12</td>
+<td>版本冻结、打包检查、分页规格</td>
+<td>可复现交付与一次变更</td>
+<td>事件分页实现、他人复现、答辩</td>
+</tr>
+</tbody></table>
+</div><h2>资源制作的停点</h2>
+<p>本次first-chain是可运行教师参考，学生版保留两处第04章任务；既不是从空白逐章写完的成果，也不是全部业务的标准答案。教师预制登录底层、数据端口和测试设施，让学生在课内做业务判断、字段处理、验证与解释。</p>
+<p>后续先落实教师数据库连接与第05—08章，再实现第09—11章事务业务；保持每章1+2+1学时。AIRIOT组件仍是0必修学时的进阶适配，不影响基础链路。</p>
+<h2>可接力的下一任务</h2>
+<p>后续AI先读本页、教学接口合同、backend/docs的模板说明和本轮evidence。先核对当前文件，不重造工程；只在独立教学目录修改。第05章实现以显式授权的组数据库为范围，不推断现有服务器可用。不要复用原系统历史通过数。</p>
+</section><section id="db" class="document"><span class="tag">可操作材料</span><h1>第05章前：教师数据库交接单</h1>
+<p>已确认采用“学生自带Windows/macOS电脑、数据库由教师提供”。本轮first-chain无需数据库；以下为后续teacher-db接入准备，不是已完成连接或迁移的记录。</p>
+<h2>教师在课前提供什么</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>交接要求</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据库版本</td>
+<td>MySQL版本与字符集、时区，先用课程迁移验证兼容性</td>
+<td>待教师环境确定</td>
+</tr>
+<tr>
+<td>分组隔离</td>
+<td>每组独立schema和账户，仅能访问本组schema</td>
+<td>待提供</td>
+</tr>
+<tr>
+<td>连接方式</td>
+<td>校园网络/VPN条件、主机端口与TLS要求</td>
+<td>待提供；不从原系统复制</td>
+</tr>
+<tr>
+<td>权限</td>
+<td>区分迁移账户与运行账户；禁止给学生全实例管理员</td>
+<td>待提供</td>
+</tr>
+<tr>
+<td>初始状态</td>
+<td>课前可重复的种子、清理/恢复范围与负责人</td>
+<td>待制作</td>
+</tr>
+<tr>
+<td>现场复现</td>
+<td>Windows/macOS各至少一次干净目录连接与重跑</td>
+<td>待执行</td>
+</tr>
+</tbody></table>
+</div><p>凭据通过教师约定的私下方式发给本组，仅存本机环境变量或不提交的配置；不要写进Vue的VITE变量，也不要交给网页AI。共享的接口合同只记录占位符与连接步骤。</p>
+<h2>teacher-db 配置边界</h2>
+<p>后端提供<code>teacher-db</code>配置模板、MyBatis/Flyway依赖及第一张教学校园表的迁移源，运行需显式提供<code>COURSE_DB_URL</code>、<code>COURSE_DB_USERNAME</code>、<code>COURSE_DB_PASSWORD</code>。迁移开关<code>COURSE_DB_MIGRATE</code>默认关闭。<strong>不要在未确认的共享库上开启它。</strong> 本轮默认脚本固定启动first-chain，不会自动连接数据库或执行迁移。</p>
+<p>校园创建接口的字段、错误语义与查询路径按教材合同实现；当前模板不伪装成已完成第05章写接口。第09—11章的事件/责任主表、时间线、锁和回滚仍需新增迁移与真实数据库验证。</p>
+<h2>到课前完成的最小验证</h2>
+<p>教师先在明确授权的隔离测试schema演练：连接、执行新增迁移、写入一条教学校园、回读、重启保留、重复迁移不重复建表；随后用运行账户验证权限。保留命令、版本、迁移结果和失败路径，脱敏后归档。当前没有这些结果，不能拿first-chain的登录成功代替。</p>
+<p>学生分组资料包只包含自己的连接说明；课程源码包不包含任何组的真实密码。以后如需清库，教师应给出精确schema与恢复步骤，不能用泛化DROP或全实例清理脚本。</p>
+</section><section class="document"><h2>教师保留的资料</h2><p><a href="campus-ai-course/README.md">参考工程入口</a> · <a href="offline-ai/教师参考.md">离线练习参考</a> · <a href="../10-第三轮资源与首次贯通检查.md">第三轮检查记录</a></p><p>分发学生包时使用独立student-workspace；不要把本地账号、作者测试凭据或教师通过记录当作学生成果。</p></section><p class="footer">课程源稿仍为Markdown。此页由tools/build-resources.mjs生成；既有40幅课程图保留在整书，新增运行截图与交互夹具用于资源讲解。</p></main><script>
+const catalog={"schemaVersion":1,"source":"TEACHING_MOCK","simulated":true,"observedAt":1792303200000,"spaces":[{"id":"teaching_space_01","name":"教学空间01（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_02","name":"教学空间02（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_03","name":"教学空间03（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_04","name":"教学空间04（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null}],"devices":[{"id":"teaching_env_01","tableId":"teaching_environment","name":"环境传感器01（模拟）","category":"environment","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_01","tableId":"teaching_energy","name":"电能监测器01（模拟）","category":"energy","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":null,"communicationTime":null,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_01","tableId":"teaching_facility","name":"设施监测器01（模拟）","category":"facility","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_01","tableId":"teaching_lighting","name":"照明监测器01（模拟）","category":"lighting","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_02","tableId":"teaching_environment","name":"环境传感器02（模拟）","category":"environment","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_02","tableId":"teaching_energy","name":"电能监测器02（模拟）","category":"energy","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_02","tableId":"teaching_facility","name":"设施监测器02（模拟）","category":"facility","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_02","tableId":"teaching_lighting","name":"照明监测器02（模拟）","category":"lighting","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_03","tableId":"teaching_environment","name":"环境传感器03（模拟）","category":"environment","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_03","tableId":"teaching_energy","name":"电能监测器03（模拟）","category":"energy","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_03","tableId":"teaching_facility","name":"设施监测器03（模拟）","category":"facility","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_03","tableId":"teaching_lighting","name":"照明监测器03（模拟）","category":"lighting","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_04","tableId":"teaching_environment","name":"环境传感器04（模拟）","category":"environment","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_04","tableId":"teaching_energy","name":"电能监测器04（模拟）","category":"energy","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_04","tableId":"teaching_facility","name":"设施监测器04（模拟）","category":"facility","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":false,"communicationTime":1792303110000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_04","tableId":"teaching_lighting","name":"照明监测器04（模拟）","category":"lighting","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]}],"points":[{"deviceId":"teaching_env_01","tableId":"teaching_environment","tagId":"temperature","value":24,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_01","tableId":"teaching_environment","tagId":"humidity","value":51,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_01","tableId":"teaching_energy","tagId":"voltage","value":221,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_01","tableId":"teaching_energy","tagId":"power","value":1.1,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_01","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_01","tableId":"teaching_facility","tagId":"equipment_temperature","value":31,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_01","tableId":"teaching_lighting","tagId":"illuminance","value":320,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_02","tableId":"teaching_environment","tagId":"temperature","value":24.5,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_02","tableId":"teaching_environment","tagId":"humidity","value":52,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_02","tableId":"teaching_energy","tagId":"voltage","value":222,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_02","tableId":"teaching_energy","tagId":"power","value":0,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_02","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_02","tableId":"teaching_facility","tagId":"equipment_temperature","value":32,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_02","tableId":"teaching_lighting","tagId":"illuminance","value":340,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_03","tableId":"teaching_environment","tagId":"temperature","value":25,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_03","tableId":"teaching_environment","tagId":"humidity","value":53,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_03","tableId":"teaching_energy","tagId":"voltage","value":223,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_03","tableId":"teaching_energy","tagId":"power","value":1.3,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_03","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_03","tableId":"teaching_facility","tagId":"equipment_temperature","value":33,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_03","tableId":"teaching_lighting","tagId":"illuminance","value":360,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_04","tableId":"teaching_environment","tagId":"temperature","value":25.5,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_04","tableId":"teaching_environment","tagId":"humidity","value":null,"time":1792303199000,"quality":"missing","unit":"%"},{"deviceId":"teaching_energy_04","tableId":"teaching_energy","tagId":"voltage","value":224,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_04","tableId":"teaching_energy","tagId":"power","value":1.4,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_04","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_04","tableId":"teaching_facility","tagId":"equipment_temperature","value":34,"time":1792303139999,"quality":"stale","unit":"°C"},{"deviceId":"teaching_light_04","tableId":"teaching_lighting","tagId":"illuminance","value":0,"time":1792303199000,"quality":"fresh","unit":"lux"}]};
+const space=document.getElementById('space'),online=document.getElementById('online'),body=document.getElementById('devices');
+function render(){body.replaceChildren();const selected=catalog.devices.filter(d=>(space.value==='all'||d.spaceId===space.value)&&(online.value==='all'||String(d.online)===online.value));document.getElementById('count').textContent=selected.length+' / 16 台';for(const d of selected){const row=document.createElement('tr');const values=[d.name+' / '+d.id,catalog.spaces.find(s=>s.id===d.spaceId)?.name||'未映射',d.online===true?'在线':d.online===false?'离线':'未知',d.tags.map(t=>t.id+' '+(t.unit||'无量纲')).join(' · ')];for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td)}body.append(row)}}space.addEventListener('change',render);online.addEventListener('change',render);render();
+</script></body></html>

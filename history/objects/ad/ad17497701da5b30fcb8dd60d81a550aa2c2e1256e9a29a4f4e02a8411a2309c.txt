@@ -1,0 +1,267 @@
+FIELD readError
+Window: "DevTools - 127.0.0.1:5178/", App: Google Chrome.
+0 标准窗口 DevTools - 127.0.0.1:5178/, Secondary Actions: Raise, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+	1 container DevTools - 127.0.0.1:5178/, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+		2 container
+			3 container
+				4 滚动区
+					5 HTML 内容 DevTools, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+						6 container
+							7 container
+								8 container
+									9 container Main toolbar
+										10 工具栏
+											11 container Select an element in the page to inspect it, Help: Select an element in the page to inspect it - ⌘ ⇧ C
+												12 切换按钮 Select an element in the page to inspect it - ⌘ ⇧ C, Value: 0
+											13 container Toggle device toolbar, Help: Toggle device toolbar - ⌘ ⇧ M
+												14 切换按钮 Toggle device toolbar - ⌘ ⇧ M, Value: 0
+										15 container
+											16 标签页组 Panels
+												17 标签 (selected) Vue, Value: 1
+												18 标签 (settable, integer) Console, Value: 0
+												19 标签 (settable, integer) Elements, Value: 0
+												20 标签 (settable, integer) Sources, Value: 0
+												21 标签 (settable, integer) Network, Value: 0
+												22 标签 (settable, integer) Application, Value: 0
+												23 标签 (settable, integer) Memory, Value: 0
+												24 标签 (settable, integer) Performance, Value: 0
+												25 标签 (settable, integer) Lighthouse, Value: 0
+										26 工具栏
+											27 container Open Console to view 5 errors
+												28 按钮 Open Console to view 5 errors
+											29 按钮  AI assistance, Help: Open AI assistance panel
+											30 container Settings, Help: Settings - F1 - ⇧ ?
+												31 按钮 Settings - F1 - ⇧ ?
+											32 弹出式按钮 Customize and control DevTools
+												33 按钮 Customize and control DevTools
+									34 container Vue panel
+										35 container chrome-extension://nhdogjmejiglipccpnnnanhbledajbpdVue
+											36 HTML 内容 chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages/devtools-panel.html
+												37 container
+													38 按钮
+													39 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/overview
+													40 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/components
+													41 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages
+													42 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/timeline
+													43 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pinia
+													44 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/settings
+													45 内容列表
+														46 文本 Store
+														47 文本 Timeline
+														48 文本 About
+														49 文本 Settings
+													50 container
+														51 link View Documentation, Value: pinia.vuejs.org/
+														52 link Star on GitHub, Value: github.com/vuejs/pinia
+													53 container
+														54 文本栏 (settable)
+														55 text 🍍 Pinia (root) campus-course
+													56 container
+														57 文本栏 (settable) Value: readError, Placeholder: Search state...
+														58 text state readError :
+														59 文本 教学服务暂时不可用，请稍后重试。
+														60 按钮
+														61 按钮
+														62 按钮
+							63 文本 Network data available
+			64 container 信息栏容器
+				65 container 信息栏
+					66 container
+						67 文本 “ChatGPT”已开始调试此浏览器
+						68 按钮 取消
+					69 按钮 关闭
+	70 关闭按钮
+	71 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	72 最小化按钮
+	73 文本 DevTools - 127.0.0.1:5178/
+74 menu bar
+	75 Chrome
+	76 文件
+	77 编辑
+	78 显示
+	79 历史记录
+	80 书签
+	81 个人资料
+	82 标签页
+	83 窗口
+	84 帮助
+
+The focused UI element is 57 文本栏 (settable) Value: readError, Placeholder: Search state...
+
+FIELD loading
+Window: "DevTools - 127.0.0.1:5178/", App: Google Chrome.
+0 标准窗口 DevTools - 127.0.0.1:5178/, Secondary Actions: Raise, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+	1 container DevTools - 127.0.0.1:5178/, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+		2 container
+			3 container
+				4 滚动区
+					5 HTML 内容 DevTools, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+						6 container
+							7 container
+								8 container
+									9 container Main toolbar
+										10 工具栏
+											11 container Select an element in the page to inspect it, Help: Select an element in the page to inspect it - ⌘ ⇧ C
+												12 切换按钮 Select an element in the page to inspect it - ⌘ ⇧ C, Value: 0
+											13 container Toggle device toolbar, Help: Toggle device toolbar - ⌘ ⇧ M
+												14 切换按钮 Toggle device toolbar - ⌘ ⇧ M, Value: 0
+										15 container
+											16 标签页组 Panels
+												17 标签 (selected) Vue, Value: 1
+												18 标签 (settable, integer) Console, Value: 0
+												19 标签 (settable, integer) Elements, Value: 0
+												20 标签 (settable, integer) Sources, Value: 0
+												21 标签 (settable, integer) Network, Value: 0
+												22 标签 (settable, integer) Application, Value: 0
+												23 标签 (settable, integer) Memory, Value: 0
+												24 标签 (settable, integer) Performance, Value: 0
+												25 标签 (settable, integer) Lighthouse, Value: 0
+										26 工具栏
+											27 container Open Console to view 5 errors
+												28 按钮 Open Console to view 5 errors
+											29 按钮  AI assistance, Help: Open AI assistance panel
+											30 container Settings, Help: Settings - F1 - ⇧ ?
+												31 按钮 Settings - F1 - ⇧ ?
+											32 弹出式按钮 Customize and control DevTools
+												33 按钮 Customize and control DevTools
+									34 container Vue panel
+										35 container chrome-extension://nhdogjmejiglipccpnnnanhbledajbpdVue
+											36 HTML 内容 chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages/devtools-panel.html
+												37 container
+													38 按钮
+													39 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/overview
+													40 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/components
+													41 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages
+													42 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/timeline
+													43 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pinia
+													44 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/settings
+													45 内容列表
+														46 文本 Store
+														47 文本 Timeline
+														48 文本 About
+														49 文本 Settings
+													50 container
+														51 link View Documentation, Value: pinia.vuejs.org/
+														52 link Star on GitHub, Value: github.com/vuejs/pinia
+													53 container
+														54 文本栏 (settable)
+														55 text 🍍 Pinia (root) campus-course
+													56 container
+														57 文本栏 (settable) Value: loading, Placeholder: Search state...
+														58 text state loading : false
+														59 按钮
+														60 按钮
+														61 按钮
+							62 文本 Network data available
+			63 container 信息栏容器
+				64 container 信息栏
+					65 container
+						66 文本 “ChatGPT”已开始调试此浏览器
+						67 按钮 取消
+					68 按钮 关闭
+	69 关闭按钮
+	70 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	71 最小化按钮
+	72 文本 DevTools - 127.0.0.1:5178/
+73 menu bar
+	74 Chrome
+	75 文件
+	76 编辑
+	77 显示
+	78 历史记录
+	79 书签
+	80 个人资料
+	81 标签页
+	82 窗口
+	83 帮助
+
+The focused UI element is 57 文本栏 (settable) Value: loading, Placeholder: Search state...
+
+FIELD hasSucceeded
+Window: "DevTools - 127.0.0.1:5178/", App: Google Chrome.
+0 标准窗口 DevTools - 127.0.0.1:5178/, Secondary Actions: Raise, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+	1 container DevTools - 127.0.0.1:5178/, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+		2 container
+			3 container
+				4 滚动区
+					5 HTML 内容 DevTools, URL: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@c56fe5daef8be123f68808a4bb705ff378cd2019/&targetType=tab&can_dock=true
+						6 container
+							7 container
+								8 container
+									9 container Main toolbar
+										10 工具栏
+											11 container Select an element in the page to inspect it, Help: Select an element in the page to inspect it - ⌘ ⇧ C
+												12 切换按钮 Select an element in the page to inspect it - ⌘ ⇧ C, Value: 0
+											13 container Toggle device toolbar, Help: Toggle device toolbar - ⌘ ⇧ M
+												14 切换按钮 Toggle device toolbar - ⌘ ⇧ M, Value: 0
+										15 container
+											16 标签页组 Panels
+												17 标签 (selected) Vue, Value: 1
+												18 标签 (settable, integer) Console, Value: 0
+												19 标签 (settable, integer) Elements, Value: 0
+												20 标签 (settable, integer) Sources, Value: 0
+												21 标签 (settable, integer) Network, Value: 0
+												22 标签 (settable, integer) Application, Value: 0
+												23 标签 (settable, integer) Memory, Value: 0
+												24 标签 (settable, integer) Performance, Value: 0
+												25 标签 (settable, integer) Lighthouse, Value: 0
+										26 工具栏
+											27 container Open Console to view 5 errors
+												28 按钮 Open Console to view 5 errors
+											29 按钮  AI assistance, Help: Open AI assistance panel
+											30 container Settings, Help: Settings - F1 - ⇧ ?
+												31 按钮 Settings - F1 - ⇧ ?
+											32 弹出式按钮 Customize and control DevTools
+												33 按钮 Customize and control DevTools
+									34 container Vue panel
+										35 container chrome-extension://nhdogjmejiglipccpnnnanhbledajbpdVue
+											36 HTML 内容 chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages/devtools-panel.html
+												37 container
+													38 按钮
+													39 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/overview
+													40 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/components
+													41 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pages
+													42 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/timeline
+													43 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/pinia
+													44 link chrome-extension://nhdogjmejiglipccpnnnanhbledajbpd/settings
+													45 内容列表
+														46 文本 Store
+														47 文本 Timeline
+														48 文本 About
+														49 文本 Settings
+													50 container
+														51 link View Documentation, Value: pinia.vuejs.org/
+														52 link Star on GitHub, Value: github.com/vuejs/pinia
+													53 container
+														54 文本栏 (settable)
+														55 text 🍍 Pinia (root) campus-course
+													56 container
+														57 文本栏 (settable) Value: hasSucceeded, Placeholder: Search state...
+														58 text state hasSucceeded : true
+														59 按钮
+														60 按钮
+														61 按钮
+							62 文本 Network data available
+			63 container 信息栏容器
+				64 container 信息栏
+					65 container
+						66 文本 “ChatGPT”已开始调试此浏览器
+						67 按钮 取消
+					68 按钮 关闭
+	69 关闭按钮
+	70 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	71 最小化按钮
+	72 文本 DevTools - 127.0.0.1:5178/
+73 menu bar
+	74 Chrome
+	75 文件
+	76 编辑
+	77 显示
+	78 历史记录
+	79 书签
+	80 个人资料
+	81 标签页
+	82 窗口
+	83 帮助
+
+The focused UI element is 57 文本栏 (settable) Value: hasSucceeded, Placeholder: Search state...

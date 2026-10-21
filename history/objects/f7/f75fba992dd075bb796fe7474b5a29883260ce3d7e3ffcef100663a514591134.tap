@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: private JSON accepts UTF-8 without BOM
+ok 1 - private JSON accepts UTF-8 without BOM
+  ---
+  duration_ms: 1.373083
+  type: 'test'
+  ...
+# Subtest: private JSON accepts UTF-8 with BOM
+ok 2 - private JSON accepts UTF-8 with BOM
+  ---
+  duration_ms: 0.382042
+  type: 'test'
+  ...
+# Subtest: malformed JSON fails with sanitized error
+ok 3 - malformed JSON fails with sanitized error
+  ---
+  duration_ms: 0.724416
+  type: 'test'
+  ...
+# Subtest: array root fails with sanitized error
+ok 4 - array root fails with sanitized error
+  ---
+  duration_ms: 0.31025
+  type: 'test'
+  ...
+# Subtest: null root fails with sanitized error
+ok 5 - null root fails with sanitized error
+  ---
+  duration_ms: 0.512042
+  type: 'test'
+  ...
+# Subtest: UTF-16LE fails with sanitized error
+ok 6 - UTF-16LE fails with sanitized error
+  ---
+  duration_ms: 0.437208
+  type: 'test'
+  ...
+# Subtest: invalid UTF-8 fails with sanitized error
+ok 7 - invalid UTF-8 fails with sanitized error
+  ---
+  duration_ms: 0.446292
+  type: 'test'
+  ...
+# Subtest: course migrate (accounts + database) reads BOM config before launching its child
+ok 8 - course migrate (accounts + database) reads BOM config before launching its child
+  ---
+  duration_ms: 26.700625
+  type: 'test'
+  ...
+# Subtest: account admin reads BOM config before launching its child
+ok 9 - account admin reads BOM config before launching its child
+  ---
+  duration_ms: 23.575584
+  type: 'test'
+  ...
+# Subtest: MySQL test runner reads BOM config before launching its child
+ok 10 - MySQL test runner reads BOM config before launching its child
+  ---
+  duration_ms: 23.670375
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 108.539666

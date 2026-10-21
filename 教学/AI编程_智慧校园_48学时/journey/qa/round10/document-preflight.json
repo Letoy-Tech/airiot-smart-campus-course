@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T15:42:41.964775+00:00",
+  "files": 3083,
+  "links": 1203,
+  "broken": [],
+  "excludedLinkedFiles": [],
+  "originalProjectReferenceLinks": [
+    [
+      "chapters/05-后端空间与设备接口.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    ],
+    [
+      "chapters/05-后端空间与设备接口.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusLocationService.java"
+    ],
+    [
+      "chapters/06-前端设备台账与自主UI.md",
+      "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+    ],
+    [
+      "chapters/06-前端设备台账与自主UI.md",
+      "../../../system/Letoy WAGF MG/src/types/campus.ts"
+    ],
+    [
+      "chapters/07-实时监测历史与数据质量.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    ],
+    [
+      "chapters/07-实时监测历史与数据质量.md",
+      "../../../system/Letoy WAGF MG/src/composables/useResource.ts"
+    ],
+    [
+      "chapters/08-登录角色与权限验证.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+    ],
+    [
+      "chapters/08-登录角色与权限验证.md",
+      "../../../system/Letoy WAGF MG/src/store/campus.ts"
+    ],
+    [
+      "contracts/教学接口约定.md",
+      "../../../system/docs/api-contract.md"
+    ],
+    [
+      "appendices/AIRIOT进阶选做.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotClient.java"
+    ],
+    [
+      "appendices/AIRIOT进阶选做.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotProperties.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/README.md"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/docs/api-contract.md"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../智能软件工程教材大纲_通用版.docx"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/types/campus.ts"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/api/campus.ts"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusDtos.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusAlarmDtos.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/store/campus.ts"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAlarmService.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V9__smart_campus_business.sql"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V10__campus_demo_operations.sql"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/views/campus/CaseDetail.vue"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/service/CampusAlarmTests.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/controller/CampusAlarmHttpTests.java"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/__tests__/campus.spec.ts"
+    ],
+    [
+      "appendices/现有平台与原大纲映射.md",
+      "../../../system/Letoy WAGF MG/src/__tests__/campus-navigation.spec.ts"
+    ]
+  ],
+  "credentialLeakPaths": [],
+  "privatePathsExcluded": true
+}

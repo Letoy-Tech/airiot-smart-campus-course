@@ -1,0 +1,33 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "source": "TEACHING_MOCK",
+    "deviceId": "teaching_energy_01",
+    "tagId": "power",
+    "unit": "kW",
+    "from": 1792302300000,
+    "to": 1792303200000,
+    "observedAt": 1792303200000,
+    "samples": [
+      {
+        "time": 1792302360000,
+        "value": 1.2
+      },
+      {
+        "time": 1792302600000,
+        "value": null
+      },
+      {
+        "time": 1792302900000,
+        "value": 0
+      },
+      {
+        "time": 1792303140000,
+        "value": 1.8
+      }
+    ],
+    "truncated": false,
+    "issues": []
+  }
+}

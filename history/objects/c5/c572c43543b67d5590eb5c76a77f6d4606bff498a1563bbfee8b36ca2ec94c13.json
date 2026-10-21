@@ -1,0 +1,4 @@
+{
+  "passed": 18,
+  "scope": "browser-only data service; Node22 in-memory localStorage; no real student CodeBuddy generation"
+}

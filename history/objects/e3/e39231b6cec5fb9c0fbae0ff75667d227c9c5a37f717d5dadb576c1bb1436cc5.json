@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "saved_at": 1792515545971.0,
+  "run": {
+    "id": "d851adec397d1",
+    "session_id": "qvuv",
+    "tab_id": 1075951426,
+    "name": "student-v201-ch09-login",
+    "url": "http://127.0.0.1:5188/",
+    "started_at": 1792514891735.0,
+    "stopped_at": 1792515545962.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 0,
+    "operations": 0,
+    "errors": 0,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 5,
+    "active_rules": 0,
+    "saved_at": 1792515545962.0,
+    "environment": {
+      "extension_version": "0.3.3",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [],
+  "operations": [],
+  "console": [],
+  "pages": [
+    {
+      "at": 1792514891763.0,
+      "state": "available",
+      "url": "http://127.0.0.1:5188/",
+      "title": "晨光校园值班台",
+      "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n演示身份\n仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n设备读取失败：后端返回 HTTP 503\n重试",
+      "truncated": false,
+      "fields": [
+        {
+          "key": "http://127.0.0.1:5188/||id:demo-identity",
+          "name": "demo-identity",
+          "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+          "name": "case-device",
+          "label": "设备",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+          "name": "case-message",
+          "label": "这次练习要处理什么",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-manager",
+          "name": "case-manager",
+          "label": "处理人 managermanager（处理人）",
+          "value": "manager",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-assign-note",
+          "name": "case-assign-note",
+          "label": "分派说明",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-note",
+          "name": "case-note",
+          "label": "处置记录",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-close-note",
+          "name": "case-close-note",
+          "label": "关闭结论",
+          "value": "",
+          "state": "available"
+        }
+      ],
+      "fields_partial": true
+    }
+  ],
+  "rules": [],
+  "replays": [],
+  "performance": [
+    {
+      "id": "d851adec397d1:p1",
+      "document_key": "1792514476963.6:0",
+      "sequence": 4,
+      "time_origin": 1792514476963.6,
+      "started_at": 1792514891760.5,
+      "observed_at": 1792515545962.0,
+      "url": "http://127.0.0.1:5188/",
+      "navigation": "reload",
+      "state": "completed",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1792514891760.5,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 49.09999990463257,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 56.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 56.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 71.09999990463257,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 4.599999904632568,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown"
+      ]
+    }
+  ]
+}

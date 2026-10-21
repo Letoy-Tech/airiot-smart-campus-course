@@ -1,0 +1,8 @@
+{
+  "id": "图 07-01",
+  "title": "同一观察时刻下的质量对照",
+  "alt": "观察时间固定为 O，合法零在 O 时刻是 fresh；O 减 60000 毫秒仍 fresh，减 60001 毫秒为 stale；缺失值为 missing；O 加 5000 毫秒在容差内，加 5001 毫秒为 invalid。另列数值字符串为无效类型。",
+  "caption": "图 07-01　同一观察时刻下的质量对照。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false
+}

@@ -1,0 +1,27 @@
+{
+  "java": "17.0.12",
+  "passed": 13,
+  "suites": [
+    {
+      "name": "cn.campus.course.AuthServiceTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.CaseRulesTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.InputValidationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ]
+}

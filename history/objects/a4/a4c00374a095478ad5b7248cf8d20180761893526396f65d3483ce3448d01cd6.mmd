@@ -1,0 +1,6 @@
+flowchart LR
+    W["工作区<br/>正在编辑的文件"] -->|"git add 指定文件"| S["暂存区<br/>准备提交的内容"]
+    S -->|"git commit"| C["提交<br/>已记录快照"]
+    W -."git diff：与暂存区比较".-> S
+    S -."git diff --cached：与当前提交比较".-> C
+    C --> F["发现问题后<br/>追加修正提交"]

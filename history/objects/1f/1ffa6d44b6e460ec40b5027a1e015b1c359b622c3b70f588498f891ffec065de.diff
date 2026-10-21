@@ -1,0 +1,1728 @@
+--- before/frontend/src/views/AuditView.vue
++++ after/frontend/src/views/AuditView.vue
+@@ -9,13 +9,16 @@
+ import type { AuditPage, CommandAudit } from '../types/read-models'
+ 
+ const store = useCampusStore()
+-/** 审计接口仅 ADMIN 可读；能力只认服务端布尔 true，roles 只用于显示。 */
++/** 审计接口同时要求管理员身份与审计读取能力；能力只认服务端布尔 true，roles 只用于显示。 */
+ const canAdmin = computed(() => store.user !== null && strictCapability(store.capabilities?.canAdmin))
++const canAudit = computed(() => store.user !== null && strictCapability(store.capabilities?.canAudit))
++const allowed = computed(() => canAdmin.value && canAudit.value)
+ 
+ const {
+   data,
+   limit,
+   scenario,
++  skip,
+   snapshotSkip,
+   snapshotLimit,
+   denied,
+@@ -23,13 +26,16 @@
+   filtersChanged,
+   page: goPage,
+   scope,
+-} = useReadPage<CommandAudit>(getAuditPage, () => canAdmin.value)
++} = useReadPage<CommandAudit>(getAuditPage, () => allowed.value)
+ const { busy, error } = scope
+ 
+ const total = computed(() => data.value?.total ?? 0)
+ /** 页面级样例标识由服务端附加，读取失败时保持上次成功快照的标识。 */
+ const sampleKind = computed(() => (data.value as AuditPage | null)?.sampleKind ?? '')
++/** 快照页码只由最近一次成功查询决定；失败不推进页码。 */
+ const currentPage = computed(() => Math.floor(snapshotSkip.value / snapshotLimit.value) + 1)
++/** 本轮页码是当前查询条件（可能尚未成功），用于说明失败发生在哪一页。 */
++const requestedPage = computed(() => Math.floor(skip.value / Math.max(1, limit.value)) + 1)
+ const pageCount = computed(() => Math.max(1, Math.ceil(total.value / snapshotLimit.value)))
+ const canPrev = computed(() => snapshotSkip.value > 0 && !busy.value && !denied.value)
+ const canNext = computed(
+@@ -51,11 +57,11 @@
+ }
+ 
+ function refreshNow() {
+-  if (!busy.value && !denied.value && canAdmin.value) void refresh()
++  if (!busy.value && !denied.value && allowed.value) void refresh()
+ }
+ 
+ function filtersChangedNow() {
+-  if (denied.value || !canAdmin.value) return
++  if (denied.value || !allowed.value) return
+   // 条件变化时取消旧请求，再从第 1 页读取，避免旧条件的结果覆盖新条件。
+   scope.cancel()
+   filtersChanged()
+@@ -66,11 +72,17 @@
+   return value === null ? 'null（未知）' : String(value)
+ }
+ 
+-watch(canAdmin, (value) => {
++watch(allowed, (value) => {
+   if (value) {
+     denied.value = false
+     void refresh()
++    return
+   }
++  // 页面存活期间权限被撤销：取消在途请求并清空已缓存数据，旧请求的回填一律作废。
++  scope.cancel()
++  data.value = null
++  error.value = ''
++  denied.value = false
+ })
+ watch(
+   () => store.user?.uid ?? '',
+@@ -94,7 +106,7 @@
+       <button
+         type="button"
+         class="button primary"
+-        :disabled="busy || denied || !canAdmin"
++        :disabled="busy || denied || !allowed"
+         data-testid="audit-refresh"
+         @click="refreshNow"
+       >
+@@ -104,18 +116,29 @@
+ 
+     <SourceBanner :time="data?.observedAt" />
+     <p class="refresh-note">
+-      仅 ADMIN 可读；首次进入立即读取一次，此后每次完成后等 30 秒再读，请求未完成不叠加，离页或会话变化即停止。
++      只有管理员（canAdmin 与 canAudit 均为 Boolean true）可读；首次进入立即读取一次，此后每次完成后等 30 秒再读，
++      请求未完成不叠加，离页、会话变化或权限撤销即停止。
+     </p>
+ 
+     <ReadStatus :busy="busy" :error="error" :has-data="data !== null" />
+ 
+     <div v-if="!store.user" class="notice" role="status">
+       <strong>需要已确认的身份</strong>
+-      <p>命令审计仅管理员可读；请先用顶部登录。本页不会用空表冒充成功结果。</p>
++      <p>命令审计只有管理员可读；请先用顶部登录。本页不会用空表冒充成功结果。</p>
+     </div>
+     <div v-else-if="!canAdmin" class="notice warning" role="status">
+       <strong>当前身份不能读取命令审计</strong>
+-      <p>接口按 ADMIN 判定并会再次核对当前有效身份；本页不发起请求，也不展示任何审计内容。</p>
++      <p>
++        命令审计只有管理员（canAdmin 为 Boolean true）可读；接口按 ADMIN 判定并会再次核对当前有效身份。
++        本页不发起请求，也不展示任何审计内容；字符串 "true"、1 等非布尔值不授予权限。
++      </p>
++    </div>
++    <div v-else-if="!canAudit" class="notice warning" role="status">
++      <strong>审计读取能力未开启</strong>
++      <p>
++        命令审计只有管理员且 canAudit 为 Boolean true 才可读；权限在页面存活期间撤销时，本页已取消在途请求、
++        清除已缓存记录，旧请求结果不会回填。
++      </p>
+     </div>
+     <div v-if="denied" class="notice error" role="alert">
+       <strong>服务端拒绝读取（403）</strong>
+@@ -123,16 +146,16 @@
+     </div>
+ 
+     <div class="notice" role="status">
+-      <strong>只读记录，没有下发入口</strong>
++      <strong>只读记录：本页不能发送命令</strong>
+       <p>
+-        本页没有命令下发、设备控制、远端操作或外部通知按钮；远端控制与外部通知保持关闭，
+-        也不把教学样例说成真实 AIRIOT 成功。
++        本页不能发送命令，也没有命令下发、设备控制、远端操作或外部通知按钮；远端控制与外部通知保持关闭，
++        也不把教学样例说成真实 AIRIOT 成功。历史样例（HISTORICAL_TEACHING_SAMPLE）只用于说明审计字段，不是真实下发记录。
+       </p>
+     </div>
+ 
+     <div class="query-bar">
+       <label
+-        >每页<select v-model.number="limit" :disabled="denied || !canAdmin" data-testid="audit-limit" @change="filtersChangedNow">
++        >每页<select v-model.number="limit" :disabled="denied || !allowed" data-testid="audit-limit" @change="filtersChangedNow">
+           <option :value="5">5 条</option>
+           <option :value="10">10 条</option>
+           <option :value="20">20 条</option>
+@@ -140,7 +163,7 @@
+         </select></label
+       >
+       <label
+-        >教学读取情境<select v-model="scenario" :disabled="denied || !canAdmin" data-testid="audit-scenario" @change="filtersChangedNow">
++        >教学读取情境<select v-model="scenario" :disabled="denied || !allowed" data-testid="audit-scenario" @change="filtersChangedNow">
+           <option value="normal">正常样本</option>
+           <option value="empty">成功空结果</option>
+           <option value="failure">读取失败</option>
+@@ -152,7 +175,7 @@
+       </p>
+     </div>
+ 
+-    <div v-if="canAdmin && !data && !busy && !error" class="notice" role="status">
++    <div v-if="allowed && !data && !busy && !error" class="notice" role="status">
+       <strong>尚未取得审计记录</strong>
+       <p>读取需要已登录且有效的管理员身份；若长时间没有结果，请核对身份后点右上角读取。</p>
+     </div>
+@@ -161,12 +184,13 @@
+       <p class="audit-meta">
+         来源 {{ data.source }} · simulated={{ data.simulated }} · {{ sampleKind }} ·
+         成功查询：{{ timeText(data.queriedAt) }} · 固定教学采样时刻：{{ timeText(data.observedAt) }}
+-        · 当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页
++        · 当前快照第 {{ currentPage }} 页（共 {{ pageCount }} 页）· 共 {{ data.total }} 条 · 本页
+         {{ data.items.length }} 条 · limit={{ snapshotLimit }} · skip={{ snapshotSkip }}
+         · 情境 {{ scenarioNames[scenario] ?? scenario }}
+       </p>
+       <p v-if="error" class="muted tiny">
+-        本次读取失败；以下仍是上次成功快照（第 {{ currentPage }} 页，共 {{ data.total }} 条），不是新的空结果。
++        本轮查询第 {{ requestedPage }} 页失败：{{ error }}。以下仍是上次成功快照（当前快照第 {{ currentPage }} 页，共
++        {{ data.total }} 条、本页 {{ data.items.length }} 条），保留旧行、不推进页码，也不是新的空结果。
+       </p>
+ 
+       <div v-if="data.issues.length" class="notice warning" role="status">
+@@ -188,7 +212,9 @@
+ 
+         <div v-if="data.items.length === 0" class="empty-state" role="status">
+           <h3>{{ emptyHeading }}</h3>
+-          <p v-if="error">本次读取失败，这里显示的是上次成功快照，不是新的空结果。</p>
++          <p v-if="error">
++            本轮查询第 {{ requestedPage }} 页失败，这里显示的是上次成功快照（当前快照第 {{ currentPage }} 页），不是新的空结果。
++          </p>
+           <p v-else-if="data.total === 0">这是成功空结果；不补造命令记录，也不据此判定接入成功。</p>
+           <p v-else>共 {{ data.total }} 条，当前 skip={{ snapshotSkip }}；请返回上一页查看。</p>
+         </div>
+@@ -244,7 +270,8 @@
+ 
+         <div class="pagination">
+           <span>
+-            第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++            当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++            <template v-if="error"> · 本轮查询第 {{ requestedPage }} 页失败</template>
+           </span>
+           <div class="pagination-actions">
+             <button type="button" class="button subtle" :disabled="!canPrev" data-testid="audit-prev" @click="goPage(-1)">
+@@ -257,7 +284,8 @@
+         </div>
+ 
+         <p class="ledger-footnote">
+-          只读：没有命令下发、确认、控制或通知按钮；读取失败保留上次成功快照，空结果不显示为错误。
++          只读：本页不能发送命令，也没有命令下发、确认、控制或通知按钮；历史样例不是真实下发记录，
++          读取失败保留上次成功快照，空结果不显示为错误。
+         </p>
+       </section>
+     </template>
+--- before/frontend/src/views/CasesView.vue
++++ after/frontend/src/views/CasesView.vue
+@@ -15,6 +15,7 @@
+   stateNames,
+   strictCapability,
+   timeText,
++  validCaseState,
+   type CaseState,
+ } from '../domain/course'
+ import { closurePanel } from '../journey/features'
+@@ -28,9 +29,19 @@
+ const total = ref(0)
+ const observedAt = ref<number | null>(null)
+ const hasList = ref(false)
+-const stateFilter = ref<CaseState | ''>('')
+-const onlyMine = ref(false)
++/** 只从 URL 恢复合法 state；skip 一律回到第 1 页，旧链接的分页不沿用。 */
++function hashState(): CaseState | '' {
++  const match = /^#cases(?:\?(.*))?$/.exec(location.hash)
++  const params = new URLSearchParams(match?.[1] ?? '')
++  return validCaseState(params.get('state'))
++}
++const stateFilter = ref<CaseState | ''>(hashState())
++const assigneeFilter = ref('')
+ const skip = ref(0)
++/** 列表 403 后锁定读取与写入口，直到身份变化（重新登录）才解除。 */
++const readDenied = ref(false)
++/** 409 回读后仍需人工确认，确认前不允许手动重新提交。 */
++const conflictLocked = ref(false)
+ const handlers = ref<Handler[]>([])
+ const currentUid = ref('')
+ const demo = ref<DemoStatus | null>(null)
+@@ -108,8 +119,16 @@
+     dispositionProblem.value === '',
+ )
+ 
+-const mineUid = computed(() => (onlyMine.value ? myUid.value : ''))
+-const listQuery = computed(() => caseQuery(stateFilter.value, skip.value, PAGE_SIZE, mineUid.value))
++const isMineOnly = computed(() => !!myUid.value && assigneeFilter.value === myUid.value)
++const listQuery = computed(() =>
++  caseQuery(stateFilter.value, skip.value, PAGE_SIZE, assigneeFilter.value),
++)
++/** 状态计数只统计本页返回的条目，不能当作全库数量。 */
++const stateCounts = computed(() => {
++  const counts: Record<CaseState, number> = { NEW: 0, ASSIGNED: 0, IN_PROGRESS: 0, CLOSED: 0 }
++  for (const item of cases.value) counts[item.state] += 1
++  return counts
++})
+ const pageCount = computed(() => Math.max(1, Math.ceil(total.value / PAGE_SIZE)))
+ const pageNo = computed(() => Math.floor(skip.value / PAGE_SIZE) + 1)
+ const selectedInList = computed(
+@@ -122,7 +141,34 @@
+   return ''
+ }
+ 
++/** 列表 403：清掉详情、输入与写入口，并在重新登录前不再重发读取。 */
++function denyRead() {
++  readDenied.value = true
++  cases.value = []
++  total.value = 0
++  observedAt.value = null
++  hasList.value = false
++  selectedId.value = ''
++  detail.value = null
++  handlers.value = []
++  currentUid.value = ''
++  demo.value = null
++  assignForm.assigneeUid = ''
++  assignForm.note = ''
++  startNote.value = ''
++  noteText.value = ''
++  dispositionText.value = ''
++  conflictLocked.value = false
++  writeBusy.value = null
++  writeError.value = ''
++  writeNotice.value = ''
++  detailScope.cancel()
++  handlersScope.cancel()
++  demoScope.cancel()
++}
++
+ async function loadList() {
++  if (readDenied.value) return
+   await listScope.run(
+     (signal) => getCases(listQuery.value, signal),
+     (data) => {
+@@ -131,6 +177,9 @@
+       observedAt.value = data.observedAt
+       hasList.value = true
+     },
++    (reason) => {
++      if (reason instanceof ApiError && reason.status === 403) denyRead()
++    },
+   )
+ }
+ 
+@@ -163,23 +212,46 @@
+ }
+ 
+ function refreshAll() {
++  if (readDenied.value) return
+   void loadHandlers()
+   void loadDemo()
+   void loadList()
+   if (selectedId.value) void loadDetail(selectedId.value)
+ }
+ 
++/** 筛选状态写回 URL，便于复现；不含 skip，避免旧分页串到新筛选。 */
++function syncHash() {
++  const next = stateFilter.value ? `#cases?state=${stateFilter.value}` : '#cases'
++  if (location.hash !== next) history.replaceState(null, '', next)
++}
++
+ function onStateChange() {
+   const next = changeCaseState(stateFilter.value)
+   stateFilter.value = next.state
+   skip.value = next.skip
++  syncHash()
+   void loadList()
+ }
+ 
+-function toggleMine() {
+-  onlyMine.value = !onlyMine.value
++function pickState(state: CaseState) {
++  stateFilter.value = state
++  onStateChange()
++}
++
++function onFilterChange() {
+   skip.value = 0
+   void loadList()
++}
++
++function toggleMine() {
++  assigneeFilter.value = isMineOnly.value ? '' : myUid.value
++  skip.value = 0
++  void loadList()
++}
++
++function ackConflict() {
++  conflictLocked.value = false
++  writeError.value = ''
+ }
+ 
+ function goPage(delta: number) {
+@@ -214,11 +286,17 @@
+   return safeError(error)
+ }
+ 
+-/** 409 只回读，不重放；表单内容原样保留，由操作者核对后手动重新提交。 */
++/**
++ * 409 只回读，不重放；表单内容原样保留。
++ * 回读成功也要人工确认后才允许手动提交；回读失败则保持锁定。
++ */
+ async function readBackAfterConflict(caseId: string) {
+   writeError.value = '服务端判定记录已变化（409）：本次输入不会自动重放，正在回读最新记录…'
+   await loadList()
+-  if (!caseId) return
++  if (!caseId) {
++    conflictLocked.value = true
++    return
++  }
+   const readBack = await detailScope.run(
+     (signal) => getCase(caseId, signal),
+     (data) => {
+@@ -227,15 +305,17 @@
+     },
+   )
+   const latest = detail.value
++  conflictLocked.value = true
+   writeError.value =
+     readBack && latest
+-      ? `记录已被其他人更新（409）：已回读到最新 version=${latest.version}、状态 ${stateNames[latest.state] ?? latest.state}。你的输入仍保留在表单里，请核对后手动重新提交。`
+-      : '记录已被其他人更新（409），但回读最新记录未成功。你的输入仍保留在表单里，请刷新后再决定。'
+-}
+-
++      ? `记录已被其他人更新（409）：已回读到最新 version=${latest.version}、状态 ${stateNames[latest.state] ?? latest.state}。本次输入没有自动重放，请核对后点击“我已核对最新记录”确认，再手动提交。`
++      : '记录已被其他人更新（409），但回读最新记录未成功。你的输入仍保留在表单里；回读未确认前保持锁定，请先重新读取详情。'
++}
++
++let writeController: AbortController | null = null
+ async function runWrite(
+   kind: WriteKind,
+-  task: () => Promise<AlarmDetail>,
++  task: (signal: AbortSignal) => Promise<AlarmDetail>,
+ ): Promise<AlarmDetail | null> {
+   if (writeBusy.value) return null
+   const actor = store.user?.uid
+@@ -243,11 +323,13 @@
+     writeError.value = '当前没有已确认的身份，写操作未提交。'
+     return null
+   }
++  writeController?.abort()
++  writeController = new AbortController()
+   writeBusy.value = kind
+   writeError.value = ''
+   writeNotice.value = ''
+   try {
+-    const updated = await task()
++    const updated = await task(writeController.signal)
+     if (store.user?.uid !== actor) return null
+     detail.value = updated
+     selectedId.value = updated.id
+@@ -278,9 +360,18 @@
+ async function submitTrigger(scenario: string) {
+   if (!canRunDemo.value || demo.value?.enabled !== true || writeBusy.value) return
+   const meta = demo.value.scenarios.find((item) => item.id === scenario)
+-  const updated = await runWrite('trigger', () => triggerDemo(scenario, store.csrf))
++  // 新事件接管详情：先取消旧详情请求，避免迟到结果覆盖或残留旧错误。
++  detailScope.cancel()
++  const updated = await runWrite('trigger', (signal) => triggerDemo(scenario, store.csrf, signal))
+   if (updated) {
+-    writeNotice.value = `已创建本地演练事件「${meta?.name ?? updated.scenario}」（LOCAL_DEMO，非 AIRIOT 实时报警），version=${updated.version}，状态 ${stateNames[updated.state] ?? updated.state}，等待分派。`
++    // 不继承上一个事件尚未提交的分派输入。
++    assignForm.assigneeUid = ''
++    assignForm.note = ''
++    startNote.value = ''
++    noteText.value = ''
++    dispositionText.value = ''
++    conflictLocked.value = false
++    writeNotice.value = `已创建本地模拟事件「${meta?.name ?? updated.scenario}」（LOCAL_DEMO，非 AIRIOT 实时报警），version=${updated.version}，状态 ${stateNames[updated.state] ?? updated.state}，等待分派。`
+   }
+ }
+ 
+@@ -304,12 +395,13 @@
+     writeError.value = problem
+     return
+   }
+-  const updated = await runWrite('assign', () =>
++  const updated = await runWrite('assign', (signal) =>
+     actOnCase(
+       target.id,
+       'assign',
+       { assigneeUid: assignForm.assigneeUid, note, expectedVersion: target.version },
+       store.csrf,
++      signal,
+     ),
+   )
+   if (updated) {
+@@ -334,8 +426,8 @@
+     writeError.value = problem
+     return
+   }
+-  const updated = await runWrite('start', () =>
+-    actOnCase(target.id, 'start', { note, expectedVersion: target.version }, store.csrf),
++  const updated = await runWrite('start', (signal) =>
++    actOnCase(target.id, 'start', { note, expectedVersion: target.version }, store.csrf, signal),
+   )
+   if (updated) {
+     startNote.value = ''
+@@ -359,8 +451,8 @@
+     writeError.value = problem
+     return
+   }
+-  const updated = await runWrite('note', () =>
+-    actOnCase(target.id, 'notes', { note, expectedVersion: target.version }, store.csrf),
++  const updated = await runWrite('note', (signal) =>
++    actOnCase(target.id, 'notes', { note, expectedVersion: target.version }, store.csrf, signal),
+   )
+   if (updated) {
+     noteText.value = ''
+@@ -391,8 +483,8 @@
+     writeError.value = '演练开关未开启或状态尚未读取，本次恢复未提交。'
+     return
+   }
+-  const updated = await runWrite('recover', () =>
+-    actOnCase(target.id, 'recover', { expectedVersion: target.version }, store.csrf),
++  const updated = await runWrite('recover', (signal) =>
++    actOnCase(target.id, 'recover', { expectedVersion: target.version }, store.csrf, signal),
+   )
+   if (updated) {
+     writeNotice.value = `服务端已记录演练源恢复（DEMO_RECOVER）：sourceState=${updated.sourceState}、核实=${updated.sourceCheckOutcome}；业务状态仍为 ${stateNames[updated.state] ?? updated.state}，恢复不会自动关闭，请继续服务端核实。`
+@@ -417,8 +509,8 @@
+     writeError.value = '来源尚未恢复，服务端核实不会通过；请先完成恢复。'
+     return
+   }
+-  const updated = await runWrite('verify', () =>
+-    actOnCase(target.id, 'verify-recovery', { expectedVersion: target.version }, store.csrf),
++  const updated = await runWrite('verify', (signal) =>
++    actOnCase(target.id, 'verify-recovery', { expectedVersion: target.version }, store.csrf, signal),
+   )
+   if (updated) {
+     const pass = updated.sourceCheckOutcome === 'PASS'
+@@ -453,8 +545,14 @@
+     return
+   }
+   const text = disposition.value
+-  const updated = await runWrite('close', () =>
+-    actOnCase(target.id, 'close', { disposition: text, expectedVersion: target.version }, store.csrf),
++  const updated = await runWrite('close', (signal) =>
++    actOnCase(
++      target.id,
++      'close',
++      { disposition: text, expectedVersion: target.version },
++      store.csrf,
++      signal,
++    ),
+   )
+   if (!updated) return
+   dispositionText.value = ''
+@@ -484,6 +582,9 @@
+     handlers.value = []
+     currentUid.value = uid
+     skip.value = 0
++    assigneeFilter.value = ''
++    readDenied.value = false
++    conflictLocked.value = false
+     writeBusy.value = null
+     writeError.value = ''
+     writeNotice.value = ''
+@@ -520,6 +621,13 @@
+       <p>列表、处理人与写操作都按服务端身份判定；请先用顶部登录，本页不保留上一次身份的事件与输入。</p>
+     </div>
+ 
++    <div v-if="readDenied" class="notice error" role="alert" data-testid="case-read-denied">
++      <strong>事件列表读取被拒绝（403）</strong>
++      <p>
++        已清除本页已选详情、输入与写入口；请在顶部重新登录后再读取。重新登录前不会自动重发请求，也不会沿用上一次身份的详情。
++      </p>
++    </div>
++
+     <section class="panel">
+       <div class="section-heading">
+         <h2>本地模拟场景</h2>
+@@ -531,7 +639,7 @@
+         <span v-else>尚未读取场景状态</span>
+       </div>
+       <ReadStatus :busy="demoBusy" :error="demoError" :has-data="demo !== null" />
+-      <div v-if="demo && demo.scenarios.length > 0" class="scenario-grid">
++      <div v-if="!readDenied && canRunDemo && demo && demo.scenarios.length > 0" class="scenario-grid">
+         <article v-for="scenario in demo.scenarios" :key="scenario.id" class="scenario-card">
+           <h3>{{ scenario.name }}</h3>
+           <p class="tiny muted">{{ scenario.description }}</p>
+@@ -539,14 +647,21 @@
+           <button
+             type="button"
+             class="button primary"
+-            :disabled="!canRunDemo || demo.enabled !== true || writeBusy !== null"
++            data-testid="trigger-demo"
++            :disabled="!canRunDemo || demo.enabled !== true || writeBusy !== null || readDenied"
+             @click="submitTrigger(scenario.id)"
+           >
+             {{ writeBusy === 'trigger' ? '正在触发…' : `触发「${scenario.name}」` }}
+           </button>
+         </article>
+       </div>
+-      <p v-else-if="demo" class="tiny muted">服务端未返回可用场景。</p>
++      <p v-else-if="demo && !readDenied" class="tiny muted">
++        {{
++          demo.scenarios.length === 0
++            ? '服务端未返回可用场景。'
++            : '当前身份不显示演练触发入口（页面只隐藏入口，服务端最终判定）。'
++        }}
++      </p>
+       <ul v-if="demo && demo.limitations.length > 0" class="limitations">
+         <li v-for="limitation in demo.limitations" :key="limitation">{{ limitation }}</li>
+       </ul>
+@@ -561,25 +676,54 @@
+         <div class="query-bar compact">
+           <label for="case-state">
+             <span>业务状态</span>
+-            <select id="case-state" v-model="stateFilter" @change="onStateChange">
++            <select id="case-state" data-testid="case-state" v-model="stateFilter" @change="onStateChange">
+               <option value="">全部状态</option>
+               <option v-for="state in caseStates" :key="state" :value="state">
+                 {{ stateNames[state] }}（{{ state }}）
+               </option>
+             </select>
+           </label>
++          <label for="case-handler-filter">
++            <span>处理人</span>
++            <select
++              id="case-handler-filter"
++              data-testid="case-handler-filter"
++              v-model="assigneeFilter"
++              @change="onFilterChange"
++            >
++              <option value="">全部处理人</option>
++              <option v-for="handler in handlers" :key="handler.uid" :value="handler.uid">
++                {{ handler.displayName }}（{{ handler.uid }}）
++              </option>
++            </select>
++          </label>
+           <button
+             type="button"
+             class="button subtle"
+-            :aria-pressed="onlyMine"
++            :aria-pressed="isMineOnly"
+             :disabled="!myUid"
+             @click="toggleMine"
+           >
+-            {{ onlyMine ? '只看分派给我：开' : '只看分派给我：关' }}
++            {{ isMineOnly ? '只看分派给我：开' : '只看分派给我：关' }}
++          </button>
++        </div>
++        <div class="state-counts">
++          <button
++            v-for="state in caseStates"
++            :key="state"
++            type="button"
++            class="button subtle"
++            :data-testid="`case-state-count-${state}`"
++            :aria-pressed="stateFilter === state"
++            @click="pickState(state)"
++          >
++            {{ stateNames[state] }} {{ stateCounts[state] }}
+           </button>
+         </div>
+         <p class="tiny muted">
+-          分派筛选使用 assigneeUid={{ mineUid || '（未启用）' }}；每次切换状态都回到第 1 页。
++          以上为按本页 {{ cases.length }} 条计数，不代表全库；处理人筛选使用 assigneeUid={{
++            assigneeFilter || '（全部）'
++          }}，每次切换状态都回到第 1 页。
+           <template v-if="observedAt !== null">读取时间 {{ timeText(observedAt) }}。</template>
+         </p>
+         <ReadStatus :busy="listBusy" :error="listError" :has-data="hasList" />
+@@ -594,6 +738,7 @@
+             type="button"
+             class="case-row"
+             :class="{ selected: item.id === selectedId }"
++            :data-testid="`case-${item.id}`"
+             :aria-current="item.id === selectedId ? 'true' : undefined"
+             @click="selectCase(item.id)"
+           >
+@@ -642,10 +787,11 @@
+           <p>在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+         </div>
+ 
+-        <section v-if="detail" class="panel" data-testid="case-detail">
++        <section v-if="detail" class="panel case-detail" data-testid="case-detail">
+           <div class="section-heading">
+             <h2>事件详情</h2>
+-            <span>version {{ detail.version }} · 来源状态与业务状态分列</span>
++            <span data-testid="case-version">v{{ detail.version }}</span>
++            <span>来源状态与业务状态分列</span>
+           </div>
+           <ReadStatus :busy="detailBusy" :error="detailError" :has-data="true" />
+           <p v-if="!selectedInList" class="tiny muted">
+@@ -717,7 +863,24 @@
+             </li>
+           </ol>
+ 
+-          <div v-if="writeError" class="notice error" role="alert">
++          <div v-if="conflictLocked" class="notice error" role="alert" data-testid="case-conflict">
++            <strong>版本冲突（409）：需人工确认后才可重新提交</strong>
++            <p>{{ writeError }}</p>
++            <p class="tiny muted">
++              回读成功也只把最新 version 与状态显示给你；写入口保持锁定，直到你确认已核对。
++            </p>
++            <div class="action-buttons">
++              <button
++                type="button"
++                class="button subtle"
++                data-testid="ack-case-conflict"
++                @click="ackConflict"
++              >
++                我已核对最新记录，允许手动重新提交
++              </button>
++            </div>
++          </div>
++          <div v-else-if="writeError" class="notice error" role="alert">
+             <strong>本次写请求未完成</strong>
+             <p>{{ writeError }}</p>
+           </div>
+@@ -726,7 +889,7 @@
+             <p>{{ writeNotice }}</p>
+           </div>
+ 
+-          <div class="action-panel">
++          <div v-if="canAssign" class="action-panel">
+             <h3>分派</h3>
+             <p class="tiny muted">
+               分派后业务状态为 ASSIGNED、version 加 1；处理人来自 GET /api/campus/alarm-cases/handlers。
+@@ -737,6 +900,7 @@
+               处理人
+               <select
+                 id="assign-handler"
++                data-testid="case-assignee"
+                 v-model="assignForm.assigneeUid"
+                 :disabled="!canAssign || writeBusy !== null"
+               >
+@@ -760,6 +924,7 @@
+               <button
+                 type="button"
+                 class="button primary"
++                data-testid="assign-case"
+                 :disabled="!canAssign || writeBusy !== null"
+                 @click="submitAssign"
+               >
+@@ -768,7 +933,7 @@
+             </div>
+           </div>
+ 
+-          <div class="action-panel">
++          <div v-if="canHandle" class="action-panel">
+             <h3>开始处理</h3>
+             <p class="tiny muted">
+               仅 ASSIGNED 可开始；成功后为 IN_PROGRESS、version 加 1。能力：{{
+@@ -789,6 +954,7 @@
+               <button
+                 type="button"
+                 class="button primary"
++                data-testid="start-case"
+                 :disabled="!canStart || writeBusy !== null"
+                 @click="submitStart"
+               >
+@@ -797,7 +963,7 @@
+             </div>
+           </div>
+ 
+-          <div class="action-panel">
++          <div v-if="canHandle" class="action-panel">
+             <h3>处理记录 NOTE</h3>
+             <p class="tiny muted">
+               仅 IN_PROGRESS 可记录；业务状态不变、version 加 1、时间线新增一条。能力：{{
+@@ -808,17 +974,19 @@
+               记录内容（1..500 字）
+               <textarea
+                 id="case-note"
++                data-testid="case-note"
+                 v-model="noteText"
+                 rows="3"
+                 maxlength="500"
+-                :disabled="!canNote || writeBusy !== null"
++                :disabled="!canNote || writeBusy !== null || conflictLocked"
+               />
+             </label>
+             <div class="action-buttons">
+               <button
+                 type="button"
+                 class="button primary"
+-                :disabled="!canNote || writeBusy !== null"
++                data-testid="note-case"
++                :disabled="!canNote || writeBusy !== null || conflictLocked"
+                 @click="submitNote"
+               >
+                 {{ writeBusy === 'note' ? '正在保存…' : `保存记录（expectedVersion=${detail.version}）` }}
+@@ -835,7 +1003,7 @@
+           <template v-if="detail">
+             <component :is="closurePanel" :detail="detail" />
+ 
+-            <div class="action-panel">
++            <div v-if="canRecover || canVerify" class="action-panel">
+               <h3>来源恢复与服务端核实</h3>
+               <p class="tiny muted">
+                 恢复只把来源置为 RECOVERED（核实 PENDING），业务状态保持
+@@ -847,6 +1015,7 @@
+                 <button
+                   type="button"
+                   class="button subtle"
++                  data-testid="recover-case"
+                   :disabled="!canRecover || writeBusy !== null"
+                   @click="submitRecover"
+                 >
+@@ -855,6 +1024,7 @@
+                 <button
+                   type="button"
+                   class="button primary"
++                  data-testid="verify-case"
+                   :disabled="!canVerify || writeBusy !== null"
+                   @click="submitVerify"
+                 >
+@@ -863,7 +1033,7 @@
+               </div>
+             </div>
+ 
+-            <div class="action-panel">
++            <div v-if="canAct" class="action-panel">
+               <h3>关闭结论</h3>
+               <p class="tiny muted">
+                 关闭要求处理中、至少一条人工 NOTE、来源已恢复、服务端核实 PASS 和 1..2000 字结论。
+@@ -884,7 +1054,8 @@
+                 <button
+                   type="button"
+                   class="button primary"
+-                  :disabled="!closeReady || writeBusy !== null"
++                  data-testid="close-case"
++                  :disabled="!closeReady || writeBusy !== null || conflictLocked"
+                   @click="submitClose"
+                 >
+                   {{ writeBusy === 'close' ? '正在关闭…' : `关闭事件（expectedVersion=${detail.version}）` }}
+--- before/frontend/src/views/DeviceCatalog.vue
++++ after/frontend/src/views/DeviceCatalog.vue
+@@ -2,11 +2,19 @@
+ import { computed, reactive, ref, watch } from 'vue'
+ import ReadStatus from '../components/ReadStatus.vue'
+ import SourceBanner from '../components/SourceBanner.vue'
+-import { useCompletionPolling } from '../composables/useRequestScope'
+-import { categoryNames, filterDevices, timeText, type DeviceFilter } from '../domain/course'
++import { getOverview } from '../api/full'
++import { useCompletionPolling, useRequestScope } from '../composables/useRequestScope'
++import {
++  categoryNames,
++  filterDevices,
++  qualityNames,
++  timeText,
++  type DeviceFilter,
++} from '../domain/course'
+ import { catalogHash, historyHash, readCatalogFilter } from '../domain/read-models'
+ import { useCampusStore } from '../stores/campus'
+ import type { Device } from '../types/campus'
++import type { Overview, Point } from '../types/full'
+ 
+ const store = useCampusStore()
+ 
+@@ -18,6 +26,11 @@
+ const filter = reactive<DeviceFilter>(readCatalogFilter(location.hash))
+ const selectedId = ref(deviceIdFromHash(location.hash))
+ const view = ref<'table' | 'cards'>('table')
++
++/** 台账设备目录与点位质量来自两条真实读取：store 管目录，overview 管点位与时间。 */
++const overview = ref<Overview | null>(null)
++const { busy: overviewBusy, error: overviewError, run } = useRequestScope()
++const busy = computed(() => store.loading || overviewBusy.value)
+ 
+ const filtered = computed(() => filterDevices(store.devices, filter))
+ const total = computed(() => store.devices.length)
+@@ -28,7 +41,8 @@
+     filter.category !== '' ||
+     filter.online !== 'all',
+ )
+-const isStale = computed(() => store.hasSucceeded && store.readError !== '')
++const readErrorText = computed(() => store.readError || overviewError.value)
++const isStale = computed(() => store.hasSucceeded && readErrorText.value !== '')
+ const hasSucceeded = computed(() => store.hasSucceeded)
+ 
+ /** 统计跟随筛选：三态分别计数，未知不与离线合并。 */
+@@ -56,6 +70,56 @@
+   () => store.devices.find((device) => device.id === selectedId.value) ?? null,
+ )
+ 
++/** 点位只按稳定 deviceId + tagId 匹配本次 overview 响应，缺失就是缺失，不补 0。 */
++const pointsByDevice = computed(() => {
++  const map = new Map<string, Map<string, Point>>()
++  for (const point of overview.value?.points ?? []) {
++    let tags = map.get(point.deviceId)
++    if (!tags) {
++      tags = new Map<string, Point>()
++      map.set(point.deviceId, tags)
++    }
++    tags.set(point.tagId, point)
++  }
++  return map
++})
++
++interface PointRow {
++  tagId: string
++  name: string
++  unit: string
++  point: Point | null
++}
++
++/** 设备声明的标签全列出；响应没有该点位时明确写“无该点位”，不用 0 顶替。 */
++const selectedPointRows = computed<PointRow[]>(() => {
++  const device = selectedDevice.value
++  if (!device) return []
++  const points = pointsByDevice.value.get(device.id)
++  const rows: PointRow[] = device.tags.map((tag) => ({
++    tagId: tag.id,
++    name: tag.name,
++    unit: tag.unit ?? '',
++    point: points?.get(tag.id) ?? null,
++  }))
++  for (const [tagId, point] of points ?? []) {
++    if (!rows.some((row) => row.tagId === tagId)) {
++      rows.push({ tagId, name: tagId, unit: point.unit, point })
++    }
++  }
++  return rows
++})
++
++function pointValueText(point: Point | null): string {
++  if (!point) return overview.value ? '本次响应无该点位' : '待读取'
++  return point.value === null ? '无值' : String(point.value)
++}
++
++function pointQualityText(point: Point | null): string {
++  if (!point) return overview.value ? '缺失' : '待读取'
++  return qualityNames[point.quality]
++}
++
+ function onlineText(value: boolean | null): string {
+   if (value === true) return '在线'
+   if (value === false) return '离线'
+@@ -100,13 +164,26 @@
+   syncHash()
+ }
+ 
++/** 设备目录与 overview 点位同时发起，两条都完成才算一轮结束，避免半份台账。 */
++async function readLedger() {
++  await Promise.allSettled([
++    store.refreshDevices(),
++    run(
++      (signal) => getOverview(signal),
++      (data) => {
++        overview.value = data
++      },
++    ),
++  ])
++}
++
++// 首次进入即读一轮，此后每轮完成再等 15 秒；离页或会话变化自动停止，不叠加请求。
++const poll = useCompletionPolling(readLedger, () => busy.value)
++
+ function refreshNow() {
+-  if (store.loading) return
+-  void store.refreshDevices()
+-}
+-
+-// 首次进入即读一次，此后每次完成再等 15 秒；离页或会话变化自动停止，不叠加请求。
+-useCompletionPolling(() => store.refreshDevices(), () => store.loading)
++  if (busy.value) return
++  void poll.refresh()
++}
+ </script>
+ 
+ <template>
+@@ -119,14 +196,14 @@
+           名称或ID、空间、类型、通信三态可叠加筛选；点开设备按稳定 ID 进入详情，刷新与重新读取不改ID。
+         </p>
+       </div>
+-      <button type="button" class="button primary" :disabled="store.loading" @click="refreshNow">
+-        {{ store.loading ? '正在读取…' : hasSucceeded ? '重新读取' : '开始读取' }}
++      <button type="button" class="button primary" :disabled="busy" @click="refreshNow">
++        {{ busy ? '正在读取…' : hasSucceeded ? '重新读取' : '开始读取' }}
+       </button>
+     </header>
+ 
+     <SourceBanner :time="store.observedAt" />
+ 
+-    <ReadStatus :busy="store.loading" :error="store.readError" :has-data="hasSucceeded" />
++    <ReadStatus :busy="busy" :error="readErrorText" :has-data="hasSucceeded" />
+     <div v-if="isStale" class="notice" role="status">
+       <strong>本次刷新未成功，台账保留上次成功快照</strong>
+       <p>
+@@ -134,7 +211,7 @@
+       </p>
+     </div>
+ 
+-    <div v-if="!hasSucceeded && !store.loading && !store.readError" class="notice" role="status">
++    <div v-if="!hasSucceeded && !busy && !readErrorText" class="notice" role="status">
+       <strong>尚未取得设备目录</strong>
+       <p>读取需要已登录会话与读取权限；请先确认身份，再点右上角读取。</p>
+     </div>
+@@ -146,7 +223,7 @@
+           <button
+             type="button"
+             class="button subtle"
+-            data-testid="view-table"
++            data-testid="catalog-table"
+             :aria-pressed="view === 'table'"
+             @click="view = 'table'"
+           >
+@@ -155,7 +232,7 @@
+           <button
+             type="button"
+             class="button subtle"
+-            data-testid="view-cards"
++            data-testid="catalog-cards"
+             :aria-pressed="view === 'cards'"
+             @click="view = 'cards'"
+           >
+@@ -258,7 +335,7 @@
+             </tr>
+           </thead>
+           <tbody>
+-            <tr v-for="device in filtered" :key="device.id">
++            <tr v-for="device in filtered" :key="device.id" :data-testid="`device-${device.id}`">
+               <td>
+                 <strong>{{ device.name }}</strong>
+                 <code>{{ device.id }}</code>
+@@ -284,7 +361,12 @@
+       </div>
+ 
+       <div v-else class="device-cards" data-testid="device-cards">
+-        <article v-for="device in filtered" :key="device.id" class="device-card">
++        <article
++          v-for="device in filtered"
++          :key="device.id"
++          class="device-card"
++          :data-testid="`device-card-${device.id}`"
++        >
+           <header>
+             <strong>{{ device.name }}</strong>
+             <code>{{ device.id }}</code>
+@@ -344,13 +426,24 @@
+           <dt>来源</dt>
+           <dd>TEACHING_MOCK · simulated=true</dd>
+         </dl>
+-        <p class="small-label">标签</p>
++        <p class="small-label">本次响应点位（数值 / 质量 / 单位 / 采样时间）</p>
++        <p v-if="!overview" class="muted tiny">
++          尚未取得本次 overview 点位，数值与质量暂不显示；不会用 0 或第一台设备补齐。
++        </p>
+         <ul class="detail-tags">
+-          <li v-for="tag in selectedDevice.tags" :key="tag.id">
+-            <code>{{ tag.id }}</code>
+-            <span>{{ tag.name }}</span>
+-            <small>{{ tag.unit || '无单位' }}</small>
+-            <a class="history-link" :href="historyHash(selectedDevice.id, tag.id)">查看点位历史</a>
++          <li v-for="row in selectedPointRows" :key="row.tagId">
++            <code>{{ row.tagId }}</code>
++            <span>{{ row.name }}</span>
++            <small>{{ row.unit || '无单位' }}</small>
++            <span class="point-value numeric">{{ pointValueText(row.point) }}</span>
++            <span
++              class="state-badge"
++              :class="{ warning: overview !== null && (!row.point || row.point.quality !== 'fresh') }"
++            >
++              {{ pointQualityText(row.point) }}
++            </span>
++            <small>采样 {{ row.point ? timeText(row.point.time) : '未上报' }}</small>
++            <a class="history-link" :href="historyHash(selectedDevice.id, row.tagId)">查看点位历史</a>
+           </li>
+         </ul>
+       </template>
+@@ -432,6 +525,13 @@
+   color: var(--muted);
+   font-size: 0.7rem;
+ }
++.detail-tags .point-value {
++  font-size: 0.95rem;
++  font-weight: 650;
++}
++.detail-tags .state-badge {
++  align-self: flex-start;
++}
+ .detail-tags .history-link {
+   margin-top: 3px;
+   color: var(--accent);
+--- before/frontend/src/views/EnergyView.vue
++++ after/frontend/src/views/EnergyView.vue
+@@ -1,5 +1,5 @@
+ <script setup lang="ts">
+-import { computed, ref } from 'vue'
++import { computed, ref, watch } from 'vue'
+ import CompareHistory from '../components/CompareHistory.vue'
+ import ReadStatus from '../components/ReadStatus.vue'
+ import SourceBanner from '../components/SourceBanner.vue'
+@@ -10,8 +10,6 @@
+ import type { Device } from '../types/campus'
+ import type { Overview, Point } from '../types/full'
+ 
+-type EnergyUnit = 'kW' | 'V'
+-
+ interface EnergyEntry {
+   point: Point
+   device: Device | null
+@@ -25,11 +23,12 @@
+   attention: number
+ }
+ 
+-const units: { id: EnergyUnit; name: string; hint: string }[] = [
+-  { id: 'kW', name: 'kW', hint: '功率，不是电量' },
+-  { id: 'V', name: 'V', hint: '电压，只与 V 比较' },
+-]
+-const unit = ref<EnergyUnit>('kW')
++interface MetricOption {
++  id: string
++  name: string
++  unit: string
++  deviceCount: number
++}
+ 
+ const overview = ref<Overview | null>(null)
+ const { busy, error, run } = useRequestScope()
+@@ -57,27 +56,76 @@
+ 
+ const deviceById = computed(() => new Map(devices.value.map((device) => [device.id, device])))
+ 
+-/** 单位由点位自身 unit 严格匹配；切换单位不换算旧值，也不重新请求。 */
+-const unitPoints = computed(() => points.value.filter((point) => point.unit === unit.value))
+-const freshCount = computed(() => unitPoints.value.filter((point) => point.quality === 'fresh').length)
+-const attentionCount = computed(() => unitPoints.value.length - freshCount.value)
+-const orphanPoints = computed(() =>
+-  unitPoints.value.filter((point) => !deviceById.value.has(point.deviceId)),
+-)
+-
+-/** 对比组件只接收一个 tagId：取当前单位下覆盖设备最多的标签，切换单位即换标签，不跨单位。 */
+-const compareTagId = computed(() => {
+-  const counts = new Map<string, number>()
+-  for (const device of devices.value) {
+-    for (const tag of device.tags) {
+-      if (tag.unit === unit.value) counts.set(tag.id, (counts.get(tag.id) ?? 0) + 1)
++/** 能源页只认 category 为 energy 的设备；环境/设施/照明不进入选项、统计与历史比较。 */
++const energyDevices = computed(() => devices.value.filter((device) => device.category === 'energy'))
++const energyDeviceIds = computed(() => new Set(energyDevices.value.map((device) => device.id)))
++
++/** 课程能源页只比较功率 kW 与电压 V；按实际声明的单位匹配，不做换算，也不认其他类别同名字段。 */
++const ENERGY_METRIC_UNITS: readonly { id: string; unit: string }[] = [
++  { id: 'power', unit: 'kW' },
++  { id: 'voltage', unit: 'V' },
++]
++
++function declaredEnergyTag(device: Device, id: string, unit: string) {
++  return device.tags.find((tag) => tag.id === id && (tag.unit ?? '').trim() === unit)
++}
++
++/** 可选点位只来自能源设备实际声明的 power/voltage，顺序固定 power 优先；切换只改筛选，不换算也不重新请求。 */
++const metricOptions = computed<MetricOption[]>(() => {
++  const options = new Map<string, MetricOption>()
++  for (const metric of ENERGY_METRIC_UNITS) {
++    for (const device of energyDevices.value) {
++      const tag = declaredEnergyTag(device, metric.id, metric.unit)
++      if (!tag) continue
++      const found = options.get(tag.id)
++      if (found) found.deviceCount += 1
++      else
++        options.set(tag.id, {
++          id: tag.id,
++          name: tag.name,
++          unit: tag.unit ?? metric.unit,
++          deviceCount: 1,
++        })
+     }
+   }
+-  const ranked = [...counts.entries()].sort(
+-    (left, right) => right[1] - left[1] || left[0].localeCompare(right[0]),
+-  )
+-  return ranked[0]?.[0] ?? ''
++  return [...options.values()]
+ })
++
++const metricId = ref('')
++const activeMetric = computed(
++  () => metricOptions.value.find((item) => item.id === metricId.value) ?? null,
++)
++const unit = computed(() => activeMetric.value?.unit ?? '')
++
++/** 首次拿到数据或旧点位消失时默认功率，没有功率才取实际存在的电压；都缺则诚实留空。 */
++watch(
++  metricOptions,
++  (list) => {
++    if (list.some((item) => item.id === metricId.value)) return
++    const preferred = list.find((item) => item.id === 'power') ?? list[0]
++    metricId.value = preferred?.id ?? ''
++  },
++  { immediate: true },
++)
++
++/** 点位按 tagId 严格匹配且设备必须是能源设备；同名的 kW 与 V 不混在一张卡片里，其他类别不混入。 */
++const unitPoints = computed(() =>
++  metricId.value
++    ? points.value.filter(
++        (point) => point.tagId === metricId.value && energyDeviceIds.value.has(point.deviceId),
++      )
++    : [],
++)
++const freshCount = computed(() => unitPoints.value.filter((point) => point.quality === 'fresh').length)
++const zeroCount = computed(
++  () => unitPoints.value.filter((point) => point.quality === 'fresh' && point.value === 0).length,
++)
++const missingCount = computed(
++  () => unitPoints.value.filter((point) => point.quality === 'missing' || point.value === null).length,
++)
++const attentionCount = computed(() => unitPoints.value.length - freshCount.value)
++/** 对比组件与卡片共用同一个真实 tagId，避免图表与卡片看的不是同一点位。 */
++const compareTagId = computed(() => metricId.value)
+ 
+ function buildGroup(id: string, name: string, deviceList: Device[]): SpaceGroup {
+   const ids = new Set(deviceList.map((device) => device.id))
+@@ -102,16 +150,16 @@
+   }
+ }
+ 
+-/** 空间来自响应本身；待关注空间排前，未关联设备单列，不并入任何空间。 */
++/** 空间来自响应本身（四空间照常显示）；待关注空间排前，未关联空间的能源设备单列，不并入任何空间。 */
+ const spaceGroups = computed(() => {
+   const groups = spaces.value.map((space) =>
+     buildGroup(
+       space.id,
+       space.name,
+-      devices.value.filter((device) => device.spaceId === space.id),
++      energyDevices.value.filter((device) => device.spaceId === space.id),
+     ),
+   )
+-  const unassigned = devices.value.filter((device) => device.spaceId === null)
++  const unassigned = energyDevices.value.filter((device) => device.spaceId === null)
+   if (unassigned.length > 0) groups.push(buildGroup('', '未关联空间', unassigned))
+   groups.sort(
+     (left, right) => right.attention - left.attention || left.name.localeCompare(right.name, 'zh-CN'),
+@@ -124,8 +172,18 @@
+   return device?.tags.find((tag) => tag.id === point.tagId)?.name ?? point.tagId
+ }
+ 
++/** 0 是有效读数，缺失用破折号；两者视觉与文本都分开，不补零。 */
+ function valueText(point: Point): string {
+-  return point.value === null ? '无值' : String(point.value)
++  return point.value === null ? '—' : String(point.value)
++}
++
++function unitText(point: Point): string {
++  return point.unit || unit.value
++}
++
++function metricText(point: Point): string {
++  const text = `${valueText(point)} ${unitText(point)}`
++  return text.trim()
+ }
+ 
+ function deviceIdOf(entry: EnergyEntry): string {
+@@ -169,36 +227,50 @@
+         <strong>只做同单位比较</strong>
+         <p>
+           kW 是功率、kWh 是电量。本页不显示 kWh，不从 kW 推算电量，也不跨设备求和；
++          只统计 category 为 energy 的设备声明的 power（kW）与 voltage（V）；
+           值按点位原样显示，null 为“无值”，0 仍是 0。
+         </p>
+       </div>
+ 
+       <div class="energy-toolbar">
+-        <div class="unit-switch" role="group" aria-label="能源单位切换">
+-          <button
+-            v-for="item in units"
+-            :key="item.id"
+-            type="button"
+-            class="button subtle"
+-            :aria-pressed="unit === item.id"
+-            @click="unit = item.id"
+-          >
+-            {{ item.name }}
+-          </button>
+-        </div>
++        <label class="metric-field" for="energy-metric">
++          <span>点位与单位</span>
++          <select id="energy-metric" v-model="metricId" data-testid="energy-metric">
++            <option v-for="item in metricOptions" :key="item.id" :value="item.id">
++              {{ item.name }}（{{ item.unit || '无单位' }}）· {{ item.deviceCount }} 台设备
++            </option>
++          </select>
++        </label>
+         <p class="field-help">
+-          当前只看 {{ unit }}（{{ units.find((item) => item.id === unit)?.hint }}）；切换单位不重新请求，也不换算。
++          当前只看 {{ activeMetric?.name ?? '未选择点位' }} 的
++          {{ unit || '未提供' }} 读数；切换点位不重新请求，也不换算单位。
++        </p>
++      </div>
++
++      <div v-if="metricOptions.length === 0" class="notice" role="status">
++        <strong>本次响应没有可比较的能源点位</strong>
++        <p>
++          只比较 energy 设备实际声明的 power（kW）与 voltage（V）；没有能源设备或未声明这两个点位时
++          保持未知，不混入其他类别，也不补 0 或换算。
+         </p>
+       </div>
+ 
+       <div class="metric-strip">
+         <div>
+           <strong class="numeric">{{ unitPoints.length }}</strong>
+-          <span>{{ unit }} 点位 · 本次响应</span>
++          <span>{{ unit || '所选点位' }} 读数 · 本次响应</span>
+         </div>
+         <div>
+           <strong class="numeric">{{ freshCount }}</strong>
+           <span>新鲜点位</span>
++        </div>
++        <div>
++          <strong class="numeric">{{ zeroCount }}</strong>
++          <span>有效零值 · 不是缺失</span>
++        </div>
++        <div>
++          <strong class="numeric">{{ missingCount }}</strong>
++          <span>null 或 missing · 不补 0</span>
+         </div>
+         <div>
+           <strong class="numeric">{{ attentionCount }}</strong>
+@@ -213,14 +285,19 @@
+         </div>
+ 
+         <div v-if="unitPoints.length === 0" class="empty-state" role="status">
+-          <h3>本次响应没有 {{ unit }} 点位</h3>
++          <h3>本次响应没有 {{ activeMetric?.name ?? '所选点位' }} 的读数</h3>
+           <p>
+-            读取成功但 points 里没有该单位，不是读取失败；切到另一个单位查看，页面不会补 0 或显示空白值。
++            读取成功但 points 里没有该点位，不是读取失败；换一个点位查看，页面不会补 0 或显示空白值。
+           </p>
+         </div>
+ 
+         <div v-else class="space-cards">
+-          <article v-for="group in spaceGroups" :key="group.id || 'unassigned'" class="panel space-card">
++          <section
++            v-for="group in spaceGroups"
++            :key="group.id || 'unassigned'"
++            class="panel space-card"
++            :data-testid="group.id ? `energy-${group.id}` : undefined"
++          >
+             <header>
+               <div>
+                 <h2>{{ group.name }}</h2>
+@@ -235,8 +312,8 @@
+             <p v-if="group.entries.length === 0" class="muted energy-empty">
+               {{
+                 group.deviceCount === 0
+-                  ? '该空间本次没有设备。'
+-                  : `该空间本次没有 ${unit} 点位；不显示 0，也不补值。`
++                  ? '该空间本次没有能源设备。'
++                  : `该空间本次没有 ${unit || '所选点位'} 读数；不显示 0，也不补值。`
+               }}
+             </p>
+ 
+@@ -254,9 +331,7 @@
+                     {{ qualityNames[entry.point.quality] }}
+                   </span>
+                 </div>
+-                <p class="energy-value numeric">
+-                  {{ valueText(entry.point) }} <small>{{ entry.point.unit }}</small>
+-                </p>
++                <p class="energy-value numeric">{{ metricText(entry.point) }}</p>
+                 <strong class="device-name">{{ deviceNameOf(entry) }}</strong>
+                 <code>{{ deviceIdOf(entry) }}</code>
+                 <div class="energy-meta">
+@@ -275,25 +350,22 @@
+             >
+               在台账查看该空间全部设备
+             </a>
+-          </article>
++          </section>
+         </div>
+ 
+         <p class="ledger-footnote">
+-          值来自本次 GET /api/campus/overview 的 points，逐点质量与采样时间原样展示；null 显示“无值”，0 保留为 0。
+-          <template v-if="orphanPoints.length > 0">
+-            另有 {{ orphanPoints.length }} 个 {{ unit }} 点位的 deviceId 不在本次设备目录，未归入空间卡片。
+-          </template>
+-          单位不换算，kW 与 kWh 不混用。
++          值来自本次 GET /api/campus/overview 中 energy 设备的 points，逐点质量与采样时间原样展示；null 显示“—”，有效零值仍是 0。
++          其他类别与目录外设备不并入统计。单位不换算，kW 与 kWh 不混用。
+         </p>
+       </section>
+ 
+       <p class="field-help compare-note">
+-        下方历史比较只查当前单位对应的点位
+-        <code>{{ compareTagId || '无' }}</code>；设备与观察时刻取自本次 overview 响应，
+-        各台单独查询，一台失败不影响其他曲线。仅读取，不写入。
++        下方历史比较只查当前点位
++        <code>{{ compareTagId || '无' }}</code>（{{ unit || '无单位' }}），候选设备只含本次 overview 中的能源设备；
++        设备与观察时刻取自本次响应，各台单独查询，一台失败不影响其他曲线。仅读取，不写入。
+       </p>
+       <CompareHistory
+-        :devices="devices"
++        :devices="energyDevices"
+         :tag-id="compareTagId"
+         :unit="unit"
+         :observed-at="overview.observedAt"
+@@ -317,12 +389,8 @@
+   gap: 10px 20px;
+   margin-bottom: 24px;
+ }
+-.unit-switch {
+-  display: flex;
+-  gap: 6px;
+-}
+-.unit-switch .button {
+-  min-width: 72px;
++.metric-field {
++  min-width: 260px;
+ }
+ .energy-toolbar .field-help {
+   margin: 0;
+--- before/frontend/src/views/HistoryView.vue
++++ after/frontend/src/views/HistoryView.vue
+@@ -35,16 +35,24 @@
+   return { from: to - span, to }
+ })
+ 
++/** 直达链接里的 deviceId/tagId 解析不到时明确报“不存在”，绝不回退到第一台设备。 */
++const invalidLink = computed(() => {
++  if (!deviceId.value || !store.devices.length) return ''
++  if (!selectedDevice.value) {
++    return `链接中的设备或采样点不存在：设备 ${deviceId.value} 未出现在本次设备目录，本次未发起查询。`
++  }
++  if (tagId.value && !selectedTag.value) {
++    return `链接中的设备或采样点不存在：采样点 ${tagId.value} 不属于设备 ${deviceId.value}，本次未发起查询。`
++  }
++  return ''
++})
++
+ const contextIssue = computed(() => {
+   if (!deviceId.value) return '请选择设备。'
+   if (!tagId.value) return '请选择采样点。'
+   if (store.observedAt === null) return '尚未取得固定教学采样时刻，无法确定查询窗口。请先读取设备目录。'
+   if (!store.devices.length) return ''
+-  if (!selectedDevice.value) return `设备 ${deviceId.value} 不在本次设备目录，未发起查询。`
+-  if (!selectedDevice.value.tags.some((tag) => tag.id === tagId.value)) {
+-    return `采样点 ${tagId.value} 不属于设备 ${deviceId.value}，未发起查询。`
+-  }
+-  return ''
++  return invalidLink.value
+ })
+ const canQuery = computed(() => !contextIssue.value && range.value !== null && !busy.value && !denied.value)
+ 
+--- before/frontend/src/views/OverviewView.vue
++++ after/frontend/src/views/OverviewView.vue
+@@ -247,7 +247,7 @@
+           <p>读取成功但 spaces 为空，不是读取失败；可到“空间归属”核对来源空间。</p>
+         </div>
+         <div v-else class="table-scroll">
+-          <table class="data-table quality-matrix">
++          <table class="data-table quality-matrix" data-testid="quality-matrix">
+             <caption>
+               按待关注点位数从多到少排序；设备数、点位数来自本次响应，不用点位反推设备。
+             </caption>
+--- before/frontend/src/views/OwnersView.vue
++++ after/frontend/src/views/OwnersView.vue
+@@ -23,6 +23,10 @@
+ const writeBusy = ref(false)
+ const writeError = ref('')
+ const writeNotice = ref('')
++/** 清单 403 后锁定读取与写入口，直到身份变化（重新登录）才解除。 */
++const readDenied = ref(false)
++/** 409 回读后仍需人工确认，确认前不允许手动重新提交；回读失败保持锁定。 */
++const conflictLocked = ref(false)
+ 
+ const listScope = useRequestScope()
+ const detailScope = useRequestScope()
+@@ -62,13 +66,36 @@
+     !handlers.value.some((item) => item.uid === detail.value?.ownerUid),
+ )
+ 
++/** 清单 403：清掉缓存详情、负责人与理由，并在重新登录前不再重发。 */
++function denyRead() {
++  readDenied.value = true
++  owners.value = []
++  observedAt.value = null
++  hasList.value = false
++  selectedId.value = ''
++  detail.value = null
++  handlers.value = []
++  form.ownerUid = ''
++  form.note = ''
++  writeBusy.value = false
++  writeError.value = ''
++  writeNotice.value = ''
++  conflictLocked.value = false
++  detailScope.cancel()
++  handlersScope.cancel()
++}
++
+ async function loadOwners() {
++  if (readDenied.value) return
+   await listScope.run(
+     (signal) => getOwners(signal),
+     (data) => {
+       owners.value = data.items
+       observedAt.value = data.observedAt
+       hasList.value = true
++    },
++    (reason) => {
++      if (reason instanceof ApiError && reason.status === 403) denyRead()
+     },
+   )
+ }
+@@ -94,6 +121,7 @@
+ }
+ 
+ function refreshAll() {
++  if (readDenied.value) return
+   void loadHandlers()
+   void loadOwners()
+   if (selectedId.value) void loadDetail(selectedId.value)
+@@ -123,7 +151,10 @@
+   return safeError(error)
+ }
+ 
+-/** 409 只回读，不重放；表单输入原样保留，由操作者核对后手动重新提交。 */
++/**
++ * 409 只回读，不重放；表单输入原样保留。
++ * 回读成功也要人工确认后才允许手动提交；回读失败则保持锁定。
++ */
+ async function readBackAfterConflict(deviceId: string) {
+   writeError.value = '服务端判定责任记录已变化（409）：本次输入不会自动重放，正在回读最新记录…'
+   await loadOwners()
+@@ -135,10 +166,16 @@
+     },
+   )
+   const latest = detail.value
++  conflictLocked.value = true
+   writeError.value =
+     readBack && latest
+-      ? `责任记录已被其他人更新（409）：已回读到最新 version=${latest.version}、当前责任人 ${latest.ownerName ?? latest.ownerUid ?? '未指定'}。你的输入仍保留在表单里，请核对后手动重新提交。`
+-      : '责任记录已被其他人更新（409），但回读最新记录未成功。你的输入仍保留在表单里，请刷新后再决定。'
++      ? `责任记录已被其他人更新（409）：已回读到最新 version=${latest.version}、当前责任人 ${latest.ownerName ?? latest.ownerUid ?? '未指定'}。本次输入没有自动重放，请核对后点击“我已核对最新记录”确认，再手动提交。`
++      : '责任记录已被其他人更新（409），但回读最新记录未成功。你的输入仍保留在表单里；回读未确认前保持锁定，请先重新读取责任详情。'
++}
++
++function ackOwnerConflict() {
++  conflictLocked.value = false
++  writeError.value = ''
+ }
+ 
+ function noteProblem(note: string): string {
+@@ -147,6 +184,7 @@
+   return ''
+ }
+ 
++let writeController: AbortController | null = null
+ /** 保存成功必须独立回读确认；确认不了就不显示成功。 */
+ async function submitChange() {
+   const target = detail.value
+@@ -183,8 +221,17 @@
+   writeNotice.value = ''
+   const deviceId = target.deviceId
+   const beforeVersion = target.version
++  writeController?.abort()
++  writeController = new AbortController()
+   try {
+-    const saved = await saveOwner(deviceId, form.ownerUid, note, beforeVersion, store.csrf)
++    const saved = await saveOwner(
++      deviceId,
++      form.ownerUid,
++      note,
++      beforeVersion,
++      store.csrf,
++      writeController.signal,
++    )
+     if (store.user?.uid !== actor) return
+     const confirmed = await detailScope.run(
+       (signal) => getOwner(saved.deviceId, signal),
+@@ -229,6 +276,8 @@
+     handlers.value = []
+     form.ownerUid = ''
+     form.note = ''
++    readDenied.value = false
++    conflictLocked.value = false
+     writeBusy.value = false
+     writeError.value = ''
+     writeNotice.value = ''
+@@ -261,6 +310,13 @@
+     <div v-if="!store.user" class="notice" role="status">
+       <strong>需要已确认的身份</strong>
+       <p>读取责任人需要校园身份；修改责任人仅 ADMIN，且由服务端最终判定。请先用顶部登录。</p>
++    </div>
++
++    <div v-if="readDenied" class="notice error" role="alert" data-testid="owner-read-denied">
++      <strong>责任清单读取被拒绝（403）</strong>
++      <p>
++        已清除缓存的详情、待提交负责人与变更说明；请在顶部重新登录后再读取。重新登录前不会自动重发请求，也不会重放变更。
++      </p>
+     </div>
+ 
+     <section class="panel">
+@@ -303,6 +359,7 @@
+             type="button"
+             class="case-row"
+             :class="{ selected: item.deviceId === selectedId }"
++            :data-testid="`owner-${item.deviceId}`"
+             :aria-current="item.deviceId === selectedId ? 'true' : undefined"
+             @click="selectDevice(item.deviceId)"
+           >
+@@ -334,7 +391,8 @@
+         <section v-if="detail" class="panel" data-testid="owner-detail">
+           <div class="section-heading">
+             <h2>责任详情</h2>
+-            <span>责任 version {{ detail.version }} · 与事件 version 独立</span>
++            <span data-testid="owner-version">v{{ detail.version }}</span>
++            <span>与事件 version 独立</span>
+           </div>
+           <ReadStatus :busy="detailBusy" :error="detailError" :has-data="true" />
+           <p v-if="!selectedInList" class="tiny muted">
+@@ -385,7 +443,24 @@
+             </li>
+           </ol>
+ 
+-          <div v-if="writeError" class="notice error" role="alert">
++          <div v-if="conflictLocked" class="notice error" role="alert" data-testid="owner-conflict">
++            <strong>版本冲突（409）：需人工确认后才可重新提交</strong>
++            <p>{{ writeError }}</p>
++            <p class="tiny muted">
++              回读成功也只把最新 version 与责任人显示给你；写入口保持锁定，直到你确认已核对。
++            </p>
++            <div class="action-buttons">
++              <button
++                type="button"
++                class="button subtle"
++                data-testid="ack-owner-conflict"
++                @click="ackOwnerConflict"
++              >
++                我已核对最新记录，允许手动重新提交
++              </button>
++            </div>
++          </div>
++          <div v-else-if="writeError" class="notice error" role="alert">
+             <strong>本次保存未确认成功</strong>
+             <p>{{ writeError }}</p>
+           </div>
+@@ -394,7 +469,7 @@
+             <p>{{ writeNotice }}</p>
+           </div>
+ 
+-          <div class="action-panel">
++          <form class="action-panel" @submit.prevent="submitChange">
+             <h3>变更责任人</h3>
+             <p class="tiny muted">
+               仅 ADMIN 可保存；请求携带点击时的 expectedVersion={{ detail.version }}，成功后责任 version 加 1，
+@@ -405,8 +480,9 @@
+               新责任人
+               <select
+                 id="owner-person"
++                data-testid="owner-assignee"
+                 v-model="form.ownerUid"
+-                :disabled="!canAdmin || writeBusy"
++                :disabled="!canAdmin || writeBusy || conflictLocked"
+               >
+                 <option value="">请选择处理人</option>
+                 <option v-for="handler in handlers" :key="handler.uid" :value="handler.uid">
+@@ -421,18 +497,19 @@
+               变更说明（1..500 字）
+               <textarea
+                 id="owner-note"
++                data-testid="owner-note"
+                 v-model="form.note"
+                 rows="3"
+                 maxlength="500"
+-                :disabled="!canAdmin || writeBusy"
++                :disabled="!canAdmin || writeBusy || conflictLocked"
+               />
+             </label>
+             <div class="action-buttons">
+               <button
+-                type="button"
++                type="submit"
+                 class="button primary"
+-                :disabled="!canAdmin || writeBusy"
+-                @click="submitChange"
++                data-testid="save-owner"
++                :disabled="!canAdmin || writeBusy || conflictLocked"
+               >
+                 {{ writeBusy ? '正在保存…' : `保存责任人（expectedVersion=${detail.version}）` }}
+               </button>
+@@ -440,7 +517,7 @@
+             <p class="tiny muted">
+               保存成功后独立回读确认；409 只回读最新记录并保留本次输入，不自动重放。保存失败不会显示为成功。
+             </p>
+-          </div>
++          </form>
+ 
+           <p class="tiny muted">
+             审计与接入状态在各自页面只读查看；本页不提供远端控制或外部通知入口，也不伪造真实 AIRIOT 成功。
+--- before/frontend/src/views/RawAlarmsView.vue
++++ after/frontend/src/views/RawAlarmsView.vue
+@@ -15,6 +15,7 @@
+   data,
+   limit,
+   scenario,
++  skip,
+   snapshotSkip,
+   snapshotLimit,
+   denied,
+@@ -26,7 +27,10 @@
+ const { busy, error } = scope
+ 
+ const total = computed(() => data.value?.total ?? 0)
++/** 快照页码只由最近一次成功查询决定；失败不推进页码。 */
+ const currentPage = computed(() => Math.floor(snapshotSkip.value / snapshotLimit.value) + 1)
++/** 本轮页码是当前查询条件（可能尚未成功），用于说明失败发生在哪一页。 */
++const requestedPage = computed(() => Math.floor(skip.value / Math.max(1, limit.value)) + 1)
+ const pageCount = computed(() => Math.max(1, Math.ceil(total.value / snapshotLimit.value)))
+ const canPrev = computed(() => snapshotSkip.value > 0 && !busy.value && !denied.value)
+ const canNext = computed(
+@@ -50,7 +54,10 @@
+ }
+ 
+ watch(readable, (value) => {
+-  if (value) void refresh()
++  if (!value) return
++  // 权限恢复后重新读取；此前的 403 标记不再拦截请求。
++  denied.value = false
++  void refresh()
+ })
+ </script>
+ 
+@@ -125,11 +132,12 @@
+     <template v-if="data">
+       <p class="alarm-meta">
+         成功查询：{{ timeText(data.queriedAt) }} · 固定教学采样时刻：{{ timeText(data.observedAt) }}
+-        · 当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页
++        · 当前快照第 {{ currentPage }} 页（共 {{ pageCount }} 页）· 共 {{ data.total }} 条 · 本页
+         {{ data.items.length }} 条 · limit={{ snapshotLimit }} · skip={{ snapshotSkip }}
+       </p>
+       <p v-if="error" class="muted tiny">
+-        本次读取失败；以下仍是上次成功快照（第 {{ currentPage }} 页，共 {{ data.total }} 条），不是新的空结果。
++        本轮查询第 {{ requestedPage }} 页失败：{{ error }}。以下仍是上次成功快照（当前快照第 {{ currentPage }} 页，共
++        {{ data.total }} 条、本页 {{ data.items.length }} 条），保留旧行、不推进页码，也不是新的空结果。
+       </p>
+ 
+       <div v-if="data.issues.length" class="notice warning" role="status">
+@@ -151,7 +159,9 @@
+ 
+         <div v-if="data.items.length === 0" class="empty-state" role="status">
+           <h3>{{ emptyHeading }}</h3>
+-          <p v-if="error">本次读取失败，这里显示的是上次成功快照，不是新的空结果。</p>
++          <p v-if="error">
++            本轮查询第 {{ requestedPage }} 页失败，这里显示的是上次成功快照（当前快照第 {{ currentPage }} 页），不是新的空结果。
++          </p>
+           <p v-else-if="data.total === 0">这是成功空结果；不创建本地演练事件，也不补造报警记录。</p>
+           <p v-else>共 {{ data.total }} 条，当前 skip={{ snapshotSkip }}；请返回上一页查看。</p>
+         </div>
+@@ -204,7 +214,8 @@
+ 
+         <div class="pagination">
+           <span>
+-            第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++            当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++            <template v-if="error"> · 本轮查询第 {{ requestedPage }} 页失败</template>
+           </span>
+           <div class="pagination-actions">
+             <button type="button" class="button subtle" :disabled="!canPrev" data-testid="raw-prev" @click="goPage(-1)">
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -150,7 +150,18 @@
+     "frontend/src/tests/journey-navigation.test.ts": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+     "docs/调试记录.md": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 11,
++    "at": "2026-10-19T18:53:29.019Z",
++    "sourceFingerprint": "6b2349df7c75c647f26e9ca300a9a431af8f708e193e03c10c53d5f2829b002b",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

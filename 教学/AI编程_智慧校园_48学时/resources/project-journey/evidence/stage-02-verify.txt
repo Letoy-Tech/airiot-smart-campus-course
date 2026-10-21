@@ -1,0 +1,39 @@
+$ node tools/progress.mjs verify
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+ RUN  v4.1.12 /private/tmp/demo-workspace
+
+
+ Test Files  5 passed (5)
+      Tests  31 passed (31)
+   Start at  23:35:09
+   Duration  430ms (transform 203ms, setup 0ms, import 448ms, tests 58ms, environment 1.15s)
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                           0.47 kB │ gzip:  0.33 kB
+dist/assets/index-CQLMl6UL.css           21.87 kB │ gzip:  5.26 kB
+dist/assets/FirstDeviceRead-CVeo5G6m.js   8.78 kB │ gzip:  4.02 kB
+dist/assets/index-CCUw_vpp.js            90.53 kB │ gzip: 36.21 kB
+✓ built in 271ms
+第02站前端检查通过，接受当前学生实现。
+尚未替你验收：登录后读取true/null两设备；业务失败不冒充空列表
+请把实际操作写到 evidence/stage-02.md，再运行 accept 02 evidence/stage-02.md。人工记录不等于工具证明。

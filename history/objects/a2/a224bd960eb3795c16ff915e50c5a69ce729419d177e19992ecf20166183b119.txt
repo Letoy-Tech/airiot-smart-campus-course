@@ -1,0 +1,142 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+教学管理员
+管理员 / 只读查看者
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+07
+身份与权限
+08
+事件工作台
+10
+责任登记
+10
+命令审计
+10
+接入状态
+
+第10站 · 责任、审计与接入
+
+命令审计只读：保留来源与样例标识
+
+审计记录来自教学历史样例（HISTORICAL_TEACHING_SAMPLE），source=TEACHING_MOCK、simulated=true， 不是真实下发过的命令；outcome、reason、before/requested/confirmed 与 error 原样展示，不改写、不映射。
+
+重新读取
+TEACHING_MOCK
+教学模拟数据 · simulated=true
+远端控制与外部通知关闭
+
+固定教学采样时刻：2026/10/18 14:00:00质量标签采用服务端结果；刷新只重新读取样本，不代表设备实时运行。
+
+仅 ADMIN 可读；首次进入立即读取一次，此后每次完成后等 30 秒再读，请求未完成不叠加，离页或会话变化即停止。
+
+只读记录，没有下发入口
+
+本页没有命令下发、设备控制、远端操作或外部通知按钮；远端控制与外部通知保持关闭， 也不把教学样例说成真实 AIRIOT 成功。
+
+每页
+5 条
+10 条
+20 条
+50 条
+教学读取情境
+正常样本
+成功空结果
+读取失败
+
+limit 取 5/10/20/50，skip 由分页计算；切换每页条数或情境都从第 1 页重新读取。 情境只影响教学样例，不代表真实设备命令。
+
+来源 TEACHING_MOCK · simulated=true · HISTORICAL_TEACHING_SAMPLE · 成功查询：2026/10/20 02:31:52 · 固定教学采样时刻：2026/10/18 14:00:00 · 当前快照第 1 / 1 页 · 共 3 条 · 本页 3 条 · limit=5 · skip=0 · 情境 正常样本
+
+命令审计记录
+服务端按 createdAt DESC、id DESC 返回；本页不排序、不合并、不改写结果。
+记录来自 GET /api/campus/command-audit?limit=5&skip=0&scenario=normal； outcome、reason、error 是样例原文，不映射为接入能力。
+命令记录	操作者	设备与表	请求与确认	结果与原因	发生时间
+
+teaching_audit_001
+TEACHING_MOCK · simulated=true
+HISTORICAL_TEACHING_SAMPLE
+	
+历史教学角色（虚构）
+teaching_sample_actor
+	
+teaching_light_01
+表 teaching_lighting
+	
+before：false
+requested：true
+confirmed：true
+	
+CONFIRMED
+人工编写的历史记录样例，没有向设备发送命令
+error：null（无）
+	
+2026/10/18 13:50:00
+服务端记录时间
+
+
+teaching_audit_002
+TEACHING_MOCK · simulated=true
+HISTORICAL_TEACHING_SAMPLE
+	
+历史教学角色（虚构）
+teaching_sample_actor
+	
+teaching_facility_02
+表 teaching_facility
+	
+before：true
+requested：false
+confirmed：true
+	
+READBACK_MISMATCH
+人工编写的历史记录样例，没有向设备发送命令
+error：人工样例：回读与目标不一致
+	
+2026/10/18 13:40:00
+服务端记录时间
+
+
+teaching_audit_003
+TEACHING_MOCK · simulated=true
+HISTORICAL_TEACHING_SAMPLE
+	
+历史教学角色（虚构）
+teaching_sample_actor
+	
+teaching_light_03
+表 teaching_lighting
+	
+before：null（未知）
+requested：true
+confirmed：null（未知）
+	
+DENIED
+人工编写的历史记录样例，没有向设备发送命令
+error：人工样例：未获控制能力
+	
+2026/10/18 13:30:00
+服务端记录时间
+第 1 / 1 页 · 共 3 条 · 本页 3 条
+上一页
+下一页
+
+只读：没有命令下发、确认、控制或通知按钮；读取失败保留上次成功快照，空结果不显示为错误。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

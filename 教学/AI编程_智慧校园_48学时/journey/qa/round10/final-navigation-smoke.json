@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-19T15:43:27.407Z",
+  "scope": "HTTP application final navigation and history chart smoke",
+  "results": [
+    {
+      "name": "History canvas mounted with null and zero original samples",
+      "status": "PASS",
+      "samples": [
+        "1.2 kW",
+        "null kW",
+        "0 kW",
+        "1.8 kW"
+      ]
+    },
+    {
+      "name": "Final shell viewer hides audit; direct API403 and no audit rows",
+      "status": "PASS",
+      "httpStatus": 403
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "02-设备点位历史.png",
+      "sha256": "2e7db27c861c0451e044dbd16f455d7da4869b042f375a4908d91fea4597e9d3",
+      "url": "http://127.0.0.1:5178/?finalsmoke=1#history?deviceId=teaching_energy_01&tagId=power",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "10-只读身份审计拒绝.png",
+      "sha256": "a4e073a618db7d2b6163f14c3ad6b9585a2c85cd1a33d349d0c0f26c74b138ce",
+      "url": "http://127.0.0.1:5178/?finalsmoke=2#audit",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-10-19T15:43:30.413Z"
+}

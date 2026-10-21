@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-21T02:47:26.201719+08:00",
+  "success": false,
+  "checks": [
+    {
+      "check": "spoofed admin role",
+      "username": "viewer",
+      "status": 403,
+      "expected": 403,
+      "pass": true,
+      "message": "已登录但无权执行该操作"
+    },
+    {
+      "check": "spoofed admin role",
+      "username": "manager",
+      "status": 403,
+      "expected": 403,
+      "pass": true,
+      "message": "已登录但无权执行该操作"
+    },
+    {
+      "check": "stale integer",
+      "username": "admin",
+      "status": 409,
+      "expected": 409,
+      "pass": true,
+      "message": "负责人记录已被其他人更新，请重新读取后再决定"
+    },
+    {
+      "check": "fraction",
+      "username": "admin",
+      "status": 409,
+      "expected": 400,
+      "pass": false,
+      "message": "负责人记录已被其他人更新，请重新读取后再决定"
+    },
+    {
+      "check": "numeric string",
+      "username": "admin",
+      "status": 409,
+      "expected": 400,
+      "pass": false,
+      "message": "负责人记录已被其他人更新，请重新读取后再决定"
+    },
+    {
+      "check": "negative",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "负责人版本无效，请重新读取后再登记"
+    },
+    {
+      "check": "null",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "负责人版本无效，请重新读取后再登记"
+    }
+  ]
+}

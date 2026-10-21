@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-19T13:23:31.852Z",
+  "passed": true,
+  "inputSha256": "a1ca65463239b61a7bc46636b381bce9ecd879ea87cb8808d9ce035a72764b66",
+  "checks": [
+    {
+      "name": "all 13 chapters present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all illustrations load",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "internal navigation",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "local file links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no desktop page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "copy prompt to actual browser clipboard",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "empty save gives useful feedback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "download filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UTF8 download retains exact text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reopen saved file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "copy reopened answer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all fixed output names",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "close does not erase draft",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no external requests",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no page JS errors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no mobile page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile dialog fits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 04 1440px no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 04 390px no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 11 1440px no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 11 390px no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 12 1440px no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter 12 390px no overflow",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "classroomTrial": false,
+  "windowsPhysicalMachine": false,
+  "realQwenSession": false
+}

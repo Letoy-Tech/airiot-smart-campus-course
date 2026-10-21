@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-source.zip",
+      "files": 166,
+      "bytes": 413185,
+      "sha256": "ee2bc30ada5bb9c0087704a07f8f9a1cc6b662fc21bd3bb57eb85ceb70fb486d",
+      "zipCrc": "passed",
+      "knownExercisePasswordScan": "no matches"
+    },
+    {
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-evidence.zip",
+      "files": 5803,
+      "bytes": 14993969,
+      "sha256": "ca029518413c9e7a0d7a6abf49a7d5e0457c5a453cc8d62b22bc3bc7c4fa597c",
+      "zipCrc": "passed",
+      "knownExercisePasswordScan": "no matches"
+    }
+  ],
+  "excluded": [
+    ".codebuddy",
+    ".git",
+    ".private",
+    ".runtime",
+    "__pycache__",
+    "dist",
+    "journey-backups",
+    "lesson-bundles",
+    "node_modules",
+    "target"
+  ],
+  "setupAndCloudLoginScreenshots": "excluded",
+  "surefireSystemProperties": "excluded",
+  "scope": "only the two known exercise private directories were read in memory for exact password matching; no secret values printed"
+}

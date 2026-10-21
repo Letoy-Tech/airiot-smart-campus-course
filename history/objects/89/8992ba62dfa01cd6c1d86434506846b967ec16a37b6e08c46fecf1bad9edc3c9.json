@@ -1,0 +1,247 @@
+{
+  "algorithm": "SHA-256",
+  "sourceDigestRule": "sha256 of sorted UTF-8 lines: <file sha256><two spaces><relative path><LF>; backend excludes target/evidence/private",
+  "sourceSha256": "788d3b2e4be1fbe6ae0d0408fe21b10fd8ad4c664e3068b021a9a712df327516",
+  "jarPath": "target/campus-ai-course-0.1.0.jar",
+  "jarSha256": "89ab296699fbb0d8ad78d97a2edde36c1c22e6ddd5bb06a008f29b443269ae86",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a"
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0301c57a3f4aa4feaad613bacbd89e04f6787535dba676322cb7d643967b2118"
+    },
+    {
+      "path": "docs/full-api.json",
+      "sha256": "99ce858995b120a82bcf4c82122058f8a52898c68f86ef32dce9fa335d0c0a5c"
+    },
+    {
+      "path": "mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+    },
+    {
+      "path": "mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+    },
+    {
+      "path": "pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "afb05f1c0da4e7e1ad36ab719c118289367f082b299c25ce35840d6be675d561"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "9ad0fda8a88fe95eadbf407bf558583005dcef9961a6306dc67eeacd278381be"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "0ca7f71ee7f77847e58de214ba83d46b3e6ffc3a6f587e57a85d2e1ad0b18eea"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "45988559fd842626e884cda4405fdd5dc406c902505ea3d90bace8eeee7f3f7f"
+    },
+    {
+      "path": "src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "dc686ddf57dde3cb860ca05c7bc086c34ded24e39aca036ae79865ea25290bfd"
+    },
+    {
+      "path": "src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef"
+    },
+    {
+      "path": "src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738"
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad"
+    },
+    {
+      "path": "src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973"
+    },
+    {
+      "path": "src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "4b2942d417fdc68a97092e401f31213eead08759363c29c7ebab5ecca672bb85"
+    },
+    {
+      "path": "src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed"
+    },
+    {
+      "path": "src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890"
+    },
+    {
+      "path": "tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9"
+    },
+    {
+      "path": "tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9"
+    }
+  ],
+  "additionalScopedFiles": [
+    {
+      "path": "tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689"
+    },
+    {
+      "path": "tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66"
+    },
+    {
+      "path": "tools/private-json.test.mjs",
+      "sha256": "081d49abdc930c2edc89e812d2b541d4db35ba63176183d745cbfc3d842fc541"
+    },
+    {
+      "path": "tools/verify-student-checkpoints.mjs",
+      "sha256": "0d9e261f20bad59c18ee58190feed9c3227d4f2cd3d9e2c6b0a8dfd8e174d9c5"
+    },
+    {
+      "path": "tools/validate-fixtures.mjs",
+      "sha256": "00de8a1a03a37afe6af8d61341e961ad5795f777bd8ae9bd3a8c43f0a3421cc3"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "1d9305de7bd7214b37d066725e81fabe6312f3da0b17bbdfb7cab57b8ce411ea"
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "sha256": "3da801a360efbda8a647e7b79cf7d60114103af8777ace4f674002f75451ab0d"
+    },
+    {
+      "path": "fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2"
+    }
+  ]
+}

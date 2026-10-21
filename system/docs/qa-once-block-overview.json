@@ -1,0 +1,15 @@
+{
+  "match": {
+    "url": "http://127.0.0.1:5173/api/campus/overview",
+    "method": "GET"
+  },
+  "effect": {
+    "type": "block"
+  },
+  "times": 1,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

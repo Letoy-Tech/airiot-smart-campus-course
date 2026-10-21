@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-04T10:57:40.274Z",
+  "task": "MG浅色管理驾驶舱与数据可视化优化",
+  "scope": {
+    "workspace": "system/Letoy WAGF MG",
+    "environment": "local development",
+    "baseUrl": "http://127.0.0.1:5173",
+    "role": "CAMPUS_VIEWER",
+    "testAccountLabel": "TEST 校园查看者",
+    "dataSource": "现有AIRIOT接口返回的隔离模拟设备和原始历史",
+    "simulation": true,
+    "backendChanged": false,
+    "deployed": false,
+    "controlWritesPerformed": false
+  },
+  "changes": [
+    "概览：原始温湿度趋势、采集质量、同单位空间比较、设备类别与空间分布下钻",
+    "能源：电压/功率即时比较和最多四设备的原始历史曲线",
+    "台账：实际点值巡查卡片、筛选、表格切换；窄屏默认收起分布图",
+    "详情：选择点位查看原始历史，15分钟/1小时/6小时范围，曲线勾选、原始样本和截断提示",
+    "共享：浅色布局、统一状态与颜色、响应式图表和查询错误保留"
+  ],
+  "validation": {
+    "build": {
+      "status": "passed",
+      "command": "npm run build",
+      "includes": "vue-tsc类型检查与Vite构建",
+      "warning": "共享ECharts相关产物590.75kB，超过Vite默认500kB提示阈值，构建成功"
+    },
+    "lint": {
+      "status": "passed",
+      "scope": "本次修改的Vue/TypeScript文件"
+    },
+    "unitTests": {
+      "status": "passed",
+      "total": 18,
+      "newHistorySeriesTests": 5,
+      "covered": [
+        "并发范围限制及去重",
+        "最新值轮询不重复查询历史",
+        "范围切换取消与过期响应隔离",
+        "全部失败时保留上次结果",
+        "初始部分失败与卸载取消",
+        "部分刷新失败保留原查询时间及元数据更新"
+      ]
+    },
+    "browser": {
+      "tool": "browser-skill bsk / Chrome 154",
+      "desktopViewport": {
+        "width": 1440,
+        "height": 823
+      },
+      "mobileEmulation": {
+        "preset": "iphone-14",
+        "width": 390,
+        "height": 844
+      },
+      "checks": [
+        {
+          "name": "桌面概览四类图表及实际计数",
+          "status": "passed",
+          "evidence": {
+            "heading": "运行概览",
+            "stats": "空间\n4 / 4\n实际 / 预期一致\n设备\n16 / 16\n实际 / 预期一致\n采集点\n28 / 28\n实际 / 预期一致\n有效采集点\n28 / 28\n100% 有效",
+            "charts": [
+              {
+                "label": "环境温度原始趋势，4台设备，720条原始样本，单位°C",
+                "width": 699.328125,
+                "height": 300
+              },
+              {
+                "label": "采集点质量，有效28个，过期0个，缺失0个，无效0个",
+                "width": 326.6640625,
+                "height": 210
+              },
+              {
+                "label": "环境温度最新值比较，4台设备有可比较值，单位°C",
+                "width": 633.5625,
+                "height": 266
+              },
+              {
+                "label": "四类设备实际数量分布，下方提供按类型筛选入口",
+                "width": 392.4296875,
+                "height": 238
+              }
+            ],
+            "headings": [
+              "校园运行",
+              "环境温度原始趋势",
+              "采集质量",
+              "空间最新指标",
+              "设备类型分布",
+              "空间与设备分布"
+            ],
+            "trend": "环境温度原始趋势\n\n原始采样 · °C · 最多对比4台设备\n\n历史时间范围\n最近15分钟\n最近1小时\n最近6小时\n↻\n演示教室一零一\n180 条\n末条样本 21.8 °C · 18:46:07\n演示教室102\n180 条\n末条样本 29.7 °C · 18:46:07\n演示实验室103\n180 条\n末条样本 31.3 °C · 18:46:07\n演示公共走廊104\n180 条\n末条样本 22.7 °C · 18:46:07\n\n成功查询 10/04 18:31:08 — 10/04 18:46:08 · 历史为查询快照，手动刷新更新\n\n查看原始样本 · 720 条",
+            "overflow": false
+          }
+        },
+        {
+          "name": "温湿度与实际空间切换",
+          "status": "passed",
+          "evidence": {
+            "trend": "环境湿度原始趋势\n\n原始采样 · % · 最多对比4台设备\n\n历史时间范围\n最近15分钟\n最近1小时\n最近6小时\n↻\n演示实验室103\n180 条\n末条样本 46.7 % · 18:46:42\n\n成功查询 10/04 18:31:43 — 10/04 18:46:43 · 历史为查询快照，手动刷新更新\n\n查看原始样本 · 180 条",
+            "series": [
+              {
+                "label": "显示演示实验室103的历史趋势",
+                "checked": true
+              }
+            ],
+            "selectors": [
+              {
+                "value": "demo_room_103",
+                "options": [
+                  {
+                    "value": "",
+                    "text": "全部环境设备（最多4台）"
+                  },
+                  {
+                    "value": "demo_room_101",
+                    "text": "演示教室一零一"
+                  },
+                  {
+                    "value": "demo_room_102",
+                    "text": "演示教室102"
+                  },
+                  {
+                    "value": "demo_room_103",
+                    "text": "演示实验室103"
+                  },
+                  {
+                    "value": "demo_room_104",
+                    "text": "演示公共走廊104"
+                  }
+                ]
+              },
+              {
+                "value": "0.25",
+                "options": [
+                  {
+                    "value": "0.25",
+                    "text": "最近15分钟"
+                  },
+                  {
+                    "value": "1",
+                    "text": "最近1小时"
+                  },
+                  {
+                    "value": "6",
+                    "text": "最近6小时"
+                  }
+                ]
+              },
+              {
+                "value": "temperature_c",
+                "options": [
+                  {
+                    "value": "temperature_c",
+                    "text": "环境温度 · °C"
+                  },
+                  {
+                    "value": "humidity_pct",
+                    "text": "环境湿度 · %"
+                  },
+                  {
+                    "value": "illuminance_lux",
+                    "text": "照度 · lux"
+                  },
+                  {
+                    "value": "equipment_temperature_c",
+                    "text": "设备温度 · °C"
+                  },
+                  {
+                    "value": "power_kw",
+                    "text": "功率 · kW"
+                  },
+                  {
+                    "value": "voltage_v",
+                    "text": "电压 · V"
+                  }
+                ]
+              }
+            ],
+            "overflow": false
+          }
+        },
+        {
+          "name": "照度比较保持同单位",
+          "status": "passed",
+          "evidence": {
+            "selected": "illuminance_lux",
+            "comparison": "照度最新值比较，4台设备有可比较值，单位lux",
+            "sampleUnits": [
+              "553 lux",
+              "514 lux",
+              "499 lux",
+              "633 lux"
+            ]
+          }
+        },
+        {
+          "name": "空间与类型组合下钻到设备",
+          "status": "passed",
+          "evidence": {
+            "url": "/campus/devices?spaceId=demo_room_103&category=environment",
+            "heading": "设备台账",
+            "filters": [
+              "environment",
+              "demo_room_103",
+              ""
+            ],
+            "cards": [
+              "环境设备\n在线\n模拟实验室环境设备三号\n\nenv_demo_03\n\n演示实验室103\n温度\n27 °C\n有效 · 10/04 18:47:47\n湿度\n57.4 %\n有效 · 10/04 18:47:47\n通信时间\n未提供时间\n模拟开关\n不适用\n模拟设备\n查看详情"
+            ],
+            "images": [
+              "当前筛选设备类型分布：环境1台，能源0台，设施0台，照明0台",
+              "当前筛选设备通信状态分布：在线1台，离线0台，状态未知0台"
+            ],
+            "overflow": false
+          }
+        },
+        {
+          "name": "设备台账切换及清除筛选",
+          "status": "passed",
+          "evidence": {
+            "tableRows": 16,
+            "cards": 0,
+            "filters": [
+              "",
+              "",
+              ""
+            ],
+            "overflow": false
+          }
+        },
+        {
+          "name": "390px巡查卡片与默认收起分布",
+          "status": "passed",
+          "evidence": {
+            "width": 390,
+            "documentWidth": 390,
+            "pageWidth": 358,
+            "distributionOpen": false,
+            "resultsY": 781.7265625,
+            "cards": 16,
+            "firstCard": "能源设备\n在线\n模拟教室用电设备\n\nenergy_demo_01\n\n演示教室一零一\n电压\n227.2 V\n有效 · 10/04 18:50:07\n功率\n8.49 kW\n有效 · 10/04 18:50:07\n通信时间\n未提供时间\n模拟开关\n不适用\n模拟设备\n查看详情",
+            "menu": "false"
+          }
+        },
+        {
+          "name": "390px能源比较与原始历史",
+          "status": "passed",
+          "evidence": {
+            "url": "/campus/energy",
+            "width": 390,
+            "documentWidth": 390,
+            "pageWidth": 358,
+            "charts": [
+              {
+                "label": "功率即时比较，单位kW，4台有效，0台过期，0台未取得有效值。具体采样时间见最新点值表。",
+                "width": 326,
+                "height": 280
+              },
+              {
+                "label": "功率原始历史，4台设备，360条原始样本，单位kW",
+                "width": 326,
+                "height": 300
+              }
+            ],
+            "menu": "false",
+            "stats": "能源设备\n4/ 4 台\n\n当前读取的能源设备\n\n有数值点位\n8/ 8 个\n\n电压与功率，包含过期采样\n\n功率有效采样\n4台\n\n所选指标 · 缺失或无效 0 台\n\n功率过期采样\n0台\n\n所选指标 · 保留原始值与时间"
+          }
+        },
+        {
+          "name": "能源指标、曲线勾选及原始样本展开",
+          "status": "passed",
+          "evidence": {
+            "url": "/campus/energy",
+            "width": 390,
+            "documentWidth": 390,
+            "trend": "电压原始历史",
+            "checkboxes": [
+              {
+                "label": "显示演示教室一零一的历史趋势",
+                "checked": false
+              },
+              {
+                "label": "显示演示教室102的历史趋势",
+                "checked": true
+              },
+              {
+                "label": "显示演示实验室103的历史趋势",
+                "checked": true
+              },
+              {
+                "label": "显示演示公共走廊104的历史趋势",
+                "checked": true
+              }
+            ],
+            "sampleOpen": true,
+            "sampleTables": 4,
+            "sampleRows": 360,
+            "sampleUnit": [
+              "采样时间",
+              "原始值（V）",
+              "采样时间",
+              "原始值（V）",
+              "采样时间",
+              "原始值（V）",
+              "采样时间",
+              "原始值（V）"
+            ],
+            "firstSample": [
+              "10/04 18:38:17\t230.6"
+            ]
+          }
+        },
+        {
+          "name": "详情点位历史与1000条截断提示",
+          "status": "passed",
+          "evidence": {
+            "heading": "模拟教室环境设备一号",
+            "trend": "湿度 · 原始历史\n\n原始采样 · % · 最多对比4台设备\n\n历史时间范围\n最近15分钟\n最近1小时\n最近6小时\n↻\n演示教室一零一\n1000 条\n末次 62.5 %\n\n查询 10/04 12:41:38 — 10/04 18:41:38 · 历史为查询快照，手动刷新更新\n\n部分设备达到1000条接口上限，历史已截断。缩短时间范围查看完整趋势。\n\n查看原始样本 · 1000 条",
+            "canvasCount": 1,
+            "detailsOpen": false,
+            "rows": 0,
+            "scrollWidth": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "name": "390px概览无横向溢出",
+          "status": "passed",
+          "evidence": {
+            "url": "/campus/overview",
+            "width": 390,
+            "documentWidth": 390,
+            "chartCount": 4,
+            "charts": [
+              {
+                "label": "环境温度原始趋势，4台设备，720条原始样本，单位°C",
+                "width": 326,
+                "height": 300
+              },
+              {
+                "label": "采集点质量，有效28个，过期0个，缺失0个，无效0个",
+                "width": 300,
+                "height": 210
+              },
+              {
+                "label": "环境温度最新值比较，4台设备有可比较值，单位°C",
+                "width": 326,
+                "height": 266
+              },
+              {
+                "label": "四类设备实际数量分布",
+                "width": 326,
+                "height": 238
+              }
+            ],
+            "stats": {
+              "spaces": 4,
+              "devices": 16,
+              "points": 28,
+              "valid": 28
+            }
+          }
+        },
+        {
+          "name": "最终桌面分布图与16张巡查卡片",
+          "status": "passed",
+          "evidence": {
+            "url": "/campus/devices",
+            "width": 1440,
+            "documentWidth": 1440,
+            "distributionOpen": true,
+            "summary": "当前筛选概况 收起图表 ↑\n按实际读取的设备统计，通信状态与点值质量分别核对。\n匹配设备\n16台\n有效点值\n28/ 28 点\n待核对点值\n0点",
+            "charts": [
+              {
+                "label": "当前筛选设备类型分布：环境4台，能源4台，设施4台，照明4台",
+                "width": 576,
+                "height": 128
+              },
+              {
+                "label": "当前筛选设备通信状态分布：在线16台，离线0台，状态未知0台",
+                "width": 262.21875,
+                "height": 128
+              }
+            ],
+            "cards": 16
+          }
+        }
+      ],
+      "networkEvidence": "ui-visualization-network.json",
+      "screenshots": [
+        "ui-overview-visualization-desktop.png",
+        "ui-overview-distribution-desktop.png",
+        "ui-overview-visualization-mobile.png",
+        "ui-energy-visualization-desktop.png",
+        "ui-energy-visualization-mobile.png",
+        "ui-devices-visualization-desktop.png",
+        "ui-devices-cards-desktop.png",
+        "ui-devices-visualization-mobile.png",
+        "ui-detail-visualization-desktop.png"
+      ],
+      "networkSummary": {
+        "campusRequestCount": 79,
+        "methods": [
+          "GET"
+        ],
+        "allStatus200": true,
+        "websiteConsoleWarningsAndErrors": 0,
+        "extensionResourceErrors": 4,
+        "note": "四条错误均来自chrome-extension://invalid/，未计作网站错误"
+      }
+    },
+    "runtime": {
+      "mysql": {
+        "running": true,
+        "port": 13316
+      },
+      "redis": {
+        "running": true,
+        "port": 16379
+      },
+      "be": {
+        "running": true,
+        "port": 8001
+      },
+      "mg": {
+        "running": true,
+        "port": 5173
+      }
+    }
+  },
+  "dataRules": [
+    "空值和无效值不转成0，未知通信状态单列，采样过期保留原值和时间",
+    "比较必须保持相同指标与单位；当前能源只有V/kW，不生成kWh、电费或节能量",
+    "15秒轮询更新最新值；历史为明确查询时间的快照，通过手动刷新更新",
+    "历史每设备1000条上限会提示截断；部分失败保留曲线并标记原查询时间",
+    "曲线不平滑、不插值，不生成真实地图、楼栋、报警或现场设备证据"
+  ],
+  "limitations": [
+    "移动端为Chrome尺寸及触摸仿真，并非实体手机验收",
+    "本轮浏览器使用只读角色，没有执行控制动作或重验管理员完整流程",
+    "失败、取消与部分结果保留通过单元测试覆盖，本轮浏览器没有注入网络故障",
+    "当前全部设备为模拟设备，页面和截图不得作为真实硬件或生产运行验收",
+    "本地开发页面验收完成；未进行服务器发布"
+  ],
+  "sourceSha256": {
+    "src/views/campus/Overview.vue": "db7e2f7f1b7406017e487f5ce2816f18e91149dc395f46cd721cd69e0ee8317d",
+    "src/views/campus/Energy.vue": "850e9abb9f89cecd00dd0292458112f021ab8e7830a17750c60bc37c9e52ddfa",
+    "src/views/campus/Devices.vue": "17e9658e7c7e723223bb63cf0bf868f246b825b5dc6e6c2839d58f6159006f01",
+    "src/views/campus/DeviceDetail.vue": "6ec4653a5cf065251e404117a764a0783f07db014400f7a744b1f87e2d9f334f",
+    "src/components/campus/CampusChart.vue": "3e146eb3520effa606a41f6318f944135b93e1609786eae3e2c8781c737d8477",
+    "src/components/campus/MetricTrend.vue": "666c331d0c53fec0e699e729f768909ea193144faccc15b5f1aefdb9d9b6fe3c",
+    "src/composables/useHistorySeries.ts": "11fe691164a317270ac3b6b2cdf0e0c3d8717e7492aa232364b9132796fb2d89",
+    "src/api/campus.ts": "8f2c1990d330516c4c6869bfcde65e664c87f318d7317b672f476341327ecf04",
+    "src/styles/campus.css": "d453e8eb57c8569fa2f5d4ecd0425263b5e9aa079b16042e88ff26f7a644b2c5",
+    "src/__tests__/history-series.spec.ts": "42befb83dd0c5a52c4c29aabb42f25edefeb880dfdf3c64944e2f93b1bab0978"
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

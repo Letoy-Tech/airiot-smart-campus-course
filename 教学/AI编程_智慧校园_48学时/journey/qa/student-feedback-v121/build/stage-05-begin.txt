@@ -1,0 +1,11 @@
+$ node tools/progress.mjs begin 05
+已准备骨架：第05站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/OverviewView.vue
+  frontend/src/components/CompareHistory.vue
+  frontend/src/components/HistoryChart.vue
+  frontend/src/views/EnergyView.vue
+  frontend/src/tests/energy-scope.test.ts
+备份：journey-backups/2026-10-19T22-17-36-873Z-stage-05-begin-7018b0
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

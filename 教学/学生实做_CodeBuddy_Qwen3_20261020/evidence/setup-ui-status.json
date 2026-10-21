@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-10-19T16:42:43.774Z",
+  "codebuddyVersion": "4.12.2",
+  "standaloneIdeRunning": true,
+  "studentFolderSelected": true,
+  "initialSetupPendingLogin": true,
+  "codebuddyAuthenticated": false,
+  "codebuddyLoginRequiresTermsConfirmation": true,
+  "bailianAuthenticated": false,
+  "exactModelId": null,
+  "region": null,
+  "endpoint": null,
+  "credentialConfigured": false,
+  "modelCallsExecuted": 0,
+  "studentStationsStarted": 0,
+  "studentStationsAccepted": 0,
+  "servicesStarted": [],
+  "codebuddyLoginScreenshot": "screenshots/setup-codebuddy-login.png"
+}

@@ -1,0 +1,9 @@
+.private/
+.codebuddy/
+lesson-bundles/**/files/
+node_modules/
+frontend/dist/
+backend/target/
+journey-backups/
+*.log
+.DS_Store

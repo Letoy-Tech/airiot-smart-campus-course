@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "examplesAreTeachingExamples": true,
+  "basePath": "/api/campus",
+  "source": "TEACHING_MOCK",
+  "observedAt": 1792303200000,
+  "queriedAtMeaning": "server query wall-clock epoch milliseconds; not a sampling time",
+  "models": {
+    "RawAlarm": {
+      "id": "string",
+      "deviceId": "string|null",
+      "deviceName": "string|null",
+      "tableId": "string|null",
+      "tagId": "string|null",
+      "message": "string",
+      "time": "epoch-ms|null; alias of occurredAt",
+      "recoveryTime": "epoch-ms|null; alias of recoveredAt",
+      "occurredAt": "epoch-ms|null; fixed invented occurrence time",
+      "recoveredAt": "epoch-ms|null; fixed invented recovery time",
+      "status": "raw string; do not map to local DEMO workflow",
+      "level": "raw string; preserve unknown values",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    },
+    "CommandAudit": {
+      "id": "string",
+      "actorId": "string",
+      "actorName": "string",
+      "deviceId": "string",
+      "tableId": "string",
+      "before": "boolean|null",
+      "requested": "boolean",
+      "confirmed": "boolean|null",
+      "outcome": "raw string; no successful real control implied",
+      "reason": "string",
+      "createdAt": "epoch-ms; fixed invented sample time",
+      "error": "string|null",
+      "source": "TEACHING_MOCK",
+      "simulated": true,
+      "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+    }
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/campus/history",
+      "access": "campus-role",
+      "data": {
+        "source": "TEACHING_MOCK",
+        "deviceId": "string",
+        "tagId": "string",
+        "unit": "string",
+        "from": "epoch-ms",
+        "to": "epoch-ms",
+        "observedAt": "catalog fixed epoch-ms",
+        "samples": "{time:epoch-ms,value:number|null}[]",
+        "truncated": "boolean",
+        "issues": "Issue[]",
+        "queriedAt": "server query epoch-ms; independent of fixed observedAt/sample.time"
+      },
+      "query": {
+        "deviceId": "required known id",
+        "tagId": "required known tag",
+        "from": "required integer epoch-ms",
+        "to": "required integer epoch-ms; from<=to; span<=21600000",
+        "scenario": "optional normal|empty|failure; mock only, omitted means normal"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/alarms",
+      "access": "campus-role",
+      "data": {
+        "items": "RawAlarm[]",
+        "total": "integer count before pagination",
+        "observedAt": "catalog fixed epoch-ms",
+        "queriedAt": "server query epoch-ms",
+        "source": "TEACHING_MOCK",
+        "simulated": true,
+        "issues": "Issue[]"
+      },
+      "query": {
+        "limit": "1..100 default50",
+        "skip": "0..10000 default0",
+        "scenario": "optional normal|empty|failure; mock only, omitted means normal"
+      },
+      "semantics": "occurredAt DESC NULLS LAST, id DESC. 5 normal samples; empty total0; failure HTTP503. No import/update/recovery writes."
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/command-audit",
+      "access": "ADMIN; recheck current enabled identity and role",
+      "query": {
+        "limit": "1..100 default50",
+        "skip": "0..10000 default0",
+        "scenario": "optional normal|empty|failure; historical teaching samples only"
+      },
+      "data": {
+        "items": "CommandAudit[]",
+        "total": "integer count before pagination",
+        "observedAt": "catalog fixed epoch-ms",
+        "queriedAt": "server query epoch-ms",
+        "source": "TEACHING_MOCK",
+        "simulated": true,
+        "sampleKind": "HISTORICAL_TEACHING_SAMPLE",
+        "issues": "Issue[]"
+      },
+      "semantics": "createdAt DESC, id DESC. 3 invented historical examples, independent of selected provider; no real command was sent; no write route."
+    }
+  ],
+  "rawAlarmExample": {
+    "id": "teaching_alarm_001",
+    "deviceId": "teaching_env_01",
+    "deviceName": "环境传感器01（模拟）",
+    "tableId": "teaching_environment",
+    "tagId": "temperature",
+    "message": "人工模拟原始报警样例1（只读，非真实故障）",
+    "occurredAt": 1792302600000,
+    "recoveredAt": null,
+    "status": "ACTIVE",
+    "level": "warning",
+    "source": "TEACHING_MOCK",
+    "simulated": true,
+    "time": 1792302600000,
+    "recoveryTime": null
+  },
+  "commandAuditExample": {
+    "id": "teaching_audit_001",
+    "actorId": "teaching_sample_actor",
+    "actorName": "历史教学角色（虚构）",
+    "deviceId": "teaching_light_01",
+    "tableId": "teaching_lighting",
+    "before": false,
+    "requested": true,
+    "confirmed": true,
+    "outcome": "CONFIRMED",
+    "reason": "人工编写的历史记录样例，没有向设备发送命令",
+    "createdAt": 1792302600000,
+    "error": null,
+    "source": "TEACHING_MOCK",
+    "simulated": true,
+    "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+  }
+}

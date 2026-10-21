@@ -1,0 +1,10 @@
+{
+  "id": "图 04-03",
+  "title": "首次贯通的分层定位路径",
+  "alt": "先检查 Network 是否有请求；无请求看前端事件，有请求则区分 HTML、身份权限拒绝、服务错误与合法 JSON；最后分别检查代理、登录授权、后端日志或页面解析。",
+  "caption": "图 04-03　首次贯通的分层定位路径。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false,
+  "renderSource": "figure-sources/layouts/ch04-03-debug-path.svg",
+  "layoutNote": "固定 SVG 版式；原 Mermaid 保留逻辑关系，实际图面以本 SVG 为准。"
+}

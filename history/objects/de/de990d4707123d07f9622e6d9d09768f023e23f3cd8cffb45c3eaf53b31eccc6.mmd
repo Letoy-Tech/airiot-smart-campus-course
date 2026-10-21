@@ -1,0 +1,7 @@
+flowchart LR
+    Z[初始责任<br/>ownerUid=null<br/>version=0] --> H1[历史 v1 / t1<br/>null 到 manager-a<br/>actor=ADMIN<br/>note=本轮分工]
+    H1 --> H2[历史 v2 / t2<br/>manager-a 到 manager-b<br/>actor=ADMIN<br/>note=轮值调整]
+    H2 --> C[当前主记录<br/>ownerUid=<br/>manager-b<br/>version=2]
+    H1 -.-> K[旧历史继续保留<br/>前后 uid 与当次操作者和说明]
+    H2 -.-> K
+    N[显示名可变化<br/>不能覆盖历史 uid] -.-> K

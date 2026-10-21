@@ -1,0 +1,8 @@
+
+当前第02站：让页面从后端拿设备。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/FirstDeviceRead.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts。
+本次只修改：frontend/src/views/FirstDeviceRead.vue。
+使用给定store/API写首次读取页。保留教学模拟标识、采样时刻、加载和失败提示；online只接受true/false/null。调用已有认证后的请求，不自己写密码、token或模拟成功。直接修改当前Vue文件，导入名以项目实际接口为准。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+实际准备失败：按教程在begin之后运行 node tools/course.mjs build，后端已BUILD SUCCESS，但前端报 src/tests/first-device-view.test.ts(4,27): error TS2614: Module ../views/FirstDeviceRead.vue has no exported member onlineLabel。请读取本工程的实际测试和类型，完成唯一目标文件后解决这条真实错误；不修改测试或预期。只允许读本站manifest元数据，不读lesson-bundles/*/files、reference、journey-backups、.private。不要执行迁移、不要取账号密码，不启动服务，不自动进入下一站。

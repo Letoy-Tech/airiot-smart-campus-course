@@ -1,0 +1,14 @@
+title = "Public course repository secret scanning"
+
+[extend]
+useDefault = true
+
+# Only source-file checksum records are allowed. A password/config fingerprint
+# is intentionally not matched by this exception.
+# Configuration syntax: https://github.com/gitleaks/gitleaks#configuration
+[[rules]]
+id = "generic-api-key"
+  [[rules.allowlists]]
+  description = "SHA-256 values keyed by a source-file path in historical manifests"
+  regexTarget = "line"
+  regexes = ['''^\s*"[^"\r\n]+\.(?:java|ts|tsx|js|mjs|vue|json|properties|md|py|xml|html|css|sql|txt)"\s*:\s*"[a-f0-9]{64}"[,]?\s*$''']

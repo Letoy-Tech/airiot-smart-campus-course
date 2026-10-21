@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "RAW_ALARM_SAMPLES",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "description": "人工构造的原始报警只读样例；不是AIRIOT导出，不导入本地DEMO事件，不表示真实设备故障。",
+  "items": [
+    {
+      "id": "teaching_alarm_001",
+      "deviceId": "teaching_env_01",
+      "deviceName": "环境传感器01（模拟）",
+      "tableId": "teaching_environment",
+      "tagId": "temperature",
+      "message": "人工模拟原始报警样例1（只读，非真实故障）",
+      "occurredAt": 1792302600000,
+      "recoveredAt": null,
+      "status": "ACTIVE",
+      "level": "warning",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    },
+    {
+      "id": "teaching_alarm_002",
+      "deviceId": "teaching_energy_02",
+      "deviceName": "电能监测器02（模拟）",
+      "tableId": "teaching_energy",
+      "tagId": "power",
+      "message": "人工模拟原始报警样例2（只读，非真实故障）",
+      "occurredAt": 1792302300000,
+      "recoveredAt": 1792302900000,
+      "status": "RECOVERED",
+      "level": "critical",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    },
+    {
+      "id": "teaching_alarm_003",
+      "deviceId": "teaching_facility_03",
+      "deviceName": "设施监测器03（模拟）",
+      "tableId": "teaching_facility",
+      "tagId": "run_state",
+      "message": "人工模拟原始报警样例3（只读，非真实故障）",
+      "occurredAt": 1792302000000,
+      "recoveredAt": null,
+      "status": "ACK_PENDING",
+      "level": "vendor-L7",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    },
+    {
+      "id": "teaching_alarm_004",
+      "deviceId": "teaching_light_04",
+      "deviceName": "照明监测器04（模拟）",
+      "tableId": "teaching_lighting",
+      "tagId": "illuminance",
+      "message": "人工模拟原始报警样例4（只读，非真实故障）",
+      "occurredAt": 1792302000000,
+      "recoveredAt": null,
+      "status": "vendor:17",
+      "level": "notice",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    },
+    {
+      "id": "teaching_alarm_005",
+      "deviceId": null,
+      "deviceName": null,
+      "tableId": null,
+      "tagId": null,
+      "message": "人工模拟原始报警样例5（只读，非真实故障）",
+      "occurredAt": null,
+      "recoveredAt": null,
+      "status": "UNMAPPED_RAW_STATUS",
+      "level": "UNMAPPED_RAW_LEVEL",
+      "source": "TEACHING_MOCK",
+      "simulated": true
+    }
+  ]
+}

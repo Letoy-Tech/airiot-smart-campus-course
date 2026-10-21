@@ -1,0 +1,88 @@
+{
+  "round": 5,
+  "recordedAt": "2026-10-18T18:50:16.465448+00:00",
+  "status": "PASS",
+  "sourceFrozen": true,
+  "backendSourceSha256": "788d3b2e4be1fbe6ae0d0408fe21b10fd8ad4c664e3068b021a9a712df327516",
+  "jarSha256": "89ab296699fbb0d8ad78d97a2edde36c1c22e6ddd5bb06a008f29b443269ae86",
+  "environment": {
+    "platform": "macOS arm64",
+    "node": "22.21.1",
+    "java": "17.0.6",
+    "mysql": "8.4.10",
+    "database": "campus_course_test",
+    "port": 13328
+  },
+  "fixes": [
+    {
+      "id": "R5-BE-01",
+      "summary": "Explicit REPEATABLE_READ for detail, owner, filtered list+count, locations and mapped spaces",
+      "regressions": "SnapshotConsistencyTest: 5 real MySQL tests; two physical connections; writer commits between SELECTs; RC pool default remains unchanged",
+      "evidence": "mysql-snapshot-evidence.json"
+    },
+    {
+      "id": "R5-BE-02",
+      "summary": "UTF-8 BOM private JSON support with sanitized errors and common reader",
+      "consumers": [
+        "tools/course.mjs",
+        "backend/tools/account-admin.mjs",
+        "backend/tools/test-mysql.mjs",
+        "tools/verify-student-checkpoints.mjs"
+      ],
+      "regressions": "10 Node tests; first three entrypoints run with synthetic BOM files and child_process stubs; no actual Windows execution",
+      "evidence": "private-json-tests.txt"
+    },
+    {
+      "id": "R5-BE-03",
+      "summary": "History fixture successful-envelope and unit validation before data is served; wrong/missing/non-string units fail startup with fixed explanation, no relabeling",
+      "regressions": "HistoryFixtureTest: 3 tests including V/kWh/null/number/empty/missing unit and unsuccessful or invalid code; valid kW/null/0 retained"
+    },
+    {
+      "id": "R5-BE-04",
+      "summary": "Catalog observedAt and non-null communicationTime reuse inclusive epoch validator [0,8640000000000000]",
+      "regressions": "CatalogReaderTest: 2 added boundary tests; 0/MAX accepted and -1/MAX+1/Long.MAX rejected on both fields"
+    }
+  ],
+  "verification": {
+    "backend": {
+      "tests": 39,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "privateJson": {
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fixtures": {
+      "groups": 9,
+      "damagedCatalogRejections": 14,
+      "sortFieldsAndDirections": [
+        "createdAt DESC",
+        "id DESC"
+      ]
+    },
+    "studentMarkerBlocksUnchanged": 4,
+    "priorEvidenceFilesUnchanged": 5
+  },
+  "testDevelopmentNote": "The first SnapshotConsistencyTest attempt failed its own over-specific test-schema regex before executing the five scenarios. The guard was corrected to the existing prefix plus suffix rule; the targeted rerun and final clean package both passed. Its log is retained separately as snapshot-tests.txt.",
+  "limits": [
+    "Windows behavior was tested through synthetic BOM files on macOS, not Windows hardware",
+    "No teacher remote database, original system, lab schema, AIRIOT connection or HTTP/browser service was started or changed in this repair round",
+    "No Spring/JDK SCA performed; Flyway retains its MySQL 8.4 versus officially tested 8.1 warning",
+    "Existing evidence files and nine student source copies were not rewritten"
+  ],
+  "databaseWorkComplete": true,
+  "artifacts": {
+    "finalBackendLog": "full-backend-package.txt",
+    "targetedBoundaryLog": "boundary-tests.txt",
+    "targetedSnapshotLog": "snapshot-tests-final.txt",
+    "privateJsonLog": "private-json-tests.txt",
+    "fixtureValidationLog": "fixture-validation-final.txt",
+    "priorDefectBoundaryLog": "pre-fix-boundary.txt",
+    "priorDefectSnapshotLog": "pre-fix-snapshot.txt",
+    "initialTestGuardFailureLog": "snapshot-tests.txt"
+  }
+}

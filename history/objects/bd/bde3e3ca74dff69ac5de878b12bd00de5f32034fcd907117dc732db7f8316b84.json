@@ -1,0 +1,2831 @@
+{
+  "version": "2.0.1",
+  "run": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228",
+  "started": "2026-10-20T19:22:28.195327+08:00",
+  "student_source_origin": "resources/from-zero-v2/student-start",
+  "source_sha256": "18ea5a7713140c238299d317656176a741584e408c949ea0c1d28594ccdc7502",
+  "steps": [
+    {
+      "id": "01-01",
+      "chapter": "01",
+      "step": 1,
+      "title": "## 第 1 步：让空白文件变成第一张页面",
+      "source": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "我们从零制作一个大学生练习用的智慧校园管理台。当前打开的是 campus-lab 根目录。先读 materials/约定卡.md，只完成本步。\n\n1. 在现有空文件 frontend/index.html 中写一个完整 HTML 页面，页面语言为中文，浏览器标签名和页面大标题都叫“我的校园值班台”。标题下面显示“第一张页面已经打开”和“教学模拟项目”。先不要加入业务数据。\n2. 创建 tools/serve.mjs，使用 Node 22 自带模块，不安装依赖。监听 127.0.0.1:5188，只提供 frontend 目录中的文件；不允许读取隐藏文件、项目根目录、backend 或目录外文件。正确设置 HTML、CSS、JavaScript 的类型。/api/* 转发到 127.0.0.1:8098，保留 /api 路径；后端未启动时返回清楚的服务不可用提示。\n3. 保存文件，可以运行会自行退出的语法检查，但不要启动常驻服务。\n\n完成后列出实际保存的文件，并告诉我下一步在终端输入什么。不要继续做其他页面。\n",
+        "我在第01课第1步。预期打开本地地址后看到“我的校园值班台”，现在没有看到。我会附上实际现象和第一条错误。请只检查本步的 index.html 和 serve.mjs，修复这个问题并保存，不继续添加功能，也不要替我启动服务。若修改了 serve.mjs，明确提醒我只重启终端 A。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:24:13.245Z",
+          "prompt": "我们从零制作一个大学生练习用的智慧校园管理台。当前打开的是 campus-lab 根目录。先读 materials/约定卡.md，只完成本步。\n\n1. 在现有空文件 frontend/index.html 中写一个完整 HTML 页面，页面语言为中文，浏览器标签名和页面大标题都叫“我的校园值班台”。标题下面显示“第一张页面已经打开”和“教学模拟项目”。先不要加入业务数据。\n2. 创建 tools/serve.mjs，使用 Node 22 自带模块，不安装依赖。监听 127.0.0.1:5188，只提供 frontend 目录中的文件；不允许读取隐藏文件、项目根目录、backend 或目录外文件。正确设置 HTML、CSS、JavaScript 的类型。/api/* 转发到 127.0.0.1:8098，保留 /api 路径；后端未启动时返回清楚的服务不可用提示。\n3. 保存文件，可以运行会自行退出的语法检查，但不要启动常驻服务。\n\n完成后列出实际保存的文件，并告诉我下一步在终端输入什么。不要继续做其他页面。\n",
+          "submissionObserved": true
+        }
+      ],
+      "checks": [
+        {
+          "kind": "IDE terminal",
+          "commands": [
+            "export PATH=/Users/learner/.nvm/versions/node/v22.21.1/bin:$PATH",
+            "node --version",
+            "pwd",
+            "node tools/serve.mjs"
+          ],
+          "result": "Node22.21.1; A=terminal1; 127.0.0.1:5188 listening PID63228"
+        },
+        {
+          "kind": "browser",
+          "actions": [
+            "navigate http://127.0.0.1:5188",
+            "read heading and visible paragraphs",
+            "capture and view screenshot"
+          ],
+          "result": "我的校园值班台 / 第一张页面已经打开 / 教学模拟项目 visible"
+        }
+      ],
+      "changed_files": [
+        "frontend/index.html",
+        "tools/serve.mjs"
+      ],
+      "result": "Original prompt succeeded; browser verified separately from AI generation",
+      "ai_completion": "CodeBuddy finished; files retained and Save All invoked; full AX and screenshot saved",
+      "updatedAt": "2026-10-20T19:25:29.537569+08:00"
+    },
+    {
+      "id": "01-02",
+      "chapter": "01",
+      "step": 2,
+      "title": "## 第 2 步：给管理台搭出外框",
+      "source": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续修改当前项目，只完成第01课第2步。\n\n把 frontend/index.html 分成左侧菜单、顶部标题、右侧内容三块。保留“我的校园值班台”和“教学模拟项目”。\n左侧从上到下放九个菜单：概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。页面内部名称依次为 dashboard、devices、spaces、energy、history、alarms、cases、owners、admin。\n右侧先显示“概览”，下面写“我们将在下一课放入校园设备”。菜单暂时可以还不能切换。\n先把本步所需的少量样式写在 index.html 中。文字清楚、按钮容易点，窄屏不让主内容挤到屏幕外。不引入框架、图标库、远程字体或新依赖。\n保存文件，不启动常驻服务；告诉我改了哪一处。\n",
+        "第01课第2步的外框排版有问题：我将说明哪个区域挡住了哪个区域。请只修复现有 index.html 的布局，保留九个菜单和所有文字，不添加新功能。保存后告诉我应刷新检查哪一处。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:25:39.488Z",
+          "prompt": "继续修改当前项目，只完成第01课第2步。\n\n把 frontend/index.html 分成左侧菜单、顶部标题、右侧内容三块。保留“我的校园值班台”和“教学模拟项目”。\n左侧从上到下放九个菜单：概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。页面内部名称依次为 dashboard、devices、spaces、energy、history、alarms、cases、owners、admin。\n右侧先显示“概览”，下面写“我们将在下一课放入校园设备”。菜单暂时可以还不能切换。\n先把本步所需的少量样式写在 index.html 中。文字清楚、按钮容易点，窄屏不让主内容挤到屏幕外。不引入框架、图标库、远程字体或新依赖。\n保存文件，不启动常驻服务；告诉我改了哪一处。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:26:07.872Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "reload",
+            "read all nine menu labels",
+            "emulate390x844",
+            "view narrow screenshot",
+            "restore1280x800"
+          ],
+          "result": "Nine menu labels and top title present; horizontal menu scroll at390, main text not covered"
+        }
+      ],
+      "changed_files": [
+        "frontend/index.html"
+      ],
+      "result": "Original prompt passed; no corrective prompt needed",
+      "updatedAt": "2026-10-20T19:26:20.001207+08:00"
+    },
+    {
+      "id": "01-03",
+      "chapter": "01",
+      "step": 3,
+      "title": "## 第 3 步：在概览中放三张卡片",
+      "source": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续修改当前 index.html，只完成第01课第3步。\n在概览页面增加三张卡片：“设备总数”“空间总数”“点位总数”。卡片数值区域目前统一写“尚未载入”，不要写0或随便编一个数字。\n卡片下加一块“今天先做什么”，用一句话写“先查看设备，再了解读数，发现问题后登记演练事件”。\n页面持续显示“教学模拟项目”。让三张卡片在宽屏并排，窄屏自然换行。不加入图表、不请求后端、不安装依赖。\n保存文件，不启动服务，不做下一步。\n",
+        "第01课第3步尚未加入练习数据，但卡片出现了数字。请把设备、空间、点位三张卡片都恢复为“尚未载入”，保留卡片外观。不要用0代表尚未读取，也不要提前读取数据。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:26:24.310Z",
+          "prompt": "继续修改当前 index.html，只完成第01课第3步。\n在概览页面增加三张卡片：“设备总数”“空间总数”“点位总数”。卡片数值区域目前统一写“尚未载入”，不要写0或随便编一个数字。\n卡片下加一块“今天先做什么”，用一句话写“先查看设备，再了解读数，发现问题后登记演练事件”。\n页面持续显示“教学模拟项目”。让三张卡片在宽屏并排，窄屏自然换行。不加入图表、不请求后端、不安装依赖。\n保存文件，不启动服务，不做下一步。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:26:55.561Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "reload1280x800",
+            "read3cardtitles",
+            "resize390x844",
+            "view screenshot",
+            "restore1280x800"
+          ],
+          "result": "All3 cards say 尚未载入; narrow cards wrap vertically; teaching label and next action present"
+        }
+      ],
+      "changed_files": [
+        "frontend/index.html"
+      ],
+      "result": "Original prompt passed",
+      "updatedAt": "2026-10-20T19:27:07.987207+08:00"
+    },
+    {
+      "id": "01-04",
+      "chapter": "01",
+      "step": 4,
+      "title": "## 第 4 步：把外观和操作分开，让菜单能切换",
+      "source": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续当前项目，只完成第01课第4步。\n1. 将 index.html 中的样式原样移到 frontend/styles.css，让 HTML 引用它。拆分后外观应保持不变。\n2. 创建 frontend/app.js，由 index.html 以 type=\"module\" 引入。九个菜单点击后切换对应内容区域，并突出当前菜单。可以使用 #dashboard、#devices 等地址片段保存当前位置，刷新后仍能回到该菜单。\n3. 概览保留现有三张卡片。其他八个菜单各显示自己的中文标题和“这个页面会在后续课程完成”，不要伪装成已经有业务功能。\n4. 点击菜单不打开新的网页，不刷新整个浏览器页面。对显示在页面中的文本使用安全的文字写入方式。\n保存三个文件，不安装框架，不启动服务。完成后告诉我在哪里引用 CSS 和 JavaScript。\n",
+        "第01课第4步菜单不能正常切换。我将说明点击哪个菜单、页面实际显示什么。请检查 index.html 对 app.js 的引用、菜单对应名称和点击处理，只修复切换问题。不要重写外观，也不要删除现有菜单。保存后告诉我重复哪三个点击检查。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:27:13.151Z",
+          "prompt": "继续当前项目，只完成第01课第4步。\n1. 将 index.html 中的样式原样移到 frontend/styles.css，让 HTML 引用它。拆分后外观应保持不变。\n2. 创建 frontend/app.js，由 index.html 以 type=\"module\" 引入。九个菜单点击后切换对应内容区域，并突出当前菜单。可以使用 #dashboard、#devices 等地址片段保存当前位置，刷新后仍能回到该菜单。\n3. 概览保留现有三张卡片。其他八个菜单各显示自己的中文标题和“这个页面会在后续课程完成”，不要伪装成已经有业务功能。\n4. 点击菜单不打开新的网页，不刷新整个浏览器页面。对显示在页面中的文本使用安全的文字写入方式。\n保存三个文件，不安装框架，不启动服务。完成后告诉我在哪里引用 CSS 和 JavaScript。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:27:59.925Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "source-read",
+          "result": "CSS linked in head; app.js type=module;3 source files exist"
+        },
+        {
+          "kind": "browser",
+          "actions": [
+            "reload",
+            "click设备",
+            "click历史",
+            "reload while历史",
+            "click概览"
+          ],
+          "result": "Each page shows own heading; refresh preserves #history;概览 cards retained"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/index.html",
+        "frontend/styles.css"
+      ],
+      "result": "Original prompt passed",
+      "updatedAt": "2026-10-20T19:28:15.409984+08:00"
+    },
+    {
+      "id": "01-05",
+      "chapter": "01",
+      "step": 5,
+      "title": "## 第 5 步：亲手改一次，留下第一课作品",
+      "source": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "第01课进入收尾。请只检查当前前端文件，不增加业务功能：\n平台名称是否一致，九个菜单是否齐全，CSS和JS是否正确引用，首页是否仍保留三张“尚未载入”卡片。\n如果发现本课遗漏，做最小修复并保存。不要启动常驻服务，不要继续读取校园数据。\n最后用三句话告诉我：HTML负责什么、CSS负责什么、JavaScript负责什么。只报告实际做过的检查。\n",
+        "第01课第5步我已经保存了平台名称，但浏览器刷新后仍显示旧名称。请查出页面实际使用名称的位置，统一成本项目现在的名称。只修复名称，不重建工程。告诉我需要刷新还是只需重新保存文件。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:28:54.025Z",
+          "prompt": "第01课进入收尾。请只检查当前前端文件，不增加业务功能：\n平台名称是否一致，九个菜单是否齐全，CSS和JS是否正确引用，首页是否仍保留三张“尚未载入”卡片。\n如果发现本课遗漏，做最小修复并保存。不要启动常驻服务，不要继续读取校园数据。\n最后用三句话告诉我：HTML负责什么、CSS负责什么、JavaScript负责什么。只报告实际做过的检查。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:29:38.521Z"
+        },
+        {
+          "kind": "remedy",
+          "submittedAt": "2026-10-20T11:29:54.801Z",
+          "prompt": "第01课第5步我已经保存了平台名称，但浏览器刷新后仍显示旧名称。请查出页面实际使用名称的位置，统一成本项目现在的名称。只修复名称，不重建工程。告诉我需要刷新还是只需重新保存文件。\n\n实际现象：我在本步发收尾提示之前，已亲手将title和H1两处改为“晨光校园值班台”，保存并在浏览器确认。你本轮却把这两处改回了“我的校园值班台”。本项目现在学生自主选择的名称是“晨光校园值班台”，请只将标签名和H1统一为这个名称，保留其他内容。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:30:12.403Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "manual-editor",
+          "result": "Set title and H1 to 晨光校园值班台 in native editor find/replace; saved and browser verified before prompt. An accidental pre-find paste was immediately undone before save."
+        },
+        {
+          "kind": "browser-after-original",
+          "result": "After AI cleanup, browser title reverted to 我的校园值班台, contrary to step manual group renaming requirement"
+        },
+        {
+          "kind": "browser-after-remedy",
+          "actions": [
+            "reload",
+            "click管理",
+            "click概览",
+            "resize390x844",
+            "view screenshot"
+          ],
+          "result": "晨光校园值班台 retained;9menus and3尚未载入 cards readable"
+        },
+        {
+          "kind": "student-note",
+          "result": "Created notes/01-我的第一张页面.md via IDE native editor;3lines saved"
+        }
+      ],
+      "changed_files": [
+        "frontend/index.html",
+        "notes/01-我的第一张页面.md"
+      ],
+      "result": "Passed after1 actual remedy; original regression retained in issue and AX logs",
+      "updatedAt": "2026-10-20T19:31:02.630140+08:00"
+    },
+    {
+      "id": "02-01",
+      "chapter": "02",
+      "step": 1,
+      "title": "## 第 1 步：把练习数据放进自己的前端",
+      "source": "handbook-v2/lessons/02-把设备放进台账.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续 campus-lab，只完成第02课第1步。先读 materials/约定卡.md 和 materials/mock-campus.json。\n创建 frontend/mock-data.js，将公开 JSON 完整转换成可导入的 JavaScript 数据，导出名为 mockCampus。不要编造、删减或修改练习数据。\n创建 frontend/data-service.js，导出异步方法 getOverview()、getDevices()、getSpaces()。getOverview返回包含spaces、devices、points、history、alarms的完整练习数据；另两个方法分别返回devices、spaces。每次返回独立副本，页面不要直接改原始mockCampus。\napp.js以后统一从data-service取业务数据，不直接导入mock-data。保留现有外观和菜单。在概览底部增加一句“数据方式：浏览器演示（教学模拟）”，读取成功后显示练习数据的设备、空间、点位数量；暂不改上面的三张卡片。\n不要请求后端，不把materials整个目录开放到浏览器，不安装依赖。保存文件，不启动服务，不继续下一步。\n",
+        "第02课第1步预期从公开练习JSON读到16台设备、4个空间、28个点位，实际结果不一致。我将补上看到的内容。请核对JSON转换、模块导入和返回的数据，修复本步问题。不要把16、4、28硬写成显示结果，不修改练习JSON，也不要引入后端。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:31:15.500Z",
+          "prompt": "继续 campus-lab，只完成第02课第1步。先读 materials/约定卡.md 和 materials/mock-campus.json。\n创建 frontend/mock-data.js，将公开 JSON 完整转换成可导入的 JavaScript 数据，导出名为 mockCampus。不要编造、删减或修改练习数据。\n创建 frontend/data-service.js，导出异步方法 getOverview()、getDevices()、getSpaces()。getOverview返回包含spaces、devices、points、history、alarms的完整练习数据；另两个方法分别返回devices、spaces。每次返回独立副本，页面不要直接改原始mockCampus。\napp.js以后统一从data-service取业务数据，不直接导入mock-data。保留现有外观和菜单。在概览底部增加一句“数据方式：浏览器演示（教学模拟）”，读取成功后显示练习数据的设备、空间、点位数量；暂不改上面的三张卡片。\n不要请求后端，不把materials整个目录开放到浏览器，不安装依赖。保存文件，不启动服务，不继续下一步。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:33:05.872Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "reload",
+            "read overview bottom"
+          ],
+          "result": "浏览器演示（教学模拟）,16devices/4spaces/28points; top3 cards still尚未载入"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/index.html",
+        "frontend/mock-data.js",
+        "frontend/styles.css"
+      ],
+      "result": "Student visible check passed; AI internal error preserved in AX; no extra student remedial prompt",
+      "ai_internal_error": "Model check initially used unsupported --experimental-default-type=module with inherited Node26; model corrected using temporary ESM directory, then removed own verified-empty directory through UI confirmation. Student server remains Node22.21.1.",
+      "updatedAt": "2026-10-20T19:33:15.730253+08:00"
+    },
+    {
+      "id": "02-02",
+      "chapter": "02",
+      "step": 2,
+      "title": "## 第 2 步：先让 16 台设备全部出现",
+      "source": "handbook-v2/lessons/02-把设备放进台账.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续现有项目，只完成第02课第2步。用data-service.js的getDevices和getSpaces，在“设备”页面显示设备表。\n每行有编号、设备名称、类型、空间、在线情况和“查看”按钮。编号使用原始d01到d16，空间通过spaceId对应实际空间名称。\n表格下方显示根据当前返回数组计算的设备总数，不把16写死。\n类型显示为中文：environment环境、energy能源、facility设施、lighting照明。\nonline严格为true显示“在线”，严格为false显示“离线”，null显示“未知”。不要把未知当离线。\n读取时显示“正在读取设备”；读取失败显示错误和重试按钮；没有设备时显示“没有设备”。这三种情况分开。\n保留九个菜单和已有概览。保存文件，不启动服务；本步“查看”按钮可以先不打开详情。\n",
+        "第02课第2步设备表有问题，我将补上少了哪一行或哪一行状态不对。请从getDevices返回值到表格逐项核对，只修复本步的列表显示。保留原始设备ID；online=null必须是未知，不能替换成false。不要重写其他页面。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:33:19.583Z",
+          "prompt": "继续现有项目，只完成第02课第2步。用data-service.js的getDevices和getSpaces，在“设备”页面显示设备表。\n每行有编号、设备名称、类型、空间、在线情况和“查看”按钮。编号使用原始d01到d16，空间通过spaceId对应实际空间名称。\n表格下方显示根据当前返回数组计算的设备总数，不把16写死。\n类型显示为中文：environment环境、energy能源、facility设施、lighting照明。\nonline严格为true显示“在线”，严格为false显示“离线”，null显示“未知”。不要把未知当离线。\n读取时显示“正在读取设备”；读取失败显示错误和重试按钮；没有设备时显示“没有设备”。这三种情况分开。\n保留九个菜单和已有概览。保存文件，不启动服务；本步“查看”按钮可以先不打开详情。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:35:37.297Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "reload",
+            "click设备",
+            "read16rows",
+            "scrollbottom"
+          ],
+          "result": "d01-d16 all visible in rendered table; d03未知 and d04离线; original space names and Chinese categories; total16 shown"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "Original step passed real browser check; AI DOM stub checks retained separately",
+      "updatedAt": "2026-10-20T19:35:48.570788+08:00"
+    },
+    {
+      "id": "02-03",
+      "chapter": "02",
+      "step": 3,
+      "title": "## 第 3 步：加搜索和筛选，找到想看的设备",
+      "source": "handbook-v2/lessons/02-把设备放进台账.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第02课第3步，在现有设备表上方增加：\n名称或编号搜索框、类型下拉框、空间下拉框、在线情况下拉框，以及“清空筛选”按钮。\n多个条件一起起作用。搜索前去掉首尾空格；类型和空间使用稳定ID，不用行号。在线筛选有全部、在线、离线、未知。\n显示“当前显示X台 / 全部16台”，全部数量也必须根据数据计算，不能写死。\n无匹配时显示“没有符合条件的设备”，保留筛选条件和清空按钮。清空后显示全部设备。\n不要改动数据，不加入分页或新依赖。保留第2步的加载和失败提示。保存文件，不启动服务。\n",
+        "第02课第3步筛选没有同时生效。我将描述先选什么、再输入什么、实际剩下几台。请只修复设备页的组合筛选和清空按钮，保留加载、错误与空结果提示。不要删除已有筛选项，也不要改练习数据。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:35:56.688Z",
+          "prompt": "只完成第02课第3步，在现有设备表上方增加：\n名称或编号搜索框、类型下拉框、空间下拉框、在线情况下拉框，以及“清空筛选”按钮。\n多个条件一起起作用。搜索前去掉首尾空格；类型和空间使用稳定ID，不用行号。在线筛选有全部、在线、离线、未知。\n显示“当前显示X台 / 全部16台”，全部数量也必须根据数据计算，不能写死。\n无匹配时显示“没有符合条件的设备”，保留筛选条件和清空按钮。清空后显示全部设备。\n不要改动数据，不加入分页或新依赖。保留第2步的加载和失败提示。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:38:12.610Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "select能源",
+            "searchd06",
+            "search找不到的设备",
+            "clearfilters"
+          ],
+          "result": "4→1(d06)→0 with no-match text→16; controls retained; source data untouched"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "Original prompt passed all4 required actual interactions",
+      "updatedAt": "2026-10-20T19:38:55.106248+08:00"
+    },
+    {
+      "id": "02-04",
+      "chapter": "02",
+      "step": 4,
+      "title": "## 第 4 步：点“查看”，看到同一台设备的读数",
+      "source": "handbook-v2/lessons/02-把设备放进台账.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第02课第4步。继续现有设备页，让每行“查看”按钮打开该台设备的详情区域。按设备原始id查找，不能默认打开第一台。\n详情显示编号、名称、类型、空间、在线情况。使用getOverview中的points，筛出deviceId等于本设备id的读数，列出tagId、value、unit、采样时间time、quality。\nvalue为null显示“缺失”，数字0显示“0”；time为null显示“无采样时间”。quality显示中文：fresh正常、stale较旧、missing缺失、invalid无效。保留原字段含义，不把较旧数据写成刚采集。\n添加“收起详情”按钮，收起后设备表的筛选条件仍在。本课先不加历史按钮。\n保留前面全部功能，保存文件，不启动服务。\n",
+        "第02课第4步详情与点击的行不一致。我将给出点击行的设备ID和详情显示的ID。请只修复“查看”按钮传递设备ID和详情查找过程，不用数组位置猜设备。保留筛选条件和null、0的区别。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:39:00.742Z",
+          "prompt": "只完成第02课第4步。继续现有设备页，让每行“查看”按钮打开该台设备的详情区域。按设备原始id查找，不能默认打开第一台。\n详情显示编号、名称、类型、空间、在线情况。使用getOverview中的points，筛出deviceId等于本设备id的读数，列出tagId、value、unit、采样时间time、quality。\nvalue为null显示“缺失”，数字0显示“0”；time为null显示“无采样时间”。quality显示中文：fresh正常、stale较旧、missing缺失、invalid无效。保留原字段含义，不把较旧数据写成刚采集。\n添加“收起详情”按钮，收起后设备表的筛选条件仍在。本课先不加历史按钮。\n保留前面全部功能，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:41:56.455Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "select能源",
+            "open second rowd06",
+            "read detail ID and power/voltage",
+            "collapse",
+            "verify能源 filter retained",
+            "select环境",
+            "open d03"
+          ],
+          "result": "d06 correct1.6kW/220.2V; collapse retained4energy; d03 temperature missing/time missing and humidity61.4%"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "Original prompt passed student required checks; additional actual missing-value check passed",
+      "updatedAt": "2026-10-20T19:42:23.618187+08:00"
+    },
+    {
+      "id": "02-05",
+      "chapter": "02",
+      "step": 5,
+      "title": "## 第 5 步：把真实模拟数量接回概览",
+      "source": "handbook-v2/lessons/02-把设备放进台账.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第02课第5步。把概览上“设备总数”“空间总数”“点位总数”三张卡片改为从getOverview实际返回的数组长度计算。\n读取期间写“正在读取”，读取失败明确显示错误，不用0代替读取失败。\n点击“设备总数”卡片进入现有设备页面并清空筛选。不要新建第二张设备表。保留页面上的“浏览器演示（教学模拟）”说明。\n检查设备页的搜索、筛选、查看详情还可使用。保存文件，不启动服务，不继续开发其他页面。\n",
+        "第02课第5步点击概览的设备总数后，设备页还保留旧筛选。请只修复这个入口：进入同一设备页前清空筛选并显示全部设备。不要复制一个新页面，不改变从设备详情返回时保留筛选的行为。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:42:30.241Z",
+          "prompt": "只完成第02课第5步。把概览上“设备总数”“空间总数”“点位总数”三张卡片改为从getOverview实际返回的数组长度计算。\n读取期间写“正在读取”，读取失败明确显示错误，不用0代替读取失败。\n点击“设备总数”卡片进入现有设备页面并清空筛选。不要新建第二张设备表。保留页面上的“浏览器演示（教学模拟）”说明。\n检查设备页的搜索、筛选、查看详情还可使用。保存文件，不启动服务，不继续开发其他页面。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:44:44.543Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "filter能源",
+            "return概览",
+            "read16/4/28",
+            "click设备总数"
+          ],
+          "result": "Reused existing devices page; all filters cleared;16rows shown"
+        },
+        {
+          "kind": "note",
+          "result": "notes/02-设备台账.md saved from actual operator observations"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/index.html",
+        "frontend/styles.css",
+        "notes/02-设备台账.md"
+      ],
+      "result": "Original prompt passed;chapter2 completed5steps",
+      "updatedAt": "2026-10-20T19:45:08.694414+08:00"
+    },
+    {
+      "id": "03-01",
+      "chapter": "03",
+      "step": 1,
+      "title": "## 第 1 步：把四个空间做成看得懂的页面",
+      "source": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续当前项目，只完成第03课第1步。读取materials/约定卡.md，使用data-service.js的getSpaces和getDevices完善现有“空间”页面。\n按原始s1到s4显示四个空间，每个空间展示名称、楼栋building、楼层floor，以及属于它的设备数量。设备按spaceId归属，数量必须计算。\n每个空间有“查看设备”按钮，点击后进入现有设备页，并只筛选此spaceId；清空其他旧筛选，保留空间这一项。不要另外复制设备表。\n显示“浏览器演示：本课修改只保存在当前浏览器”。先不增加编辑功能。\n保留前两课功能，保存文件，不启动服务。\n",
+        "第03课第1步从空间点“查看设备”后筛选不对。我将补上所点空间和实际设备列表。请只检查spaceId的传递与设备页筛选，不用空间名称或数组行号猜ID，不新建第二套设备页面。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:45:33.471Z",
+          "prompt": "继续当前项目，只完成第03课第1步。读取materials/约定卡.md，使用data-service.js的getSpaces和getDevices完善现有“空间”页面。\n按原始s1到s4显示四个空间，每个空间展示名称、楼栋building、楼层floor，以及属于它的设备数量。设备按spaceId归属，数量必须计算。\n每个空间有“查看设备”按钮，点击后进入现有设备页，并只筛选此spaceId；清空其他旧筛选，保留空间这一项。不要另外复制设备表。\n显示“浏览器演示：本课修改只保存在当前浏览器”。先不增加编辑功能。\n保留前两课功能，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:48:36.882Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "read4spacecards",
+            "setold能源filter",
+            "clickspace101实验室查看设备",
+            "verifyspaceid s3 only",
+            "clearfilters"
+          ],
+          "result": "4spacecards each4devices;spaceentry clearedenergy and selecteds3; d03/d07/d11/d15 all101实验室;clear16"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "Original prompt passed; same existing device table reused",
+      "updatedAt": "2026-10-20T19:49:11.440220+08:00"
+    },
+    {
+      "id": "03-02",
+      "chapter": "03",
+      "step": 2,
+      "title": "## 第 2 步：修改一个空间的楼栋和楼层",
+      "source": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第03课第2步。在现有空间页面给每个空间增加“编辑位置”按钮。\n打开表单后显示该空间名称，只允许修改building和floor，不修改空间ID、不修改设备ID、不移动设备归属。表单有“保存”和“取消”。\n在data-service.js中增加异步saveSpace(id,{building,floor})。两个值去掉首尾空格后必须非空；失败时保留输入并显示清楚的提示。成功后返回更新的空间，页面重新读取getSpaces再展示结果。\n将修改先保留在data-service的当前运行数据里，不改mock-data.js原始练习数据。页面标明“浏览器演示”。\n保存文件，不启动服务，不做负责人功能。\n",
+        "第03课第2步空间位置表单允许保存空内容。请同时检查页面和saveSpace：building、floor去空格后不能为空；失败保留本次输入，不覆盖上次成功的位置。只修复这个问题。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:49:15.736Z",
+          "prompt": "只完成第03课第2步。在现有空间页面给每个空间增加“编辑位置”按钮。\n打开表单后显示该空间名称，只允许修改building和floor，不修改空间ID、不修改设备ID、不移动设备归属。表单有“保存”和“取消”。\n在data-service.js中增加异步saveSpace(id,{building,floor})。两个值去掉首尾空格后必须非空；失败时保留输入并显示清楚的提示。成功后返回更新的空间，页面重新读取getSpaces再展示结果。\n将修改先保留在data-service的当前运行数据里，不改mock-data.js原始练习数据。页面标明“浏览器演示”。\n保存文件，不启动服务，不做负责人功能。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:50:23.891Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "browser",
+          "actions": [
+            "editfirstspace楼栋教学楼A/楼层2层",
+            "save",
+            "reeditblankfloor",
+            "attemptsave",
+            "restore2层andsave"
+          ],
+          "result": "Validsave displayednewlocation; blankfloor rejected with explicit楼层不能为空; input retained; prior successful location unchanged;valid restored"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "Original student prompt passed actual required interactions",
+      "ai_internal_error": "Optional AI Node runtime saveSpace check failed due removed Node26 --experimental-default-type=module flag; final reply only claimed syntax check. Actual student browser operations passed separately.",
+      "updatedAt": "2026-10-20T19:51:15.322035+08:00"
+    },
+    {
+      "id": "03-03",
+      "chapter": "03",
+      "step": 3,
+      "title": "## 第 3 步：让刷新后的浏览器记得位置",
+      "source": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第03课第3步。在data-service.js中给空间演示增加浏览器保存功能。\n统一使用localStorage键campus-v2-demo，以一个对象保存演示spaces、owners、cases。现在已有空间修改写入spaces；owners和cases暂时保留为空或保留已有内容，不相互覆盖。\n启动时先读取原始mockCampus，再合并已保存的空间位置；getSpaces、getOverview返回同一份当前空间数据的副本。saveSpace成功才保存。JSON损坏或浏览器禁止保存时，显示可理解的错误，不默默清空其他演示记录。\n让空间页和设备表的空间信息一起更新；保留“当前浏览器演示，尚未写入数据库”说明。不要新增“清空全部”按钮。\n保存文件，不启动服务。\n",
+        "第03课第3步保存位置成功，但刷新后又变回原值。请检查campus-v2-demo的写入、读取和合并顺序，只修复空间演示保存。不要删除浏览器已有记录，不改原始mock-data，也不要加数据库。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:51:19.219Z",
+          "prompt": "只完成第03课第3步。在data-service.js中给空间演示增加浏览器保存功能。\n统一使用localStorage键campus-v2-demo，以一个对象保存演示spaces、owners、cases。现在已有空间修改写入spaces；owners和cases暂时保留为空或保留已有内容，不相互覆盖。\n启动时先读取原始mockCampus，再合并已保存的空间位置；getSpaces、getOverview返回同一份当前空间数据的副本。saveSpace成功才保存。JSON损坏或浏览器禁止保存时，显示可理解的错误，不默默清空其他演示记录。\n让空间页和设备表的空间信息一起更新；保留“当前浏览器演示，尚未写入数据库”说明。不要新增“清空全部”按钮。\n保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:53:42.021Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/03-03-ui.jsonl",
+          "observations": 2,
+          "result": "Actual save/refresh retained教学楼A/2层; device list/detail agreed; original tab1075951403 actually closed and newtab1075951408 reopened same origin; saved location retained. Browser storage only, no database."
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "Actual save/refresh retained教学楼A/2层; device list/detail agreed; original tab1075951403 actually closed and newtab1075951408 reopened same origin; saved location retained. Browser storage only, no database.",
+      "updatedAt": "2026-10-20T19:54:29.437784+08:00"
+    },
+    {
+      "id": "03-04",
+      "chapter": "03",
+      "step": 4,
+      "title": "## 第 4 步：给一台设备登记负责人",
+      "source": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第03课第4步。完善“设备责任”页面，显示设备编号、名称、当前负责人、备注和“登记”按钮。\n增加异步getOwners()和saveOwner(deviceId,{username,note,expectedVersion})。负责人本课固定可选manager，页面写“处理人 manager（课堂角色）”，不要编造真实人员账号。\n没有登记时写“尚未登记”，版本视为0。首次保存后version为1，后续保存+1；提交时使用刚读取的版本。如果版本不一致，提示重新读取后再决定，不自动重试。\n备注去掉首尾空格后不能为空。保存在campus-v2-demo对象的owners部分，保留已有spaces、cases。\n保存成功后重新读取负责人列表再显示；页面持续标明浏览器演示。不要把这里写成真实权限控制。\n保留其他页面，保存文件，不启动服务。\n",
+        "第03课第4步登记负责人后，前面保存的空间位置消失了。请修复campus-v2-demo对象的局部更新：写owners时保留spaces和cases，写spaces时也保留其他部分。不要通过清空本地记录解决问题。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:54:34.203Z",
+          "prompt": "只完成第03课第4步。完善“设备责任”页面，显示设备编号、名称、当前负责人、备注和“登记”按钮。\n增加异步getOwners()和saveOwner(deviceId,{username,note,expectedVersion})。负责人本课固定可选manager，页面写“处理人 manager（课堂角色）”，不要编造真实人员账号。\n没有登记时写“尚未登记”，版本视为0。首次保存后version为1，后续保存+1；提交时使用刚读取的版本。如果版本不一致，提示重新读取后再决定，不自动重试。\n备注去掉首尾空格后不能为空。保存在campus-v2-demo对象的owners部分，保留已有spaces、cases。\n保存成功后重新读取负责人列表再显示；页面持续标明浏览器演示。不要把这里写成真实权限控制。\n保留其他页面，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T11:58:06.270Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/03-04-ui.jsonl",
+          "observations": 12,
+          "result": "d01 savedmanager/日常巡查联系这位处理人;refresh retained note;reopened form version1;otherdevices尚未登记;space教学楼A/2层 preserved. Browser demo only."
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "d01 savedmanager/日常巡查联系这位处理人;refresh retained note;reopened form version1;otherdevices尚未登记;space教学楼A/2层 preserved. Browser demo only.",
+      "updatedAt": "2026-10-20T19:58:47.562122+08:00"
+    },
+    {
+      "id": "03-05",
+      "chapter": "03",
+      "step": 5,
+      "title": "## 第 5 步：从设备详情找到负责人，再回到空间",
+      "source": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第03课第5步。继续已有设备详情，展示本设备当前负责人和备注，未登记时明确写“尚未登记”。\n添加“查看责任登记”入口，打开现有设备责任页面并定位本设备；添加“查看所在空间”入口，打开现有空间页面并定位其spaceId。\n空间和责任修改后，回到设备详情应重新读取当前内容，不显示旧副本。保留原有设备筛选、在线状态、读数和收起详情。\n不用复制新页面，不添加数据库或登录。保存文件，不启动服务。\n",
+        "第03课第5步跨页面跳转定位错了。我将给出出发时的设备ID、目标页面实际ID。请只修复稳定ID的传递和目标页定位，保留原页面，不新建副本，也不按数组序号定位。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T11:58:56.289Z",
+          "prompt": "只完成第03课第5步。继续已有设备详情，展示本设备当前负责人和备注，未登记时明确写“尚未登记”。\n添加“查看责任登记”入口，打开现有设备责任页面并定位本设备；添加“查看所在空间”入口，打开现有空间页面并定位其spaceId。\n空间和责任修改后，回到设备详情应重新读取当前内容，不显示旧副本。保留原有设备筛选、在线状态、读数和收起详情。\n不用复制新页面，不添加数据库或登录。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:02:21.365Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/03-05-ui.jsonl",
+          "observations": 11,
+          "result": "d01 detail→existingownerrow highlighted d01;updatednote/version2 then returningdetail read newnote;spaceentry highlighted s1/101教室 with教学楼A2层. Original visual target verified by screenshot and DOM; no duplicate pages."
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css",
+        "notes/03-位置和责任.md"
+      ],
+      "result": "d01 detail→existingownerrow highlighted d01;updatednote/version2 then returningdetail read newnote;spaceentry highlighted s1/101教室 with教学楼A2层. Original visual target verified by screenshot and DOM; no duplicate pages.",
+      "updatedAt": "2026-10-20T20:03:49.146551+08:00"
+    },
+    {
+      "id": "04-01",
+      "chapter": "04",
+      "step": 1,
+      "title": "## 第 1 步：先把设备详情中的读数讲清楚",
+      "source": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续当前项目，只完成第04课第1步。读materials/约定卡.md和公开练习JSON，检查现有设备详情的points展示。\n每项读数清楚显示点位名、数值、单位、采样时间和质量。把temperature/humidity/power/voltage/status/brightness分别显示为温度/湿度/功率/电压/状态/亮度，同时保留原tagId方便后续查找。\n严格保留0，null显示“缺失”；time=null显示“无采样时间”。quality依原始字段展示正常、较旧、缺失、无效，不能按本机今天的日期偷偷重写练习标签。\n状态点若为0或1，先显示原始数值，不自行猜0一定表示故障。单位为空时不加一个编造的单位。\n页面注明“固定日期的教学样本，刷新不会产生新的采样时间”。保留原设备筛选与详情入口，保存文件，不启动服务。\n",
+        "第04课第1步的0与缺失显示错了。我将给出设备ID、点位和实际显示。请只修复数值判断：number类型的0必须保留，null显示缺失，不使用“value或0”这样的替代。不改练习数据，也不要重写其他页面。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:04:00.019Z",
+          "prompt": "继续当前项目，只完成第04课第1步。读materials/约定卡.md和公开练习JSON，检查现有设备详情的points展示。\n每项读数清楚显示点位名、数值、单位、采样时间和质量。把temperature/humidity/power/voltage/status/brightness分别显示为温度/湿度/功率/电压/状态/亮度，同时保留原tagId方便后续查找。\n严格保留0，null显示“缺失”；time=null显示“无采样时间”。quality依原始字段展示正常、较旧、缺失、无效，不能按本机今天的日期偷偷重写练习标签。\n状态点若为0或1，先显示原始数值，不自行猜0一定表示故障。单位为空时不加一个编造的单位。\n页面注明“固定日期的教学样本，刷新不会产生新的采样时间”。保留原设备筛选与详情入口，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:06:24.149Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/04-01-ui.jsonl",
+          "observations": 8,
+          "result": "Actual d05power0kW preserved;d03temperature缺失/time缺失/online未知;d04offline and较旧;fixed sample date warning shown. Original quality tags retained."
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "Actual d05power0kW preserved;d03temperature缺失/time缺失/online未知;d04offline and较旧;fixed sample date warning shown. Original quality tags retained.",
+      "updatedAt": "2026-10-20T20:06:46.393417+08:00"
+    },
+    {
+      "id": "04-02",
+      "chapter": "04",
+      "step": 2,
+      "title": "## 第 2 步：在概览中指出哪些读数需要留意",
+      "source": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第04课第2步。继续现有概览，从getOverview返回的数据计算：\n1. 四个空间分别有多少台设备；四种设备类型分别有多少台设备。\n2. points中正常、较旧、缺失、无效各有多少项；这四类是点位数量，不是设备数量。\n3. 列出所有非fresh点位，包含设备名称、点位、质量、原采样时间和“查看设备”按钮。没有问题项时明确显示“当前样本没有需留意的读数”。\n按钮必须打开现有设备详情并定位实际deviceId。不要复制一个详情页面，不把质量标签直接写成故障结论。\n保留三张卡片和教学模拟说明。保存文件，不启动服务。\n",
+        "第04课第2步正常、较旧、缺失、无效四类点位数量相加不是28。请核对getOverview的points逐项计数，不按设备数计数，也不要把28写死。保留原始质量字段，只修复统计和对应列表。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:07:25.365Z",
+          "prompt": "只完成第04课第2步。继续现有概览，从getOverview返回的数据计算：\n1. 四个空间分别有多少台设备；四种设备类型分别有多少台设备。\n2. points中正常、较旧、缺失、无效各有多少项；这四类是点位数量，不是设备数量。\n3. 列出所有非fresh点位，包含设备名称、点位、质量、原采样时间和“查看设备”按钮。没有问题项时明确显示“当前样本没有需留意的读数”。\n按钮必须打开现有设备详情并定位实际deviceId。不要复制一个详情页面，不把质量标签直接写成故障结论。\n保留三张卡片和教学模拟说明。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:10:45.429Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/04-02-ui.jsonl",
+          "observations": 4,
+          "result": "Actual quality counts25/2/1/0 sum28points;4spaces and4categories each4devices;nonfresh3rows;d03temperature entry opened existingd03 detail with same missing/time/quality."
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/index.html",
+        "frontend/styles.css"
+      ],
+      "result": "Actual quality counts25/2/1/0 sum28points;4spaces and4categories each4devices;nonfresh3rows;d03temperature entry opened existingd03 detail with same missing/time/quality.",
+      "updatedAt": "2026-10-20T20:11:01.686871+08:00"
+    },
+    {
+      "id": "04-03",
+      "chapter": "04",
+      "step": 3,
+      "title": "## 第 3 步：能源页先只显示功率",
+      "source": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第04课第3步，完善现有“能源”页面。\n从getOverview中先选category严格等于energy的设备，再为它们找tagId=power且unit=kW的点位。按空间列出这四台能源设备的名称、功率、质量和原采样时间。\n0正常显示；null显示缺失。缺少对应点位时显示“没有功率样本”，不要取其他设备或其他点位填补。\n标题写“功率 kW”，下方用一句话说明“功率反映当前样本的用电强弱，本页没有累计用电量和电费”。\n不把环境、设施、照明设备混入能源，不换算kWh、不编造费用或节能率。\n每行保留“查看设备”按钮，打开已有设备详情。保存文件，不启动服务。\n",
+        "第04课第3步能源页混入了其他设备或点位。我将说明多出来的内容。请先严格筛选category===energy，再找power/kW，保留0与null区别。不要只根据点位名称或页面顺序选数据，不改原始练习JSON。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:11:06.968Z",
+          "prompt": "只完成第04课第3步，完善现有“能源”页面。\n从getOverview中先选category严格等于energy的设备，再为它们找tagId=power且unit=kW的点位。按空间列出这四台能源设备的名称、功率、质量和原采样时间。\n0正常显示；null显示缺失。缺少对应点位时显示“没有功率样本”，不要取其他设备或其他点位填补。\n标题写“功率 kW”，下方用一句话说明“功率反映当前样本的用电强弱，本页没有累计用电量和电费”。\n不把环境、设施、照明设备混入能源，不换算kWh、不编造费用或节能率。\n每行保留“查看设备”按钮，打开已有设备详情。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:16:03.836Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/04-03-ui.jsonl",
+          "observations": 3,
+          "result": "实际能源页仅d05–d08四台，按空间分组；值0/1.6/1.8/2、kW标题、原采样时间和质量正确，没有环境设备或虚构费用卡片。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "实际能源页仅d05–d08四台，按空间分组；值0/1.6/1.8/2、kW标题、原采样时间和质量正确，没有环境设备或虚构费用卡片。",
+      "updatedAt": "2026-10-20T20:16:23.135150+08:00"
+    },
+    {
+      "id": "04-04",
+      "chapter": "04",
+      "step": 4,
+      "title": "## 第 4 步：加电压切换，数值和单位一起换",
+      "source": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第04课第4步。在能源页增加一个选择框，仅有“功率 kW”和“电压 V”，默认功率。\n选功率用power/kW，选电压用voltage/V。设备范围始终是category===energy的四台。切换时同时更新标题、数值、单位、质量和采样时间，不能留下上一种读数的数值。\n保留缺失和0的区别。找不到对应点位显示“没有这项样本”，不拿其他点位替代。\n保留现有查看设备入口，不加入总电费、累计电量或自动单位换算。\n保存文件，不启动服务，不提前做历史曲线。\n",
+        "第04课第4步切换到电压后仍显示功率的数值。请只修复选项到tagId、unit、读数集合的对应，切换后重新选择当前点位，不能把旧值换个单位继续显示。保留四台能源设备和查看入口。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:16:26.259Z",
+          "prompt": "只完成第04课第4步。在能源页增加一个选择框，仅有“功率 kW”和“电压 V”，默认功率。\n选功率用power/kW，选电压用voltage/V。设备范围始终是category===energy的四台。切换时同时更新标题、数值、单位、质量和采样时间，不能留下上一种读数的数值。\n保留缺失和0的区别。找不到对应点位显示“没有这项样本”，不拿其他点位替代。\n保留现有查看设备入口，不加入总电费、累计电量或自动单位换算。\n保存文件，不启动服务，不提前做历史曲线。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:18:27.588Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/04-04-ui.jsonl",
+          "observations": 5,
+          "result": "真实浏览器功率→电压→功率，四台始终相同；电压为220/220.2/220.4/220.6 V，标题/列单位/值/质量/原时间同步；切回d05仍0 kW。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "真实浏览器功率→电压→功率，四台始终相同；电压为220/220.2/220.4/220.6 V，标题/列单位/值/质量/原时间同步；切回d05仍0 kW。",
+      "updatedAt": "2026-10-20T20:18:41.576060+08:00"
+    },
+    {
+      "id": "04-05",
+      "chapter": "04",
+      "step": 5,
+      "title": "## 第 5 步：把概览、能源和设备台账连起来",
+      "source": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第04课第5步。检查并补齐现有页面之间的入口：\n概览点一个空间，进入现有设备页并只保留该空间筛选；\n概览点“能源”类型，进入现有设备页并只保留energy类型筛选；\n能源页点任一设备的“查看设备”，打开对应ID的现有详情，不默认第一台。\n进入新筛选前清掉无关旧条件；从详情收起时仍保留本次筛选。所有页面继续从data-service读取同一份数据。\n不重建页面、不复制表格。保存文件，不启动服务，并列出需要我亲自点的三个入口。\n",
+        "第04课第5步从概览进入设备页后被旧筛选挡住了。请只修复这个跨页入口，在设置本次空间或类型条件前清空无关条件。保留用户在同一设备页内部查看和收起详情时的筛选。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:18:45.483Z",
+          "prompt": "只完成第04课第5步。检查并补齐现有页面之间的入口：\n概览点一个空间，进入现有设备页并只保留该空间筛选；\n概览点“能源”类型，进入现有设备页并只保留energy类型筛选；\n能源页点任一设备的“查看设备”，打开对应ID的现有详情，不默认第一台。\n进入新筛选前清掉无关旧条件；从详情收起时仍保留本次筛选。所有页面继续从data-service读取同一份数据。\n不重建页面、不复制表格。保存文件，不启动服务，并列出需要我亲自点的三个入口。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:21:10.835Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/04-05-ui.jsonl",
+          "observations": 18,
+          "result": "实际先搜d01再从概览点能源，搜索被清空且只余d05–d08；收起d07详情保留energy筛选；概览201教室入口仅s2的d02/d06/d10/d14；能源d07入口详情ID正确，返回功率/电压仍可切换。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css",
+        "notes/04-读数和能源.md"
+      ],
+      "result": "实际先搜d01再从概览点能源，搜索被清空且只余d05–d08；收起d07详情保留energy筛选；概览201教室入口仅s2的d02/d06/d10/d14；能源d07入口详情ID正确，返回功率/电压仍可切换。",
+      "updatedAt": "2026-10-20T20:22:05.486662+08:00"
+    },
+    {
+      "id": "05-01",
+      "chapter": "05",
+      "step": 1,
+      "title": "## 第 1 步：先从详情打开正确的历史表",
+      "source": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续当前项目，只完成第05课第1步。读取materials/约定卡.md，在已有设备详情中为每个实际点位增加“查看历史”按钮。\n点击后进入现有历史菜单，使用 #history?deviceId=实际ID&tagId=实际点位 的地址片段保存选择。\n历史页通过getOverview返回的history，按deviceId和tagId共同找数据。先显示设备编号、设备名称、点位、单位及样本表；样本表列出原time和value，null显示缺失、0保留。\n没有匹配历史时显示“这个点位没有历史样本”，不要默认拿第一台或第一条历史代替。直接点击历史菜单而未选设备时，显示设备和点位选择框。\n保留详情、筛选和所有旧页面。保存文件，不启动服务，不画图。\n",
+        "第05课第1步从d05功率进入历史后，显示的设备或点位不对。请检查按钮传入的deviceId、tagId、地址片段解析和历史查找，只修复这条入口。必须同时按两个字段查找，不默认第一条，不修改样本。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:22:26.277Z",
+          "prompt": "继续当前项目，只完成第05课第1步。读取materials/约定卡.md，在已有设备详情中为每个实际点位增加“查看历史”按钮。\n点击后进入现有历史菜单，使用 #history?deviceId=实际ID&tagId=实际点位 的地址片段保存选择。\n历史页通过getOverview返回的history，按deviceId和tagId共同找数据。先显示设备编号、设备名称、点位、单位及样本表；样本表列出原time和value，null显示缺失、0保留。\n没有匹配历史时显示“这个点位没有历史样本”，不要默认拿第一台或第一条历史代替。直接点击历史菜单而未选设备时，显示设备和点位选择框。\n保留详情、筛选和所有旧页面。保存文件，不启动服务，不画图。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:26:44.857Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/05-01-ui.jsonl",
+          "observations": 7,
+          "result": "从d05详情功率按钮进入真实历史页，地址为#history?deviceId=d05&tagId=power；设备/点位/单位一致，六行原时间样本，07:45缺失且其余真实0保留。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "从d05详情功率按钮进入真实历史页，地址为#history?deviceId=d05&tagId=power；设备/点位/单位一致，六行原时间样本，07:45缺失且其余真实0保留。",
+      "updatedAt": "2026-10-20T20:27:17.753975+08:00"
+    },
+    {
+      "id": "05-02",
+      "chapter": "05",
+      "step": 2,
+      "title": "## 第 2 步：把历史表画成曲线",
+      "source": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第05课第2步。在现有历史页样本表上方增加简单曲线，使用浏览器自带SVG或Canvas，不安装图表库。\n曲线与表格使用同一个history.samples数组，按原time排序；横轴是采样时间，纵轴是值和原单位。\n数值0是有效点，必须画出来；value=null处断开，不画成0，不跨过缺失点把两侧连起来，不补造样本。\n每个有效点能查到时间和值。没有有效样本时显示文字，单个有效点也要能看见；全部有效值都是0时也能正常绘制，不因坐标范围为0而消失。\n保留下方完整样本表作为对照，显示“固定教学样本”。保存文件，不启动服务。\n",
+        "第05课第2步的历史曲线跨过了缺失样本。我将说明对应时间。请把连续有效样本分段绘制，遇到null断开，保留真实0。只修复绘图，不删表格、不填补数据、不改原始历史样本。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:27:24.188Z",
+          "prompt": "只完成第05课第2步。在现有历史页样本表上方增加简单曲线，使用浏览器自带SVG或Canvas，不安装图表库。\n曲线与表格使用同一个history.samples数组，按原time排序；横轴是采样时间，纵轴是值和原单位。\n数值0是有效点，必须画出来；value=null处断开，不画成0，不跨过缺失点把两侧连起来，不补造样本。\n每个有效点能查到时间和值。没有有效样本时显示文字，单个有效点也要能看见；全部有效值都是0时也能正常绘制，不因坐标范围为0而消失。\n保留下方完整样本表作为对照，显示“固定教学样本”。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:31:20.171Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/05-02-ui.jsonl",
+          "observations": 2,
+          "result": "真实截图与DOM核对：d05功率5个0点均可见，SVG两段折线分别2/3点，07:45 null无点且不跨接；完整六行表保留并标明固定教学样本。截图已人工查看。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "真实截图与DOM核对：d05功率5个0点均可见，SVG两段折线分别2/3点，07:45 null无点且不跨接；完整六行表保留并标明固定教学样本。截图已人工查看。",
+      "updatedAt": "2026-10-20T20:31:48.962264+08:00"
+    },
+    {
+      "id": "05-03",
+      "chapter": "05",
+      "step": 3,
+      "title": "## 第 3 步：选择查看哪一段时间",
+      "source": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第05课第3步。在历史页增加“全部样本”“样本末时刻前15分钟”“样本末时刻前1小时”三个范围选项。\n历史页始终显示设备和点位选择框，包括从详情链接进入时；选项与地址中的deviceId、tagId一致，切换后同步更新地址，方便直接从功率改选电压。\n以当前所选历史的最大time作为样本末时刻，显示这个实际时刻。根据该范围过滤样本，图和表共用筛选后的数组。范围内没有数据时显示“这个范围没有样本”，不是读取失败。\n切设备或点位时重新计算末时刻，更新标题和单位，不能沿用上一台设备的曲线。刷新浏览器后保留地址中的deviceId与tagId；范围默认全部样本即可。\n保留缺失断线和0，保存文件，不启动服务。\n",
+        "第05课第3步换设备或点位后仍有上一次的曲线。请只修复历史页的选择更新：先确定当前deviceId/tagId，再计算本次时间范围并替换图和表。不能把旧数组与新数组拼接。保留地址中的选择。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:31:54.814Z",
+          "prompt": "只完成第05课第3步。在历史页增加“全部样本”“样本末时刻前15分钟”“样本末时刻前1小时”三个范围选项。\n历史页始终显示设备和点位选择框，包括从详情链接进入时；选项与地址中的deviceId、tagId一致，切换后同步更新地址，方便直接从功率改选电压。\n以当前所选历史的最大time作为样本末时刻，显示这个实际时刻。根据该范围过滤样本，图和表共用筛选后的数组。范围内没有数据时显示“这个范围没有样本”，不是读取失败。\n切设备或点位时重新计算末时刻，更新标题和单位，不能沿用上一台设备的曲线。刷新浏览器后保留地址中的deviceId与tagId；范围默认全部样本即可。\n保留缺失断线和0，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:34:54.401Z",
+          "verification": {
+            "status": "FAIL",
+            "error": "app.js:836:29 ReferenceError: historyRange is not defined",
+            "evidence": "commands/05-03-ui.jsonl"
+          }
+        },
+        {
+          "kind": "remedy",
+          "submittedAt": "2026-10-20T12:35:38.404Z",
+          "prompt": "第05课第3步换设备或点位后仍有上一次的曲线。请只修复历史页的选择更新：先确定当前deviceId/tagId，再计算本次时间范围并替换图和表。不能把旧数组与新数组拼接。保留地址中的选择。\n\n实际现象：按本步要求保存后，在 http://127.0.0.1:5188/#history?deviceId=d05&tagId=power 刷新，页面没有进入历史，停在概览的“正在读取”。真实浏览器控制台：app.js:836:29 ReferenceError: historyRange is not defined。请先修复这个使当前步骤无法运行的错误，再让我重复本步范围与功率/电压切换检查。不要改原始样本，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:39:05.010Z",
+          "verification": {
+            "status": "PASS",
+            "evidence": "commands/05-03-ui.jsonl"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/05-03-ui.jsonl",
+          "observations": 11,
+          "result": "原尝试真实刷新因historyRange未定义失败；补救后重测通过。d05/power全部6行，15分钟4行/3有效点含null断线，1小时6行；切voltage标题/单位/点值同步，地址与刷新选择保留、范围回全部。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "原尝试真实刷新因historyRange未定义失败；补救后重测通过。d05/power全部6行，15分钟4行/3有效点含null断线，1小时6行；切voltage标题/单位/点值同步，地址与刷新选择保留、范围回全部。",
+      "updatedAt": "2026-10-20T20:39:26.315808+08:00"
+    },
+    {
+      "id": "05-04",
+      "chapter": "05",
+      "step": 4,
+      "title": "## 第 4 步：回到能源页，比较同一种读数",
+      "source": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第05课第4步。继续原有能源页，在功率/电压选择框下面加入“比较历史”区域，实际显示在页面中，不能只生成一个未使用的函数。\n列出四台category===energy设备的复选框，允许选1至4台，点击“比较历史”后读取getOverview中的对应历史并展示。\n当前选功率就只比较power/kW，选电压只比较voltage/V。每台曲线有名称和样本时间；缺失仍断线，0保留。\n一台没有历史时，在那台旁边写“没有历史样本”，保留其他有样本设备的结果。不能拿另一台数据替代。切功率/电压后清掉旧比较和设备勾选，提示“请重新选择设备，再比较”，防止旧曲线换个单位继续显示。\n保留本页四台最新读数和查看设备入口。保存文件，不启动服务。\n",
+        "第05课第4步AI说写好了比较功能，但能源页面没有入口。请检查这个区域是否真正接入现有energy页面，补齐渲染和按钮调用。保留已有最新读数、单位切换和设备详情入口，不另建能源页。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:39:30.527Z",
+          "prompt": "只完成第05课第4步。继续原有能源页，在功率/电压选择框下面加入“比较历史”区域，实际显示在页面中，不能只生成一个未使用的函数。\n列出四台category===energy设备的复选框，允许选1至4台，点击“比较历史”后读取getOverview中的对应历史并展示。\n当前选功率就只比较power/kW，选电压只比较voltage/V。每台曲线有名称和样本时间；缺失仍断线，0保留。\n一台没有历史时，在那台旁边写“没有历史样本”，保留其他有样本设备的结果。不能拿另一台数据替代。切功率/电压后清掉旧比较和设备勾选，提示“请重新选择设备，再比较”，防止旧曲线换个单位继续显示。\n保留本页四台最新读数和查看设备入口。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:42:56.568Z",
+          "verification": {
+            "status": "FUNCTIONAL_PASS_VISUAL_FAIL",
+            "issue": "rightmost time tick clipped"
+          }
+        },
+        {
+          "kind": "remedy",
+          "submittedAt": "2026-10-20T12:44:39.825Z",
+          "prompt": "第05课第4步AI说写好了比较功能，但能源页面没有入口。请检查这个区域是否真正接入现有energy页面，补齐渲染和按钮调用。保留已有最新读数、单位切换和设备详情入口，不另建能源页。\n\n实际说明：上方是本步补救模板；本次区域已经出现，功能也已点击通过，不存在入口缺失。真实问题仅是图的显示：桌面1280×800下，d05/d06两张比较图最右侧时间应为10/20 08:00，却被SVG右边界裁成10/20 08:等不完整文字；单设备历史页也有同样现象。请只修复共用图表的首末刻度对齐和留白，使两端时间完整可读，保留目前功率/电压比较、切换清空、断线和0、设备详情入口及所有原样本。不重建能源页，不启动服务。完成后我会重复比较并检查桌面及窄屏截图。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:46:49.654Z",
+          "verification": {
+            "status": "PASS",
+            "evidence": "commands/05-04-ui.jsonl"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/05-04-ui.jsonl",
+          "observations": 25,
+          "result": "d05/d06功率比较与切电压清空/重新选择比较通过；首尝试截图末刻度裁剪，经CodeBuddy补救后桌面和390窄屏截图首末时间完整，0与null断线仍正确。截图已查看，另保存共享历史图回归。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "d05/d06功率比较与切电压清空/重新选择比较通过；首尝试截图末刻度裁剪，经CodeBuddy补救后桌面和390窄屏截图首末时间完整，0与null断线仍正确。截图已查看，另保存共享历史图回归。",
+      "updatedAt": "2026-10-20T20:50:39.828704+08:00"
+    },
+    {
+      "id": "05-05",
+      "chapter": "05",
+      "step": 5,
+      "title": "## 第 5 步：完成只能查看的原始报警页",
+      "source": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第05课第5步。使用getOverview中的alarms完善现有原始报警页。\n每条显示报警编号、设备名称及ID、message、原始status、原始level、原始time和“教学模拟”。status和level可附中文解释，但原始值也要保留，不能擅自替换成演练事件的状态。\n增加文本搜索和每页5条的上一页/下一页，显示当前页与总数。搜索后回第一页；无匹配显示“没有符合条件的原始报警”。读取失败与没有匹配分开。\n每条有“查看设备”入口，打开相应设备详情。本页没有分派、恢复、核实、关闭按钮，不修改alarms数据。\n保留历史和能源比较功能，保存文件，不启动服务，不进入演练事件开发。\n",
+        "第05课第5步的原始报警页出现了分派或关闭等处理动作。请只移除这个只读页面上的写操作，保留搜索、翻页和查看设备。不要删除原始报警样本，不要把它们转成演练事件。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T12:51:07.304Z",
+          "prompt": "只完成第05课第5步。使用getOverview中的alarms完善现有原始报警页。\n每条显示报警编号、设备名称及ID、message、原始status、原始level、原始time和“教学模拟”。status和level可附中文解释，但原始值也要保留，不能擅自替换成演练事件的状态。\n增加文本搜索和每页5条的上一页/下一页，显示当前页与总数。搜索后回第一页；无匹配显示“没有符合条件的原始报警”。读取失败与没有匹配分开。\n每条有“查看设备”入口，打开相应设备详情。本页没有分派、恢复、核实、关闭按钮，不修改alarms数据。\n保留历史和能源比较功能，保存文件，不启动服务，不进入演练事件开发。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T12:59:00.088Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/05-05-ui.jsonl",
+          "observations": 6,
+          "result": "重建同Chrome实例专用会话后实测：a01原字段SAMPLE_ACTIVE/NOTICE/原时间均保留；无匹配提示、清空恢复、单页翻页禁用正确；仅查看设备入口，定位d01并保留此前manager责任记录，无处理按钮。多页样本的真实浏览器翻页未验证，当前公开样本仅1条。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "重建同Chrome实例专用会话后实测：a01原字段SAMPLE_ACTIVE/NOTICE/原时间均保留；无匹配提示、清空恢复、单页翻页禁用正确；仅查看设备入口，定位d01并保留此前manager责任记录，无处理按钮。多页样本的真实浏览器翻页未验证，当前公开样本仅1条。",
+      "updatedAt": "2026-10-20T21:09:27.587472+08:00"
+    },
+    {
+      "id": "06-01",
+      "chapter": "06",
+      "step": 1,
+      "title": "## 第 1 步：先做三个课堂身份和管理页说明",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "继续当前项目，只完成第06课第1步。读取materials/约定卡.md，在页面顶部增加“演示身份”选择框：\n管理员admin，对应ADMIN；处理人manager，对应MANAGER；查看者viewer，对应VIEWER。默认管理员。当前身份保存在内存，刷新回到管理员，并清楚说明这只是浏览器演示，不是真正登录。\n管理页列出三种角色的用途：管理员登记位置、责任、创建分派及恢复演练来源；处理人处置已分派给自己的事件；查看者只查看。\n增加异步getIntegration()，演示返回source=TEACHING_MOCK、simulated=true、controlEnabled=false、notificationsEnabled=false。管理页显示“教学模拟数据”“实际设备控制未启用”“外部通知未启用”。\n切换身份后重新显示当前页面，先按角色显示或隐藏已有空间编辑与责任登记按钮，但明确前端演示不等于后端权限保护。\n保留旧功能，保存文件，不启动服务，不增加密码框。\n",
+        "第06课第1步切换演示身份后，空间或设备责任页按钮没有更新。我将说明当前身份和还可见的按钮。请只修复身份切换后的页面重读与按钮显示，保留数据，不把身份写死在各页面里，也不要加真实登录。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T13:11:21.973Z",
+          "prompt": "继续当前项目，只完成第06课第1步。读取materials/约定卡.md，在页面顶部增加“演示身份”选择框：\n管理员admin，对应ADMIN；处理人manager，对应MANAGER；查看者viewer，对应VIEWER。默认管理员。当前身份保存在内存，刷新回到管理员，并清楚说明这只是浏览器演示，不是真正登录。\n管理页列出三种角色的用途：管理员登记位置、责任、创建分派及恢复演练来源；处理人处置已分派给自己的事件；查看者只查看。\n增加异步getIntegration()，演示返回source=TEACHING_MOCK、simulated=true、controlEnabled=false、notificationsEnabled=false。管理页显示“教学模拟数据”“实际设备控制未启用”“外部通知未启用”。\n切换身份后重新显示当前页面，先按角色显示或隐藏已有空间编辑与责任登记按钮，但明确前端演示不等于后端权限保护。\n保留旧功能，保存文件，不启动服务，不增加密码框。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T13:21:02.835Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-01-ui.jsonl",
+          "observations": 14,
+          "result": "真实浏览器管理员/查看者切换通过：查看者空间编辑、责任登记入口隐藏但可读取；管理员入口恢复；管理页模拟标识、控制/通知关闭与前端权限说明明确；刷新身份回admin，位置与manager记录仍保留。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/index.html",
+        "frontend/styles.css",
+        "notes/05-历史和报警.md"
+      ],
+      "result": "真实浏览器管理员/查看者切换通过：查看者空间编辑、责任登记入口隐藏但可读取；管理员入口恢复；管理页模拟标识、控制/通知关闭与前端权限说明明确；刷新身份回admin，位置与manager记录仍保留。",
+      "updatedAt": "2026-10-20T21:27:27.988001+08:00"
+    },
+    {
+      "id": "06-02",
+      "chapter": "06",
+      "step": 2,
+      "title": "## 第 2 步：创建一条独立的演练事件",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第06课第2步，完善现有演练事件页。\n管理员可选择设备并填写“这次练习要处理什么”，点击“创建演练”。页面明确写“不会操作实际设备，不发送外部通知”。\n增加异步getCases()与createCase({deviceId,message})。新事件包含id、deviceId、message、state、assignee、sourceState、verified、note、conclusion、version、timeline，创建version=1、sourceState=ACTIVE、verified=false，记录初始时间线。\n若该设备已有责任人，自动填入assignee且state=ASSIGNED；没有责任人则assignee为空、state=NEW。message去空格后不能为空。\n保存到campus-v2-demo的cases，保留spaces和owners。创建成功后重新getCases读取列表并打开刚创建的事件详情，显示设备、状态、处理人和版本。\n状态中文为NEW待分派、ASSIGNED已分派、IN_PROGRESS处理中、CLOSED已关闭。本步先不加后续处理按钮。\n保存文件，不启动服务，不修改原始alarms。\n",
+        "第06课第2步创建演练后改动了原始报警。请分开演练cases和只读alarms：创建只写campus-v2-demo中的cases，原始报警继续使用练习原始集合。保留已创建的演练记录，不通过清空全部数据修复。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T13:27:59.511Z",
+          "prompt": "只完成第06课第2步，完善现有演练事件页。\n管理员可选择设备并填写“这次练习要处理什么”，点击“创建演练”。页面明确写“不会操作实际设备，不发送外部通知”。\n增加异步getCases()与createCase({deviceId,message})。新事件包含id、deviceId、message、state、assignee、sourceState、verified、note、conclusion、version、timeline，创建version=1、sourceState=ACTIVE、verified=false，记录初始时间线。\n若该设备已有责任人，自动填入assignee且state=ASSIGNED；没有责任人则assignee为空、state=NEW。message去空格后不能为空。\n保存到campus-v2-demo的cases，保留spaces和owners。创建成功后重新getCases读取列表并打开刚创建的事件详情，显示设备、状态、处理人和版本。\n状态中文为NEW待分派、ASSIGNED已分派、IN_PROGRESS处理中、CLOSED已关闭。本步先不加后续处理按钮。\n保存文件，不启动服务，不修改原始alarms。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T13:38:23.252Z",
+          "verification": {
+            "status": "PARTIAL_PASS_DISPLAY_GAP",
+            "issue": "sourceState and verified not visible as textbook expected"
+          }
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第06课第2步的实际浏览器验收：已创建case-1，设备d02、说明“练习检查教室温湿度读数”，待分派NEW、版本1；刷新后仍在，原始报警a01也未变化，这些都通过。但教材还要求看到“来源未恢复”，现有详情没有展示sourceState和verified，无法在页面核对。请只补齐现有详情的来源状态和核实状态，按已保存记录实际字段显示，ACTIVE表示来源未恢复、RECOVERED表示来源已恢复，verified=false显示未核实；未知值如实保留。保留case-1和所有已有浏览器分区，不重建记录、不新增数据、不增加后续分派/处置/恢复/关闭动作、不启动服务。保存后让我重新查看同一case-1。",
+          "submittedAt": "2026-10-20T13:45:52.553Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T13:50:05.426Z",
+          "verification": {
+            "status": "PASS",
+            "evidence": "commands/06-02-ui.jsonl"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-02-ui.jsonl",
+          "observations": 17,
+          "result": "真实创建d02/case-1，待分派v1，刷新保留且a01原始报警不变。原提示词漏列来源/核实展示，补救后同一case-1显示ACTIVE未恢复、verified=false未核实；未新增事件、版本仍1。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "真实创建d02/case-1，待分派v1，刷新保留且a01原始报警不变。原提示词漏列来源/核实展示，补救后同一case-1显示ACTIVE未恢复、verified=false未核实；未新增事件、版本仍1。",
+      "updatedAt": "2026-10-20T21:50:44.737912+08:00"
+    },
+    {
+      "id": "06-03",
+      "chapter": "06",
+      "step": 3,
+      "title": "## 第 3 步：分派、开始处理、写下做过的事",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第06课第3步。增加异步caseAction(id,{action,expectedVersion,note?,username?})，在演示数据层集中处理事件动作。\n本步实现assign、start、note：管理员填写非空分派说明，把NEW事件分派给manager后变ASSIGNED；manager只能开始已分派给自己的事件，变IN_PROGRESS；处理中可写非空处置记录note。已自动分派的事件直接开始，不重复分派。\n在现有事件详情实际增加：管理员使用的manager选择框、分派说明输入框和“分派”按钮；有权处理本事件的人使用的“开始处理”按钮、处置记录输入框和“保存记录”按钮。三个按钮分别调用caseAction的assign、start、note，不只创建方法而漏掉页面入口。\n每次动作提交页面刚读取的version作为expectedVersion；匹配才修改，成功version+1并写timeline。版本不匹配显示“记录已变化，请重新读取后再决定”，保留输入，不自动重试。关闭事件不可写。\n每次成功动作都将新的事件内容、version、timeline保存到localStorage的campus-v2-demo对象内的cases，保留spaces、owners及其他已有分区。保存失败要提示错误，不能宣布成功；被拒绝的动作不写入，也不增加版本。\n保存成功后页面重新调用getCases，找到同一id再更新详情；不要只在按钮旁显示成功而保留旧详情。\n动作权限在演示数据层也检查，但继续注明这仍是浏览器练习；实际权限以后由后端实现。保留其他页面，保存文件，不启动服务。\n",
+        "第06课第3步按钮后详情没有更新。我将说明当前事件ID、身份、点击动作和页面状态。请检查caseAction是否保存成功，以及成功后getCases是否按同一ID回读。保留输入和版本检查，不直接在页面强行改成成功状态。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T13:51:13.652Z",
+          "prompt": "只完成第06课第3步。增加异步caseAction(id,{action,expectedVersion,note?,username?})，在演示数据层集中处理事件动作。\n本步实现assign、start、note：管理员填写非空分派说明，把NEW事件分派给manager后变ASSIGNED；manager只能开始已分派给自己的事件，变IN_PROGRESS；处理中可写非空处置记录note。已自动分派的事件直接开始，不重复分派。\n在现有事件详情实际增加：管理员使用的manager选择框、分派说明输入框和“分派”按钮；有权处理本事件的人使用的“开始处理”按钮、处置记录输入框和“保存记录”按钮。三个按钮分别调用caseAction的assign、start、note，不只创建方法而漏掉页面入口。\n每次动作提交页面刚读取的version作为expectedVersion；匹配才修改，成功version+1并写timeline。版本不匹配显示“记录已变化，请重新读取后再决定”，保留输入，不自动重试。关闭事件不可写。\n每次成功动作都将新的事件内容、version、timeline保存到localStorage的campus-v2-demo对象内的cases，保留spaces、owners及其他已有分区。保存失败要提示错误，不能宣布成功；被拒绝的动作不写入，也不增加版本。\n保存成功后页面重新调用getCases，找到同一id再更新详情；不要只在按钮旁显示成功而保留旧详情。\n动作权限在演示数据层也检查，但继续注明这仍是浏览器练习；实际权限以后由后端实现。保留其他页面，保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T14:12:56.343Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-03-ui.jsonl",
+          "observations": 14,
+          "result": "实际依次分派、manager开始、保存处置记录；case-1为IN_PROGRESS/version4，四条时间线；刷新回到admin后同一事件和记录仍在。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "实际依次分派、manager开始、保存处置记录；case-1为IN_PROGRESS/version4，四条时间线；刷新回到admin后同一事件和记录仍在。",
+      "updatedAt": "2026-10-20T22:17:06.815246+08:00"
+    },
+    {
+      "id": "06-04",
+      "chapter": "06",
+      "step": 4,
+      "title": "## 第 4 步：先恢复、再核实，最后关闭",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第06课第4步。继续caseAction与现有事件详情，加入recover、verify、close。\nrecover只允许管理员：把sourceState改为RECOVERED，清除旧verified，事件仍IN_PROGRESS，不自动关闭。\nverify由有权处理本事件的人执行：重新读取当前演示事件，确认来源已恢复且事件在处理中，才设置verified=true；这只是独立的演示核实，不是实际设备检测。\nclose把输入的note作为关闭结论conclusion。关闭前同时检查：state=IN_PROGRESS，有非空处置记录note，sourceState=RECOVERED，verified=true，关闭结论非空，以及操作者和expectedVersion正确。缺条件要列出具体缺什么，不得跳过。成功才改CLOSED。\n每次成功version+1、写timeline，并把事件及时间线保存到campus-v2-demo的cases，保留spaces、owners及其他已有分区；保存成功后页面再getCases回读同一事件。失败保留输入，不写入、不增加版本；保存失败不能宣布成功。关闭后所有写动作都拒绝。\n界面分别有“模拟来源恢复”“核实恢复”“关闭事件”按钮和关闭结论输入框，不把三个动作合成一个按钮。保存文件，不启动服务。\n",
+        "第06课第4步模拟来源恢复后事件直接关闭了。请拆开recover、verify、close：恢复只改sourceState，核实只记录核实结果，只有close通过全部条件才改CLOSED。保留已有时间线，不改写记录伪装成从未发生；说明该错误记录的状态，并让我用新建演练重新走正确流程。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T14:17:16.313Z",
+          "prompt": "只完成第06课第4步。继续caseAction与现有事件详情，加入recover、verify、close。\nrecover只允许管理员：把sourceState改为RECOVERED，清除旧verified，事件仍IN_PROGRESS，不自动关闭。\nverify由有权处理本事件的人执行：重新读取当前演示事件，确认来源已恢复且事件在处理中，才设置verified=true；这只是独立的演示核实，不是实际设备检测。\nclose把输入的note作为关闭结论conclusion。关闭前同时检查：state=IN_PROGRESS，有非空处置记录note，sourceState=RECOVERED，verified=true，关闭结论非空，以及操作者和expectedVersion正确。缺条件要列出具体缺什么，不得跳过。成功才改CLOSED。\n每次成功version+1、写timeline，并把事件及时间线保存到campus-v2-demo的cases，保留spaces、owners及其他已有分区；保存成功后页面再getCases回读同一事件。失败保留输入，不写入、不增加版本；保存失败不能宣布成功。关闭后所有写动作都拒绝。\n界面分别有“模拟来源恢复”“核实恢复”“关闭事件”按钮和关闭结论输入框，不把三个动作合成一个按钮。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T14:24:34.445Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-04-ui.jsonl",
+          "observations": 15,
+          "result": "实际提前关闭显示缺少来源恢复及核实且仍v4；管理员recover后IN_PROGRESS/v5，manager核实后仍IN_PROGRESS/v6；填结论关闭为CLOSED/v7；刷新7条成功时间线保留，无写按钮。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "实际提前关闭显示缺少来源恢复及核实且仍v4；管理员recover后IN_PROGRESS/v5，manager核实后仍IN_PROGRESS/v6；填结论关闭为CLOSED/v7；刷新7条成功时间线保留，无写按钮。",
+      "updatedAt": "2026-10-20T22:25:09.268240+08:00"
+    },
+    {
+      "id": "06-05",
+      "chapter": "06",
+      "step": 5,
+      "title": "## 第 5 步：在管理页看操作记录，再试一次不允许的操作",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第06课第5步。增加异步getAudit()并完善管理页的“演示操作记录”：\n成功的空间修改、责任登记和事件动作记录操作者、动作、目标ID、时间；旧记录没有就不补造。记录保存在同一个campus-v2-demo对象的audit部分，写入时保留spaces、owners、cases。\n管理页只让管理员查看演示操作记录，并持续写“浏览器演示，正式审计将在后端实现”。\n检查查看者不能创建或处理事件；manager不能创建、分派或恢复来源，只能处理已分派给自己的事件；已关闭事件不能继续添加记录或再次关闭。既检查界面按钮，也检查演示caseAction的拒绝。\n不要删除已存在的数据，不增加真实登录。保存文件，不启动服务。\n",
+        "第06课第5步查看者还能创建或修改演练事件。请只修复当前演示角色到按钮、createCase和caseAction的判断，同时保留已有记录。修好后说明我应切换哪两个角色重复检查。不要把前端修复称为已经完成后端权限。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T14:25:22.689Z",
+          "prompt": "只完成第06课第5步。增加异步getAudit()并完善管理页的“演示操作记录”：\n成功的空间修改、责任登记和事件动作记录操作者、动作、目标ID、时间；旧记录没有就不补造。记录保存在同一个campus-v2-demo对象的audit部分，写入时保留spaces、owners、cases。\n管理页只让管理员查看演示操作记录，并持续写“浏览器演示，正式审计将在后端实现”。\n检查查看者不能创建或处理事件；manager不能创建、分派或恢复来源，只能处理已分派给自己的事件；已关闭事件不能继续添加记录或再次关闭。既检查界面按钮，也检查演示caseAction的拒绝。\n不要删除已存在的数据，不增加真实登录。保存文件，不启动服务。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T14:29:27.851Z",
+          "verification": "FAIL_CREATE_AUDIT_MISSING"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第06课第5步真实浏览器验收有一项失败：此前旧case-1已关闭、版本7；刚以admin创建case-2（内容“审计检查：新建独立教学演练”）成功，进入管理页仍显示“还没有演示操作记录”。查看者无创建/修改按钮、已关闭事件无写按钮的检查已通过。请只修复新创建演练的审计：createCase成功也要记录操作者、create动作、目标事件ID和时间，并与cases在同一个campus-v2-demo对象内一次保存，保留spaces、owners、cases、audit和其他分区；保存失败不得宣布创建成功。不追补或伪造已存在case-1、case-2及其他旧操作记录，不删除已有数据。必要时补齐管理页创建动作的显示，保留其他权限。完成并保存后由我新建一条case-3再验证；不要替我启动服务。",
+          "submittedAt": "2026-10-20T14:31:05.893Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T14:36:48.840Z",
+          "verification": "PASS"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-05-ui.jsonl",
+          "observations": 32,
+          "result": "原尝试创建case-2未写审计失败；精确补救后新建case-3，管理页只新增admin/创建演练/case-3/真实时间一条，刷新保留，旧case-1/2未伪造审计。已关闭无写按钮；viewer只读，manager对未分派事件无动作入口。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/styles.css"
+      ],
+      "result": "原尝试创建case-2未写审计失败；精确补救后新建case-3，管理页只新增admin/创建演练/case-3/真实时间一条，刷新保留，旧case-1/2未伪造审计。已关闭无写按钮；viewer只读，manager对未分派事件无动作入口。",
+      "updatedAt": "2026-10-20T22:37:12.517486+08:00"
+    },
+    {
+      "id": "06-06",
+      "chapter": "06",
+      "step": 6,
+      "title": "## 第 6 步：亲自走遍九个菜单，为后端准备清单",
+      "source": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "只完成第06课第6步。检查当前九个菜单的入口是否接到了实际页面，保持所有业务读写通过data-service.js：\n概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。\n仅修复遗漏的菜单调用、跨页ID传递或保存后的重新读取，不重写已经完成的页面。\n创建notes/06-前端需要的数据.md，按上述九个菜单各写一行：页面显示什么、目前从哪里读、会保存什么、以后哪些事情需要后端检查。如实写当前数据来自公开模拟JSON或浏览器保存，不能写成已接数据库。\n不创建backend，不安装MySQL或Redis，不启动服务。完成后列出我需要亲自点击的检查，不代替我报告浏览器通过。\n",
+        "第06课第6步有一项没有通过。我将写出菜单名、点击步骤、预期结果和实际结果。请先读取相关现有文件，只修复这条链路并保存，保留其他八个菜单和已有浏览器记录。不生成后端，不重写整个项目。完成后让我重复同一组点击。\n"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T14:37:26.661Z",
+          "prompt": "只完成第06课第6步。检查当前九个菜单的入口是否接到了实际页面，保持所有业务读写通过data-service.js：\n概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。\n仅修复遗漏的菜单调用、跨页ID传递或保存后的重新读取，不重写已经完成的页面。\n创建notes/06-前端需要的数据.md，按上述九个菜单各写一行：页面显示什么、目前从哪里读、会保存什么、以后哪些事情需要后端检查。如实写当前数据来自公开模拟JSON或浏览器保存，不能写成已接数据库。\n不创建backend，不安装MySQL或Redis，不启动服务。完成后列出我需要亲自点击的检查，不代替我报告浏览器通过。\n",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T14:43:35.159Z",
+          "verification": "PARTIAL_PASS_STALE_COPY"
+        },
+        {
+          "kind": "remedy",
+          "submittedAt": "2026-10-20T14:49:44.692Z",
+          "prompt": "第06课第6步有一项没有通过。我将写出菜单名、点击步骤、预期结果和实际结果。请先读取相关现有文件，只修复这条链路并保存，保留其他八个菜单和已有浏览器记录。不生成后端，不重写整个项目。完成后让我重复同一组点击。\n\n本次只有概览文案这一行：刷新→概览，实际三张数量卡16台/4空间/28点位、能源筛选和其余八菜单数据链路均已通过；但概览顶部仍显示“我们将在下一课放入校园设备”，与已载入数据不符。请只把这句早期占位文案改为当前教学模拟概览的真实说明，保留“晨光校园值班台”和现有全部数据/样式/功能，不重做概览，不开始后端。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T14:51:14.096Z",
+          "verification": "PASS"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/06-06-ui.jsonl",
+          "observations": 37,
+          "result": "九个菜单实际矩阵通过；概览占位文案精确补救后复测16/4/28与四台能源筛选通过；空间/责任/关闭case-1 v7七时间线持久化，原始报警保持原值只读，能源功率/电压比较与历史缺失断线通过。9行数据清单及本人结果在IDE保存，截图已查看。"
+        }
+      ],
+      "changed_files": [
+        "frontend/index.html",
+        "notes/06-前端需要的数据.md"
+      ],
+      "result": "九个菜单实际矩阵通过；概览占位文案精确补救后复测16/4/28与四台能源筛选通过；空间/责任/关闭case-1 v7七时间线持久化，原始报警保持原值只读，能源功率/电压比较与历史缺失断线通过。9行数据清单及本人结果在IDE保存，截图已查看。",
+      "updatedAt": "2026-10-20T22:56:40.258822+08:00"
+    },
+    {
+      "id": "07-01",
+      "chapter": "07",
+      "step": 1,
+      "title": "## 第1步：对着九个菜单，说清楚要保存什么",
+      "source": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请阅读当前 frontend、materials/约定卡.md和第06课的notes/06-前端需要的数据.md，\n在已有整理上补齐我们已经做出的网页。\n这一步只新建 docs/页面需要的数据.md，不修改页面，不生成后端。\n按概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理九个菜单写一张表：\n1. 学生在页面上能看见或填写什么；\n2. 现在从 mock-campus.json、内存还是 localStorage 取得；\n3. 将来需要后端读取，还是需要保存修改；\n4. 对应约定卡中的哪个接口。\n再用生活中的例子解释：MySQL像长期保存记录的档案柜；\nRedis在本课程只保存有过期时间的登录凭条。\n不要把缓存、会话、数据库三个词当同一件事；不要声称已连接数据库。\n最后列出本课只做 GET /api/health，其他接口留待后续课。",
+        "请只修订 docs/页面需要的数据.md。\n我实际操作的页面是【菜单名】，操作后看到【结果】。\n请重新对照当前代码写明它现在从哪里取数，不把计划中的后端写成已完成。"
+      ],
+      "attempts": [
+        {
+          "kind": "operator-invalid",
+          "submittedAt": "2026-10-20T14:57:31.411Z",
+          "prompt": "undefined",
+          "submissionObserved": true,
+          "verification": "INVALID_OPERATOR_EXTRACTION_NOT_A_COURSE_ATTEMPT",
+          "replyCompletedAt": "2026-10-20T22:59:06.964363+08:00"
+        },
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T14:59:56.849Z",
+          "prompt": "请阅读当前 frontend、materials/约定卡.md和第06课的notes/06-前端需要的数据.md，\n在已有整理上补齐我们已经做出的网页。\n这一步只新建 docs/页面需要的数据.md，不修改页面，不生成后端。\n按概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理九个菜单写一张表：\n1. 学生在页面上能看见或填写什么；\n2. 现在从 mock-campus.json、内存还是 localStorage 取得；\n3. 将来需要后端读取，还是需要保存修改；\n4. 对应约定卡中的哪个接口。\n再用生活中的例子解释：MySQL像长期保存记录的档案柜；\nRedis在本课程只保存有过期时间的登录凭条。\n不要把缓存、会话、数据库三个词当同一件事；不要声称已连接数据库。\n最后列出本课只做 GET /api/health，其他接口留待后续课。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:01:56.160Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/07-01-ui.jsonl",
+          "observations": 15,
+          "result": "已读九菜单数据表；设备责任当前从localStorage owners读取/修改，将由MySQL与后端权限保存；MySQL长期业务与Redis短期登录分开。本课仅health。实际九菜单再点击、关闭case-1刷新仍v7且处置记录和七条时间线保留；未生成backend。"
+        }
+      ],
+      "changed_files": [
+        "docs/页面需要的数据.md"
+      ],
+      "result": "已读九菜单数据表；设备责任当前从localStorage owners读取/修改，将由MySQL与后端权限保存；MySQL长期业务与Redis短期登录分开。本课仅health。实际九菜单再点击、关闭case-1刷新仍v7且处置记录和七条时间线保留；未生成backend。",
+      "updatedAt": "2026-10-20T23:03:28.546655+08:00"
+    },
+    {
+      "id": "07-02",
+      "chapter": "07",
+      "step": 2,
+      "title": "## 第2步：准备后端终端，确认它用的是 Java 17",
+      "source": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "这一步只检查后端准备条件，不创建业务代码。\n请检查当前工程有没有 materials/maven-wrapper，并告诉我里面哪些文件要复制到 backend。\n在 docs/后端启动笔记.md 写明：Java使用17；JAVA_HOME指向JDK根目录；\nPATH中的java也必须是17；A窗口跑页面，B窗口跑后端。\n不要修改系统环境变量，不安装软件，不替我启动常驻服务。\n如果缺少Java17，明确告诉我缺了什么，先不要继续生成后端。",
+        "我还停在Java环境检查。操作系统是【Windows或macOS】；\njava -version显示【版本】，当前目录最后一层是【目录名】。\n请只帮助我让当前终端使用已安装的Java17，不改全局设置，不继续创建后端。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:03:48.902Z",
+          "prompt": "这一步只检查后端准备条件，不创建业务代码。\n请检查当前工程有没有 materials/maven-wrapper，并告诉我里面哪些文件要复制到 backend。\n在 docs/后端启动笔记.md 写明：Java使用17；JAVA_HOME指向JDK根目录；\nPATH中的java也必须是17；A窗口跑页面，B窗口跑后端。\n不要修改系统环境变量，不安装软件，不替我启动常驻服务。\n如果缺少Java17，明确告诉我缺了什么，先不要继续生成后端。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:05:25.243Z",
+          "verification": "FAIL_NODE_MAJOR_26_EXPECTED_22"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "我仍在第07课第2步环境检查。实际在新建B-后端终端执行教材macOS原命令后，java -version已为OpenJDK 17.0.12，当前目录最后一层campus-lab；但node --version为v26.3.0，教材预期22。本机已安装并在A/C终端验证过Node22.21.1，路径/Users/learner/.nvm/versions/node/v22.21.1/bin。请只给出让当前B终端临时使用这个已安装Node22的命令，并把新终端必须分别检查Java17和Node22的说明补进docs/后端启动笔记.md；不要改全局默认、不要读无关私密配置、不要安装软件或创建backend，不替我启动服务。Java17已经通过，不要把它当作仍缺Java。",
+          "submittedAt": "2026-10-20T15:09:01.360Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T15:10:35.551Z",
+          "verification": "PASS"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-ide-terminal",
+          "evidence": [
+            "commands/07-02-original-terminal.ax.txt",
+            "commands/07-02-node-fix-terminal.ax.txt"
+          ],
+          "result": "新建IDE终端3 B-后端；原macOS命令Java17.0.12通过但Node26不符，补救后当前B使用Node22.21.1、Java17.0.12，JAVA_HOME为JBR17 JDK根、cwd campus-lab。A页面继续运行，C工具独立；未改全局，未创建backend。"
+        }
+      ],
+      "changed_files": [
+        "docs/后端启动笔记.md"
+      ],
+      "result": "新建IDE终端3 B-后端；原macOS命令Java17.0.12通过但Node26不符，补救后当前B使用Node22.21.1、Java17.0.12，JAVA_HOME为JBR17 JDK根、cwd campus-lab。A页面继续运行，C工具独立；未改全局，未创建backend。",
+      "updatedAt": "2026-10-20T23:11:45.089433+08:00"
+    },
+    {
+      "id": "07-03",
+      "chapter": "07",
+      "step": 3,
+      "title": "## 第3步：让 AI 只做一个“启动成功”接口",
+      "source": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在当前工程新建 backend，完成最小Java后端。\n使用Java17、Spring Boot3.4.2、Maven，包名edu.campus.v2。\n把 materials/maven-wrapper 中的Maven启动工具复制到backend，保留隐藏的.mvn目录。\n只加入Spring Web和测试依赖，不加入MySQL、Redis，不复制任何完整教师业务代码。\n服务只监听127.0.0.1:8098。\n实现 GET /api/health，返回：\n{\"code\":0,\"message\":\"ok\",\"data\":{\"status\":\"UP\"}}\n增加一个不需要数据库的接口测试，检查status确实为UP。\n把启动类、控制器和application.properties的作用各用一句话写到docs/后端启动笔记.md。\n你可以运行会结束的测试；不要替我启动spring-boot:run。\n不要修改frontend，不实现其他接口。",
+        "我在backend运行Maven测试失败。第一段错误是【复制相关错误，去掉本机隐私】。\n请只修复本课的最小健康接口和对应测试，不加入数据库、不删除测试、不跳过测试。\n修好后告诉我重新运行哪条已有命令，不启动常驻服务。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:12:19.441Z",
+          "prompt": "请在当前工程新建 backend，完成最小Java后端。\n使用Java17、Spring Boot3.4.2、Maven，包名edu.campus.v2。\n把 materials/maven-wrapper 中的Maven启动工具复制到backend，保留隐藏的.mvn目录。\n只加入Spring Web和测试依赖，不加入MySQL、Redis，不复制任何完整教师业务代码。\n服务只监听127.0.0.1:8098。\n实现 GET /api/health，返回：\n{\"code\":0,\"message\":\"ok\",\"data\":{\"status\":\"UP\"}}\n增加一个不需要数据库的接口测试，检查status确实为UP。\n把启动类、控制器和application.properties的作用各用一句话写到docs/后端启动笔记.md。\n你可以运行会结束的测试；不要替我启动spring-boot:run。\n不要修改frontend，不实现其他接口。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:14:39.588Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-ide-terminal",
+          "evidence": "commands/07-03-student-maven-test.ax.txt",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "build": "SUCCESS"
+        }
+      ],
+      "changed_files": [
+        "backend/.mvn/wrapper/maven-wrapper.jar",
+        "backend/.mvn/wrapper/maven-wrapper.properties",
+        "backend/mvnw",
+        "backend/mvnw.cmd",
+        "backend/pom.xml",
+        "backend/src/main/java/edu/campus/v2/CampusApplication.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiResponse.java",
+        "backend/src/main/java/edu/campus/v2/web/HealthController.java",
+        "backend/src/main/resources/application.properties",
+        "backend/src/test/java/edu/campus/v2/web/HealthControllerTest.java",
+        "docs/后端启动笔记.md"
+      ],
+      "result": "CodeBuddy仅生成Java17/SpringBoot3.4.2最小Web后端，保留隐藏.mvn工具；frontend未改变，无MySQL/Redis依赖或其他业务接口。本人在B执行cd backend、sh ./mvnw test：HealthControllerTest实际1项，0失败/0错误/0跳过，BUILD SUCCESS。",
+      "updatedAt": "2026-10-20T23:15:53.757191+08:00"
+    },
+    {
+      "id": "07-04",
+      "chapter": "07",
+      "step": 4,
+      "title": "## 第4步：启动 B，再从网页地址读它的回答",
+      "source": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请核对tools/serve.mjs与刚完成的后端是否符合约定：\n页面服务在127.0.0.1:5188；/api请求转发到127.0.0.1:8098，保留/api路径。\n它只能公开frontend，不能公开项目根、backend或.env。\n如果已经正确，不改文件；如果有遗漏，只修复这个转发。\n不要启动页面或后端服务。告诉我本次是否修改了serve.mjs。",
+        "我已在B启动最小后端，浏览器访问5188端口的/api/health时看到【现象】。\nB最后几行不含隐私的日志是【日志】。\n请检查8098监听、/api路径与页面转发，只修复本步链路。\n如果端口被占用，先报告，不结束未知进程。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:16:19.637Z",
+          "prompt": "请核对tools/serve.mjs与刚完成的后端是否符合约定：\n页面服务在127.0.0.1:5188；/api请求转发到127.0.0.1:8098，保留/api路径。\n它只能公开frontend，不能公开项目根、backend或.env。\n如果已经正确，不改文件；如果有遗漏，只修复这个转发。\n不要启动页面或后端服务。告诉我本次是否修改了serve.mjs。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:17:36.610Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/07-04-ui.jsonl",
+          "observations": 2,
+          "result": "serve.mjs哈希未变，A未重启；8098启动前空闲，本人在B运行spring-boot:run，Tomcat/Java PID10975只监听127.0.0.1:8098；新owned浏览器标签1075951446实际经5188/api/health显示code0/messageok/data.statusUP。Chrome现有JSON查看扩展自动格式化显示。"
+        }
+      ],
+      "changed_files": [],
+      "result": "serve.mjs哈希未变，A未重启；8098启动前空闲，本人在B运行spring-boot:run，Tomcat/Java PID10975只监听127.0.0.1:8098；新owned浏览器标签1075951446实际经5188/api/health显示code0/messageok/data.statusUP。Chrome现有JSON查看扩展自动格式化显示。",
+      "updatedAt": "2026-10-20T23:22:26.983596+08:00"
+    },
+    {
+      "id": "07-05",
+      "chapter": "07",
+      "step": 5,
+      "title": "## 第5步：在网页上看见后端在线，再亲手验证断开",
+      "source": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在现有网页顶部增加一个小区域“后端连接”，带“检查连接”按钮。\n在frontend/data-service.js增加checkHealth()，向同源/api/health发请求。\n点击后先显示“正在检查”；code为0且data.status为UP才显示“后端已连接”；\n请求失败则显示“暂时连不上后端”，不要显示成成功。\n5秒没有响应就结束等待并提示重试。\n保留现有九个菜单和全部浏览器演示功能；不把设备数据切到后端。\n不要启动服务。只说明修改的文件和我要点击的按钮。",
+        "后端停止后，网页的连接提示仍是【实际显示】。\n请只修复checkHealth和连接状态：每次点击都实际请求、清除上次结果、\n失败明确提示、允许再次检查。不要修改设备模拟数据或其他页面。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:23:54.198Z",
+          "prompt": "请在现有网页顶部增加一个小区域“后端连接”，带“检查连接”按钮。\n在frontend/data-service.js增加checkHealth()，向同源/api/health发请求。\n点击后先显示“正在检查”；code为0且data.status为UP才显示“后端已连接”；\n请求失败则显示“暂时连不上后端”，不要显示成成功。\n5秒没有响应就结束等待并提示重试。\n保留现有九个菜单和全部浏览器演示功能；不把设备数据切到后端。\n不要启动服务。只说明修改的文件和我要点击的按钮。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:28:26.034Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/07-05-ui.jsonl",
+          "observations": 11,
+          "result": "真实浏览器三次点击：B运行显示已连接，原生IDE仅Ctrl+C停止B后再次点击显示HTTP503失败，同一B重启后再次点击恢复已连接；设备仍教学模拟，停止B时d05功率0与16台可读。启动笔记已在IDE写入本人三次结果；5秒超时代码已核对，未将未模拟长延迟声称为真实实验。"
+        }
+      ],
+      "changed_files": [
+        "docs/后端启动笔记.md",
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/index.html",
+        "frontend/styles.css"
+      ],
+      "result": "真实浏览器三次点击：B运行显示已连接，原生IDE仅Ctrl+C停止B后再次点击显示HTTP503失败，同一B重启后再次点击恢复已连接；设备仍教学模拟，停止B时d05功率0与16台可读。启动笔记已在IDE写入本人三次结果；5秒超时代码已核对，未将未模拟长延迟声称为真实实验。",
+      "updatedAt": "2026-10-20T23:32:56.752968+08:00"
+    },
+    {
+      "id": "08-01",
+      "chapter": "08",
+      "step": 1,
+      "title": "## 第1步：生成自己的本机配置",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请按materials/约定卡.md为课程准备本地配置工具，但这一步不生成业务代码。\n新建tools/setup-env.mjs，使用Node自带crypto随机生成足够长的口令，\n在项目根生成.env：DB_PASSWORD、MYSQL_ROOT_PASSWORD、REDIS_PASSWORD、DEMO_PASSWORD。\n已有.env时拒绝覆盖，不打印口令。新建.env.example，只放说明和占位文字。\n把.env、.private、.runtime、backend/target、node_modules和日志加入.gitignore。\n不要读取已有私密配置，不要把口令写入前端、README或回复。\n不要替我运行生成工具，我会亲自运行。",
+        "配置工具运行后出现【不含口令的错误】。\n请只修复setup-env.mjs，不读取或覆盖已有.env，不输出其中的值。\n我需要它在缺文件时生成，在已有文件时明确保留。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:33:40.216Z",
+          "prompt": "请按materials/约定卡.md为课程准备本地配置工具，但这一步不生成业务代码。\n新建tools/setup-env.mjs，使用Node自带crypto随机生成足够长的口令，\n在项目根生成.env：DB_PASSWORD、MYSQL_ROOT_PASSWORD、REDIS_PASSWORD、DEMO_PASSWORD。\n已有.env时拒绝覆盖，不打印口令。新建.env.example，只放说明和占位文字。\n把.env、.private、.runtime、backend/target、node_modules和日志加入.gitignore。\n不要读取已有私密配置，不要把口令写入前端、README或回复。\n不要替我运行生成工具，我会亲自运行。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:34:50.989Z",
+          "verification": "PARTIAL_PASS_RERUN_HELP_CONFLICT"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第08课第1步实际C终端结果：工具已生成.env，权限600，未输出口令；再次运行也确实拒绝覆盖，现有配置内容保持不变，核心功能已通过。但拒绝提示说“如需重新生成，请由你本人确认后手动删除.env再运行”，脚本写入注释及.env.example也有删除建议，与本课“不能为重做练习删除配置、已有配置保留继续”的要求不一致。请只统一这些帮助文案：已有.env就提示已保留，重复练习直接沿用，不指导删除或重生成。保留随机生成、排他创建、权限和其他代码逻辑；不要读取、修改、覆盖或删除已经生成的.env，不运行工具或启动任何服务。修好保存后我会再次亲自运行确认拒绝行为。",
+          "submittedAt": "2026-10-20T15:40:29.514Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T15:42:35.753Z",
+          "verification": "PASS"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-ide-terminal",
+          "evidence": [
+            "commands/08-01-env-created-terminal.ax.txt",
+            "commands/08-01-fixed-existing-env-refusal.ax.txt",
+            "environment/08-01-config-metadata.json"
+          ],
+          "noSecretsPrinted": true,
+          "unchanged": true
+        }
+      ],
+      "changed_files": [
+        ".env.example",
+        ".gitignore",
+        "tools/setup-env.mjs"
+      ],
+      "result": "本人C终端Node22运行生成工具，实际创建4个不同口令字段（40/40/40/20位）、mode600且不显示值；再次运行拒绝覆盖，现有.env opaque比对未变。精确补救统一重复运行帮助文案后再实际运行，提示保留并沿用，配置仍未变。脚本crypto随机/wx排他/.env.example占位与忽略规则已核对；未读取无关私密配置。",
+      "updatedAt": "2026-10-20T23:44:15.148861+08:00"
+    },
+    {
+      "id": "08-02",
+      "chapter": "08",
+      "step": 2,
+      "title": "## 第2步：让课程 MySQL 运行起来",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请新建根目录compose.yaml，项目名campus-v2。\n本步定义MySQL8.4服务mysql：只映射127.0.0.1:23501到容器3306，\n数据库campus_course、用户campus，口令从.env读取DB_PASSWORD和MYSQL_ROOT_PASSWORD。\n使用本课程专属命名卷保存MySQL数据，增加能判断数据库就绪的healthcheck。\n顶层volumes只声明课程卷的键，不设置显式name，也不设置external，\n让Compose自动在卷名前加项目名，方便第12课建立独立交付环境。\n不连学校或已有数据库，不打印展开后的配置。\nRedis留到下一课加入，本步不要提前启动它。\n请告诉我docker compose ps中怎样分辨starting与healthy。\n不要替我启动服务，不使用down -v。",
+        "我在项目根运行docker compose up -d mysql后出现【不含口令的错误】，\ndocker compose ps显示【状态】。\n请先区分Docker没启动、镜像下载失败、端口占用、数据库尚未就绪。\n只修改本课程配置；不结束未知进程，不删除卷，不输出.env。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T15:44:34.778Z",
+          "prompt": "请新建根目录compose.yaml，项目名campus-v2。\n本步定义MySQL8.4服务mysql：只映射127.0.0.1:23501到容器3306，\n数据库campus_course、用户campus，口令从.env读取DB_PASSWORD和MYSQL_ROOT_PASSWORD。\n使用本课程专属命名卷保存MySQL数据，增加能判断数据库就绪的healthcheck。\n顶层volumes只声明课程卷的键，不设置显式name，也不设置external，\n让Compose自动在卷名前加项目名，方便第12课建立独立交付环境。\n不连学校或已有数据库，不打印展开后的配置。\nRedis留到下一课加入，本步不要提前启动它。\n请告诉我docker compose ps中怎样分辨starting与healthy。\n不要替我启动服务，不使用down -v。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:45:42.425Z",
+          "verification": "FAIL_HEALTHCHECK_EXECUTABLE_MISSING"
+        },
+        {
+          "kind": "remedy",
+          "submittedAt": "2026-10-20T15:54:15.431Z",
+          "prompt": "我在项目根运行docker compose up -d mysql后出现【不含口令的错误】，\ndocker compose ps显示【状态】。\n请先区分Docker没启动、镜像下载失败、端口占用、数据库尚未就绪。\n只修改本课程配置；不结束未知进程，不删除卷，不输出.env。\n实际情况：Docker已运行、mysql:8.4镜像已预取，23501启动前空闲；本课程campus-v2项目原无容器或卷。本人C执行docker compose up -d mysql已创建campus-v2-mysql和campus-v2_mysql-data，端口仅127.0.0.1:23501。37秒时docker compose ps仍为starting；只读取docker inspect的.State.Health得到多次实际错误：OCI runtime exec failed: exec: \"healthcheck.sh\": executable file not found in $PATH。请只修复这份compose.yaml的healthcheck，使用该MySQL8.4镜像实际可用的客户端，验证课程campus账号能连接campus_course并执行查询；容器内读取已有环境变量，不能打印口令、不能读改.env。不要改数据库名、用户、端口或卷，不删除已建卷、不重新初始化数据，不加Redis，不替我启动/重建服务。保存后由我重新执行已有docker compose up -d mysql和ps验证。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T15:56:57.959Z",
+          "verification": "PASS"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-ide-terminal",
+          "evidence": [
+            "commands/08-02-mysql-healthy.ax.txt",
+            "environment/08-02-volume-before-recreate.txt",
+            "environment/08-02-volume-after-recreate.txt"
+          ],
+          "volumeIdentityPreserved": true,
+          "health": "healthy"
+        }
+      ],
+      "changed_files": [
+        "compose.yaml"
+      ],
+      "result": "本人C启动MySQL原尝试因healthcheck.sh不存在失败；按本步补救仅修改healthcheck后重新up，实际ps与inspect均为healthy，端口127.0.0.1:23501，仅mysql服务。专属命名卷campus-v2_mysql-data的Name/CreatedAt前后一致，无删卷、无.env覆盖或重新初始化；健康检查已用campus账号实际执行SQL。",
+      "updatedAt": "2026-10-21T00:01:36.609774+08:00"
+    },
+    {
+      "id": "08-03",
+      "chapter": "08",
+      "step": 3,
+      "title": "## 第3步：让 Java 认识数据库，并建立设备表",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请给现有最小后端加入JdbcTemplate、MySQL驱动和Flyway所需依赖，\n沿用Java17、Spring Boot3.4.2。\napplication.properties从optional:file:../.env[.properties]导入本机配置，\n连接127.0.0.1:23501/campus_course，用户名campus，使用DB_PASSWORD占位，\n不得读取或复制.env的真实内容。\n新增V1建表迁移，先建spaces和devices，字段严格按materials/约定卡.md；\n从公开materials/mock-campus.json生成4个空间与16台设备的初始化SQL。\nonline未知必须是SQL NULL，模拟标记保留，device的spaceId须能找到空间。\n迁移只在第一次使用这个数据库时建立和填充，不在每次启动时删除重建。\n本步保留health接口，不实现其他页面接口。不要启动常驻服务。",
+        "MySQL已healthy，但后端启动出现【不含口令的第一段错误】。\n请检查.env相对backend的导入路径、23501端口、数据库名与Flyway配置。\n不要硬编码口令，不删除数据库，不让启动失败自动退回模拟成功。\n如果V1已执行，后续修正用新的迁移文件，不篡改已执行的V1。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:01:57.704Z",
+          "prompt": "请给现有最小后端加入JdbcTemplate、MySQL驱动和Flyway所需依赖，\n沿用Java17、Spring Boot3.4.2。\napplication.properties从optional:file:../.env[.properties]导入本机配置，\n连接127.0.0.1:23501/campus_course，用户名campus，使用DB_PASSWORD占位，\n不得读取或复制.env的真实内容。\n新增V1建表迁移，先建spaces和devices，字段严格按materials/约定卡.md；\n从公开materials/mock-campus.json生成4个空间与16台设备的初始化SQL。\nonline未知必须是SQL NULL，模拟标记保留，device的spaceId须能找到空间。\n迁移只在第一次使用这个数据库时建立和填充，不在每次启动时删除重建。\n本步保留health接口，不实现其他页面接口。不要启动常驻服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:03:15.970Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-ide-terminal-and-browser",
+          "evidence": [
+            "commands/08-03-test-visible-terminal.ax.txt",
+            "commands/08-03-database-start-ready.ax.txt",
+            "commands/08-03-readonly-sql.ax.txt",
+            "commands/08-03-ui.jsonl"
+          ],
+          "migrationVersion": "1",
+          "spaces": 4,
+          "devices": 16,
+          "unknownOnlinePreserved": true
+        }
+      ],
+      "changed_files": [
+        "backend/pom.xml",
+        "backend/src/main/resources/application.properties",
+        "backend/src/main/resources/db/migration/V1__init_spaces_devices.sql"
+      ],
+      "result": "本人B使用Java17运行Maven：1项健康接口测试，0失败/0错误/0跳过，BUILD SUCCESS；再启动后端，Flyway真实首次应用V1成功，Tomcat PID51923启动。浏览器5188/api/health实际UP；C只读SQL核对spaces4、devices16、d03 online=NULL、d04 online=0、simulated均1，Flyway version1/success1。尚未实现设备API，页面仍演示。",
+      "updatedAt": "2026-10-21T00:11:36.645983+08:00"
+    },
+    {
+      "id": "08-04",
+      "chapter": "08",
+      "step": 4,
+      "title": "## 第4步：让设备接口读出十六台设备",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在现有后端实现GET /api/devices。\n本课暂时允许未登录读取，下一课再加登录。\n使用JdbcTemplate从MySQL的devices表查询，按id排序；\n返回{code:0,message:\"ok\",data:[设备数组]}，字段按约定卡。\nonline为NULL时返回JSON null，不能变成false；simulated保持true。\n控制器接收请求，服务组织结果，查询代码单独放置，用简短注释说明各自作用。\n增加测试检查true、false和null都能保持原意。\n不要从mock-campus.json临时返回数据，不实现其他接口，不启动服务。",
+        "/api/devices实际返回【去掉无关信息的结果】。\n请只检查V1初始化与devices查询：应有16台，ID不重复，未知online保持null。\n不要在前端补出缺失设备，也不要删除数据库重新来过。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:12:16.913Z",
+          "prompt": "请在现有后端实现GET /api/devices。\n本课暂时允许未登录读取，下一课再加登录。\n使用JdbcTemplate从MySQL的devices表查询，按id排序；\n返回{code:0,message:\"ok\",data:[设备数组]}，字段按约定卡。\nonline为NULL时返回JSON null，不能变成false；simulated保持true。\n控制器接收请求，服务组织结果，查询代码单独放置，用简短注释说明各自作用。\n增加测试检查true、false和null都能保持原意。\n不要从mock-campus.json临时返回数据，不实现其他接口，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:13:58.912Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/08-04-ui.jsonl",
+          "observations": 6,
+          "result": "本人B实际Maven5项测试0失败/0错误/0跳过，启动PID55939；Flyway校验V1且No migration necessary。新owned浏览器API标签1075951455实际显示SQL查询16台，各类4台，d01 true/d03 null/d04 false/simulated true；独立UI字段校验通过，无mock响应兜底。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/device/Device.java",
+        "backend/src/main/java/edu/campus/v2/device/DeviceRepository.java",
+        "backend/src/main/java/edu/campus/v2/device/DeviceRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/device/DeviceService.java",
+        "backend/src/main/java/edu/campus/v2/web/DeviceController.java",
+        "backend/src/test/java/edu/campus/v2/device/DeviceRowMapperTest.java",
+        "backend/src/test/java/edu/campus/v2/web/DeviceControllerTest.java"
+      ],
+      "result": "本人B实际Maven5项测试0失败/0错误/0跳过，启动PID55939；Flyway校验V1且No migration necessary。新owned浏览器API标签1075951455实际显示SQL查询16台，各类4台，d01 true/d03 null/d04 false/simulated true；独立UI字段校验通过，无mock响应兜底。",
+      "updatedAt": "2026-10-21T00:20:33.172313+08:00"
+    },
+    {
+      "id": "08-05",
+      "chapter": "08",
+      "step": 5,
+      "title": "## 第5步：只把设备页接到新接口",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请只把现有设备台账和详情中的设备基本信息改为读取同源GET /api/devices：\nID、名称、类别、spaceId、online、simulated来自MySQL。\n在data-service.js实现请求与响应检查；其他页面的浏览器演示暂时保留。\n设备详情里的点位读数、历史、责任信息本课还未有对应接口，\n继续使用原公开样本或浏览器演示，并在这些区域分别标明来源，第10课再接后端。\n保留设备页原有筛选、详情和历史入口，不新做另一套页面。\n读取期间显示“正在读取”；成功显示“数据来自本机后端/MySQL”；\n首次失败显示可重试的错误；成功后再失败时保留旧列表并明确标“上次成功结果”，\n不能假装刷新成功、不能自动回退为模拟数据。\n成功刷新后清除旧错误，显示本次读取时间；该时间不能冒充设备采样时间。\n不要启动服务，告诉我具体点击哪里检查。",
+        "设备接口返回正常，但设备页操作【具体按钮】后出现【现象】。\n请只修复data-service与现有设备页面之间的连接，保留原有筛选和详情。\n不要修改数据库，也不要换回mock数据掩盖问题。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:21:31.712Z",
+          "prompt": "请只把现有设备台账和详情中的设备基本信息改为读取同源GET /api/devices：\nID、名称、类别、spaceId、online、simulated来自MySQL。\n在data-service.js实现请求与响应检查；其他页面的浏览器演示暂时保留。\n设备详情里的点位读数、历史、责任信息本课还未有对应接口，\n继续使用原公开样本或浏览器演示，并在这些区域分别标明来源，第10课再接后端。\n保留设备页原有筛选、详情和历史入口，不新做另一套页面。\n读取期间显示“正在读取”；成功显示“数据来自本机后端/MySQL”；\n首次失败显示可重试的错误；成功后再失败时保留旧列表并明确标“上次成功结果”，\n不能假装刷新成功、不能自动回退为模拟数据。\n成功刷新后清除旧错误，显示本次读取时间；该时间不能冒充设备采样时间。\n不要启动服务，告诉我具体点击哪里检查。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:35:38.266Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/08-05-ui.jsonl",
+          "observations": 17,
+          "result": "实际浏览器：16台，能源筛选4台；打开d05后重新读取仍为d05，读取时间更新；基本信息标MySQL，空间名称/责任标浏览器演示，点位/历史标公开教学样本；d03未知、d04离线，空间和事件仍为浏览器演示。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "实际浏览器：16台，能源筛选4台；打开d05后重新读取仍为d05，读取时间更新；基本信息标MySQL，空间名称/责任标浏览器演示，点位/历史标公开教学样本；d03未知、d04离线，空间和事件仍为浏览器演示。",
+      "updatedAt": "2026-10-21T00:36:20.130917+08:00"
+    },
+    {
+      "id": "08-06",
+      "chapter": "08",
+      "step": 6,
+      "title": "## 第6步：确认数据保存了，失败也说清楚了",
+      "source": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在docs/页面需要的数据.md更新实际进度：\n设备台账和详情中的设备基本信息已接到MySQL；\n详情中的点位读数、历史、责任仍为教学样本或浏览器演示，直到第10课才接通。\n其他页面也按当前代码注明来源。\n再在docs/后端启动笔记.md追加本课的人工检查表，结果先留“待我填写”：\n成功读取、后端停止后刷新、后端恢复后刷新、MySQL重启后再次读取。\n不要替我编写通过结论，不修改业务代码或启动服务。",
+        "我执行到人工检查第【序号】项，实际看到【结果】。\n请检查课程MySQL命名卷、启动迁移或设备页失败状态中与该现象有关的一处。\n不要删除卷，不用重新导入一份临时数据冒充持久保存。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:36:27.587Z",
+          "prompt": "请在docs/页面需要的数据.md更新实际进度：\n设备台账和详情中的设备基本信息已接到MySQL；\n详情中的点位读数、历史、责任仍为教学样本或浏览器演示，直到第10课才接通。\n其他页面也按当前代码注明来源。\n再在docs/后端启动笔记.md追加本课的人工检查表，结果先留“待我填写”：\n成功读取、后端停止后刷新、后端恢复后刷新、MySQL重启后再次读取。\n不要替我编写通过结论，不修改业务代码或启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:38:11.628Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第08课实际运行已发现两处说明不准确，请只修正文档/注释，不改业务逻辑、不启动服务、不读取.env：\n1. backend/src/main/resources/application.properties 把 optional 导入注释写成“.env缺失仍可启动健康接口”，但当前数据源${DB_PASSWORD}与Flyway仍需要数据库配置。只改这条注释，明确optional仅作用于文件导入；第08课启动仍需本地配置和健康MySQL，不承诺缺配置可启动。\n2. docs/后端启动笔记.md 的人工检查第2行把“重新读取设备”和“整页刷新后重进设备”合写成保留旧结果检查。实际旧列表只存在当前页内存：前者保留上次成功结果；整页刷新后的首次读取失败则应显示错误和重试而不冒出模拟列表，请区分。第4行按教材补齐“先停止B，重启MySQL等healthy，再启动B，然后页面读取”的顺序。\n补充当前B实测警告原文事实：Boot3.4.2管理的Flyway提示MySQL8.4高于其已测试最高8.1；当前V1实际迁移及重启校验通过。这是本次兼容性范围，不能当作生产支持保证；无需在本课升级框架。人工结果仍留待我填写。",
+          "submittedAt": "2026-10-20T16:40:32.611Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T16:41:30.477Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/08-06-ui.jsonl",
+          "observations": 12,
+          "result": "实际浏览器及IDE：B停止后刷新显示503与上次成功结果，能源4/16及d05详情保留；B恢复重试清错并更新时间；先停B重启MySQL等healthy后再起B仍16台，V1校验无重复迁移，原卷创建时间不变；首次读取失败无模拟列表；本人通过IDE填完检查表。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/resources/application.properties",
+        "docs/后端启动笔记.md",
+        "docs/页面需要的数据.md"
+      ],
+      "result": "实际浏览器及IDE：B停止后刷新显示503与上次成功结果，能源4/16及d05详情保留；B恢复重试清错并更新时间；先停B重启MySQL等healthy后再起B仍16台，V1校验无重复迁移，原卷创建时间不变；首次读取失败无模拟列表；本人通过IDE填完检查表。",
+      "updatedAt": "2026-10-21T00:43:59.241662+08:00"
+    },
+    {
+      "id": "09-01",
+      "chapter": "09",
+      "step": 1,
+      "title": "## 第1步：启动只属于本课程的 Redis",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在现有compose.yaml加入Redis7.4服务redis。\n项目名仍是campus-v2，只映射127.0.0.1:23502到容器6379；\n密码引用.env里的REDIS_PASSWORD，不读取或输出真实值。\nRedis在本课程只保存短时登录，明确关闭RDB与AOF持久化，\n这样课程redis进程重新启动后登录凭条会消失。\n增加使用本机配置检查可用性的healthcheck，检查日志不能打印口令。\n保留原MySQL服务与命名卷不变。不要替我启动服务，不运行down -v。",
+        "课程Redis启动后docker compose ps显示【状态】，\n不含口令的错误是【错误】。\n请只检查Redis服务、23502端口和健康检查，不输出.env，不修改MySQL数据卷。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:44:49.899Z",
+          "prompt": "请在现有compose.yaml加入Redis7.4服务redis。\n项目名仍是campus-v2，只映射127.0.0.1:23502到容器6379；\n密码引用.env里的REDIS_PASSWORD，不读取或输出真实值。\nRedis在本课程只保存短时登录，明确关闭RDB与AOF持久化，\n这样课程redis进程重新启动后登录凭条会消失。\n增加使用本机配置检查可用性的healthcheck，检查日志不能打印口令。\n保留原MySQL服务与命名卷不变。不要替我启动服务，不运行down -v。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:45:29.337Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "已核对新增Redis配置，MySQL服务和命名卷保持不变。有一处公开说明需要修正：compose.yaml写“避免口令出现在compose config”，但environment中的${REDIS_PASSWORD}在普通docker compose config中会被展开，不能保证整个config输出无口令。请只修正这条注释与相关说明，改为“启动命令字段保留容器变量占位；不要输出或分享普通compose config/docker inspect结果，它们可能含环境口令；需要结构检查时用不会展开或不会输出环境值的方式”。不要运行config或inspect来展示真实值，不读取.env，不改服务配置、端口或持久化策略，不启动服务。",
+          "submittedAt": "2026-10-20T16:46:41.755Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T16:47:27.571Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-IDE-terminal",
+          "evidence": [
+            "commands/09-01-C-services-healthy-final.ax.txt",
+            "commands/09-01-C-redis-runtime-results.ax.txt"
+          ],
+          "result": "MySQL/Redis healthy，回环23501/23502；未认证PING返回NOAUTH，认证后CONFIG GET确认appendonly no/save空，DBSIZE=0；MySQL服务定义及原卷保留。"
+        }
+      ],
+      "changed_files": [
+        "compose.yaml"
+      ],
+      "result": "Redis7.4已实际启动并healthy；认证、关闭RDB/AOF和空会话库实测通过。已纠正compose config输出无口令的过度说明。",
+      "updatedAt": "2026-10-21T00:48:11.712780+08:00"
+    },
+    {
+      "id": "09-02",
+      "chapter": "09",
+      "step": 2,
+      "title": "## 第2步：建立三个有不同职责的账号",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请给现有后端增加spring-security-crypto，用BCrypt保存密码摘要。\n新增V2迁移建立users表，不改已执行的V1。\n在本地课程启动时，若账号尚不存在，创建admin、manager、viewer，\n角色依次为ADMIN、MANAGER、VIEWER，初始密码从DEMO_PASSWORD配置读取。\n三个账号共用这份本地练习初始密码，只适用于本机课程。\n只保存BCrypt摘要，不在SQL、日志、接口、回复中输出明文或摘要。\n账号已存在时不重置密码；缺少配置要说明缺项，不能使用写死的默认密码。\n先做账号建立和密码校验的测试，不做前端登录，不启动服务。",
+        "账号准备这一步失败，相关错误是【已去掉私密内容的错误】。\n请只修复V2、配置读取或BCrypt校验，不重建数据库，不重置已有用户，\n不要让我把.env或密码贴给你。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:48:18.487Z",
+          "prompt": "请给现有后端增加spring-security-crypto，用BCrypt保存密码摘要。\n新增V2迁移建立users表，不改已执行的V1。\n在本地课程启动时，若账号尚不存在，创建admin、manager、viewer，\n角色依次为ADMIN、MANAGER、VIEWER，初始密码从DEMO_PASSWORD配置读取。\n三个账号共用这份本地练习初始密码，只适用于本机课程。\n只保存BCrypt摘要，不在SQL、日志、接口、回复中输出明文或摘要。\n账号已存在时不重置密码；缺少配置要说明缺项，不能使用写死的默认密码。\n先做账号建立和密码校验的测试，不做前端登录，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:51:04.731Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/09-02-ui.jsonl",
+          "observations": 2,
+          "result": "B终端Java17实际18项测试全部通过；V2迁移和账号初始化完成，SQL元数据确认admin/ADMIN、manager/MANAGER、viewer/VIEWER启用且摘要长度60（未输出摘要）；V1/V2均success。实际浏览器health为code0/statusUP。随后只停止本课程B。"
+        }
+      ],
+      "changed_files": [
+        "backend/pom.xml",
+        "backend/src/main/java/edu/campus/v2/user/DemoAccountInitializer.java",
+        "backend/src/main/java/edu/campus/v2/user/JdbcUserRepository.java",
+        "backend/src/main/java/edu/campus/v2/user/PasswordEncoderConfig.java",
+        "backend/src/main/java/edu/campus/v2/user/Role.java",
+        "backend/src/main/java/edu/campus/v2/user/UserAccount.java",
+        "backend/src/main/java/edu/campus/v2/user/UserAuthenticationService.java",
+        "backend/src/main/java/edu/campus/v2/user/UserRepository.java",
+        "backend/src/main/resources/application.properties",
+        "backend/src/main/resources/db/migration/V2__create_users.sql",
+        "backend/src/test/java/edu/campus/v2/user/DemoAccountInitializerTest.java",
+        "backend/src/test/java/edu/campus/v2/user/InMemoryUserRepository.java",
+        "backend/src/test/java/edu/campus/v2/user/UserAuthenticationServiceTest.java"
+      ],
+      "result": "B终端Java17实际18项测试全部通过；V2迁移和账号初始化完成，SQL元数据确认admin/ADMIN、manager/MANAGER、viewer/VIEWER启用且摘要长度60（未输出摘要）；V1/V2均success。实际浏览器health为code0/statusUP。随后只停止本课程B。",
+      "updatedAt": "2026-10-21T00:53:21.119766+08:00"
+    },
+    {
+      "id": "09-03",
+      "chapter": "09",
+      "step": 3,
+      "title": "## 第3步：让后端签发和检查登录凭条",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请按materials/约定卡.md加入Spring Data Redis并完成登录接口。\nRedis连接127.0.0.1:23502，密码使用REDIS_PASSWORD占位。\nPOST /api/login接收username/password，校验MySQL账号后，\n使用数据库查到的规范username建立会话和返回用户，不把输入大小写当成另一个身份；\n用安全随机数生成登录token，在Redis以campus:v2:session:前缀保存会话，\n过期时间1800秒，返回token及user:{username,role}，不返回密码摘要。\nGET /api/me读取Authorization: Bearer token并返回当前用户；\nPOST /api/logout删除当前会话。\n除/api/health和/api/login外，/api下的请求都必须检查会话。\n未登录或过期返回401；已登录但无权操作返回403；\nRedis不可用返回清楚的503，不放行，也不伪造登录成功。\n不要在请求日志打印密码、Authorization或token。\n增加登录失败、缺令牌、失效令牌和退出后不能继续访问的测试；\n若数据库忽略账号大小写，验证MANAGER登录后响应和会话都使用数据库中的manager身份。\n不要修改前端，不启动服务。",
+        "加入登录检查后，直接访问/api/devices的实际结果是【结果】。\n请只检查保护范围与会话校验：health/login公开，其余/api需要有效Redis会话。\n不要把设备接口重新设为公开来消除错误。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:53:44.804Z",
+          "prompt": "请按materials/约定卡.md加入Spring Data Redis并完成登录接口。\nRedis连接127.0.0.1:23502，密码使用REDIS_PASSWORD占位。\nPOST /api/login接收username/password，校验MySQL账号后，\n使用数据库查到的规范username建立会话和返回用户，不把输入大小写当成另一个身份；\n用安全随机数生成登录token，在Redis以campus:v2:session:前缀保存会话，\n过期时间1800秒，返回token及user:{username,role}，不返回密码摘要。\nGET /api/me读取Authorization: Bearer token并返回当前用户；\nPOST /api/logout删除当前会话。\n除/api/health和/api/login外，/api下的请求都必须检查会话。\n未登录或过期返回401；已登录但无权操作返回403；\nRedis不可用返回清楚的503，不放行，也不伪造登录成功。\n不要在请求日志打印密码、Authorization或token。\n增加登录失败、缺令牌、失效令牌和退出后不能继续访问的测试；\n若数据库忽略账号大小写，验证MANAGER登录后响应和会话都使用数据库中的manager身份。\n不要修改前端，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T16:56:59.670Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/09-03-ui.jsonl",
+          "observations": 2,
+          "result": "B终端Java17实际46项测试全通过；浏览器直开设备接口实际HTTP401。真实本机MySQL/Redis的16项HTTP检查通过：缺/失效凭条及错误密码拒绝、MANAGER登录响应与me都为规范manager/MANAGER、带凭条读取16台、退出后原凭条无法再读me/devices。403当前仅测试控制器单元验证，真实业务写权限待第10/11课。"
+        }
+      ],
+      "changed_files": [
+        "backend/pom.xml",
+        "backend/src/main/java/edu/campus/v2/auth/AuthWebConfig.java",
+        "backend/src/main/java/edu/campus/v2/auth/LoginSessionStore.java",
+        "backend/src/main/java/edu/campus/v2/auth/LoginTokenGenerator.java",
+        "backend/src/main/java/edu/campus/v2/auth/RedisLoginSessionStore.java",
+        "backend/src/main/java/edu/campus/v2/auth/RequireRole.java",
+        "backend/src/main/java/edu/campus/v2/auth/RoleInterceptor.java",
+        "backend/src/main/java/edu/campus/v2/auth/SessionAuthFilter.java",
+        "backend/src/main/java/edu/campus/v2/auth/SessionStoreUnavailableException.java",
+        "backend/src/main/java/edu/campus/v2/user/AuthenticatedUser.java",
+        "backend/src/main/java/edu/campus/v2/user/UserAuthenticationService.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiErrors.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+        "backend/src/main/java/edu/campus/v2/web/AuthController.java",
+        "backend/src/main/java/edu/campus/v2/web/LoginRequest.java",
+        "backend/src/main/java/edu/campus/v2/web/LoginResponse.java",
+        "backend/src/main/java/edu/campus/v2/web/UserView.java",
+        "backend/src/main/resources/application.properties",
+        "backend/src/test/java/edu/campus/v2/auth/AdminOnlyDemoController.java",
+        "backend/src/test/java/edu/campus/v2/auth/LoginTokenGeneratorTest.java",
+        "backend/src/test/java/edu/campus/v2/auth/RedisLoginSessionStoreTest.java",
+        "backend/src/test/java/edu/campus/v2/auth/RoleInterceptorTest.java",
+        "backend/src/test/java/edu/campus/v2/user/UserAuthenticationServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/web/AuthControllerTest.java",
+        "backend/src/test/java/edu/campus/v2/web/DeviceControllerTest.java",
+        "backend/src/test/java/edu/campus/v2/web/HealthControllerTest.java"
+      ],
+      "result": "B终端Java17实际46项测试全通过；浏览器直开设备接口实际HTTP401。真实本机MySQL/Redis的16项HTTP检查通过：缺/失效凭条及错误密码拒绝、MANAGER登录响应与me都为规范manager/MANAGER、带凭条读取16台、退出后原凭条无法再读me/devices。403当前仅测试控制器单元验证，真实业务写权限待第10/11课。",
+      "updatedAt": "2026-10-21T00:59:47.563242+08:00"
+    },
+    {
+      "id": "09-04",
+      "chapter": "09",
+      "step": 4,
+      "title": "## 第4步：保留原页面，加上真正的登录与退出",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请给现有页面增加登录表单：用户名、密码、登录按钮和可读错误。\n页面顶部提供“数据方式”：浏览器演示、连接后端。\n首次由学生选择“连接后端”，随后显示登录表单。\n可以在localStorage保存这一个模式偏好，刷新后仍停在连接后端；\n不能把模式偏好当作身份，也不能保存密码、token或用户角色来冒充登录。\n登录调用POST /api/login，密码只用于本次请求；成功后清空密码输入框。\ntoken只保存在data-service.js的内存变量，不能写localStorage/sessionStorage/URL；\n后续真实API请求带Authorization: Bearer token。\n登录成功后调用/api/me显示账号与角色，再重新读取设备。\n增加退出按钮，调用/api/logout，随后清除内存token和已登录用户的页面数据。\n刷新页面后需要重新登录，这是本课约定，不自动从浏览器恢复token。\n“连接后端”模式移除能假装已登录的演示角色切换；\n选择“浏览器演示”时仍须明确标注演示身份，不能与真实登录混用。\n未接后端的功能仍标“浏览器演示”。\n401回到登录并清除旧内容，403显示无权访问；不把失败写成成功。\n保留九个菜单，不重做布局，不启动服务。",
+        "我在登录页操作【登录/退出/刷新】后看到【现象】。\n请检查同源/api请求、内存token、/api/me和401清理，\n不要让我发送密码，不把token改存到localStorage，也不要绕过后端认证。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T16:59:53.992Z",
+          "prompt": "请给现有页面增加登录表单：用户名、密码、登录按钮和可读错误。\n页面顶部提供“数据方式”：浏览器演示、连接后端。\n首次由学生选择“连接后端”，随后显示登录表单。\n可以在localStorage保存这一个模式偏好，刷新后仍停在连接后端；\n不能把模式偏好当作身份，也不能保存密码、token或用户角色来冒充登录。\n登录调用POST /api/login，密码只用于本次请求；成功后清空密码输入框。\ntoken只保存在data-service.js的内存变量，不能写localStorage/sessionStorage/URL；\n后续真实API请求带Authorization: Bearer token。\n登录成功后调用/api/me显示账号与角色，再重新读取设备。\n增加退出按钮，调用/api/logout，随后清除内存token和已登录用户的页面数据。\n刷新页面后需要重新登录，这是本课约定，不自动从浏览器恢复token。\n“连接后端”模式移除能假装已登录的演示角色切换；\n选择“浏览器演示”时仍须明确标注演示身份，不能与真实登录混用。\n未接后端的功能仍标“浏览器演示”。\n401回到登录并清除旧内容，403显示无权访问；不把失败写成成功。\n保留九个菜单，不重做布局，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:07:00.322Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/09-04-ui.jsonl",
+          "observations": 17,
+          "result": "实际浏览器选择backend后无演示身份切换；admin/ADMIN真实登录读取16台，打开d05后退出清掉列表详情且密码为空，Redis会话数实测从1(剩1772秒)到0。再登录后整页刷新保留backend偏好但要求重登、无旧设备内容。源码检查凭条只在data-service内存，持久化仅演示资料与模式偏好。登录期间未采集调试载荷，密码操作不记值。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "frontend/index.html",
+        "frontend/styles.css"
+      ],
+      "result": "实际浏览器选择backend后无演示身份切换；admin/ADMIN真实登录读取16台，打开d05后退出清掉列表详情且密码为空，Redis会话数实测从1(剩1772秒)到0。再登录后整页刷新保留backend偏好但要求重登、无旧设备内容。源码检查凭条只在data-service内存，持久化仅演示资料与模式偏好。登录期间未采集调试载荷，密码操作不记值。",
+      "updatedAt": "2026-10-21T01:10:40.695778+08:00"
+    },
+    {
+      "id": "09-05",
+      "chapter": "09",
+      "step": 5,
+      "title": "## 第5步：用三个账号核对“谁能做什么”",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在管理菜单中增加一张易懂的职责表，并明确哪些动作尚待后续课接通：\nADMIN可登记空间/责任、建立演练、分派、模拟恢复，并可处理事件；\nMANAGER只处理已经分派给自己的事件；\nVIEWER只看资料。\n职责说明使用/api/me实际返回的角色，不能相信浏览器自己传来的角色名。\n本课三个账号都能读取设备；尚未实现的真实写入显示“下一课接通”或“浏览器演示”，\n不显示成已经通过后端权限检查。不要新增其他业务接口，不启动服务。",
+        "切换账号后，页面还残留【上一账号的内容】。\n请只修复退出和重新登录时的状态清理，身份以/api/me为准，\n不通过修改后台角色或放宽权限来解决。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T17:10:50.377Z",
+          "prompt": "请在管理菜单中增加一张易懂的职责表，并明确哪些动作尚待后续课接通：\nADMIN可登记空间/责任、建立演练、分派、模拟恢复，并可处理事件；\nMANAGER只处理已经分派给自己的事件；\nVIEWER只看资料。\n职责说明使用/api/me实际返回的角色，不能相信浏览器自己传来的角色名。\n本课三个账号都能读取设备；尚未实现的真实写入显示“下一课接通”或“浏览器演示”，\n不显示成已经通过后端权限检查。不要新增其他业务接口，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:12:43.346Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/09-05-ui.jsonl",
+          "observations": 28,
+          "result": "真实浏览器依次admin/manager/viewer登录，/api/me角色分别ADMIN/MANAGER/VIEWER，管理职责表仅高亮当前角色且明确真实写入下一课接通；三个账号都读取16台MySQL设备。每次退出清除登录头、设备和d05详情及密码；下个账号未带入旧详情。未以隐藏按钮宣称真实写权限通过。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "真实浏览器依次admin/manager/viewer登录，/api/me角色分别ADMIN/MANAGER/VIEWER，管理职责表仅高亮当前角色且明确真实写入下一课接通；三个账号都读取16台MySQL设备。每次退出清除登录头、设备和d05详情及密码；下个账号未带入旧详情。未以隐藏按钮宣称真实写权限通过。",
+      "updatedAt": "2026-10-21T01:13:29.341916+08:00"
+    },
+    {
+      "id": "09-06",
+      "chapter": "09",
+      "step": 6,
+      "title": "## 第6步：重启 Redis，观察登录失效而设备仍在",
+      "source": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在docs/后端启动笔记.md增加一条“Redis重启实验”，结果留给我填写。\n写明本课程Redis已关闭持久化，所以重启会清除短时会话；\nMySQL使用独立命名卷，设备记录不随Redis重启而删除。\n核对前端收到401会清除已登录内容、显示重新登录，而不是自动换回演示角色。\n若代码已经正确，不修改业务；不要替我重启服务。",
+        "Redis重启并healthy后，设备刷新显示【实际结果】。\n请检查本课程Redis是否确实关闭持久化、请求是否实际检查会话，\n以及401后页面是否清理。不要清空MySQL，不打印token。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T17:13:53.019Z",
+          "prompt": "请在docs/后端启动笔记.md增加一条“Redis重启实验”，结果留给我填写。\n写明本课程Redis已关闭持久化，所以重启会清除短时会话；\nMySQL使用独立命名卷，设备记录不随Redis重启而删除。\n核对前端收到401会清除已登录内容、显示重新登录，而不是自动换回演示角色。\n若代码已经正确，不修改业务；不要替我重启服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:14:30.113Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/09-06-ui.jsonl",
+          "observations": 11,
+          "result": "真实浏览器保持admin设备页，C重启Redis并等healthy，DBSIZE为0；点击重新读取设备实际HTTP401、旧登录与表格详情清空，仍为backend且无演示身份；停止捕获后同一admin重新登录仍16台、d03未知/d04离线，读取时间更新。MySQL原卷创建时间不变。本人经IDE填7行实验结果；课末A/B及两个课程容器均停止，数据卷保留。"
+        }
+      ],
+      "changed_files": [
+        "docs/后端启动笔记.md"
+      ],
+      "result": "真实浏览器保持admin设备页，C重启Redis并等healthy，DBSIZE为0；点击重新读取设备实际HTTP401、旧登录与表格详情清空，仍为backend且无演示身份；停止捕获后同一admin重新登录仍16台、d03未知/d04离线，读取时间更新。MySQL原卷创建时间不变。本人经IDE填7行实验结果；课末A/B及两个课程容器均停止，数据卷保留。",
+      "updatedAt": "2026-10-21T01:18:37.493007+08:00"
+    },
+    {
+      "id": "10-01",
+      "chapter": "10",
+      "step": 1,
+      "title": "## 第1步：把公开练习读数放进数据库",
+      "source": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请按materials/约定卡.md增加V3迁移，建立points、history、alarms、owners所需表。\n把公开mock-campus.json中的28个点、历史样本与原始报警放进MySQL；\nowners初始为空。保留已存在的空间、设备和账号，不改V1/V2，不删表。\n实现需登录的GET /api/overview，data为{spaces,devices,points,history,alarms}；\n从数据库读取，字段与前端已有模拟数据约定一致。\n历史按时间排序，null保留为空缺，0保留为有效读数，unit与点位一致。\n不生成不存在的实时数据，不使用电脑当前时间冒充采样时间。\n给null、0与单位保持添加针对性测试。不要修改前端，不启动服务。",
+        "新增V3后，测试或启动出现【不含私密信息的错误】。\n请只检查本次新增表、公开数据导入和overview读取；\n不要修改已执行的迁移，不删除旧数据，不把null改为0绕过失败。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T17:20:36.084Z",
+          "prompt": "请按materials/约定卡.md增加V3迁移，建立points、history、alarms、owners所需表。\n把公开mock-campus.json中的28个点、历史样本与原始报警放进MySQL；\nowners初始为空。保留已存在的空间、设备和账号，不改V1/V2，不删表。\n实现需登录的GET /api/overview，data为{spaces,devices,points,history,alarms}；\n从数据库读取，字段与前端已有模拟数据约定一致。\n历史按时间排序，null保留为空缺，0保留为有效读数，unit与点位一致。\n不生成不存在的实时数据，不使用电脑当前时间冒充采样时间。\n给null、0与单位保持添加针对性测试。不要修改前端，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:24:13.353Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/10-01-ui.jsonl",
+          "observations": 8,
+          "result": "B Java17实际56项测试全通过；V3真实迁移完成，SQL核对spaces4/devices16/users3/points28/history168/alarms1/owners0及V1/2/3success。真实overview需登录，五组数据逐字段/类型/数值对照公开fixture全部一致，null/0/单位/采样时间及历史排序保留。浏览器admin重新登录、后端已连接；概览前端仍如实标浏览器演示，尚未替换。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/alarm/Alarm.java",
+        "backend/src/main/java/edu/campus/v2/alarm/AlarmRepository.java",
+        "backend/src/main/java/edu/campus/v2/alarm/AlarmRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/history/History.java",
+        "backend/src/main/java/edu/campus/v2/history/HistoryGrouping.java",
+        "backend/src/main/java/edu/campus/v2/history/HistoryRepository.java",
+        "backend/src/main/java/edu/campus/v2/history/HistoryRow.java",
+        "backend/src/main/java/edu/campus/v2/history/HistorySample.java",
+        "backend/src/main/java/edu/campus/v2/overview/Overview.java",
+        "backend/src/main/java/edu/campus/v2/overview/OverviewService.java",
+        "backend/src/main/java/edu/campus/v2/point/Point.java",
+        "backend/src/main/java/edu/campus/v2/point/PointRepository.java",
+        "backend/src/main/java/edu/campus/v2/point/PointRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/point/PointValues.java",
+        "backend/src/main/java/edu/campus/v2/space/Space.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceRepository.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/web/OverviewController.java",
+        "backend/src/main/resources/db/migration/V3__create_points_history_alarms_owners.sql",
+        "backend/src/test/java/edu/campus/v2/history/HistoryGroupingTest.java",
+        "backend/src/test/java/edu/campus/v2/history/HistoryRepositorySqlTest.java",
+        "backend/src/test/java/edu/campus/v2/point/PointRowMapperTest.java",
+        "backend/src/test/java/edu/campus/v2/web/OverviewControllerTest.java"
+      ],
+      "result": "B Java17实际56项测试全通过；V3真实迁移完成，SQL核对spaces4/devices16/users3/points28/history168/alarms1/owners0及V1/2/3success。真实overview需登录，五组数据逐字段/类型/数值对照公开fixture全部一致，null/0/单位/采样时间及历史排序保留。浏览器admin重新登录、后端已连接；概览前端仍如实标浏览器演示，尚未替换。",
+      "updatedAt": "2026-10-21T01:27:36.368187+08:00"
+    },
+    {
+      "id": "10-02",
+      "chapter": "10",
+      "step": 2,
+      "title": "## 第2步：接通概览和能源，保留每个数值的含义",
+      "source": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请把现有概览和能源页接到需登录的GET /api/overview，沿用内存token。\n只替换数据来源，保留原有菜单、卡片、筛选与点击跳到设备详情的动作。\n概览使用接口实际数量；能源只取category=energy的设备，\n可选点仅power与voltage，单位分别kW和V，不能混入环境temperature/humidity。\nnull显示“暂无读数”，0显示0；陈旧和异常质量继续给出提示。\n页面标明“本机后端保存的教学模拟数据”和原采样时间。\n刷新失败保留旧成功快照并标出失败，不自动回退mock。\n不计算kWh、电费或节能率，不启动服务。",
+        "我在能源页选择【功率/电压】后看到【错误现象】。\n请对照完整16台混合目录，仅修复能源类别过滤、点位选择或单位同步，\n不要删掉其他类别练习数据，也不要把错误值直接隐藏成0。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T17:28:11.251Z",
+          "prompt": "请把现有概览和能源页接到需登录的GET /api/overview，沿用内存token。\n只替换数据来源，保留原有菜单、卡片、筛选与点击跳到设备详情的动作。\n概览使用接口实际数量；能源只取category=energy的设备，\n可选点仅power与voltage，单位分别kW和V，不能混入环境temperature/humidity。\nnull显示“暂无读数”，0显示0；陈旧和异常质量继续给出提示。\n页面标明“本机后端保存的教学模拟数据”和原采样时间。\n刷新失败保留旧成功快照并标出失败，不自动回退mock。\n不计算kWh、电费或节能率，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:35:23.546Z",
+          "actualOutcome": "FAIL: explicit browser-demo mode lost overview/energy data; actual DOM asks backend login instead of preserving prior demo",
+          "actualCheckedAt": "2026-10-21T01:37:06.185123"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第10课第2步实际浏览器发现回退：主动选择“浏览器演示”后，概览三个卡片变成“需要登录”、各统计区只显示切换后端说明；能源原4台列表也消失。这破坏第09课保留的主动双模式。\n请只恢复概览和能源的模式分支：学生主动选择浏览器演示时，继续使用既有getOverview()公开练习/浏览器演示来源，保留原16/4/28概览、4台能源及原有图表和跳转，清楚标注“浏览器演示，不是登录/不是数据库”；主动选择连接后端时才用getOverviewFromServer()和内存token，未登录仍显示登录。\n连接后端请求失败时，仍留在backend，保留上次成功快照并明确失败，绝不能自动改demo或用mock冒充后端成功。保留本次严格响应校验、null/0语义和单位切换。切模式先清旧来源的快照，不能串用。只修这一个回退，不改后端或数据库，不启动服务。",
+          "submittedAt": "2026-10-20T17:37:23.483Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T17:40:59.582Z",
+          "actualOutcome": "PARTIAL: demo restored; real backend counts/card drilldown, kW/V, null-break/zero chart and stale snapshots pass. Actual screenshot shows energy error only below four tables, invisible beside refresh; improving visibility.",
+          "actualCheckedAt": "2026-10-21T01:45:42.686617"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第10课第2步继续实测：主动demo已恢复；真实backend概览16/4/28、卡片到s1筛选与d05详情、能源4台及kW/V切换、曲线缺测断开和0真实零均通过。停B后，概览的失败提示在顶部，旧数据保留也正确。\n还有一个实际可见性问题：能源页点击“刷新读数”得到HTTP503，4台电压和比较曲线保留，但失败段落被放在四张空间表之后。本人查看当前1280x800截图，刷新按钮周围完全看不到“刷新失败/上次成功结果”，来源说明仍是正常读取段。\n请只把能源页已有失败提示移到刷新按钮附近或来源说明区，让学生点击刷新后在首屏直接看到“刷新失败、HTTP503、仍显示某时刻上次成功快照”。可以复用现有错误区并调整DOM顺序，不新做布局、不改接口。成功重试后清除该失败提示；保留4台旧读数、当前指标、已比较曲线和backend模式。不要改后端或数据库，不启动服务。",
+          "submittedAt": "2026-10-20T17:46:00.272Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T17:47:50.358Z",
+          "actualOutcome": "PASS: actual screenshot confirms top error visibility; stale values and curve preserved, real backend recovery clears error and updates read time",
+          "actualCheckedAt": "2026-10-21T01:50:00.391536"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/10-02-ui.jsonl",
+          "observations": 55,
+          "result": "实际浏览器：主动demo恢复16/4/28和4能源，切backend清演示并要求登录；真实后端概览16/4/28，空间卡片筛选s1且d05详情一致；能源仅d05-08，功率0/1.6/1.8/2 kW切到220/220.2/220.4/220.6 V，旧kW曲线清除。d05 V历史实际5有效样本、2折线段(null断点与0有效)。停B后两页503均保留旧快照且backend不变；能源错误移至刷新按钮旁并实际截图确认首屏可见；B恢复重试清错并更新读取时间。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "实际浏览器：主动demo恢复16/4/28和4能源，切backend清演示并要求登录；真实后端概览16/4/28，空间卡片筛选s1且d05详情一致；能源仅d05-08，功率0/1.6/1.8/2 kW切到220/220.2/220.4/220.6 V，旧kW曲线清除。d05 V历史实际5有效样本、2折线段(null断点与0有效)。停B后两页503均保留旧快照且backend不变；能源错误移至刷新按钮旁并实际截图确认首屏可见；B恢复重试清错并更新读取时间。",
+      "updatedAt": "2026-10-21T01:50:00.367297+08:00"
+    },
+    {
+      "id": "10-03",
+      "chapter": "10",
+      "step": 3,
+      "title": "## 第3步：让历史入口带对设备，让原始报警保持只读",
+      "source": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请把现有历史页与原始报警页接到GET /api/overview里的history和alarms。\n保留现有图表和列表。设备详情的“查看历史”必须把当前deviceId与tagId带到历史页；\n在能源页每台设备旁新增“查看当前指标历史”按钮，\n按钮带当前能源deviceId与当前选择的tagId；功率切成电压后，入口也跟着切换。\n切换设备/指标时清除不匹配的旧曲线，只显示新选择对应的单位和采样时间。\n历史中的null画断点，0画真实零；没有样本时说“这段时间暂无样本”。\n原始报警只读，不增加关闭、恢复、删除按钮，不把报警混进本地演练事件；\n每条报警保留或增加“查看设备”入口，带该报警deviceId进入已有设备详情。\n所有API失败明确提示，不能静默回退浏览器模拟。\n不要启动服务。",
+        "我从【设备详情/能源】的【设备ID和指标】进入历史，\n页面却显示【实际设备或指标】。\n请只修复入口传参、当前选择和旧图清理，不新建另一套历史页，不改原始数据。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T17:50:30.240Z",
+          "prompt": "请把现有历史页与原始报警页接到GET /api/overview里的history和alarms。\n保留现有图表和列表。设备详情的“查看历史”必须把当前deviceId与tagId带到历史页；\n在能源页每台设备旁新增“查看当前指标历史”按钮，\n按钮带当前能源deviceId与当前选择的tagId；功率切成电压后，入口也跟着切换。\n切换设备/指标时清除不匹配的旧曲线，只显示新选择对应的单位和采样时间。\n历史中的null画断点，0画真实零；没有样本时说“这段时间暂无样本”。\n原始报警只读，不增加关闭、恢复、删除按钮，不把报警混进本地演练事件；\n每条报警保留或增加“查看设备”入口，带该报警deviceId进入已有设备详情。\n所有API失败明确提示，不能静默回退浏览器模拟。\n不要启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T17:55:45.704Z",
+          "actualOutcome": "PARTIAL: all three real history/alarm links pass and V history has2+3 valid points; device detail still shows point/history not MySQL and promises lesson10 later, leaving lesson08 promised detail-point migration incomplete",
+          "actualCheckedAt": "2026-10-21T01:59:18.322782"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第10课第3步实际检查：设备d05功率入口到d05/power/kW、能源电压入口到d06/voltage/V、报警a01到d01全部通过，历史null断点与真实零也正确，报警只有查看操作。\n但设备详情点位接入漏了一处：实际d05/d01详情仍显示“点位读数与历史仍是公开教学样本，第10课再接后端”，POINTS_NOTE_TEXT还写“不是本机MySQL数据”。第08课已约定详情点位/历史到第10课接通，现在历史页已读MySQL，详情还用旧来源与旧文案会误导。\n请只补齐设备详情点位读取：在backend模式从现有需登录/api/overview的points取当前deviceId点位，可复用getOverviewFromServer或已有按模式取集合的函数；demo仍读既有公开样本。不能只改文字冒充接通。点位说明按模式如实标注后端/MySQL或浏览器演示，历史入口对应后端history；空间名称和责任信息本课第4/5步尚未接，仍单独标演示。\n保留d05功率0、d03温度null与无采样时间，不补零或改电脑当前时间；失败明确提示且不能回退mock。保留已经通过的3条入口，不改后端/数据库，不启动服务。",
+          "submittedAt": "2026-10-20T17:59:38.066Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T18:03:57.545Z",
+          "actualOutcome": "PASS: real detail overview GETs,0/null/time preserved, backendstop503 no mock,recovery andall3links verified",
+          "actualCheckedAt": "2026-10-21T02:08:30.618082"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/10-03-ui.jsonl",
+          "observations": 44,
+          "result": "实际浏览器3条入口均通过：d05详情→power/kW历史、能源d06电压→voltage/V历史（实际2段、2+3有效点/null断点0有效）、报警a01只读→d01详情。补齐详情点位真实/api/overview读取，d05为0kW、d03缺失且无采样时间；空间/责任仍明确演示。停B再开详情得到503且无模拟点位顶替；B恢复后收起重开清错，3条入口重测通过。报警仅查看及禁用分页按钮，未做多页真实样本。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/styles.css"
+      ],
+      "result": "实际浏览器3条入口均通过：d05详情→power/kW历史、能源d06电压→voltage/V历史（实际2段、2+3有效点/null断点0有效）、报警a01只读→d01详情。补齐详情点位真实/api/overview读取，d05为0kW、d03缺失且无采样时间；空间/责任仍明确演示。停B再开详情得到503且无模拟点位顶替；B恢复后收起重开清错，3条入口重测通过。报警仅查看及禁用分页按钮，未做多页真实样本。",
+      "updatedAt": "2026-10-21T02:08:30.592682+08:00"
+    },
+    {
+      "id": "10-04",
+      "chapter": "10",
+      "step": 4,
+      "title": "## 第4步：让空间修改真正保存，刷新还能看见",
+      "source": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请实现GET /api/spaces和PUT /api/spaces/{id}。\n读取允许三个已登录角色；修改仅ADMIN，接收building和floor，\n检查空间存在、字段非空与长度合理，使用参数绑定SQL。\n在后端判断角色，不能相信请求中的role或前端按钮状态。\n把已有空间页面接到这些接口，移除这部分localStorage写入；\n保存成功后独立GET回读，再更新页面与概览中的空间信息。\n其他角色能看但不能提交；403清理当前无权编辑的内容并说明原因。\n新增后端测试证明VIEWER不能修改，ADMIN可以合法修改。\n不要修改责任和事件功能，不启动服务。",
+        "空间保存后，我刷新并重新登录，实际显示【结果】。\n请检查PUT是否真正写入MySQL，以及成功后是否独立GET回读；\n不要继续写localStorage，不要仅修改页面文字制造保存成功。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T18:10:10.900Z",
+          "prompt": "请实现GET /api/spaces和PUT /api/spaces/{id}。\n读取允许三个已登录角色；修改仅ADMIN，接收building和floor，\n检查空间存在、字段非空与长度合理，使用参数绑定SQL。\n在后端判断角色，不能相信请求中的role或前端按钮状态。\n把已有空间页面接到这些接口，移除这部分localStorage写入；\n保存成功后独立GET回读，再更新页面与概览中的空间信息。\n其他角色能看但不能提交；403清理当前无权编辑的内容并说明原因。\n新增后端测试证明VIEWER不能修改，ADMIN可以合法修改。\n不要修改责任和事件功能，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T18:14:20.996Z",
+          "actualOutcome": "FAIL: requested space implementation but CodeBuddy only returned auth/web review and asked a choice; no spaces routes exist",
+          "actualCheckedAt": "2026-10-21T02:18:57.607837"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "本步刚才已明确要求实现spaces，但你的回复只做了auth/web审阅并问改注释还是做owners。实际检查mainJava只有Health/Device/Auth/Overview控制器，没有/api/spaces路由，所以本步尚未实施。\n请现在直接修改文件完成第10课第4步，不再只审阅、列建议或问选择：实现GET /api/spaces（3个登录角色可读）和PUT /api/spaces/{id}（仅ADMIN）。校验存在、building/floor非空与合理长度，SQL参数绑定，角色取后端会话，不能相信body.role。把已有空间页接到接口，移除空间localStorage写入；成功PUT后独立GET回读，再同步页面及概览空间信息。其他角色只读；403清理无权编辑内容并说明。增加ADMIN合法修改与VIEWER被拒的后端测试。\n只做spaces及必要前端调用/配置/测试，不做owners（它是下一步），不做事件，不改已执行V1/V2/V3，不读取.env，不启动服务。完成后列实际修改文件与测试结果，交给我在B亲自测试启动。",
+          "submittedAt": "2026-10-20T18:19:24.188Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T18:31:57.961Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/10-04-ui.jsonl",
+          "observations": 32,
+          "result": "B实跑63测试通过；admin保存s1教学楼 A/1层，抓包PUT200后独立GET200回读，整页刷新重新登录仍一致，设备详情同步。viewer仅能查看；C真实HTTP5检查通过：viewer/manager伪造body.role仍403且记录不变，匿名GET401。V1/V2/V3哈希未变。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/space/SpaceNotFoundException.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceRepository.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceService.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceValidationException.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+        "backend/src/main/java/edu/campus/v2/web/SpaceController.java",
+        "backend/src/main/java/edu/campus/v2/web/SpaceLocationRequest.java",
+        "backend/src/test/java/edu/campus/v2/web/SpaceControllerTest.java",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "B实跑63测试通过；admin保存s1教学楼 A/1层，抓包PUT200后独立GET200回读，整页刷新重新登录仍一致，设备详情同步。viewer仅能查看；C真实HTTP5检查通过：viewer/manager伪造body.role仍403且记录不变，匿名GET401。V1/V2/V3哈希未变。",
+      "updatedAt": "2026-10-21T02:34:36.306921+08:00"
+    },
+    {
+      "id": "10-05",
+      "chapter": "10",
+      "step": 5,
+      "title": "## 第5步：把设备责任交给管理人员，并处理旧版本",
+      "source": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请实现GET /api/owners和仅ADMIN可用的PUT /api/owners/{deviceId}。\n提交username:\"manager\"、非空note、expectedVersion。\n没有记录时当前version为0；成功写入后version加1；\n若提交版本落后，返回409，不覆盖新记录。\n把现有责任页接到接口。点保存前使用最近读到的version；\n成功后独立GET回读；409时读取新记录并提示学生重新决定，不能自动重发。\n责任列表允许已登录用户查看。记录保存在MySQL，不再保存在localStorage。\n测试无权修改、合法修改、旧版本冲突。不要启动服务。",
+        "两个标签编辑同一责任记录时，第二个旧版本提交得到【结果】。\n请只修复后端版本比较与前端409处理，\n不要自动重试旧决定，不关闭版本检查，不把测试改成接受覆盖。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T18:34:55.209Z",
+          "prompt": "请实现GET /api/owners和仅ADMIN可用的PUT /api/owners/{deviceId}。\n提交username:\"manager\"、非空note、expectedVersion。\n没有记录时当前version为0；成功写入后version加1；\n若提交版本落后，返回409，不覆盖新记录。\n把现有责任页接到接口。点保存前使用最近读到的version；\n成功后独立GET回读；409时读取新记录并提示学生重新决定，不能自动重发。\n责任列表允许已登录用户查看。记录保存在MySQL，不再保存在localStorage。\n测试无权修改、合法修改、旧版本冲突。不要启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T18:40:54.855Z",
+          "actualOutcome": "两标签版本1→2与旧提交409通过，实际负向HTTP发现0.5和字符串0被Integer自动转换后409，应输入400；无记录变化。",
+          "actualCheckedAt": "2026-10-21T02:49:43.589989"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "本步实际B69项测试通过；真实浏览器admin首次d01版本0→1、两标签旧版本1提交409且回读版本2均正确。另在C真实HTTP负向检查：当前d01版本2，提交expectedVersion:0.5和expectedVersion:\"0\"均返回409，说明Integer DTO先将小数/字符串隐式转为0。GET前后完全一致，没有覆盖，但输入类型校验缺失。\n请只修责任PUT的expectedVersion输入：必须为JSON非负整数；小数、数字字符串、布尔、null、缺省、负数、超出支持范围均400，不进入写入；合法旧整数仍409，合法当前整数保持成功。不要靠宽松转换或修改测试期望来接受这些输入，不要全局放宽JSON设置。增加能通过实际HTTP层反序列化的回归测试，不只mock service。\n在materials/约定卡.md补清版本字段必须JSON非负整数，供后续事件动作沿用。保留d01现有版本2/manager/说明，保留.env和已执行V1/V2/V3；不改其他业务、不启动服务。完成后交给我在B重跑并在C复测。",
+          "submittedAt": "2026-10-20T18:49:58.853Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T18:52:43.325Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/10-05-ui.jsonl",
+          "observations": 59,
+          "result": "B先69、补救后76项测试通过；d01首次0→1，整页刷新重新登录保留；两标签都读1，第一保存2，第二仅PUT409+GET200回读2、无自动重发且不覆盖。严格版本补救后真实HTTP10项检查通过，合法页面保存2→3、独立GET回读及重新登录持久化；viewer只读。设备详情同步MySQL空间/责任。已在IDE填写第10课进度，A/B及专属Compose均停止，卷保留。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/device/DeviceRepository.java",
+        "backend/src/main/java/edu/campus/v2/owner/DeviceNotFoundException.java",
+        "backend/src/main/java/edu/campus/v2/owner/Owner.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerRepository.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerService.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerValidationException.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerVersionConflictException.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+        "backend/src/main/java/edu/campus/v2/web/OwnerController.java",
+        "backend/src/main/java/edu/campus/v2/web/OwnerSaveRequest.java",
+        "backend/src/main/java/edu/campus/v2/web/StrictNonNegativeIntDeserializer.java",
+        "backend/src/test/java/edu/campus/v2/web/OwnerControllerTest.java",
+        "docs/页面需要的数据.md",
+        "frontend/app.js",
+        "frontend/data-service.js",
+        "materials/约定卡.md"
+      ],
+      "result": "B先69、补救后76项测试通过；d01首次0→1，整页刷新重新登录保留；两标签都读1，第一保存2，第二仅PUT409+GET200回读2、无自动重发且不覆盖。严格版本补救后真实HTTP10项检查通过，合法页面保存2→3、独立GET回读及重新登录持久化；viewer只读。设备详情同步MySQL空间/责任。已在IDE填写第10课进度，A/B及专属Compose均停止，卷保留。",
+      "updatedAt": "2026-10-21T02:57:23.141950+08:00"
+    },
+    {
+      "id": "11-01",
+      "chapter": "11",
+      "step": 1,
+      "title": "## 第1步：建立第一件真正保存的演练事件",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请按materials/约定卡.md新增V4迁移，建立cases、事件时间线与audit所需表；\n保留V1到V3和已有数据。\n实现GET /api/cases，返回事件及各自timeline；三个登录角色可以读取。\n实现仅ADMIN可用的POST /api/cases，接收deviceId和message。\n服务端生成ID、时间、version=1、sourceState=ACTIVE、verified=false；\n若已有责任人为manager，自动分派并设ASSIGNED，否则为NEW。\n事件与创建时间线一起存入MySQL，不能由客户端伪造处理人或创建时间。\n把现有事件列表和“建立演练”按钮接到接口，成功后独立GET回读；\n这部分不再写campus-v2-demo，保留“教学模拟演练”标记。\n不读取或修改原始报警，不控制设备，不发送通知。\n本步只做创建和列表，不提前实现后续动作，不启动服务。",
+        "我为【设备ID】建立演练后看到【实际状态和负责人】。\n请检查后端读取的责任记录、初始状态与GET回读，\n不要在前端写死负责人，也不要把旧localStorage事件当作数据库结果。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T19:00:09.024Z",
+          "prompt": "请按materials/约定卡.md新增V4迁移，建立cases、事件时间线与audit所需表；\n保留V1到V3和已有数据。\n实现GET /api/cases，返回事件及各自timeline；三个登录角色可以读取。\n实现仅ADMIN可用的POST /api/cases，接收deviceId和message。\n服务端生成ID、时间、version=1、sourceState=ACTIVE、verified=false；\n若已有责任人为manager，自动分派并设ASSIGNED，否则为NEW。\n事件与创建时间线一起存入MySQL，不能由客户端伪造处理人或创建时间。\n把现有事件列表和“建立演练”按钮接到接口，成功后独立GET回读；\n这部分不再写campus-v2-demo，保留“教学模拟演练”标记。\n不读取或修改原始报警，不控制设备，不发送通知。\n本步只做创建和列表，不提前实现后续动作，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T19:07:06.109Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-01-ui.jsonl",
+          "observations": 17,
+          "result": "B85测试通过；V4实际迁移成功并冻结哈希。初始数据库事件0，未混旧LS；admin页面创建d01 case-325d4eefe557自动ASSIGNED/manager/v1，d02 case-34586bbc372f为NEW/未分派/v1；两次均POST200后独立GET200，ACTIVE/verified=false及各一条admin创建时间线。C SQL确认两件事件及两条时间线落库，设备16、报警1、V1–V4成功；audit本步仅建表0条，不伪造历史。截图已实际查看。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/caseflow/Case.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseRepository.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseService.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseTimelineEntry.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseTimelineRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseValidationException.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+        "backend/src/main/java/edu/campus/v2/web/CaseController.java",
+        "backend/src/main/java/edu/campus/v2/web/CaseCreateRequest.java",
+        "backend/src/main/resources/db/migration/V4__create_cases_timeline_audit.sql",
+        "backend/src/test/java/edu/campus/v2/caseflow/CaseServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/web/CaseControllerTest.java",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "B85测试通过；V4实际迁移成功并冻结哈希。初始数据库事件0，未混旧LS；admin页面创建d01 case-325d4eefe557自动ASSIGNED/manager/v1，d02 case-34586bbc372f为NEW/未分派/v1；两次均POST200后独立GET200，ACTIVE/verified=false及各一条admin创建时间线。C SQL确认两件事件及两条时间线落库，设备16、报警1、V1–V4成功；audit本步仅建表0条，不伪造历史。截图已实际查看。",
+      "updatedAt": "2026-10-21T03:11:16.398535+08:00"
+    },
+    {
+      "id": "11-02",
+      "chapter": "11",
+      "step": 2,
+      "title": "## 第2步：分派给 manager，再换人开始处理",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请实现POST /api/cases/{id}/actions中的assign、start、note。\n每次请求必须带expectedVersion，服务端比较当前版本，成功后加1，\n落后则409；主记录、时间线和审计在同一个数据库事务中保存。\nassign仅ADMIN，username只允许有效manager，说明非空，状态为ASSIGNED；\nstart由ADMIN或本事件的manager执行，要求ASSIGNED，变为IN_PROGRESS；\nnote由ADMIN或本事件的manager执行，要求IN_PROGRESS、说明非空，状态保持。\nVIEWER不能修改，其他身份不能替未分派给自己的事件处理。\n把原页面的分派、开始、记录按钮逐个接到接口；\n每次成功独立GET /api/cases回读，409只刷新并解释，不自动重发。\n加入角色拒绝、错误状态和版本冲突测试，不启动服务。",
+        "我以【账号】对事件执行【动作】，实际出现【现象】。\n请只检查本动作的角色、当前状态、expectedVersion和独立回读，\n不要自动重复提交，不去掉权限或版本检查。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T19:11:38.097Z",
+          "prompt": "请实现POST /api/cases/{id}/actions中的assign、start、note。\n每次请求必须带expectedVersion，服务端比较当前版本，成功后加1，\n落后则409；主记录、时间线和审计在同一个数据库事务中保存。\nassign仅ADMIN，username只允许有效manager，说明非空，状态为ASSIGNED；\nstart由ADMIN或本事件的manager执行，要求ASSIGNED，变为IN_PROGRESS；\nnote由ADMIN或本事件的manager执行，要求IN_PROGRESS、说明非空，状态保持。\nVIEWER不能修改，其他身份不能替未分派给自己的事件处理。\n把原页面的分派、开始、记录按钮逐个接到接口；\n每次成功独立GET /api/cases回读，409只刷新并解释，不自动重发。\n加入角色拒绝、错误状态和版本冲突测试，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T19:18:50.236Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-02-ui.jsonl",
+          "observations": 22,
+          "result": "B115项测试通过；V1–V4哈希未变。admin为case-34586bbc372f分派manager并写请进行现场巡查，v1→2；退出以manager登录同一事件，开始v2→3，记事已检查练习点位，继续观察v3→4且状态IN_PROGRESS。三次均POST后独立GET回读，时间线create/assign/start/note，操作者admin/admin/manager/manager；C直接SQL确认主记录v4、时间线4条及对应三条实际审计，中文完整，原自动分派事件仍v1。截图已查看。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/audit/AuditRepository.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseActionForbiddenException.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseNotFoundException.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseRepository.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseService.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseStateException.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseVersionConflictException.java",
+        "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+        "backend/src/main/java/edu/campus/v2/web/CaseActionRequest.java",
+        "backend/src/main/java/edu/campus/v2/web/CaseController.java",
+        "backend/src/test/java/edu/campus/v2/caseflow/CaseActionServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/caseflow/CaseServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/web/CaseControllerTest.java",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "B115项测试通过；V1–V4哈希未变。admin为case-34586bbc372f分派manager并写请进行现场巡查，v1→2；退出以manager登录同一事件，开始v2→3，记事已检查练习点位，继续观察v3→4且状态IN_PROGRESS。三次均POST后独立GET回读，时间线create/assign/start/note，操作者admin/admin/manager/manager；C直接SQL确认主记录v4、时间线4条及对应三条实际审计，中文完整，原自动分派事件仍v1。截图已查看。",
+      "updatedAt": "2026-10-21T03:22:29.996853+08:00"
+    },
+    {
+      "id": "11-03",
+      "chapter": "11",
+      "step": 3,
+      "title": "## 第3步：先恢复，再核实，最后写结论关闭",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请继续实现同一个actions接口里的recover、verify、close。\nrecover仅ADMIN，表示本地演练来源已恢复，设sourceState=RECOVERED，\n不能直接关闭事件，也不声称真实设备已恢复。\nverify由ADMIN或本事件的manager执行，服务端重新检查已恢复事实后设verified=true。\nclose要求IN_PROGRESS、有非空处置记录、RECOVERED、verified=true，\n并要求本次note为非空关闭结论，将其存入conclusion，再设CLOSED。\n三个动作均检查expectedVersion、成功加1，主记录/时间线/审计一起保存。\n关闭后拒绝任何后续修改。不得接受客户端直接提交verified=true来跳过核实。\n把现有恢复、核实、关闭三个按钮分别接好，说明缺哪一项条件；\n每次成功独立GET回读，不只修改页面文字。\n测试每一项关闭条件缺失时都会被后端拒绝。不要启动服务。",
+        "我完成【恢复/核实/关闭】后，实际显示【状态、来源状态、核实结果】。\n请只修复三个按钮到各自动作的连接与关闭条件；\n不要把恢复等同关闭，不让前端直接伪造核实通过。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T19:22:49.597Z",
+          "prompt": "请继续实现同一个actions接口里的recover、verify、close。\nrecover仅ADMIN，表示本地演练来源已恢复，设sourceState=RECOVERED，\n不能直接关闭事件，也不声称真实设备已恢复。\nverify由ADMIN或本事件的manager执行，服务端重新检查已恢复事实后设verified=true。\nclose要求IN_PROGRESS、有非空处置记录、RECOVERED、verified=true，\n并要求本次note为非空关闭结论，将其存入conclusion，再设CLOSED。\n三个动作均检查expectedVersion、成功加1，主记录/时间线/审计一起保存。\n关闭后拒绝任何后续修改。不得接受客户端直接提交verified=true来跳过核实。\n把现有恢复、核实、关闭三个按钮分别接好，说明缺哪一项条件；\n每次成功独立GET回读，不只修改页面文字。\n测试每一项关闭条件缺失时都会被后端拒绝。不要启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T19:30:35.388Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-03-ui.jsonl",
+          "observations": 36,
+          "result": "B140项测试通过，V1–V4哈希未变。manager在v4实际看见缺来源恢复/核实；admin恢复v4→5仍IN_PROGRESS/RECOVERED/false；manager核实v5→6仍IN_PROGRESS且结论空；填写本次教学演练已核查完成关闭v6→7，CLOSED/RECOVERED/true，处置记录保留，七条timeline。每次POST后独立GET；关闭后无可写按钮。整页刷新重新登录同一manager与同一ID仍v7/结论/完整时间线。C SQL确认主记录、7条时间线、6条对应动作审计。已打开检查关闭与重新登录截图，末条完整可读。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseRepository.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseService.java",
+        "backend/src/main/java/edu/campus/v2/web/CaseController.java",
+        "backend/src/test/java/edu/campus/v2/caseflow/CaseActionServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/web/CaseControllerTest.java",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "B140项测试通过，V1–V4哈希未变。manager在v4实际看见缺来源恢复/核实；admin恢复v4→5仍IN_PROGRESS/RECOVERED/false；manager核实v5→6仍IN_PROGRESS且结论空；填写本次教学演练已核查完成关闭v6→7，CLOSED/RECOVERED/true，处置记录保留，七条timeline。每次POST后独立GET；关闭后无可写按钮。整页刷新重新登录同一manager与同一ID仍v7/结论/完整时间线。C SQL确认主记录、7条时间线、6条对应动作审计。已打开检查关闭与重新登录截图，末条完整可读。",
+      "updatedAt": "2026-10-21T03:36:15.061394+08:00"
+    },
+    {
+      "id": "11-04",
+      "chapter": "11",
+      "step": 4,
+      "title": "## 第4步：接通审计和接入状态",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请实现仅ADMIN可读的GET /api/audit，返回已实际发生的本课程业务修改记录。\n空间修改、责任修改、事件创建/动作都应在成功事务中写审计；\n记录谁、何时、对哪个对象做了哪个动作，不记录密码、token或完整请求头。\n失败操作不能伪装成成功审计。\n实现需登录的GET /api/integration，返回：\n{source:\"TEACHING_MOCK\",simulated:true,controlEnabled:false,notificationsEnabled:false}\n把原管理菜单的审计和接入说明接到接口，不伪造AIRIOT已连接；\nMANAGER/VIEWER访问审计时返回403，页面清除旧审计并显示无权查看。\n增加后端角色测试，不启动服务。",
+        "我在管理页以【账号】操作【查看审计/切换身份】后看到【现象】。\n请只修复审计读取权限、旧内容清理或真实业务写入记录；\n不要编造历史操作，不输出密码或会话令牌。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T19:36:56.589Z",
+          "prompt": "请实现仅ADMIN可读的GET /api/audit，返回已实际发生的本课程业务修改记录。\n空间修改、责任修改、事件创建/动作都应在成功事务中写审计；\n记录谁、何时、对哪个对象做了哪个动作，不记录密码、token或完整请求头。\n失败操作不能伪装成成功审计。\n实现需登录的GET /api/integration，返回：\n{source:\"TEACHING_MOCK\",simulated:true,controlEnabled:false,notificationsEnabled:false}\n把原管理菜单的审计和接入说明接到接口，不伪造AIRIOT已连接；\nMANAGER/VIEWER访问审计时返回403，页面清除旧审计并显示无权查看。\n增加后端角色测试，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T19:39:57.896Z",
+          "actualOutcome": "源码检查：CodeBuddy发生Chat history summarized后最后仅报告SpaceServiceAuditTest/OwnerServiceAuditTest，后端审计/接入类部分已写；frontend两个文件与11-03哈希完全相同，尚未接审计/接入接口。此处未声称已经运行本步浏览器验收。",
+          "actualCheckedAt": "2026-10-21T03:43:14.427133"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第11课第4步原任务尚未完成。你在 Chat history summarized 后的最后回复只报告了SpaceServiceAuditTest/OwnerServiceAuditTest。实际源检：后端AuditController、IntegrationController及空间/责任审计部分已有；但frontend/app.js和frontend/data-service.js相对11-03哈希完全没变，管理页尚未接接口。这是源码检查发现的遗漏，我尚未声称做过本步浏览器验收。\n请继续补齐本步原范围，不要只运行或汇报两个测试：把已有管理菜单的审计接GET /api/audit、接入状态接GET /api/integration；ADMIN读取真实审计，可重新读取。MANAGER/VIEWER审计403后清理管理员旧审计与无权内容，仍能读取教学接入状态。统一处理401清身份、首次失败错误/重试、成功后清错误，不回退旧localStorage审计。接入明确TEACHING_MOCK、simulated true、control/notifications false，不伪造AIRIOT。\n核对空间/责任/新事件创建/事件动作的成功事务都写真实审计，失败不写；过去两件事件创建时未记audit，不能追补编造历史。保留当前真实6条动作审计，后续我会新创建一件验证新的case.create审计。补后端HTTP角色测试，证明admin可读、manager/viewer审计403且integration可读。保留已应用V1–V4、现有业务数据和.env，不读口令，不启动服务。完成后列出本步实际全部修改与全部测试结果，交给我在B测试启动并做浏览器验收。",
+          "submittedAt": "2026-10-20T19:43:41.035Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T19:51:25.225Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-04-ui.jsonl",
+          "observations": 35,
+          "result": "原尝试在CodeBuddy摘要后只完成后端部分，保留失败源码/AX；实际补救后B153项测试通过，V1–V4不变。admin真实管理页读取原6条动作审计；空间PUT/GET后space.update增为7，责任合法保存v3→4后owner.save增为8，新建case-cdb7152ececf后case.create增为9，未追补旧2次创建。integration四字段为TEACHING_MOCK/true/false/false。切viewer真实GETaudit403，旧表与事件ID清除而integration可见；C真实HTTP8检查通过：匿名两接口401、admin审计200、manager/viewer审计403，三角色integration200且布尔严格正确。admin/viewer截图已打开。"
+        }
+      ],
+      "changed_files": [
+        "backend/src/main/java/edu/campus/v2/audit/AuditEntry.java",
+        "backend/src/main/java/edu/campus/v2/audit/AuditRepository.java",
+        "backend/src/main/java/edu/campus/v2/audit/AuditRowMapper.java",
+        "backend/src/main/java/edu/campus/v2/audit/AuditService.java",
+        "backend/src/main/java/edu/campus/v2/caseflow/CaseService.java",
+        "backend/src/main/java/edu/campus/v2/owner/OwnerService.java",
+        "backend/src/main/java/edu/campus/v2/space/SpaceService.java",
+        "backend/src/main/java/edu/campus/v2/web/AuditController.java",
+        "backend/src/main/java/edu/campus/v2/web/IntegrationController.java",
+        "backend/src/main/java/edu/campus/v2/web/IntegrationStatus.java",
+        "backend/src/main/java/edu/campus/v2/web/OwnerController.java",
+        "backend/src/main/java/edu/campus/v2/web/SpaceController.java",
+        "backend/src/test/java/edu/campus/v2/caseflow/CaseServiceTest.java",
+        "backend/src/test/java/edu/campus/v2/owner/OwnerServiceAuditTest.java",
+        "backend/src/test/java/edu/campus/v2/space/SpaceServiceAuditTest.java",
+        "backend/src/test/java/edu/campus/v2/web/AuditAccessControllerTest.java",
+        "backend/src/test/java/edu/campus/v2/web/OwnerControllerTest.java",
+        "backend/src/test/java/edu/campus/v2/web/SpaceControllerTest.java",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "原尝试在CodeBuddy摘要后只完成后端部分，保留失败源码/AX；实际补救后B153项测试通过，V1–V4不变。admin真实管理页读取原6条动作审计；空间PUT/GET后space.update增为7，责任合法保存v3→4后owner.save增为8，新建case-cdb7152ececf后case.create增为9，未追补旧2次创建。integration四字段为TEACHING_MOCK/true/false/false。切viewer真实GETaudit403，旧表与事件ID清除而integration可见；C真实HTTP8检查通过：匿名两接口401、admin审计200、manager/viewer审计403，三角色integration200且布尔严格正确。admin/viewer截图已打开。",
+      "updatedAt": "2026-10-21T03:57:41.420861+08:00"
+    },
+    {
+      "id": "11-05",
+      "chapter": "11",
+      "step": 5,
+      "title": "## 第5步：断开后端，检查失败提示；用测试检查拒绝",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请检查事件、责任、历史、审计这些已经接通的页面如何处理失败。\n统一做到：第一次失败有错误与重试；已有成功数据时标出“上次成功结果”；\n401清理身份与受保护内容；403清理无权查看的内容；409回读后由学生重新决定；\n切换设备/账号后，较早请求返回不能覆盖新选择。\n只修复实际缺失的部分。增加针对已经发现问题的测试，不删除或弱化原测试。\n请告诉我本次修了哪一处；没有问题就说明无需改动。不要启动服务。",
+        "后端停止时，我点击【页面和按钮】后看到【现象】。\n请只修复这一处失败处理，并给出能复现它的测试；\n不通过删除错误提示、自动切换模拟数据或忽略测试来处理。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T19:58:11.888Z",
+          "prompt": "请检查事件、责任、历史、审计这些已经接通的页面如何处理失败。\n统一做到：第一次失败有错误与重试；已有成功数据时标出“上次成功结果”；\n401清理身份与受保护内容；403清理无权查看的内容；409回读后由学生重新决定；\n切换设备/账号后，较早请求返回不能覆盖新选择。\n只修复实际缺失的部分。增加针对已经发现问题的测试，不删除或弱化原测试。\n请告诉我本次修了哪一处；没有问题就说明无需改动。不要启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:08:44.352Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第11课第5步实际操作阻断：我已按教材停止B后端。演练事件列表原有3条，但页面上没有任何“刷新/重新读取”入口；再点当前“演练事件”菜单也未产生请求，因此无法按教材执行停机重试。请只在事件列表附近增加清楚的“重新读取事件”按钮，复用已有后端加载/请求保护/上次成功结果逻辑，读取中避免重复；第一次失败给错误与重试，已有成功数据失败保留并明确标“上次成功结果”，成功重读清掉旧错误。不要创建/改写任何事件，不改后端/迁移/.env，不删原测试，不启动服务。只修这个实际缺口，保存后说明修改。当前已有3条后端事件，主事件已CLOSED v7，请勿重置。",
+          "submittedAt": "2026-10-20T20:15:23.451Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:18:01.325Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-05-ui.jsonl",
+          "observations": 34,
+          "result": "CodeBuddy两次实现，补显式事件重读入口。实际停B重读503且3条上次成功结果保留；恢复重试GET200、错误清除，主事件CLOSED v7未变。20项实际HTTP拒绝检查逐次回读cases/spaces/owners/audit均无改写；B实际Maven153测试0失败，C Node22守卫3测试0失败。四份已应用迁移哈希保持。"
+        }
+      ],
+      "changed_files": [
+        "frontend/app.js",
+        "frontend/request-guard.js",
+        "frontend/tests/request-guard.test.mjs"
+      ],
+      "result": "CodeBuddy两次实现，补显式事件重读入口。实际停B重读503且3条上次成功结果保留；恢复重试GET200、错误清除，主事件CLOSED v7未变。20项实际HTTP拒绝检查逐次回读cases/spaces/owners/audit均无改写；B实际Maven153测试0失败，C Node22守卫3测试0失败。四份已应用迁移哈希保持。",
+      "updatedAt": "2026-10-21T04:19:55.771943+08:00"
+    },
+    {
+      "id": "11-06",
+      "chapter": "11",
+      "step": 6,
+      "title": "## 第6步：完整走一遍，留下自己的说明",
+      "source": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请更新docs/页面需要的数据.md，逐项对照九个菜单的当前实现，\n标出现在实际调用的接口、MySQL保存的内容、Redis只保存的登录。\n检查还有没有业务页面在失败时静默回退mock或继续写campus-v2-demo；\n若有，只移除已经接通后端功能的旧分支，保留公开练习数据供初始化使用。\n在docs/本组实做记录.md加入一份简短待填写清单：\n设备到历史、空间保存、责任保存、完整事件闭环、只读账号、审计、失败恢复。\n不要填通过结论，不复制教师结果，不启动服务。",
+        "全流程检查中，【起始菜单→按钮→目标页面】这一条没接上，\n实际现象是【结果】。请只修复这条连接，保留其余页面，\n告诉我修复后应从哪个按钮重新检查，不替我编写通过记录。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T20:20:07.514Z",
+          "prompt": "请更新docs/页面需要的数据.md，逐项对照九个菜单的当前实现，\n标出现在实际调用的接口、MySQL保存的内容、Redis只保存的登录。\n检查还有没有业务页面在失败时静默回退mock或继续写campus-v2-demo；\n若有，只移除已经接通后端功能的旧分支，保留公开练习数据供初始化使用。\n在docs/本组实做记录.md加入一份简短待填写清单：\n设备到历史、空间保存、责任保存、完整事件闭环、只读账号、审计、失败恢复。\n不要填通过结论，不复制教师结果，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:24:28.095Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/11-06-ui.jsonl",
+          "observations": 97,
+          "result": "CodeBuddy更新九菜单接口说明，清理已接后端的旧localStorage演练/审计读写；实际重载管理员九菜单、d05功率到同点位历史、s1空间保存并重登录回读、d01责任4→5保存回读、新case-7ad8f370a898自动ASSIGNED manager v1；旧闭环case-34586bbc372f仍CLOSED v7/时间线7。审计12条对应新增3次成功写入。viewer九菜单只读、审计403且旧审计清理。实际记录已在IDE填写并保留第10课原段；真人同伴未测。"
+        }
+      ],
+      "changed_files": [
+        "docs/本组实做记录.md",
+        "docs/页面需要的数据.md",
+        "frontend/app.js",
+        "frontend/data-service.js"
+      ],
+      "result": "CodeBuddy更新九菜单接口说明，清理已接后端的旧localStorage演练/审计读写；实际重载管理员九菜单、d05功率到同点位历史、s1空间保存并重登录回读、d01责任4→5保存回读、新case-7ad8f370a898自动ASSIGNED manager v1；旧闭环case-34586bbc372f仍CLOSED v7/时间线7。审计12条对应新增3次成功写入。viewer九菜单只读、审计403且旧审计清理。实际记录已在IDE填写并保留第10课原段；真人同伴未测。",
+      "updatedAt": "2026-10-21T04:28:22.249493+08:00"
+    },
+    {
+      "id": "12-01",
+      "chapter": "12",
+      "step": 1,
+      "title": "## 第1步：把启动说明写成别人照着就能做的顺序",
+      "source": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请根据当前工程实际文件改写根README，面向第一次拿到项目的同学。\n按顺序写：需要Node22、Java17、Docker Desktop；\n确认打开campus-lab根目录；生成.env；启动本课程MySQL/Redis并等healthy；\nB在backend启动Java；A在根目录启动页面；本机查看DEMO_PASSWORD并登录；\n查看设备/历史，修改空间/责任，完成一件演练；最后停止自己的服务。\nWindows PowerShell与macOS命令分别写，写清每条命令的工作目录。\n说明前端5188、后端8098、MySQL23501、Redis23502，只在本机使用；\n刷新页面会重新登录，MySQL记录保留，Redis只保存短时会话。\n增加“同机新目录”一节：先停旧服务，再用项目名campus-v2-handoff隔离新容器和新卷，\n该节每条compose命令都带-p campus-v2-handoff。\n检查Compose顶层卷没有显式name或external，卷名应自动带项目名前缀。\n已有.env必须重用，不覆盖；相同Compose项目名会重用已有卷，不能配一套新密码硬连旧卷。\n写明教学模拟、实际已测和未测内容；不要读取或写入口令，不编造通过结果。\n把notes中已有的前六课公开文字笔记按课次合并到docs/本组实做记录.md的“前端实做”小节，\n保留原笔记和docs中已写的后端记录；缺失的实际结果标“未记录”，不补写通过。\n只处理我确认可交付的文字，不复制个人截图、聊天记录或账号资料。\n本步只改文档，不启动服务。",
+        "同伴读README到【原句】时不知道下一步怎样操作。\n请只把这一段改成：当前窗口、目录、完整命令、预期结果、失败后该做什么。\n按现有工程写，不添加未实现的命令或编造已通过记录。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T20:29:24.589Z",
+          "prompt": "请根据当前工程实际文件改写根README，面向第一次拿到项目的同学。\n按顺序写：需要Node22、Java17、Docker Desktop；\n确认打开campus-lab根目录；生成.env；启动本课程MySQL/Redis并等healthy；\nB在backend启动Java；A在根目录启动页面；本机查看DEMO_PASSWORD并登录；\n查看设备/历史，修改空间/责任，完成一件演练；最后停止自己的服务。\nWindows PowerShell与macOS命令分别写，写清每条命令的工作目录。\n说明前端5188、后端8098、MySQL23501、Redis23502，只在本机使用；\n刷新页面会重新登录，MySQL记录保留，Redis只保存短时会话。\n增加“同机新目录”一节：先停旧服务，再用项目名campus-v2-handoff隔离新容器和新卷，\n该节每条compose命令都带-p campus-v2-handoff。\n检查Compose顶层卷没有显式name或external，卷名应自动带项目名前缀。\n已有.env必须重用，不覆盖；相同Compose项目名会重用已有卷，不能配一套新密码硬连旧卷。\n写明教学模拟、实际已测和未测内容；不要读取或写入口令，不编造通过结果。\n把notes中已有的前六课公开文字笔记按课次合并到docs/本组实做记录.md的“前端实做”小节，\n保留原笔记和docs中已写的后端记录；缺失的实际结果标“未记录”，不补写通过。\n只处理我确认可交付的文字，不复制个人截图、聊天记录或账号资料。\n本步只改文档，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:32:06.212Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "实际README核对：12.2目前写cp -R/Copy-Item整个原campus-lab再rm/Remove-Item .env和target，会先复制本机秘密与运行资料，不符合本课用公开导出交接。请只修README：使用第12课第2步导出的最新.runtime/hand-in-v*/campus-lab，由文件管理器复制到旁边全新且不存在的campus-lab-handoff，禁止覆盖/合并，不复制原.env，保留旧源码/配置/产物，不给删除命令。导出工具尚待第2步生成时如实写尚待生成。12.1只停止旧A/B和旧容器，不要求docker compose down移除旧容器；明确指出当前固定container_name可能阻断新项目，若实际启动报名称冲突先停下反馈修复，不擅自删除或复用旧容器。旧项目compose命令显式-p campus-v2、新项目每条-p campus-v2-handoff，避免含混。Windows JDK路径只能按实际安装路径说明，勿将硬编码示例说成已验证。其余记录和前端笔记保留，不改Compose/源码，不启停服务。",
+          "submittedAt": "2026-10-20T20:32:20.582Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:33:51.149Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-IDE-documents",
+          "commandsEvidence": "steps/12-01-reviewed-README.md.ax.txt",
+          "result": "原README实际审读发现整树复制后删除env/target及移除旧容器建议，第二次CodeBuddy仅文档修复为最新公开导出、全新目录、旧容器只stop保留、固定容器名冲突待实际验证。IDE逐个打开setup-env、compose、mvnw、serve、公开样本；核对notes和合并记录，前六课按课次带入，第10/11实际记录保留。Windows/新目录尚未执行如实标记。"
+        }
+      ],
+      "changed_files": [
+        "README.md",
+        "docs/本组实做记录.md"
+      ],
+      "result": "原README实际审读发现整树复制后删除env/target及移除旧容器建议，第二次CodeBuddy仅文档修复为最新公开导出、全新目录、旧容器只stop保留、固定容器名冲突待实际验证。IDE逐个打开setup-env、compose、mvnw、serve、公开样本；核对notes和合并记录，前六课按课次带入，第10/11实际记录保留。Windows/新目录尚未执行如实标记。",
+      "updatedAt": "2026-10-21T04:34:12.287466+08:00"
+    },
+    {
+      "id": "12-02",
+      "chapter": "12",
+      "step": 2,
+      "title": "## 第2步：导出源码，亲自看清楚带走了什么",
+      "source": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请生成tools/export-source.mjs，使用Node自带功能，不增加打包依赖。\n接受--out参数，只允许输出到本项目.runtime下；输出目录已存在就拒绝覆盖。\n按白名单复制frontend、backend/src、backend/pom.xml、Maven wrapper和.mvn、\n公开tools、公开materials、compose.yaml、根.env.example、.gitignore、README.md、docs。\n所有层级排除.env及.env.*变体（仅保留根.env.example）、.private、.runtime、\n.codebuddy、node_modules、target、日志、个人截图和凭据。\n检查源路径和输出路径的每一级父目录，拒绝符号链接；不能只检查最后一个文件。\n不读取上级目录，不带完整教师参考。\n工具可以在本机读取.env的值仅作泄漏检查，不显示这些值；\n如果待导出的文本包含本机口令就停止并仅报告文件名。\n输出一份文件清单和每个文件的SHA256，便于接手人确认复制完整。\n不要替我运行导出，不把导出成功写成新目录运行成功。",
+        "源码导出在【阶段】失败，固定错误是【不含口令的提示】。\n请只修复白名单、路径处理或泄漏检查；不要扩大到整个项目或上级目录，\n不要忽略检查继续导出，也不要显示匹配到的口令。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T20:34:18.307Z",
+          "prompt": "请生成tools/export-source.mjs，使用Node自带功能，不增加打包依赖。\n接受--out参数，只允许输出到本项目.runtime下；输出目录已存在就拒绝覆盖。\n按白名单复制frontend、backend/src、backend/pom.xml、Maven wrapper和.mvn、\n公开tools、公开materials、compose.yaml、根.env.example、.gitignore、README.md、docs。\n所有层级排除.env及.env.*变体（仅保留根.env.example）、.private、.runtime、\n.codebuddy、node_modules、target、日志、个人截图和凭据。\n检查源路径和输出路径的每一级父目录，拒绝符号链接；不能只检查最后一个文件。\n不读取上级目录，不带完整教师参考。\n工具可以在本机读取.env的值仅作泄漏检查，不显示这些值；\n如果待导出的文本包含本机口令就停止并仅报告文件名。\n输出一份文件清单和每个文件的SHA256，便于接手人确认复制完整。\n不要替我运行导出，不把导出成功写成新目录运行成功。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:36:39.718Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第一次教材导出实际完成140文件；随后我在独立公开副本做8项边界实测，6项符合预期，但两项失败：1）docs里超过5MiB的纯文本末尾含副本.env的合成口令，工具按超限跳过后仍导出成功；2）项目上级目录是符号链接、用node --preserve-symlinks-main从该路径执行，工具未检查ROOT及其更高父目录，仍导出成功。真实学生工程和真实.env未改。请只修tools/export-source.mjs的这两个漏洞：待复制内容不因体积/二进制分类跳过口令比对，读取失败应停止；完整检查项目根及源/输出每一级父路径（到文件系统根）含符号链接即拒绝，不读取上级目录内容。只输出命中文件名，不能显示值。保留白名单、拒绝覆盖、原8项检查语义，不放宽测试。不代导出、不启停服务。",
+          "submittedAt": "2026-10-20T20:37:27.212Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:38:56.707Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-terminal-export-and-Finder",
+          "commandsEvidence": "commands/12-02-export-boundaries-passed.ax.txt",
+          "result": "C实际执行hand-in-v1公开导出140文件；8项副本边界测试发现大文件泄漏与项目祖先符号链接漏拦。仅CodeBuddy修工具后另导出hand-in-v2，140文件全字节口令比对无命中、SHA256逐个匹配；同8项全部通过。访达显示隐藏文件，确认根.env.example与backend/.mvn/mvnw/mvnw.cmd保留，无.env/target/node_modules。旧导出和失败证据保留，不等同新目录运行。"
+        }
+      ],
+      "changed_files": [
+        "tools/export-source.mjs"
+      ],
+      "result": "C实际执行hand-in-v1公开导出140文件；8项副本边界测试发现大文件泄漏与项目祖先符号链接漏拦。仅CodeBuddy修工具后另导出hand-in-v2，140文件全字节口令比对无命中、SHA256逐个匹配；同8项全部通过。访达显示隐藏文件，确认根.env.example与backend/.mvn/mvnw/mvnw.cmd保留，无.env/target/node_modules。旧导出和失败证据保留，不等同新目录运行。",
+      "updatedAt": "2026-10-21T04:40:02.988438+08:00"
+    },
+    {
+      "id": "12-03",
+      "chapter": "12",
+      "step": 3,
+      "title": "## 第3步：在新目录生成新配置，用独立数据库重新启动",
+      "source": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请只核对README的同机新目录步骤与当前工程一致，不替我执行。\n旧项目用默认campus-v2停止；新项目所有Docker Compose命令使用-p campus-v2-handoff。\n两个项目不能同时占用5188、8098、23501、23502。\n新目录必须来自本次源码导出，不复制原.env，不连接原来的MySQL卷；\n新.env只生成一次。相同交付目录再次检查时保留该.env与原项目名。\n确认Compose的命名卷没有显式name和external；新卷名应以campus-v2-handoff_开头。\n不使用down -v、不删除任何数据库卷、不结束未知进程。\n如果说明有缺项，只修README并告诉我补了哪一句。",
+        "我在新目录执行到【命令或登录】时出现【不含私密信息的错误】。\n已停止旧项目A/B和默认Compose；新Compose项目名为campus-v2-handoff。\n请检查新目录漏文件、端口、环境导入或项目名，不复制原.env、不删卷，\n不要把连接旧服务当作新目录成功。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T20:40:08.955Z",
+          "prompt": "请只核对README的同机新目录步骤与当前工程一致，不替我执行。\n旧项目用默认campus-v2停止；新项目所有Docker Compose命令使用-p campus-v2-handoff。\n两个项目不能同时占用5188、8098、23501、23502。\n新目录必须来自本次源码导出，不复制原.env，不连接原来的MySQL卷；\n新.env只生成一次。相同交付目录再次检查时保留该.env与原项目名。\n确认Compose的命名卷没有显式name和external；新卷名应以campus-v2-handoff_开头。\n不使用down -v、不删除任何数据库卷、不结束未知进程。\n如果说明有缺项，只修README并告诉我补了哪一句。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:41:29.980Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "第12课03实际首次启动失败：新目录campus-lab-handoff执行docker compose -p campus-v2-handoff up -d，已创建新网络/新卷，但报Conflict：container name /campus-v2-mysql已被旧campus-v2停止容器占用。新.env已经生成一次，保留；新项目已stop。请只修改当前新目录compose.yaml，移除mysql与redis的固定container_name，让Compose按项目名生成容器名称；保持顶层name、所有回环端口、卷mysql-data声明（无name/external）、镜像、认证、healthcheck、持久化设置全部原样。同步修当前README的容器名说明与新目录启动/回旧环境步骤，旧环境只stop，新环境始终-p campus-v2-handoff。不要读/改.env，不删/移除/改名/复用旧容器，不删任何卷，不改已应用迁移，不代运行compose/服务。只修确实阻断的命名隔离；保存列出文件。",
+          "submittedAt": "2026-10-20T20:48:59.307Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:50:06.302Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "命名修复后实际运行结果：新两容器campus-v2-handoff-mysql-1/redis-1均healthy；新卷campus-v2-handoff_mysql-data创建于2026-10-20T20:47:14Z，旧卷campus-v2_mysql-data仍2026-10-20T15:52:09Z；新B实跑153测试0失败、从Empty Schema应用V1–V4并启动，新A从handoff/frontend启动；用新.env私下登录admin后16设备/4空间、责任0、事件0，旧个人改动未出现。业务闭环尚待12-04。现在只修文档/注释两处：compose顶部仍列3条不带-p命令，在handoff目录容易误用；改成明确分开旧campus-lab的-p campus-v2与新handoff的-p campus-v2-handoff，使同一份文件能同步回原工程。README旧容器仍实际叫campus-v2-mysql和campus-v2-redis并保持Exited，未改名；去固定名后的默认名称是今后新建时预期名称，勿写成旧容器已改名。同步更新本步已实测/未测，保留初次冲突记录。只改README和compose注释，不动任何服务配置/.env/迁移，不代启停服务。",
+          "submittedAt": "2026-10-20T20:53:21.872Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:55:12.380Z",
+          "completionScopeVerified": "Native AX truncates long one-line prompt; visible unique prefix plus full reply verified manually."
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/12-03-ui.jsonl",
+          "observations": 15,
+          "result": "访达从hand-in-v3复制140文件到全新空handoff、全哈希一致，新.env生成一次且四项值与原不同。首次-p新项目up实际固定容器名Conflict；CodeBuddy仅移除两固定名并修注释/README，保留旧容器/双env/双卷后同项目重试healthy。新卷独立、旧卷保留；新B153测试、EmptySchema应用V1–V4，新A真实handoff路径；新口令登录16设备4空间3用户、责任/事件/审计0，无旧个人改动。修复已在原IDE同步两文件并导出v4，140文件与运行副本逐个相同。"
+        }
+      ],
+      "changed_files": [
+        "README.md",
+        "compose.yaml"
+      ],
+      "result": "访达从hand-in-v3复制140文件到全新空handoff、全哈希一致，新.env生成一次且四项值与原不同。首次-p新项目up实际固定容器名Conflict；CodeBuddy仅移除两固定名并修注释/README，保留旧容器/双env/双卷后同项目重试healthy。新卷独立、旧卷保留；新B153测试、EmptySchema应用V1–V4，新A真实handoff路径；新口令登录16设备4空间3用户、责任/事件/审计0，无旧个人改动。修复已在原IDE同步两文件并导出v4，140文件与运行副本逐个相同。",
+      "updatedAt": "2026-10-21T04:56:11.956564+08:00",
+      "evidenceSourceDirectory": "campus-lab-handoff",
+      "sourceTransition": "campus-lab → campus-lab-handoff from verified 140-file public export; notes omitted by whitelist after docs merge, original notes retained. SHA256SUMS belongs to initial export and is not manually rewritten."
+    },
+    {
+      "id": "12-04",
+      "chapter": "12",
+      "step": 4,
+      "title": "## 第4步：照清单重做，确认交付的是能继续使用的作品",
+      "source": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请在新目录docs/本组实做记录.md增加“新目录接手”小节，结果暂留待填写。\n列出我将亲自做的六件事：\n登录后查看设备并进入同一设备历史；\n保存一个空间修改，刷新重新登录后回读；\n为d01登记manager责任；\n为d01建立新的演练，确认自动分派；\n依次开始、记事、管理员模拟恢复、核实、写结论关闭；\n管理员看审计，viewer只能读，最后刷新再查已关闭事件。\n分别记录操作者、系统、新目录或另一台电脑、实际现象与未完成项。\n不要使用旧项目的测试结论或事件截图填这份记录，不启动服务。",
+        "新目录接手第【序号】项在【具体按钮】失败，现象是【结果】。\n请只修复这条实际路径，并告诉我需要重新检查哪几步。\n若改动了源码，请列出修改文件，我需要把同样修复同步回原工程再重新导出；\n不要改已记录结果为通过，不用原项目旧记录代替新事件。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T20:56:33.081Z",
+          "prompt": "请在新目录docs/本组实做记录.md增加“新目录接手”小节，结果暂留待填写。\n列出我将亲自做的六件事：\n登录后查看设备并进入同一设备历史；\n保存一个空间修改，刷新重新登录后回读；\n为d01登记manager责任；\n为d01建立新的演练，确认自动分派；\n依次开始、记事、管理员模拟恢复、核实、写结论关闭；\n管理员看审计，viewer只能读，最后刷新再查已关闭事件。\n分别记录操作者、系统、新目录或另一台电脑、实际现象与未完成项。\n不要使用旧项目的测试结论或事件截图填这份记录，不启动服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T20:56:58.090Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "新目录实际设备页来源文案不一致，需要在完整走查前修正。\n12-03-fresh-devices截图与可见页面显示：设备列表顶部“打开详情时点位读数从/api/overview读取，负责人仍为浏览器演示”。但当前已接GET /api/owners，详情来源段也写责任来自本机MySQL。请只修当前新目录frontend/app.js这处过时来源文字，按backend/demo模式实际来源准确说明，保留现有接口调用、权限和所有业务逻辑，不增功能、不重置数据、不启动服务、不读.env。只保存并告诉我修改位置。清单保持待填，结果我实际操作后填写。",
+          "submittedAt": "2026-10-20T20:57:26.223Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T20:57:56.768Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-browser",
+          "commandsEvidence": "commands/12-04-ui.jsonl",
+          "observations": 129,
+          "result": "新目录清单由CodeBuddy留空；实际发现设备页负责人来源旧文案，仅CodeBuddy修三处文字/注释后重载验证。新库d01温度到同点位历史，s1交接教学楼/3层保存后刷新重登仍一致；d01manager责任0→1；新case-a4b66d456baa自动ASSIGNEDv1，manager开始v2/记事v3、admin恢复v4、manager核实v5/关闭v6，timeline6，审计8。viewer九菜单只读/审计403，独立新环境HTTP伪造角色写403且四项快照不变；整页重登仍CLOSEDv6/RECOVERED/verified=true/结论。C SQL一致。实际六项记录在IDE填写并与确认源码同步回原工程；同机新目录，不冒充另一电脑/真人同伴。"
+        }
+      ],
+      "changed_files": [
+        "docs/本组实做记录.md",
+        "frontend/app.js"
+      ],
+      "result": "新目录清单由CodeBuddy留空；实际发现设备页负责人来源旧文案，仅CodeBuddy修三处文字/注释后重载验证。新库d01温度到同点位历史，s1交接教学楼/3层保存后刷新重登仍一致；d01manager责任0→1；新case-a4b66d456baa自动ASSIGNEDv1，manager开始v2/记事v3、admin恢复v4、manager核实v5/关闭v6，timeline6，审计8。viewer九菜单只读/审计403，独立新环境HTTP伪造角色写403且四项快照不变；整页重登仍CLOSEDv6/RECOVERED/verified=true/结论。C SQL一致。实际六项记录在IDE填写并与确认源码同步回原工程；同机新目录，不冒充另一电脑/真人同伴。",
+      "updatedAt": "2026-10-21T05:04:45.161432+08:00",
+      "evidenceSourceDirectory": "campus-lab-handoff"
+    },
+    {
+      "id": "12-05",
+      "chapter": "12",
+      "step": 5,
+      "title": "## 第5步：交出作品，亲口说明它是怎样做出来的",
+      "source": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "status": "PASS",
+      "model": "Deepseek-V4.1-Flash 300K",
+      "prompts": [
+        "请根据我已经填写的实际记录，整理docs/交付说明.md。\n用学生能讲清楚的语言写：作品有哪些页面；从空页面到前端、再到后端的过程；\nMySQL保存哪些记录，Redis保存什么；我修过的一个真实问题；\n如何安装、启动、停止；哪些地方尚未验证。\n把自己操作、AI生成、参考借用如实区分，不编造独立完成。\n最后给五个口头练习问题，不替我填写答案：\n页面为什么先用模拟数据？设备刷新经过哪些程序？\n为什么刷新页面要重新登录而设备记录还在？\n为什么事件恢复后不能直接关闭？为什么新目录要用独立Compose项目名？\n不读取口令，不启动或停止任何服务。",
+        "交付说明中的【原句】与我的实际操作【真实情况】不一致。\n请只修正文档，保留未验证项，不把计划、作者参考或旧版本结果写成本组完成。"
+      ],
+      "attempts": [
+        {
+          "kind": "original",
+          "submittedAt": "2026-10-20T21:04:57.409Z",
+          "prompt": "请根据我已经填写的实际记录，整理docs/交付说明.md。\n用学生能讲清楚的语言写：作品有哪些页面；从空页面到前端、再到后端的过程；\nMySQL保存哪些记录，Redis保存什么；我修过的一个真实问题；\n如何安装、启动、停止；哪些地方尚未验证。\n把自己操作、AI生成、参考借用如实区分，不编造独立完成。\n最后给五个口头练习问题，不替我填写答案：\n页面为什么先用模拟数据？设备刷新经过哪些程序？\n为什么刷新页面要重新登录而设备记录还在？\n为什么事件恢复后不能直接关闭？为什么新目录要用独立Compose项目名？\n不读取口令，不启动或停止任何服务。",
+          "submissionObserved": true,
+          "replyCompletedAt": "2026-10-20T21:05:52.829Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "实际审读交付说明与README，有几处需要按已记录事实修正。\n1. 交付说明第2节把01–06说成“内存、刷新就回样本”，实际第03–06阶段曾用campus-v2-demo持久化空间/责任/事件；到11-06才移除旧业务localStorage。请按历史阶段区分，不改原实测记录。V1在08、V2在09、V3在10、V4在11，不能把V1–V4都写成07–09已做。\n2. setup-env/serve/export工具是本轮CodeBuddy按提示生成，不是课程借来的成品；真正借用的是公开约定、mock-campus样本与Maven wrapper。分清来源。\n3. README“未实测”仍写12-04没做、复制新目录未跑通、16节留待12-04，现已与本组记录矛盾。按刚填的六项新目录记录更新：新事件case-a4b66d456baa CLOSED v6/timeline6、审计8、空间交接教学楼/3层、d01manager v1、viewer实际HTTP403且四项快照不变、刷新重登仍一致；初始0责任/0事件标成启动时基线。\n4. data-service.js约219行仍有“空间/点位/历史/责任仍演示”的旧注释，只改该注释以符合实际接口，不动任何逻辑。\n只改上述文档和一条注释，保留全部实际记录与未测边界。五道口头题保留无答案，不编真人。导出与停机目前尚待执行，注明为本稿生成时点，后续以操作者实际收尾证据为准。不读取.env、不启停服务、不代导出。",
+          "submittedAt": "2026-10-20T21:06:41.424Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T21:08:05.850Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "交付文档还有一处推断与实际证据不符，请只更正文档。\n我刚在本组实做记录末尾手动补记了实际校验：hand-in-v2的140文件逐个SHA256一致、同8项边界全通过；hand-in-v3复制后140项与源匹配；命名修复同步后hand-in-v4的140项与运行副本逐字节一致。后续文档/来源文字修改后，handoff旧SHA256SUMS确已过时，这两个事实要分开。README和交付说明不能写成“140文件从未逐项比对”。请读新补记，只按事实改这条。\n另将交付说明“03–06无权限无审计”改准：当时已有浏览器演示的角色检查与本地审计，但不构成后端权限或数据库审计；11-06清理了旧业务读写。卷CreatedAt未变只说明未重建，不能写成已验证旧数据完整；本轮未重启旧库复测。回旧环境属于尚未演练的后续步骤，不能预言去掉container_name后还一定沿用旧容器名。\n保留五道题无答案、未做人类口试，导出/停机按本稿生成时点写待操作者执行。只改README和交付说明，不改任何已填实际结果、源码逻辑、环境或服务。",
+          "submittedAt": "2026-10-20T21:08:59.287Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T21:10:23.020Z"
+        },
+        {
+          "kind": "actual-remedy",
+          "prompt": "收尾操作已实际完成，最后只同步文档事实。\n请读本组实做记录末尾“第12课05实际收尾”：原C已执行hand-in-final导出141公开文件，141项与原工程和运行副本逐个哈希/字节一致，最终导出的两份说明已实际打开核对；随后新A/B正常Ctrl+C、新C-p campus-v2-handoff stop及ps -a，两新容器Exited(0)，两旧容器亦保持Exited(0)，双卷和两个.env均保留。旧导出不覆盖；五道题仍无人类作答。\n请仅更新README与docs/交付说明.md，把本稿“导出停机尚未执行”换成已记录的这次实际收尾，并清楚区分之后收尾文字同步还会以新输出名再导出，不手改历史SHA清单。交付说明补一句本次新事件case-a4b66d456baa CLOSED v6/timeline6、审计8，方便与实做记录对应。\n另核对README的notes路径：notes仅原工程保留，白名单导出/当前handoff没有notes目录；原六课文字已合并docs/本组实做记录.md，交付副本从那里阅读。别要求接手人找导出中没有的目录。\n不改已填写的实际记录、不编口试、不读.env、不改源码或环境、不代运行任何命令。",
+          "submittedAt": "2026-10-20T21:16:56.087Z",
+          "model": "Deepseek-V4.1-Flash 300K",
+          "replyCompletedAt": "2026-10-20T21:19:33.993Z"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "actual-terminal-export-stop-and-IDE",
+          "commandsEvidence": "commands/12-05-final-revised-export.ax.txt",
+          "result": "CodeBuddy按实际记录生成交付说明、五道口头题无答案；经实际审读修正阶段保存方式/迁移顺序、工具来源、旧卷证据边界、导出历史、notes交付入口和收尾状态；仅同步确认文件与实际记录回原IDE。原C先按教材导出hand-in-final141文件并实际开两说明核对；随后新A/B正常退出、新C显式-p stop，两新两旧容器Exited(0)、双卷双env保留。收尾文字更新后另名hand-in-final-2，141文件SHA逐项与原/新源码全相同，两说明含新闭环且再次打开；四课程端口无监听。原导出与失败证据全部保留。真人口试/独立学生/另一机器未验证。"
+        }
+      ],
+      "changed_files": [
+        "README.md",
+        "docs/交付说明.md",
+        "docs/本组实做记录.md",
+        "frontend/data-service.js"
+      ],
+      "result": "CodeBuddy按实际记录生成交付说明、五道口头题无答案；经实际审读修正阶段保存方式/迁移顺序、工具来源、旧卷证据边界、导出历史、notes交付入口和收尾状态；仅同步确认文件与实际记录回原IDE。原C先按教材导出hand-in-final141文件并实际开两说明核对；随后新A/B正常退出、新C显式-p stop，两新两旧容器Exited(0)、双卷双env保留。收尾文字更新后另名hand-in-final-2，141文件SHA逐项与原/新源码全相同，两说明含新闭环且再次打开；四课程端口无监听。原导出与失败证据全部保留。真人口试/独立学生/另一机器未验证。",
+      "updatedAt": "2026-10-21T05:21:04.110812+08:00",
+      "evidenceSourceDirectory": "campus-lab-handoff"
+    }
+  ],
+  "current_step": "12-05",
+  "status": "COMPLETE",
+  "scope": "CodeBuddy Craft only for student business source; local teaching simulation only",
+  "completedAt": "2026-10-21T05:21:04.128045+08:00",
+  "completionScope": "64 computer-executable steps with original prompts and recorded remedies; no human classroom or oral acceptance"
+}

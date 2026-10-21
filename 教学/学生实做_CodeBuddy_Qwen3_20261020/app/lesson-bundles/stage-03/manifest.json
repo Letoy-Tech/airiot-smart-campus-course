@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "stage": 3,
+  "title": "完整设备台账",
+  "mode": "teacher-db；教师独立库",
+  "goal": "4空间16设备，筛选与稳定ID详情",
+  "contract": "devices与spaces使用完整固定目录；online严格true/false/null",
+  "acceptance": "16→4→1→0→清除16；详情刷新仍同ID；无匹配与失败分开",
+  "businessFiles": [
+    "frontend/src/views/DeviceCatalog.vue"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts",
+    "frontend/src/api/full.ts",
+    "frontend/src/composables/useRequestScope.ts",
+    "frontend/src/domain/read-models.ts",
+    "frontend/src/components/SourceBanner.vue",
+    "frontend/src/components/ReadStatus.vue",
+    "frontend/src/tests/catalog-navigation.test.ts",
+    "frontend/src/tests/course-domain.test.ts",
+    "frontend/src/tests/request-scope.test.ts"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/DeviceCatalog.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665",
+      "bytes": 415,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>完整设备台账</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

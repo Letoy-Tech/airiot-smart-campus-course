@@ -1,0 +1,1 @@
+收尾事实已发生：操作者刚实际运行 node tools/progress.mjs accept 12 evidence/stage-12.md，exit0。请仅把README.md和docs/交付说明.md中“正式accept12尚未执行”的旧状态改成“已由操作者依据evidence/stage-12.md完成登记；这是人工验收记录，工具验证与新目录模拟证据另列”。保留同一操作者/未验证边界。只做这两处小范围文字更新，不改其他文件、不运行命令；本轮报告不需重述长过程。

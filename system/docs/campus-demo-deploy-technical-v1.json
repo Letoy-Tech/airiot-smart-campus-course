@@ -1,0 +1,82 @@
+{
+  "state": "technical verification completed",
+  "checkedAt": "2026-10-05T01:46:58.143544+08:00",
+  "health": true,
+  "services": {
+    "campus-demo-mysql.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351060",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:43:10 CST"
+    },
+    "campus-demo-redis.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351064",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:43:10 CST"
+    },
+    "campus-demo.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351495",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:43:19 CST"
+    }
+  },
+  "listeners": [
+    {
+      "local": "127.0.0.1:13391",
+      "backendPIDPresent": false
+    },
+    {
+      "local": "127.0.0.1:16391",
+      "backendPIDPresent": false
+    },
+    {
+      "local": "[::ffff:127.0.0.1]:18091",
+      "backendPIDPresent": true
+    }
+  ],
+  "credentialFiles": {
+    "spring.datasource.password": {
+      "exists": true,
+      "mode": "0o440"
+    },
+    "spring.data.redis.password": {
+      "exists": true,
+      "mode": "0o440"
+    },
+    "jwt.secret": {
+      "exists": true,
+      "mode": "0o440"
+    },
+    "campus.airiot.app-key": {
+      "exists": true,
+      "mode": "0o440"
+    },
+    "campus.airiot.app-secret": {
+      "exists": true,
+      "mode": "0o440"
+    }
+  },
+  "credentialLiteralsDetected": {
+    "ordinaryProperties": false,
+    "units": false,
+    "commandLine": false,
+    "processEnvironment": false,
+    "backendJournal": false
+  },
+  "startupErrorLineCount": 0,
+  "startupWarningLineCount": 16,
+  "liveBackend": "/srv/campus-demo/releases/REL_20261005-0143-SCHOOL-DEMO/backend.jar",
+  "liveBackendSha256": "40324202b2f62e0c77934901fc70bfc5ec7e132bfdd3688cdfd6f77036ea5f79",
+  "nginxCheck": 0,
+  "nginxActive": "active",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

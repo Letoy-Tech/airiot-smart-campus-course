@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T14:04:36.711Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "teacher-only independent pagination schema seeded and read back",
+      "detail": {
+        "counts": {
+          "ALL": 14,
+          "NEW": 12,
+          "ASSIGNED": 2,
+          "IN_PROGRESS": 0
+        },
+        "ids": [
+          "51297281-6036-4f85-84b5-b46b96df163c",
+          "9057e2c8-49a2-488e-92a4-dde8d75fc610",
+          "3f234dc5-3d83-4df0-9acd-016295d81836",
+          "0909317c-710b-4cc3-aea8-7c81f30a6a69",
+          "484ef8d7-c541-4e5b-b040-78855f09f766",
+          "5586a771-1754-4cbc-a6ee-cfcd2f77a779",
+          "2bc176a8-0d18-43d0-a250-d6b99e896a8a",
+          "015302ba-70df-49fa-8561-ce38e40f8199",
+          "1cf53218-e90c-4a99-93c0-32213404da29",
+          "36c4426c-0588-4ebc-b970-0cf0555c69db",
+          "712fda59-1713-420e-abf5-0cdd5c70ba1d",
+          "7c4e02b9-3daf-44f5-9ec9-93442b620335",
+          "1a215ddd-4222-421d-99a7-748a81063ed9",
+          "0f0ed32f-e95e-4500-949b-2503b94e2991"
+        ]
+      },
+      "passed": true
+    }
+  ]
+}

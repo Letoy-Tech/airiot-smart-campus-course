@@ -1,0 +1,79 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+教学查看者
+只读查看者
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+
+第04站 · 本地位置登记
+
+把设备放到正确的楼里
+
+先建校园，再在校园下建楼栋，最后把来源空间绑定到楼栋。下拉提交的是真实ID； 每次保存成功后分别回读 locations 与来源空间，不把一次成功说成全部已确认。
+
+重新读取
+TEACHING_MOCK
+教学模拟数据 · simulated=true
+远端控制与外部通知关闭
+
+业务记录使用服务端操作时间仅本地 DEMO 事件；与 AIRIOT 原始报警分开。
+
+只读身份：本页不提供保存入口
+
+capabilities.canAdmin 不是 true（当前角色：CAMPUS_VIEWER）。表单不渲染只是第一道； POST campuses / buildings 与 PUT spaces/{spaceId} 仍由服务端 ACCESS_DENIED 最终拒绝，本页不会假装保存成功。
+
+1
+校园
+1
+楼栋
+1 / 4
+已绑定空间 / 来源空间
+来源空间与当前归属
+来源空间由 GET /api/campus/spaces 独立读取（本页不创建空间）； 1 / 4 个空间已有绑定记录。
+归属列来自本次 GET /api/campus/locations 的 bindings；未绑定的空间显示为未绑定，不是读取失败。
+来源空间	楼栋	校园	楼层	状态
+
+教学空间01（模拟）
+teaching_space_01
+	
+教学楼A
+26f95264-a1e3-43cb-95fb-44cfd0bb820f
+	课程校园	1层	已绑定
+
+教学空间02（模拟）
+teaching_space_02
+	未绑定	—	—	未绑定
+
+教学空间03（模拟）
+teaching_space_03
+	未绑定	—	—	未绑定
+
+教学空间04（模拟）
+teaching_space_04
+	未绑定	—	—	未绑定
+校园与楼栋
+1 个校园 · 1 个楼栋
+课程校园
+dc5dbb93-a6d5-487c-b2c3-050dea326477
+教学楼A
+26f95264-a1e3-43cb-95fb-44cfd0bb820f
+
+绑定只写 space_id + building_id + floor；校园由楼栋反推，未绑定的空间在 /campus/spaces 里三个派生字段为 null。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

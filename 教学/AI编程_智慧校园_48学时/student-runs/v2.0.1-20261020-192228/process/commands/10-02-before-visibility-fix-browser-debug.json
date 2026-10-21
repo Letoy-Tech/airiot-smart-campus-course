@@ -1,0 +1,3162 @@
+{
+  "version": 1,
+  "saved_at": 1792518342592.0,
+  "run": {
+    "id": "de45e10e99996",
+    "session_id": "qvuv",
+    "tab_id": 1075951426,
+    "name": "student-v201-10-02-overview-energy",
+    "url": "http://127.0.0.1:5188/",
+    "started_at": 1792518117765.0,
+    "stopped_at": 1792518342579.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 5,
+    "operations": 12,
+    "errors": 4,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 86,
+    "active_rules": 0,
+    "saved_at": 1792518342583.0,
+    "storage": {
+      "bytes": 54000,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 5
+    },
+    "environment": {
+      "extension_version": "0.3.3",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [
+    {
+      "id": "de45e10e99996:n1",
+      "run_id": "de45e10e99996",
+      "sequence": 81,
+      "started_at": 1792518117866.0,
+      "finished_at": 1792518117879.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "7E47378A286DA02E7C54711DA8AB812D",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 16.99,
+      "transfer_bytes": 12826.0,
+      "decoded_bytes": 12635.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:1101",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 17:41:57 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 1.027,
+        "proxyStart": 1.026,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 12.433,
+        "receiveHeadersStart": 12.412,
+        "requestTime": 817801.636072,
+        "sendEnd": 1.165,
+        "sendStart": 1.084,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"教学楼\",\"floor\":\"1\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12473,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:n2",
+      "run_id": "de45e10e99996",
+      "sequence": 82,
+      "started_at": 1792518149836.0,
+      "finished_at": 1792518149849.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "7E47378A286DA02E7C54711DA8AB812D",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 12.61,
+      "transfer_bytes": 12820.0,
+      "decoded_bytes": 12635.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:1101",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 17:42:29 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": 0.706,
+        "connectStart": 0.514,
+        "dnsEnd": 0.514,
+        "dnsStart": 0.308,
+        "proxyEnd": 0.248,
+        "proxyStart": 0.246,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 11.989,
+        "receiveHeadersStart": 11.973,
+        "requestTime": 817833.606147,
+        "sendEnd": 0.838,
+        "sendStart": 0.792,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"教学楼\",\"floor\":\"1\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12473,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:n3",
+      "run_id": "de45e10e99996",
+      "sequence": 83,
+      "started_at": 1792518192475.0,
+      "finished_at": 1792518192486.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "7E47378A286DA02E7C54711DA8AB812D",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 11.03,
+      "transfer_bytes": 12820.0,
+      "decoded_bytes": 12635.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:1101",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 17:43:12 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": 0.56,
+        "connectStart": 0.404,
+        "dnsEnd": 0.404,
+        "dnsStart": 0.398,
+        "proxyEnd": 0.338,
+        "proxyStart": 0.336,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 10.257,
+        "receiveHeadersStart": 10.239,
+        "requestTime": 817876.244805,
+        "sendEnd": 0.66,
+        "sendStart": 0.605,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"教学楼\",\"floor\":\"1\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12473,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:n4",
+      "run_id": "de45e10e99996",
+      "sequence": 84,
+      "started_at": 1792518253026.0,
+      "finished_at": 1792518342580.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "interrupted",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "7E47378A286DA02E7C54711DA8AB812D",
+      "status": 503,
+      "error": "requested",
+      "mime_type": "application/json",
+      "decoded_bytes": 140.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:1101",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-length": "140",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Oct 2026 17:44:13 GMT",
+        "keep-alive": "timeout=5"
+      },
+      "timing": {
+        "connectEnd": 0.637,
+        "connectStart": 0.521,
+        "dnsEnd": 0.521,
+        "dnsStart": 0.391,
+        "proxyEnd": 0.304,
+        "proxyStart": 0.302,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 2.755,
+        "receiveHeadersStart": 2.738,
+        "requestTime": 817936.794621,
+        "sendEnd": 0.72,
+        "sendStart": 0.679,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "unavailable",
+        "reason": "capture_stopped"
+      },
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:n5",
+      "run_id": "de45e10e99996",
+      "sequence": 85,
+      "started_at": 1792518253641.0,
+      "finished_at": 1792518342580.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "interrupted",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "7E47378A286DA02E7C54711DA8AB812D",
+      "status": 503,
+      "error": "requested",
+      "mime_type": "application/json",
+      "decoded_bytes": 140.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:1101",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-length": "140",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 20 Oct 2026 17:44:13 GMT",
+        "keep-alive": "timeout=5"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 0.201,
+        "proxyStart": 0.199,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 1.492,
+        "receiveHeadersStart": 1.477,
+        "requestTime": 817937.41103,
+        "sendEnd": 0.334,
+        "sendStart": 0.258,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "unavailable",
+        "reason": "capture_stopped"
+      },
+      "truncated": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "de45e10e99996:a1",
+      "run_id": "de45e10e99996",
+      "sequence": 15,
+      "method": "tool.click",
+      "target": "概览",
+      "source": "agent",
+      "started_at": 1792518117826.0,
+      "finished_at": 1792518117964.0,
+      "window_end": 1792518119464.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518117816.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518118669.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observations": [
+        {
+          "at": 1792518118669.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+          "truncated": false,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-note",
+              "name": "case-note",
+              "label": "处置记录",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-close-note",
+              "name": "case-close-note",
+              "label": "关闭结论",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "reload"
+        }
+      ],
+      "observation_end": 1792518132964.0,
+      "request_ids": [
+        "de45e10e99996:n1"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a2",
+      "run_id": "de45e10e99996",
+      "sequence": 19,
+      "method": "tool.click",
+      "target": "101教室 4 台，查看设备",
+      "source": "agent",
+      "started_at": 1792518148651.0,
+      "finished_at": 1792518148788.0,
+      "window_end": 1792518148872.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518148639.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518148872.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n数据来自本机后端 /api/devices（MySQL）。本次读取时间 2026/10/21 01:41:57；这只是本页读取时间，不是设备采样时间。空间名称、负责人仍是浏览器演示。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（教学楼A 2层）\n在线\n查看\nd05\n电表01\n能源\n101教室（教学楼A 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（教学楼A 2层）\n在线\n查看\nd13\n灯光01\n照明\n101教室（教学楼A 2层）\n在线\n查看\n当前显示 4 台 / 全部 16 台",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518148872.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a3",
+      "run_id": "de45e10e99996",
+      "sequence": 22,
+      "method": "tool.click",
+      "target": "查看",
+      "source": "agent",
+      "started_at": 1792518148881.0,
+      "finished_at": 1792518149012.0,
+      "window_end": 1792518149237.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518148872.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n数据来自本机后端 /api/devices（MySQL）。本次读取时间 2026/10/21 01:41:57；这只是本页读取时间，不是设备采样时间。空间名称、负责人仍是浏览器演示。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（教学楼A 2层）\n在线\n查看\nd05\n电表01\n能源\n101教室（教学楼A 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（教学楼A 2层）\n在线\n查看\nd13\n灯光01\n照明\n101教室（教学楼A 2层）\n在线\n查看\n当前显示 4 台 / 全部 16 台",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518149237.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n数据来自本机后端 /api/devices（MySQL）。本次读取时间 2026/10/21 01:41:57；这只是本页读取时间，不是设备采样时间。空间名称、负责人仍是浏览器演示。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（教学楼A 2层）\n在线\n查看\nd05\n电表01\n能源\n101教室（教学楼A 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（教学楼A 2层）\n在线\n查看\nd13\n灯光01\n照明\n101教室（教学楼A 2层）\n在线\n查看\n当前显示 4 台 / 全部 16 台\n设备详情\n收起详情\n编号\nd05\n名称\n电表01\n类型\n能源\n空间\n101教室（教学楼A 2层）\n在线情况\n在线\n模拟标记\n是（教学模拟）\n当前负责人\n尚未登记\n备注\n尚未登记\n基本信息（编号、名称、类型、在线情况、模拟标记）来自本机后端 /api/devices（MySQL，最近一次成功读取）。\n空间名称、当前负责人和备注仍是浏览器演示数据；点位读数与历史仍是公开教学样本，第10课再接后端。\n查看责任登记\n查看所在空间\n读数\n设备读数\n点位\n数值\n单位\n采样时间\n质量\n操作\n功率\npower\n0\nkW\n2026/10/20 08:00:00\n正常\n查看历史\n电压\nvoltage\n220\nV\n2026/10/20 08:00:00",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518149237.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a4",
+      "run_id": "de45e10e99996",
+      "sequence": 25,
+      "method": "tool.click",
+      "target": "能源",
+      "source": "agent",
+      "started_at": 1792518149248.0,
+      "finished_at": 1792518149388.0,
+      "window_end": 1792518149555.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518149237.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n数据来自本机后端 /api/devices（MySQL）。本次读取时间 2026/10/21 01:41:57；这只是本页读取时间，不是设备采样时间。空间名称、负责人仍是浏览器演示。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（教学楼A 2层）\n在线\n查看\nd05\n电表01\n能源\n101教室（教学楼A 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（教学楼A 2层）\n在线\n查看\nd13\n灯光01\n照明\n101教室（教学楼A 2层）\n在线\n查看\n当前显示 4 台 / 全部 16 台\n设备详情\n收起详情\n编号\nd05\n名称\n电表01\n类型\n能源\n空间\n101教室（教学楼A 2层）\n在线情况\n在线\n模拟标记\n是（教学模拟）\n当前负责人\n尚未登记\n备注\n尚未登记\n基本信息（编号、名称、类型、在线情况、模拟标记）来自本机后端 /api/devices（MySQL，最近一次成功读取）。\n空间名称、当前负责人和备注仍是浏览器演示数据；点位读数与历史仍是公开教学样本，第10课再接后端。\n查看责任登记\n查看所在空间\n读数\n设备读数\n点位\n数值\n单位\n采样时间\n质量\n操作\n功率\npower\n0\nkW\n2026/10/20 08:00:00\n正常\n查看历史\n电压\nvoltage\n220\nV\n2026/10/20 08:00:00",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518149556.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518149555.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a5",
+      "run_id": "de45e10e99996",
+      "sequence": 28,
+      "method": "tool.click",
+      "target": "d05 电表01",
+      "source": "agent",
+      "started_at": 1792518149566.0,
+      "finished_at": 1792518149709.0,
+      "window_end": 1792518149796.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518149556.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518149796.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518149796.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a6",
+      "run_id": "de45e10e99996",
+      "sequence": 38,
+      "method": "tool.click",
+      "target": "比较历史",
+      "source": "agent",
+      "started_at": 1792518149806.0,
+      "finished_at": 1792518149941.0,
+      "window_end": 1792518150173.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518149796.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518150173.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n功率 kW历史比较：1 台设备\n电表01\nd05\n单位：kW\n1\n0\n-1\n10/20 07:35\n10/20 07:45",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518150173.0,
+      "request_ids": [
+        "de45e10e99996:n2"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a7",
+      "run_id": "de45e10e99996",
+      "sequence": 40,
+      "method": "tool.select",
+      "target": "读数项 [has-submenu]",
+      "source": "agent",
+      "started_at": 1792518150185.0,
+      "finished_at": 1792518150213.0,
+      "window_end": 1792518151713.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518150173.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n功率 kW历史比较：1 台设备\n电表01\nd05\n单位：kW\n1\n0\n-1\n10/20 07:35\n10/20 07:45",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518150918.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n请重新选择设备，再比较",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observations": [
+        {
+          "at": 1792518150918.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n请重新选择设备，再比较",
+          "truncated": false,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-note",
+              "name": "case-note",
+              "label": "处置记录",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-close-note",
+              "name": "case-close-note",
+              "label": "关闭结论",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "reload"
+        }
+      ],
+      "observation_end": 1792518165213.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a8",
+      "run_id": "de45e10e99996",
+      "sequence": 44,
+      "method": "tool.click",
+      "target": "d05 电表01",
+      "source": "agent",
+      "started_at": 1792518192200.0,
+      "finished_at": 1792518192335.0,
+      "window_end": 1792518192431.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518192188.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n请重新选择设备，再比较",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518192431.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518192431.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a9",
+      "run_id": "de45e10e99996",
+      "sequence": 53,
+      "method": "tool.click",
+      "target": "比较历史",
+      "source": "agent",
+      "started_at": 1792518192442.0,
+      "finished_at": 1792518192580.0,
+      "window_end": 1792518194080.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518192431.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518193281.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n电压 V历史比较：1 台设备\n电表01\nd05\n单位：V\n220\n0\n10/20 07:35\n10/20 07:45\n10/20 08:00",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observations": [
+        {
+          "at": 1792518193281.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n电压 V历史比较：1 台设备\n电表01\nd05\n单位：V\n220\n0\n10/20 07:35\n10/20 07:45\n10/20 08:00",
+          "truncated": true,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-note",
+              "name": "case-note",
+              "label": "处置记录",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-close-note",
+              "name": "case-close-note",
+              "label": "关闭结论",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "reload"
+        }
+      ],
+      "observation_end": 1792518207580.0,
+      "request_ids": [
+        "de45e10e99996:n3"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a10",
+      "run_id": "de45e10e99996",
+      "sequence": 64,
+      "method": "tool.click",
+      "target": "刷新读数",
+      "source": "agent",
+      "started_at": 1792518252990.0,
+      "finished_at": 1792518253127.0,
+      "window_end": 1792518253357.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518252979.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n电压 V历史比较：1 台设备\n电表01\nd05\n单位：V\n220\n0\n10/20 07:35\n10/20 07:45\n10/20 08:00",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518253357.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n刷新失败：后端返回 HTTP 503；仍显示 2026/10/21 01:41:57 读取的上次成功快照（本机后端保存的教学模拟数据，未改用另一种来源）。\n重试\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n电压 V历史比较：1 台设备\n电表01\nd05\n单位：V\n220\n0\n10/20 07:35",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518253357.0,
+      "request_ids": [
+        "de45e10e99996:n4"
+      ],
+      "console_ids": [
+        "de45e10e99996:c1",
+        "de45e10e99996:c2"
+      ],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a11",
+      "run_id": "de45e10e99996",
+      "sequence": 68,
+      "method": "tool.click",
+      "target": "概览",
+      "source": "agent",
+      "started_at": 1792518253368.0,
+      "finished_at": 1792518253503.0,
+      "window_end": 1792518253594.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518253357.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n电压 V\n电压是当前样本的供电电压，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n220\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n220.2\nV\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n220.4\nV\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的电压读数\n设备名称\n电压\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n220.6\nV\n正常\n2026/10/20 08:00:00\n查看设备\n刷新失败：后端返回 HTTP 503；仍显示 2026/10/21 01:41:57 读取的上次成功快照（本机后端保存的教学模拟数据，未改用另一种来源）。\n重试\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史\n电压 V历史比较：1 台设备\n电表01\nd05\n单位：V\n220\n0\n10/20 07:35",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518253594.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792518253594.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "de45e10e99996:a12",
+      "run_id": "de45e10e99996",
+      "sequence": 80,
+      "method": "tool.click",
+      "target": "刷新读数",
+      "source": "agent",
+      "started_at": 1792518253603.0,
+      "finished_at": 1792518253746.0,
+      "window_end": 1792518255246.0,
+      "state": "completed",
+      "before": {
+        "at": 1792518253594.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792518254451.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n刷新失败：后端返回 HTTP 503；仍显示 2026/10/21 01:41:57 读取的上次成功快照（来源仍是当前数据方式，未改用另一种来源）。\n重新读取概览\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜刷新失败：后端返回 HTTP 503；数字与表格仍是 2026/10/21 01:41:57 的上次成功结果。\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observations": [
+        {
+          "at": 1792518254451.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n刷新失败：后端返回 HTTP 503；仍显示 2026/10/21 01:41:57 读取的上次成功快照（来源仍是当前数据方式，未改用另一种来源）。\n重新读取概览\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜刷新失败：后端返回 HTTP 503；数字与表格仍是 2026/10/21 01:41:57 的上次成功结果。\n刷新读数",
+          "truncated": false,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-note",
+              "name": "case-note",
+              "label": "处置记录",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-close-note",
+              "name": "case-close-note",
+              "label": "关闭结论",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "reload"
+        }
+      ],
+      "observation_end": 1792518268746.0,
+      "request_ids": [
+        "de45e10e99996:n5"
+      ],
+      "console_ids": [
+        "de45e10e99996:c3",
+        "de45e10e99996:c4"
+      ],
+      "truncated": false
+    }
+  ],
+  "console": [
+    {
+      "id": "de45e10e99996:c1",
+      "at": 1792518253033.0,
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "count": 1,
+      "last_at": 1792518253033.0,
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/api/overview"
+    },
+    {
+      "id": "de45e10e99996:c2",
+      "at": 1792518253033.0,
+      "level": "error",
+      "text": "能源读数读取失败 OverviewApiError: 后端返回 HTTP 503\n    at overviewError (http://127.0.0.1:5188/data-service.js:865:17)\n    at getOverviewFromServer (http://127.0.0.1:5188/data-service.js:1130:13)\n    at async loadEnergy (http://127.0.0.1:5188/app.js:6128:30)",
+      "count": 1,
+      "last_at": 1792518253033.0,
+      "stack": "loadEnergy http://127.0.0.1:5188/app.js:6148:13",
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/app.js"
+    },
+    {
+      "id": "de45e10e99996:c3",
+      "at": 1792518253648.0,
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "count": 1,
+      "last_at": 1792518253648.0,
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/api/overview"
+    },
+    {
+      "id": "de45e10e99996:c4",
+      "at": 1792518253649.0,
+      "level": "error",
+      "text": "概览读数读取失败 OverviewApiError: 后端返回 HTTP 503\n    at overviewError (http://127.0.0.1:5188/data-service.js:865:17)\n    at getOverviewFromServer (http://127.0.0.1:5188/data-service.js:1130:13)\n    at async loadDashboardOverview (http://127.0.0.1:5188/app.js:6727:30)",
+      "count": 1,
+      "last_at": 1792518253649.0,
+      "stack": "loadDashboardOverview http://127.0.0.1:5188/app.js:6753:13",
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/app.js"
+    }
+  ],
+  "pages": [
+    {
+      "at": 1792518117795.0,
+      "state": "available",
+      "url": "http://127.0.0.1:5188/",
+      "title": "晨光校园值班台",
+      "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 01:41:57（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（教学楼 1层）\n101教室（教学楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+      "truncated": false,
+      "fields": [
+        {
+          "key": "http://127.0.0.1:5188/||id:data-mode",
+          "name": "data-mode",
+          "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+          "value": "backend",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:demo-identity",
+          "name": "demo-identity",
+          "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:username",
+          "name": "username",
+          "label": "用户名",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:password",
+          "name": "password",
+          "label": "密码",
+          "state": "redacted"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+          "name": "case-device",
+          "label": "设备",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+          "name": "case-message",
+          "label": "这次练习要处理什么",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-manager",
+          "name": "case-manager",
+          "label": "处理人 managermanager（处理人）",
+          "value": "manager",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-assign-note",
+          "name": "case-assign-note",
+          "label": "分派说明",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-note",
+          "name": "case-note",
+          "label": "处置记录",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-close-note",
+          "name": "case-close-note",
+          "label": "关闭结论",
+          "value": "",
+          "state": "available"
+        }
+      ],
+      "fields_partial": true
+    }
+  ],
+  "rules": [],
+  "replays": [],
+  "performance": [
+    {
+      "id": "de45e10e99996:p1",
+      "document_key": "1792518082289.3:0",
+      "sequence": 79,
+      "time_origin": 1792518082289.3,
+      "started_at": 1792518117794.2,
+      "observed_at": 1792518342579.0,
+      "url": "http://127.0.0.1:5188/",
+      "navigation": "reload",
+      "state": "completed",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1792518117794.2,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.04221249389648437,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 51.60000002384186,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 60.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 76.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 84.10000002384186,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 6.600000023841858,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown"
+      ]
+    }
+  ]
+}

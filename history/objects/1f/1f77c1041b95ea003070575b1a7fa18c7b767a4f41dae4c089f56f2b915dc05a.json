@@ -1,0 +1,10 @@
+{
+  "state": "ENGINE_RUNNING",
+  "appVersion": "4.96.0",
+  "clientServerVersion": "29.9.1",
+  "composeVersion": "v5.6.0",
+  "userAgreementApprovalReceived": true,
+  "agreementUiAlreadyAdvancedBeforeAgentClick": true,
+  "optionalLoginSkipped": true,
+  "checkedAt": "2026-10-20T11:47:51.556Z"
+}

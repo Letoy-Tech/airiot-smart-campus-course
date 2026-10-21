@@ -1,0 +1,43 @@
+[
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951"
+  },
+  {
+    "path": "frontend/src/tests/case-trigger-race.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/comparison.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/monitoring-views.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/read-api.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/read-models.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/read-pages.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/workflow-views.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/journey-navigation.test.ts",
+    "existed": false
+  },
+  {
+    "path": "docs/调试记录.md",
+    "existed": false
+  }
+]

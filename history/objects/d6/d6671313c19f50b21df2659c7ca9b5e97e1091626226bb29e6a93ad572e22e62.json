@@ -1,0 +1,21 @@
+{
+  "kind": "operator-live-HTTP-verification",
+  "success": true,
+  "checks": [
+    "anonymous overview refused with 401",
+    "alarms: all public fixture fields, types and values preserved",
+    "devices: all public fixture fields, types and values preserved",
+    "history: all public fixture fields, types and values preserved",
+    "points: all public fixture fields, types and values preserved",
+    "spaces: all public fixture fields, types and values preserved",
+    "all history samples chronological"
+  ],
+  "counts": {
+    "alarms": 1,
+    "devices": 16,
+    "history": 28,
+    "points": 28,
+    "spaces": 4
+  },
+  "at": "2026-10-21T01:26:35.652276+08:00"
+}

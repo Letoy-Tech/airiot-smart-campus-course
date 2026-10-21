@@ -1,0 +1,2 @@
+请做一个三行权限表：admin、manager-a、viewer。列读取、维护位置、处理本人事件、查看接入状态。未知权限一律不能当true。只写表，不修改登录系统。
+按本项目当前契约简洁回答即可（不超过12行），只做Ask澄清，不改文件，不读取.private、lesson-bundles/*/files、journey-backups或教师答案。

@@ -1,0 +1,66 @@
+{
+  "recordedAt": "2026-10-19T18:49:39.652Z",
+  "environment": "owned loopback TEACHING_MOCK",
+  "intentionalFault": {
+    "file": "frontend/src/api/campus.ts",
+    "change": "response.code !== 0 -> response.code === 0",
+    "failedAttemptPreserved": true,
+    "confirmedRun": {
+      "tests": 10,
+      "failed": 2,
+      "passed": 8,
+      "exit": 1
+    },
+    "singleDiagnosis": {
+      "failed": 1,
+      "skipped": 9,
+      "exit": 1
+    },
+    "restoredBy": "CodeBuddy built-in DeepSeek",
+    "byteEqualToBefore": true
+  },
+  "eventConflict": {
+    "caseId": "8fda017a-c8d1-443d-9cbc-90e9f39c1655",
+    "before": 2,
+    "firstCommit": 3,
+    "secondResult": 409,
+    "backRead": 3,
+    "inputRetained": true,
+    "saveLocked": true,
+    "independentRead": 3,
+    "secondNoteAbsent": true,
+    "evidence": [
+      "18-case-conflict-state.json",
+      "18-case-after-no-autoreplay-ui.txt"
+    ]
+  },
+  "ownerConflict": {
+    "deviceId": "teaching_env_01",
+    "before": 4,
+    "firstCommit": 5,
+    "secondResult": 409,
+    "backRead": 5,
+    "inputRetained": true,
+    "saveLocked": true,
+    "acknowledgementUnlocksWithoutSubmit": true,
+    "independentRead": 5,
+    "manualFinalOwner": "manager-b",
+    "manualFinalVersion": 6,
+    "evidence": [
+      "19-owner-conflict-state.json",
+      "19-owner-after-no-autoreplay-ui.txt",
+      "19-owner-final-v6-ui.txt"
+    ]
+  },
+  "database": {
+    "schema": "campus_course_test",
+    "mysql": "8.4.10",
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "transactionScenarios": 4,
+    "snapshotScenarios": 5,
+    "privatePropertiesExcluded": true
+  }
+}

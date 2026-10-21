@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T16:25:46.021628+00:00",
+  "lessons": 12,
+  "hours": 48,
+  "minutes": 2160,
+  "pdfPages": 37,
+  "visualReview": "all 37 pages inspected; pages16/19 smallest figure labels readable on screen, print not physically tested",
+  "fontRepair": "Heiti SC with explicit Fontconfig for bundled renderer; original missing Chinese corrected",
+  "files": [
+    {
+      "path": "lesson-source.json",
+      "bytes": 20904,
+      "sha256": "a0ac82a30a60c5996cc76fa2bc2f216c7f4f896e41dc9a77f88d1953c909b6fc"
+    },
+    {
+      "path": "完整教案.md",
+      "bytes": 34689,
+      "sha256": "9d17170181f6eefc3e2599a9e14627320bca7537539b2a109079b390434b1111"
+    },
+    {
+      "path": "index.html",
+      "bytes": 27174,
+      "sha256": "d57c23a72c5227b2afa6066708bf79b195590f546e732efad29350be3d68ca53"
+    },
+    {
+      "path": "AI编程智慧校园48学时教案.docx",
+      "bytes": 2890246,
+      "sha256": "db7b984801f9c855d6deb2206460f650b98bc4820ea95170b72aae9a1f36052a"
+    },
+    {
+      "path": "AI编程智慧校园48学时教案.pdf",
+      "bytes": 3405910,
+      "sha256": "097f4f3052ccb24e19003ca3afd80a998280045b030515736de11412fcb58946"
+    }
+  ]
+}

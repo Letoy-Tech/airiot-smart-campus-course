@@ -1,0 +1,62 @@
+[
+  {
+    "_department": {},
+    "_departmentInfo": [],
+    "_deptTableAndField": {},
+    "_label": "演示公共走廊104",
+    "_parent": [],
+    "_table": "campus_space",
+    "_title": "校园空间目录",
+    "data_mode": "模拟",
+    "deletePermission": true,
+    "editPermission": true,
+    "id": "demo_room_104",
+    "location_label": "模拟校区 / 演示楼 / 一层 / 演示公共走廊104",
+    "name": "演示公共走廊104"
+  },
+  {
+    "_department": {},
+    "_departmentInfo": [],
+    "_deptTableAndField": {},
+    "_label": "演示实验室103",
+    "_parent": [],
+    "_table": "campus_space",
+    "_title": "校园空间目录",
+    "data_mode": "模拟",
+    "deletePermission": true,
+    "editPermission": true,
+    "id": "demo_room_103",
+    "location_label": "模拟校区 / 演示楼 / 一层 / 演示实验室103",
+    "name": "演示实验室103"
+  },
+  {
+    "_department": {},
+    "_departmentInfo": [],
+    "_deptTableAndField": {},
+    "_label": "演示教室102",
+    "_parent": [],
+    "_table": "campus_space",
+    "_title": "校园空间目录",
+    "data_mode": "模拟",
+    "deletePermission": true,
+    "editPermission": true,
+    "id": "demo_room_102",
+    "location_label": "模拟校区 / 演示楼 / 一层 / 演示教室102",
+    "name": "演示教室102"
+  },
+  {
+    "_department": {},
+    "_departmentInfo": [],
+    "_deptTableAndField": {},
+    "_label": "演示教室一零一",
+    "_parent": [],
+    "_table": "campus_space",
+    "_title": "校园空间目录",
+    "data_mode": "SIMULATION / 全模拟",
+    "deletePermission": true,
+    "editPermission": true,
+    "id": "demo_room_101",
+    "location_label": "模拟校区 / 演示楼 / 一层 / 教室一零一",
+    "name": "演示教室一零一"
+  }
+]

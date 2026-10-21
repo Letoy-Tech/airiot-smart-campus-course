@@ -1,0 +1,31 @@
+{
+  "name": "campus-ai-course-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.21.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "type-check": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest",
+    "build": "npm run type-check && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5178 --strictPort"
+  },
+  "dependencies": {
+    "pinia": "3.0.4",
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@types/node": "24.12.0",
+    "@vitejs/plugin-vue": "6.0.5",
+    "@vue/test-utils": "2.4.6",
+    "jsdom": "28.1.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "4.1.12",
+    "vue-tsc": "3.2.6"
+  }
+}

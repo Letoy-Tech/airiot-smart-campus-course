@@ -1,0 +1,8 @@
+{"at": "2026-10-21T03:32:02.746779", "action": "private-password-fill", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:32:02.886267", "action": "login-submit", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:32:33.657258", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:32:33.795030", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:33:13.415075", "action": "private-password-fill", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:33:13.553458", "action": "login-submit", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:34:09.424686", "action": "private-password-fill", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:34:09.562165", "action": "login-submit", "username": "manager", "exit": 0, "valuesLogged": false}

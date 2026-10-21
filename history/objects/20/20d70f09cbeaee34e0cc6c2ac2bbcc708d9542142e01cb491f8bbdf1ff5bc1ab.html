@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>晨光校园值班台</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <h1>晨光校园值班台</h1>
+      <p class="tag">教学模拟项目</p>
+
+      <section class="backend-check" aria-label="后端连接">
+        <span class="backend-check-title">后端连接</span>
+        <button class="backend-check-button" type="button" id="check-health">检查连接</button>
+        <span class="backend-check-status" id="health-status" role="status" aria-live="polite">尚未检查</span>
+      </section>
+
+      <section class="data-mode" aria-label="数据方式">
+        <label class="data-mode-field" for="data-mode">
+          <span class="data-mode-label">数据方式</span>
+          <select id="data-mode" class="data-mode-select">
+            <option value="demo">浏览器演示</option>
+            <option value="backend">连接后端</option>
+          </select>
+        </label>
+        <p class="data-mode-note" id="data-mode-note">当前：浏览器演示（教学模拟）</p>
+      </section>
+
+      <section class="session" id="session-panel" aria-label="登录状态" hidden>
+        <span class="session-user" id="session-user">尚未登录</span>
+        <button class="session-logout" type="button" id="logout-button">退出</button>
+      </section>
+
+      <div class="identity" id="identity-panel">
+        <label class="identity-field" for="demo-identity">
+          <span class="identity-label">演示身份</span>
+          <select id="demo-identity" class="identity-select">
+            <option value="admin">管理员 admin</option>
+            <option value="manager">处理人 manager</option>
+            <option value="viewer">查看者 viewer</option>
+          </select>
+        </label>
+        <p class="identity-note">
+          仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。
+        </p>
+      </div>
+    </header>
+
+    <div class="body">
+      <aside class="sidebar">
+        <nav class="menu" aria-label="主导航">
+          <button class="menu-item" type="button" data-view="dashboard" aria-current="page">概览</button>
+          <button class="menu-item" type="button" data-view="devices">设备</button>
+          <button class="menu-item" type="button" data-view="spaces">空间</button>
+          <button class="menu-item" type="button" data-view="energy">能源</button>
+          <button class="menu-item" type="button" data-view="history">历史</button>
+          <button class="menu-item" type="button" data-view="alarms">原始报警</button>
+          <button class="menu-item" type="button" data-view="cases">演练事件</button>
+          <button class="menu-item" type="button" data-view="owners">设备责任</button>
+          <button class="menu-item" type="button" data-view="admin">管理</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="panel view" id="view-login" aria-labelledby="login-title" hidden>
+          <h2 id="login-title">登录本机课程后端</h2>
+          <p class="login-hint">
+            已选择“连接后端”。设备等真实接口需要登录后才能读取；账号为 admin / manager / viewer，
+            初始口令见本机 .env 的 DEMO_PASSWORD，不要贴到聊天、文档或截图。
+          </p>
+
+          <form class="login-form" id="login-form" novalidate>
+            <label class="login-field" for="login-username">
+              <span class="login-label">用户名</span>
+              <input class="login-input" id="login-username" name="username" type="text"
+                     autocomplete="username" spellcheck="false" required />
+            </label>
+
+            <label class="login-field" for="login-password">
+              <span class="login-label">密码</span>
+              <input class="login-input" id="login-password" name="password" type="password"
+                     autocomplete="current-password" required />
+            </label>
+
+            <button class="login-button" type="submit" id="login-submit">登录</button>
+          </form>
+
+          <p class="login-message" id="login-message" role="status" aria-live="polite" hidden></p>
+
+          <p class="login-note">
+            密码只用于本次登录请求，成功后立即从输入框清除；令牌只保存在页面内存，
+            刷新页面后需要重新登录。这里的“连接后端”偏好只表示数据来源，不代表任何身份。
+          </p>
+        </section>
+
+        <section class="panel view" id="view-dashboard" aria-labelledby="view-title">
+          <h2 id="view-title">概览</h2>
+          <p>当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。</p>
+
+          <ul class="cards">
+            <li>
+              <button class="card card-button" type="button" id="open-devices-card">
+                <span class="card-label">设备总数</span>
+                <span class="card-value" id="stat-devices">正在读取</span>
+              </button>
+            </li>
+            <li class="card">
+              <p class="card-label">空间总数</p>
+              <p class="card-value" id="stat-spaces">正在读取</p>
+            </li>
+            <li class="card">
+              <p class="card-label">点位总数</p>
+              <p class="card-value" id="stat-points">正在读取</p>
+            </li>
+          </ul>
+
+          <section class="next-up" aria-labelledby="next-up-title">
+            <h3 id="next-up-title">今天先做什么</h3>
+            <p>先查看设备，再了解读数，发现问题后登记演练事件</p>
+          </section>
+
+          <div id="dashboard-summary" class="dashboard-summary"></div>
+
+          <p class="data-note" id="data-note">数据方式：浏览器演示（教学模拟）</p>
+        </section>
+
+        <div id="view-outlet"></div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

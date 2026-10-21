@@ -1,0 +1,47 @@
+# Local secrets and environment-specific configuration
+.private/
+.runtime/
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.private.json
+
+# Dependencies, compiled output and local tooling
+node_modules/
+target/
+dist/
+dist-ssr/
+.venv/
+.setup/
+.cache/
+__pycache__/
+*.pyc
+*.class
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+.idea/
+.DS_Store
+.eslintcache
+log/
+logs/
+*.log
+*.log.*
+*.pid
+*.sock
+*.dmg
+*.part
+
+# Local generated downloads and exports
+/output/
+/tmp/
+/history/rebuilt/

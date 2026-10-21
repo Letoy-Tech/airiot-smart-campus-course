@@ -1,0 +1,11 @@
+--- before/campus.ts
++++ fault/campus.ts
+@@ -27,7 +27,7 @@
+ 
+ export function extractFirstRead(response: ApiEnvelope & { data: ReadResult<Device> }): ReadResult<Device> {
+   // STUDENT_TODO_A_BEGIN：检查业务 code，再解包同一批列表与观察时间。
+-  if (response.code !== 0) throw new ApiError('设备读取未成功，请核对业务响应。', 200, response.code)
++  if (response.code === 0) throw new ApiError('设备读取未成功，请核对业务响应。', 200, response.code)
+   return { items: response.data.items, observedAt: response.data.observedAt }
+   // STUDENT_TODO_A_END
+ }

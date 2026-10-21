@@ -1,0 +1,13 @@
+第10站 责任、审计与接入
+模式：teacher-db；AIRIOT选做
+目标：责任时间线、命令审计读取、接入状态
+  阶段装配  frontend/src/journey/registry.ts
+  阶段装配  frontend/src/journey/features.ts
+  学生业务  frontend/src/views/OwnersView.vue
+  学生业务  frontend/src/views/AuditView.vue
+  学生业务  frontend/src/views/IntegrationView.vue
+
+本次契约：owner版本独立；责任不追改旧事件；审计只读，远端控制关闭
+人工过关：责任A→B，新事件跟B旧事件不变；普通身份不能读审计；未接入不写PASS
+完整参考：lesson-bundles/stage-10/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

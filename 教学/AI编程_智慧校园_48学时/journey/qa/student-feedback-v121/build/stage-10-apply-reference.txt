@@ -1,0 +1,7 @@
+$ node tools/progress.mjs apply 10
+已导入完整参考：第10站。
+  frontend/src/views/OwnersView.vue
+  frontend/src/views/AuditView.vue
+  frontend/src/views/IntegrationView.vue
+备份：journey-backups/2026-10-19T22-18-00-486Z-stage-10-apply-187a50
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

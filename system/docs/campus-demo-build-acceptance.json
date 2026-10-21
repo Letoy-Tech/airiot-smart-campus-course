@@ -1,0 +1,24 @@
+{
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "backendTests": {
+    "tests": 80.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0
+  },
+  "frontendTests": 27,
+  "typecheck": "PASS",
+  "changedFileESLint": "PASS",
+  "frontendBuildCommand": "VITE_API_BASE_URL=/campus-demo/api npm run build-only -- --base=/campus-demo/",
+  "deploymentBase": "/campus-demo/",
+  "backendSHA256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a",
+  "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b",
+  "warning": "ECharts lazy chart chunk >500kB; Vite build passes; not a performance acceptance",
+  "sourceVsDeployment": "This report only confirms the local release candidate, not remote state.",
+  "revisionReason": "Control capability requires role and server flag; reading and DEMO case handling remain independently authorized.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4"
+  },
+  {
+    "path": "frontend/src/views/LocationsView.vue",
+    "existed": false
+  }
+]

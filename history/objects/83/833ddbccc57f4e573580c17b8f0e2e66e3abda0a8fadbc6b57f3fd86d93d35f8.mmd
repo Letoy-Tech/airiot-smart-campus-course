@@ -1,0 +1,7 @@
+flowchart LR
+    D[教学设备<br/>deviceId] -->|当前登记| O[责任主记录<br/>ownerUid / version]
+    O -->|同事务追加| OH[责任时间线<br/>前后 uid / actor / note / version]
+    O -.->|仅创建时读取并核对资格| C[事件主记录<br/>独立 assigneeUid / state / version]
+    D -->|关联设备| C
+    C -->|同事务追加| CH[事件时间线<br/>action / actor / caseVersion]
+    X[事件创建之后<br/>仅显式 assign 改派] --> C

@@ -1,0 +1,103 @@
+{
+  "formatVersion": 1,
+  "package": "chapter01-public-source--460334937c",
+  "sourceArchive": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter01-public-source.zip",
+  "sourceArchiveSha256": "460334937c4c48c592c74aada207a292f3c1636ef3a8e963fa00b02ec1c6f59e",
+  "sourceHashPurpose": "local historical input identity only; not the hash of any published derivative",
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "entries": [
+    {
+      "path": ".gitignore",
+      "object": "objects/3f/3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b.txt",
+      "sha256": "3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b",
+      "bytes": 73,
+      "executable": false
+    },
+    {
+      "path": "README.md",
+      "object": "objects/45/451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8.md",
+      "sha256": "451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8",
+      "bytes": 659,
+      "executable": false
+    },
+    {
+      "path": "frontend/app.js",
+      "object": "objects/89/898f5a52f2f6c7581ad3c789c99b3f3f1efd155f749410a35e3f21f9934799c8.js",
+      "sha256": "898f5a52f2f6c7581ad3c789c99b3f3f1efd155f749410a35e3f21f9934799c8",
+      "bytes": 2817,
+      "executable": false
+    },
+    {
+      "path": "frontend/index.html",
+      "object": "objects/49/4940c1e2a79024154c995715964e3d3c3ae02d333c466da370fcf81f9d16ce49.html",
+      "sha256": "4940c1e2a79024154c995715964e3d3c3ae02d333c466da370fcf81f9d16ce49",
+      "bytes": 2451,
+      "executable": false
+    },
+    {
+      "path": "frontend/styles.css",
+      "object": "objects/66/6611f27bf3b3dd9e178a0fc33019faa17974761075b81cfe55a9260b45c31994.css",
+      "sha256": "6611f27bf3b3dd9e178a0fc33019faa17974761075b81cfe55a9260b45c31994",
+      "bytes": 4831,
+      "executable": false
+    },
+    {
+      "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.properties",
+      "object": "objects/75/75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233,
+      "executable": false
+    },
+    {
+      "path": "materials/maven-wrapper/mvnw",
+      "object": "objects/45/4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f.txt",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284,
+      "executable": true
+    },
+    {
+      "path": "materials/maven-wrapper/mvnw.cmd",
+      "object": "objects/6d/6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734,
+      "executable": false
+    },
+    {
+      "path": "materials/mock-campus.json",
+      "object": "objects/3f/3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3.json",
+      "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3",
+      "bytes": 23788,
+      "executable": false
+    },
+    {
+      "path": "materials/约定卡.md",
+      "object": "objects/60/603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83.md",
+      "sha256": "603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83",
+      "bytes": 7816,
+      "executable": false
+    },
+    {
+      "path": "notes/01-我的第一张页面.md",
+      "object": "objects/c1/c1f96690fe7900c4f5c449d1e87f01af143ab3e455f7260d5856c848f88df995.md",
+      "sha256": "c1f96690fe7900c4f5c449d1e87f01af143ab3e455f7260d5856c848f88df995",
+      "bytes": 360,
+      "executable": false
+    },
+    {
+      "path": "tools/serve.mjs",
+      "object": "objects/33/33bdb66badd2fcc3a41d4d50e4e2b87de3283027f754c73a19a3af7b512930e4.mjs",
+      "sha256": "33bdb66badd2fcc3a41d4d50e4e2b87de3283027f754c73a19a3af7b512930e4",
+      "bytes": 6686,
+      "executable": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.jar",
+      "reason": "generated-dependency-or-installation-binary"
+    }
+  ],
+  "nestedPackages": [],
+  "embeddedImageTransforms": {},
+  "integrityScope": "sha256 describes this sanitized derivative, not the original source ZIP members"
+}

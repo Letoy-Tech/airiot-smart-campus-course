@@ -1,0 +1,192 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "admin capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "SUPER_ADMIN",
+          "ADMIN",
+          "USER"
+        ],
+        "canRead": true,
+        "canControl": true,
+        "canAdmin": true,
+        "canAudit": true
+      }
+    },
+    {
+      "name": "admin self identity",
+      "pass": true
+    },
+    {
+      "name": "manager capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "CAMPUS_MANAGER"
+        ],
+        "canRead": true,
+        "canControl": true,
+        "canAdmin": false,
+        "canAudit": false
+      }
+    },
+    {
+      "name": "manager self identity",
+      "pass": true
+    },
+    {
+      "name": "viewer capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "CAMPUS_VIEWER"
+        ],
+        "canRead": true,
+        "canControl": false,
+        "canAdmin": false,
+        "canAudit": false
+      }
+    },
+    {
+      "name": "viewer self identity",
+      "pass": true
+    },
+    {
+      "name": "manager blocked /roles",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /groups",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /users/organization/all",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /security/api-rules",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /campus/audit",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /campus/integrations/airiot/status",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot create user",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot map campus",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /roles",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /groups",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /users/organization/all",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /security/api-rules",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /campus/audit",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /campus/integrations/airiot/status",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot create user",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot map campus",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot switch",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "invalid token rejected",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "anonymous rejected",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "strict Boolean validation",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "non-control device blocked",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "unknown object blocked",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "disabled role immediately loses capability",
+      "pass": true
+    },
+    {
+      "name": "disabled role immediately loses data",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "locked account rejects existing token",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "locked account rejects login",
+      "pass": true,
+      "httpStatus": 401
+    }
+  ],
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

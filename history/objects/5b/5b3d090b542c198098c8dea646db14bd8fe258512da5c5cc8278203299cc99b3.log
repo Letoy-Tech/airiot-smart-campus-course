@@ -1,0 +1,48 @@
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend[39m
+
+ [32m✓[39m src/tests/course-domain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/tests/http.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/tests/session-races.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/tests/request-timeout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/tests/request-scope.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/tests/journey-start.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/tests/first-device-view.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/tests/catalog-navigation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[32m46 passed[39m[22m[90m (46)[39m
+[2m   Start at [22m 01:43:23
+[2m   Duration [22m 639ms[2m (transform 506ms, setup 0ms, import 980ms, tests 112ms, environment 2.76s)[22m
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 40 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                           0.47 kB │ gzip:  0.34 kB
+dist/assets/DeviceCatalog-BGxUDiHi.css    1.29 kB │ gzip:  0.46 kB
+dist/assets/index-CQLMl6UL.css           21.87 kB │ gzip:  5.26 kB
+dist/assets/FirstDeviceRead-DZBd3kS4.js   5.29 kB │ gzip:  2.57 kB
+dist/assets/DeviceCatalog-FlUQda0R.js    12.58 kB │ gzip:  5.00 kB
+dist/assets/index-udZ2TsRu.js            91.47 kB │ gzip: 36.63 kB
+✓ built in 337ms
+第03站前端检查通过，接受当前学生实现。
+尚未替你验收：16→4→1→0→清除16；详情刷新仍同ID；无匹配与失败分开
+请把实际操作写到 evidence/stage-03.md，再运行 accept 03 evidence/stage-03.md。人工记录不等于工具证明。

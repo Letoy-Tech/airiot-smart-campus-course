@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-21T05:20:28.867977",
+  "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab/.runtime/hand-in-final-2/campus-lab",
+  "files": 141,
+  "manifestSha256": "fb4fb6090244bc00b34a42ab1be0e8b7246d0c9eaa559cbaf8eec2b2791e91c3",
+  "allHashesAndBothSourcesMatch": true,
+  "bothLocalEnvsUnchanged": true,
+  "coursePortsListening": {
+    "5188": false,
+    "8098": false,
+    "23501": false,
+    "23502": false
+  },
+  "sourceProvenance": "CodeBuddy generated; operator actual notes and exact UI sync"
+}

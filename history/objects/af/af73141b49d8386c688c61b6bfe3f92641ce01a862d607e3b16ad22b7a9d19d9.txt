@@ -1,0 +1,113 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+教学管理员
+管理员 / 只读查看者
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+07
+身份与权限
+08
+事件工作台
+10
+责任登记
+10
+命令审计
+10
+接入状态
+
+第10站 · 责任、审计与接入
+
+接入状态：配置、连通、能力分开看
+
+configured 只说明服务端是否已提供接入配置，connected 才是当前连通结果， capabilities 各自给出状态。页面不下发命令、不保存凭据、不通知外部，也不把未配置或 PENDING 说成接通。
+
+重新读取
+只读，且没有写入入口
+
+本页不提供凭据输入、保存配置、设备控制、远端操作或外部通知按钮；所有字段都直接取自 GET /api/campus/integrations/airiot/status 的返回。
+
+真实返回的三个判定
+接口不返回观测时刻，本页不补造时间
+配置 configured
+false未提供接入配置；不能据此认为已接通。
+连通 connected
+false服务端报告当前未连通；不把配置当成连通。
+控制 controlEnabled
+controlEnabled=false（本页不提供控制入口）
+结论
+未接通（配置与连通分开判定）
+服务端说明
+AIRIOT_NOT_CONFIGURED
+能力完成度
+6 项 · 非 READY 6 项
+能力清单
+状态原样展示；PENDING 或未知都不算接通
+来自 GET /api/campus/integrations/airiot/status 的 capabilities；name、status、detail 均为原文。
+能力	状态（原文）	说明
+
+spaces
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+
+devices
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+
+latest
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+
+history
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+
+alarms
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+
+status
+	
+PENDING
+未就绪，不能视为接通
+	
+No real AIRIOT connection attempted
+
+本页只读：没有保存配置、输入凭据、下发命令、控制设备或发送外部通知的入口； 未配置或能力 PENDING 时，页面不会写成“已接入成功”。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

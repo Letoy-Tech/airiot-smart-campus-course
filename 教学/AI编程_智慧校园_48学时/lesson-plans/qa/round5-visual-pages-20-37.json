@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T18:50:36.658089+00:00",
+  "status": "PASS",
+  "reviewer": "qwen_course_research",
+  "scope": "实际逐页视觉检查第20—37页；不修改PDF，不代表本次课已执行或Windows打印验收。",
+  "sourcePdf": "lesson-plans/qa/round5-render/AI编程智慧校园48学时教案.pdf",
+  "sourcePdfSha256": "c2b4bff3a9795c6ccb7fc7667654de6f393b7f41ed86c5acab7070b0cfc430b2",
+  "pagesReviewed": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "count": 18,
+  "blockingIssues": [],
+  "pages": [
+    {
+      "page": 20,
+      "image": "lesson-plans/qa/round5-render/page-20.png",
+      "sha256": "a921b3376fa5b4a48c5ac108a109cc911f8f93fa54afb5f753f0451f48ca4dff",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "第07课标题、学习目标、质量边界60000/60001与5000/5001、AI任务示例完整；段落换行与页脚正常，无裁切。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 21,
+      "image": "lesson-plans/qa/round5-render/page-21.png",
+      "sha256": "8bf2f4c2327d2b78fccf034f9b8458ccd0ae3513570a0c2db04286aa8d56ff26",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "四学时活动表完整同页，第三学时1.2/null/0/1.8及第四学时完成后15秒刷新可读；评价、故障替代和反思区无重叠。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 22,
+      "image": "lesson-plans/qa/round5-render/page-22.png",
+      "sha256": "d2d6833d54a2168488dc86956af7aa4f1d97977713e4445abbde3bbe7e55a3ed",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "质量样例图整张呈现，七行value/time/质量/解释清晰；有效0、null、未来容差与字符串区别均可辨，图注与边界声明完整。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 23,
+      "image": "lesson-plans/qa/round5-render/page-23.png",
+      "sha256": "b44103bdc4d323f608b1dc48a85da7d5f041af7db86b7c76c47af67011efba88",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "第08课三个角色、四个身份、403拒绝与严格布尔说明完整；英文API/CSRF以及任务提示自然换行。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 24,
+      "image": "lesson-plans/qa/round5-render/page-24.png",
+      "sha256": "62f8e579f845192cc07ca527a9cd3efdd8c01f66dbcf5a670c7af890238dedb1",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "角色验证活动表未断行丢失，第三学时读200/写403说明可读；其余评价与故障替代区间距正常。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 25,
+      "image": "lesson-plans/qa/round5-render/page-25.png",
+      "sha256": "02eb868e6fdb366d27861fa80bf078c1b20f4e0234514948b46f52da8813cc66",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "角色与对象范围图完整，ADMIN、CAMPUS_MANAGER、CAMPUS_VIEWER分支及本人事件是/否箭头清楚，末端条件满足才允许动作未裁切。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 26,
+      "image": "lesson-plans/qa/round5-render/page-26.png",
+      "sha256": "992953e131240aa365fe2324db65e9e8ba2ffb97d604c6d0012192480d791b91",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "第09课关闭流程、409不自动重放说明与最小反例任务完整；标题和各级小标题层级清楚。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 27,
+      "image": "lesson-plans/qa/round5-render/page-27.png",
+      "sha256": "85a04bc3d5541671fcb77d3b5e8fc460d1cfbdb5b205bd262ad3f59cc148b94b",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "状态机活动四行、A/B身份、恢复/核实/关闭与409保留输入说明完整；下方评价及反思无跨页孤行。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 28,
+      "image": "lesson-plans/qa/round5-render/page-28.png",
+      "sha256": "6356d31d9461dc0cefd5d1efcfd6c80f685c691a5a7b5dfc91fbcaf9b49f090c",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "状态机图NEW/ASSIGNED/IN_PROGRESS/CLOSED完整；创建初始分派两支、重新分派路径与来源状态另存说明清晰；底部说明无裁切。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 29,
+      "image": "lesson-plans/qa/round5-render/page-29.png",
+      "sha256": "e17684510c12ee8f2b73c6f8a7669a8644f6f160afe59da39794a6dc552278c4",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "第10课版本检查、责任只影响未来事件、审计actor/time等文字完整；AI任务末句正常换行，页脚清楚。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 30,
+      "image": "lesson-plans/qa/round5-render/page-30.png",
+      "sha256": "b2fd1a2efa4df32f9173c34858aebd33a4cf6d5137568a00ac8df064bd3292f1",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "责任变更四学时表完整，E1/E2和A/B对照及IN_PROGRESS换行可读；未出现表格行切断或遮挡。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 31,
+      "image": "lesson-plans/qa/round5-render/page-31.png",
+      "sha256": "12bf42af605e7bc8d8ae1bd19b330acf23cc6a81ad3ab8f7a51f0379bc8bba28",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "当前责任与独立事件两条图支完整，对应时间线与版本字段清楚；黄色说明明确责任更新不改已有事件且无裁切。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 32,
+      "image": "lesson-plans/qa/round5-render/page-32.png",
+      "sha256": "aa92c94763679bc5ef38d7aecb13582ac119acdbf1a98d4122d6ee0f200bdd95",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "第11课真实MySQL、测试库隔离、400/403/409不等于回滚与mock边界完整；长准备说明自然换行。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 33,
+      "image": "lesson-plans/qa/round5-render/page-33.png",
+      "sha256": "fb1a309bb2e439c5049aa97697efc797753e9709747afa537f17498fd7896483",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "并发与回滚活动表完整，owner/NOTE两对象及主行更新后fault说明可读；个人补做与证据范围文字未丢失。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 34,
+      "image": "lesson-plans/qa/round5-render/page-34.png",
+      "sha256": "0747afc6170808d3aa0a82eb9268ca115888e07570ce93722e2e658578adc07a",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "五类测试证据加统一报告方式的六块图完整，构建/MySQL/API/浏览器/外部接入分区清楚；底部mock与构建限制清晰。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 35,
+      "image": "lesson-plans/qa/round5-render/page-35.png",
+      "sha256": "e3bacf89b050feece6eea170b130f9ab82233898e0134f67e45c0f40c9149f05",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "新第12课准备内容完整：空白演示库、14条NEW、分派2条、NEW12/ASSIGNED2/IN_PROGRESS0、每页10条、不清学生库、15组答辩均可读；manager-a自然跨行未裁切；skip=0及打包排除项完整。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 36,
+      "image": "lesson-plans/qa/round5-render/page-36.png",
+      "sha256": "23d1ee6b7322792fff557a4a99e979a5f3fdacfd9e349a48dae036df9692aa66",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "新第12课活动四行分钟数清楚：10+20+15、15+30、9组×5、6组×5+15均各45分钟；表格与个人退出题/答辩反馈完整，无重叠。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    },
+    {
+      "page": 37,
+      "image": "lesson-plans/qa/round5-render/page-37.png",
+      "sha256": "6fc8cb8968c170646a32a40a1712199796e191a46607d6a8ad08e00b43704567",
+      "width": 1414,
+      "height": 2000,
+      "method": "functions.view_image实际逐页查看原PNG（每次3页，未以OCR代替视觉检查）",
+      "observations": [
+        "交付流程01至07七个节点及蛇形箭头清楚，独立环境、真实身份、同伴复现、交接顺序可读；黄色验收边界、图注与末页页脚完整。",
+        "未见明显文字裁切、重叠、黑方块、破表或页脚碰撞。"
+      ],
+      "conclusion": "PASS"
+    }
+  ],
+  "notes": [
+    "本段覆盖第07—12课，每课3页：课程计划、教学活动与评价、完整配图。",
+    "第35—36页新增准备条件与分钟安排均实际核对。",
+    "仅报告本代理18页范围；第1—19页由父任务独立安排审阅。"
+  ]
+}

@@ -1,0 +1,1 @@
+{"scenario": "access-boundaries-http", "anonymousReadStatus": 401, "viewerIntegrationStatus": 403, "managerIntegrationStatus": 403, "adminIntegrationStatus": 200, "controlEnabled": false, "passed": true, "recordedAt": "2026-10-19T18:11:18.200468+00:00"}

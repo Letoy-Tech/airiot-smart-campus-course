@@ -1,0 +1,6 @@
+$ npm --prefix frontend run test:unit -- --run src/tests/http.test.ts --reporter=json --outputFile=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/evidence/debug-wrong.json
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run src/tests/http.test.ts --reporter=json --outputFile=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/evidence/debug-wrong.json
+
+JSON report written to /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/evidence/debug-wrong.json

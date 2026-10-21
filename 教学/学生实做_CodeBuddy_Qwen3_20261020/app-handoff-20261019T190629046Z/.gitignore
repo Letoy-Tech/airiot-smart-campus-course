@@ -1,0 +1,8 @@
+.private/
+node_modules/
+frontend/dist/
+backend/target/
+journey-backups/
+*.log
+.DS_Store
+lesson-bundles/**/files/

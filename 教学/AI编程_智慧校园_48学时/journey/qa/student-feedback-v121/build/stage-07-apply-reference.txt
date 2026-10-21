@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 07
+已导入完整参考：第07站。
+  frontend/src/views/AccessView.vue
+备份：journey-backups/2026-10-19T22-17-45-980Z-stage-07-apply-18c2cf
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f"
+  },
+  {
+    "path": "frontend/src/views/AccessView.vue",
+    "existed": false
+  }
+]

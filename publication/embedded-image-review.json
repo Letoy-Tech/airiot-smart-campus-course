@@ -1,0 +1,135 @@
+{
+  "changedHtmlOrText": [
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文教程_V1.0.2_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文初稿_V0.2_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文稿_V0.4_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文教程_V1.0_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文稿_V0.3_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/reading/AI编程图文教程_V1.0.1_单文件.html",
+      "allowed": 120,
+      "omitted": 40,
+      "externalized": 120
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/reader-sample-standalone.html",
+      "allowed": 3,
+      "omitted": 5,
+      "externalized": 3
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/08-browser-debug.json",
+      "allowed": 0,
+      "omitted": 2,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/03-browser-before-reopen.json",
+      "allowed": 0,
+      "omitted": 4,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/06-browser-debug.json",
+      "allowed": 0,
+      "omitted": 13,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/07-browser-debug.json",
+      "allowed": 0,
+      "omitted": 2,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/05-alarms-recovered-debug.json",
+      "allowed": 0,
+      "omitted": 1,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/04-browser-debug.json",
+      "allowed": 0,
+      "omitted": 5,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/03-browser-after-reopen.json",
+      "allowed": 0,
+      "omitted": 4,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/02-browser-debug.json",
+      "allowed": 0,
+      "omitted": 3,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/commands/09-03-browser-devices401-debug.json",
+      "allowed": 0,
+      "omitted": 1,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/从空白开始_手把手教程_V2.0.2.html",
+      "allowed": 0,
+      "omitted": 1,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/从空白开始_手把手教程_V2.0.0.html",
+      "allowed": 0,
+      "omitted": 1,
+      "externalized": 0
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/从空白开始_手把手教程_V2.0.1.html",
+      "allowed": 0,
+      "omitted": 1,
+      "externalized": 0
+    }
+  ],
+  "withheldUnverifiedImages": [
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/03-对话到文件.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/09-保存工具实图.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/10-编辑到验证.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/11-两个终端.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/07-接口传话.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/01-操作循环.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/02-文件位置.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/12-测试证据.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/08-贯穿追踪.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/04-范围取舍.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/05-需求判断.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/13-交付接力.png",
+    "教学/AI编程_智慧校园_48学时/walkthroughs/figures/06-页面草图.png"
+  ],
+  "keptDiagramFiles": 40,
+  "note": "Only PNGs paired with reviewed shape/text SVG sources are retained; original files remain local."
+}

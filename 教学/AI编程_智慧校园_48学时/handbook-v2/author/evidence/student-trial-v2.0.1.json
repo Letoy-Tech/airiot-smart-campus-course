@@ -1,0 +1,475 @@
+{
+  "updated": "2026-10-21T05:21:27.709233+08:00",
+  "trialSourceVersion": "2.0.1",
+  "revisedTextVersion": "2.0.2",
+  "passed": 64,
+  "total": 64,
+  "completeWithRecordedRemedies": true,
+  "v2_0_2_independent_retrial": false,
+  "actualModels": [
+    "Deepseek-V4.1-Flash 300K"
+  ],
+  "operator": "Codex operating CodeBuddy Craft and actual local terminals/browser",
+  "businessSourceAuthoring": "CodeBuddy Craft only; blank starter, no teacher implementation substitution",
+  "freshComposeHandoffVerified": true,
+  "notVerified": [
+    "Windows",
+    "another physical computer",
+    "independent human student",
+    "classroom timing",
+    "real campus or AIRIOT",
+    "real device control",
+    "external notifications",
+    "human oral answers"
+  ],
+  "steps": [
+    {
+      "id": "01-01",
+      "title": "第 1 步：让空白文件变成第一张页面",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt succeeded; browser verified separately from AI generation"
+    },
+    {
+      "id": "01-02",
+      "title": "第 2 步：给管理台搭出外框",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed; no corrective prompt needed"
+    },
+    {
+      "id": "01-03",
+      "title": "第 3 步：在概览中放三张卡片",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed"
+    },
+    {
+      "id": "01-04",
+      "title": "第 4 步：把外观和操作分开，让菜单能切换",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed"
+    },
+    {
+      "id": "01-05",
+      "title": "第 5 步：亲手改一次，留下第一课作品",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "Passed after1 actual remedy; original regression retained in issue and AX logs"
+    },
+    {
+      "id": "02-01",
+      "title": "第 1 步：把练习数据放进自己的前端",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Student visible check passed; AI internal error preserved in AX; no extra student remedial prompt"
+    },
+    {
+      "id": "02-02",
+      "title": "第 2 步：先让 16 台设备全部出现",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original step passed real browser check; AI DOM stub checks retained separately"
+    },
+    {
+      "id": "02-03",
+      "title": "第 3 步：加搜索和筛选，找到想看的设备",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed all4 required actual interactions"
+    },
+    {
+      "id": "02-04",
+      "title": "第 4 步：点“查看”，看到同一台设备的读数",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed student required checks; additional actual missing-value check passed"
+    },
+    {
+      "id": "02-05",
+      "title": "第 5 步：把真实模拟数量接回概览",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed;chapter2 completed5steps"
+    },
+    {
+      "id": "03-01",
+      "title": "第 1 步：把四个空间做成看得懂的页面",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original prompt passed; same existing device table reused"
+    },
+    {
+      "id": "03-02",
+      "title": "第 2 步：修改一个空间的楼栋和楼层",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Original student prompt passed actual required interactions"
+    },
+    {
+      "id": "03-03",
+      "title": "第 3 步：让刷新后的浏览器记得位置",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Actual save/refresh retained教学楼A/2层; device list/detail agreed; original tab1075951403 actually closed and newtab1075951408 reopened same origin; saved location retained. Browser storage only, no database."
+    },
+    {
+      "id": "03-04",
+      "title": "第 4 步：给一台设备登记负责人",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "d01 savedmanager/日常巡查联系这位处理人;refresh retained note;reopened form version1;otherdevices尚未登记;space教学楼A/2层 preserved. Browser demo only."
+    },
+    {
+      "id": "03-05",
+      "title": "第 5 步：从设备详情找到负责人，再回到空间",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "d01 detail→existingownerrow highlighted d01;updatednote/version2 then returningdetail read newnote;spaceentry highlighted s1/101教室 with教学楼A2层. Original visual target verified by screenshot and DOM; no duplicate pages."
+    },
+    {
+      "id": "04-01",
+      "title": "第 1 步：先把设备详情中的读数讲清楚",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Actual d05power0kW preserved;d03temperature缺失/time缺失/online未知;d04offline and较旧;fixed sample date warning shown. Original quality tags retained."
+    },
+    {
+      "id": "04-02",
+      "title": "第 2 步：在概览中指出哪些读数需要留意",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "Actual quality counts25/2/1/0 sum28points;4spaces and4categories each4devices;nonfresh3rows;d03temperature entry opened existingd03 detail with same missing/time/quality."
+    },
+    {
+      "id": "04-03",
+      "title": "第 3 步：能源页先只显示功率",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际能源页仅d05–d08四台，按空间分组；值0/1.6/1.8/2、kW标题、原采样时间和质量正确，没有环境设备或虚构费用卡片。"
+    },
+    {
+      "id": "04-04",
+      "title": "第 4 步：加电压切换，数值和单位一起换",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实浏览器功率→电压→功率，四台始终相同；电压为220/220.2/220.4/220.6 V，标题/列单位/值/质量/原时间同步；切回d05仍0 kW。"
+    },
+    {
+      "id": "04-05",
+      "title": "第 5 步：把概览、能源和设备台账连起来",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际先搜d01再从概览点能源，搜索被清空且只余d05–d08；收起d07详情保留energy筛选；概览201教室入口仅s2的d02/d06/d10/d14；能源d07入口详情ID正确，返回功率/电压仍可切换。"
+    },
+    {
+      "id": "05-01",
+      "title": "第 1 步：先从详情打开正确的历史表",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "从d05详情功率按钮进入真实历史页，地址为#history?deviceId=d05&tagId=power；设备/点位/单位一致，六行原时间样本，07:45缺失且其余真实0保留。"
+    },
+    {
+      "id": "05-02",
+      "title": "第 2 步：把历史表画成曲线",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实截图与DOM核对：d05功率5个0点均可见，SVG两段折线分别2/3点，07:45 null无点且不跨接；完整六行表保留并标明固定教学样本。截图已人工查看。"
+    },
+    {
+      "id": "05-03",
+      "title": "第 3 步：选择查看哪一段时间",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "原尝试真实刷新因historyRange未定义失败；补救后重测通过。d05/power全部6行，15分钟4行/3有效点含null断线，1小时6行；切voltage标题/单位/点值同步，地址与刷新选择保留、范围回全部。"
+    },
+    {
+      "id": "05-04",
+      "title": "第 4 步：回到能源页，比较同一种读数",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "d05/d06功率比较与切电压清空/重新选择比较通过；首尝试截图末刻度裁剪，经CodeBuddy补救后桌面和390窄屏截图首末时间完整，0与null断线仍正确。截图已查看，另保存共享历史图回归。"
+    },
+    {
+      "id": "05-05",
+      "title": "第 5 步：完成只能查看的原始报警页",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "重建同Chrome实例专用会话后实测：a01原字段SAMPLE_ACTIVE/NOTICE/原时间均保留；无匹配提示、清空恢复、单页翻页禁用正确；仅查看设备入口，定位d01并保留此前manager责任记录，无处理按钮。多页样本的真实浏览器翻页未验证，当前公开样本仅1条。"
+    },
+    {
+      "id": "06-01",
+      "title": "第 1 步：先做三个课堂身份和管理页说明",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实浏览器管理员/查看者切换通过：查看者空间编辑、责任登记入口隐藏但可读取；管理员入口恢复；管理页模拟标识、控制/通知关闭与前端权限说明明确；刷新身份回admin，位置与manager记录仍保留。"
+    },
+    {
+      "id": "06-02",
+      "title": "第 2 步：创建一条独立的演练事件",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "真实创建d02/case-1，待分派v1，刷新保留且a01原始报警不变。原提示词漏列来源/核实展示，补救后同一case-1显示ACTIVE未恢复、verified=false未核实；未新增事件、版本仍1。"
+    },
+    {
+      "id": "06-03",
+      "title": "第 3 步：分派、开始处理、写下做过的事",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际依次分派、manager开始、保存处置记录；case-1为IN_PROGRESS/version4，四条时间线；刷新回到admin后同一事件和记录仍在。"
+    },
+    {
+      "id": "06-04",
+      "title": "第 4 步：先恢复、再核实，最后关闭",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际提前关闭显示缺少来源恢复及核实且仍v4；管理员recover后IN_PROGRESS/v5，manager核实后仍IN_PROGRESS/v6；填结论关闭为CLOSED/v7；刷新7条成功时间线保留，无写按钮。"
+    },
+    {
+      "id": "06-05",
+      "title": "第 5 步：在管理页看操作记录，再试一次不允许的操作",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "原尝试创建case-2未写审计失败；精确补救后新建case-3，管理页只新增admin/创建演练/case-3/真实时间一条，刷新保留，旧case-1/2未伪造审计。已关闭无写按钮；viewer只读，manager对未分派事件无动作入口。"
+    },
+    {
+      "id": "06-06",
+      "title": "第 6 步：亲自走遍九个菜单，为后端准备清单",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "九个菜单实际矩阵通过；概览占位文案精确补救后复测16/4/28与四台能源筛选通过；空间/责任/关闭case-1 v7七时间线持久化，原始报警保持原值只读，能源功率/电压比较与历史缺失断线通过。9行数据清单及本人结果在IDE保存，截图已查看。"
+    },
+    {
+      "id": "07-01",
+      "title": "第1步：对着九个菜单，说清楚要保存什么",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "已读九菜单数据表；设备责任当前从localStorage owners读取/修改，将由MySQL与后端权限保存；MySQL长期业务与Redis短期登录分开。本课仅health。实际九菜单再点击、关闭case-1刷新仍v7且处置记录和七条时间线保留；未生成backend。"
+    },
+    {
+      "id": "07-02",
+      "title": "第2步：准备后端终端，确认它用的是 Java 17",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "新建IDE终端3 B-后端；原macOS命令Java17.0.12通过但Node26不符，补救后当前B使用Node22.21.1、Java17.0.12，JAVA_HOME为JBR17 JDK根、cwd campus-lab。A页面继续运行，C工具独立；未改全局，未创建backend。"
+    },
+    {
+      "id": "07-03",
+      "title": "第3步：让 AI 只做一个“启动成功”接口",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "CodeBuddy仅生成Java17/SpringBoot3.4.2最小Web后端，保留隐藏.mvn工具；frontend未改变，无MySQL/Redis依赖或其他业务接口。本人在B执行cd backend、sh ./mvnw test：HealthControllerTest实际1项，0失败/0错误/0跳过，BUILD SUCCESS。"
+    },
+    {
+      "id": "07-04",
+      "title": "第4步：启动 B，再从网页地址读它的回答",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "serve.mjs哈希未变，A未重启；8098启动前空闲，本人在B运行spring-boot:run，Tomcat/Java PID10975只监听127.0.0.1:8098；新owned浏览器标签1075951446实际经5188/api/health显示code0/messageok/data.statusUP。Chrome现有JSON查看扩展自动格式化显示。"
+    },
+    {
+      "id": "07-05",
+      "title": "第5步：在网页上看见后端在线，再亲手验证断开",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实浏览器三次点击：B运行显示已连接，原生IDE仅Ctrl+C停止B后再次点击显示HTTP503失败，同一B重启后再次点击恢复已连接；设备仍教学模拟，停止B时d05功率0与16台可读。启动笔记已在IDE写入本人三次结果；5秒超时代码已核对，未将未模拟长延迟声称为真实实验。"
+    },
+    {
+      "id": "08-01",
+      "title": "第1步：生成自己的本机配置",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "本人C终端Node22运行生成工具，实际创建4个不同口令字段（40/40/40/20位）、mode600且不显示值；再次运行拒绝覆盖，现有.env opaque比对未变。精确补救统一重复运行帮助文案后再实际运行，提示保留并沿用，配置仍未变。脚本crypto随机/wx排他/.env.example占位与忽略规则已核对；未读取无关私密配置。"
+    },
+    {
+      "id": "08-02",
+      "title": "第2步：让课程 MySQL 运行起来",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "本人C启动MySQL原尝试因healthcheck.sh不存在失败；按本步补救仅修改healthcheck后重新up，实际ps与inspect均为healthy，端口127.0.0.1:23501，仅mysql服务。专属命名卷campus-v2_mysql-data的Name/CreatedAt前后一致，无删卷、无.env覆盖或重新初始化；健康检查已用campus账号实际执行SQL。"
+    },
+    {
+      "id": "08-03",
+      "title": "第3步：让 Java 认识数据库，并建立设备表",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "本人B使用Java17运行Maven：1项健康接口测试，0失败/0错误/0跳过，BUILD SUCCESS；再启动后端，Flyway真实首次应用V1成功，Tomcat PID51923启动。浏览器5188/api/health实际UP；C只读SQL核对spaces4、devices16、d03 online=NULL、d04 online=0、simulated均1，Flyway version1/success1。尚未实现设备API，页面仍演示。"
+    },
+    {
+      "id": "08-04",
+      "title": "第4步：让设备接口读出十六台设备",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "本人B实际Maven5项测试0失败/0错误/0跳过，启动PID55939；Flyway校验V1且No migration necessary。新owned浏览器API标签1075951455实际显示SQL查询16台，各类4台，d01 true/d03 null/d04 false/simulated true；独立UI字段校验通过，无mock响应兜底。"
+    },
+    {
+      "id": "08-05",
+      "title": "第5步：只把设备页接到新接口",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际浏览器：16台，能源筛选4台；打开d05后重新读取仍为d05，读取时间更新；基本信息标MySQL，空间名称/责任标浏览器演示，点位/历史标公开教学样本；d03未知、d04离线，空间和事件仍为浏览器演示。"
+    },
+    {
+      "id": "08-06",
+      "title": "第6步：确认数据保存了，失败也说清楚了",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "实际浏览器及IDE：B停止后刷新显示503与上次成功结果，能源4/16及d05详情保留；B恢复重试清错并更新时间；先停B重启MySQL等healthy后再起B仍16台，V1校验无重复迁移，原卷创建时间不变；首次读取失败无模拟列表；本人通过IDE填完检查表。"
+    },
+    {
+      "id": "09-01",
+      "title": "第1步：启动只属于本课程的 Redis",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "Redis7.4已实际启动并healthy；认证、关闭RDB/AOF和空会话库实测通过。已纠正compose config输出无口令的过度说明。"
+    },
+    {
+      "id": "09-02",
+      "title": "第2步：建立三个有不同职责的账号",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B终端Java17实际18项测试全部通过；V2迁移和账号初始化完成，SQL元数据确认admin/ADMIN、manager/MANAGER、viewer/VIEWER启用且摘要长度60（未输出摘要）；V1/V2均success。实际浏览器health为code0/statusUP。随后只停止本课程B。"
+    },
+    {
+      "id": "09-03",
+      "title": "第3步：让后端签发和检查登录凭条",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B终端Java17实际46项测试全通过；浏览器直开设备接口实际HTTP401。真实本机MySQL/Redis的16项HTTP检查通过：缺/失效凭条及错误密码拒绝、MANAGER登录响应与me都为规范manager/MANAGER、带凭条读取16台、退出后原凭条无法再读me/devices。403当前仅测试控制器单元验证，真实业务写权限待第10/11课。"
+    },
+    {
+      "id": "09-04",
+      "title": "第4步：保留原页面，加上真正的登录与退出",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "实际浏览器选择backend后无演示身份切换；admin/ADMIN真实登录读取16台，打开d05后退出清掉列表详情且密码为空，Redis会话数实测从1(剩1772秒)到0。再登录后整页刷新保留backend偏好但要求重登、无旧设备内容。源码检查凭条只在data-service内存，持久化仅演示资料与模式偏好。登录期间未采集调试载荷，密码操作不记值。"
+    },
+    {
+      "id": "09-05",
+      "title": "第5步：用三个账号核对“谁能做什么”",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实浏览器依次admin/manager/viewer登录，/api/me角色分别ADMIN/MANAGER/VIEWER，管理职责表仅高亮当前角色且明确真实写入下一课接通；三个账号都读取16台MySQL设备。每次退出清除登录头、设备和d05详情及密码；下个账号未带入旧详情。未以隐藏按钮宣称真实写权限通过。"
+    },
+    {
+      "id": "09-06",
+      "title": "第6步：重启 Redis，观察登录失效而设备仍在",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "真实浏览器保持admin设备页，C重启Redis并等healthy，DBSIZE为0；点击重新读取设备实际HTTP401、旧登录与表格详情清空，仍为backend且无演示身份；停止捕获后同一admin重新登录仍16台、d03未知/d04离线，读取时间更新。MySQL原卷创建时间不变。本人经IDE填7行实验结果；课末A/B及两个课程容器均停止，数据卷保留。"
+    },
+    {
+      "id": "10-01",
+      "title": "第1步：把公开练习读数放进数据库",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B Java17实际56项测试全通过；V3真实迁移完成，SQL核对spaces4/devices16/users3/points28/history168/alarms1/owners0及V1/2/3success。真实overview需登录，五组数据逐字段/类型/数值对照公开fixture全部一致，null/0/单位/采样时间及历史排序保留。浏览器admin重新登录、后端已连接；概览前端仍如实标浏览器演示，尚未替换。"
+    },
+    {
+      "id": "10-02",
+      "title": "第2步：接通概览和能源，保留每个数值的含义",
+      "status": "PASS",
+      "submissions": 3,
+      "result": "实际浏览器：主动demo恢复16/4/28和4能源，切backend清演示并要求登录；真实后端概览16/4/28，空间卡片筛选s1且d05详情一致；能源仅d05-08，功率0/1.6/1.8/2 kW切到220/220.2/220.4/220.6 V，旧kW曲线清除。d05 V历史实际5有效样本、2折线段(null断点与0有效)。停B后两页503均保留旧快照且backend不变；能源错误移至刷新按钮旁并实际截图确认首屏可见；B恢复重试清错并更新读取时间。"
+    },
+    {
+      "id": "10-03",
+      "title": "第3步：让历史入口带对设备，让原始报警保持只读",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "实际浏览器3条入口均通过：d05详情→power/kW历史、能源d06电压→voltage/V历史（实际2段、2+3有效点/null断点0有效）、报警a01只读→d01详情。补齐详情点位真实/api/overview读取，d05为0kW、d03缺失且无采样时间；空间/责任仍明确演示。停B再开详情得到503且无模拟点位顶替；B恢复后收起重开清错，3条入口重测通过。报警仅查看及禁用分页按钮，未做多页真实样本。"
+    },
+    {
+      "id": "10-04",
+      "title": "第4步：让空间修改真正保存，刷新还能看见",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "B实跑63测试通过；admin保存s1教学楼 A/1层，抓包PUT200后独立GET200回读，整页刷新重新登录仍一致，设备详情同步。viewer仅能查看；C真实HTTP5检查通过：viewer/manager伪造body.role仍403且记录不变，匿名GET401。V1/V2/V3哈希未变。"
+    },
+    {
+      "id": "10-05",
+      "title": "第5步：把设备责任交给管理人员，并处理旧版本",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "B先69、补救后76项测试通过；d01首次0→1，整页刷新重新登录保留；两标签都读1，第一保存2，第二仅PUT409+GET200回读2、无自动重发且不覆盖。严格版本补救后真实HTTP10项检查通过，合法页面保存2→3、独立GET回读及重新登录持久化；viewer只读。设备详情同步MySQL空间/责任。已在IDE填写第10课进度，A/B及专属Compose均停止，卷保留。"
+    },
+    {
+      "id": "11-01",
+      "title": "第1步：建立第一件真正保存的演练事件",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B85测试通过；V4实际迁移成功并冻结哈希。初始数据库事件0，未混旧LS；admin页面创建d01 case-325d4eefe557自动ASSIGNED/manager/v1，d02 case-34586bbc372f为NEW/未分派/v1；两次均POST200后独立GET200，ACTIVE/verified=false及各一条admin创建时间线。C SQL确认两件事件及两条时间线落库，设备16、报警1、V1–V4成功；audit本步仅建表0条，不伪造历史。截图已实际查看。"
+    },
+    {
+      "id": "11-02",
+      "title": "第2步：分派给 manager，再换人开始处理",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B115项测试通过；V1–V4哈希未变。admin为case-34586bbc372f分派manager并写请进行现场巡查，v1→2；退出以manager登录同一事件，开始v2→3，记事已检查练习点位，继续观察v3→4且状态IN_PROGRESS。三次均POST后独立GET回读，时间线create/assign/start/note，操作者admin/admin/manager/manager；C直接SQL确认主记录v4、时间线4条及对应三条实际审计，中文完整，原自动分派事件仍v1。截图已查看。"
+    },
+    {
+      "id": "11-03",
+      "title": "第3步：先恢复，再核实，最后写结论关闭",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "B140项测试通过，V1–V4哈希未变。manager在v4实际看见缺来源恢复/核实；admin恢复v4→5仍IN_PROGRESS/RECOVERED/false；manager核实v5→6仍IN_PROGRESS且结论空；填写本次教学演练已核查完成关闭v6→7，CLOSED/RECOVERED/true，处置记录保留，七条timeline。每次POST后独立GET；关闭后无可写按钮。整页刷新重新登录同一manager与同一ID仍v7/结论/完整时间线。C SQL确认主记录、7条时间线、6条对应动作审计。已打开检查关闭与重新登录截图，末条完整可读。"
+    },
+    {
+      "id": "11-04",
+      "title": "第4步：接通审计和接入状态",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "原尝试在CodeBuddy摘要后只完成后端部分，保留失败源码/AX；实际补救后B153项测试通过，V1–V4不变。admin真实管理页读取原6条动作审计；空间PUT/GET后space.update增为7，责任合法保存v3→4后owner.save增为8，新建case-cdb7152ececf后case.create增为9，未追补旧2次创建。integration四字段为TEACHING_MOCK/true/false/false。切viewer真实GETaudit403，旧表与事件ID清除而integration可见；C真实HTTP8检查通过：匿名两接口401、admin审计200、manager/viewer审计403，三角色integration200且布尔严格正确。admin/viewer截图已打开。"
+    },
+    {
+      "id": "11-05",
+      "title": "第5步：断开后端，检查失败提示；用测试检查拒绝",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "CodeBuddy两次实现，补显式事件重读入口。实际停B重读503且3条上次成功结果保留；恢复重试GET200、错误清除，主事件CLOSED v7未变。20项实际HTTP拒绝检查逐次回读cases/spaces/owners/audit均无改写；B实际Maven153测试0失败，C Node22守卫3测试0失败。四份已应用迁移哈希保持。"
+    },
+    {
+      "id": "11-06",
+      "title": "第6步：完整走一遍，留下自己的说明",
+      "status": "PASS",
+      "submissions": 1,
+      "result": "CodeBuddy更新九菜单接口说明，清理已接后端的旧localStorage演练/审计读写；实际重载管理员九菜单、d05功率到同点位历史、s1空间保存并重登录回读、d01责任4→5保存回读、新case-7ad8f370a898自动ASSIGNED manager v1；旧闭环case-34586bbc372f仍CLOSED v7/时间线7。审计12条对应新增3次成功写入。viewer九菜单只读、审计403且旧审计清理。实际记录已在IDE填写并保留第10课原段；真人同伴未测。"
+    },
+    {
+      "id": "12-01",
+      "title": "第1步：把启动说明写成别人照着就能做的顺序",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "原README实际审读发现整树复制后删除env/target及移除旧容器建议，第二次CodeBuddy仅文档修复为最新公开导出、全新目录、旧容器只stop保留、固定容器名冲突待实际验证。IDE逐个打开setup-env、compose、mvnw、serve、公开样本；核对notes和合并记录，前六课按课次带入，第10/11实际记录保留。Windows/新目录尚未执行如实标记。"
+    },
+    {
+      "id": "12-02",
+      "title": "第2步：导出源码，亲自看清楚带走了什么",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "C实际执行hand-in-v1公开导出140文件；8项副本边界测试发现大文件泄漏与项目祖先符号链接漏拦。仅CodeBuddy修工具后另导出hand-in-v2，140文件全字节口令比对无命中、SHA256逐个匹配；同8项全部通过。访达显示隐藏文件，确认根.env.example与backend/.mvn/mvnw/mvnw.cmd保留，无.env/target/node_modules。旧导出和失败证据保留，不等同新目录运行。"
+    },
+    {
+      "id": "12-03",
+      "title": "第3步：在新目录生成新配置，用独立数据库重新启动",
+      "status": "PASS",
+      "submissions": 3,
+      "result": "访达从hand-in-v3复制140文件到全新空handoff、全哈希一致，新.env生成一次且四项值与原不同。首次-p新项目up实际固定容器名Conflict；CodeBuddy仅移除两固定名并修注释/README，保留旧容器/双env/双卷后同项目重试healthy。新卷独立、旧卷保留；新B153测试、EmptySchema应用V1–V4，新A真实handoff路径；新口令登录16设备4空间3用户、责任/事件/审计0，无旧个人改动。修复已在原IDE同步两文件并导出v4，140文件与运行副本逐个相同。"
+    },
+    {
+      "id": "12-04",
+      "title": "第4步：照清单重做，确认交付的是能继续使用的作品",
+      "status": "PASS",
+      "submissions": 2,
+      "result": "新目录清单由CodeBuddy留空；实际发现设备页负责人来源旧文案，仅CodeBuddy修三处文字/注释后重载验证。新库d01温度到同点位历史，s1交接教学楼/3层保存后刷新重登仍一致；d01manager责任0→1；新case-a4b66d456baa自动ASSIGNEDv1，manager开始v2/记事v3、admin恢复v4、manager核实v5/关闭v6，timeline6，审计8。viewer九菜单只读/审计403，独立新环境HTTP伪造角色写403且四项快照不变；整页重登仍CLOSEDv6/RECOVERED/verified=true/结论。C SQL一致。实际六项记录在IDE填写并与确认源码同步回原工程；同机新目录，不冒充另一电脑/真人同伴。"
+    },
+    {
+      "id": "12-05",
+      "title": "第5步：交出作品，亲口说明它是怎样做出来的",
+      "status": "PASS",
+      "submissions": 4,
+      "result": "CodeBuddy按实际记录生成交付说明、五道口头题无答案；经实际审读修正阶段保存方式/迁移顺序、工具来源、旧卷证据边界、导出历史、notes交付入口和收尾状态；仅同步确认文件与实际记录回原IDE。原C先按教材导出hand-in-final141文件并实际开两说明核对；随后新A/B正常退出、新C显式-p stop，两新两旧容器Exited(0)、双卷双env保留。收尾文字更新后另名hand-in-final-2，141文件SHA逐项与原/新源码全相同，两说明含新闭环且再次打开；四课程端口无监听。原导出与失败证据全部保留。真人口试/独立学生/另一机器未验证。"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+第04站 本地位置登记
+模式：teacher-db
+目标：校园、楼栋、空间绑定保存并回读
+  阶段装配  frontend/src/journey/registry.ts
+  阶段装配  frontend/src/journey/features.ts
+  学生业务  frontend/src/views/LocationsView.vue
+
+本次契约：GET /locations；POST campuses/buildings；PUT spaces/{spaceId}；管理员写，合法引用
+人工过关：保存重读；非法引用拒绝；查看者403；原关系不变
+完整参考：lesson-bundles/stage-04/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "docxCount": 4,
+  "officialPdfCount": 1,
+  "docxPagesVisuallyReviewed": 60,
+  "officialPdfPages": 37,
+  "officialPdfPixelsIdenticalToSource": true,
+  "sourceOriginalsUnchanged": true,
+  "bodyAndPackageMetadataChecks": "PASS",
+  "documents": [
+    {
+      "path": "AIRIOT大灣區高校產業聯盟_高校加入協議_範本.docx",
+      "sha256": "f0a2f55302c6ca6473be78f75de75d1f02066675342aefb6dc70b9654597bbb8",
+      "bytes": 40723
+    },
+    {
+      "path": "共建协议_粤炬(澳门)科技有限公司_联盟合作修订版.docx",
+      "sha256": "f83a11d32ae05fd17154c488b0f66b0e198ec935a0e9bcbc710a413fe93bb71d",
+      "bytes": 29354
+    },
+    {
+      "path": "教学/智能软件工程教材大纲_通用版.docx",
+      "sha256": "cd346e858f01a711f31340fbe8b25ff05492e685510ab772f4e4c528b2111ce2",
+      "bytes": 32511
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/AI编程智慧校园48学时教案.docx",
+      "sha256": "f174441b956708cb18e94dd1404454413a3ad8973a2a091cfdd2b41eb7f799cf",
+      "bytes": 2973374
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/AI编程智慧校园48学时教案.pdf",
+      "sha256": "4be4530e591a7b1761e78dcf81aecef98058a8387e84bb160a170c51247afba3",
+      "bytes": 3421690
+    }
+  ]
+}

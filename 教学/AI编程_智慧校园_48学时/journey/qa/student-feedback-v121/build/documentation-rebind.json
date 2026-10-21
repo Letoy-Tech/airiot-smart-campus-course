@@ -1,0 +1,12 @@
+{
+  "status": "PASS_IDENTICAL_GENERATED_OUTPUTS",
+  "executedSourceManifestSha256": "d67dc2cdddd7ef6b3a0de39395db1ecbc2fd574efdccee162e3aefa4ddca8336",
+  "finalSourceManifestSha256": "486742faf2c8c5d57e2a3b312aa02b0ebf2dd4f731e00dff01c0492517ce0217",
+  "authorVerificationSha256": "5715d7457a0d80a5164bc10c6178d8f48a15690983823fa5dae4f357b764c243",
+  "changedSourceDocuments": [
+    "README.md"
+  ],
+  "generatedOutputCount": 572,
+  "generatedOutputsChanged": [],
+  "interpretation": "Only source README changed after stage execution; every generated file byte is identical. Existing stage tests apply to those exact bytes, not to a new AI session."
+}

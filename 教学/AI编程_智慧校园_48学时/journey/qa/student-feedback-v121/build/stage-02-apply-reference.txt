@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 02
+已导入完整参考：第02站。
+  frontend/src/views/FirstDeviceRead.vue
+备份：journey-backups/2026-10-19T22-17-27-848Z-stage-02-apply-eb1582
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

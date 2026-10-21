@@ -1,0 +1,295 @@
+{
+  "runId": "d25b2c78ee8aa",
+  "coverage": [
+    "from_start",
+    "task_tab",
+    "text_bodies_bounded",
+    "time_window_not_causality",
+    "page_main_frame",
+    "worker_targets_not_captured",
+    "manual_main_frame_only",
+    "initial_load_not_recorded"
+  ],
+  "droppedRequests": 0,
+  "droppedOperations": 0,
+  "requests": [
+    {
+      "id": "d25b2c78ee8aa:n2",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/locations",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106679952.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n4",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/locations",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106690365.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n6",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/locations",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106698092.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n8",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarms?skip=0&limit=50",
+      "status": 502,
+      "state": "complete",
+      "started_at": 1791106734003.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n9",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarms?skip=0&limit=50",
+      "status": 502,
+      "state": "complete",
+      "started_at": 1791106764216.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n11",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/integrations/airiot/status",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106778990.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n13",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": null,
+      "state": "failed",
+      "started_at": 1791106843097.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n14",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": null,
+      "state": "failed",
+      "started_at": 1791106858110.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n15",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": null,
+      "state": "failed",
+      "started_at": 1791106873115.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n1",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/locations/campuses",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106679936.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n3",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/locations/buildings",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106690348.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n5",
+      "method": "PUT",
+      "url": "http://127.0.0.1:5173/api/campus/locations/spaces/demo_room_101",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106697940.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n50",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/src/api/campus.ts",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106880121.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n64",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106880193.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n82",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106880280.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n84",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106895655.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n85",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106910992.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n88",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106911164.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n89",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106926794.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n101",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106929647.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n102",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/devices/facility_demo_01/simulated-switch",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106938113.0,
+      "data": {
+        "auditId": "97a52372-7909-40b5-afce-6983ab051273",
+        "deviceId": "facility_demo_01",
+        "before": false,
+        "requested": true,
+        "confirmed": true,
+        "observedAt": 1791106938327
+      }
+    },
+    {
+      "id": "d25b2c78ee8aa:n103",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106938330.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n104",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106944991.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n105",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106960344.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n107",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=facility_demo_01&tagId=run_state&from=1791103372061&to=1791106972061",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106972063.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n106",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/devices/facility_demo_01/simulated-switch",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106971913.0,
+      "data": {
+        "auditId": "94dd0497-5c76-45a0-b8d8-9c8f81d67738",
+        "deviceId": "facility_demo_01",
+        "before": true,
+        "requested": false,
+        "confirmed": false,
+        "observedAt": 1791106972189
+      }
+    },
+    {
+      "id": "d25b2c78ee8aa:n108",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106972238.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n109",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106975716.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n110",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791106991082.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n111",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791107006479.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n112",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791107021858.0
+    },
+    {
+      "id": "d25b2c78ee8aa:n113",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791107037209.0
+    }
+  ],
+  "note": "Capture began after login; includes earlier query failures and BE restart interruption. Successful latest requests are acceptance evidence.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

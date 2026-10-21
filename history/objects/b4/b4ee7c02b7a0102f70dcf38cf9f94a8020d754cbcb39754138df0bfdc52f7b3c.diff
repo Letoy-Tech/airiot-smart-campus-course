@@ -1,0 +1,133 @@
+--- before/.gitignore
++++ after/.gitignore
+@@ -5,3 +5,4 @@
+ journey-backups/
+ *.log
+ .DS_Store
++lesson-bundles/**/files/
+--- before/CODEBUDDY.md
++++ after/CODEBUDDY.md
+@@ -2,7 +2,7 @@
+ 
+ 你在CodeBuddy独立IDE中协助学生制作同一个校园平台。先读journey-state.json，再读lesson-bundles/stage-NN/manifest.json（NN是当前站），以及docs/项目卡.md和docs/接口与数据.md。不了解当前阶段时先说明缺什么，不猜当前完成状态。
+ 
+-- 主线是学生使用CodeBuddy完成本次明确业务文件；完整参考源码可以读，但不得把参考导入声称为你已原创或测试通过。
++- 本轮为独立学生实做评估，用户禁止读取教师业务答案。仅允许读取lesson-bundles/stage-NN/manifest.json元数据；禁止读取或检索lesson-bundles/**/files/**、journey-backups/**及其他教师参考源码，禁止progress apply。只根据当前实际学生文件和已提供的公共底座/API实现。此条由操作者据本轮用户授权补充，不是学生业务实现。
+ - 每次只修改学生本次要求的目标文件。不要自行begin/apply下一站；开始阶段必须由学生明确操作。
+ - begin只准备当前底座与未完成骨架；verify只检查当前前端类型、单元测试、构建，不能证明真实HTTP、MySQL、Windows或AIRIOT通过。
+ - 不读取、检索、输出或上传.private、账号密码、数据库配置、Cookie、请求头、HAR。此文件是行为约束，不是操作系统权限隔离。需要环境时请教师配置；只引用脱敏错误。
+--- before/frontend/src/views/DeviceCatalog.vue
++++ after/frontend/src/views/DeviceCatalog.vue
+@@ -4,7 +4,7 @@
+ import SourceBanner from '../components/SourceBanner.vue'
+ import { useCompletionPolling } from '../composables/useRequestScope'
+ import { categoryNames, filterDevices, timeText, type DeviceFilter } from '../domain/course'
+-import { catalogHash, readCatalogFilter } from '../domain/read-models'
++import { catalogHash, historyHash, readCatalogFilter } from '../domain/read-models'
+ import { useCampusStore } from '../stores/campus'
+ import type { Device } from '../types/campus'
+ 
+@@ -350,6 +350,7 @@
+             <code>{{ tag.id }}</code>
+             <span>{{ tag.name }}</span>
+             <small>{{ tag.unit || '无单位' }}</small>
++            <a class="history-link" :href="historyHash(selectedDevice.id, tag.id)">查看点位历史</a>
+           </li>
+         </ul>
+       </template>
+@@ -431,6 +432,13 @@
+   color: var(--muted);
+   font-size: 0.7rem;
+ }
++.detail-tags .history-link {
++  margin-top: 3px;
++  color: var(--accent);
++  font-size: 0.72rem;
++  text-decoration: underline;
++  text-underline-offset: 4px;
++}
+ @media (max-width: 740px) {
+   .device-cards {
+     grid-template-columns: 1fr;
+--- before/frontend/src/views/EnergyView.vue
++++ after/frontend/src/views/EnergyView.vue
+@@ -1,5 +1,6 @@
+ <script setup lang="ts">
+ import { computed, ref } from 'vue'
++import CompareHistory from '../components/CompareHistory.vue'
+ import ReadStatus from '../components/ReadStatus.vue'
+ import SourceBanner from '../components/SourceBanner.vue'
+ import { getOverview } from '../api/full'
+@@ -63,6 +64,20 @@
+ const orphanPoints = computed(() =>
+   unitPoints.value.filter((point) => !deviceById.value.has(point.deviceId)),
+ )
++
++/** 对比组件只接收一个 tagId：取当前单位下覆盖设备最多的标签，切换单位即换标签，不跨单位。 */
++const compareTagId = computed(() => {
++  const counts = new Map<string, number>()
++  for (const device of devices.value) {
++    for (const tag of device.tags) {
++      if (tag.unit === unit.value) counts.set(tag.id, (counts.get(tag.id) ?? 0) + 1)
++    }
++  }
++  const ranked = [...counts.entries()].sort(
++    (left, right) => right[1] - left[1] || left[0].localeCompare(right[0]),
++  )
++  return ranked[0]?.[0] ?? ''
++})
+ 
+ function buildGroup(id: string, name: string, deviceList: Device[]): SpaceGroup {
+   const ids = new Set(deviceList.map((device) => device.id))
+@@ -271,6 +286,19 @@
+           单位不换算，kW 与 kWh 不混用。
+         </p>
+       </section>
++
++      <p class="field-help compare-note">
++        下方历史比较只查当前单位对应的点位
++        <code>{{ compareTagId || '无' }}</code>；设备与观察时刻取自本次 overview 响应，
++        各台单独查询，一台失败不影响其他曲线。仅读取，不写入。
++      </p>
++      <CompareHistory
++        :devices="devices"
++        :tag-id="compareTagId"
++        :unit="unit"
++        :observed-at="overview.observedAt"
++        title="能源历史逐台比较"
++      />
+     </template>
+   </section>
+ </template>
+@@ -298,6 +326,9 @@
+ }
+ .energy-toolbar .field-help {
+   margin: 0;
++}
++.compare-note {
++  margin: 0 0 14px;
+ }
+ .space-card {
+   margin: 0;
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -135,7 +135,18 @@
+     "frontend/src/types/read-models.ts": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+     "frontend/src/composables/useReadPage.ts": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 6,
++    "at": "2026-10-19T18:06:59.840Z",
++    "sourceFingerprint": "57b4d5e3e88a648c46cf7e8eb4e625ed9970581fdfd483d1e987f09c8a2fb8fc",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

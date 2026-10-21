@@ -1,0 +1,17 @@
+# Environment variable names for manually configured Spring Boot execution.
+# The local-runtime.py path generates its own independent DB/Redis/JWT credentials.
+CAMPUS_DB_URL=jdbc:mysql://127.0.0.1:13316/smart_campus
+CAMPUS_DB_USERNAME=smart_campus
+CAMPUS_DB_PASSWORD=
+CAMPUS_REDIS_HOST=127.0.0.1
+CAMPUS_REDIS_PORT=16379
+CAMPUS_REDIS_PASSWORD=
+CAMPUS_JWT_SECRET=
+AIRIOT_BASE_URL=
+AIRIOT_PROJECT_ID=000000000000000000000001
+AIRIOT_APP_KEY=
+AIRIOT_APP_SECRET=
+# Optional integrations remain unconfigured. Never put these into frontend VITE_* variables.
+QWEN_API_KEY=
+ALIBABA_CLOUD_ACCESS_KEY_ID=
+ALIBABA_CLOUD_ACCESS_KEY_SECRET=

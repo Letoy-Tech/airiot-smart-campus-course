@@ -1,0 +1,3 @@
+继续第11站最后一组真实回归。上轮监测4文件已修复；本轮仅允许修改 frontend/src/views/RawAlarmsView.vue 和 AuditView.vue。请读已@的read-pages.test.ts和当前公共API/权限类型。禁止修改测试、依赖、其他业务或公共文件、后端、装配和tools；不读私有凭据、lesson-bundles/**/files、journey-backups，不progress apply、不启服务、不迁移。
+请修复实际语义：报警翻页失败仍显示旧行及原页码，例如“当前快照第 1 页”，同时明确本轮“查询第 2 页”；成功空结果清旧行，保留现有30秒不重叠轮询/AbortScope。审计读取必须canAdmin===true且canAudit===true，非法字符串true不接受；权限在页面存活期间撤销须取消请求并清已缓存数据和表格，严禁旧请求回填；无权限说明包含“只有管理员”，历史样例必须明说“本页不能发送命令”。保留来源/模拟标志/失败和成功空的区别。不要写针对测试样例ID的分支。
+直接实施并运行 npm --prefix frontend run test:unit -- --run src/tests/read-pages.test.ts 及 npm --prefix frontend run type-check，简短报告真实结果。

@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "status": "IMPLEMENTED_LOCAL_MYSQL_VERIFIED",
+  "basePath": "/api",
+  "envelope": {
+    "code": "0 success; HTTP error status otherwise",
+    "message": "ok or safe error identifier",
+    "data": "route data or null"
+  },
+  "errors": {
+    "400": "INVALID_REQUEST",
+    "401": "AUTHENTICATION_REQUIRED / IDENTITY_DISABLED / BAD_CREDENTIALS",
+    "403": "ACCESS_DENIED / CSRF_INVALID",
+    "404": "NOT_FOUND",
+    "409": "VERSION_CONFLICT / STATE_CONFLICT / DUPLICATE_NAME",
+    "500": "PERSISTENCE_FAILED",
+    "501": "TEACHING_TODO_NOT_IMPLEMENTED in first-chain only",
+    "503": "DEMO_DISABLED / AIRIOT_NOT_CONFIGURED"
+  },
+  "profiles": {
+    "first-chain": "existing 1 space/2 devices; no DB writes",
+    "teacher-db": "4 spaces/16 devices/28 points; full persisted teaching business"
+  },
+  "models": {
+    "Issue": {
+      "code": "string",
+      "message": "string",
+      "scope": "string"
+    },
+    "Campus": {
+      "id": "string",
+      "name": "string"
+    },
+    "Building": {
+      "id": "string",
+      "campusId": "string",
+      "name": "string"
+    },
+    "Binding": {
+      "spaceId": "string",
+      "buildingId": "string",
+      "floor": "string|null"
+    },
+    "Point": {
+      "deviceId": "string",
+      "tableId": "string",
+      "tagId": "string",
+      "value": "number|null",
+      "time": "epoch-ms|null",
+      "quality": "fresh|stale|missing|invalid",
+      "unit": "string"
+    },
+    "AlarmCase": {
+      "id": "string",
+      "sourceId": "string",
+      "scenario": "string",
+      "deviceId": "string",
+      "deviceName": "string",
+      "message": "string",
+      "sourceType": "DEMO",
+      "sourceScope": "LOCAL_DEMO",
+      "simulated": true,
+      "level": "DEMO_NOTICE",
+      "occurredAt": "epoch-ms",
+      "sourceState": "ACTIVE|RECOVERED|UNKNOWN",
+      "sourceRawStatus": "string",
+      "sourceRecoveredAt": "epoch-ms|null",
+      "sourceObservedAt": "epoch-ms",
+      "sourceVerifiedAt": "epoch-ms|null",
+      "sourceCheckOutcome": "PENDING|PASS|UNKNOWN",
+      "state": "NEW|ASSIGNED|IN_PROGRESS|CLOSED",
+      "assigneeUid": "string|null",
+      "assigneeName": "string|null",
+      "createdAt": "epoch-ms",
+      "updatedAt": "epoch-ms",
+      "closedAt": "epoch-ms|null",
+      "disposition": "string|null",
+      "version": "integer >= 1"
+    },
+    "CaseTimeline": {
+      "id": "string",
+      "caseId": "string",
+      "action": "DEMO_TRIGGER|ASSIGN|START|NOTE|DEMO_RECOVER|VERIFY_RECOVERY|CLOSE",
+      "actorUid": "string",
+      "actorName": "string",
+      "note": "string",
+      "fromState": "string|null",
+      "toState": "string",
+      "previousAssigneeUid": "string|null",
+      "assigneeUid": "string|null",
+      "sourceState": "string",
+      "createdAt": "epoch-ms",
+      "caseVersion": "integer"
+    },
+    "DeviceOwner": {
+      "deviceId": "string",
+      "ownerUid": "string|null",
+      "ownerName": "string|null",
+      "version": "integer >= 0",
+      "updatedAt": "epoch-ms|null"
+    },
+    "OwnerTimeline": {
+      "id": "string",
+      "deviceId": "string",
+      "actorUid": "string",
+      "actorName": "string",
+      "note": "string",
+      "previousOwnerUid": "string|null",
+      "ownerUid": "string",
+      "createdAt": "epoch-ms",
+      "version": "integer"
+    }
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/campus/overview",
+      "access": "campus-role",
+      "data": {
+        "source": "TEACHING_MOCK",
+        "projectId": "campus-ai-course",
+        "observedAt": "catalog fixed epoch-ms",
+        "simulated": true,
+        "spaces": "Space[]",
+        "devices": "Device[]",
+        "points": "Point[]",
+        "issues": "Issue[]",
+        "completeness": {
+          "expectedSpaces": 4,
+          "expectedDevices": 16,
+          "expectedPoints": 28,
+          "actualSpaces": "integer",
+          "actualDevices": "integer",
+          "actualPoints": "integer"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/latest",
+      "access": "campus-role",
+      "data": {
+        "items": "Point[]",
+        "observedAt": "catalog fixed epoch-ms",
+        "issues": "Issue[]"
+      },
+      "query": {
+        "deviceId": "optional known id"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/history",
+      "access": "campus-role",
+      "data": {
+        "source": "TEACHING_MOCK",
+        "deviceId": "string",
+        "tagId": "string",
+        "unit": "string",
+        "from": "epoch-ms",
+        "to": "epoch-ms",
+        "observedAt": "catalog fixed epoch-ms",
+        "samples": "{time:epoch-ms,value:number|null}[]",
+        "truncated": "boolean",
+        "issues": "Issue[]"
+      },
+      "query": {
+        "deviceId": "required known id",
+        "tagId": "required known tag",
+        "from": "required integer epoch-ms",
+        "to": "required integer epoch-ms; from<=to; span<=21600000"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/locations",
+      "access": "campus-role",
+      "data": {
+        "campuses": "Campus[]",
+        "buildings": "Building[]",
+        "bindings": "Binding[]"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/locations/campuses",
+      "access": "ADMIN",
+      "data": "Campus",
+      "body": {
+        "name": "trimmed string 1..80"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/locations/buildings",
+      "access": "ADMIN",
+      "data": "Building",
+      "body": {
+        "campusId": "string 1..64",
+        "name": "trimmed string 1..80"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/campus/locations/spaces/{spaceId}",
+      "access": "ADMIN",
+      "data": "Binding",
+      "body": {
+        "buildingId": "string 1..64",
+        "floor": "string|null, <=40"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/alarms",
+      "access": "campus-role",
+      "data": {
+        "items": [],
+        "total": 0,
+        "observedAt": "catalog fixed epoch-ms",
+        "issues": []
+      },
+      "query": {
+        "limit": "1..100 default50",
+        "skip": "0..10000 default0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/alarm-cases",
+      "access": "campus-role",
+      "data": {
+        "items": "AlarmCase[] (without timeline)",
+        "total": "integer",
+        "observedAt": "server epoch-ms"
+      },
+      "query": {
+        "sourceType": "optional DEMO|AIRIOT",
+        "state": "optional NEW|ASSIGNED|IN_PROGRESS|CLOSED",
+        "assigneeUid": "optional string1..64",
+        "limit": "1..100 default50",
+        "skip": "0..10000 default0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/alarm-cases/handlers",
+      "access": "campus-role",
+      "data": {
+        "items": "{uid,displayName}[]",
+        "currentUid": "string"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/alarm-cases/{id}",
+      "access": "campus-role",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/alarm-cases/{id}/assign",
+      "access": "ADMIN",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "assigneeUid": "string1..64",
+        "note": "trimmed string1..500",
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/alarm-cases/{id}/start",
+      "access": "ADMIN or assigned CAMPUS_MANAGER",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "note": "trimmed string1..500",
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/alarm-cases/{id}/notes",
+      "access": "ADMIN or assigned CAMPUS_MANAGER",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "note": "trimmed string1..500",
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/alarm-cases/{id}/verify-recovery",
+      "access": "ADMIN or assigned CAMPUS_MANAGER",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/alarm-cases/{id}/close",
+      "access": "ADMIN or assigned CAMPUS_MANAGER",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "disposition": "trimmed string1..2000",
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/demo/status",
+      "access": "campus-role",
+      "data": {
+        "enabled": "boolean",
+        "label": "本地场景演示 · 非实时设备报警",
+        "scenarios": "{id,name,deviceId,description}[]",
+        "limitations": "string[]"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/demo-alarm-scenarios/{scenario}/trigger",
+      "access": "ADMIN; scenario=temperature-patrol|communication-patrol|lighting-patrol",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/campus/demo-alarm-events/{id}/recover",
+      "access": "ADMIN",
+      "data": "AlarmCase & {timeline:CaseTimeline[]}",
+      "body": {
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/device-owners",
+      "access": "campus-role",
+      "data": {
+        "items": "DeviceOwner[] sorted deviceId",
+        "observedAt": "server epoch-ms"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/device-owners/{deviceId}",
+      "access": "campus-role",
+      "data": "DeviceOwner & {timeline:OwnerTimeline[]}"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/campus/device-owners/{deviceId}",
+      "access": "ADMIN",
+      "data": "DeviceOwner & {timeline:OwnerTimeline[]}",
+      "body": {
+        "ownerUid": "string1..64",
+        "note": "trimmed string1..500",
+        "expectedVersion": "JSON integer >=0"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/campus/integrations/airiot/status",
+      "access": "ADMIN",
+      "data": {
+        "configured": false,
+        "connected": false,
+        "controlEnabled": false,
+        "message": "AIRIOT_NOT_CONFIGURED",
+        "capabilities": "{name,status:PENDING,detail}[]"
+      }
+    }
+  ],
+  "rules": {
+    "strictBodies": "unknown fields rejected; versions reject strings/booleans/floats",
+    "sourceClock": "fixed catalog observedAt; never real now for telemetry",
+    "businessClock": "server Clock.systemUTC; no client actor/time",
+    "history": "inclusive from/to; sorted ascending; maximum 1000 after filtering; null retained; invalid records skipped with Issue; never create unobserved samples",
+    "qualityPrecedence": "invalid non-null types/time first, then missing, then future >5000 invalid, then age>60000 stale, else fresh",
+    "paginationSort": "createdAt DESC, id DESC; filter before count+page",
+    "verification": "UNKNOWN until source recovered; PASS when server verifies; close requires IN_PROGRESS, >=1 NOTE, recoveredAt>=occurredAt, verifiedAt>=recoveredAt, PASS, disposition",
+    "reassign": "ASSIGNED and clears verification; existing notes retained; new assignee must start",
+    "recovery": "matched-version already recovered unclosed case is idempotent; closed always conflict",
+    "database": "FOR UPDATE + expectedVersion + master/timeline in same transaction; no debug fault HTTP",
+    "roleExperiments": "Teacher-operated node tools/account-admin.mjs <teaching-uid> --roles <roles> or --enabled true|false; private database.json allowAccountAdministration:true; only four teaching identities; no public mutation API.",
+    "sourceSelection": "COURSE_SOURCE=TEACHING_MOCK default or AIRIOT; AIRIOT in teacher-db returns explicit 503 for provider reads and PENDING integration status, never mock fallback. first-chain rejects AIRIOT at startup.",
+    "testDatabase": "Teacher-only node tools/test-mysql.mjs package; private test-database.json must allowTestReset:true and schema must start campus_course_ and end _test. Test runs reset teaching tables only in that dedicated test schema."
+  },
+  "verification": {
+    "java": "17.0.6",
+    "mysql": "8.4.10 isolated local database",
+    "tests": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "reports": [
+      "evidence/test-summary.json",
+      "evidence/mysql-transaction-evidence.json"
+    ],
+    "notVerified": [
+      "Windows physical host",
+      "remote teacher database",
+      "real AIRIOT",
+      "Spring/JDK dependency SCA"
+    ]
+  }
+}

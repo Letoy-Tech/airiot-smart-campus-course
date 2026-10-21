@@ -1,0 +1,8 @@
+{
+  "id": "图 03-01",
+  "title": "教学系统职责与数据源边界",
+  "alt": "Vue 前端调用 Spring Boot 后端；后端独立处理授权、业务和数据库持久化，并通过 CampusDataProvider 读取 TeachingMockProvider；AiriotProvider 只读接入是可选分支。",
+  "caption": "图 03-01　教学系统职责与数据源边界。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false
+}

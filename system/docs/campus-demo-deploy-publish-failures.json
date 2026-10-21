@@ -1,0 +1,22 @@
+{
+  "retainedFailures": [
+    {
+      "file": "/srv/campus-demo/backups/REL_20261005-0151-SCHOOL-DEMO/publication-failure-20261004T175056Z.json",
+      "data": {
+        "state": "publication rolled back",
+        "phase": "shared core domain checks",
+        "failedAt": "2026-10-05T01:50:56.845420+08:00",
+        "reason": "Operation failed: curl (exit 55)",
+        "previousVhostSha256": "e0bbec236e36ddf2fbe14e41e245f831328887bb84f0112f094b0233447a246b",
+        "restoredVhostSha256": "e0bbec236e36ddf2fbe14e41e245f831328887bb84f0112f094b0233447a246b",
+        "nginxActive": "active"
+      }
+    }
+  ],
+  "note": "第二版初次curl55记录未保存具体域名；后续独立9域名复核及最终检查全部通过，未修改无关共享站点。",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

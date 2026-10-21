@@ -1,0 +1,247 @@
+{
+  "generatedAt": "2026-10-18T10:44:18.938Z",
+  "figures": 38,
+  "sheets": [
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-01.png",
+      "figures": [
+        {
+          "id": "图 01-01",
+          "png": "illustrations/ch01-01-engineering-cycle.png",
+          "sha256": "28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d"
+        },
+        {
+          "id": "图 01-02",
+          "png": "illustrations/ch01-02-prompt-comparison.png",
+          "sha256": "132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc"
+        },
+        {
+          "id": "图 01-03",
+          "png": "illustrations/ch01-03-ai-evidence-loop.png",
+          "sha256": "02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065"
+        },
+        {
+          "id": "图 02-01",
+          "png": "illustrations/ch02-01-scope-map.png",
+          "sha256": "3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-02.png",
+      "figures": [
+        {
+          "id": "图 02-02",
+          "png": "illustrations/ch02-02-traceability.png",
+          "sha256": "5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2"
+        },
+        {
+          "id": "图 02-03",
+          "png": "illustrations/ch02-03-milestones.png",
+          "sha256": "7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54"
+        },
+        {
+          "id": "图 03-01",
+          "png": "illustrations/ch03-01-architecture.png",
+          "sha256": "b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b"
+        },
+        {
+          "id": "图 03-02",
+          "png": "illustrations/ch03-02-local-records-er.png",
+          "sha256": "1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-03.png",
+      "figures": [
+        {
+          "id": "图 03-03",
+          "png": "illustrations/ch03-03-two-state-axes.png",
+          "sha256": "19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef"
+        },
+        {
+          "id": "图 03-04",
+          "png": "illustrations/ch03-04-version-transaction.png",
+          "sha256": "fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9"
+        },
+        {
+          "id": "图 04-01",
+          "png": "illustrations/ch04-01-git-workflow.png",
+          "sha256": "f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992"
+        },
+        {
+          "id": "图 04-02",
+          "png": "illustrations/ch04-02-first-request.png",
+          "sha256": "da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-04.png",
+      "figures": [
+        {
+          "id": "图 04-03",
+          "png": "illustrations/ch04-03-debug-path.png",
+          "sha256": "7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed"
+        },
+        {
+          "id": "图 05-01",
+          "png": "illustrations/ch05-01-device-request.png",
+          "sha256": "bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b"
+        },
+        {
+          "id": "图 05-02",
+          "png": "illustrations/ch05-02-space-relations.png",
+          "sha256": "7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737"
+        },
+        {
+          "id": "图 05-03",
+          "png": "illustrations/ch05-03-binding-readback.png",
+          "sha256": "86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-05.png",
+      "figures": [
+        {
+          "id": "图 06-01",
+          "png": "illustrations/ch06-01-device-wireframe.png",
+          "sha256": "e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567"
+        },
+        {
+          "id": "图 06-02",
+          "png": "illustrations/ch06-02-components-state.png",
+          "sha256": "afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9"
+        },
+        {
+          "id": "图 06-03",
+          "png": "illustrations/ch06-03-page-states.png",
+          "sha256": "c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1"
+        },
+        {
+          "id": "图 07-01",
+          "png": "illustrations/ch07-01-quality-cases.png",
+          "sha256": "9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-06.png",
+      "figures": [
+        {
+          "id": "图 07-02",
+          "png": "illustrations/ch07-02-history-gaps.png",
+          "sha256": "740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead"
+        },
+        {
+          "id": "图 07-03",
+          "png": "illustrations/ch07-03-refresh-lifecycle.png",
+          "sha256": "fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91"
+        },
+        {
+          "id": "图 08-01",
+          "png": "illustrations/ch08-01-role-scope.png",
+          "sha256": "e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383"
+        },
+        {
+          "id": "图 08-02",
+          "png": "illustrations/ch08-02-denial-path.png",
+          "sha256": "adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-07.png",
+      "figures": [
+        {
+          "id": "图 08-03",
+          "png": "illustrations/ch08-03-identity-race.png",
+          "sha256": "8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1"
+        },
+        {
+          "id": "图 09-01",
+          "png": "illustrations/ch09-01-state-machine.png",
+          "sha256": "c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd"
+        },
+        {
+          "id": "图 09-02",
+          "png": "illustrations/ch09-02-close-gates.png",
+          "sha256": "31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1"
+        },
+        {
+          "id": "图 09-03",
+          "png": "illustrations/ch09-03-recovery-sequence.png",
+          "sha256": "fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-08.png",
+      "figures": [
+        {
+          "id": "图 10-01",
+          "png": "illustrations/ch10-01-owner-event-model.png",
+          "sha256": "26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd"
+        },
+        {
+          "id": "图 10-02",
+          "png": "illustrations/ch10-02-future-assignment.png",
+          "sha256": "9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e"
+        },
+        {
+          "id": "图 10-03",
+          "png": "illustrations/ch10-03-responsibility-timeline.png",
+          "sha256": "c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe"
+        },
+        {
+          "id": "图 11-01",
+          "png": "illustrations/ch11-01-evidence-layers.png",
+          "sha256": "e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-09.png",
+      "figures": [
+        {
+          "id": "图 11-02",
+          "png": "illustrations/ch11-02-concurrent-updates.png",
+          "sha256": "0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1"
+        },
+        {
+          "id": "图 11-03",
+          "png": "illustrations/ch11-03-transaction-rollback.png",
+          "sha256": "303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740"
+        },
+        {
+          "id": "图 11-04",
+          "png": "illustrations/ch11-04-debugging-loop.png",
+          "sha256": "4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807"
+        },
+        {
+          "id": "图 12-01",
+          "png": "illustrations/ch12-01-delivery-flow.png",
+          "sha256": "403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03"
+        }
+      ]
+    },
+    {
+      "file": "illustrations/qa/contact-sheets/sheet-10.png",
+      "figures": [
+        {
+          "id": "图 12-02",
+          "png": "illustrations/ch12-02-controlled-change.png",
+          "sha256": "75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136"
+        },
+        {
+          "id": "图 12-03",
+          "png": "illustrations/ch12-03-code-data-recovery.png",
+          "sha256": "6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2"
+        }
+      ]
+    }
+  ],
+  "labVerified": false
+}

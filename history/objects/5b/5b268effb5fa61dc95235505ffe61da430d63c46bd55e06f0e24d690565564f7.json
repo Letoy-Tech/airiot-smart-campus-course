@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-18T18:44:56.455Z",
+  "scope": "Node教学出版工具与浏览器预检；不代表业务实验或图面审校",
+  "node": "v22.21.1",
+  "dependencies": {
+    "marked": {
+      "version": "17.0.5",
+      "origin": "tools/node_modules"
+    },
+    "mermaid": {
+      "version": "11.17.2",
+      "origin": "tools/node_modules"
+    },
+    "playwright": {
+      "version": "1.62.1",
+      "origin": "tools/node_modules"
+    }
+  },
+  "status": "PASS",
+  "browser": "151.0.7922.34",
+  "browserSource": "locked Playwright browser installation"
+}

@@ -1,0 +1,8 @@
+.env
+.private/
+.runtime/
+node_modules/
+target/
+delivery/
+*.log
+.DS_Store

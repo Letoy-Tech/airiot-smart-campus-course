@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.letoy.main.user.mapper.UserInfoMapper">
+
+    <sql id="BaseColumnList">
+        uid,
+        username,
+        phone_number,
+        email,
+        nickname,
+        avatar,
+        description,
+        gender,
+        group_ids,
+        roles,
+        active,
+        create_time,
+        token_version,
+        last_password_change_at,
+        account_locked
+    </sql>
+
+    <resultMap id="UserInfoMap" type="com.letoy.main.user.entity.UserInfo">
+        <id property="uid" column="uid"/>
+        <result property="username" column="username"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="email" column="email"/>
+        <result property="nickname" column="nickname"/>
+        <result property="avatar" column="avatar"/>
+        <result property="description" column="description"/>
+        <result property="gender" column="gender"/>
+        <result property="groupIds" column="group_ids"/>
+        <result property="roles" column="roles"/>
+        <result property="active" column="active"/>
+        <result property="createTime" column="create_time"/>
+        <result property="tokenVersion" column="token_version"/>
+        <result property="lastPasswordChangeAt" column="last_password_change_at"/>
+        <result property="accountLocked" column="account_locked"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <insert id="createUserInfoByUserInfo" parameterType="com.letoy.main.user.entity.UserInfo">
+        INSERT INTO user_info (
+            uid,
+            username,
+            phone_number,
+            email,
+            nickname,
+            avatar,
+            description,
+            gender,
+            group_ids,
+            roles,
+            password,
+            active,
+            create_time,
+            token_version,
+            last_password_change_at,
+            account_locked
+        ) VALUES (
+            #{uid},
+            #{username},
+            #{phoneNumber},
+            #{email},
+            #{nickname},
+            #{avatar},
+            #{description},
+            #{gender},
+            #{groupIds},
+            #{roles},
+            #{password},
+            #{active},
+            #{createTime},
+            #{tokenVersion},
+            #{lastPasswordChangeAt},
+            #{accountLocked}
+        )
+    </insert>
+
+    <select id="getUserInfoByUid" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM user_info
+        WHERE uid = #{uid}
+    </select>
+
+    <select id="getUserInfoByUsername" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM user_info
+        WHERE username = #{username}
+    </select>
+
+    <select id="getUserInfoPasswordByUsername" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>, password
+        FROM user_info
+        WHERE username = #{username}
+    </select>
+
+    <select id="getUserInfoByPhoneNumber" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>, password
+        FROM user_info
+        WHERE phone_number = #{phoneNumber}
+    </select>
+
+    <select id="getAllUsers" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM user_info
+        ORDER BY create_time DESC, uid DESC
+    </select>
+
+    <select id="queryUserInfoByConditions" resultMap="UserInfoMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM user_info
+        <where>
+            <if test="username != null and username != ''">
+                AND username LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <if test="nickname != null and nickname != ''">
+                AND nickname LIKE CONCAT('%', #{nickname}, '%')
+            </if>
+            <if test="groupId != null and groupId != ''">
+                AND FIND_IN_SET(#{groupId}, group_ids)
+            </if>
+            <if test="gender != null">
+                AND gender = #{gender}
+            </if>
+            <if test="active != null">
+                AND active = #{active}
+            </if>
+        </where>
+        ORDER BY create_time DESC, uid DESC
+    </select>
+
+    <update id="updateUserInfoByUidWithUserInfo" parameterType="com.letoy.main.user.entity.UserInfo">
+        UPDATE user_info
+        <set>
+            <if test="username != null">username = #{username},</if>
+            <if test="phoneNumber != null">phone_number = #{phoneNumber},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="avatar != null">avatar = #{avatar},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="gender != null">gender = #{gender},</if>
+            <if test="groupIds != null">group_ids = #{groupIds},</if>
+            <if test="roles != null">roles = #{roles},</if>
+            <if test="active != null">active = #{active},</if>
+            <if test="accountLocked != null">account_locked = #{accountLocked},</if>
+        </set>
+        WHERE uid = #{uid}
+    </update>
+
+    <update id="resetUserInfoPassword">
+        UPDATE user_info
+        SET password = #{password}
+        WHERE uid = #{uid}
+    </update>
+
+    <delete id="deleteUserInfoByUid">
+        DELETE FROM user_info
+        WHERE uid = #{uid}
+    </delete>
+
+    <select id="getTokenVersionByUid" resultType="java.lang.Integer">
+        SELECT token_version
+        FROM user_info
+        WHERE uid = #{uid}
+    </select>
+
+    <update id="incrementTokenVersion">
+        UPDATE user_info
+        SET token_version = COALESCE(token_version, 0) + 1
+        WHERE uid = #{uid}
+    </update>
+
+    <update id="updateLastPasswordChangeAt">
+        UPDATE user_info
+        SET last_password_change_at = NOW(),
+            token_version = COALESCE(token_version, 0) + 1
+        WHERE uid = #{uid}
+    </update>
+
+    <update id="updateAccountLocked">
+        UPDATE user_info
+        SET account_locked = #{locked},
+            token_version = COALESCE(token_version, 0) + 1
+        WHERE uid = #{uid}
+    </update>
+
+    <update id="updatePhoneNumberByUid">
+        UPDATE user_info
+        SET phone_number = #{phoneNumber}
+        WHERE uid = #{uid}
+    </update>
+
+    <select id="countUsers" resultType="long">
+        SELECT COUNT(1)
+        FROM user_info
+    </select>
+</mapper>

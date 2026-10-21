@@ -1,0 +1,53 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { courseDir, toolsDir, dependency, escapeHtml as esc } from './runtime.mjs';
+const root=path.join(courseDir,'journey');
+const lessons=JSON.parse(fs.readFileSync(path.join(root,'lessons.json'),'utf8'));
+const { Marked,Renderer }=await dependency('marked');
+const md=new Marked({gfm:true});let serial=0;
+const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const sources=[];
+sources.push({path:'journey/lessons.json',sha256:hash(fs.readFileSync(path.join(root,'lessons.json')))});
+sources.push({path:'tools/build-journey.mjs',sha256:hash(fs.readFileSync(new URL(import.meta.url)))});
+function read(file){const text=fs.readFileSync(file,'utf8');sources.push({path:path.relative(courseDir,file),sha256:hash(text)});return text;}
+function code(text,kind='prompt',label){let id=`snippet-${++serial}`;return `<div class="codebox"><div><span>${label??({prompt:'发到 CodeBuddy 对话',sh:'在 app 的终端执行',code:'参考源码',text:'对照内容'}[kind]??kind)}</span><button type="button" data-copy="${id}" data-kind="${kind}">复制</button></div><pre><code id="${id}">${esc(text)}</code></pre></div>`;}
+function render(text,prefix){const renderer=new Renderer();let n=0;renderer.heading=function(t){return `<h${t.depth} id="${prefix}-h${++n}">${this.parser.parseInline(t.tokens)}</h${t.depth}>`;};renderer.code=t=>code(t.text,['sh','powershell'].includes(t.lang)?'sh':t.lang==='prompt'?'prompt':'text');renderer.table=function(t){return `<div class="table-scroll">${Renderer.prototype.table.call(this,t)}</div>`;};return md.parse(text,{renderer});}
+function figure(s){const nodes=['查设备','看读数','读历史','分派事件','核实关闭','交付复现'];const active=s.id<='03'?0:s.id<='05'?1:s.id<='07'?2:s.id==='08'?3:s.id<='11'?4:5;const pieces=nodes.map((name,i)=>{const x=28+(i%3)*246,y=52+Math.floor(i/3)*96;return `<g><rect x="${x}" y="${y}" width="218" height="64" rx="5" fill="${i===active?'#e7eee9':'#f3f2ee'}" stroke="${i===active?'#425c4b':'#d6d5ce'}"/><text x="${x+18}" y="${y+28}" font-size="13" fill="#666960">${i<active?'已有':i===active?'本次推进':'后面再做'}</text><text x="${x+18}" y="${y+49}" font-size="18" fill="#29332d">${name}</text>${i%3<2?`<path d="M${x+220} ${y+32}h22" stroke="#90968c" marker-end="url(#a)"/>`:''}</g>`;}).join('');const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="772" height="250" viewBox="0 0 772 250" role="img" aria-label="同一个项目，当前推进${nodes[active]}"><defs><marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#90968c"/></marker></defs><rect width="772" height="250" fill="#faf9f5"/><g font-family="PingFang SC,Microsoft YaHei,sans-serif"><text x="28" y="29" fill="#29332d" font-size="16">同一份 app，一次增加一块</text>${pieces}<text x="28" y="237" fill="#666960" font-size="12">项目进程示意，非程序截图。按本页实际操作判断是否完成。</text></g></svg>`;fs.writeFileSync(path.join(root,`figures/stage-${s.id}.svg`),svg);return `<figure><img src="figures/stage-${s.id}.svg" alt="本次推进${nodes[active]}，后续继续同一工程"><figcaption>当前项目走到哪一块。</figcaption></figure>`;}
+const prep=render(read(path.join(root,'00-怎么开始.md')),'prep');
+const docs=lessons.map(s=>{
+ const fname=`${s.id}-${s.title}.md`,source=read(path.join(root,fname));
+ const manifestFile=path.join(courseDir,`resources/project-journey/app/lesson-bundles/stage-${s.id}/manifest.json`);
+ if(!fs.existsSync(manifestFile))throw new Error(`缺逐站manifest：${manifestFile}`);
+ const manifest=JSON.parse(read(manifestFile));
+ const targets=manifest.businessFiles??s.targets;
+ const contexts=manifest.contextFiles??[];
+ const commands=`node tools/progress.mjs plan ${s.id}\nnode tools/progress.mjs begin ${s.id}`;
+ const startup=s.id==='01'?`<p>首次安装后启动前端。终端出现地址后，在浏览器打开它；该终端保持运行。</p>${code('npm --prefix frontend ci\nnpm --prefix frontend run dev','sh')}`:s.id==='02'?`<details><summary>第02站：现在才构建和启动后端</summary><p>先停前端以便构建；另一个终端设置 JAVA_HOME 后，在app执行。账号密码只在本机.private/accounts.json查看。</p>${code('node tools/course.mjs init\nnode tools/course.mjs build\nnode tools/course.mjs backend','sh')}<p>另开终端，在app执行：</p>${code('npm --prefix frontend run dev','sh')}<p>登录地址 http://127.0.0.1:5178 。本次first-chain不需要数据库。</p></details>`:s.id==='03'?`<details><summary>第03站：切到教师准备的本组数据库</summary><p>把<a href="../resources/student-project/docs/02-教师数据库交接单.md">数据库交接单</a>给教师。教师确认目标库并完成迁移后，停止原来的backend终端；同一终端执行：</p>${code('node tools/course.mjs backend-db','sh')}<p>重新登录后应看到16台。只看到2台说明仍在first-chain。</p></details>`:'';
+ const targetSection=targets.length?targets.map(file=>{
+  const ref=path.join(courseDir,'resources/project-journey/reference',file);
+  if(!fs.existsSync(ref))throw new Error(`目标参考缺失：${file}`);
+  const text=read(ref);
+  const task=`当前第${s.id}站：${s.title}。\n请先读 CODEBUDDY.md、journey-state.json，再读取 ${contexts.join('、')||'本次manifest列出的依赖'}。\n本次只修改：${file}。\n${s.prompt}\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。`;
+  return `<div class="target"><h4>${esc(file)}</h4><p>在 CodeBuddy 输入 @，选中这个文件。若文件尚不存在，先执行本页 begin。</p>${code(task,'prompt','在 Craft 中发送；先引用这个文件')}<details><summary>参考源码：AI卡住时再看</summary><p>这是教师参考。先备份自己的文件；对照或合并后仍须自己运行。不要把“复制成功”记成“功能通过”。</p><a href="../resources/project-journey/reference/${encodeURI(file)}" download>下载该参考文件</a>${code(text,'code',file)}</details></div>`;
+ }).join(''):`<p>本次没有新增业务页面。按正文调试、验证或交付，继续当前工程。</p>`;
+ const contextHtml=contexts.length?`<details><summary>本次接口和依赖文件</summary><ul>${contexts.map(f=>`<li><code>${esc(f)}</code></li>`).join('')}</ul><p>在CodeBuddy用 @ 引用实际文件，不粘贴凭据或整台电脑目录。</p></details>`:'';
+ const shotNames={'03':'01-设备卡片.png','05':'04-能源部分失败保留快照.png','06':'06-原始报警失败保留快照.png','08':'08-事件处理人和状态筛选.png','10':'07-命令审计历史样本.png'};
+ const shot=shotNames[s.id];
+ let actual='';
+ if(shot){const shotPath=path.join(root,'qa/round10',shot);if(!fs.existsSync(shotPath))throw new Error('缺少本轮实拍 '+shot);sources.push({path:path.relative(courseDir,shotPath),sha256:hash(fs.readFileSync(shotPath))});actual=`<details class="actual-result"><summary>看本次参考实现的实际画面</summary><p>作者在本机运行参考工程后截取；模拟数据，UI可不同。这张图不替你完成验收。</p><div class="screenshot-scroll"><img loading="lazy" src="qa/round10/${encodeURI(shot)}" alt="${esc(s.title)}的参考工程运行画面"></div><a href="qa/round10/${encodeURI(shot)}" target="_blank">打开原图</a></details>`;}
+ const acceptance=s.checks.map((c,i)=>`<label class="check"><input type="checkbox" data-check="${s.id}-${i}"><span>${esc(c)}</span></label>`).join('');
+ const generated=`<h2>开始本次</h2><p>先停止当前AI任务。已有前一站的改动就保存；在同一个app终端逐行执行：</p>${code(commands,'sh')}<p>${s.id==='01'?'第一站已提供两设备静态示例，begin保留这个起点；先改平台名并核对三态。':'begin加入本次依赖、菜单和待写页面；业务页面由你在CodeBuddy中实现。'}若提示前站未验证，先完成前站verify；遇到文件冲突先保留并合并，不删除状态文件绕过。</p>${startup}<h2>本次文件</h2>${targetSection}${contextHtml}`;
+ const displaySource=targets.length ? source.replace(/## 改本次文件[\s\S]*?(?=\n## )/, '## 改本次文件\n\n按上面的文件逐个完成。查看CodeBuddy变更，确认只改本站文件，再保存并运行。\n') : source;
+ let body=render(displaySource,'s'+s.id);
+ // Put setup before the actual editing action, not before the concise project context.
+ body=body.replace(/(<h2[^>]*>改本次文件<\/h2>)/,generated+'$1');
+ return `<article class="station" id="s${s.id}" data-station="${s.id}"><div class="stage-meta"><span>第 ${Number(s.id)} 次课 · 4 学时</span><span>目标检查点 ${s.end}%</span></div>${body}${actual}${figure(s)}<h2>运行检查，再记结果</h2><p>另开终端执行；verify检查前端类型、测试和构建。第02站起还要按需检查后端，不能拿前端通过代替整个业务。</p>${code('node tools/progress.mjs verify','sh')}<p>在evidence/stage-${s.id}.md写至少40字的实际操作、结果和未通过项。写完可登记；只复制参考而未运行，先不要记通过。</p>${code(`node tools/progress.mjs accept ${s.id} evidence/stage-${s.id}.md`,'sh')}<div class="checks"><h3>我在自己的程序里核对了</h3>${acceptance}<p class="muted">这是你的自记清单，不是自动测试报告。下方可以导出；浏览器不保存时也能导出当前勾选。</p></div><details><summary>需要参考恢复时</summary>${code(`node tools/progress.mjs apply ${s.id}`,'sh')}<p>apply是导入本次参考代码，会明确检查冲突和备份。若拒绝覆盖，请让CodeBuddy对比自己的文件、工具指出的参考文件与备份，手动合并；再verify。使用参考也要记录自己的实际运行结果。</p></details><p><a href="${encodeURIComponent(fname)}" download>本站Markdown</a></p><div class="station-nav">${s.id!=='01'?`<a href="#s${String(Number(s.id)-1).padStart(2,'0')}">← 上一站</a>`:'<a href="#prep">准备步骤</a>'}${s.id!=='12'?`<a class="primary" href="#s${String(Number(s.id)+1).padStart(2,'0')}">继续第 ${Number(s.id)+1} 站 →</a>`:'<a class="primary" href="#acceptance">核对最终交付清单 →</a>'}</div></article>`;
+});
+const acceptance=render(read(path.join(root,'功能验收.md')),'acceptance');
+const teacher=render(read(path.join(root,'教师安排.md')),'teacher');
+const css=read(path.join(toolsDir,'journey.css')),js=read(path.join(toolsDir,'journey.js'));
+const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一步步做出智慧校园 · CodeBuddy IDE</title><style>${css}</style></head><body><a class="skip" href="#main">跳到正文</a><header><a class="brand" href="#s01">智慧校园 / 一步步做</a><nav aria-label="辅助导航"><a href="#prep">准备</a><a href="#acceptance">验收</a><a href="#teacher">教师</a><a href="../walkthroughs/index.html">查细节</a><button id="export" type="button">导出我的记录</button></nav></header><div class="shell"><aside><p class="nav-caption">一个项目，12 次课</p><ol class="route">${lessons.map(s=>`<li><a href="#s${s.id}" data-nav="${s.id}"><span>${s.end}%</span><b>${esc(s.title)}</b><small>${esc(s.skills.join(' / '))}</small></a></li>`).join('')}</ol><p id="progress-status" role="status">尚未记录验收</p><p class="aside-note">百分比表示目标检查点，不是代码量或自动完成度。</p></aside><main id="main"><div class="intro"><p class="eyebrow">CODEBUDDY IDE · 48 学时 · V1.2.0</p><h1>把这个校园平台<br>一点一点做出来。</h1><p>查设备 → 看读数 → 分派处理 → 核实关闭 → 交给别人运行。</p><p class="muted">业务对齐原平台校园模块，UI可以不同，真实AIRIOT选做。教师提供后端公共服务；前端页面逐站编写。新手先点<a href="#prep">准备</a>。</p></div><article class="station" id="prep">${prep}<a class="primary" href="#s01">准备好，开始第1站 →</a></article>${docs.join('')}<article class="station" id="acceptance">${acceptance}</article><article class="station" id="teacher">${teacher}</article><footer>这份教程保留完整操作，长解释和参考源码按需展开。<br>来源：journey/*.md、lesson-bundles各站manifest。旧教程供查阅，不必先读完。</footer></main></div><div class="toast" id="toast" role="status" aria-live="polite"></div><script>${js}</script></body></html>`;
+fs.writeFileSync(path.join(root,'index.html'),html);
+fs.writeFileSync(path.join(root,'build.json'),JSON.stringify({generatedAt:new Date().toISOString(),version:'1.2.0',sha256:hash(html),sources:[...new Map(sources.map(x=>[x.path,x])).values()],stations:lessons.length,copyBlocks:serial,offlineBrowserVerified:false,codeBuddySessionExecuted:false},null,2)+'\n');
+console.log(`journey/index.html: ${lessons.length}站，${serial}个复制块`);

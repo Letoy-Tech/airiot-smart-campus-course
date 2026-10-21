@@ -1,0 +1,217 @@
+{
+  "formatVersion": 1,
+  "package": "AI编程_智慧校园_48学时_V0.1--8ae65a473f",
+  "sourceArchive": "教学/AI编程_智慧校园_48学时_V0.1.zip",
+  "sourceArchiveSha256": "8ae65a473f2444befe0e01598a42815d4378321d7e7e729df641cc9eff7c1541",
+  "sourceHashPurpose": "local historical input identity only; not the hash of any published derivative",
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "entries": [
+    {
+      "path": "AI编程_智慧校园_48学时/01-课程大纲.md",
+      "object": "objects/e0/e09b4921b71c39ca8023da39d72a256b1489a732146dc74b2a9e3fab9189a495.md",
+      "sha256": "e09b4921b71c39ca8023da39d72a256b1489a732146dc74b2a9e3fab9189a495",
+      "bytes": 7326,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/02-项目范围与教学架构.md",
+      "object": "objects/ca/ca3b6eb43dc037fb50e1c134a99ade49955ea18e2ee4e877b98b4efcae0722f6.md",
+      "sha256": "ca3b6eb43dc037fb50e1c134a99ade49955ea18e2ee4e877b98b4efcae0722f6",
+      "bytes": 5604,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/03-AI协作与接力规范.md",
+      "object": "objects/21/21225879978c7faa9a74845eb7322a7af9835feb76d44a77c873ad29e141e814.md",
+      "sha256": "21225879978c7faa9a74845eb7322a7af9835feb76d44a77c873ad29e141e814",
+      "bytes": 5018,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/04-考核与验收.md",
+      "object": "objects/5d/5d9f0ced5d02c01563c40a3010877f34b64fba25fa8f6b7cfe558a4b284c0288.md",
+      "sha256": "5d9f0ced5d02c01563c40a3010877f34b64fba25fa8f6b7cfe558a4b284c0288",
+      "bytes": 5173,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/05-编写进度与教案转换.md",
+      "object": "objects/23/239fbf90067bd27a8f45bbe26fda973842e80d85f83ad8401a04c8236ebf8b40.md",
+      "sha256": "239fbf90067bd27a8f45bbe26fda973842e80d85f83ad8401a04c8236ebf8b40",
+      "bytes": 4199,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/README.md",
+      "object": "objects/ef/ef767bceda9917fa1d639edb957962f9c4dfbcd3400d9286a607c8441ac4362e.md",
+      "sha256": "ef767bceda9917fa1d639edb957962f9c4dfbcd3400d9286a607c8441ac4362e",
+      "bytes": 4345,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/AIRIOT进阶选做.md",
+      "object": "objects/92/924a996c47e67e796f7bd2da0ff5f9640f3970a7e3029ab982c5a87dd6c6dc2e.md",
+      "sha256": "924a996c47e67e796f7bd2da0ff5f9640f3970a7e3029ab982c5a87dd6c6dc2e",
+      "bytes": 3731,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/Qwen与网页工具说明.md",
+      "object": "objects/8f/8fd506b03e4e157ccaee36a06b8206db486be53e1bc06e45759ac0b3df3c623d.md",
+      "sha256": "8fd506b03e4e157ccaee36a06b8206db486be53e1bc06e45759ac0b3df3c623d",
+      "bytes": 3066,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/教师资源制作清单.md",
+      "object": "objects/67/676fc2ee63d835bb03e3086bb3ad42e65deb78d8c4f3403f0f63be7531747fb1.md",
+      "sha256": "676fc2ee63d835bb03e3086bb3ad42e65deb78d8c4f3403f0f63be7531747fb1",
+      "bytes": 3319,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/现有平台与原大纲映射.md",
+      "object": "objects/e8/e83720e0b336a6535112ac0d179a21d59ac86fc661b76960b063ad3b82cca740.md",
+      "sha256": "e83720e0b336a6535112ac0d179a21d59ac86fc661b76960b063ad3b82cca740",
+      "bytes": 4421,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/01-软件工程入门与网页AI协作.md",
+      "object": "objects/1b/1bdb230237fc6a86e41c1a4c19aaeb54b661a13fc627b5be35b1db4ed6afd9d4.md",
+      "sha256": "1bdb230237fc6a86e41c1a4c19aaeb54b661a13fc627b5be35b1db4ed6afd9d4",
+      "bytes": 6356,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/02-需求分析与项目计划.md",
+      "object": "objects/4d/4dfaa4a79aeb49d0553c44193e5ef860feee042db67f012cf3ef985f102112a5.md",
+      "sha256": "4dfaa4a79aeb49d0553c44193e5ef860feee042db67f012cf3ef985f102112a5",
+      "bytes": 6345,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/03-架构数据与接口设计.md",
+      "object": "objects/75/755ed1bab6055cb91c31ebf41d0c4aa4730d3ada2187ede6f3693b8f76a00f4b.md",
+      "sha256": "755ed1bab6055cb91c31ebf41d0c4aa4730d3ada2187ede6f3693b8f76a00f4b",
+      "bytes": 7159,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/04-开发环境版本控制与首次贯通.md",
+      "object": "objects/31/31e4e7c4ef809e7f3fcb38de70c707bd0b3a5c5bb80f10ad537d20fa5b8114b1.md",
+      "sha256": "31e4e7c4ef809e7f3fcb38de70c707bd0b3a5c5bb80f10ad537d20fa5b8114b1",
+      "bytes": 6822,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/05-后端空间与设备接口.md",
+      "object": "objects/b1/b107e51b5807a0c579a43fe7f914e016b1063846fa0266036ed42c32073b054f.md",
+      "sha256": "b107e51b5807a0c579a43fe7f914e016b1063846fa0266036ed42c32073b054f",
+      "bytes": 5939,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/06-前端设备台账与自主UI.md",
+      "object": "objects/4a/4a2c3eb3ecaf9e68b4b87374fe32e70def9cd96c6ac2c5d8ad110965c0c03395.md",
+      "sha256": "4a2c3eb3ecaf9e68b4b87374fe32e70def9cd96c6ac2c5d8ad110965c0c03395",
+      "bytes": 5681,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/07-实时监测历史与数据质量.md",
+      "object": "objects/d7/d79c5745b822b1e1603aed7fffbc2764930918f29d02c3da3a2a9853a9db5a41.md",
+      "sha256": "d79c5745b822b1e1603aed7fffbc2764930918f29d02c3da3a2a9853a9db5a41",
+      "bytes": 5443,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/08-登录角色与权限验证.md",
+      "object": "objects/d2/d2b42310832a10e197263a329e8398b5f42fa5d65d3a4f95b32e2f79428a929b.md",
+      "sha256": "d2b42310832a10e197263a329e8398b5f42fa5d65d3a4f95b32e2f79428a929b",
+      "bytes": 5893,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/09-演练事件与状态机.md",
+      "object": "objects/3b/3bfcbfe391d94420db961cdd33bf7a9a59e2548c56803f2119581da46ee965e5.md",
+      "sha256": "3bfcbfe391d94420db961cdd33bf7a9a59e2548c56803f2119581da46ee965e5",
+      "bytes": 6855,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/10-设备责任与审计追踪.md",
+      "object": "objects/8d/8d05df0c10ff5be588bcee1ac426962af9692d0e9fbb7dfe81eaefd61e8e496e.md",
+      "sha256": "8d05df0c10ff5be588bcee1ac426962af9692d0e9fbb7dfe81eaefd61e8e496e",
+      "bytes": 6330,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/11-测试调试与质量改进.md",
+      "object": "objects/0b/0b9bba3b972e3b9c5c950f0ef31e909bd9db927b5c23847c9bd69f5607a76660.md",
+      "sha256": "0b9bba3b972e3b9c5c950f0ef31e909bd9db927b5c23847c9bd69f5607a76660",
+      "bytes": 6169,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/12-构建交付变更与答辩.md",
+      "object": "objects/c6/c60478201fc214594501fa35d25032893e20006486c6818a04fc41b91069eb97.md",
+      "sha256": "c60478201fc214594501fa35d25032893e20006486c6818a04fc41b91069eb97",
+      "bytes": 6576,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/contracts/教学接口约定.md",
+      "object": "objects/0c/0c9b1708cc69aea095ccbe30167c874a17f13a1a1332d92ea6fa56407cc8761b.md",
+      "sha256": "0c9b1708cc69aea095ccbe30167c874a17f13a1a1332d92ea6fa56407cc8761b",
+      "bytes": 8176,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/course-index.json",
+      "object": "objects/30/307a13128d47efc626f08de348a07df3b387b611a0c5055bd5c7d8ead88821e2.json",
+      "sha256": "307a13128d47efc626f08de348a07df3b387b611a0c5055bd5c7d8ead88821e2",
+      "bytes": 4875,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/AI任务卡.md",
+      "object": "objects/6d/6d287f0ed932c14f76b99c2412afc49da69dd18ae00cf18e50865a6402f5c031.md",
+      "sha256": "6d287f0ed932c14f76b99c2412afc49da69dd18ae00cf18e50865a6402f5c031",
+      "bytes": 1593,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/AI接力包.md",
+      "object": "objects/80/8054a6ff2414d6d8748eb74fe51208f5a85608461d559b5d65f18639db337f97.md",
+      "sha256": "8054a6ff2414d6d8748eb74fe51208f5a85608461d559b5d65f18639db337f97",
+      "bytes": 1754,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/章节扩写模板.md",
+      "object": "objects/1f/1f25f3e92908d2a88fe3f59f94efe23b6209aea06762683e032cfd302dc707e4.md",
+      "sha256": "1f25f3e92908d2a88fe3f59f94efe23b6209aea06762683e032cfd302dc707e4",
+      "bytes": 3019,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/需求与测试追踪表.md",
+      "object": "objects/cd/cd9f6a6ca35b4a426532f9c60c987940b77d1bcf1812596d5ff95a404b85d0fe.md",
+      "sha256": "cd9f6a6ca35b4a426532f9c60c987940b77d1bcf1812596d5ff95a404b85d0fe",
+      "bytes": 1799,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/课程编写约定.md",
+      "object": "objects/71/71f92ef75e3c25e8e8fee318c4921f099d8de80ec7cf9bd25901cf6ab34f8c16.md",
+      "sha256": "71f92ef75e3c25e8e8fee318c4921f099d8de80ec7cf9bd25901cf6ab34f8c16",
+      "bytes": 5805,
+      "executable": false
+    }
+  ],
+  "excluded": [],
+  "nestedPackages": [],
+  "embeddedImageTransforms": {},
+  "integrityScope": "sha256 describes this sanitized derivative, not the original source ZIP members"
+}

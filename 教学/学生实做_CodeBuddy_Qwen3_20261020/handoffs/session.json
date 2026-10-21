@@ -1,0 +1,10 @@
+{
+  "threadId": "01a15504-1439-7c43-bbba-606f540b8b5d",
+  "hostId": "local",
+  "title": "学生实做｜CodeBuddy + 阿里云 Qwen3",
+  "status": "DISPATCHED",
+  "requestedTool": "CodeBuddy standalone IDE",
+  "requestedProvider": "Alibaba Cloud Model Studio Qwen3",
+  "configurationVerified": false,
+  "initialSourceFiles": 215
+}

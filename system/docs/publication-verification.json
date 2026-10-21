@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-21T14:37:35.283532+08:00",
+  "scope": "Sanitized publication copy of the complete smart-campus reference system; not the 64-step student implementation",
+  "backend": {
+    "command": "./mvnw -B clean package",
+    "javaMajor": 17,
+    "tests": 80,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "package": "PASS"
+  },
+  "frontend": {
+    "node": "22.21.1",
+    "install": "npm ci --no-audit --no-fund",
+    "unitCommand": "npm run test:unit -- --run",
+    "testFiles": 5,
+    "tests": 27,
+    "unitResult": "PASS",
+    "buildCommand": "npm run build",
+    "typeCheckIncluded": true,
+    "productionBuild": "PASS"
+  },
+  "deploymentGuards": {
+    "command": "python3 -B -m unittest discover -s system/scripts/tests -v",
+    "tests": 11,
+    "result": "PASS",
+    "cliHelpChecks": 7,
+    "missingOptInOrExampleTargetRejections": 3,
+    "pythonSyntax": "PASS",
+    "embeddedRemotePythonSyntax": "PASS",
+    "javaReadRunnerCompilation": "PASS"
+  },
+  "sanitization": {
+    "realCredentialsCopied": false,
+    "credentialFallbacksRemoved": true,
+    "realAiriotProjectIdReplaced": true,
+    "fixedProjectGuardsPreserved": true,
+    "deploymentTargetsRequireExplicitConfiguration": true,
+    "secretFingerprintsRemoved": 8,
+    "historicalSharedContainerNamesAndIdsPseudonymized": true,
+    "historicalNonLoopbackIPv4Replaced": true,
+    "allTenExistingMigrationFilesByteIdenticalToSource": true,
+    "logsPrivateRuntimeDependenciesAndGeneratedArtifactsExcludedFromPublication": true,
+    "unreviewedScreenshotsExcluded": true,
+    "clientRemoteMutationsRequireExecuteFlag": true
+  },
+  "warnings": [
+    "Maven reported a deprecated API and commons-logging presence; neither failed the build.",
+    "npm reported a deprecated glob package.",
+    "Vite reported an output chunk above 500 kB; build completed."
+  ],
+  "limits": [
+    "No deployment, SSH operation or connection to the original AIRIOT gateway was executed. Dependency downloads and isolated loopback HTTP contract tests did run.",
+    "No original database was read, migrated, started, stopped or copied.",
+    "The complete reference system requires the deployer to configure its own dedicated AIRIOT example project. No mock business implementation was added.",
+    "Remote template operations were checked locally for syntax and target guards, not executed against a Linux host.",
+    "These results do not replace classroom, physical-device or production acceptance."
+  ],
+  "finalRevalidation": {
+    "reason": "Full verification after restoring overly broad intermediate anonymization and restricting shared-container anonymization to exact JSON fields. No intermediate copy was uploaded.",
+    "backendCleanPackage": "PASS",
+    "backendTests": {
+      "tests": 80,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "frontend": {
+      "tests": 27,
+      "passed": 27,
+      "failed": 0,
+      "files": 5,
+      "success": true
+    },
+    "frontendTypeCheckAndBuild": "PASS",
+    "deploymentGuardTests": 11,
+    "deploymentGuardResult": "PASS",
+    "pythonAndEmbeddedRemoteSyntax": "PASS",
+    "javaReadRunnerCompilation": "PASS",
+    "allTenExistingMigrationsByteIdentical": true,
+    "sharedContainerAnonymizationMethod": "Exact name/id values in known shared-container arrays only; never source code, keys or substring replacement."
+  }
+}

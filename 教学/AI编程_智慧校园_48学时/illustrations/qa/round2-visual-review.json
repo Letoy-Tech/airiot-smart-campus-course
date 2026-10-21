@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "version": "V0.3",
+  "reviewedAt": "2026-10-18T11:45:02.618Z",
+  "method": "实际打开现有最终 QA 截图并逐张查看；未重新渲染图源",
+  "status": "REVIEWED_NO_BLOCKING_LAYOUT_ISSUE_IN_SELECTED_VIEWS",
+  "labVerified": false,
+  "pdfReviewed": false,
+  "outputs": [
+    {
+      "file": "reading/index.html",
+      "sha256": "09d4f2ea00c5ddab01c27adab87ba3dc35339db5c54bc01c940ddc1cd3acfe8b",
+      "bytes": 463627,
+      "generatedAt": "2026-10-18T11:43:04.582Z",
+      "resources": 10,
+      "chapters": 12,
+      "figures": 40
+    },
+    {
+      "file": "reading/AI编程图文稿_V0.3_单文件.html",
+      "sha256": "a71e7141f64da81c1721c6a9167ad4507410ad9fff7fec1cf4d91ff687a9695c",
+      "bytes": 44184950,
+      "generatedAt": "2026-10-18T11:43:04.706Z",
+      "resources": 10,
+      "chapters": 12,
+      "figures": 40
+    }
+  ],
+  "items": [
+    {
+      "file": "illustrations/qa/round2-book/chapter-entry-1440.png",
+      "sha256": "cb1d97e1018d94a2bf56a00567f6b57dcd3f35bf46f750fc44b5130665c0d69e",
+      "observation": "第06章任务卡、三模块、验收和接力入口可辨认；两列章内定位保持正文顺序。"
+    },
+    {
+      "file": "illustrations/qa/round2-book/chapter-05-prompt-390.png",
+      "sha256": "7498054356d90e326cd4d3743238adfa772c38ddb7940baae3651c14ab0a9038",
+      "observation": "原超宽中文提示完整折行，语言与用途标签可见。"
+    },
+    {
+      "file": "illustrations/qa/round2-book/vue-template-1440.png",
+      "sha256": "974af57ab52b010149637494426386b9382b406db7233ed00873dc3e3105ffa5",
+      "observation": "新 Vue 模板按原文显示，代码与语言用途标签分层清楚。"
+    },
+    {
+      "file": "illustrations/qa/round2-book/chapter-task-390.png",
+      "sha256": "918381c8791fce31fba375120e8a0de58bfcae92080465010bc21cb7793dff4c",
+      "observation": "任务卡双列表格在窄屏可读，没有整页横向溢出。"
+    },
+    {
+      "file": "illustrations/qa/round2-standalone/reader-1440.png",
+      "sha256": "c4369818e37f589415d68faa967a48221a2968f095c2f44a05127c213cbc6882",
+      "observation": "桌面章级目录、折叠资料目录、版本及实验状态清楚。"
+    },
+    {
+      "file": "illustrations/qa/round2-standalone/reader-390.png",
+      "sha256": "e117323cdb5063407cf608e454a5f5751acf4c9c720bcad10fddaf5df453ca8d",
+      "observation": "手机三组目录收起，封面及资料依赖说明可见。"
+    },
+    {
+      "file": "illustrations/qa/round2-standalone/api-contract-390.png",
+      "sha256": "b8fbca42d4c4fe0dadc68432940e8069c9a3d761d7e8184448ed5163788f8178",
+      "observation": "内嵌合同正文和资料内定位可见；原项目参考明确标注。"
+    },
+    {
+      "file": "illustrations/qa/round2-standalone/vue-template-390.png",
+      "sha256": "f2a0f7418d75024c0506da37c97cc99818c8d42780cf700d2f191bba6516eddb",
+      "observation": "代码保留缩进，顶部明确可左右滚动，未把片段包装为完整程序。"
+    }
+  ],
+  "limits": [
+    "仅本机 Chromium 的 1440px/390px 视口；不是实体手机或其他浏览器验收。",
+    "复杂图仍通过大图查看，程序代码保留横向滚动；未验证教学实验、配套工程、正式教案或整书 PDF。"
+  ]
+}

@@ -1,0 +1,6 @@
+已准备骨架：第12站。
+  frontend/src/journey/features.ts
+  tools/hand-in.mjs
+  docs/交付核对.md
+备份：journey-backups/2026-10-19T18-54-09-179Z-stage-12-begin-597662
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

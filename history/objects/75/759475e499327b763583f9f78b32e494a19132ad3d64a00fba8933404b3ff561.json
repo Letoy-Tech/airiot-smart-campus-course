@@ -1,0 +1,11 @@
+{
+  "originalServicesStopped": true,
+  "originalPortsLogBytes": 0,
+  "dbStopExit": "0",
+  "freshDirectory": "handoff-run/app",
+  "freshDependencyReuse": false,
+  "freshAccountReuse": false,
+  "freshDataReuse": false,
+  "teacherHelperCopiedByteEqual": true,
+  "receiver": "same operator in fresh directory, not another human"
+}

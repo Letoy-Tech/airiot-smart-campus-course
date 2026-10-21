@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-21T03:55:26.645764+08:00",
+  "success": true,
+  "checks": [
+    {
+      "username": "anonymous",
+      "path": "/api/audit",
+      "status": 401
+    },
+    {
+      "username": "anonymous",
+      "path": "/api/integration",
+      "status": 401
+    },
+    {
+      "username": "admin",
+      "path": "/api/audit",
+      "status": 200,
+      "actualAuditCount": 9
+    },
+    {
+      "username": "admin",
+      "path": "/api/integration",
+      "status": 200,
+      "data": {
+        "source": "TEACHING_MOCK",
+        "simulated": true,
+        "controlEnabled": false,
+        "notificationsEnabled": false
+      }
+    },
+    {
+      "username": "manager",
+      "path": "/api/audit",
+      "status": 403
+    },
+    {
+      "username": "manager",
+      "path": "/api/integration",
+      "status": 200,
+      "data": {
+        "source": "TEACHING_MOCK",
+        "simulated": true,
+        "controlEnabled": false,
+        "notificationsEnabled": false
+      }
+    },
+    {
+      "username": "viewer",
+      "path": "/api/audit",
+      "status": 403
+    },
+    {
+      "username": "viewer",
+      "path": "/api/integration",
+      "status": 200,
+      "data": {
+        "source": "TEACHING_MOCK",
+        "simulated": true,
+        "controlEnabled": false,
+        "notificationsEnabled": false
+      }
+    }
+  ]
+}

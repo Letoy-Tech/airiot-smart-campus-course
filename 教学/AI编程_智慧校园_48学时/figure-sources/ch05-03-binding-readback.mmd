@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant U as 管理员请求
+    participant S as 位置服务
+    participant A as CampusAccess
+    participant P as 数据端口
+    participant DB as 本地数据库
+    U->>S: 提交 spaceId、buildingId、floor
+    S->>A: 管理资格检查
+    A-->>S: 允许
+    S->>P: 确认来源空间存在
+    P-->>S: 空间存在
+    S->>DB: 查楼栋与校园关系
+    DB-->>S: 合法本地关系
+    S->>DB: 保存本地绑定并提交
+    DB-->>S: 持久化结果
+    S-->>U: 返回成功响应
+    U->>S: GET locations 与 spaces
+    S->>DB: 读取已保存绑定
+    DB-->>S: 当前关系
+    S-->>U: 回读映射后的结果

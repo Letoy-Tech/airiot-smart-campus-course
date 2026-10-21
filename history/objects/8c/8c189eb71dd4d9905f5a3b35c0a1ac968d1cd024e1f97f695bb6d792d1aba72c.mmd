@@ -1,0 +1,26 @@
+sequenceDiagram
+    participant A as 管理人员 A
+    participant M as ADMIN
+    participant S as 业务服务
+    participant D as 独立 MySQL
+    Note over A,D: 教学预期，起点为处理中 v4，已有 NOTE，来源 ACTIVE
+    A->>S: verify-recovery，expectedVersion=4
+    S->>D: 同事务保存 UNKNOWN 与核实动作
+    D-->>S: 提交 v5
+    S-->>A: UNKNOWN，sourceVerifiedAt=null
+    M->>S: recover，expectedVersion=5
+    S->>D: 同事务保存 RECOVERED 与恢复动作
+    D-->>S: 提交 v6，核实重置 PENDING
+    S-->>M: IN_PROGRESS，v6
+    M->>S: 再次 recover，expectedVersion=6
+    S->>D: 锁定并核对未关闭、已恢复、版本匹配
+    D-->>S: 当前详情，无新增版本或时间线
+    S-->>M: 仍 v6
+    A->>S: verify-recovery，expectedVersion=6
+    S->>D: 同事务保存 PASS、核实时间与动作
+    D-->>S: 提交 v7
+    S-->>A: PASS，v7
+    A->>S: close，expectedVersion=7，非空结论
+    S->>D: 完整门槛检查后同事务关闭并记时间线
+    D-->>S: 提交 v8
+    S-->>A: CLOSED，v8

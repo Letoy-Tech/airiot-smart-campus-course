@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T15:14:33.112Z",
+  "purpose": "教学配图渲染；不证明业务代码或实验通过",
+  "browser": "149.0.7827.55",
+  "dependencies": {
+    "playwright": "1.62.1",
+    "mermaid": "11.12.2"
+  },
+  "scale": 2,
+  "figures": [
+    {
+      "id": "图 04-02",
+      "title": "第一次设备读取的请求与返回",
+      "alt": "浏览器向前端开发服务请求带 api 前缀的设备地址，代理保留前缀后转到后端；后端检查身份和读取权限，再读取教学提供器，返回标准 JSON，前端从 data.items 显示两条模拟设备。",
+      "caption": "图 04-02　第一次设备读取的请求与返回。教学示意，非运行证据。",
+      "source": "figure-sources/ch04-02-first-request.mmd",
+      "sourceSha256": "0ad18c700e4166ea5225a242ec9500457ed152e256cc943aef416debe5c40b3f",
+      "renderSource": "figure-sources/ch04-02-first-request.mmd",
+      "renderSourceSha256": "0ad18c700e4166ea5225a242ec9500457ed152e256cc943aef416debe5c40b3f",
+      "metadata": "figure-sources/ch04-02-first-request.figure.json",
+      "svg": "illustrations/ch04-02-first-request.svg",
+      "png": "illustrations/ch04-02-first-request.png",
+      "svgSha256": "863b03cbb1a92859cf8cb5ccb1b161f3fcea23aea72035007a2244e8321d3f23",
+      "pngSha256": "e16d266fa998ecf55980f25bd91393ad91639be8887a30ed7e5c1d15153dff30",
+      "width": 1280,
+      "height": 1059,
+      "rasterWidth": 2560,
+      "rasterHeight": 2118,
+      "textCount": 17,
+      "minimumEffectiveFontSize": 17,
+      "smallText": [],
+      "outOfCanvasText": [],
+      "visualReview": "PENDING_HUMAN_OR_IMAGE_VIEW",
+      "labVerified": false
+    }
+  ]
+}

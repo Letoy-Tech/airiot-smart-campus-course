@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-19T15:42:26.379Z",
+  "scope": "HTTP application final navigation and history chart smoke",
+  "results": [
+    {
+      "name": "History canvas mounted with null and zero original samples",
+      "status": "PASS",
+      "samples": [
+        "1.2 kW",
+        "null kW",
+        "0 kW",
+        "1.8 kW"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "02-设备点位历史.png",
+      "sha256": "9242fde324e89c2d2dbf1ae140f004ef9843cdf2b29865df138ed212455e55ef",
+      "url": "http://127.0.0.1:5178/?finalsmoke=1#history?deviceId=teaching_energy_01&tagId=power",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  ],
+  "pageErrors": [],
+  "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('教学账号', { exact: true })\u001b[22m\n",
+  "finishedAt": "2026-10-19T15:42:57.483Z"
+}

@@ -1,0 +1,229 @@
+{
+  "scope": "Local authenticated CAMPUS_VIEWER browser, not public-server browser acceptance",
+  "recording": "d52217b78474e",
+  "pass": true,
+  "viewportDesktop": [
+    1798,
+    1025
+  ],
+  "viewportMobile": [
+    390,
+    844
+  ],
+  "observed": [
+    "operations states 0 NEW / 1 ASSIGNED / 1 IN_PROGRESS / 2 CLOSED after separate transaction QA",
+    "closed DEMO case shows six actor/version timeline entries and locked disposition",
+    "owner page 16/16 assigned, all cards readonly",
+    "mobile document width390 equals viewport390",
+    "mobile menu opens as covering layer, selecting operations closes it",
+    "CLOSED distribution button requests state=CLOSED and queue has two records"
+  ],
+  "screenshots": [
+    "screenshots/campus-demo-local-operations.png",
+    "screenshots/campus-demo-local-mobile-owners.png"
+  ],
+  "apiMetadata": [
+    {
+      "id": "d52217b78474e:n46",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n76",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n77",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n78",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/demo/status",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n80",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n81",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n82",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n83",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n84",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n133",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n161",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n162",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n163",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/demo/status",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n165",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n166",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n169",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/c9808ed2-2a09-4dc1-8979-ff10a12242f4",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n170",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n173",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n174",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/device-owners",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n175",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n176",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n177",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n178",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/demo/status",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n179",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&state=CLOSED&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d52217b78474e:n180",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/alarm-cases?sourceType=DEMO&state=CLOSED&skip=0&limit=50",
+      "status": 200,
+      "state": "complete"
+    }
+  ],
+  "consoleErrors": [
+    {
+      "source": "extension",
+      "sourceUrl": "chrome-extension://invalid/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "source": "extension",
+      "sourceUrl": "chrome-extension://invalid/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "captureLimits": [
+    "from_start",
+    "task_tab",
+    "text_bodies_bounded",
+    "time_window_not_causality",
+    "page_main_frame",
+    "worker_targets_not_captured",
+    "manual_main_frame_only"
+  ],
+  "secrets": "No bodies, headers or authentication values exported",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

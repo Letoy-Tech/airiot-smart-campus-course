@@ -1,0 +1,1 @@
+{"scenario": "owner-event-snapshots", "oldCaseId": "8fda017a-c8d1-443d-9cbc-90e9f39c1655", "oldAssignee": "manager-a", "newCaseId": "1f5cdc11-c79c-45d7-b2f8-93d2d44714ff", "newAssignee": "manager-b", "ownerUid": "manager-b", "ownerVersion": 4, "ownerTimelineVersions": [1, 2, 3, 4], "passed": true, "recordedAt": "2026-10-19T18:33:29.541147+00:00"}

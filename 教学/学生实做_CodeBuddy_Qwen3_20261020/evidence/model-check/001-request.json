@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-19T17:16:54.872346+00:00",
+  "userAuthorizedDeepSeekAlternative": true,
+  "requestedVia": "CodeBuddy CN 4.12.2 native Ask mode",
+  "uiSelectedModel": "Deepseek-V4.1-Flash",
+  "uiSelectedContext": "300K",
+  "serviceChannel": "CodeBuddy built-in model service",
+  "alibabaQwenRequest": false,
+  "promptFile": "001-prompt.txt",
+  "state": "RESPONSE_RECEIVED",
+  "requestAttempts": 1,
+  "successfulResponses": 1,
+  "providerActualModelId": null,
+  "usage": null,
+  "billing": null,
+  "bailianStatus": {
+    "authenticated": true,
+    "observedRegion": "cn-beijing",
+    "apiKeyRows": 0,
+    "createdCredentials": false
+  },
+  "uiObservedUsage": {
+    "credits": 0.12,
+    "totalTokens": 8302,
+    "elapsedMs": 334
+  },
+  "modelVerification": "IDE selected label and completed conversation; upstream model ID not exposed",
+  "responseFile": "001-output.txt",
+  "screenshot": "../screenshots/model-check-deepseek-success.png"
+}

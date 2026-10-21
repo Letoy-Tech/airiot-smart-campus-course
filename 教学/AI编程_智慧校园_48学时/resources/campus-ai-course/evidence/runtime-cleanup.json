@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-18T16:34:04.785155+00:00",
+  "status": "PASS",
+  "stoppedCourseListeners": [
+    {
+      "port": 8091,
+      "pid": 95408,
+      "ownershipChecked": true
+    },
+    {
+      "port": 5178,
+      "pid": 74709,
+      "ownershipChecked": true
+    }
+  ],
+  "scope": "only independent course listeners; original system untouched",
+  "isolatedMysql": "STOPPED_DATA_PRESERVED"
+}

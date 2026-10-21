@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:52:34.448Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "04 backend restart expires session; same account relogin restores devices",
+      "detail": {
+        "beforeLogin": 401,
+        "afterLogin": 200
+      },
+      "passed": true
+    }
+  ]
+}

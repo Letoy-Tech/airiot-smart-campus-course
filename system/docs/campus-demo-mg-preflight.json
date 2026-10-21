@@ -1,0 +1,481 @@
+{
+  "checkedAt": "2026-10-05T03:31:34.649556+08:00",
+  "serverModified": false,
+  "current": "/srv/campus-demo/releases/REL_20261005-0151-SCHOOL-DEMO",
+  "backend": {
+    "pid": 360464,
+    "sha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a",
+    "inode": 23860136,
+    "runningJarFDs": [
+      {
+        "fd": "4",
+        "target": "/srv/campus-demo/releases/REL_20261005-0151-SCHOOL-DEMO/backend.jar",
+        "inode": 23860136,
+        "sha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a"
+      },
+      {
+        "fd": "5",
+        "target": "/srv/campus-demo/releases/REL_20261005-0151-SCHOOL-DEMO/backend.jar",
+        "inode": 23860136,
+        "sha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a"
+      }
+    ]
+  },
+  "frontend": {
+    "indexSha256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b",
+    "release": "REL_20261005-0151-SCHOOL-DEMO",
+    "fileCount": 59,
+    "assetCount": 57,
+    "manifestSha256": "2cbdecbbcd1cd7b88c45b5fc0002f1fc59b4721e0ae4cf9e360528b352b2f70a"
+  },
+  "units": {
+    "campus-demo.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "360464",
+      "UnitFileState": "enabled"
+    },
+    "campus-demo-mysql.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351060",
+      "UnitFileState": "enabled"
+    },
+    "campus-demo-redis.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351064",
+      "UnitFileState": "enabled"
+    },
+    "nginx.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "262625",
+      "UnitFileState": "enabled"
+    }
+  },
+  "proxy": {
+    "/etc/nginx/vhosts/demo.example.invalid.conf": {
+      "sha256": "e0bbec236e36ddf2fbe14e41e245f831328887bb84f0112f094b0233447a246b",
+      "content": "map $http_upgrade $airiot_cityu_connection {\n    default upgrade;\n    '' close;\n}\n\nserver {\n    listen 80;\n    listen [::]:80;\n    server_name demo.example.invalid;\n    return 301 https://demo.example.invalid$request_uri;\n}\n\nserver {\n    listen 443 ssl;\n    listen [::]:443 ssl;\n    http2 on;\n    server_name demo.example.invalid;\n\n    include snippets/ssl-letoy.conf;\n    include snippets/security-headers.conf;\n    include snippets/gzip.conf;\n\n    access_log /var/log/nginx/airiot_cityu_443.access.log;\n    error_log /var/log/nginx/airiot_cityu_443.error.log warn;\n\n    client_max_body_size 10240m;\n\n    include /etc/nginx/snippets/campus-demo-routes.conf;\n\n    location / {\n        include snippets/proxy-headers.conf;\n        proxy_http_version 1.1;\n        proxy_set_header Upgrade $http_upgrade;\n        proxy_set_header Connection $airiot_cityu_connection;\n        proxy_read_timeout 3600s;\n        proxy_send_timeout 3600s;\n        proxy_pass http://127.0.0.1:13890;\n    }\n}\n"
+    },
+    "/etc/nginx/snippets/campus-demo-routes.conf": {
+      "sha256": "64960d56ce336d0c337c48ade5c11d7fe9a9425605199dbe14a2f1d2c51a1601",
+      "content": "# Dedicated school showcase. Shared AIRIOT root route is preserved.\nlocation = /campus-demo { return 301 /campus-demo/; }\nlocation = /campus-demo/api { return 308 /campus-demo/api/; }\nlocation ^~ /campus-demo/api/ {\n    include snippets/proxy-headers.conf;\n    proxy_pass http://127.0.0.1:18091/;\n    proxy_connect_timeout 5s;\n    proxy_read_timeout 60s;\n    proxy_send_timeout 60s;\n    client_max_body_size 10m;\n}\nlocation = /campus-demo/index.html {\n    alias /srv/campus-demo/current/mg/index.html;\n    include snippets/security-headers.conf;\n    add_header Cache-Control \"no-cache\";\n}\nlocation ^~ /campus-demo/ {\n    alias /srv/campus-demo/current/mg/;\n    try_files $uri $uri/ /campus-demo/index.html;\n    include snippets/security-headers.conf;\n    add_header Cache-Control \"no-cache\";\n}\n"
+    }
+  },
+  "nginxTest": {
+    "exit": 0,
+    "out": "",
+    "error": "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful"
+  },
+  "directHealth": {
+    "exit": 0,
+    "out": "{\"status\":\"UP\"}",
+    "error": ""
+  },
+  "proxyHealth": {
+    "exit": 0,
+    "out": "{\"status\":\"UP\"}",
+    "error": ""
+  },
+  "sharedContainers": [
+    {
+      "name": "shared-service-97da03208817",
+      "id": "example-container-5bdea3f29489",
+      "imageId": "sha256:1b7cdd24346a26f393cecb867a6111054c464422743dfa9c8429497374e51816",
+      "state": "running",
+      "startedAt": "2026-10-01T10:09:22.670589204Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-de1296f28e12",
+      "id": "example-container-a939de8e0644",
+      "imageId": "sha256:d9d952560c0cbbd9d78bd9fec63d2ac8aa18eda5a84eb90879b5e3bb68b1949c",
+      "state": "running",
+      "startedAt": "2026-10-01T10:09:12.383808863Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-962fc8fcdc32",
+      "id": "example-container-0095fbe3e68a",
+      "imageId": "sha256:b31a8704913386313fb03b6e576a0c405c42d41c5620af4ce8361b8471516b7c",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:53.141812118Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-0135ae5b75cc",
+      "id": "example-container-0278693f5bb1",
+      "imageId": "sha256:02d79f6fe2683c9b7ffa7c410920e7e72c2f75ff20fe323504e56e22159334a3",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:46.003359259Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-4d5ca47ad7dd",
+      "id": "example-container-2dccb1b49700",
+      "imageId": "sha256:cc9ba4e1b987d7ea6413ca7e58a944b5becbb25e2a0fdf7dde01230b15063723",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:36.871233461Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-41447a3a5dc6",
+      "id": "example-container-d6e53b8e54e8",
+      "imageId": "sha256:d3ebd2a9d201feff72b0b9e023aa40b922b1f1bbb330eabed63aad72080e7da8",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:26.670750204Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-9d79059141c0",
+      "id": "example-container-eaeab2dae55b",
+      "imageId": "sha256:5ea32c9750de90f8815cdc5f7106a7729c59468f50a0234bef37329133d9c2f0",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:16.508149467Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-46d36386404e",
+      "id": "example-container-8568c9a922f9",
+      "imageId": "sha256:dafb0bf4e2d0e7e16d6307bd931849206c32362cef1b22de0e460e100a96eb1a",
+      "state": "running",
+      "startedAt": "2026-10-01T10:08:06.370190666Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-dc1ee0cf9add",
+      "id": "example-container-aa64bd835a2e",
+      "imageId": "sha256:1e34fbdafa1b01e893c6d4e2d06c06b04aa40e1a7426df04fb862ae501c5c838",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:56.147444562Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-c9869d4b194f",
+      "id": "example-container-67f19d2db849",
+      "imageId": "sha256:fd06642ae68c465bab045211275c92e865a632508f2bd9d1efa32b53b9ee1f79",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:45.999403619Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-51c1b0c64d89",
+      "id": "example-container-b4fd28c3e85d",
+      "imageId": "sha256:0866ccf0d2e00245379478eaa097de993f18fc22d9ee43aa658fd7fa84e5c764",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:35.841997496Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-975405ea7cf0",
+      "id": "example-container-0a5f1f676837",
+      "imageId": "sha256:558c0b0a0f5d10a8078a3e2cff7c592e38e309e30f0806c6639b5cfbf8a03c40",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:25.700125172Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-be264c1a5640",
+      "id": "example-container-af5f83e857f2",
+      "imageId": "sha256:03ee66c4484c7a612f6bbd52bc8f1ec392e0281b3d72597e13f37c10e3fecc36",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:15.537664194Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-6f96b4071cb0",
+      "id": "example-container-925eed28165d",
+      "imageId": "sha256:7f5ec45ff386992afc9877af04bb5f224d80804ab2d8202a6fd1db239b191d86",
+      "state": "running",
+      "startedAt": "2026-10-01T10:07:08.47291795Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-09030975ef21",
+      "id": "example-container-26ff4932fed7",
+      "imageId": "sha256:437a80b1a2dbb9aefeda312b2f2fc236c35be3d8e10f001019a5836669ec1d52",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:58.336065141Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-1457be817ac5",
+      "id": "example-container-19b7d6f865e8",
+      "imageId": "sha256:52d871a35e2044461543ad34d514c06000cca20050af8db6df54f5875ef298cb",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:48.215720298Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-ecd89419981d",
+      "id": "example-container-a4b1f9066a46",
+      "imageId": "sha256:62359854d42a45bc20bf105fc6529749bd1ec1ba5126dd59daeb21ef3171a5e7",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:38.076715913Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-ecea6ff4300c",
+      "id": "example-container-97486ebe3d35",
+      "imageId": "sha256:db59216a66f70b76a3b058ecf51779bf570a171920da9c6a426b26b3d4304998",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:27.96725688Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-5903c9eb52a0",
+      "id": "example-container-9b8b6b2499c6",
+      "imageId": "sha256:a9706a70acf674ad887e56f9cc89614f1eaf474b847d87fc27bfe1818f3cc5de",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:17.871795072Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-3ef188838d5f",
+      "id": "example-container-431d2202b85a",
+      "imageId": "sha256:5c2b9133245f56888fbed8019188dfc8f22daf205c25517a01df4ddf535cc59c",
+      "state": "running",
+      "startedAt": "2026-10-01T10:06:07.316939555Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-e54a1b41e4a4",
+      "id": "example-container-8884d9c9468b",
+      "imageId": "sha256:8eec2ff30dd216186d9beffc2fa1d21014f2c110c9123e68de84004f05737cdf",
+      "state": "running",
+      "startedAt": "2026-10-01T10:05:57.200173579Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-614f54cec054",
+      "id": "example-container-7cdf45418106",
+      "imageId": "sha256:9a151b5d81099b577c6ee303727da6338924f4f23cc02bd1edbcaecb50c8d4a6",
+      "state": "running",
+      "startedAt": "2026-10-01T10:05:47.026724804Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-dfe92d5bfd0f",
+      "id": "example-container-2675e17e9943",
+      "imageId": "sha256:ba2ebead2f915ead5def6868b0f090e68731192ccab545aaa77bb25947fff519",
+      "state": "running",
+      "startedAt": "2026-10-04T18:49:22.306336347Z",
+      "restartCount": 36
+    },
+    {
+      "name": "shared-service-6a17d0c48c73",
+      "id": "example-container-106f79283eb6",
+      "imageId": "sha256:302cac8f8291929c294fcc84234b4ea55d8210cb43592618a9b2b7cb8296da56",
+      "state": "running",
+      "startedAt": "2026-10-01T10:05:26.807131939Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-6deed56ff5aa",
+      "id": "example-container-0ec60ca208f4",
+      "imageId": "sha256:f9df243a84bd3dd740df1e4ab9a2526d55d6b4cf9a808621b94cdbfb21f7cd5b",
+      "state": "running",
+      "startedAt": "2026-10-01T10:05:16.700431379Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-25c1771063cf",
+      "id": "example-container-97d53f6ced8f",
+      "imageId": "sha256:9982df14f52354cf2452219a56fae8987ddb89ec931607a7fa4f4cf767d4cb10",
+      "state": "running",
+      "startedAt": "2026-10-01T10:05:06.531496862Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-8b65af222063",
+      "id": "example-container-de8b2ffeb930",
+      "imageId": "sha256:48ab5a033f7167ec5466d1ea62bb6078effb2b4de88b63ec087d1f6dfb0215ef",
+      "state": "running",
+      "startedAt": "2026-10-01T10:04:56.392750844Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-df51e4bc0a90",
+      "id": "example-container-861f3f3e03fc",
+      "imageId": "sha256:1e5b2a09c334ab5446edbfdeb9c46b5c08e49d3ff99f1250a67d3a12689c6104",
+      "state": "running",
+      "startedAt": "2026-10-01T10:04:46.154464301Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-80c4e6bef400",
+      "id": "example-container-c64f3f53d722",
+      "imageId": "sha256:5c3b034b04e37a982a3ff78d8798a0ff1d3cb41d427669861117b02b5c491d86",
+      "state": "running",
+      "startedAt": "2026-10-01T10:04:39.105527649Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-c0d653b2bda5",
+      "id": "example-container-039ad093f4f3",
+      "imageId": "sha256:6966e87bc1e6b7d56df8cedf43d31aa7ea9140153c5651e658cde1198a4cb80d",
+      "state": "running",
+      "startedAt": "2026-10-01T09:10:07.635812578Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-7b9c73e614b1",
+      "id": "example-container-d8f2f7c74111",
+      "imageId": "sha256:157f2d942692275554ecacfdc66ef723dd728805c97e90f2fa534a3d42b5eb97",
+      "state": "running",
+      "startedAt": "2026-10-01T09:09:46.583679482Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-09b451bb91d0",
+      "id": "example-container-e1bbeadae53e",
+      "imageId": "sha256:c3478a59ee8a37b1af1ed685821a4265f11aadf1ce1abac79f8234af5e083995",
+      "state": "running",
+      "startedAt": "2026-10-01T09:09:25.474846744Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-6c82c465735a",
+      "id": "example-container-fcc6cad43cd1",
+      "imageId": "sha256:63d7224eb30e1c2f2976e0043c6cb6f4f7f9bebb820253dc65998bbd747fcc85",
+      "state": "running",
+      "startedAt": "2026-04-15T19:28:10.497154405Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-5c65bfbb36fa",
+      "id": "example-container-9dc18ee121ee",
+      "imageId": "sha256:aab11b9505e562008aa294f2fdb1cb401f0328610293b925fa0557913e235cd1",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:21.936835766Z",
+      "restartCount": 1
+    },
+    {
+      "name": "shared-service-ed5040c28297",
+      "id": "example-container-ac602edfb474",
+      "imageId": "sha256:cf2da5ef9fe07e896f3dcbace0e14b3d0d9ce671bb1dcc33dd1c6223a17f036a",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:22.093012227Z",
+      "restartCount": 1
+    },
+    {
+      "name": "shared-service-a71889443ca3",
+      "id": "example-container-9ab2162d4a9d",
+      "imageId": "sha256:da39bc2d2f5da0e2836c0ef14d88b69b55f914cfee2d98f1bfd79ef6279a5185",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:21.297061825Z",
+      "restartCount": 2
+    },
+    {
+      "name": "shared-service-689ac8b059b4",
+      "id": "example-container-d18d130f5da4",
+      "imageId": "sha256:d70ff6bfe1bd7de90403a93f25deeee22d7171b7caaeaca551d7ac4f5916decb",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.936298039Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-6516c3ad02ad",
+      "id": "example-container-825a67594b44",
+      "imageId": "sha256:5d74afcf2cef21d544bd874548cb15b232fbeab1b2f735f4835883b4487c6bf3",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.19938401Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-937ad0f70f10",
+      "id": "example-container-7f83d3134054",
+      "imageId": "sha256:6723a4d2741208dce5e533ad70c6b50b248500ca602d2f2e52f9f6cacdeb3423",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.190482228Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-bec31e537f6b",
+      "id": "example-container-6048e717f597",
+      "imageId": "sha256:7081ee0367c99da42a79e318fdde2a866881356dda03c7e0945d8afa8098f9fe",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.192886775Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-076047f46d28",
+      "id": "example-container-2becab2e4687",
+      "imageId": "sha256:f37f9f678836efb038d6368daa868cc4a88c127f919e73dc8904fcb1c5308eae",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.200085766Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-c5d7df32b29c",
+      "id": "example-container-44033c4c3cb4",
+      "imageId": "sha256:0fce2b329a0c2b1888d08675e5ec029e85927e8f8c32f2281644914b8e429095",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.197176673Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-c36c44caa314",
+      "id": "example-container-500db68dadb8",
+      "imageId": "sha256:d918bc1feeef58203db58b5c00f0729fece29cbbb82b0381c1e8253c702c6737",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.195837691Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-ddd7cd8add6f",
+      "id": "example-container-5a54e39e1098",
+      "imageId": "sha256:07e2ee723e2d9c8c141137bf9de1037fd2494248e13da2805a95ad840f61dd6c",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.195033885Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-914606c9f668",
+      "id": "example-container-64c1dd817076",
+      "imageId": "sha256:b062beaf992b92c65f1c4af4e933f43a86d640c4ef8fe651ec6ff347e22bc709",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.198943266Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-77f4418e7346",
+      "id": "example-container-aea6253c8233",
+      "imageId": "sha256:b062beaf992b92c65f1c4af4e933f43a86d640c4ef8fe651ec6ff347e22bc709",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.199499665Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-d14033dbaaf6",
+      "id": "example-container-7d696a39ec47",
+      "imageId": "sha256:f9c14fe76d502861ba0939bc3189e642c02e257f06f4c0214b1f8ca329326cda",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.189693724Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-8109b7223b52",
+      "id": "example-container-9e74baeebdc1",
+      "imageId": "sha256:6723a4d2741208dce5e533ad70c6b50b248500ca602d2f2e52f9f6cacdeb3423",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.198782379Z",
+      "restartCount": 0
+    },
+    {
+      "name": "shared-service-31aeaa04566a",
+      "id": "example-container-3b3b29d99e2e",
+      "imageId": "sha256:3e79bfdff98d4b620762819896e03ca4aad90680cf6ab378a7e900def25f40e5",
+      "state": "running",
+      "startedAt": "2026-04-15T18:47:11.197486139Z",
+      "restartCount": 0
+    }
+  ],
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T15:47:56.140446+00:00",
+  "version": "1.2.0",
+  "archive": "AI编程_智慧校园_48学时_V1.2.0_完整教学包.zip",
+  "bytes": 275321808,
+  "files": 3092,
+  "sha256": "1b1b9d5c77a501521cbf4b495369dc00f7fe6c72a28a5e03b44f889ace7ed720",
+  "crcAndContentHashes": "PASS",
+  "freshUnzipAllFileHashes": "PASS",
+  "freshUnzipDirectory": ".runtime/package-v1.2.0-6d58f59a17364a579ab252c078c59282/fresh-unzip",
+  "entry": "AI编程_智慧校园_48学时/先打开这里.html",
+  "staticEntryChecks": {
+    "status": "PASS_STATIC",
+    "entries": [
+      "先打开这里.html",
+      "index.html",
+      "journey/index.html",
+      "walkthroughs/index.html",
+      "reading/index.html",
+      "lesson-plans/手把手主线授课衔接.html",
+      "lesson-plans/index.html",
+      "resources/index.html"
+    ],
+    "localReferences": 1069,
+    "externalReferencesNotRequested": [
+      {
+        "from": "journey/index.html",
+        "reference": "https://www.codebuddy.cn/downloads/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "journey/index.html",
+        "reference": "http://127.0.0.1:5178",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "journey/index.html",
+        "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Overview",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "journey/index.html",
+        "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Rules",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "journey/index.html",
+        "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Agent-Mode/Results",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://www.qianwen.com/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://code.visualstudio.com/download",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://adoptium.net/temurin/releases/?version=17",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://git-scm.com/downloads/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://code.visualstudio.com/download",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://adoptium.net/temurin/releases/?version=17",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://git-scm.com/downloads/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "http://127.0.0.1:5178/#cases?state=malformed",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "http://127.0.0.1:5178/#first-read；根页现在是设备台账。失败保留快照由教师框架提供，学生观察并解释。课前完成工具安装、首次依赖下载和每台学生机的资源预检，课内才有余量完成1＋2＋1。达到任务卡的最小证据就停，不重复执行全套构建或制作额外页面。",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://git-scm.com/docs/git-add",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://git-scm.com/docs/git-revert",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://docs.npmjs.com/cli/v11/commands/npm-ci/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "http://127.0.0.1:5178/#first-read。端口被占用时先确认占用者，脚本不自动杀进程；结束时在对应终端Ctrl+C。修改后端后应重新build再启动，不能用旧JAR证明新源码。学生版未补TODO时可以构建，但对应任务测试失败和页面待完成提示属于预期。",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://vite.dev/config/server-options.html#server-proxy",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/responsebody.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://cn.vuejs.org/guide/components/props.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://cn.vuejs.org/guide/essentials/watchers.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3-Coder",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://qwenlm.github.io/qwen-code-docs/zh/users/quickstart/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://www.qianwen.com/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "resources/index.html",
+        "reference": "https://dev.mysql.com/doc/connector-j/en/connector-j-reference-using-ssl.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "resources/index.html",
+        "reference": "https://dev.mysql.com/doc/refman/8.4/en/grant.html",
+        "status": "NOT_REQUESTED"
+      }
+    ],
+    "historicalReferencesNotPackaged": [
+      {
+        "from": "reading/index.html",
+        "reference": "../../../system/docs/api-contract.md",
+        "status": "HISTORICAL_REFERENCE_NOT_PACKAGED"
+      }
+    ],
+    "browserUsed": false,
+    "networkUsed": false,
+    "javascriptExecuted": false
+  },
+  "documentChecks": "journey/qa/round10/document-checks.json",
+  "currentGateReports": {
+    "course-index.json": "5cc791468a971250642d01fd9a37958a05ca391fe3a9c4c3c77771c815e52a39",
+    "resources/project-journey/evidence/author-verification.json": "14c047c96bd91b74cfb0be394a667f295eae3effbb8de82ad6e489e2e9e0a33e",
+    "journey/qa/round10/application-verification.json": "3a9e4c9640dd183635f8de473a3c145761718afc6ef32c0eca28290bbf1531a4",
+    "resources/project-journey/evidence/doc-only-rebind.json": "4737213bb0cf92fc48937b074de1e8bc49a76b515dce06e40e336d381ccc0b68",
+    "resources/project-journey/evidence/pre-doc-rebind-manifest.json": "f0c97649ed0357dd1e2c8822f2bb00a69a13efe783dc886f421a61ce7b6a3c37",
+    "resources/project-journey/evidence/debug-wrong-fixed.json": "b94de3712acffa2cf124bb554589afb46d28a15e6e5e1063dcd15e614d990897",
+    "journey/qa/round10/mysql-test-summary.json": "25514da07515fde48a92506f55e72d287f0d305655bc36f7f01ee03610f7cf25",
+    "journey/qa/round10/mysql-transaction-evidence.json": "2f0e5687a4806ec72c958fd757023a53dab008f149f45447c1a86e18fefdde8b",
+    "journey/qa/round10/mysql-snapshot-evidence.json": "83421c16b3bdbf6a4443c0d5213c650e2f41943efe6a0018d88c704b8f907907",
+    "journey/qa/round10/static-review.json": "b8edec18390805343392cb30bbc85c00be9cc24cc387065fd207dcbba3a192f2",
+    "journey/build.json": "4c9ae84c4c5e335e86ee3b5cf7cf3e123c55a43617284627da013b2e99b813bb",
+    "resources/project-journey/BUILD-MANIFEST.json": "073768bb0e301178174c77351b49446686b9ac9dfb08aa38247431185b6b0c77",
+    "reading/index.build.json": "c101927568968919e6dd3d7dba76e5e0ec4c529ab845fb62a9fd1d0e500a33a1",
+    "walkthroughs/build.json": "493fb36283a45f0ef50147fa57022770fce1c8d98c0575477aa86ab5529498b3"
+  },
+  "historicalArchivesUnchanged": {
+    "AI编程_智慧校园_48学时_V1.1.1_完整教学包.zip": "b90d375ad91198fe9b88dde61023d21a0c5991088082627fcd11ef4d3b2b3282",
+    "AI编程_智慧校园_48学时_V1.0.2_完整教学包.zip": "1083e348cca3085b802f04c76971635883af65c58324e323d82244039206c1d5",
+    "AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip": "625042673d2f3da39ab2b889e17a22495e25cee870725e37de176dbd5429ee87"
+  },
+  "historicalReferenceAndChapterStartersUnchanged": true,
+  "originalWordPdfPreserved": true,
+  "privatePathsExcluded": true,
+  "knownCredentialScan": "PASS",
+  "credentialScanScope": "Course-local reference and round8/round9/round10 rehearsal passwords; not a universal secret detector.",
+  "freshUnzipBrowserCheck": "NOT_RUN_THIS_ROUND_STATIC_ONLY",
+  "limitations": {
+    "offlineHtml": "新离线HTML仅进行本轮静态检查，未进行本轮离线浏览器复测。",
+    "offlineBrowserRetestedThisRound": false,
+    "windowsPhysicalMachine": false,
+    "classroomTrial": false,
+    "schoolDatabase": false,
+    "realAiriot": false,
+    "realQwenSession": false,
+    "realCodeBuddyStudentSession": false,
+    "note": "作者工程与HTTP/应用浏览器结果不能代替Windows实机、学校环境或学生课堂验收。"
+  }
+}

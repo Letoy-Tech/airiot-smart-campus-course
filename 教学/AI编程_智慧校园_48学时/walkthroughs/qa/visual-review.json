@@ -1,0 +1,39 @@
+{
+  "status": "VISUALLY_REVIEWED",
+  "at": "2026-10-19T13:24:14.763825+00:00",
+  "findings": "Reviewed current 12-diagram contact sheet, full-size two-terminal commands, desktop/mobile root entry, teacher mapping, chapter11/12 mobile starts and actual defect screenshot. Captures taken after instant navigation. Text readable, no overlap; headings and copy buttons visible; diagrams can open separately.",
+  "images": [
+    {
+      "path": "walkthroughs/qa/06-配图总览.png",
+      "sha256": "7b1df6329b01509669c120c925b51ebfd6f2593bb518b57c57b81f63d2950a91"
+    },
+    {
+      "path": "walkthroughs/figures/11-两个终端.png",
+      "sha256": "1b816b2a2dd09420e2089b8cfce4f8227ca1fda441f85885740f746781c359b0"
+    },
+    {
+      "path": "walkthroughs/qa/chapter-11-390.png",
+      "sha256": "bb1d7af19e2c9830defa2ec5ab4ec7b18e096bd3e670e362f2a20cf62f434e68"
+    },
+    {
+      "path": "walkthroughs/qa/chapter-12-390.png",
+      "sha256": "74ea70f31bd6afb1c959dae808ebe61b7e9a06938b79767dc5a5f4fb34d35616"
+    },
+    {
+      "path": "walkthroughs/qa/entry/entry-1440.png",
+      "sha256": "93dee1e8df210ab82f428a1e8f7e61aa715fdb5d5f9859faaf7d495e7337a4f9"
+    },
+    {
+      "path": "walkthroughs/qa/entry/entry-390.png",
+      "sha256": "3af5e7691486e2fe94436074a9b34bf52f8fa2d1c33da0f3c91c118e3cc4ff63"
+    },
+    {
+      "path": "walkthroughs/qa/entry/teaching-390.png",
+      "sha256": "1355a935e5bd9732719ed7851207b2c01f0d1fbec7de735165f85754dccaca0b"
+    },
+    {
+      "path": "walkthroughs/qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "sha256": "433419bd8c8b14018cd3fd7a1a56822ecd7fda7cf46948ae5ef998f943ad118a"
+    }
+  ]
+}

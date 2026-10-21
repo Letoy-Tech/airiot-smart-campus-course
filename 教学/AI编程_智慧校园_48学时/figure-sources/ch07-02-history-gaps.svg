@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">图 07-02 曲线与原始样本一一核对</title>
+  <desc id="desc">T0 为固定教学时刻。零值保留，六十秒处的空值形成断点，一百二十秒与一百八十秒处的有效点视觉连线。原始表共四条，包含缺失行。</desc>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #18364b; }
+    .title { font-size: 28px; font-weight: 700; }
+    .body { font-size: 21px; }
+    .small { font-size: 18px; }
+    .muted { fill: #526b7a; }
+    .grid { stroke: #d1dce4; stroke-width: 1.5; }
+    .axis { stroke: #2f4b60; stroke-width: 2; }
+  </style>
+  <rect width="1280" height="800" fill="#f5f9fb"/>
+  <text x="36" y="48" class="title">缺失形成断点，连线不制造测量</text>
+  <text x="36" y="86" class="body">教学曲线示意 · T0 = 1700000000000 毫秒 · 单位 kW</text>
+  <rect x="36" y="114" width="766" height="484" rx="10" fill="#fff" stroke="#b6c8d5"/>
+  <text x="62" y="151" class="body">功率（kW）</text>
+  <path d="M118 190H760 M118 270H760 M118 350H760 M118 430H760 M118 510H760" class="grid"/>
+  <path d="M118 182V510H760" class="axis" fill="none"/>
+  <text x="72" y="198" class="small">1.6</text><text x="72" y="278" class="small">1.2</text><text x="72" y="358" class="small">0.8</text><text x="72" y="438" class="small">0.4</text><text x="82" y="518" class="small">0</text>
+  <text x="109" y="543" class="small">0</text><text x="307" y="543" class="small">60</text><text x="501" y="543" class="small">120</text><text x="701" y="543" class="small">180</text>
+  <text x="270" y="578" class="small muted">相对 T0 的秒（仅用于读图）</text>
+  <rect x="275" y="184" width="90" height="325" fill="#f4e9d8" opacity="0.6"/>
+  <text x="270" y="171" class="small">明确缺失</text>
+  <line x1="320" y1="205" x2="320" y2="488" stroke="#967743" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="120" cy="510" r="8" fill="#166778"/>
+  <text x="143" y="485" class="body">有效零</text>
+  <line x1="520" y1="270" x2="720" y2="330" stroke="#166778" stroke-width="4"/>
+  <circle cx="520" cy="270" r="8" fill="#166778"/><circle cx="720" cy="330" r="8" fill="#166778"/>
+  <text x="505" y="244" class="body">1.2</text><text x="703" y="370" class="body">0.9</text>
+  <text x="175" y="383" class="small">此处不跨缺失连线</text>
+  <rect x="836" y="114" width="408" height="484" rx="10" fill="#fff" stroke="#b6c8d5"/>
+  <text x="860" y="153" class="body">原始样本表（4 条）</text>
+  <rect x="856" y="179" width="368" height="48" fill="#e6eff5"/>
+  <text x="870" y="211" class="small">相对时间</text><text x="1078" y="211" class="small">value</text>
+  <path d="M856 302H1224 M856 377H1224 M856 452H1224 M856 527H1224" class="grid"/>
+  <text x="870" y="271" class="body">T0</text><text x="1078" y="271" class="body">0</text>
+  <text x="870" y="346" class="body">T0 + 60 秒</text><text x="1078" y="346" class="body">null</text>
+  <text x="870" y="421" class="body">T0 + 120 秒</text><text x="1078" y="421" class="body">1.2</text>
+  <text x="870" y="496" class="body">T0 + 180 秒</text><text x="1078" y="496" class="body">0.9</text>
+  <text x="860" y="563" class="small muted">表里保留 null，图上保留断点。</text>
+  <text x="36" y="652" class="body">接口中的 time 始终是 epoch 毫秒；表与曲线使用同一组原始样本。</text>
+  <text x="36" y="696" class="body">视觉连线只连接相邻有效样本，不产生新的测量行，也不输出插值读数。</text>
+  <text x="36" y="743" class="small muted">本图不是实际监测结果；数据来源为正文中的 TEACHING_MOCK 教学样例。</text>
+</svg>

@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant UI as 前端能力状态
+    participant BE as 后端
+    Note over UI: 本地 sessionEpoch=7<br/>不发送给后端
+    UI->>BE: 读取管理员能力
+    UI->>UI: 退出 清空能力 使旧标识失效
+    UI->>UI: 查看者登录 sessionEpoch=9
+    UI->>BE: 读取查看者能力（本地标记 9）
+    BE-->>UI: 查看者能力 canAdmin=false
+    UI->>UI: 标识匹配 接受响应
+    BE-->>UI: 迟到的管理员能力
+    UI->>UI: 标识不匹配 丢弃响应

@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-20T23:16:41.443303+08:00",
+  "ports": [
+    {
+      "port": 5188,
+      "listeners": "COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    63228 learner   15u  IPv4 0x8c7dd2d98cf4e858      0t0  TCP 127.0.0.1:5188 (LISTEN)",
+      "exit": 0
+    },
+    {
+      "port": 8098,
+      "listeners": "",
+      "exit": 1
+    },
+    {
+      "port": 23501,
+      "listeners": "",
+      "exit": 1
+    },
+    {
+      "port": 23502,
+      "listeners": "",
+      "exit": 1
+    }
+  ]
+}

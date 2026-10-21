@@ -1,0 +1,4 @@
+docker version
+docker compose ps -a
+docker volume ls --filter label=com.docker.compose.project=campus-v2
+docker ps -a --filter name=^/campus-v2-mysql$ --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"

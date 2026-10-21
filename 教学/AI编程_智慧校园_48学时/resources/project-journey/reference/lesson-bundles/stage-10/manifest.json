@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "stage": 10,
+  "title": "责任、审计与接入",
+  "mode": "teacher-db；AIRIOT选做",
+  "goal": "责任时间线、命令审计读取、接入状态",
+  "contract": "owner版本独立；责任不追改旧事件；审计只读，远端控制关闭",
+  "acceptance": "责任A→B，新事件跟B旧事件不变；普通身份不能读审计；未接入不写PASS",
+  "businessFiles": [
+    "frontend/src/views/OwnersView.vue",
+    "frontend/src/views/AuditView.vue",
+    "frontend/src/views/IntegrationView.vue"
+  ],
+  "integrationFiles": [],
+  "documentationFiles": [],
+  "verificationFiles": [
+    "frontend/src/tests/read-pages.test.ts",
+    "frontend/src/tests/workflow-views.test.ts",
+    "frontend/src/tests/journey-navigation.test.ts"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts",
+    "frontend/src/tests/read-pages.test.ts",
+    "frontend/src/tests/workflow-views.test.ts",
+    "frontend/src/tests/journey-navigation.test.ts"
+  ],
+  "contextFiles": [
+    "docs/01-跨平台启动.md",
+    "frontend/src/tests/read-pages.test.ts",
+    "frontend/src/tests/workflow-views.test.ts",
+    "frontend/src/tests/journey-navigation.test.ts",
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/OwnersView.vue",
+    "frontend/src/views/AuditView.vue",
+    "frontend/src/views/IntegrationView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179",
+      "bytes": 1519,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951",
+      "bytes": 131,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>责任、审计与接入</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>责任、审计与接入</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>责任、审计与接入</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

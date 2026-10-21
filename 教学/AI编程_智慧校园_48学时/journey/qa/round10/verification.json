@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-19T15:34:13.118Z",
+  "target": "http://127.0.0.1:5178",
+  "kind": "LIVE_HTTP_APPLICATION_NOT_TUTORIAL",
+  "results": [
+    {
+      "name": "管理员登录与设备真实目录",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:13.916Z",
+      "evidence": {
+        "devices": 16,
+        "source": "TEACHING_MOCK"
+      }
+    },
+    {
+      "name": "台账卡片表格切换、点位最新质量到稳定历史链接",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:14.888Z",
+      "evidence": {
+        "stableDeviceId": "teaching_energy_01",
+        "tagId": "power",
+        "preservesNullAndZero": true
+      }
+    },
+    {
+      "name": "概览空间类型钻取、质量矩阵、环境多设备趋势",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:15.224Z",
+      "evidence": {
+        "spaces": 4,
+        "environmentHistories": 4,
+        "spaceFilterCount": 4,
+        "energyFilterCount": 4
+      }
+    },
+    {
+      "name": "能源四空间、单位切换、逐设备失败保留旧快照",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:15.609Z",
+      "evidence": {
+        "energySpaces": 4,
+        "metrics": [
+          "kW",
+          "V"
+        ],
+        "failedDevice": "teaching_energy_01",
+        "snapshotPreserved": true
+      }
+    },
+    {
+      "name": "原始报警正常分页、成功空结果和失败快照",
+      "status": "FAIL",
+      "startedAt": "2026-10-19T15:34:16.008Z",
+      "error": "locator.selectOption: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('每页', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "管理员命令审计历史样本只读",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:28.065Z",
+      "evidence": {
+        "total": 3,
+        "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+      }
+    },
+    {
+      "name": "事件任意有效处理人筛选与本页状态按钮",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:28.189Z",
+      "evidence": {
+        "eventId": "e09a215a-b598-48e7-aad1-d9c2ef759c80",
+        "handlerUid": "manager-a",
+        "state": "ASSIGNED",
+        "count": 1
+      }
+    },
+    {
+      "name": "真实15秒台账轮询与离页停止",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:34:28.488Z",
+      "evidence": {
+        "initial": 1,
+        "afterPoll": 2,
+        "afterLeaving": 2
+      }
+    },
+    {
+      "name": "真实30秒原始报警轮询与离页停止",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:35:00.558Z",
+      "evidence": {
+        "initial": 1,
+        "afterPoll": 2,
+        "afterLeaving": 2
+      }
+    },
+    {
+      "name": "390px新增页面无页面级横向溢出",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:36:02.651Z",
+      "evidence": {
+        "pages": [
+          "devices",
+          "overview",
+          "energy",
+          "raw-alarms",
+          "audit",
+          "cases"
+        ],
+        "physicalPhone": false
+      }
+    },
+    {
+      "name": "只读身份无审计入口、直接页面与HTTP均拒绝",
+      "status": "PASS",
+      "startedAt": "2026-10-19T15:36:02.871Z",
+      "evidence": {
+        "httpStatus": 403,
+        "hiddenNavigation": true,
+        "noAuditData": true
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "01-设备卡片.png",
+      "sha256": "83c268e58c94f56dfa63c7cc0cec668fb26cf4d25f8f256980350aff90f265b6",
+      "url": "http://127.0.0.1:5178/#devices",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "02-设备点位历史.png",
+      "sha256": "f2b5347c97d9bf4ba7f95b24755ca1bf5cdbcf4f71ab22f6c72e8cba1d34895e",
+      "url": "http://127.0.0.1:5178/#history?deviceId=teaching_energy_01&tagId=power",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "03-校园概览与环境趋势.png",
+      "sha256": "dd02d49f68ef9e5b56f32437048b63f3136dcd5afe3bb329c6df471c04e3d86a",
+      "url": "http://127.0.0.1:5178/#overview",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "04-能源部分失败保留快照.png",
+      "sha256": "4ee1ee94e9c973f77394399d89e838974e29870461b857970f79a5250f1e0b40",
+      "url": "http://127.0.0.1:5178/#energy",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "05-电压同单位比较.png",
+      "sha256": "5e29f50baec0fa3aefe8c89f995a00c6227fc20486f732fb67b62edfbf205fbd",
+      "url": "http://127.0.0.1:5178/#energy",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "07-命令审计历史样本.png",
+      "sha256": "b8867e8cd67999ea0b402795a75627b6b083cdb99e09253c71674ad0f9c10ae8",
+      "url": "http://127.0.0.1:5178/#audit",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "08-事件处理人和状态筛选.png",
+      "sha256": "271b265041ded6ad5bcda6a889c172fd4f9b22f5f19b5966b94b51a8a8b5a236",
+      "url": "http://127.0.0.1:5178/#cases?state=ASSIGNED",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "file": "09-能源390px视口.png",
+      "sha256": "61ad39dd2f5dcfb87c265a15fcb0808b52155583b819749455dfb425828d6ced",
+      "url": "http://127.0.0.1:5178/#energy",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "10-只读身份审计拒绝.png",
+      "sha256": "a4e073a618db7d2b6163f14c3ad6b9585a2c85cd1a33d349d0c0f26c74b138ce",
+      "url": "http://127.0.0.1:5178/#audit",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  ],
+  "pageErrors": [],
+  "note": "Author-only isolated MySQL 13328. Not Windows/student-classroom/real-AIRIOT acceptance.",
+  "browserVersion": "149.0.7827.55",
+  "finishedAt": "2026-10-19T15:36:03.193Z",
+  "passed": 10,
+  "failed": 1,
+  "sourceManifestSHA256": "001a6310f650877f996e7c9a26f8a5432c5d9c415150a969da22058a67dfd0bd"
+}

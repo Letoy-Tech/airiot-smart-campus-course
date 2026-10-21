@@ -1,0 +1,28 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713"
+  },
+  {
+    "path": "frontend/src/views/OverviewView.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/components/CompareHistory.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/components/HistoryChart.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/EnergyView.vue",
+    "existed": false
+  }
+]

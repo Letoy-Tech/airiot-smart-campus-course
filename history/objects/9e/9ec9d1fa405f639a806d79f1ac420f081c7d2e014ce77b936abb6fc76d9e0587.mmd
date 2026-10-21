@@ -1,0 +1,15 @@
+flowchart TB
+    subgraph WORK["处置事实"]
+        N["NEW"] -->|"分派"| AS["ASSIGNED"]
+        AS -->|"开始"| IP["IN_PROGRESS"]
+        IP -->|"重新分派"| AS
+        IP --> G{"关闭关卡<br/>不是新增状态"}
+        G -->|"全部满足"| C["CLOSED"]
+    end
+    subgraph SOURCE["来源事实与核实"]
+        ACTIVE["ACTIVE"] -->|"管理员模拟恢复"| REC["RECOVERED"]
+        REC -->|"处理者请求服务端独立核实"| PASS["PASS 且时间有效"]
+        UNKNOWN["UNKNOWN<br/>不能据此关闭"]
+    end
+    PASS --> G
+    RULE["处置记录、非空结论<br/>有效权限、匹配版本"] --> G

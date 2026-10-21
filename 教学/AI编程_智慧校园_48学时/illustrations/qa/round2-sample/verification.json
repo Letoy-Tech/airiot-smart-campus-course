@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T11:43:04.485Z",
+  "input": "illustrations/qa/round2-sample/reader-sample.html",
+  "inputSha256": "ef460510abd7b70add3ee1054235ce14301ca962b5196a9aad733bab3b31497b",
+  "version": "V0.3 · 第二轮修订",
+  "browser": "149.0.7827.55",
+  "status": "PASS",
+  "scope": "离线阅读器显示、导航、常用资料、文本折行、代码原文与单文件图片保存；不验证教学实验",
+  "labVerified": false,
+  "pdfGenerated": false,
+  "visualReview": "REQUIRES_IMAGE_VIEW",
+  "checks": [
+    {
+      "width": 1440,
+      "title": "V0.3 阅读器验证样张 · V0.3 · 第二轮修订",
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "navHeight": 346.828125,
+      "coverTop": 40,
+      "mobileMenuCollapsed": false,
+      "resources": 10,
+      "chapters": 0,
+      "images": [
+        {
+          "id": "fig-shared-02-网页AI协作",
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "caption": true,
+          "embedded": false
+        }
+      ],
+      "duplicateIds": [],
+      "brokenAnchors": [],
+      "wrongLocalTargets": [],
+      "internalMaterialLinks": 14,
+      "unlabeledDependencies": [],
+      "hasDependencyExplanation": true,
+      "unverified": true,
+      "rawFrontmatter": false,
+      "code": [
+        {
+          "prose": true,
+          "language": "text",
+          "purpose": "网页 AI 提示",
+          "visible": 901,
+          "full": 901,
+          "label": "网页 AI 提示文本 · 自动折行",
+          "whiteSpace": "pre-wrap",
+          "focusable": false
+        },
+        {
+          "prose": false,
+          "language": "ts",
+          "purpose": "教学代码 · 用途见正文",
+          "visible": 901,
+          "full": 901,
+          "label": "教学代码 · 用途见正文TypeScript · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": false,
+          "language": "text",
+          "purpose": "文本 / 结构示例",
+          "visible": 901,
+          "full": 901,
+          "label": "文本 / 结构示例文本 · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": false,
+          "language": "json",
+          "purpose": "数据示例",
+          "visible": 901,
+          "full": 901,
+          "label": "数据示例JSON · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": true,
+          "language": "text",
+          "purpose": "网页 AI 提示",
+          "visible": 901,
+          "full": 901,
+          "label": "网页 AI 提示文本 · 自动折行",
+          "whiteSpace": "pre-wrap",
+          "focusable": false
+        }
+      ],
+      "localNavigation": [],
+      "visitedChapterLinks": [
+        {
+          "href": "#sample",
+          "found": true
+        },
+        {
+          "href": "#figure-index",
+          "found": true
+        }
+      ],
+      "visitedResourceLinks": [
+        {
+          "href": "#resource-course-outline",
+          "found": true
+        },
+        {
+          "href": "#resource-api-contract",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-handoff",
+          "found": true
+        },
+        {
+          "href": "#resource-traceability",
+          "found": true
+        },
+        {
+          "href": "#resource-web-ai",
+          "found": true
+        },
+        {
+          "href": "#resource-teacher-resources",
+          "found": true
+        }
+      ],
+      "visitedLocalLinks": [
+        {
+          "href": "#sample-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#sample-模块一-阅读图与合同1-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-模块二-网页-ai-提示与代码2-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-模块三-验收与解释1-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#sample-课后练习",
+          "found": true
+        },
+        {
+          "href": "#sample-交给下一章",
+          "found": true
+        }
+      ],
+      "visitedInlineResources": [
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-api-contract-通用约定",
+          "found": true
+        },
+        {
+          "href": "#resource-course-outline",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-handoff",
+          "found": true
+        },
+        {
+          "href": "#resource-traceability",
+          "found": true
+        },
+        {
+          "href": "#resource-web-ai",
+          "found": true
+        },
+        {
+          "href": "#resource-teacher-resources",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        }
+      ],
+      "externalRequests": [],
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "title": "V0.3 阅读器验证样张 · V0.3 · 第二轮修订",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "navHeight": 223.65625,
+      "coverTop": 253.65625,
+      "mobileMenuCollapsed": true,
+      "resources": 10,
+      "chapters": 0,
+      "images": [
+        {
+          "id": "fig-shared-02-网页AI协作",
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "caption": true,
+          "embedded": false
+        }
+      ],
+      "duplicateIds": [],
+      "brokenAnchors": [],
+      "wrongLocalTargets": [],
+      "internalMaterialLinks": 14,
+      "unlabeledDependencies": [],
+      "hasDependencyExplanation": true,
+      "unverified": true,
+      "rawFrontmatter": false,
+      "code": [
+        {
+          "prose": true,
+          "language": "text",
+          "purpose": "网页 AI 提示",
+          "visible": 327,
+          "full": 327,
+          "label": "网页 AI 提示文本 · 自动折行",
+          "whiteSpace": "pre-wrap",
+          "focusable": false
+        },
+        {
+          "prose": false,
+          "language": "ts",
+          "purpose": "教学代码 · 用途见正文",
+          "visible": 327,
+          "full": 676,
+          "label": "教学代码 · 用途见正文TypeScript · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": false,
+          "language": "text",
+          "purpose": "文本 / 结构示例",
+          "visible": 327,
+          "full": 434,
+          "label": "文本 / 结构示例文本 · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": false,
+          "language": "json",
+          "purpose": "数据示例",
+          "visible": 327,
+          "full": 551,
+          "label": "数据示例JSON · 可左右滚动",
+          "whiteSpace": "pre",
+          "focusable": true
+        },
+        {
+          "prose": true,
+          "language": "text",
+          "purpose": "网页 AI 提示",
+          "visible": 327,
+          "full": 327,
+          "label": "网页 AI 提示文本 · 自动折行",
+          "whiteSpace": "pre-wrap",
+          "focusable": false
+        }
+      ],
+      "localNavigation": [],
+      "visitedChapterLinks": [
+        {
+          "href": "#sample",
+          "found": true
+        },
+        {
+          "href": "#figure-index",
+          "found": true
+        }
+      ],
+      "visitedResourceLinks": [
+        {
+          "href": "#resource-course-outline",
+          "found": true
+        },
+        {
+          "href": "#resource-api-contract",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-handoff",
+          "found": true
+        },
+        {
+          "href": "#resource-traceability",
+          "found": true
+        },
+        {
+          "href": "#resource-web-ai",
+          "found": true
+        },
+        {
+          "href": "#resource-teacher-resources",
+          "found": true
+        }
+      ],
+      "visitedLocalLinks": [
+        {
+          "href": "#sample-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#sample-模块一-阅读图与合同1-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-模块二-网页-ai-提示与代码2-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-模块三-验收与解释1-学时",
+          "found": true
+        },
+        {
+          "href": "#sample-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#sample-课后练习",
+          "found": true
+        },
+        {
+          "href": "#sample-交给下一章",
+          "found": true
+        }
+      ],
+      "visitedInlineResources": [
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-api-contract-通用约定",
+          "found": true
+        },
+        {
+          "href": "#resource-course-outline",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-task",
+          "found": true
+        },
+        {
+          "href": "#resource-ai-handoff",
+          "found": true
+        },
+        {
+          "href": "#resource-traceability",
+          "found": true
+        },
+        {
+          "href": "#resource-web-ai",
+          "found": true
+        },
+        {
+          "href": "#resource-teacher-resources",
+          "found": true
+        },
+        {
+          "href": "#resource-assessment",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        },
+        {
+          "href": "#resource-class-task",
+          "found": true
+        },
+        {
+          "href": "#resource-class-workload",
+          "found": true
+        }
+      ],
+      "externalRequests": [],
+      "pageErrors": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,14 @@
+已准备骨架：第03站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/DeviceCatalog.vue
+  frontend/src/api/full.ts
+  frontend/src/composables/useRequestScope.ts
+  frontend/src/domain/read-models.ts
+  frontend/src/components/SourceBanner.vue
+  frontend/src/components/ReadStatus.vue
+  frontend/src/tests/catalog-navigation.test.ts
+  frontend/src/tests/course-domain.test.ts
+  frontend/src/tests/request-scope.test.ts
+备份：journey-backups/2026-10-19T17-39-22-234Z-stage-03-begin-546184
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

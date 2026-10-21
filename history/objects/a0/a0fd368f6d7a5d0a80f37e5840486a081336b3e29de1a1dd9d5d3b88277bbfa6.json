@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-18T16:20:26.688Z",
+  "status": "PASS",
+  "modeRestored": "teacher-db",
+  "javaPid": 95408,
+  "execSession": 17237,
+  "jarSha256": "c204f43bee13ad48be1b919c0c03fc64ace409dbe1a7522b92cd392f4d6bded2",
+  "fullApi": {
+    "status": "PASS",
+    "groups": 7,
+    "path": "../../evidence/full-api/verification.json"
+  },
+  "firstChain": {
+    "status": "PASS",
+    "groups": 6,
+    "path": "../../evidence/first-chain-v1/verification.json"
+  },
+  "postRestartPersistence": {
+    "eventId": "466db766-bb47-4381-8a8c-c339355f2014",
+    "state": "CLOSED",
+    "version": 6,
+    "timeline": 6,
+    "campusId": "5386e56c-fa0f-4122-b068-5bb192b422e8",
+    "bindingPreserved": true
+  },
+  "mysqlAndFrontendLeftRunning": true
+}

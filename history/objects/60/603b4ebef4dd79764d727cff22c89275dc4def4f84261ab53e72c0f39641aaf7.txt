@@ -1,0 +1,160 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+管理人员 A
+校园管理人员
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+07
+身份与权限
+08
+事件工作台
+
+第08站 · 事件接收与处理
+
+让一件事有人接手
+
+本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。
+
+重新读取
+TEACHING_MOCK
+教学模拟数据 · simulated=true
+远端控制与外部通知关闭
+
+业务记录使用服务端操作时间仅本地 DEMO 事件；与 AIRIOT 原始报警分开。
+
+本地模拟场景
+本地场景演示 · 非实时设备报警 · 演练开关已开启 · 触发能力不据此授权
+温度巡查
+
+本地教学事件，不代表设备真实异常
+
+temperature-patrol · teaching_env_01
+触发「温度巡查」
+设备通信巡查
+
+本地教学事件，不代表设备真实异常
+
+communication-patrol · teaching_facility_01
+触发「设备通信巡查」
+照明巡查
+
+本地教学事件，不代表设备真实异常
+
+lighting-patrol · teaching_light_01
+触发「照明巡查」
+仅本地模拟事件
+不写 AIRIOT、不控制设备、不发送外部通知
+事件列表
+共 1 条
+业务状态
+全部状态
+待分派（NEW）
+已分派（ASSIGNED）
+处理中（IN_PROGRESS）
+已关闭（CLOSED）
+只看分派给我：关
+
+分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 2026/10/20 02:18:02。
+
+temperature-patrol
+处理中
+环境传感器01（模拟）
+处理人：管理人员 A · 发生：2026/10/20 02:17:09
+version 4 · 5bd33750-0afd-475d-8c99-c97b42f7429f
+上一页
+第 1 / 1 页 · 每页 10 条
+下一页
+事件详情
+version 4 · 来源状态与业务状态分列
+场景与说明
+temperature-patrol
+温度巡查（本地演练，非设备真实异常）
+设备
+环境传感器01（模拟）（teaching_env_01）
+业务状态
+处理中（IN_PROGRESS）
+处理人
+管理人员 A · manager-a
+演练来源
+DEMO / LOCAL_DEMO · 级别 DEMO_NOTICE
+来源状态（只读）
+演练未恢复（ACTIVE） · 核实 PENDING
+发生时间
+2026/10/20 02:17:09
+最近更新
+2026/10/20 02:17:50
+关闭信息
+未关闭
+处理时间线
+每条记录带 caseVersion；服务端操作时间，不使用浏览器时钟。
+触发演练
+教学管理员（admin） · 2026/10/20 02:17:09 · v1
+
+— → NEW · 来源状态 ACTIVE
+
+独立本地模拟事件
+
+分派
+教学管理员（admin） · 2026/10/20 02:17:33 · v2
+
+NEW → ASSIGNED · 来源状态 ACTIVE
+
+分派给A进行本地课程巡查
+
+开始处理
+管理人员 A（manager-a） · 2026/10/20 02:17:49 · v3
+
+ASSIGNED → IN_PROGRESS · 来源状态 ACTIVE
+
+开始本地课程巡查
+
+处理记录
+管理人员 A（manager-a） · 2026/10/20 02:17:50 · v4
+
+IN_PROGRESS → IN_PROGRESS · 来源状态 ACTIVE
+
+已检查现场
+
+分派
+
+分派后业务状态为 ASSIGNED、version 加 1；处理人来自 GET /api/campus/alarm-cases/handlers。 能力：不据此授权。
+
+处理人
+请选择处理人
+教学管理员（admin）
+管理人员 A（manager-a）
+管理人员 B（manager-b）
+分派说明（1..500 字）
+分派（expectedVersion=4）
+开始处理
+
+仅 ASSIGNED 可开始；成功后为 IN_PROGRESS、version 加 1。能力：允许，仅限本人被分派的事件或管理员能力。
+
+开始说明（1..500 字）
+开始处理（expectedVersion=4）
+处理记录 NOTE
+
+仅 IN_PROGRESS 可记录；业务状态不变、version 加 1、时间线新增一条。能力：允许。
+
+记录内容（1..500 字）
+保存记录（expectedVersion=4）
+
+原始报警 GET /api/campus/alarms 保持只读，本页不替换、不关闭、不改写上游恢复状态。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

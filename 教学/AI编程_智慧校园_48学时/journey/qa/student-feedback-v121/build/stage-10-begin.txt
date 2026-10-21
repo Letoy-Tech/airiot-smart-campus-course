@@ -1,0 +1,12 @@
+$ node tools/progress.mjs begin 10
+已准备骨架：第10站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/OwnersView.vue
+  frontend/src/views/AuditView.vue
+  frontend/src/views/IntegrationView.vue
+  frontend/src/tests/read-pages.test.ts
+  frontend/src/tests/workflow-views.test.ts
+  frontend/src/tests/journey-navigation.test.ts
+备份：journey-backups/2026-10-19T22-18-00-458Z-stage-10-begin-d96fce
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

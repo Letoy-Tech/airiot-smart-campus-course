@@ -1,0 +1,20 @@
+{
+  "id": "case-a4b66d456baa",
+  "deviceId": "d01",
+  "message": "新目录接手温度巡查演练",
+  "state": "ASSIGNED",
+  "assignee": "manager",
+  "sourceState": "ACTIVE",
+  "verified": false,
+  "note": "",
+  "conclusion": "",
+  "version": 1,
+  "timeline": [
+    {
+      "time": 1792529935479,
+      "action": "create",
+      "actor": "admin",
+      "note": "创建教学模拟演练事件，按已登记责任人分派给 manager"
+    }
+  ]
+}

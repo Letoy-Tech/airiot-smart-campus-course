@@ -1,0 +1,1488 @@
+--- 11/campus-lab/README.md
++++ 12-final/campus-lab/README.md
+@@ -1,10 +1,536 @@
+-# 学生空白起点 · V2.0.1
+-
+-把此文件夹命名为 campus-lab，在 CodeBuddy 中打开这一层。
+-先读教程“开课前”，然后从第01课开始。frontend/index.html 现在是空文件。
+-materials/mock-campus.json 是固定教学样本；maven-wrapper 是第07课才用的启动工具。
+-本包没有完整前端或后端。每课提示词让你在同一个工程中逐步生成它们。
+-不要从教师参考目录复制成品替代本课操作。
+-
+-需要：CodeBuddy 独立 IDE、Node22。第07课再用Java17；第08课再用Docker Desktop。
+-不要在此时运行不存在的 serve.mjs 或后端命令，等第一课生成后再启动。
++# 校园值班台 · 本机教学工程（V2.0.1）
++
++这是“AI 编程 · 智慧校园”前 11 课逐步做出来的本机教学工程，第 12 课交付使用。
++
++所有数据都是**教学模拟**：样本来自 `materials/mock-campus.json` 和本机课程 MySQL，不连接真实校园、AIRIOT 或任何设备，也不发送外部通知。
++
++先记住三条：
++
++- 口令只在本机根目录 `.env` 里。文档、聊天、截图、前端代码都不要出现口令值。
++- 已有 `.env` 一律沿用，不要覆盖、不要重新生成后去连旧卷。
++- MySQL 数据在命名卷里。不删卷、不执行 `docker compose down -v`。
++
++按下面顺序做，每条命令都标了工作目录。
++
++---
++
++## 1. 需要安装的软件
++
++| 软件 | 版本要求 | 用途 |
++| --- | --- | --- |
++| Node.js | 22.x | 页面静态服务、`.env` 生成工具 |
++| JDK | 17 | 后端 Spring Boot |
++| Docker Desktop | 能运行 `docker compose` | 本课程 MySQL 8.4 + Redis 7.4 |
++
++检查（macOS 终端）：
++
++```sh
++# 工作目录：任意
++node --version          # 期望 v22.x
++java -version           # 期望 17.x（第一行含 17.）
++docker --version
++docker compose version
++```
++
++检查（Windows PowerShell）：
++
++```powershell
++# 工作目录：任意
++node --version
++java -version
++docker --version
++docker compose version
++```
++
++版本不对时只在**当前这个终端窗口**临时切换，不改系统环境变量。
++
++macOS：
++
++```sh
++# 工作目录：任意
++export JAVA_HOME=$(/usr/libexec/java_home -v 17)
++export PATH="$JAVA_HOME/bin:$PATH"
++java -version
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：任意
++# 先找到本机 JDK 17 的真实安装目录，不要照抄下面的示例路径：
++Get-ChildItem 'C:\Program Files\Java','C:\Program Files\Eclipse Adoptium' -ErrorAction SilentlyContinue
++
++# 把 <你的 JDK17 安装目录> 换成上一步看到的实际路径，例如 ...\jdk-17 或 ...\jdk-17.x.x-hotspot
++$env:JAVA_HOME = "<你的 JDK17 安装目录>"
++$env:Path = "$env:JAVA_HOME\bin;$env:Path"
++java -version
++```
++
++`<你的 JDK17 安装目录>` 是占位符，必须按本机实际安装路径填写；本工程未在 Windows 上实跑，任何具体路径都未经本机验证。
++
++Node 用 nvm 时：macOS 先 `nvm use 22`，Windows（nvm-windows）执行 `nvm use 22`；不使用 nvm 就把 Node 22 安装目录的 `bin` 临时前置到当前窗口的 `PATH`。
++
++> 每开一个新终端都要重新确认 `java -version` 是 17、`node --version` 是 22。上一窗口的 `export` 不会自动继承，这不是环境坏了。
++
++---
++
++## 2. 确认打开的是 campus-lab 根目录
++
++根目录里应直接看到 `backend/`、`frontend/`、`tools/`、`docs/`、`materials/`、`compose.yaml`、`README.md`。
++
++注意：公开导出与当前 `campus-lab-handoff` **都没有 `notes/` 目录**，`notes/` 只保留在原工程；第 01–06 课的文字已经合并到 `docs/本组实做记录.md`，在交付副本里读那一份即可，不要去找导出里不存在的目录。
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++pwd
++ls
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++Get-Location
++Get-ChildItem
++```
++
++后面的命令都以这个目录为参照：**C、A 在根目录，B 在 `backend/`**。
++
++---
++
++## 3. 生成 .env
++
++口令文件必须放在项目根目录，后端和 compose 都从这里读。
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++node tools/setup-env.mjs
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++node tools\setup-env.mjs
++```
++
++- 生成本机随机口令：`MYSQL_ROOT_PASSWORD`、`DB_PASSWORD`、`REDIS_PASSWORD`、`DEMO_PASSWORD`。
++- 工具**不会在控制台显示口令**。已经存在 `.env` 时只提示“已保留”，不覆盖，并以非 0 退出码结束——这是正常现象，直接沿用即可。
++- `.env` 已在 `.gitignore` 中，不要提交、不要复制到前端、README、聊天或截图。
++- 根目录的 `.env.example` 只是字段说明，不含可用口令。
++
++---
++
++## 4. C 窗口：启动本课程 MySQL / Redis，等 healthy
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++docker compose -p campus-v2 up -d
++docker compose -p campus-v2 ps
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++docker compose -p campus-v2 up -d
++docker compose -p campus-v2 ps
++```
++
++本项目名 `campus-v2` 与 `compose.yaml` 顶层的 `name` 一致，显式写出来是为了避免与第 12 课新目录的 `campus-v2-handoff` 混淆。
++
++- 只启动 `mysql` 与 `redis` 两个服务；MySQL 首次初始化和建库需要一点时间，`docker compose -p campus-v2 ps` 里先看到 `starting` 属正常，等到两行都显示 `healthy` 再做下一步。
++- 本课程 Redis 关闭了持久化且不挂数据卷：重启 Redis 后登录会话消失，业务数据仍由 MySQL 保存。
++- 不要用 `docker compose down -v`，不要 `docker volume rm` 删卷，也不要改成连学校或已有数据库。
++
++---
++
++## 5. B 窗口：在 backend 启动 Java
++
++先确认 MySQL 已 `healthy`、根的 `.env` 已存在，再在 B 窗口确认 Java 是 17。
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++cd backend              # 进入 campus-lab/backend/
++java -version           # 必须是 17
++sh ./mvnw spring-boot:run
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++cd backend              # 进入 campus-lab\backend\
++java -version
++.\mvnw.cmd spring-boot:run
++```
++
++- 第一次运行 `mvnw` 会联网下载 Maven 3.8.6，属正常行为。`mvnw` 与 `.mvn/wrapper/` 已在 `backend/` 内，不需要另装 Maven。
++- 看到启动完成后，另开一个临时终端验证（B 窗口保持运行）：
++
++  ```sh
++  # 工作目录：任意
++  curl http://127.0.0.1:8098/api/health
++  ```
++
++  Windows PowerShell：
++
++  ```powershell
++  curl.exe http://127.0.0.1:8098/api/health
++  ```
++
++  期望返回 `code=0`、`message=ok`、`data.status=UP`。
++- 后端只监听 `127.0.0.1:8098`；Flyway 启动时会执行 `V1`–`V4` 迁移，已执行过的不重复执行。
++- 启动时可能看到 Flyway 提示“MySQL 8.4 高于其已测试的最高版本”，这是本课程已知提示；本机实测迁移成功，但不代表生产支持。
++
++---
++
++## 6. A 窗口：在根目录启动页面
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++node tools/serve.mjs
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++node tools\serve.mjs
++```
++
++浏览器打开 `http://127.0.0.1:5188`。
++
++- 这个服务只公开 `frontend/`，并把 `/api/*` 转发到 `127.0.0.1:8098`；它不公开 `.env` 等隐藏文件。
++- 改了 HTML/CSS/JS 保存后刷新浏览器即可；改了 Java 要在 B 窗口 `Ctrl+C` 后重启；只有改了 `tools/serve.mjs` 才需要重启 A。
++
++---
++
++## 7. 在本机查看 DEMO_PASSWORD 并登录
++
++三个课堂账号 `admin` / `manager` / `viewer` 共用同一个 `DEMO_PASSWORD`，角色依次为 ADMIN / MANAGER / VIEWER。
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++grep '^DEMO_PASSWORD=' .env
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++Select-String -Path .env -Pattern '^DEMO_PASSWORD='
++```
++
++这会**在终端里显示口令值**，只在本机自己看：不要朗读、不要粘贴到聊天/文档/截图/前端代码。
++
++登录步骤：页面顶部“数据方式”选 **连接后端** → 出现登录表单 → 输入账号与口令 → 登录。登录成功后顶部显示当前账号与角色。
++
++---
++
++## 8. 动手做一遍：看设备/历史，改空间/责任，完成一件演练
++
++建议顺序（都在浏览器里操作）：
++
++1. **设备**：看到 16 台设备、4 个空间、28 个点位；`d03` 在线情况为未知、`d04` 为离线；打开详情看负责人、空间与点位读数。来源行会显示本次读取时间。
++2. **历史**：从 `d05` 的功率 `power` 进入历史，看曲线与样本表。`0` 是有效值（`d05` 功率 0 kW），缺失样本显示为缺失、曲线断开、不补 0。
++3. **空间**（ADMIN）：修改 `s1` 的楼栋/楼层并保存；保存后页面会独立回读，整页刷新并重新登录后仍与保存值一致。
++4. **设备责任**（ADMIN）：给一台设备登记负责人与备注，提交时带上 `expectedVersion`。另开一个标签用旧版本提交，会得到 409 并只回读最新值，不会自动重发。刷新后重新登录仍能看到最新版本。
++5. **演练事件**（创建/分派用 `admin`，开始/核实/关闭用 `manager`，恢复用 `admin`）：新建一件演练 → 分派 → 开始 → 记录处置 → 模拟恢复 → 独立核实 → 关闭。每步版本加 1、时间线加一条；不要重置已有事件。
++6. **只读账号**：用 `viewer` 登录，九个菜单都能打开，但没有保存/创建/处置按钮；直接发写请求会被后端拒绝（403）。审计只有 ADMIN 能读。
++
++小节原则：看到的与预期不符就照实记录，不要为了“通过”改数据或删卷重做。
++
++---
++
++## 9. 停止自己的服务
++
++- A 窗口（页面）和 B 窗口（后端）：各自按 `Ctrl+C`。
++- C 窗口（容器）：在项目根停止容器。
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++docker compose -p campus-v2 stop
++docker compose -p campus-v2 ps -a   # 默认 ps 只列运行中，加 -a 才能看到 mysql / redis 为 exited
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++docker compose -p campus-v2 stop
++docker compose -p campus-v2 ps -a
++```
++
++- `stop` 只停容器，容器与卷都保留；不要用 `down -v`，也不要在第 12 课交接时自行删除旧容器（见 12.1）。
++- 端口被占用时先确认是不是自己上一课的进程，不要杀不明进程。
++
++本工程交付时的状态：A/B 与默认 `campus-v2` 容器均已停止，卷保留。
++
++---
++
++## 10. 端口与本机访问范围
++
++| 服务 | 地址 | 说明 |
++| --- | --- | --- |
++| 页面（A） | `http://127.0.0.1:5188` | 只监听本机回环 |
++| 后端（B） | `http://127.0.0.1:8098` | `server.address=127.0.0.1` |
++| MySQL | `127.0.0.1:23501` → 容器 3306 | compose 中只映射回环地址 |
++| Redis | `127.0.0.1:23502` → 容器 6379 | 同上 |
++
++四个端口都只在本机使用，不开放给同网段其他机器，也不做端口转发。`serve.mjs` 只把 `/api/*` 转到 `127.0.0.1:8098`，跨机访问开关没有实现，也不要自己加。
++
++---
++
++## 11. 刷新页面会重新登录；数据分别存在哪
++
++- **登录令牌只存在页面内存**：整页刷新或关标签后需要重新登录，这是设计如此，不是掉登录 bug。
++- **MySQL 保存业务记录**：账号、空间、设备、点位、历史样本、原始报警、设备责任、演练事件与时间线、审计。刷新、重启后端、重启 Redis 都不会丢。
++- **Redis 只保存短时会话**：`campus:v2:session:<token>`，有效期 30 分钟，且本课程 Redis 关闭了持久化；重启 Redis 后旧令牌立即失效（请求返回 401），重新登录即可，设备等记录仍在。
++- **浏览器演示模式**只用于对照，不写数据库，也不显示演练与审计；连接后端失败时不会静默换回模拟数据。
++
++---
++
++## 12. 同机新目录：用项目名 campus-v2-handoff 隔离
++
++第 12 课要把工程换个目录独立跑一遍，同时**不能碰旧目录的数据**。要点是新目录用独立项目名：容器名、卷名和网络都随项目名变化。
++
++`compose.yaml` 里**不再写 `container_name`**（2026-10-21 已改）：服务名保持 `mysql` / `redis`，**今后新建**的容器名由 Compose 按项目名自动生成——旧项目会是 `campus-v2-mysql-1` / `campus-v2-redis-1`，新项目实际是 `campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1`。
++
++**注意区分“实际存在的旧容器”和“今后新建的默认名”**：旧环境已经存在的两个容器仍是写死名字 `campus-v2-mysql` / `campus-v2-redis`，当前状态 `Exited`，**没有改名、也没有被重建**；`campus-v2-mysql-1` 这类带序号的名字只是删掉 `container_name` 以后新建时才会用到的默认名。
++
++旧项目使用 `compose.yaml` 里写死的默认项目名 `campus-v2`（显式写 `-p campus-v2` 与不写 `-p` 的默认行为等价），新项目 `campus-v2-handoff` 的每条 compose 命令都显式写 `-p campus-v2-handoff`，不要省略任何一条。
++
++### 12.1 只停止旧服务，不删除旧容器
++
++1. 旧目录的 A/B 窗口各按 `Ctrl+C`，确认 5188 / 8098 已释放；端口被占用时先确认是不是自己的进程，不结束未知进程。
++2. 旧目录（`campus-lab/`）停止容器（显式 `-p campus-v2`）：
++
++   ```sh
++   # 工作目录：旧 campus-lab/
++   docker compose -p campus-v2 stop
++   docker compose -p campus-v2 ps -a
++   ```
++
++   Windows PowerShell：
++
++   ```powershell
++   # 工作目录：旧 campus-lab\
++   docker compose -p campus-v2 stop
++   docker compose -p campus-v2 ps -a
++   ```
++
++   只停止，不移除：容器留在 `Exited`，`campus-v2_mysql-data` 卷保留。不要 `down -v`，不删除任何数据库卷。
++
++3. **这一点已在 2026-10-21 实际踩到并修好**：早先的 `compose.yaml` 写死了 `container_name: campus-v2-mysql` / `campus-v2-redis`，Docker 容器名全局唯一，**停止的旧容器仍占着这个名字**；新目录执行 `docker compose -p campus-v2-handoff up -d` 时已建好新网络/新卷，却在创建容器阶段报 `Conflict ... container name "/campus-v2-mysql" is already in use`。
++4. 修法只改新目录 `compose.yaml`：删掉 mysql 与 redis 的 `container_name` 两行，其余（顶层 `name`、回环端口、`mysql-data` 卷声明、镜像、认证、healthcheck、持久化设置）保持不变。旧容器、旧卷、旧 `.env` 一律不动：不 `down`、不删除、不改名、不复用。
++5. 修复后的实际状态：旧容器仍叫 `campus-v2-mysql` / `campus-v2-redis`，保持 `Exited`，未被改名也未被重建；新容器是 `campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1`，已 `healthy`。两组名称不再冲突，可以并存（但端口仍相同，见 12.3）。
++
++### 12.2 从第 12 课第 2 步的公开导出复制，不用原目录
++
++新目录必须来自**第 12 课第 2 步导出工具产出的公开副本**，不是原 `campus-lab`：
++
++- 来源：`.runtime/hand-in-v*/campus-lab`，取其中**最新的一版** `hand-in-v*`。
++- 目标：与原目录并列、**全新且尚不存在**的 `campus-lab-handoff`。
++- 导出工具已随工程提供：`tools/export-source.mjs`。本次实际导出完成 140 个文件，清单在该导出目录的 `SHA256SUMS.txt`；具体哪个 `hand-in-v*` 可用，以你本机 `.runtime/` 的实际结果为准（本文不查看 `.runtime`）。**没有可用导出目录就停下等第 2 步产出**，不要拿原 `campus-lab` 或其他旧副本顶替。
++- 导出工具在首次导出后按边界测试修过（大文件口令比对、项目根祖先符号链接）；**早于修正的导出不作为交接来源**，用当前工具重新导出到新的 `hand-in-v*`（工具拒绝覆盖已有目录），再由新导出复制。
++
++操作方式：用文件管理器（macOS 访达 / Windows 资源管理器）把导出的 `campus-lab` 目录**整份复制**，粘贴到旁边并命名为 `campus-lab-handoff`。
++
++- 目标目录必须原本不存在；**不覆盖、不合并**到任何已有文件夹。
++- 本步不复制原目录的 `.env`，也不应带出 `.private`、`.runtime` 与构建产物；公开导出应以不含这些内容为前提，复制后用下面的只读核对确认。若发现混入，先停下反馈，不要自行删除。
++- 原 `campus-lab` 的源码、配置、`.env`、`backend/target` 一律不动，旧环境仍可原样启动。
++- 新目录只使用自己生成的 `.env` 和新命名卷，不连接、不挂载、不复用原来的 `campus-v2_mysql-data`。
++
++复制完成后只做只读核对：
++
++macOS：
++
++```sh
++# 工作目录：campus-lab 的上一级
++ls -a campus-lab-handoff
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab 的上一级
++Get-ChildItem -Force campus-lab-handoff
++```
++
++核对重点：应有项目主体（`backend/`、`frontend/`、`tools/`、`compose.yaml`、`README.md` 等），且**没有** `.env`、`.private`、`.runtime`、`backend/target`。若目标目录已存在或混入了本机私密内容，先停下反馈，不要自行删除。
++
++新目录的 `.env` 由 12.3 自己生成，不复用旧口令。
++
++### 12.3 新目录的每条 compose 命令都带 -p
++
++`compose.yaml` 顶层有 `name: campus-v2`；命令行 `-p` 优先级更高，因此能覆盖它。**漏写一条 `-p` 就会操作回旧项目**，所以下面操作新环境的每条 compose 命令都带：
++
++```sh
++# 工作目录：campus-lab-handoff/
++node tools/setup-env.mjs
++docker compose -p campus-v2-handoff up -d
++docker compose -p campus-v2-handoff ps
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab-handoff\
++node tools\setup-env.mjs
++docker compose -p campus-v2-handoff up -d
++docker compose -p campus-v2-handoff ps
++```
++
++`ps` 里看到的容器名应是 `campus-v2-handoff-mysql-1` 与 `campus-v2-handoff-redis-1`（Compose 自动命名）；出现 `campus-v2-mysql` / `campus-v2-redis` 就说明漏了 `-p`，操作落到了旧项目上，立即停下核对。
++
++如果 `up -d` 曾因名称冲突失败过：`compose.yaml` 修好后**直接重跑同一条 `docker compose -p campus-v2-handoff up -d`** 即可，上次建好的 `campus-v2-handoff_default` 网络与 `campus-v2-handoff_mysql-data` 卷会被继续使用；不要 `down`，不要删那个新卷，也不要重新生成 `.env`。本次修复就是这样重跑成功的，没有重建卷。
++
++B、A 窗口照第 5、6 节做，只是工作目录换成 `campus-lab-handoff/backend/` 和 `campus-lab-handoff/`。
++
++两套环境的宿主端口完全相同：页面 5188、后端 8098、MySQL 23501、Redis 23502。旧项目的 A/B 进程或任意一个旧容器还在运行时，新环境启动就会端口冲突，因此**两组不能同时启动**。
++
++`node tools/setup-env.mjs` 只生成一次 `.env`；同一交付目录再次检查时，工具会提示已保留并以非 0 退出码结束，这是正常的：**保留该 `.env` 与原项目名 `campus-v2-handoff`**，不要重新生成口令，也不要换成别的项目名去连这个目录的卷。
++
++结束新环境只停止，不移除：
++
++```sh
++# 工作目录：campus-lab-handoff/
++docker compose -p campus-v2-handoff stop
++docker compose -p campus-v2-handoff ps -a
++```
++
++本课不要求移除新容器，也不要用 `down -v`；交接时容器和卷全部留着。
++
++### 12.4 新卷是空的
++
++- 新项目名会创建新卷 `campus-v2-handoff_mysql-data`，里面没有旧数据；MySQL 首次启动时用**新目录自己的 `.env`** 初始化账号与库。
++- 已实测（2026-10-21）：新卷 `campus-v2-handoff_mysql-data` 创建时间 `2026-10-20T20:47:14Z`；旧卷 `campus-v2_mysql-data` 仍是 `2026-10-20T15:52:09Z`。时间戳未变**只说明旧卷没有被重建**，不等于验证了旧数据完整；本轮没有重新启动旧库逐条回读业务数据。
++- 想回旧环境：先停止新环境，再启动旧环境，旧 `.env` 与旧卷都不动：
++  1. 新目录 `campus-lab-handoff/` 只停不移：`docker compose -p campus-v2-handoff stop`，再 `docker compose -p campus-v2-handoff ps -a` 确认 `campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1` 为 `exited`。
++  2. 旧目录 `campus-lab/` 启动：`docker compose -p campus-v2 up -d`（必须带 `-p campus-v2`）。**这一步本轮没有演练过**，下面只是按配置推出的预期，不要当成已验证：旧环境当前停着的容器仍叫 `campus-v2-mysql` / `campus-v2-redis`（未改名）；但旧目录的 compose 若也同步了去掉 `container_name` 的写法，重跑时 Compose 可能按新配置重建容器、改用 `campus-v2-mysql-1` 这类默认名，也可能沿用原容器——以实际 `docker compose -p campus-v2 ps -a` 输出为准。等 `healthy` 后再用旧 `.env` 登录，旧数据是否原样同样以实际回读为准。
++  3. 用完再回新环境时，顺序反过来：先在旧目录 `docker compose -p campus-v2 stop`（只停），再在新目录 `docker compose -p campus-v2-handoff up -d`。
++- 两组容器名已隔离、可以并存，但**宿主端口完全相同**（5188 / 8098 / 23501 / 23502），所以仍然只能一组在跑：切换时只 `stop`，不 `down`、不删容器、不删卷。
++
++---
++
++## 13. 检查 Compose 顶层卷没有显式 name 或 external
++
++`compose.yaml` 顶层只声明了键 `mysql-data`，没有 `name:`，也没有 `external: true`，因此卷名自动带项目名前缀：
++
++- 默认项目 `campus-v2` → `campus-v2_mysql-data`
++- 新目录 `-p campus-v2-handoff` → `campus-v2-handoff_mysql-data`（以 `campus-v2-handoff_` 开头）
++
++只读检查（不展开 `.env`）：
++
++macOS：
++
++```sh
++# 工作目录：campus-lab/
++grep -n -A3 '^volumes:' compose.yaml
++grep -n 'container_name' compose.yaml    # 期望没有任何输出
++docker volume ls
++```
++
++Windows PowerShell：
++
++```powershell
++# 工作目录：campus-lab\
++Select-String -Path compose.yaml -Pattern '^volumes:' -Context 0,3
++Select-String -Path compose.yaml -Pattern 'container_name'   # 期望没有匹配
++docker volume ls
++```
++
++- 看到 `mysql-data:` 且下面没有 `name` / `external` 即符合要求。
++- `grep container_name` 没有输出，说明容器名由 Compose 按项目名生成，新旧项目不会互相占用名称。
++- Redis 不挂任何卷，所以卷列表里只有 MySQL 卷。
++- **不要**输出 `docker compose config` 或 `docker inspect` 全文：它们会展开并显示 `.env` 里的口令。
++
++---
++
++## 14. .env 与卷的复用规则（最容易出错的地方）
++
++1. **已有 `.env` 必须重用**。`node tools/setup-env.mjs` 遇到已存在的 `.env` 只提示保留，不覆盖、不重新生成（退出码非 0 是正常的）。
++2. **相同 Compose 项目名会重用已有卷**。卷里的 MySQL 账号与口令是**首次初始化**时写入的；之后再改 `.env` 不会改数据库里的口令。
++3. 所以：同一个项目名 `campus-v2` + 新的 `.env` + 旧卷 = 用新口令去连旧库，认证失败。这不是“服务坏了”，是配置与数据不匹配。
++4. 正确做法二选一：
++   - 继续用原目录、原 `.env`、原卷（推荐，数据完整）；
++   - 换项目名（如 `-p campus-v2-handoff`）得到**新空卷**，再配新 `.env`，如第 12 节。
++5. 无论哪种，都**不要删卷、不要 `down -v`、不要用一套新口令硬连旧卷**。卷里是前 11 课的实做数据，删了不可恢复。
++
++---
++
++## 15. 教学模拟、已实测、未实测
++
++### 教学模拟（不是真实系统）
++
++- 设备、点位、历史、报警都是固定教学样本；MySQL 的初始数据也由迁移从 `materials/mock-campus.json` 写入。
++- 原始报警只读，页面不提供确认、恢复、关闭或设备控制。
++- 接入状态恒为 `TEACHING_MOCK`：不连真实校园、不连 AIRIOT、不控制设备、不发外部通知、不接外部账号系统。
++- 页面上的“模拟”标记是有意保留的，不要为了好看去掉。
++
++### 已在本机实际做过（2026-10-21，macOS，同一台电脑）
++
++- 安装与版本：Java 17、Node 22 检查通过；MySQL 与 Redis 容器 healthy。
++- 登录：`/api/login`、`/api/me`、`/api/logout` 可用；刷新后需重新登录；Redis 重启后旧会话 401，重新登录仍读到 16 台设备。
++- 设备与读数：16 台 / 4 空间 / 28 点位；`d03` 未知、`d04` 离线；`d05` 功率 0 kW 保留，缺失不补 0。
++- 历史：`d05` 功率、`d06` 电压、`a01`→`d01` 路径实际打开过；功率 0 与 null 断点的显示符合预期。
++- 空间与责任：独立 GET 回读、刷新重登后一致；责任版本 0→1→2→3 与 409 冲突、十项负向输入检查均实际回读。
++- 演练与审计：`case-34586bbc372f` 从 v1 走到 v7（创建、分派、开始、记事、恢复、核实、关闭），时间线 7 条；审计 12 条与成功动作对应。
++- 失败恢复：停后端后请求 503、保留上次成功结果；恢复后重试 200，无 mock 顶替。
++- 权限：`viewer` 写操作 403，`manager` 越权分派/恢复 403，伪造 role 仍 403。
++- 后端测试：`backend/` 实际跑过 153 项测试，0 失败 0 错误；MySQL 卷 `CreatedAt` 在重启实验前后未变。
++- 新目录首次启动的名称冲突（2026-10-21，保留原始记录）：`campus-lab-handoff` 生成 `.env` 后执行 `docker compose -p campus-v2-handoff up -d`，新网络与新卷已创建，但创建容器时报 `Conflict ... container name "/campus-v2-mysql" is already in use`，占用者是旧 `campus-v2` 的已停止容器。已按 12.1 第 4 条停下，只停新项目，旧容器与旧卷原样保留；修法是只删掉本目录 `compose.yaml` 里 mysql / redis 的 `container_name` 两行，其余字段未改。
++- 修复后新环境实跑成功：`docker compose -p campus-v2-handoff up -d` 正常创建容器，`campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1` 均 `healthy`。
++- 卷隔离：新卷 `campus-v2-handoff_mysql-data` 创建于 `2026-10-20T20:47:14Z`；旧卷 `campus-v2_mysql-data` 仍是 `2026-10-20T15:52:09Z`，未被重建。旧容器 `campus-v2-mysql` / `campus-v2-redis` 保持 `Exited`，**未改名、未重建**。
++- 新后端：在 `campus-lab-handoff/backend/` 实跑 153 项测试，0 失败 0 错误；Flyway 在 Empty schema 上应用 V1–V4 后启动成功。
++- 新前端：A 窗口从 `campus-lab-handoff/frontend/` 启动，页面可用。
++- 新环境数据隔离：用新目录自己的 `.env` 在本机登录 `admin`（口令只在本机查看，不记录在此），读到 16 台设备、4 个空间；**启动基线**为设备责任 0 条、演练事件 0 条（这是新空卷初始化后的起点，不是最终结果），旧目录里的个人改动没有出现。
++- 新目录六项走查（第 12 课，2026-10-21，全部在同一台电脑的 `campus-lab-handoff`、项目名 `campus-v2-handoff` 下完成）：
++  - 设备到历史：设备 16 台；`d01` 详情点温度进入 `d01/temperature/°C`，走 `GET /api/overview`；设备页来源文字已说明负责人走 `/api/owners`。
++  - 空间保存：`s1` 楼栋改为“交接教学楼”、楼层 3 层；`PUT` 成功、独立 `GET` 回读，整页刷新并用新目录口令重新登录后仍为相同值。
++  - 责任登记：`d01` 备注“新目录接手巡查责任”，提交 `expectedVersion` 0，独立 `GET` 回读 `manager` / v1。
++  - 新建演练：`case-a4b66d456baa`（“新目录接手温度巡查演练”），自动 `ASSIGNED` 给 `manager` / v1，创建时间线 1 条。
++  - 处置闭环：`manager` 开始 v2、记事 v3；`admin` 模拟恢复 v4（仍 `IN_PROGRESS`、未核实）；`manager` 核实 v5（仍 `IN_PROGRESS`、`verified=true`）并写结论关闭 v6；最终 `CLOSED` / `RECOVERED` / `manager`，时间线 6 条。
++  - 审计与只读：ADMIN `GET /api/audit` 实读 8 条（空间 1、责任 1、事件创建与 5 个动作各 1）；VIEWER 九菜单无写按钮、审计 403、接入状态可读；独立 HTTP 伪造 body role 的空间 `PUT` 仍 403，四项快照无变化。整页刷新后用新口令登录 `viewer`，仍读到该事件 `CLOSED` v6、`verified=true`、时间线 6 条。
++- 导出与复制的实际校验（操作者补记，2026-10-21）：`hand-in-v1` 导出 140 文件，副本 8 项边界检查漏拦两项；补救后导出 `hand-in-v2`，**140 个文件逐个 SHA256 一致、同样 8 项边界全部通过**；`hand-in-v3` 用访达复制到全新 handoff 目录，**140 项再逐个比对与源一致**，且未复制 `.env`；命名修复同步回原工程后导出 `hand-in-v4`，**140 项与新目录运行副本逐字节/哈希一致**。
++- 两件不同的事：上述校验说明导出与复制当时是完整一致的；但 12-04/12-05 又改过 `compose.yaml`、`README.md`、`frontend/app.js`、`frontend/data-service.js`，所以 handoff 根目录的 `SHA256SUMS.txt` 现在只是**初始导出的历史清单**，对这几个已改文件不再匹配；没有手改旧清单（收尾时另用 `hand-in-final` 重新导出核对，见下两条）。
++- 第 12 课实际收尾（2026-10-21，操作者补记）：原 C 执行 `node tools/export-source.mjs --out .runtime/hand-in-final/campus-lab`，得到 **141 个公开文件**与新的 `SHA256SUMS.txt`；**141 项逐个哈希与原工程源码、新目录运行副本全部一致**，最终导出里的两份说明也已实际打开核对；旧导出（`hand-in-v1`…`v4`）保留未覆盖。
++- 实际停机：新 A、新 B 各自 `Ctrl+C`；新 C 执行 `docker compose -p campus-v2-handoff stop` 与 `ps -a`，**两新容器均 `Exited(0)`，两旧 `campus-v2` 容器也保持 `Exited(0)`**；新旧两个 MySQL 卷保留，未 `down`、未删卷/删容器，两个 `.env` 的文件哈希与生成时一致。
++- 后续若再同步收尾文字：会同步回原工程、用**未使用过的新输出名**重新导出并核对，**不手改历史 SHA 清单**，最终以最后一次导出的完整清单与过程报告为准。
++
++### 未实测（不要当成已验证）
++
++- Windows PowerShell 命令：本工程未在 Windows 上实跑，JDK 路径只能按本机实际安装位置自行确认。
++- 新旧环境来回切换未实际演练：新环境停止后回旧 `-p campus-v2` 启动、旧库是否原样、再切回新环境，这三步都只按 12.4 写成步骤；旧容器在去掉 `container_name` 后是否被复用或重建，也未经实测。
++- 另一台电脑、跨机访问、局域网共享。
++- 真人学生/同伴独立验收；记录均来自同一人操作。
++- 真实校园网络、AIRIOT、真实设备、设备控制、外部通知。
++- 原始报警多页翻页：公开样本只有 1 条，两个翻页按钮均禁用。
++- 长延迟响应下的 5 秒超时表现（只核对了代码，未构造慢响应）。
++
++---
++
++## 16. 记录与边界
++
++- 本组实做记录：`docs/本组实做记录.md`（前端 01–06 课笔记已合并到“前端实做”，后端记录保留在各课小节）。
++- 其他文档：`docs/页面需要的数据.md`（九个菜单与接口对照）、`docs/后端启动笔记.md`（Java/Node 版本与启动细节）、`docs/交付说明.md`（本交付稿）。
++- 关于 `notes/`：`notes/` 只保留在**原工程**，公开导出与当前 `campus-lab-handoff` 里没有这个目录。第 01–06 课原始文字已合并到 `docs/本组实做记录.md` 的“前端实做”一节，交付副本从这里阅读即可。
++- 数据边界：只连本机课程容器；不连学校数据库、不连公网设备、不做外部通知。
++- 交付边界：不提交 `.env`，不复制个人截图、聊天记录或账号资料进文档。
++- 工程状态（2026-10-21 收尾后）：旧环境 A/B 已停，`campus-v2-mysql` / `campus-v2-redis` 保持 `Exited(0)` 未改名，旧卷 `campus-v2_mysql-data` 保留；新项目 `campus-v2-handoff` 已用自己生成的 `.env` 在 `campus-v2-handoff_mysql-data` 新卷上跑通（两容器 healthy，后端 V1–V4 + 153 项测试通过，页面可登录），六项业务走查完成（`case-a4b66d456baa` 关闭于 v6、时间线 6 条、审计 8 条）；新 A/B 已 `Ctrl+C`，新 C `stop` 后两新容器 `Exited(0)`，未 `down`、未删卷/容器，两个 `.env` 保留。`hand-in-final` 已导出 141 个公开文件并逐项核对一致。
++- 本稿时点说明：`docs/交付说明.md` 与本文档按上述实际记录整理；若之后再同步收尾文字，会回原工程重导新版本并重核，不手改历史 SHA 清单；最终以最后一次导出的完整清单与过程报告为准。
+--- 11/campus-lab/compose.yaml
++++ 12-final/campus-lab/compose.yaml
+@@ -1,8 +1,17 @@
+ # 校园值班台 · 本课程专用本地容器（MySQL 8.4 + Redis 7.4）
+-# 在项目根目录使用：
+-#   docker compose up -d          启动本课程 mysql / redis
+-#   docker compose ps             查看状态（starting / healthy）
+-#   docker compose stop           结束本课服务（mysql 数据保留）
++# 本文件在旧目录与新目录里内容相同，靠显式项目名区分；每条命令都要先看自己在哪个目录：
++#
++# 旧目录 campus-lab/（项目名 campus-v2，也等于下面顶层 name，但仍建议写出来）：
++#   docker compose -p campus-v2 up -d        启动本课 mysql / redis
++#   docker compose -p campus-v2 ps           查看状态（starting / healthy）
++#   docker compose -p campus-v2 stop         结束本课服务（mysql 数据保留）
++#
++# 新目录 campus-lab-handoff/（项目名 campus-v2-handoff，覆盖顶层 name）：
++#   docker compose -p campus-v2-handoff up -d
++#   docker compose -p campus-v2-handoff ps
++#   docker compose -p campus-v2-handoff stop
++#
++# 在 handoff 目录漏写 -p 就会落到顶层 name: campus-v2，等于操作旧项目和旧卷。
+ # 约定：只连本机课程容器；不连学校或已有数据库；不使用 down -v，不删卷重做。
+ 
+ name: campus-v2
+@@ -10,7 +19,9 @@
+ services:
+   mysql:
+     image: mysql:8.4
+-    container_name: campus-v2-mysql
++    # 不写 container_name：新建容器时由 Compose 按项目名生成名称
++    # （campus-v2-handoff-mysql-1 / campus-v2-mysql-1），不再互相占用全局唯一的容器名。
++    # 注意：旧环境里已存在的容器仍叫 campus-v2-mysql / campus-v2-redis，未改名、未重建。
+     restart: unless-stopped
+     environment:
+       # 口令只从项目根 .env 读取，不写在本文件里
+@@ -42,7 +53,8 @@
+ 
+   redis:
+     image: redis:7.4
+-    container_name: campus-v2-redis
++    # 同上：不写 container_name，新建时容器名随项目名变化（campus-v2-handoff-redis-1）；
++    # 旧环境已存在的 campus-v2-redis 保持原名与 Exited 状态。
+     restart: unless-stopped
+     environment:
+       # 口令只从项目根 .env 读取；下面命令与检查都用变量名，不把真实值写进本文件
+--- 11/campus-lab/docs/交付说明.md
++++ 12-final/campus-lab/docs/交付说明.md
+@@ -0,0 +1,147 @@
++# 交付说明（校园值班台 · 新目录 campus-lab-handoff）
++
++本文按第 12 课交接要求，用可以口头讲清楚的说法，说明这个作品是什么、数据放在哪、装和跑怎么做、哪些还没验证。所有事实来自 `docs/本组实做记录.md` 的实际记录；没做过的事写“未验证”，不补写成通过。
++
++## 0. 先说清楚谁做了什么
++
++| 分工 | 具体内容 |
++| --- | --- |
++| **我亲手做的** | 在本机执行安装与启动命令、在浏览器里逐页操作、观察并记录结果；第 12 课在新目录执行 `docker compose -p campus-v2-handoff up -d`，亲眼看到容器名冲突报错后停下；走查设备页时发现来源文案与实际接口不一致；收尾时执行 `hand-in-final` 导出（141 个公开文件逐项核对）与停机检查（两新容器、两旧容器均 `Exited(0)`）。 |
++| **AI 生成的** | 九个菜单的 HTML/CSS/JS（`frontend/`）、全部请求封装（`frontend/data-service.js`）、后端 Spring Boot 代码与测试（`backend/`）、Flyway 迁移 V1–V4、`compose.yaml`，以及本轮由 CodeBuddy 按提示生成的三个工具脚本 `tools/setup-env.mjs`、`tools/serve.mjs`、`tools/export-source.mjs`。是按我的步骤描述与报错现象生成，再由我实际运行验证。 |
++| **参考借用的** | 公开的课程与交接约定（接口路径、角色权限、回环端口、项目名约定）、教学样本 `materials/mock-campus.json`、Maven wrapper（`backend/mvnw`、`backend/.mvn/wrapper/`）以及课程文档。没有复制别人的项目代码、截图或聊天记录；上述三个工具脚本不是课程发下来的成品，而是本轮生成的。 |
++
++诚实边界：本次是 Codex 在本机操作的试跑，**没有真人同伴交换操作、没有第二台电脑、没有独立学生验收**，也没有真实校园/AIRIOT/设备控制。详见第 6 节。
++
++## 1. 作品有哪些页面
++
++九个菜单都在 `frontend/app.js` 里，地址用 `#` 片段切换（例如 `#history?deviceId=d05&tagId=power`）。页面本身只负责显示，所有取数都走 `frontend/data-service.js`。
++
++| 页面 | 用来做什么 | 连接后端时的数据来源 |
++| --- | --- | --- |
++| 概览 dashboard | 看设备/空间/点位总数、当前读数与状态 | `GET /api/overview` |
++| 设备 devices | 设备列表、筛选、打开详情看点位与负责人 | `GET /api/devices`、`GET /api/spaces`、`GET /api/owners`、`GET /api/overview` |
++| 空间 spaces | 改楼栋/楼层并保存（ADMIN） | `GET /api/spaces`、`PUT /api/spaces/{id}` |
++| 能源 energy | 设备功率/电压横向比较与历史曲线 | `GET /api/overview` |
++| 历史 history | 某设备某点位的历史曲线与样本表 | `GET /api/overview` 里的 `history` |
++| 原始报警 alarms | 查原始报警字段、跳设备详情（只读） | `GET /api/overview` 里的 `alarms` |
++| 演练事件 cases | 建事件、分派、开始、记事、恢复、核实、关闭与时间线 | `GET /api/cases`、`POST /api/cases`、`POST /api/cases/{id}/actions` |
++| 设备责任 owners | 给设备登记负责人与备注（带版本号防覆盖） | `GET /api/owners`、`PUT /api/owners/{deviceId}` |
++| 管理 admin | 接入状态（固定教学模拟）与审计列表（仅 ADMIN） | `GET /api/integration`、`GET /api/audit` |
++
++页面还有两种数据方式：页面顶部选“连接后端”才读 MySQL；选“浏览器演示”只读 `materials/mock-campus.json`，不写数据库，也不显示演练与审计。
++
++## 2. 从空页面到前端，再到后端
++
++**第一阶段（第 01–02 课）：先有页面，再让页面有数据。**
++第 01 课只有一张空壳页面和几个菜单；第 02 课做设备台账与筛选。这一阶段的数据全部来自 `materials/mock-campus.json`，页面没有保存能力，改不了任何东西。
++
++**第二阶段（第 03–06 课）：让页面“像能用”，但只存在浏览器里。**
++第 03 课做空间与责任，第 04 课处理读数（明确“0 是有效值、缺失不补 0”），第 05 课做历史与原始报警，第 06 课把九个菜单逐项写清“显示什么 / 从哪里读 / 会保存什么 / 哪些必须后端校验”。**这一阶段并不是刷新就回样本**：空间、责任和演练事件当时靠 `localStorage` 里的 `campus-v2-demo` 持久化，刷新或重开标签还能看到改动。当时页面上**已经有角色检查（演示身份）和本地审计记录**，但那是前端的按钮/分支判断加浏览器本地日志，**不代表后端权限，也不是数据库审计**——绕过页面直接发请求没人拦。直到第 11 课 11-06，才把 `campus-v2-demo` 的旧业务读写清理掉，此后浏览器只保留数据方式偏好（`campus-v2-data-mode`），权限与审计全部由后端负责。
++
++**第三阶段（第 08–11 课）：加后端，一课一版迁移，逐页换真数据。**
++后端是 Spring Boot 3.4.2 + Java 17；Flyway 按课次推进：**V1 在第 08 课、V2 在第 09 课、V3 在第 10 课、V4 在第 11 课**，不是一次性在开头建完——V1 先把设备、空间、点位这些基础数据从教学样本灌进库，之后每课再补当课需要的表与约束。账号口令在库里只存 BCrypt 摘要；登录用 `POST /api/login` 换令牌，令牌放 Redis，业务记录一律进 MySQL。第 10 课空间与责任接后端（保存后前端独立 GET 回读，刷新重新登录仍一致），第 11 课演练事件与审计接后端（每步动作带 `expectedVersion`，冲突返回 409 且只回读、不自动重发）并清掉旧的本地业务数据。前端在 `data-service.js` 里把请求集中到一处，`tools/serve.mjs` 只公开 `frontend/` 并把 `/api/*` 转发到 `127.0.0.1:8098`。
++
++**第四阶段（第 12 课）：换目录重跑一遍。**
++把同一份工程复制到新目录 `campus-lab-handoff`，用独立项目名 `campus-v2-handoff` 起新容器、新卷、新口令，在本机把九个菜单重新走了一遍。本次新事件是 `case-a4b66d456baa`：自动分派给 `manager`，一路走到 **CLOSED v6、时间线 6 条**，ADMIN 读到 **审计 8 条**——与 `docs/本组实做记录.md` 第 12 课一节逐条对应。
++
++**收尾时我改的一处页面文字**：设备页顶部原本写“负责人仍是浏览器演示”，但实际已经调用 `GET /api/owners`，详情来源段也写责任来自 MySQL。修正后统一为“点位读数从 `/api/overview`、负责人从 `/api/owners` 读取，均来自本机 MySQL”；只改了文字与注释，接口调用和权限判断没动。
++
++## 3. MySQL 保存什么，Redis 保存什么
++
++**MySQL（课程库 `campus_course`，本机容器；Flyway V1–V4 分别在第 08、09、10、11 课加入）保存业务记录：**
++
++- 账号 `users`（用户名、BCrypt 摘要、角色、是否启用）
++- 空间 `spaces`、设备 `devices`、点位 `points`
++- 历史样本 `history_samples`、原始报警 `alarms`
++- 设备责任 `owners`（负责人、备注、版本号、更新时间）
++- 演练事件 `cases` 与时间线 `case_timeline`
++- 审计 `audit`（每次成功保存/动作同事务写一条）
++
++这些记录刷新页面、重启后端、重启 Redis 都还在。空间、责任、事件、审计的写入都是“先改库、同事务记审计”，失败就不留半条。
++
++**Redis 只保存“你现在是谁”的短期凭条：** `campus:v2:session:<token>` → `{username, role}`，有效期 1800 秒；退出登录就删键。本课程 Redis 关闭了 `--save` 与 `--appendonly`，所以重启 Redis 后所有会话立即失效，需要重新登录，但 MySQL 的业务数据一条不丢。
++
++**浏览器里现在只有两样东西：** 登录令牌放在 `data-service.js` 的内存变量里（刷新即丢，这是“刷新要重新登录”的原因）；`localStorage` 只记数据方式偏好 `campus-v2-data-mode`（`backend` / `demo`），不存身份、不存业务数据。（第 03–06 课曾用 `campus-v2-demo` 在浏览器里存空间、责任与演练事件，第 11 课 11-06 已移除，过程见第 2 节。）
++
++## 4. 我修过的一个真问题：新目录启动被容器名占用
++
++**现象**：新目录 `.env` 生成后，我执行 `docker compose -p campus-v2-handoff up -d`。新网络和新卷都建好了，但创建容器阶段报错：
++
++```
++Conflict. The container name "/campus-v2-mysql" is already in use by container ...
++```
++
++**判断**：旧项目的 `compose.yaml` 里写死了 `container_name: campus-v2-mysql` / `campus-v2-redis`，而 Docker 的容器名全机唯一；旧容器只是 `stop` 了，名字还占着，所以新项目抢不到这个名字，尽管新项目名、新卷、新网络都是独立的。
++
++**处理**：按课程约定的“只停不删”，先停住新项目，旧容器、旧卷、旧 `.env` 一个都没动，也没有 `down -v`。然后只改本目录 `compose.yaml`：删掉 mysql 与 redis 各自那一行 `container_name`，其余（顶层 `name`、回环端口 23501/23502、`mysql-data` 卷声明、镜像、认证、healthcheck、Redis 关持久化）全部保持原样。改完**直接重跑同一条** `docker compose -p campus-v2-handoff up -d`，复用了上次已建的网络与卷，两个容器起来后都是 `healthy`。
++
++**结果与证据**：新容器名是 `campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1`；旧容器仍叫 `campus-v2-mysql` / `campus-v2-redis` 并保持 `Exited`，没改名也没重建；新卷 `campus-v2-handoff_mysql-data` 创建于 `2026-10-20T20:47:14Z`，旧卷 `campus-v2_mysql-data` 仍为 `2026-10-20T15:52:09Z`。时间戳没变**只说明旧卷没有被重建**；本轮没有重新启动旧库逐条回读业务数据，所以这不能当成“旧数据完整”的验证。
++
++**学到的**：容器名和项目名是两套东西。项目名决定卷和网络的前缀，`container_name` 却会写死一个全机唯一的名字，一旦写死，就失去了“换项目名即隔离”的效果。
++
++## 5. 怎么安装、启动、停止
++
++**装什么**：Node.js 22（页面静态服务）、JDK 17（后端）、Docker Desktop（能跑 `docker compose`）。版本不对只在当前终端窗口临时切换，不改系统环境变量。
++
++**第一次准备（工作目录 `campus-lab-handoff/`）**
++
++```sh
++node tools/setup-env.mjs
++```
++
++它生成本机随机口令到根目录 `.env`，**不会在屏幕显示口令**。已有 `.env` 时只提示保留、以非 0 退出码结束，这是正常的：不要重新生成，也不要拿新口令去连旧卷。
++
++**启动（三个窗口，目录都写清）**
++
++```sh
++# C 窗口：容器（必须带 -p）
++# 工作目录：campus-lab-handoff/
++docker compose -p campus-v2-handoff up -d
++docker compose -p campus-v2-handoff ps        # mysql、redis 都 healthy 再做下一步
++
++# B 窗口：后端
++# 工作目录：campus-lab-handoff/backend/
++java -version                                  # 必须是 17
++sh ./mvnw spring-boot:run
++
++# A 窗口：页面
++# 工作目录：campus-lab-handoff/
++node tools/serve.mjs                           # 浏览器打开 http://127.0.0.1:5188
++```
++
++**确认起来了**：`curl http://127.0.0.1:8098/api/health` 返回 `code=0`、`data.status=UP`；页面顶部选“连接后端”，用本机 `.env` 里的演示账号登录（口令只在本机查看，不写进任何文档）。
++
++**停止**
++
++```sh
++# A、B 窗口各自 Ctrl+C
++# 工作目录：campus-lab-handoff/
++docker compose -p campus-v2-handoff stop
++docker compose -p campus-v2-handoff ps -a     # 两个容器显示 exited 即停好
++```
++
++`stop` 只停容器，容器、卷、MySQL 数据全部保留。**不要 `docker compose down -v`、不要删卷、不要删或改名旧容器。**
++
++**本次实际收尾（2026-10-21，已完成）**：原 C 执行 `node tools/export-source.mjs --out .runtime/hand-in-final/campus-lab`，得到 **141 个公开文件**和新的 `SHA256SUMS.txt`；**141 项逐个哈希与原工程源码、新目录运行副本全部一致**，最终导出里的两份说明也已打开核对，旧导出（v1…v4）保留未覆盖。停机按上面步骤做：新 A、新 B 各自 `Ctrl+C`（后端日志显示连接池与 Tomcat 正常关闭）；新 C `docker compose -p campus-v2-handoff stop` 后 `ps -a`，**两新容器 `Exited(0)`，两旧 `campus-v2` 容器也保持 `Exited(0)`**。新旧两个 MySQL 卷、两个 `.env` 都保留，没有 `down`、没有删卷或删容器。若之后还要同步收尾文字，仍用**未使用过的新输出名**重新导出重核，不手改历史 SHA 清单。
++
++**换回旧环境（本轮尚未演练，只是步骤）**：先在新目录 `stop`，再到旧目录 `campus-lab/` 执行 `docker compose -p campus-v2 up -d`，用旧 `.env` 登录。两套环境的宿主端口完全一样（5188 / 8098 / 23501 / 23502），所以**只能一组在跑**，切换只 `stop` 不 `down`。注意：旧容器现在仍叫 `campus-v2-mysql` / `campus-v2-redis`，但如果旧目录也同步了“去掉 `container_name`”的写法，重跑时 Compose 可能重建容器并改用带序号的默认名，也可能沿用原容器——以实际 `docker compose -p campus-v2 ps -a` 为准，旧数据是否原样也要回读确认，不能预先断言。
++
++## 6. 哪些地方尚未验证
++
++- **真人**：没有真人同伴交换操作，也没有独立学生验收；全部记录来自同一人（Codex）本机试跑。
++- **Windows**：PowerShell 命令没有实跑，JDK 安装路径只能由使用者自行确认。
++- **另一台电脑**：没有在第二台机器上装过、跑过，跨机访问与局域网访问均未验证。
++- **新旧环境来回切换**：只按文档写了步骤，没有实际演练“停新 → 起旧 → 再回新”，旧数据是否原样也**没有复测**。
++- **真实系统**：未连接真实校园网络、AIRIOT 或任何设备，未做设备控制、外部通知、外部账号系统；接入状态恒为 `TEACHING_MOCK`。
++- **数据边界**：原始报警公开样本只有 1 条，多页翻页按钮始终禁用，未取得真实翻页画面；没有累计电量 kWh、电价，所以算不出电费。
++- **异常场景**：5 秒超时的慢响应只核对了代码，没有构造慢响应实测。
++- **历史清单已过时**：`campus-lab-handoff/` 根目录的 `SHA256SUMS.txt` 是初始导出清单，12-04/12-05 改过的 `compose.yaml`、`README.md`、`frontend/app.js`、`frontend/data-service.js` 与它已不匹配；旧清单没有手改。导出/复制/收尾三次的实际核对结果见第 5 节与实做记录补记。
++- **真人口试**：五道口头练习只有题目，没有真人同伴作答或真人验收记录；本轮都是同一人（Codex）在本机操作。
++
++## 7. 五个口头练习问题（自己准备答案，本文不提供）
++
++1. 页面为什么先用模拟数据，而不是一开始就连数据库？
++2. 从点“刷新”到设备列表出现新数字，中间经过了哪些程序？
++3. 为什么刷新页面就要重新登录，而设备记录却还在？
++4. 事件“模拟恢复”之后，为什么不能直接关闭，必须先核实？
++5. 同一台电脑上跑第二套环境，为什么一定要用独立的 Compose 项目名？
+--- 11/campus-lab/docs/本组实做记录.md
++++ 12-final/campus-lab/docs/本组实做记录.md
+@@ -19,6 +19,65 @@
+ 
+ 补充记录（可选）：异常现象、截图文件名、需要教师或同伴复核的问题。
+ 
++
++## 前端实做（第01–06课，公开文字笔记合并）
++
++本节把 `notes/` 中第 01–06 课的公开文字笔记按课次合并，便于交付时一处阅读。原笔记文件保留不动；docs 中已有的后端记录保持原样。只合并文字，不复制个人截图、聊天记录或账号资料。缺具体结果的地方写“未记录”，不补写通过。
++
++当时的代码还是浏览器演示，尚未连接后端与数据库；下面各课的“保存”都只指页面内存或当时的数据层，不是 MySQL。
++
++### 第01课 我的第一张页面
++
++- 平台名称改为“晨光校园值班台”，标签名与页面大标题一致。
++- 实际点过设备、历史、管理、概览；历史页刷新后仍停在历史；390px 窄屏卡片可读。
++- 过程中原名称曾被改回默认值，把真实现象交给 CodeBuddy 补救后刷新验证；本课完成时后端与数据库尚未开始。
++- 未记录：各页逐项截图对照、组件级细节清单。
++
++### 第02课 设备台账
++
++- 抽查设备 `d06`：`power` 单位 kW，`voltage` 单位 V。
++- 能源筛选 4 台；搜索 `d06` 只剩 1 台；无匹配时显示“没有符合条件的设备”；清空后恢复 16 台。
++- 卡片 16 台 / 4 空间 / 28 点位来自数据；点击设备总数会清空旧筛选。
++- `d03` 缺失温度且无采样时间，没有补成 0。
++- 未记录：16 台设备逐台核对、其他筛选组合的实际画面。
++
++### 第03课 位置和责任
++
++- 把 `s1`（101 教室）的位置改为教学楼 A / 2 层。
++- 给 `d01` 登记负责人 `manager`，首次保存版本 1；联动回读检查时修改备注后版本 2，新备注能在设备详情立即回读。
++- 刷新页面、关闭原标签重新打开后，空间位置与负责人都保留。
++- 边界：当时是浏览器演示保存，没有数据库，因此没有数据库回读记录。
++- 未记录：后端与数据库回读（当时尚不存在）、多账号并发提交。
++
++### 第04课 读数和能源
++
++- 0 是有效数值：`d05` 功率实际显示 0 kW；缺失表示没有有效读数，`d03` 温度显示缺失且无采样时间，不能补成 0。
++- 采样时间来自原始样本，本轮为 2026/10/20 08:00:00；刷新只是重新读取，不能把刷新时刻写成采样时刻，也不能凭当前时刻重算样本质量。
++- 当前只有功率 kW 与电压 V 的固定样本，没有累计电量 kWh、电价或计费时段，因此不能从本页直接算电费。
++- 实测：能源始终只有 `d05`–`d08` 四台；功率为 0、1.6、1.8、2 kW，切电压为 220、220.2、220.4、220.6 V，再切回功率仍保留 `d05` 的 0。
++- 未记录：电费/累计电量（数据里没有这两类字段）；截图属个人过程证据，未复制进本文。
++
++### 第05课 历史和报警
++
++- 从 `d05` 电表01 的 `power` 点位进入历史，地址为 `#history?deviceId=d05&tagId=power`，单位 kW。六条样本原时间为 07:35 至 08:00，样本日期 2026/10/20。
++- 0 是有效点；07:45 的 null 在表中显示缺失，图在该处断开，不补成 0。`d05` 五个有效功率样本全是 0，仍然可见。
++- 15 分钟范围以样本末时刻 08:00 计算，包含四行、三个有效点；1 小时包含全部六行。
++- 切换同一设备的电压后，图、表、标题、单位与地址均更新为 voltage/V，刷新后保留点位。
++- 能源页 `d05`/`d06` 功率比较可用；切到电压后勾选和旧结果被清除，重新勾选再比较，结果是 V；仅四台能源设备可选。
++- 原始报警页可搜索、查看原始字段并进入设备详情，不能分派、恢复、核实或关闭；当前 `a01` 状态 `SAMPLE_ACTIVE`、等级 `NOTICE`，属教学模拟；搜索不存在的报警后清空可恢复这条记录；入口进入 `d01`。
++- 实际补救：05-03 原生成结果因 `historyRange is not defined` 无法初始化，提交真实浏览器错误后修复并复测通过；05-04 图表末端时间被裁剪，提交实际截图现象后修复，桌面与 390 像素窄屏比较图两端时间完整。
++- 边界：当前公开报警只有一条，两个翻页按钮均禁用；没有声称在真实浏览器验证过多页翻页。
++- 未记录：报警多页翻页的实际画面（样本不足）；连后端后的历史与报警（当课仍为演示数据）。
++
++### 第06课 前端需要的数据
++
++- 九个菜单都已接到 `frontend/app.js` 的实际页面，业务读写全部经过 `frontend/data-service.js`。
++- 数据来源只有两个：公开练习 JSON（`materials/mock-campus.json`，由 `frontend/mock-data.js` 载入）与浏览器 `localStorage` 的 `campus-v2-demo`；没有连接 MySQL、Redis、Spring Boot，也没有真实登录，刷新后身份回到管理员。
++- 九个菜单逐项记录了“显示什么 / 从哪里读 / 会保存什么 / 以后哪些事需要后端检查”，表格见 `notes/06-前端需要的数据.md`。
++- 当课实测：16 台设备、4 空间、28 点位；能源类型进入原设备表；`d03` 在线未知且温度缺失，`d05` 功率 0；101 教室为教学楼 A/2 层；`d05`/`d06` 功率与电压历史比较可切换；`d05` 功率历史保留 0 且缺失断为两段；原始报警搜索、清空、设备跳转正常且保持只读；`case-1` 刷新后仍 CLOSED/version7，七条时间线完整；`d01` 责任仍为 `manager` 和原备注；管理页模拟标识与“控制/通知未启用”说明清楚。
++- 借助 AI 补救三项：06-02 补齐来源状态与核实状态显示；06-05 新建 case-2 未产生审计，修复后 case-3 新增唯一创建审计，未伪造旧记录；06-06 概览遗留第一课占位句，按该步补救只改该句，刷新与能源筛选再次通过。
++- 边界：当课仍是浏览器演示，尚无后端或数据库连接；原始报警只有 1 条，多页翻页未获真实浏览器样本验证。
++- 未记录：真实登录、权限、并发与后端审计（第 08 课起才逐项替换）。
+ 
+ ## 第10课末实际进度（2026-10-21）
+ 
+@@ -53,4 +112,67 @@
+ | 失败恢复 | 11-05实际停B，新增“重新读取事件”触发503，3条上次成功结果保留且标时间；B恢复后重试200、错误清除，无mock顶替。B实跑153测试0失败；C守卫3测试和20项真实HTTP拒绝逐项回读无改写。 |
+ 
+ 代码清理由CodeBuddy完成：移除已接后端演练/审计旧campus-v2-demo读写，公开练习材料保留；本次重新加载后上述后端路径仍可操作。
+-未完成：真人同伴交换操作、Windows、另一台电脑、真实校园/AIRIOT、设备控制、外部通知均未验证。第12课新目录接手尚未执行。
++未完成：真人同伴交换操作、Windows、另一台电脑、真实校园/AIRIOT、设备控制、外部通知均未验证。第12课新目录接手的实际结果见下一节；本句于接手后更新，以上第11课历史事实保留。
++
++---
++
++## 第12课 新目录接手（2026-10-21 实际填写）
++
++本节由 Codex 根据本次新目录的实际命令与浏览器操作填写；业务代码由 CodeBuddy Craft / Deepseek-V4.1-Flash 生成。清单由 AI 整理，结果由实际观察填写，无真人同伴交换操作。原填写规则保留：
++
++- 只写本次在 `campus-lab-handoff`（或另一台电脑）实际看到的现象；**不引用旧项目 `campus-lab` 的测试结论、旧事件编号、旧审计条数或旧截图**，旧环境的结果不能顶上。
++- 没做的项写“未做”，做了但不符就照实写“不符”，不要先写“通过”。
++- 口令只在本机查看，记录里不写口令值；不贴完整 `docker compose config` / `docker inspect` 输出。
++- 填写前提（自己确认后再动手）：`cd campus-lab-handoff`，`.env` 是本目录自己生成的，容器命令都带 `-p campus-v2-handoff`，`docker compose -p campus-v2-handoff ps` 两行 `healthy`，后端 `http://127.0.0.1:8098/api/health` 返回 `code=0`，页面开 `http://127.0.0.1:5188`。
++
++### 我亲自做的六件事（按顺序）
++
++1. **设备到历史**：登录后打开设备列表并查看设备详情，再从**同一台设备**进入它的历史（记下设备/点位编号、指标、范围、来源时间与曲线样本是否对得上）。
++2. **空间保存**：用 ADMIN 保存一个空间的楼栋/楼层修改，独立回读后**整页刷新并重新登录**再回读（记下改了哪个空间、哪两个字段、回读值与保存前是否一致）。
++3. **责任登记**：为 `d01` 登记 `manager` 责任（记下提交的 `expectedVersion`、保存后回读版本、备注内容）。
++4. **新建演练并确认自动分派**：为 `d01` 新建一件演练，确认系统自动分派（记下新事件编号、初始版本、分派给谁、时间线条数；不重置已有事件）。
++5. **事件处置闭环**：同一件事件依次做 开始 → 记事 → 管理员模拟恢复 → 核实 → 写结论并关闭（每步记下版本是否 +1、处理人、时间线是否新增一条）。
++6. **审计与只读，最后再查**：ADMIN 看审计（条数与刚才成功动作是否对应）；换 `viewer` 登录确认只能读（写按钮是否消失、直接发写请求返回什么）；最后刷新页面重新登录，再查那件已关闭事件（状态、`verified`、结论是否还在）。
++
++### 本次实际记录表
++
++| 步骤 | 操作者 | 系统 | 新目录或另一台电脑 | 实际现象 | 未完成项 |
++| --- | --- | --- | --- | --- | --- |
++| 1 设备 → 同一设备历史 | Codex / admin | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | 设备16台；d01详情点温度历史进入d01/temperature/°C，GET /api/overview；设备来源文字现说明责任走/api/owners。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++| 2 空间保存 → 刷新重登回读 | Codex / admin | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | s1楼栋改交接教学楼、楼层3层；PUT成功独立GET后，整页刷新并用新目录口令重新登录，仍为相同值。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++| 3 d01 登记 manager 责任 | Codex / admin | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | 备注新目录接手巡查责任，提交expectedVersion0，独立GET回读manager/v1。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++| 4 d01 新建演练 → 自动分派 | Codex / admin | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | 新事件case-a4b66d456baa，内容新目录接手温度巡查演练，自动ASSIGNED manager/v1，创建时间线1条。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++| 5 开始→记事→恢复→核实→关闭 | Codex / manager→admin→manager | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | manager开始v2、记事v3；admin模拟恢复v4（仍IN_PROGRESS/未核实）；manager核实v5（仍IN_PROGRESS/verified=true）、写结论关闭v6。最终CLOSED/RECOVERED/manager，时间线6条；结论新目录演练已核查完成，处置记录与恢复核实一致。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++| 6 审计 / viewer 只读 / 刷新查已关闭 | Codex / admin、viewer | macOS；Node22.21.1、Java17.0.12；Docker课程容器 | 同一台电脑的全新campus-lab-handoff；项目campus-v2-handoff | ADMIN真实GET审计8条，对应空间1/责任1/事件创建与5动作；VIEWER九菜单无写按钮、审计403、接入状态可读；新环境独立HTTP伪造body role的空间PUT仍403，四项快照无变化。整页刷新后新口令登录viewer，GET仍读该新事件CLOSED v6、verified=true、结论与时间线6条。 | 本项电脑操作完成；真人同伴/另一台电脑未做 |
++
++填写口径：
++
++- **操作者**：谁在操作（本人 / 同伴），用的是哪个账号（`admin` / `manager` / `viewer`）——步骤 5 的恢复要求 ADMIN、核实要求 MANAGER，按实际切换写清。
++- **系统**：操作系统与版本、Docker Desktop 是否在跑、后端 Java 17 / 前端 Node 22 的实际情况。
++- **新目录或另一台电脑**：写 `campus-lab-handoff` 本机，还是另一台电脑（写清机器标识），以及本次用的项目名 `campus-v2-handoff`、容器名是否为 `campus-v2-handoff-mysql-1` / `campus-v2-handoff-redis-1`。
++- **实际现象**：逐条写页面看到的值、接口返回（可写 `GET /api/...` 与状态码）、报错原文关键片段；不写口令。
++- **未完成项**：没做的步骤、被阻断的操作、以及需要教师/同伴复核的问题，写“未做”而不是留空。
++
++### 本次汇总
++
++- 实做日期与机器：2026-10-21；本机macOS，Codex执行，非另一台电脑。
++- 新目录路径与本机端口占用情况（5188 / 8098 / 23501 / 23502）：独立campus-lab-handoff，新A/B与两新容器使用四个回环端口；旧A/B及旧容器停止。
++- 新目录数据现状（设备/空间/责任/事件/审计的**本次实际计数**）：16/4/1/1/8；新事件case-a4b66d456baa，timeline6。C直接SQL与浏览器GET一致。
++- 与旧环境的关系（只写本次观察：旧容器是否保持停止、旧卷是否未动；**不抄旧环境的历史结论**）：新.env生成一次且四项值与原不同；原容器仍Exited，原卷保留，新卷campus-v2-handoff_mysql-data独立。首次固定容器名冲突仅由CodeBuddy移除container_name补救，未删旧容器/卷。
++- 本节未完成 / 留待 12-04 及以后：真人学生/同伴、Windows、另一台电脑、真实校园/AIRIOT、设备控制、外部通知未验证；口头练习未由真人作答。12-05交付说明/最终导出/停机尚待执行。
++
++
++
++### 公开导出与复制的实际校验（操作者补记）
++
++第12课02亲自执行hand-in-v1导出140文件，副本8项边界检查发现两项漏拦；CodeBuddy补救后另导出hand-in-v2，140个文件逐个SHA256比对均一致，相同8项全部通过。第12课03说明修订后导出hand-in-v3，访达复制到全新handoff目录后，140项再逐个SHA256匹配；新目录未复制.env。命名修复同步原工程后再次导出hand-in-v4，140项与新目录运行副本逐个字节/哈希一致。
++后续12-04修改来源文字和本记录、12-05整理交付说明及注释，因此handoff根SHA256SUMS.txt是初始导出历史清单，对已修改文件不再匹配；未手改旧清单。最终交付将从已同步原工程重新导出并重新核对全部文件，结果以实际收尾证据为准。
++旧容器保持停止、旧卷名称和CreatedAt未变；这只证明保留与未重建。本轮未重新启动旧库回读全部业务数据，不把卷时间戳当内容完整性验证。
++
++
++### 第12课05实际收尾（2026-10-21 05:16）
++
++已在原CodeBuddy窗口原C执行教材命令node tools/export-source.mjs --out .runtime/hand-in-final/campus-lab，得到141个公开文件及新SHA256SUMS.txt；141项逐个哈希与原源码、新目录源码全部一致，两份说明均在最终导出中实际打开核对。旧导出保留。
++随后按教材在新窗口新A、新B分别Ctrl+C；新C执行docker compose -p campus-v2-handoff stop与ps -a。两新容器均Exited(0)，两旧campus-v2容器也保持Exited(0)，新旧MySQL卷保留，未down、未删卷/容器，两个.env的文件哈希仍与生成后记录一致。后端PID42364日志明确正常关闭连接池与Tomcat。
++五道口头练习问题只有题目，无真人同伴口试或真人答案记录；不把本轮代理电脑操作写成真人学生验收。
++收尾文档的当前事实修订将同步回原工程，并用未使用输出名重新导出，最终交付以最后生成的完整SHA256清单与过程报告为准，不手改旧清单。
+--- 11/campus-lab/frontend/app.js
++++ 12-final/campus-lab/frontend/app.js
+@@ -4732,7 +4732,7 @@
+   devicesView.detail.hidden = false;
+   devicesView.detailNotice.hidden = false;
+   devicesView.detailNotice.textContent = useServer
+-    ? "正在读取本机后端空间名称与点位读数（负责人仍为浏览器演示数据）"
++    ? "正在读取本机后端空间名称、负责人与点位读数"
+     : "正在读取浏览器演示的空间、负责人与点位读数";
+   devicesView.facts.hidden = true;
+   devicesView.factsSource.hidden = true;
+@@ -4923,7 +4923,7 @@
+ 
+   try {
+     // 连接后端：设备基本信息只认后端 MySQL；浏览器演示：设备列表来自练习数据。
+-    // 点位读数在打开详情时按同一数据方式读取；空间名称、负责人两步后才接，仍是演示。
++    // 空间名称走 /api/spaces，负责人走 /api/owners，点位读数在打开详情时走 /api/overview。
+     const useServer = dataMode === "backend";
+     const [devices, spaces] = await Promise.all([
+       useServer ? getDevicesFromServer() : getDevices(),
+@@ -4940,7 +4940,7 @@
+     devicesView.sourceNote.textContent = useServer
+       ? `设备列表来自本机后端 /api/devices（MySQL），空间名称来自 /api/spaces。` +
+         `本次读取时间 ${formatReadTime(devicesReadAt)}；这只是本页读取时间，不是设备采样时间。` +
+-        "打开详情时点位读数从 /api/overview 读取；负责人仍是浏览器演示。"
++        "打开详情时点位读数从 /api/overview 读取，负责人从 /api/owners 读取；两者同样来自本机 MySQL。"
+       : `${DATA_SOURCE_NOTE}｜设备列表与点位读数都来自浏览器练习数据，不是数据库；` +
+         `本次读取时间 ${formatReadTime(devicesReadAt)}。空间名称、负责人同样是浏览器演示。`;
+ 
+--- 11/campus-lab/frontend/data-service.js
++++ 12-final/campus-lab/frontend/data-service.js
+@@ -216,7 +216,8 @@
+ }
+ 
+ // ---------- 设备台账（第08课）：同源 GET /api/devices ----------
+-// 只给设备页和详情里的设备基本信息使用；空间、点位、历史、责任人仍走上面的演示数据。
++// 只给设备页和详情里的设备基本信息使用；空间名称走 GET /api/spaces，负责人走 GET /api/owners，
++// 点位读数、历史与报警在连接后端时走 GET /api/overview。只有浏览器演示模式才读上面的练习数据。
+ // 读取失败一律抛错，由页面显示错误或保留上次结果，绝不回退成 mockCampus.devices。
+ const DEVICES_URL = "/api/devices";
+ const DEVICES_TIMEOUT_MS = 5000;
+--- 11/campus-lab/notes/01-我的第一张页面.md
++++ 12-final/campus-lab/notes/01-我的第一张页面.md
+@@ -1,3 +0,0 @@
+-我把平台名称改成了“晨光校园值班台”，标签名与页面大标题一致。
+-我实际点过设备、历史、管理、概览；历史页刷新后仍停在历史，390px窄屏卡片可读。
+-第5步原提示曾把名称改回默认值，已将真实现象交给CodeBuddy补救并刷新验证；本课完成，后端和数据库尚未开始。
+--- 11/campus-lab/notes/02-设备台账.md
++++ 12-final/campus-lab/notes/02-设备台账.md
+@@ -1,3 +0,0 @@
+-检查设备d06：功率power，单位kW；电压voltage，单位V。
+-能源筛选4台，搜索d06只剩1台；无匹配时显示“没有符合条件的设备”，清空恢复16台。
+-卡片16/4/28来自数据；点击设备总数清空旧筛选。d03缺失温度和无采样时间没有补成0。
+--- 11/campus-lab/notes/03-位置和责任.md
++++ 12-final/campus-lab/notes/03-位置和责任.md
+@@ -1,3 +0,0 @@
+-我修改了s1（101教室）的位置为教学楼A/2层。
+-我给d01登记了manager，首次保存版本1；联动回读检查中修改备注后版本2，新备注能在设备详情立即回读。
+-刷新及关闭原标签页重新打开后，空间位置与负责人都保留；这是当前浏览器演示保存，没有数据库。
+--- 11/campus-lab/notes/04-读数和能源.md
++++ 12-final/campus-lab/notes/04-读数和能源.md
+@@ -1,10 +0,0 @@
+-# 第04课实际观察
+-
+-本笔记由实做操作者根据浏览器实测填写，业务代码由 CodeBuddy Craft 生成。
+-
+-1. 0 是有效数值：d05 功率实际显示 0 kW；缺失表示没有有效读数，d03 温度显示缺失且无采样时间，不能补成 0。
+-2. 采样时间来自原始样本，本轮为 2026/10/20 08:00:00；刷新页面只是重新读取，不能把刷新时刻写成采样时刻，也不能凭当前时刻重算样本质量。
+-3. 当前只有功率 kW 或电压 V 的固定样本，没有累计电量 kWh、电价或计费时段，因此不能从本页直接算电费。
+-
+-实测：能源始终只有 d05–d08 四台；功率为 0、1.6、1.8、2 kW，切电压为 220、220.2、220.4、220.6 V，再切回功率仍保留 d05 的 0。
+-截图保存在源码目录外的过程证据：`process/screenshots/04-d05-zero-full.png`、`process/screenshots/04-d03-missing-full.png`。
+--- 11/campus-lab/notes/05-历史和报警.md
++++ 12-final/campus-lab/notes/05-历史和报警.md
+@@ -1,15 +0,0 @@
+-# 第05课实际观察
+-
+-本笔记由实做操作者根据浏览器实测填写，业务代码及其修复由 CodeBuddy Craft 生成。
+-
+-- 从 d05 电表01 的功率 power 点位进入历史，地址为 `#history?deviceId=d05&tagId=power`，单位 kW。六条样本的原时间为 07:35 至 08:00，样本日期为 2026/10/20。
+-- 0 是有效点；07:45 的 null 在表中显示缺失，图在该处断开，不补成 0。d05 的五个有效功率样本全是 0，仍然可见。
+-- 15 分钟范围以样本末时刻 08:00 计算，包含四行、三个有效点；1 小时包含全部六行。切换同一设备的电压后，图、表、标题、单位与地址均更新为 voltage/V，刷新保留点位。
+-- 能源页 d05/d06 的功率比较可用。切到电压后勾选和旧结果被清除，重新勾选再比较，结果是 V。仅四台能源设备可选。
+-- 原始报警页可搜索、查看原始字段并进入设备详情，不能分派、恢复、核实或关闭报警。当前 a01 的状态是 SAMPLE_ACTIVE、等级 NOTICE，属于教学模拟。搜索不存在的报警后清空可恢复这条记录；入口进入 d01。
+-
+-实际补救：05-03 原生成结果因 `historyRange is not defined` 无法初始化，提交真实浏览器错误后修复并复测通过。05-04 图表末端时间被裁剪，提交实际截图现象后修复；桌面及 390 像素窄屏比较图的两端时间完整。
+-
+-边界：当前公开报警只有一条，两个翻页按钮均禁用；没有伪称在真实浏览器验证过多页翻页。浏览器自动化会话曾失效，已在同一个 Chrome 实例重建专用窗口；每步命令和截图保留，旧第05课前半段 debug 捕获未导出。
+-
+-历史截图：源码目录外 `process/screenshots/05-04-history-fixed.png`。原失败截图与补救后截图均保留，未覆盖。
+--- 11/campus-lab/notes/06-前端需要的数据.md
++++ 12-final/campus-lab/notes/06-前端需要的数据.md
+@@ -1,29 +0,0 @@
+-# 06 前端需要的数据
+-
+-九个菜单都已接到 `frontend/app.js` 的实际页面，业务读写全部经过 `frontend/data-service.js`。
+-当前数据只有两个来源：公开练习 JSON（`materials/mock-campus.json`，由 `frontend/mock-data.js` 载入）和浏览器 `localStorage` 的 `campus-v2-demo`。
+-没有连接 MySQL、Redis、Spring Boot，也没有真实登录；页面刷新后身份回到管理员。
+-
+-| 菜单 | 页面显示什么 | 目前从哪里读 | 会保存什么 | 以后哪些事情需要后端检查 |
+-| --- | --- | --- | --- | --- |
+-| 概览 dashboard | 设备/空间/点位总数，各空间与各类型设备数量，点位质量分布，需留意读数 | `getOverview()`：公开练习 JSON，空间位置合并浏览器保存值 | 不保存 | 登录与 `/api/overview` 权限；真实设备、点位、历史、报警；质量与时间是否可信；统计口径由数据库结果决定 |
+-| 设备 devices | 设备表（编号、名称、类型、空间、在线情况），筛选与搜索，详情中的负责人、空间和点位读数 | `getDevices()`、`getSpaces()`、`getOverview()`；详情另读 `getOwners()`、`getSpaces()` | 不保存 | `GET /api/devices` 的登录与角色；设备、空间、负责人关联；在线情况与点位质量不能由前端推断 |
+-| 空间 spaces | 四张空间卡片：名称、楼栋、楼层、设备数量；编辑位置表单 | `getSpaces()`（公开 JSON 合并浏览器保存的楼栋/楼层）、`getDevices()` | `saveSpace()` 把楼栋、楼层写入 `campus-v2-demo.spaces`，并追加一条 `space.update` 审计 | `PUT /api/spaces/{id}` 仅 ADMIN；空间 ID 是否存在、楼栋楼层非空；服务端审计；不能只靠隐藏按钮 |
+-| 能源 energy | 能源设备的功率 kW 或电压 V 当前读数，按空间分组；勾选设备比较历史曲线 | `getOverview()` 的 devices/points/history | 不保存 | 登录与权限；真实点位、单位、采样时间；只做功率/电压展示，累计电量与费用若要做必须由后端计算 |
+-| 历史 history | 设备与点位选择、时间范围、原始样本表与曲线，地址片段保存 deviceId/tagId | `getOverview()` 的 history，按地址片段还原选择 | 不保存 | 按 deviceId/tagId 查询的登录与权限；时间范围与返回条数限制；缺失值保持 null，不做插值或补点 |
+-| 原始报警 alarms | 只读报警表：设备、说明、原始 status/level（附中文解释）、时间；搜索与分页 | `getOverview()` 的 alarms | 不保存 | 登录与只读权限；报警来源与状态真实性；不得提供确认、恢复、关闭或设备控制动作 |
+-| 演练事件 cases | 创建演练表单、事件列表、详情（设备、状态、来源状态、核实状态、处理人、版本、时间线），分派/开始/记录/恢复/核实/关闭动作 | `getDevices()`、`getCases()`、`createCase()`、`caseAction()`；事件存在 `campus-v2-demo.cases` | 创建与每个成功动作保存 `cases`（含 version、timeline、conclusion）和 `audit`（`case.create` / `case.*`） | 创建仅 ADMIN；动作按会话角色与 assignee 校验；`expectedVersion` 冲突返回 409；关闭前逐项检查状态、处置记录、来源恢复、独立核实、关闭结论；服务端审计；前端按钮隐藏不算权限保护 |
+-| 设备责任 owners | 每台设备的当前负责人、备注、版本与登记按钮；登记表单 | `getDevices()`、`getOwners()`；负责人存在 `campus-v2-demo.owners` | `saveOwner()` 保存 `{deviceId, username, note, version}`，并追加一条 `owner.save` 审计 | `PUT /api/owners/{deviceId}` 仅 ADMIN；`expectedVersion` 必须匹配；`username` 必须是真实存在的账号；服务端审计；不能只靠页面隐藏登记按钮 |
+-| 管理 admin | 三种演示身份的用途、当前身份、接入状态（教学模拟数据、实际设备控制未启用、外部通知未启用）、演示操作记录（时间、操作者、动作、目标 ID） | `getIntegration()` 返回固定 `TEACHING_MOCK`；`getAudit()` 读取 `campus-v2-demo.audit` | 不保存 | `GET /api/integration` 的真实接入状态；`GET /api/audit` 仅 ADMIN；角色与审计由后端会话决定；正式审计必须来自后端，当前记录只是浏览器演示 |
+-
+-补充说明：
+-
+-- 当前审计只覆盖浏览器里成功的空间修改、责任登记和演练事件动作（含创建），旧记录没有审计时不补造。
+-- 所有“保存到浏览器”的说明都只指 `localStorage`，不是数据库；第 08 课起才逐项替换为后端接口。
+-- 权限演示只影响页面按钮与演示数据层检查，真正的身份、权限、并发与审计由后端实现。
+-
+-## 本次亲自验证结果
+-
+-本机 Chrome 实际逐个点击九个菜单，核心链路均通过：16台设备、4空间、28点位；能源类型进入原设备表；d03在线未知且温度缺失，d05功率0；101教室仍为教学楼A/2层；d05/d06功率与电压历史比较可切换；d05功率历史保留0且缺失断为两段；原始报警搜索/清空/设备跳转正常且保持只读；case-1刷新后仍CLOSED/version7，七条时间线完整；d01责任仍为manager和原备注；管理页模拟标识及控制/通知未启用说明清楚。
+-
+-本课借助AI补救三项：06-02补齐来源状态与核实状态显示；06-05新建case-2未产生审计，修复后case-3新增唯一创建审计，未伪造旧记录。06-06发现概览遗留第一课占位句，按本步补救只改该句后，刷新和能源筛选再次通过。截图及逐步原始观察保存在工程外同级process。当前仍是浏览器演示，尚无后端或数据库连接；原始报警只有1条，多页翻页未获真实浏览器样本验证。
+--- 11/campus-lab/tools/export-source.mjs
++++ 12-final/campus-lab/tools/export-source.mjs
+@@ -0,0 +1,482 @@
++#!/usr/bin/env node
++// 校园值班台 · 第12课公开源码导出（Node 22 自带模块，无第三方依赖）
++//
++// 用法（在项目根目录）：
++//   node tools/export-source.mjs --out .runtime/hand-in-v1/campus-lab
++//
++// 规则：
++//   1. 只允许写到本项目 .runtime/ 下；输出目录必须原本不存在，已存在则拒绝覆盖。
++//   2. 只按白名单复制公开源码，不遍历、不读取上级目录，不包含教师参考。
++//   3. 任何层级都排除 .env 及 .env.* 变体（只保留根 .env.example）、.private、.runtime、
++//      .codebuddy、node_modules、target、日志、个人截图与凭据文件。
++//   4. 从文件系统根开始，项目根及其更高父目录、源路径与输出路径的每一级都检查符号链接，
++//      发现即拒绝；只取 lstat 元数据，不读取上级目录内容。
++//   5. 导出前读取根 .env 的值做泄漏检查；所有待复制文件都按原始字节完整比对，
++//      不按体积、扩展名或“是否文本”跳过，读取失败即停止；只在内存里比对，不显示值。
++//      一旦命中本机口令，立即停止，且只报告文件名。
++//   6. 输出 SHA256SUMS.txt（两列：哈希 + 相对路径），可 cd 到输出目录后校验。
++//
++// 本工具只负责“复制 + 校验”，不启动任何服务，也不代表新目录已经能运行。
++
++import fs from "node:fs";
++import fsp from "node:fs/promises";
++import path from "node:path";
++import crypto from "node:crypto";
++import { fileURLToPath } from "node:url";
++
++const __dirname = path.dirname(fileURLToPath(import.meta.url));
++const ROOT = path.resolve(__dirname, "..");
++const RUNTIME = path.join(ROOT, ".runtime");
++
++// 白名单：只导出这些公开内容；不在此列表中的一律不碰。
++const ALLOWLIST = [
++  { type: "dir", rel: "frontend" },
++  { type: "dir", rel: "backend/src" },
++  { type: "file", rel: "backend/pom.xml" },
++  { type: "file", rel: "backend/mvnw" },
++  { type: "file", rel: "backend/mvnw.cmd" },
++  { type: "dir", rel: "backend/.mvn" },
++  { type: "dir", rel: "tools" },
++  { type: "dir", rel: "materials" },
++  { type: "file", rel: "compose.yaml" },
++  { type: "file", rel: ".env.example" },
++  { type: "file", rel: ".gitignore" },
++  { type: "file", rel: "README.md" },
++  { type: "dir", rel: "docs" },
++];
++
++// 目录名或文件名命中即跳过（大小写不敏感）。
++const BLOCKED_SEGMENTS = new Set([
++  ".private",
++  ".runtime",
++  ".codebuddy",
++  "node_modules",
++  "target",
++  "logs",
++  "process",
++  "delivery",
++  ".git",
++  "screenshots",
++  "screenshot",
++]);
++
++// 个人截图/凭据/构建产物的扩展名；本课程公开源码不含图片资产。
++const BLOCKED_EXTENSIONS = new Set([
++  ".log",
++  ".pem",
++  ".key",
++  ".p12",
++  ".pfx",
++  ".jks",
++  ".keystore",
++  ".class",
++  ".png",
++  ".jpg",
++  ".jpeg",
++  ".gif",
++  ".webp",
++  ".bmp",
++  ".heic",
++]);
++
++// 明确属于凭据或个人配置的文件名。
++const BLOCKED_NAMES = new Set([
++  "id_rsa",
++  "id_dsa",
++  "id_ecdsa",
++  "id_ed25519",
++  ".npmrc",
++  ".netrc",
++  ".pgpass",
++  "credentials",
++  "credentials.json",
++  ".ds_store",
++]);
++
++const PLACEHOLDER_VALUES = new Set([
++  "change-me",
++  "changeme",
++  "your-password",
++  "example",
++  "password",
++  "todo",
++]);
++
++function fail(message) {
++  console.error(`[export] ${message}`);
++  process.exitCode = 1;
++}
++
++function parseArgs(argv) {
++  let out = null;
++  for (let i = 0; i < argv.length; i += 1) {
++    const arg = argv[i];
++    if (arg === "--help" || arg === "-h") return { help: true, out: null };
++    if (arg === "--out") {
++      const value = argv[i + 1];
++      if (!value || value.startsWith("--")) throw new Error("--out 需要一个目录参数");
++      out = value;
++      i += 1;
++      continue;
++    }
++    if (arg.startsWith("--out=")) {
++      out = arg.slice("--out=".length);
++      if (!out) throw new Error("--out 需要一个目录参数");
++      continue;
++    }
++    throw new Error(`未知参数：${arg}`);
++  }
++  if (!out) throw new Error("缺少 --out，例如：node tools/export-source.mjs --out .runtime/hand-in-v1/campus-lab");
++  return { help: false, out };
++}
++
++function usage() {
++  console.log("用法：node tools/export-source.mjs --out .runtime/<批次>/campus-lab");
++  console.log("");
++  console.log("  --out <dir>  输出目录，必须位于本项目 .runtime/ 下，且原本不存在");
++  console.log("  --help       显示本说明");
++}
++
++/** 把绝对路径转换为相对项目根的 POSIX 路径，便于写清单与报错。 */
++function toRel(absPath) {
++  return path.relative(ROOT, absPath).split(path.sep).join("/");
++}
++
++/** 已确认不是符号链接的目录缓存，避免对同一个祖先反复 lstat。 */
++const verifiedNoSymlink = new Set();
++
++async function lstatOrNull(absPath) {
++  try {
++    return await fsp.lstat(absPath);
++  } catch (error) {
++    if (error.code === "ENOENT") return null;
++    throw error;
++  }
++}
++
++function displayPath(absPath) {
++  const rel = path.relative(ROOT, absPath);
++  if (rel && !rel.startsWith("..") && !path.isAbsolute(rel)) return rel;
++  return absPath;
++}
++
++/**
++ * 从文件系统根开始，逐级检查目标路径的每一级（含项目根及其更高父目录、目标自身）。
++ * 任何一级是符号链接就拒绝；遇到尚不存在的层级即停止。
++ * 这里只读取路径元数据（lstat），不读取上级目录中的任何文件内容。
++ */
++async function assertNoSymlinkChain(absPath) {
++  const parsed = path.parse(absPath);
++  const root = parsed.root;
++  const segments = absPath
++    .slice(root.length)
++    .split(path.sep)
++    .filter((segment) => segment.length > 0);
++
++  const chain = [root];
++  let current = root;
++  for (const segment of segments) {
++    current = path.join(current, segment);
++    chain.push(current);
++  }
++
++  for (const entry of chain) {
++    if (verifiedNoSymlink.has(entry)) continue;
++    const stat = await lstatOrNull(entry);
++    if (!stat) return;
++    if (stat.isSymbolicLink()) {
++      throw new Error(`路径含符号链接，拒绝处理：${displayPath(entry)}`);
++    }
++    verifiedNoSymlink.add(entry);
++  }
++}
++
++/** 输出目录必须是 .runtime 的子目录，且尚不存在。 */
++async function resolveOutputDir(outArg) {
++  const outAbs = path.resolve(process.cwd(), outArg);
++  const relToRuntime = path.relative(RUNTIME, outAbs);
++  const outsideRuntime =
++    relToRuntime === "" ||
++    relToRuntime === ".." ||
++    relToRuntime.startsWith(`..${path.sep}`) ||
++    path.isAbsolute(relToRuntime);
++  if (outsideRuntime) {
++    throw new Error("--out 必须指向本项目 .runtime/ 下的一个新目录");
++  }
++
++  await assertNoSymlinkChain(path.dirname(outAbs));
++
++  try {
++    await fsp.lstat(outAbs);
++    throw new Error(`输出目录已存在，拒绝覆盖：${toRel(outAbs)}`);
++  } catch (error) {
++    if (error.code !== "ENOENT") throw error;
++  }
++  return outAbs;
++}
++
++/** 判断某个相对路径是否应被排除；返回原因字符串或 null。 */
++function exclusionReason(relPosix, name) {
++  const lowerName = name.toLowerCase();
++  const segments = relPosix.split("/");
++  const lowerSegments = segments.map((segment) => segment.toLowerCase());
++
++  for (const segment of lowerSegments) {
++    if (BLOCKED_SEGMENTS.has(segment)) return "排除的目录或名称";
++  }
++  if (BLOCKED_NAMES.has(lowerName)) return "凭据或个人配置文件";
++
++  const isRootEnvExample = relPosix === ".env.example";
++  if (lowerName === ".env" || lowerName.endsWith(".env")) return ".env 文件";
++  if (lowerName.startsWith(".env.") && !isRootEnvExample) return ".env 变体";
++
++  const ext = path.extname(lowerName);
++  if (BLOCKED_EXTENSIONS.has(ext)) {
++    if ([".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".heic"].includes(ext)) {
++      return "个人截图或图片";
++    }
++    if (ext === ".class") return "编译产物";
++    if (ext === ".log") return "日志";
++    return "凭据或密钥文件";
++  }
++  return null;
++}
++
++async function collectDir(absDir, relDir, files, skipped) {
++  await assertNoSymlinkChain(absDir);
++  const entries = await fsp.readdir(absDir, { withFileTypes: true });
++  entries.sort((a, b) => a.name.localeCompare(b.name, "en"));
++
++  for (const entry of entries) {
++    const abs = path.join(absDir, entry.name);
++    const rel = relDir ? `${relDir}/${entry.name}` : entry.name;
++    const stat = await fsp.lstat(abs);
++
++    if (stat.isSymbolicLink()) {
++      throw new Error(`源路径含符号链接，拒绝导出：${rel}`);
++    }
++    if (stat.isDirectory()) {
++      const reason = exclusionReason(rel, entry.name);
++      if (reason) {
++        skipped.push({ rel, reason });
++        continue;
++      }
++      await collectDir(abs, rel, files, skipped);
++      continue;
++    }
++    if (stat.isFile()) {
++      const reason = exclusionReason(rel, entry.name);
++      if (reason) {
++        skipped.push({ rel, reason });
++        continue;
++      }
++      files.push({ abs, rel, mode: stat.mode });
++      continue;
++    }
++    skipped.push({ rel, reason: "非常规文件" });
++  }
++}
++
++async function collectFiles() {
++  const files = [];
++  const skipped = [];
++
++  for (const item of ALLOWLIST) {
++    const abs = path.join(ROOT, item.rel);
++    await assertNoSymlinkChain(abs);
++
++    let stat;
++    try {
++      stat = await fsp.lstat(abs);
++    } catch (error) {
++      if (error.code === "ENOENT") {
++        throw new Error(`白名单条目不存在：${item.rel}`);
++      }
++      throw error;
++    }
++    if (stat.isSymbolicLink()) {
++      throw new Error(`白名单条目是符号链接，拒绝导出：${item.rel}`);
++    }
++
++    if (item.type === "dir") {
++      if (!stat.isDirectory()) throw new Error(`白名单条目不是目录：${item.rel}`);
++      const reason = exclusionReason(item.rel, path.basename(item.rel));
++      if (reason) {
++        skipped.push({ rel: item.rel, reason });
++        continue;
++      }
++      await collectDir(abs, item.rel, files, skipped);
++    } else {
++      if (!stat.isFile()) throw new Error(`白名单条目不是文件：${item.rel}`);
++      const reason = exclusionReason(item.rel, path.basename(item.rel));
++      if (reason) {
++        skipped.push({ rel: item.rel, reason });
++        continue;
++      }
++      files.push({ abs, rel: item.rel, mode: stat.mode });
++    }
++  }
++
++  files.sort((a, b) => a.rel.localeCompare(b.rel, "en"));
++  return { files, skipped };
++}
++
++/** 读取根 .env 的口令值，仅在内存中用于泄漏比对。 */
++async function loadLocalSecrets() {
++  const envPath = path.join(ROOT, ".env");
++  let stat;
++  try {
++    stat = await fsp.lstat(envPath);
++  } catch (error) {
++    if (error.code === "ENOENT") return { secrets: [], note: "未发现根目录 .env，跳过口令泄漏检查（这不代表没有泄漏）" };
++    throw error;
++  }
++  if (stat.isSymbolicLink()) {
++    throw new Error("根目录 .env 是符号链接，拒绝读取，请先把口令文件换成普通文件");
++  }
++
++  const raw = await fsp.readFile(envPath, "utf8");
++  const secrets = [];
++  for (const line of raw.split(/\r?\n/)) {
++    const trimmed = line.trim();
++    if (!trimmed || trimmed.startsWith("#")) continue;
++    const match = /^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/.exec(trimmed);
++    if (!match) continue;
++    let value = match[2].trim();
++    if (
++      (value.startsWith('"') && value.endsWith('"')) ||
++      (value.startsWith("'") && value.endsWith("'"))
++    ) {
++      value = value.slice(1, -1);
++    }
++    if (value.length < 8) continue;
++    if (PLACEHOLDER_VALUES.has(value.toLowerCase())) continue;
++    secrets.push(value);
++  }
++  return { secrets, note: null };
++}
++
++/**
++ * 逐文件检查是否出现本机口令。
++ * 所有待复制文件都按原始字节完整比对，不按体积、扩展名或“是否文本”跳过；读取失败即停止。
++ * 只返回命中的文件名，绝不返回口令、口令所在行或文件片段。
++ */
++async function findLeaks(files, secrets) {
++  const secretBuffers = secrets.map((secret) => Buffer.from(secret, "utf8"));
++  const leakFiles = [];
++
++  for (const file of files) {
++    let buffer;
++    try {
++      buffer = await fsp.readFile(file.abs);
++    } catch (error) {
++      throw new Error(
++        `读取待导出文件失败，已停止：${file.rel}（${error?.code ?? "未知错误"}）`
++      );
++    }
++    if (secretBuffers.some((secretBuffer) => buffer.includes(secretBuffer))) {
++      leakFiles.push(file.rel);
++    }
++  }
++  return { leakFiles, scanned: files.length };
++}
++
++async function sha256Of(filePath) {
++  const hash = crypto.createHash("sha256");
++  hash.update(await fsp.readFile(filePath));
++  return hash.digest("hex");
++}
++
++async function copyAll(files, outAbs) {
++  const manifest = [];
++  for (const file of files) {
++    const target = path.join(outAbs, ...file.rel.split("/"));
++    await fsp.mkdir(path.dirname(target), { recursive: true });
++    await fsp.copyFile(file.abs, target);
++    try {
++      await fsp.chmod(target, file.mode & 0o777);
++    } catch {
++      // Windows 上 chmod 可能无效，不影响内容完整性。
++    }
++    manifest.push(`${await sha256Of(target)}  ${file.rel}`);
++  }
++  return manifest;
++}
++
++async function main() {
++  const args = parseArgs(process.argv.slice(2));
++  if (args.help) {
++    usage();
++    return;
++  }
++
++  await assertNoSymlinkChain(ROOT);
++
++  const outAbs = await resolveOutputDir(args.out);
++  const { files, skipped } = await collectFiles();
++  if (files.length === 0) throw new Error("白名单没有收集到任何文件，已停止");
++
++  const { secrets, note } = await loadLocalSecrets();
++  if (note) console.log(`[export] ${note}`);
++  if (!note && secrets.length === 0) {
++    console.log("[export] 根 .env 存在，但未解析到可检查的口令值（可能都是占位符或过短），本次没有做口令比对。");
++  }
++
++  let leakInfo = { leakFiles: [], scanned: 0 };
++  if (secrets.length > 0) {
++    leakInfo = await findLeaks(files, secrets);
++  }
++  if (leakInfo.leakFiles.length > 0) {
++    console.error("[export] 待导出的文件中出现本机口令，已停止，未写入任何文件。");
++    console.error("[export] 涉及文件（不含口令内容）：");
++    for (const rel of leakInfo.leakFiles) console.error(`  - ${rel}`);
++    console.error("[export] 请先清理这些文件中的口令后再导出。");
++    process.exitCode = 1;
++    return;
++  }
++
++  await assertNoSymlinkChain(RUNTIME);
++  await fsp.mkdir(RUNTIME, { recursive: true });
++  await fsp.mkdir(path.dirname(outAbs), { recursive: true });
++
++  try {
++    await fsp.mkdir(outAbs, { recursive: false });
++  } catch (error) {
++    if (error.code === "EEXIST") throw new Error(`输出目录已存在，拒绝覆盖：${toRel(outAbs)}`);
++    throw error;
++  }
++
++  let manifest;
++  try {
++    manifest = await copyAll(files, outAbs);
++  } catch (error) {
++    throw new Error(`复制失败，${toRel(outAbs)} 可能不完整（未自动删除）：${error?.message ?? error}`);
++  }
++  const manifestPath = path.join(outAbs, "SHA256SUMS.txt");
++  await fsp.writeFile(manifestPath, `${manifest.join("\n")}\n`, "utf8");
++
++  const totalBytes = files.reduce((sum, file) => sum + fs.statSync(file.abs).size, 0);
++
++  console.log(`[export] 源目录：${ROOT}`);
++  console.log(`[export] 输出目录：${outAbs}`);
++  console.log(`[export] 已复制：${files.length} 个文件，共 ${totalBytes} 字节`);
++  console.log(`[export] 已跳过：${skipped.length} 项（.env/.private/.runtime/.git/node_modules/target/日志/截图/凭据）`);
++  for (const item of skipped) {
++    console.log(`  - 跳过 ${item.rel}（${item.reason}）`);
++  }
++  if (secrets.length > 0) {
++    console.log(
++      `[export] 口令泄漏检查：${leakInfo.scanned} 个待导出文件全部按字节比对，未命中（未显示任何口令）`
++    );
++  }
++  console.log(`[export] 清单：${toRel(manifestPath)}`);
++  console.log("");
++  for (const line of manifest) console.log(line);
++  console.log("");
++  console.log("[export] 校验：进入输出目录后执行 sha256sum -c SHA256SUMS.txt（macOS 可用 shasum -a 256 -c SHA256SUMS.txt）");
++  console.log("[export] 说明：导出成功只代表文件复制完整，不代表新目录已经启动或验收通过。");
++}
++
++main().catch((error) => {
++  fail(error?.message ?? String(error));
++});

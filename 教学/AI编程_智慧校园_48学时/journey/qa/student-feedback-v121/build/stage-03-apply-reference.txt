@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 03
+已导入完整参考：第03站。
+  frontend/src/views/DeviceCatalog.vue
+备份：journey-backups/2026-10-19T22-17-30-692Z-stage-03-apply-6b0221
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

@@ -1,0 +1,36 @@
+{
+  "state": "prepared",
+  "activated": false,
+  "binding": "host",
+  "credentialNames": [
+    "spring.datasource.password",
+    "spring.data.redis.password",
+    "jwt.secret",
+    "campus.airiot.app-key",
+    "campus.airiot.app-secret",
+    "mysql.root.password",
+    "mysql-admin.cnf",
+    "redis.conf"
+  ],
+  "ciphertext": {
+    "spring.datasource.password": "REDACTED_SECRET_FINGERPRINT",
+    "spring.data.redis.password": "REDACTED_SECRET_FINGERPRINT",
+    "jwt.secret": "REDACTED_SECRET_FINGERPRINT",
+    "campus.airiot.app-key": "REDACTED_SECRET_FINGERPRINT",
+    "campus.airiot.app-secret": "REDACTED_SECRET_FINGERPRINT",
+    "mysql.root.password": "REDACTED_SECRET_FINGERPRINT",
+    "mysql-admin.cnf": "REDACTED_SECRET_FINGERPRINT",
+    "redis.conf": "REDACTED_SECRET_FINGERPRINT"
+  },
+  "units": [
+    "campus-demo-mysql.service",
+    "campus-demo-redis.service",
+    "campus-demo.service"
+  ],
+  "databaseStrategy": "new dedicated schema; Flyway then authorized bootstrap/API seed",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

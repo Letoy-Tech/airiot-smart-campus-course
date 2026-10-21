@@ -1,0 +1,7 @@
+$ node tools/progress.mjs begin 07
+已准备骨架：第07站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/AccessView.vue
+备份：journey-backups/2026-10-19T15-35-25-917Z-stage-07-begin-e66397
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

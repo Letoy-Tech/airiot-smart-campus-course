@@ -1,0 +1,43 @@
+$ node tools/progress.mjs verify
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+ RUN  v4.1.12 /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/stage-build/app/frontend
+
+
+ Test Files  8 passed (8)
+      Tests  47 passed (47)
+   Start at  06:17:34
+   Duration  505ms (transform 489ms, setup 0ms, import 887ms, tests 128ms, environment 1.93s)
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                               0.47 kB │ gzip:  0.34 kB
+dist/assets/index-CQLMl6UL.css                                               21.87 kB │ gzip:  5.26 kB
+dist/assets/FirstDeviceRead-CO78-nBO.js                                       0.24 kB │ gzip:  0.16 kB
+dist/assets/ReadStatus.vue_vue_type_script_setup_true_lang-CczdmbCq.js        4.13 kB │ gzip:  2.26 kB
+dist/assets/LocationsView-XQl25UfE.js                                         4.81 kB │ gzip:  2.00 kB
+dist/assets/FirstDeviceRead.vue_vue_type_script_setup_true_lang-CNf4b5Ao.js   8.76 kB │ gzip:  4.01 kB
+dist/assets/DeviceCatalog-eqhVggSc.js                                        10.06 kB │ gzip:  3.95 kB
+dist/assets/index-CHe95V3N.js                                                91.95 kB │ gzip: 36.90 kB
+✓ built in 311ms
+第04站前端检查通过，接受当前学生实现。
+尚未替你验收：保存重读；非法引用拒绝；查看者403；原关系不变
+请把实际操作写到 evidence/stage-04.md，再运行 accept 04 evidence/stage-04.md。人工记录不等于工具证明。

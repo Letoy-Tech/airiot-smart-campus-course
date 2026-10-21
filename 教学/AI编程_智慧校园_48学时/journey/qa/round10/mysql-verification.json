@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Actual isolated author MySQL, not school or production DB",
+  "command": "node tools/test-mysql.mjs package",
+  "cwd": ".runtime/round10-lab/final/backend",
+  "javaVersion": "17.0.12",
+  "mysqlVersion": "8.4.10",
+  "port": 13328,
+  "newIndependentDataDirectory": true,
+  "testSchema": "campus_course_test",
+  "testResetAuthorized": true,
+  "tests": 50,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "databaseTests": 16,
+  "ordinaryTests": 34,
+  "evidence": [
+    {
+      "path": "mysql-test-summary.json",
+      "sha256": "25514da07515fde48a92506f55e72d287f0d305655bc36f7f01ee03610f7cf25"
+    },
+    {
+      "path": "mysql-transaction-evidence.json",
+      "sha256": "2f0e5687a4806ec72c958fd757023a53dab008f149f45447c1a86e18fefdde8b"
+    },
+    {
+      "path": "mysql-snapshot-evidence.json",
+      "sha256": "83421c16b3bdbf6a4443c0d5213c650e2f41943efe6a0018d88c704b8f907907"
+    }
+  ],
+  "normalBuildSeparately": {
+    "discovered": 50,
+    "executed": 34,
+    "skippedDB": 16
+  },
+  "jarSHA256": "a7d61b4d7ad4bca5ca27d49ebec28c70b39f2253eff65cb44ac54a0f535dc86e",
+  "limits": [
+    "No school DB acceptance",
+    "No Windows physical-machine acceptance",
+    "No real AIRIOT connection"
+  ],
+  "recordedAt": "2026-10-19T15:44:19.320866+00:00"
+}

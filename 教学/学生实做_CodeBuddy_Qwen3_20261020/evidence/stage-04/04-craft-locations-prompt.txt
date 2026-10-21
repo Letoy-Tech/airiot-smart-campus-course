@@ -1,0 +1,7 @@
+当前第04站：把设备放到正确的楼里。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/LocationsView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/LocationsView.vue。
+用给定locations接口写三个小表单：创建校园、在校园下创建楼栋、把来源空间绑定到楼栋。下拉框使用真实ID；提交成功后重新读取；失败保留输入。canAdmin必须严格等于true才有保存入口，后端仍作最终权限检查。直接修改本次Vue文件。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+补充：本页直接用 getSpaces 独立读来源空间；每次写成功独立回读 locations 和 spaces，回读失败单独说明，不能假装已确认。仅修改目标Vue。不要新建、修改或删除任何测试（包含临时测试），不要改装配/工具/权限/依赖，不启动服务或执行迁移。可运行已有类型、测试和构建。禁止读取 lesson-bundles/*/files、journey-backups、教师答案或.private。manifest元数据可读。

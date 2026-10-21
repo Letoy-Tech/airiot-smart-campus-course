@@ -1,0 +1,6 @@
+docker compose exec -T mysql sh -c 'MYSQL_PWD="$MYSQL_PASSWORD" exec mysql --protocol=TCP -h 127.0.0.1 -u "$MYSQL_USER" "$MYSQL_DATABASE" --batch --skip-column-names' <<'SQL'
+SELECT 'spaces', COUNT(*) FROM spaces;
+SELECT 'devices', COUNT(*) FROM devices;
+SELECT id, online, simulated FROM devices WHERE id IN ('d03','d04') ORDER BY id;
+SELECT version, success FROM flyway_schema_history;
+SQL

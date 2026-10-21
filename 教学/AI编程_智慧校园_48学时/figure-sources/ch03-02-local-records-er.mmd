@@ -1,0 +1,38 @@
+erDiagram
+    DEVICE_REF ||--o{ ALARM_CASE : "关联设备"
+    DEVICE_REF ||--|| DEVICE_OWNER : "预建责任主行"
+    ALARM_CASE ||--|{ CASE_EVENT : "事件时间线"
+    DEVICE_OWNER ||--o{ OWNER_EVENT : "零到多条责任历史"
+    DEVICE_REF {
+        string id PK
+        string name
+        boolean simulated
+    }
+    ALARM_CASE {
+        string id PK
+        string deviceId
+        string assigneeUid
+        string state
+        string sourceState
+        long version
+    }
+    CASE_EVENT {
+        string id PK
+        string caseId
+        long caseVersion
+        string action
+        string actorUid
+        long createdAt
+    }
+    DEVICE_OWNER {
+        string deviceId PK
+        string ownerUid
+        long version
+    }
+    OWNER_EVENT {
+        string id PK
+        string deviceId
+        long version
+        string actorUid
+        long createdAt
+    }

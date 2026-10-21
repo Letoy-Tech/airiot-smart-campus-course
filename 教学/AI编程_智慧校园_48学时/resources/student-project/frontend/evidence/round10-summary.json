@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-19T15:25:54.776402+00:00",
+  "node": "22.21.1",
+  "source": {
+    "typeCheck": "PASS",
+    "build": "PASS",
+    "tests": {
+      "total": 70,
+      "passed": 63,
+      "failed": 7,
+      "explanation": "Existing chapter04 A/B TODO blocks intentionally remain incomplete."
+    }
+  },
+  "completedCopy": {
+    "modificationsOnly": [
+      "src/api/campus.ts STUDENT_TODO_A",
+      "src/views/FirstDeviceRead.vue STUDENT_TODO_B"
+    ],
+    "tests": {
+      "total": 70,
+      "passed": 70,
+      "failed": 0
+    },
+    "typeCheck": "PASS",
+    "build": "PASS",
+    "temporaryCopyRemoved": true
+  },
+  "notPerformed": [
+    "service startup",
+    "real browser acceptance",
+    "Windows hardware",
+    "real AIRIOT"
+  ],
+  "warning": "ECharts async chart bundle remains above 500 kB (516.32 kB minified).",
+  "sourceHashes": {
+    "src/App.vue": "4b5d0b06423aa1ee46a15f746f6a71f1487bfd79f80be7c9dcd817cb076d7459",
+    "src/api/auth.ts": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+    "src/api/campus.ts": "fab7812935e50f250d2fe019ee71e920a7a2e826571a7b9753e417cfa647ad95",
+    "src/api/full.ts": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+    "src/api/http.ts": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+    "src/api/read-models.ts": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+    "src/components/CompareHistory.vue": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+    "src/components/HistoryChart.vue": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+    "src/components/ReadStatus.vue": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+    "src/components/SourceBanner.vue": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+    "src/composables/useReadPage.ts": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+    "src/composables/useRequestScope.ts": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+    "src/domain/course.ts": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+    "src/domain/read-models.ts": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+    "src/main.ts": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+    "src/stores/campus.ts": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+    "src/style.css": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+    "src/tests/case-trigger-race.test.ts": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+    "src/tests/catalog-navigation.test.ts": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+    "src/tests/comparison.test.ts": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+    "src/tests/course-domain.test.ts": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+    "src/tests/first-device-view.test.ts": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f",
+    "src/tests/http.test.ts": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+    "src/tests/monitoring-views.test.ts": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+    "src/tests/read-api.test.ts": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+    "src/tests/read-models.test.ts": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+    "src/tests/read-pages.test.ts": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+    "src/tests/request-scope.test.ts": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+    "src/tests/request-timeout.test.ts": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+    "src/tests/session-races.test.ts": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+    "src/tests/workflow-views.test.ts": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+    "src/types/campus.ts": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+    "src/types/full.ts": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+    "src/types/read-models.ts": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+    "src/views/AuditView.vue": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+    "src/views/CasesView.vue": "6216e355897114f0b620a69734baff2683d4b07bb5f778118aed56042fa0607f",
+    "src/views/DeviceCatalog.vue": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+    "src/views/EnergyView.vue": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+    "src/views/FirstDeviceRead.vue": "ac97952794c8fbdf49705abdf9e4bc1bfe47f759c4c7915c980221b21a471e00",
+    "src/views/FullWorkspace.vue": "8af55518def2ec551022c76cdc674588c2938f8d2d49b782ef2ad1ee86f412e6",
+    "src/views/HistoryView.vue": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+    "src/views/IntegrationView.vue": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+    "src/views/LocationsView.vue": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+    "src/views/OverviewView.vue": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+    "src/views/OwnersView.vue": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+    "src/views/RawAlarmsView.vue": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550"
+  },
+  "finalCssBuild": "PASS; checkbox-specific selector confirmed by type-check + Vite build after the completed-copy run"
+}

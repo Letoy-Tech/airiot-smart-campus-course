@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "course_title": "AI 编程——以智慧校园平台重建为例",
+  "version": "0.3",
+  "updated_at": "2026-10-18",
+  "total_class_hours": 48,
+  "minutes_per_class_hour": null,
+  "audience": "学过一门编程语言，无完整项目经验",
+  "ai_access": "国内网页聊天工具，Qwen3为模型案例，不要求API",
+  "current_stage": "DRAFT_WRITTEN",
+  "scope": "V0.3第二轮全文教学与阅读修订；12章任务卡、最小工作例、19项章节与合同问题处理，40图保留；实验仍待核验",
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "定义项目",
+      "end_chapter": "03"
+    },
+    {
+      "id": "M2",
+      "name": "设备可见",
+      "end_chapter": "06"
+    },
+    {
+      "id": "M3",
+      "name": "数据可信",
+      "end_chapter": "08"
+    },
+    {
+      "id": "M4",
+      "name": "业务闭环",
+      "end_chapter": "10"
+    },
+    {
+      "id": "M5",
+      "name": "可交付",
+      "end_chapter": "12"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "01",
+      "title": "软件工程入门与网页AI协作",
+      "file": "chapters/01-软件工程入门与网页AI协作.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/01-软件工程入门与网页AI协作.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "02",
+      "title": "需求分析与项目计划",
+      "file": "chapters/02-需求分析与项目计划.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/02-需求分析与项目计划.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "03",
+      "title": "架构数据与接口设计",
+      "file": "chapters/03-架构数据与接口设计.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/03-架构数据与接口设计.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 4,
+      "editorial_round": 2
+    },
+    {
+      "id": "04",
+      "title": "开发环境版本控制与首次贯通",
+      "file": "chapters/04-开发环境版本控制与首次贯通.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/04-开发环境版本控制与首次贯通.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "05",
+      "title": "后端空间与设备接口",
+      "file": "chapters/05-后端空间与设备接口.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/05-后端空间与设备接口.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "06",
+      "title": "前端设备台账与自主UI",
+      "file": "chapters/06-前端设备台账与自主UI.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/06-前端设备台账与自主UI.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "07",
+      "title": "实时监测历史与数据质量",
+      "file": "chapters/07-实时监测历史与数据质量.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/07-实时监测历史与数据质量.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "08",
+      "title": "登录角色与权限验证",
+      "file": "chapters/08-登录角色与权限验证.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/08-登录角色与权限验证.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "09",
+      "title": "演练事件与状态机",
+      "file": "chapters/09-演练事件与状态机.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/09-演练事件与状态机.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "10",
+      "title": "设备责任与审计追踪",
+      "file": "chapters/10-设备责任与审计追踪.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/10-设备责任与审计追踪.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    },
+    {
+      "id": "11",
+      "title": "测试调试与质量改进",
+      "file": "chapters/11-测试调试与质量改进.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/11-测试调试与质量改进.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 4,
+      "editorial_round": 2
+    },
+    {
+      "id": "12",
+      "title": "构建交付变更与答辩",
+      "file": "chapters/12-构建交付变更与答辩.md",
+      "class_hours": 4,
+      "module_class_hours": [
+        1,
+        2,
+        1
+      ],
+      "status": "DESIGNED",
+      "lab_verified": false,
+      "draft_file": "manuscript/12-构建交付变更与答辩.md",
+      "draft_status": "DRAFT_WRITTEN",
+      "figure_count": 3,
+      "editorial_round": 2
+    }
+  ],
+  "optional_modules": [
+    {
+      "id": "E-AIRIOT",
+      "file": "appendices/AIRIOT进阶选做.md",
+      "required_class_hours": 0,
+      "status": "DESIGNED"
+    }
+  ],
+  "next_work_package": "确认目标机房条件，制作独立教学脚手架，再按W2—W6校准实验与试讲",
+  "lesson_plan_conversion": "仅在正文、配套实验、审校通过后进行；实际课次分钟数和学校模板待落实",
+  "draft_version": "0.3",
+  "relay_task": "06-多会话接力与图文初稿任务书.md",
+  "thread_registry": "handoffs/thread-registry.json",
+  "reader_file": "reading/index.html",
+  "review_record": "09-第二轮修订检查记录.md",
+  "source_roles": {
+    "chapters": "V0.1分章模块设计",
+    "manuscript": "V0.3第二轮教材正文；课内范围以本章任务卡为准",
+    "figure-sources": "可编辑配图源",
+    "illustrations": "PNG/SVG成品及图文检查记录"
+  },
+  "standalone_reader_file": "reading/AI编程图文稿_V0.3_单文件.html",
+  "figure_count": 40,
+  "chapter_figure_count": 38,
+  "shared_figure_count": 2,
+  "illustration_status": "VISUALLY_REVIEWED",
+  "document_checks": "PASS",
+  "lab_verified": false,
+  "lesson_plan_status": "NOT_STARTED",
+  "editorial_round": 2,
+  "editorial_status": "ROUND2_CONTENT_AND_READER_CHECKED",
+  "classroom_workflow_file": "appendices/48学时实施分工.md",
+  "student_task_template": "templates/课堂任务单.md",
+  "reader_resources": 10,
+  "chapter_task_cards": 12,
+  "reviewed_content_issues": 19,
+  "document_qa": "illustrations/qa/round2-document-checks.json",
+  "reader_qa": [
+    "illustrations/qa/round2-book/verification.json",
+    "illustrations/qa/round2-standalone/verification.json"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-21T01:16:15.578341",
+  "username": "admin",
+  "role": "ADMIN",
+  "beforeCount": 16,
+  "afterCount": 16,
+  "beforeReadAt": "2026/10/21 01:13:44",
+  "afterReadAt": "2026/10/21 01:16:15",
+  "afterRestartHTTPStatus": 401,
+  "afterRestartMode": "backend",
+  "oldContentCleared": true,
+  "autoDemoFallback": false,
+  "redisDBSIZEAfterRestart": 0,
+  "mysqlVolumeCreatedAt": "2026-10-20T15:52:09Z",
+  "sameVolume": true
+}

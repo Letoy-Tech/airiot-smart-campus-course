@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:59:22.347Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "09 exact UI identity switching and persisted lifecycle",
+      "detail": {
+        "id": "c011c8c1-5708-4e75-afb9-af177ff327ee",
+        "state": "CLOSED",
+        "version": 7,
+        "actions": [
+          "DEMO_TRIGGER",
+          "ASSIGN",
+          "START",
+          "NOTE",
+          "DEMO_RECOVER",
+          "VERIFY_RECOVERY",
+          "CLOSE"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "name": "10 two tabs stale version preserves input without replay",
+      "detail": {
+        "status": 409,
+        "versionBefore": 0,
+        "versionAfter": 1,
+        "ownerUid": "manager-a"
+      },
+      "passed": true
+    }
+  ]
+}

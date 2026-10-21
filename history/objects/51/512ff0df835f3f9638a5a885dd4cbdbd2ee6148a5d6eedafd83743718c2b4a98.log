@@ -1,0 +1,10 @@
+已准备骨架：第06站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/HistoryView.vue
+  frontend/src/views/RawAlarmsView.vue
+  frontend/src/api/read-models.ts
+  frontend/src/types/read-models.ts
+  frontend/src/composables/useReadPage.ts
+备份：journey-backups/2026-10-19T17-56-30-328Z-stage-06-begin-8fab5e
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

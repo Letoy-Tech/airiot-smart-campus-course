@@ -1,0 +1,49 @@
+@vom 1
+@view 1798x1025
+@layers 2 focus=L1
+L1 modal cover=100%
+  dialog "选择表"
+    @e1 button "Close"
+    @e2 switch "动态全选" [unchecked]
+    table "表名称 表编号"
+      row "表名称 表编号"
+        columnheader
+        columnheader "表名称"
+          @e3 button
+            img "search"
+        columnheader "表编号"
+          @e4 button
+            img "search"
+        columnheader
+    table "智慧校园 校园照明模拟设备 campus_lighting 校园空间目录 campus_space 校园设备运行模拟 campus_facility 校园用电模拟设备 campus_energy 校园环境模拟设备 campus_environment"
+      cell
+      cell
+      cell
+      row "智慧校园"
+        cell
+        cell "智慧校园"
+          @e5 button "关闭行"
+        cell
+      row "校园照明模拟设备 campus_lighting"
+        cell
+        cell "校园照明模拟设备"
+        cell "campus_lighting"
+      row "校园空间目录 campus_space"
+        cell
+        cell "校园空间目录"
+        cell "campus_space"
+      row "校园设备运行模拟 campus_facility"
+        cell
+        cell "校园设备运行模拟"
+        cell "campus_facility"
+      row "校园用电模拟设备 campus_energy"
+        cell
+        cell "校园用电模拟设备"
+        cell "campus_energy"
+      row "校园环境模拟设备 campus_environment"
+        cell
+        cell "校园环境模拟设备"
+        cell "campus_environment"
+    @e6 button "取 消"
+    @e7 button "确 定"
+L2 page … occluded by L1 (~257 nodes, not actionable)

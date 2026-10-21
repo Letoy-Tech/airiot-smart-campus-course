@@ -1,0 +1,832 @@
+{
+  "date": "2026-10-21",
+  "count": 118,
+  "files": [
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7223,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/04-craft-cases-plan-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 17597,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/05-craft-cases-execute-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 11211,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/04-craft-cases-plan-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 898,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/05-craft-cases-execute-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1659,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/19-craft-energy-compare-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12516,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/18-craft-device-history-link-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3555,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6384,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/05-craft-raw-alarms-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12879,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/18-craft-device-history-link-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 18228,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/19-craft-energy-compare-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2989,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/04-craft-history-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 16278,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-01/04-state-ask-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 8827,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-01/06-craft-static-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 13533,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-01/05-project-card-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 9339,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6739,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/04-open-strict-capability-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 14244,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/05-craft-access-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2282,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/05-craft-access-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12839,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6643,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/05-craft-close-checklist-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 11644,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/05-craft-close-checklist-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2281,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/07-craft-close-wiring-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3400,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/07-craft-close-wiring-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12003,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/05-craft-delivery-docs-tool-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2840,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v7-closed-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7338,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/05-craft-delivery-docs-tool-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12814,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v2-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1841,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/28-craft-final-handoff-results-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3451,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v5-recovered-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7042,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v4-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6804,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/34-craft-acceptance-status-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 11135,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/03-ask-delivery-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 14309,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/28-craft-final-handoff-results-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 8270,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/27-fresh-closed-reloaded-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7050,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/07-craft-doc-review-fixes-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3554,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v3-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2028,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/07-craft-doc-review-fixes-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 10780,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/34-craft-acceptance-status-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2077,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/03-ask-delivery-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2340,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v1-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1685,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/23-fresh-same-device-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 4455,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/25-fresh-empty-cases-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2370,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/24-fresh-history-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3343,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/26-case-v6-verified-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6868,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/14-backend-stopped-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 253,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/18-repaired-backend-stopped-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2733,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/17-craft-refresh-repair-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 14101,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/15-real-failure-diagnosis-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 20596,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/12-network-devices-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2764,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/21-recovery-pending-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 739,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/11-browser-success-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 253,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/05-read-chain-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7985,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/22-recovered-success-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2429,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/06-craft-first-read-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 20239,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6582,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/18-polling-filter-applied-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 401,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/22-after-leave-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 13085,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/17-polling-filter-corrected-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 433,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/04-craft-overview-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 10052,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/21-before-leave-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 11787,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/19-energy-return-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 8107,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/20-network-unfiltered-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 4098,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/14-polling-cleared-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1381,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/15-polling-active-network-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 8078,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/06-craft-energy-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7960,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/10-binding-reloaded-confirmed-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2083,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/04-craft-locations-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 37292,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/05-create-campus-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 523,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/08-building-saved-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1312,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/03-relationships-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 27435,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/06-campus-saved-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 989,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/09-binding-reloaded-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6086,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/12-keyword-1-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1003,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/17-detail-reload-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2754,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/14-clear-16-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 9619,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/10-full-16-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 9557,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/15-card-same-id-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1719,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/07-craft-catalog-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12859,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/13-no-match-0-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1130,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/11-space-4-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1115,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/04-catalog-acceptance-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 5887,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/16-detail-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 1638,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 6793,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/12-craft-integration-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 9083,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/12-craft-integration-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3194,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/04-craft-owners-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 11049,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/04-craft-owners-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2337,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/05-craft-audit-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 10176,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/05-craft-audit-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2907,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/03-ask-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 5464,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/09-real-failure-diagnosis-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 8305,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/13-craft-workflow-regressions-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 18522,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/22-energy-power-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3808,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/07-operator-fault-replace-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2080,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/26-energy-scope-fixed-power-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3836,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/13-craft-workflow-regressions-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2791,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/20-craft-read-pages-regressions-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2383,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/19-owner-after-no-autoreplay-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 5063,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/18-case-after-no-autoreplay-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7021,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/22-energy-default-regression-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3838,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/23-craft-energy-scope-repair-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 10630,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/25-audit-viewer-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2022,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/19-owner-final-v6-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 5500,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/18-case-two-windows-conflict-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 7447,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/11-craft-one-line-repair-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 9781,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/20-craft-read-pages-regressions-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 12119,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/22-energy-voltage-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3810,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/19-owner-conflict-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 5512,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/23-craft-energy-scope-repair-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2353,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/16-craft-monitoring-regressions-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2213,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/25-audit-current-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3863,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/05-operator-intentional-fault-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 815,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/09-real-failure-diagnosis-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 2185,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/21-catalog-points-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 4455,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/11-craft-one-line-repair-sent-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3251,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/26-energy-scope-fixed-voltage-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 3838,
+      "originalRetainedLocally": true
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/16-craft-monitoring-regressions-output-ui.txt",
+      "category": "native-ui-capture",
+      "action": "replaced-with-explicit-privacy-notice",
+      "originalBytes": 18748,
+      "originalRetainedLocally": true
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "checkedAt": 1791135469840,
+  "scope": "isolated DEMO accounts, metadata and locally persisted scenarios only",
+  "base": "http://127.0.0.1:8001",
+  "pass": true,
+  "checks": [
+    {
+      "name": "admin independent operations permissions",
+      "pass": true
+    },
+    {
+      "name": "manager independent operations permissions",
+      "pass": true
+    },
+    {
+      "name": "manager_other independent operations permissions",
+      "pass": true
+    },
+    {
+      "name": "viewer independent operations permissions",
+      "pass": true
+    },
+    {
+      "name": "explicit enabled DEMO source",
+      "pass": true,
+      "label": "本地场景演示 · 非实时设备报警"
+    },
+    {
+      "name": "actual isolated simulation inventory",
+      "pass": true,
+      "counts": {
+        "expectedSpaces": 4,
+        "expectedDevices": 16,
+        "expectedPoints": 28,
+        "actualSpaces": 4,
+        "actualDevices": 16,
+        "actualPoints": 28
+      }
+    },
+    {
+      "name": "real AIRIOT readings available",
+      "pass": true,
+      "qualities": [
+        "fresh"
+      ]
+    },
+    {
+      "name": "dedicated machine read and control boundary",
+      "pass": true,
+      "controlEnabled": true,
+      "localPreviouslyAuthorizedException": true
+    },
+    {
+      "name": "raw AIRIOT alarm read available",
+      "pass": true,
+      "count": 0
+    },
+    {
+      "name": "four persisted demo space mappings",
+      "pass": true
+    },
+    {
+      "name": "owner persisted energy_demo_01",
+      "pass": true
+    },
+    {
+      "name": "owner persisted energy_demo_02",
+      "pass": true
+    },
+    {
+      "name": "owner persisted energy_demo_03",
+      "pass": true
+    },
+    {
+      "name": "owner persisted energy_demo_04",
+      "pass": true
+    },
+    {
+      "name": "owner persisted env_demo_01",
+      "pass": true
+    },
+    {
+      "name": "owner persisted env_demo_02",
+      "pass": true
+    },
+    {
+      "name": "owner persisted env_demo_03",
+      "pass": true
+    },
+    {
+      "name": "owner persisted env_demo_04",
+      "pass": true
+    },
+    {
+      "name": "owner persisted facility_demo_01",
+      "pass": true
+    },
+    {
+      "name": "owner persisted facility_demo_02",
+      "pass": true
+    },
+    {
+      "name": "owner persisted facility_demo_03",
+      "pass": true
+    },
+    {
+      "name": "owner persisted facility_demo_04",
+      "pass": true
+    },
+    {
+      "name": "owner persisted light_demo_01",
+      "pass": true
+    },
+    {
+      "name": "owner persisted light_demo_02",
+      "pass": true
+    },
+    {
+      "name": "owner persisted light_demo_03",
+      "pass": true
+    },
+    {
+      "name": "owner persisted light_demo_04",
+      "pass": true
+    },
+    {
+      "name": "owner stale version rejected",
+      "pass": true,
+      "httpStatus": 409
+    },
+    {
+      "name": "viewer cannot edit owner",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot edit owner",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot trigger DEMO",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot trigger DEMO",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "three independent explicit DEMO cases",
+      "pass": true
+    },
+    {
+      "name": "case inherits persisted device responsibility",
+      "pass": true
+    },
+    {
+      "name": "viewer cannot start processing",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "other manager cannot process assigned case",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot reassign",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "client source injection rejected",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "assigned handler starts with persisted timeline",
+      "pass": true
+    },
+    {
+      "name": "stale action version rejected",
+      "pass": true,
+      "httpStatus": 409
+    },
+    {
+      "name": "active source cannot be closed",
+      "pass": true,
+      "httpStatus": 409
+    },
+    {
+      "name": "manager cannot recover DEMO source",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "MySQL concurrent same-version one success one conflict",
+      "pass": true,
+      "httpStatuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "name": "DEMO source recovery does not auto-close workflow",
+      "pass": true
+    },
+    {
+      "name": "unverified recovery cannot close",
+      "pass": true,
+      "httpStatus": 409
+    },
+    {
+      "name": "DEMO source explicitly verified",
+      "pass": true
+    },
+    {
+      "name": "verified workflow closes with disposition and timeline",
+      "pass": true
+    },
+    {
+      "name": "closed case rejects further writes",
+      "pass": true,
+      "httpStatus": 409
+    },
+    {
+      "name": "local DEMO events remain separate from AIRIOT alarms",
+      "pass": true,
+      "rawAlarmCount": 0
+    },
+    {
+      "name": "all DEMO records and source states preserved",
+      "pass": true
+    }
+  ],
+  "seedCases": [
+    {
+      "id": "8e9a2831-7cd7-4e4a-8b2d-e41e619ddae6",
+      "scenario": "temperature-patrol",
+      "state": "IN_PROGRESS",
+      "version": 4
+    },
+    {
+      "id": "c9808ed2-2a09-4dc1-8979-ff10a12242f4",
+      "scenario": "communication-patrol",
+      "state": "CLOSED",
+      "version": 6
+    },
+    {
+      "id": "f8b7236a-9f0e-4b45-a01a-b4946ccc8cda",
+      "scenario": "lighting-patrol",
+      "state": "ASSIGNED",
+      "version": 1
+    }
+  ],
+  "remoteControlWrites": 0,
+  "externalNotifications": 0,
+  "limitations": [
+    "DEMO事件不是AIRIOT实时报警",
+    "没有真实设备或实际校园运营验收",
+    "浏览器验收单独记录"
+  ],
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

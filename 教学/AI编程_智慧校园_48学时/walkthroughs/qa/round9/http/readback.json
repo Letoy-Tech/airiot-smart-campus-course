@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T14:06:20.130Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "05 restart persistence after API supplementary check set floor 2",
+      "detail": {
+        "floor": "2",
+        "bindingId": "3fdc3875-786f-4f1a-ac35-6e16a15fd927"
+      },
+      "passed": true
+    }
+  ]
+}

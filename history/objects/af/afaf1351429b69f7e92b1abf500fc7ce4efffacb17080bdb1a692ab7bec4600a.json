@@ -1,0 +1,7 @@
+{
+  "id": "5bd33750-0afd-475d-8c99-c97b42f7429f",
+  "deviceId": "teaching_env_01",
+  "scenario": "temperature-patrol",
+  "sourceScope": "LOCAL_DEMO",
+  "createdVia": "student UI"
+}

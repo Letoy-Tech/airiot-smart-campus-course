@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "stage": 11,
+  "title": "调试与测试",
+  "mode": "真实数据库另用独立_test库",
+  "goal": "修复真实缺陷并读并发回滚证据",
+  "contract": "前端测试不是MySQL回滚证明；400/403/409不是事务回滚成功",
+  "acceptance": "保留修复前后测试；真实DB因果链由实际报告证明",
+  "businessFiles": [],
+  "integrationFiles": [],
+  "documentationFiles": [],
+  "verificationFiles": [],
+  "scaffoldingFiles": [
+    "frontend/src/journey/features.ts",
+    "docs/调试记录.md"
+  ],
+  "contextFiles": [
+    "docs/01-跨平台启动.md",
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8",
+      "bytes": 131,
+      "role": "assembly"
+    },
+    {
+      "path": "docs/调试记录.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

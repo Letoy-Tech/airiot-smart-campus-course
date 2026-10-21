@@ -1,0 +1,292 @@
+--- before/frontend/src/views/CasesView.vue
++++ after/frontend/src/views/CasesView.vue
+@@ -40,8 +40,9 @@
+ const assignForm = reactive({ assigneeUid: '', note: '' })
+ const startNote = ref('')
+ const noteText = ref('')
+-
+-type WriteKind = 'trigger' | 'assign' | 'start' | 'note'
++const dispositionText = ref('')
++
++type WriteKind = 'trigger' | 'assign' | 'start' | 'note' | 'recover' | 'verify' | 'close'
+ const writeBusy = ref<WriteKind | null>(null)
+ const writeError = ref('')
+ const writeNotice = ref('')
+@@ -62,6 +63,7 @@
+ 
+ /** 能力只认服务端布尔 true；roles 只用于显示。 */
+ const canAssign = computed(() => strictCapability(store.capabilities?.canAssignAlarms))
++const canAdmin = computed(() => strictCapability(store.capabilities?.canAdmin))
+ const canHandle = computed(() => strictCapability(store.capabilities?.canHandleAlarms))
+ const canRunDemo = computed(() => strictCapability(store.capabilities?.canRunDemoScenarios))
+ const myUid = computed(() => currentUid.value || store.user?.uid || '')
+@@ -72,6 +74,39 @@
+ const canAct = computed(() => canHandle.value && (canAssign.value || assignedToMe.value))
+ const canStart = computed(() => canAct.value && detail.value?.state === 'ASSIGNED')
+ const canNote = computed(() => canAct.value && detail.value?.state === 'IN_PROGRESS')
++/** 恢复只允许 ADMIN；核实与关闭沿用 handler 能力，仍需服务端最终判定。 */
++const canRecover = computed(
++  () =>
++    canAdmin.value &&
++    detail.value !== null &&
++    detail.value.state !== 'CLOSED' &&
++    detail.value.sourceState !== 'RECOVERED' &&
++    demo.value?.enabled === true,
++)
++const canVerify = computed(
++  () =>
++    canAct.value &&
++    detail.value !== null &&
++    detail.value.state !== 'CLOSED' &&
++    detail.value.sourceState === 'RECOVERED' &&
++    detail.value.sourceCheckOutcome !== 'PASS',
++)
++const disposition = computed(() => dispositionText.value.trim())
++const dispositionProblem = computed(() => {
++  if (!disposition.value) return '关闭结论去掉首尾空格后不能为空（1..2000 字）。'
++  if (disposition.value.length > 2000) return '关闭结论最多 2000 字。'
++  return ''
++})
++/** 缺项直接取自 closeBlockers，与后端 requireClosable 同源。 */
++const missingClose = computed(() => (detail.value ? closeBlockers(detail.value) : ['先选择事件']))
++const closeReady = computed(
++  () =>
++    canAct.value &&
++    detail.value !== null &&
++    detail.value.state !== 'CLOSED' &&
++    missingClose.value.length === 0 &&
++    dispositionProblem.value === '',
++)
+ 
+ const mineUid = computed(() => (onlyMine.value ? myUid.value : ''))
+ const listQuery = computed(() => caseQuery(stateFilter.value, skip.value, PAGE_SIZE, mineUid.value))
+@@ -160,6 +195,7 @@
+     assignForm.note = ''
+     startNote.value = ''
+     noteText.value = ''
++    dispositionText.value = ''
+     writeError.value = ''
+     writeNotice.value = ''
+   }
+@@ -332,6 +368,109 @@
+   }
+ }
+ 
++/** 恢复只写来源事实，业务状态保持 IN_PROGRESS，也不产生核实结论。 */
++async function submitRecover() {
++  const target = detail.value
++  if (!target) {
++    writeError.value = '请先在列表中选择一条事件。'
++    return
++  }
++  if (!canAdmin.value) {
++    writeError.value = '恢复演练来源只允许 ADMIN（页面只隐藏入口，服务端最终判定）。'
++    return
++  }
++  if (target.state === 'CLOSED') {
++    writeError.value = '事件已关闭，不能恢复来源。'
++    return
++  }
++  if (target.sourceState === 'RECOVERED') {
++    writeError.value = '该事件的演练来源已恢复，不需要重复恢复。'
++    return
++  }
++  if (demo.value?.enabled !== true) {
++    writeError.value = '演练开关未开启或状态尚未读取，本次恢复未提交。'
++    return
++  }
++  const updated = await runWrite('recover', () =>
++    actOnCase(target.id, 'recover', { expectedVersion: target.version }, store.csrf),
++  )
++  if (updated) {
++    writeNotice.value = `服务端已记录演练源恢复（DEMO_RECOVER）：sourceState=${updated.sourceState}、核实=${updated.sourceCheckOutcome}；业务状态仍为 ${stateNames[updated.state] ?? updated.state}，恢复不会自动关闭，请继续服务端核实。`
++  }
++}
++
++async function submitVerify() {
++  const target = detail.value
++  if (!target) {
++    writeError.value = '请先在列表中选择一条事件。'
++    return
++  }
++  if (!canAct.value) {
++    writeError.value = '当前身份不能核实该事件：仅 ADMIN 或本人被分派的管理员可以核实。'
++    return
++  }
++  if (target.state === 'CLOSED') {
++    writeError.value = '事件已关闭，不能再核实来源。'
++    return
++  }
++  if (target.sourceState !== 'RECOVERED') {
++    writeError.value = '来源尚未恢复，服务端核实不会通过；请先完成恢复。'
++    return
++  }
++  const updated = await runWrite('verify', () =>
++    actOnCase(target.id, 'verify-recovery', { expectedVersion: target.version }, store.csrf),
++  )
++  if (updated) {
++    const pass = updated.sourceCheckOutcome === 'PASS'
++    writeNotice.value = pass
++      ? `服务端独立核实 PASS（sourceVerifiedAt=${timeText(updated.sourceVerifiedAt)}）；业务状态仍为 ${stateNames[updated.state] ?? updated.state}，还需填写结论后才能关闭。`
++      : `服务端核实未通过（${updated.sourceCheckOutcome}）；业务状态仍为 ${stateNames[updated.state] ?? updated.state}，请核对来源恢复后重试。`
++  }
++}
++
++/** 关闭成功后独立回读，确认为 CLOSED；失败不清空已提交的结论。 */
++async function submitClose() {
++  const target = detail.value
++  if (!target) {
++    writeError.value = '请先在列表中选择一条事件。'
++    return
++  }
++  if (!canAct.value) {
++    writeError.value = '当前身份不能关闭该事件：仅 ADMIN 或本人被分派的管理员可以关闭。'
++    return
++  }
++  if (target.state === 'CLOSED') {
++    writeError.value = '事件已关闭，不能重复关闭。'
++    return
++  }
++  if (dispositionProblem.value) {
++    writeError.value = dispositionProblem.value
++    return
++  }
++  const missing = closeBlockers(target)
++  if (missing.length > 0) {
++    writeError.value = `关闭前置条件未满足：${missing.join('、')}。`
++    return
++  }
++  const text = disposition.value
++  const updated = await runWrite('close', () =>
++    actOnCase(target.id, 'close', { disposition: text, expectedVersion: target.version }, store.csrf),
++  )
++  if (!updated) return
++  dispositionText.value = ''
++  const confirmed = await detailScope.run(
++    (signal) => getCase(updated.id, signal),
++    (data) => {
++      if (selectedId.value === updated.id) detail.value = data
++    },
++  )
++  const latest = detail.value
++  writeNotice.value =
++    confirmed && latest?.state === 'CLOSED'
++      ? `关闭已确认（独立回读）：state=CLOSED、version=${latest.version}、closedAt=${timeText(latest.closedAt)}、结论「${latest.disposition ?? ''}」。`
++      : `服务端已返回关闭（version=${updated.version}），但独立回读未确认；请手动重新读取详情核对。`
++}
++
+ /** 身份变化即清空该身份看到的事件、详情与输入，避免跨身份残留。 */
+ watch(
+   () => store.user?.uid ?? '',
+@@ -348,6 +487,7 @@
+     writeBusy.value = null
+     writeError.value = ''
+     writeNotice.value = ''
++    dispositionText.value = ''
+     if (!uid) return
+     void loadHandlers()
+     void loadDemo()
+@@ -691,15 +831,72 @@
+           </p>
+         </section>
+ 
+-        <section v-if="closurePanel" class="panel">
+-          <div class="section-heading">
+-            <h2>关闭</h2>
+-            <span>本阶段装配开关未开启，关闭入口不显示。</span>
+-          </div>
+-          <p class="tiny muted">
+-            关闭前置条件：{{ detail ? closeBlockers(detail).join('、') || '已满足' : '先选择事件' }}。
+-          </p>
+-        </section>
++        <template v-if="closurePanel">
++          <template v-if="detail">
++            <component :is="closurePanel" :detail="detail" />
++
++            <div class="action-panel">
++              <h3>来源恢复与服务端核实</h3>
++              <p class="tiny muted">
++                恢复只把来源置为 RECOVERED（核实 PENDING），业务状态保持
++                {{ stateNames[detail.state] ?? detail.state }}；核实由服务端独立判定，两者都不会自动关闭。
++                恢复能力：{{ canAdmin ? 'ADMIN' : '不据此授权' }}；核实能力：{{ canAct ? '允许' : '不据此授权' }}。
++                演练开关：{{ demo ? (demo.enabled ? '已开启' : '已关闭') : '尚未读取' }}。
++              </p>
++              <div class="action-buttons">
++                <button
++                  type="button"
++                  class="button subtle"
++                  :disabled="!canRecover || writeBusy !== null"
++                  @click="submitRecover"
++                >
++                  {{ writeBusy === 'recover' ? '正在恢复…' : `恢复演练来源（expectedVersion=${detail.version}）` }}
++                </button>
++                <button
++                  type="button"
++                  class="button primary"
++                  :disabled="!canVerify || writeBusy !== null"
++                  @click="submitVerify"
++                >
++                  {{ writeBusy === 'verify' ? '正在核实…' : `服务端核实恢复（expectedVersion=${detail.version}）` }}
++                </button>
++              </div>
++            </div>
++
++            <div class="action-panel">
++              <h3>关闭结论</h3>
++              <p class="tiny muted">
++                关闭要求处理中、至少一条人工 NOTE、来源已恢复、服务端核实 PASS 和 1..2000 字结论。
++                当前缺项：{{ missingClose.join('、') || '无' }}。请求携带点击时的 expectedVersion={{ detail.version }}；409 只回读，不自动重放。
++              </p>
++              <label for="close-disposition">
++                关闭结论（1..2000 字）
++                <textarea
++                  id="close-disposition"
++                  v-model="dispositionText"
++                  rows="4"
++                  maxlength="2000"
++                  :disabled="!canAct || detail.state === 'CLOSED' || writeBusy !== null"
++                />
++              </label>
++              <p v-if="dispositionProblem" class="tiny muted">{{ dispositionProblem }}</p>
++              <div class="action-buttons">
++                <button
++                  type="button"
++                  class="button primary"
++                  :disabled="!closeReady || writeBusy !== null"
++                  @click="submitClose"
++                >
++                  {{ writeBusy === 'close' ? '正在关闭…' : `关闭事件（expectedVersion=${detail.version}）` }}
++                </button>
++              </div>
++              <p class="tiny muted">
++                按钮禁用只是提示；是否可关闭由服务端按权限、版本和 requireClosable 最终判定，关闭成功后独立回读详情。
++              </p>
++            </div>
++          </template>
++          <p v-else class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
++        </template>
+       </div>
+     </div>
+   </section>
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -138,7 +138,18 @@
+     "frontend/src/views/CasesView.vue": "eec511f0baa10179bd66843fe27a000648ef64d1679c594655a6928328260d29",
+     "frontend/src/views/CloseChecklist.vue": "620c3db39e0612aaa272beeddfcc34cb9d5c786bfb85ba4f03cd3f54d7f8a8a5"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 9,
++    "at": "2026-10-19T18:24:35.367Z",
++    "sourceFingerprint": "53b9a8ef31251f58b74bc8f25f937017472a8cf73f6d0898621b9417369171ec",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

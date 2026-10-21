@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "kind": "SCENARIO_SPEC",
+  "executionStatus": "NOT_EXECUTED",
+  "requires": "教师隔离认证和数据库；身份key仅逻辑引用，不是已创建账户或登录凭据",
+  "identities": [
+    {
+      "key": "teaching_admin",
+      "roles": [
+        "ADMIN",
+        "CAMPUS_VIEWER"
+      ]
+    },
+    {
+      "key": "teaching_manager_a",
+      "roles": [
+        "CAMPUS_MANAGER"
+      ]
+    },
+    {
+      "key": "teaching_manager_b",
+      "roles": [
+        "CAMPUS_MANAGER"
+      ]
+    },
+    {
+      "key": "teaching_viewer",
+      "roles": [
+        "CAMPUS_VIEWER"
+      ]
+    }
+  ],
+  "commonPreconditions": [
+    "四个账户有效且未锁定；角色有效",
+    "所有请求通过真实后端授权，不以隐藏按钮代替403",
+    "每个拒绝案例在独立重置后的合法状态上进行；不混入旧版本、非法字段等第二种错误"
+  ],
+  "scenarios": [
+    {
+      "id": "revoke-admin-retain-reader",
+      "initialIdentity": "teaching_admin",
+      "initialRoles": [
+        "ADMIN",
+        "CAMPUS_VIEWER"
+      ],
+      "mutation": {
+        "removeRole": "ADMIN",
+        "remainingRoles": [
+          "CAMPUS_VIEWER"
+        ]
+      },
+      "requestsAfterRevocation": [
+        {
+          "method": "GET",
+          "path": "/campus/devices",
+          "expectedHttpStatus": 200
+        },
+        {
+          "method": "POST",
+          "path": "/campus/locations/campuses",
+          "body": {
+            "name": "撤权隔离实验校园"
+          },
+          "expectedHttpStatus": 403
+        }
+      ],
+      "requirements": [
+        "复用撤销前已建立的会话，后端按当前角色判断",
+        "失败写入不得产生校园记录",
+        "实验结束恢复完整初始角色集合；禁用账户另测，不能代替撤销角色"
+      ]
+    },
+    {
+      "id": "assigned-to-a",
+      "eventSetup": {
+        "logicalId": "teaching_case_scope",
+        "state": "ASSIGNED",
+        "sourceState": "ACTIVE",
+        "assigneeKey": "teaching_manager_a",
+        "version": 1
+      },
+      "independentCases": [
+        {
+          "actorKey": "teaching_manager_a",
+          "request": {
+            "method": "POST",
+            "path": "/campus/alarm-cases/{caseId}/start",
+            "body": {
+              "note": "开始教学巡查",
+              "expectedVersion": 1
+            }
+          },
+          "expectedHttpStatus": 200,
+          "expectedState": "IN_PROGRESS",
+          "expectedVersion": 2,
+          "expectedTimelineAdded": 1
+        },
+        {
+          "actorKey": "teaching_manager_b",
+          "request": {
+            "method": "POST",
+            "path": "/campus/alarm-cases/{caseId}/start",
+            "body": {
+              "note": "开始教学巡查",
+              "expectedVersion": 1
+            }
+          },
+          "expectedHttpStatus": 403,
+          "expectedUnchanged": true
+        },
+        {
+          "actorKey": "teaching_viewer",
+          "request": {
+            "method": "POST",
+            "path": "/campus/alarm-cases/{caseId}/start",
+            "body": {
+              "note": "开始教学巡查",
+              "expectedVersion": 1
+            }
+          },
+          "expectedHttpStatus": 403,
+          "expectedUnchanged": true
+        }
+      ]
+    }
+  ]
+}

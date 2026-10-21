@@ -1,0 +1,54 @@
+{
+  "checkedOn": "2026-10-21",
+  "scope": "Final public sanitized repository",
+  "completeSystem": {
+    "backendTests": 80,
+    "frontendTests": 27,
+    "backendCleanPackage": "PASS",
+    "frontendTypeCheckAndBuild": "PASS",
+    "deploymentGuardTests": 11,
+    "migrationFilesPreserved": 10,
+    "details": "../system/docs/publication-verification.json"
+  },
+  "studentImplementation": {
+    "backendTests": 153,
+    "backendCleanPackage": "PASS",
+    "details": "course-verification.json"
+  },
+  "course": {
+    "lessons": 12,
+    "steps": 64,
+    "staticChecks": "PASS",
+    "details": "course-verification.json"
+  },
+  "history": {
+    "versions": 39,
+    "mappedFiles": 27775,
+    "objects": 2819,
+    "allObjectHashesVerified": true,
+    "latestCourseAndBlankStarterRestoration": "PASS",
+    "independentToolChecks": 8
+  },
+  "documents": {
+    "status": "PASS",
+    "details": "document-verification.json"
+  },
+  "privacy": {
+    "providerCredentialsRemoved": true,
+    "rawEnvironmentFilesExcluded": true,
+    "rawScreenAndNativeCapturesWithheld": true,
+    "unreviewedEmbeddedImagesReplacedByExplicitNotices": true,
+    "codeWordReplacementRegression": "PASS",
+    "gitleaksStaged": "PASS",
+    "publicationPathScan": "PASS",
+    "reportedCredentialFindings": 0,
+    "reportedPathFindings": 0,
+    "scanScope": "Complete initial Git index, including sanitized historical objects"
+  },
+  "limits": [
+    "No original runtime, database or remote deployment was changed.",
+    "Complete system needs the users own AIRIOT and infrastructure configuration.",
+    "Public-copy checks do not rerun live database integration, browser interaction, Windows or classroom acceptance.",
+    "V2.0.2 prompts have not been independently retried end-to-end from blank."
+  ]
+}

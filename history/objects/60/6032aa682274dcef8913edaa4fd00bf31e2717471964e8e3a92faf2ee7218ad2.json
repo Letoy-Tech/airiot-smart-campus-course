@@ -1,0 +1,8 @@
+{
+  "id": "图 02-02",
+  "title": "一条需求如何走到验收证据",
+  "alt": "R06 演练闭环连接业务规则与事务任务，分别连接 AC07 闭环、AC08 并发和 AC09 回滚；执行后才产生响应、回读和时间线证据。",
+  "caption": "图 02-02　一条需求如何走到验收证据。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false
+}

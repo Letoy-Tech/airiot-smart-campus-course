@@ -1,0 +1,28 @@
+{
+  "release": "REL_20261005-0143-SCHOOL-DEMO",
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "publication rolled back",
+      "error": "Publication failed; previous shared vhost and routes restored",
+      "phase": "first script version did not persist individual failing phase",
+      "nginxConfigValidationAfterRestore": "passed",
+      "nginxReloadAfterRestore": "passed",
+      "backendAndDatabaseRetained": true,
+      "restoredVhostSha256": "df5be8d95c07a0fd18734a75d5a179eec5e55bc040ba3e46d50ce37dcb76d63b"
+    },
+    {
+      "attempt": 2,
+      "state": "activated",
+      "checkedAt": "2026-10-05T01:46:02.588983+08:00",
+      "change": "wait for reloaded worker to serve exact active document and validUPJSONbefore accepting proxy routes",
+      "sameRouteConfiguration": true
+    }
+  ],
+  "interpretation": "Reload readiness race is an inference from passing the same route configuration after adding readiness polling; initial exact failure phase was not recorded.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-21T04:37:04.710185",
+  "success": false,
+  "checks": [
+    {
+      "name": "existing-output-refused-without-change",
+      "pass": true
+    },
+    {
+      "name": "outside-runtime-refused",
+      "pass": true
+    },
+    {
+      "name": "nested-env-private-dependency-exclusions",
+      "pass": true,
+      "unexpected": []
+    },
+    {
+      "name": "source-parent-symlink-refused",
+      "pass": true
+    },
+    {
+      "name": "output-parent-symlink-refused",
+      "pass": true
+    },
+    {
+      "name": "small-text-secret-refused-before-copy",
+      "pass": true,
+      "outputContainedSyntheticSecret": false
+    },
+    {
+      "name": "large-text-secret-refused-before-copy",
+      "pass": false,
+      "outputContainedSyntheticSecret": false
+    },
+    {
+      "name": "project-ancestor-symlink-refused",
+      "pass": false
+    }
+  ],
+  "scope": "operator public-copy fixtures, not a business or classroom acceptance"
+}

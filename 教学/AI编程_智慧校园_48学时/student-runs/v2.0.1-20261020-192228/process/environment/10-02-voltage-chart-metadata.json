@@ -1,0 +1,12 @@
+{
+  "polylines": 2,
+  "circles": 10,
+  "unit": "V",
+  "deviceId": "d05",
+  "pointCountsPerSegment": [
+    2,
+    3
+  ],
+  "actualSampleCount": 5,
+  "circleNote": "ten circles include visible and interaction markers; not ten samples"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:24:14.788648+00:00",
+  "version": "1.1.0",
+  "archive": "AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip",
+  "bytes": 269134533,
+  "files": 2331,
+  "sha256": "625042673d2f3da39ab2b889e17a22495e25cee870725e37de176dbd5429ee87",
+  "crcAndContentHashes": "PASS",
+  "entry": "AI编程_智慧校园_48学时/先打开这里.html",
+  "walkthroughs": 13,
+  "codingDebugTestDeliverySteps": 59,
+  "links": 1169,
+  "historicalV102ArchiveUnchanged": true,
+  "historicalReferenceAndChapterStartersUnchanged": true,
+  "privateFilesExcluded": true,
+  "classroomTrial": false,
+  "windowsPhysicalMachine": false,
+  "originalWordPdfPreserved": true,
+  "freshUnzipBrowserCheck": {
+    "status": "PASS",
+    "at": "2026-10-19T13:24:38.270Z",
+    "checks": [
+      "Fresh extraction, entry click, 13 chapters, images, local links, clipboard, mobile width, all manifest hashes"
+    ],
+    "images": 22,
+    "localLinks": 162,
+    "filesHashed": 2330
+  }
+}

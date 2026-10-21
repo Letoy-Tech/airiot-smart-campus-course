@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "stage": 8,
+  "title": "事件接收与处理",
+  "mode": "teacher-db",
+  "goal": "场景、列表、分派、开始、NOTE",
+  "contract": "演练是DEMO/LOCAL_DEMO；expectedVersion；本人已分派范围",
+  "acceptance": "创建→分派A→A开始/NOTE；B拒绝；来源与业务状态分开",
+  "businessFiles": [
+    "frontend/src/views/CasesView.vue"
+  ],
+  "integrationFiles": [],
+  "documentationFiles": [],
+  "verificationFiles": [
+    "frontend/src/tests/case-trigger-race.test.ts"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts",
+    "frontend/src/tests/case-trigger-race.test.ts"
+  ],
+  "contextFiles": [
+    "docs/01-跨平台启动.md",
+    "frontend/src/tests/case-trigger-race.test.ts",
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/CasesView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7",
+      "bytes": 1189,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/CasesView.vue",
+      "sha256": "20f7663b20b5bd5bdb79b90c31c53b9319b49d61437288a2b1380f27c4786eab",
+      "bytes": 20741,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>事件接收与处理</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

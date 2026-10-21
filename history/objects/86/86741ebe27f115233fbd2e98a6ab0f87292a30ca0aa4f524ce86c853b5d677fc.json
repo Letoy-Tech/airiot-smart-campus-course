@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-20T21:13:16.196031",
+  "mockJsonOriginalUnchanged": true,
+  "mockJsonSha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3",
+  "dockerImagesExit": 0,
+  "dockerImages": "[mysql:8.4] sha256:0f51e63e537a1f176423fa03ef559aabe6fa4372a53160a44bc7e75da7d15364 arm64\n[redis:7.4] sha256:4fa24486b8bcca8eec45ee0eb166edc674795e53a2b53d1a9ef263eecebaac85 arm64"
+}

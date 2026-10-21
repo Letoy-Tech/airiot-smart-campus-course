@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T14:05:28.202Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "12 pagination ALL skip=10",
+      "detail": {
+        "total": 14,
+        "items": 4,
+        "query": "?limit=10&skip=10"
+      },
+      "passed": true
+    },
+    {
+      "name": "12 pagination NEW skip=0",
+      "detail": {
+        "total": 12,
+        "items": 10,
+        "query": "?limit=10&skip=0&state=NEW"
+      },
+      "passed": true
+    },
+    {
+      "name": "12 pagination IN_PROGRESS skip=0",
+      "detail": {
+        "total": 0,
+        "items": 0,
+        "query": "?limit=10&skip=0&state=IN_PROGRESS"
+      },
+      "passed": true
+    },
+    {
+      "name": "12 pagination ALL skip=0",
+      "detail": {
+        "total": 14,
+        "items": 10,
+        "query": "?limit=10&skip=0"
+      },
+      "passed": true
+    },
+    {
+      "name": "12 pagination ALL skip=0",
+      "detail": {
+        "total": 14,
+        "items": 10,
+        "query": "?limit=10&skip=0"
+      },
+      "passed": true
+    }
+  ]
+}

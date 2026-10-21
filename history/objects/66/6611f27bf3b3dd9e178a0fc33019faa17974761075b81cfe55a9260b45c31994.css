@@ -1,0 +1,252 @@
+    :root {
+      color-scheme: light;
+      --ink: #16222e;
+      --muted: #5d7185;
+      --line: #dbe4ee;
+      --paper: #ffffff;
+      --bg: #eef3fa;
+      --accent: #1f6feb;
+      --accent-soft: #e8f0fe;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC",
+        system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* 三块结构：顶部标题、左侧菜单、右侧内容 */
+    .layout {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 100vh;
+      min-width: 0;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 14px;
+      padding: 22px 28px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      overflow-wrap: anywhere;
+    }
+
+    .topbar .tag {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .body {
+      display: flex;
+      align-items: stretch;
+      min-width: 0;
+    }
+
+    /* 左侧菜单 */
+    .sidebar {
+      flex: 0 0 208px;
+      background: var(--paper);
+      border-right: 1px solid var(--line);
+      padding: 16px 12px;
+      min-width: 0;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 44px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--ink);
+      font: inherit;
+      font-size: 15px;
+      line-height: 1.4;
+      text-align: left;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .menu-item:hover {
+      background: #f1f5fb;
+    }
+
+    .menu-item:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .menu-item[aria-current="page"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* 右侧内容 */
+    .content {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 28px;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px 30px;
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    /* 概览统计卡片：宽屏并排，窄屏自动换行 */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fafcff;
+    }
+
+    .card-label {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .card-value {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    .next-up {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border: 1px dashed #c3d4e8;
+      border-radius: 12px;
+      background: #f5f9ff;
+    }
+
+    .next-up h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .next-up p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    /* 窄屏：菜单改为横向可滚动条，主内容不再被挤出屏幕 */
+    @media (max-width: 720px) {
+      .topbar {
+        padding: 18px 18px;
+      }
+
+      .topbar h1 {
+        font-size: 20px;
+      }
+
+      .body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex: 0 0 auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .menu {
+        flex-direction: row;
+        gap: 6px;
+        width: max-content;
+      }
+
+      .menu-item {
+        width: auto;
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 14px;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .panel {
+        padding: 20px 18px;
+      }
+
+      .panel h2 {
+        font-size: 19px;
+      }
+    }

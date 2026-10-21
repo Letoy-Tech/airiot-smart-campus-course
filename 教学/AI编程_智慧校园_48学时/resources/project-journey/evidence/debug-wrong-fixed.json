@@ -1,0 +1,40 @@
+{
+  "status": "PASS_EXPECTED_ASSERTION_FAILURE_THEN_RESTORED",
+  "sourceManifestSha256": "f0c97649ed0357dd1e2c8822f2bb00a69a13efe783dc886f421a61ce7b6a3c37",
+  "beforeSha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+  "actualWorkDirectory": "/tmp/demo-workspace",
+  "cases": [
+    {
+      "label": "wrong",
+      "exitCode": 1,
+      "passed": 8,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "统一请求边界 200 与非零业务码仍是失败",
+          "reason": "Error: expected TypeError: Cannot read properties of null… to match object { code: 7 }\n    at _Assertion.__VITEST_REJECTS__ (file:///private/tmp/demo-workspace@vitest/expect/dist/index.js:1747:17)\n    at _Assertion.propertyGetter (file:///private/tmp/demo-workspace:1607:27)\n    at Reflect.get (<anonymous>)\n "
+        },
+        {
+          "name": "统一请求边界 成功空数组仍保留后端观察时间",
+          "reason": "Error: promise rejected \"ApiError: 设备读取未成功，请核对业务响应。 { …(2) }\" instead of resolving\n    at _Assertion.__VITEST_RESOLVES__ (file:///private/tmp/demo-workspace@vitest/expect/dist/index.js:1710:17)\n    at _Assertion.propertyGetter (file:///private/tmp/demo-workspace:1607:27)\n    at Reflect.get (<anonymous>)\n    "
+        }
+      ],
+      "sourceSha256": "e760e7a13fb0efb8b72e5a0962709fbaa8ff3aed2e402760f9bfcf85646ea281"
+    },
+    {
+      "label": "restored",
+      "exitCode": 0,
+      "passed": 10,
+      "failed": 0,
+      "failures": [],
+      "sourceSha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886"
+    }
+  ],
+  "browser": "NOT_RUN",
+  "database": "NOT_RUN",
+  "restoredSha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+  "restoredExactly": true,
+  "finishedAt": "2026-10-19T15:36:08.136Z",
+  "finalSourceManifestSha256": "073768bb0e301178174c77351b49446686b9ac9dfb08aa38247431185b6b0c77",
+  "documentationOnlyRebind": "doc-only-rebind.json"
+}

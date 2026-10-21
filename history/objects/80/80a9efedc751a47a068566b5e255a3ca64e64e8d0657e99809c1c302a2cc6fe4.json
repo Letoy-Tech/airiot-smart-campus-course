@@ -1,0 +1,15 @@
+{
+  "source": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/tools/local-db.py",
+  "sourceSha256": "3b42973afdfb316b643141f70e2dd115194cd2e83a3422400b51aa236a571271",
+  "copy": "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/tools/teacher-local-db.py",
+  "copySha256": "075d8da638b8fd431f0aef16ce0623e68bc3691c30d39f7d01c01210961e5a48",
+  "scope": "Operator/teacher environment preparation, never student model business code",
+  "changes": [
+    "Unique root and port 23491",
+    "Owned per-root temporary UNIX socket",
+    "Separate migration/runtime/test credentials and schema permissions",
+    "No SQL or secret-bearing errors printed",
+    "Explicit switch to runtime config after migration"
+  ],
+  "executed": false
+}

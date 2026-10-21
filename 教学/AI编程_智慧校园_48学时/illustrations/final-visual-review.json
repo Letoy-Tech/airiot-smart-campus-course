@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-18T18:50:07.572902+08:00",
+  "scope": "图文初稿配图与 HTML 阅读版视觉检查；不是软件实验或印刷验收",
+  "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+  "labVerified": false,
+  "methods": [
+    "逐一打开十张章节联系表，覆盖 38 幅章节图；修订后重看受影响联系表",
+    "异常图另开 PNG 原图或 HTML 图面截图；两幅公共图单独打开",
+    "实际查看普通版桌面/窄屏、章 09/12 窄屏及 7 个代表图面截图",
+    "实际查看单文件窄屏首页及设备请求图面；下载内容哈希核对"
+  ],
+  "limits": [
+    "复杂时序图在窄屏需放大或保存 PNG 查看",
+    "验证环境为 Chromium 149 的桌面与 390 px 模拟视口，不是真实手机或跨浏览器验收",
+    "未生成整书 PDF；未执行课程实验、业务接口或真实平台操作"
+  ],
+  "peerReviewResolution": [
+    {
+      "report": "handoffs/peer-review-01-04.md",
+      "items": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "status": "RESOLVED_AND_REVIEWED"
+    },
+    {
+      "report": "handoffs/peer-review-05-08.md",
+      "items": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "status": "RESOLVED_AND_REVIEWED"
+    },
+    {
+      "report": "handoffs/peer-review-09-12.md",
+      "items": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "status": "RESOLVED_AND_REVIEWED"
+    }
+  ],
+  "readerChecks": [
+    {
+      "report": "illustrations/qa/book/verification.json",
+      "input": "reading/index.html",
+      "sha256": "f866a6b4ebab0b1da94e1fe4b8cac95153a9ac60a011981e98cf87f08fa82fe3",
+      "status": "PASS",
+      "widths": [
+        1440,
+        390
+      ]
+    },
+    {
+      "report": "illustrations/qa/book-standalone/verification.json",
+      "input": "reading/AI编程图文初稿_V0.2_单文件.html",
+      "sha256": "b5b2976e5c81f602fb43d7207687fe8a678ee420fba1969bccab98679455ee92",
+      "status": "PASS",
+      "widths": [
+        1440,
+        390
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "公共图 01",
+      "png": "illustrations/shared-01-教学工程边界.png",
+      "sha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+      "methods": [
+        "公共图 PNG 原图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "工程边界或人工协作关系可读，教学示意与未验证说明保留。"
+    },
+    {
+      "id": "公共图 02",
+      "png": "illustrations/shared-02-网页AI协作.png",
+      "sha256": "542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929",
+      "methods": [
+        "公共图 PNG 原图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "工程边界或人工协作关系可读，教学示意与未验证说明保留。"
+    },
+    {
+      "id": "图 01-01",
+      "png": "illustrations/ch01-01-engineering-cycle.png",
+      "sha256": "28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "双行流程与反馈说明相符。"
+    },
+    {
+      "id": "图 01-02",
+      "png": "illustrations/ch01-02-prompt-comparison.png",
+      "sha256": "132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "两列分别注明信息不足与可检查任务，正文不再依赖左右次序。"
+    },
+    {
+      "id": "图 01-03",
+      "png": "illustrations/ch01-03-ai-evidence-loop.png",
+      "sha256": "02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "人工审查、执行和证据反馈均保留。"
+    },
+    {
+      "id": "图 02-01",
+      "png": "illustrations/ch02-01-scope-map.png",
+      "sha256": "3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "必修、选做与范围外事项分开。"
+    },
+    {
+      "id": "图 02-02",
+      "png": "illustrations/ch02-02-traceability.png",
+      "sha256": "5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "需求与 AC07/08/09 证据关系可追踪。"
+    },
+    {
+      "id": "图 02-03",
+      "png": "illustrations/ch02-03-milestones.png",
+      "sha256": "7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "五个里程碑及 AIRIOT 选做依赖清楚。"
+    },
+    {
+      "id": "图 03-01",
+      "png": "illustrations/ch03-01-architecture.png",
+      "sha256": "b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "CampusDataProvider 与 TeachingMockProvider 完整一行。"
+    },
+    {
+      "id": "图 03-02",
+      "png": "illustrations/ch03-02-local-records-er.png",
+      "sha256": "1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f",
+      "methods": [
+        "章节联系表实际查看",
+        "PNG 原图实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "四个关系标签可读；零到多圆圈、至少一条竖线和预建责任一对一均可辨认。"
+    },
+    {
+      "id": "图 03-03",
+      "png": "illustrations/ch03-03-two-state-axes.png",
+      "sha256": "19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "来源恢复与处置关闭分开；UNKNOWN 不推进关闭。"
+    },
+    {
+      "id": "图 03-04",
+      "png": "illustrations/ch03-04-version-transaction.png",
+      "sha256": "fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "同版本竞争、锁等待、409 与不追加成功记录一致。"
+    },
+    {
+      "id": "图 04-01",
+      "png": "illustrations/ch04-01-git-workflow.png",
+      "sha256": "f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "git diff 与 git diff --cached 保持完整命令。"
+    },
+    {
+      "id": "图 04-02",
+      "png": "illustrations/ch04-02-first-request.png",
+      "sha256": "da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "认证、前缀重写、服务端授权与读取响应可追踪。"
+    },
+    {
+      "id": "图 04-03",
+      "png": "illustrations/ch04-03-debug-path.png",
+      "sha256": "7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "无请求分支独立；四个响应分支不穿过无关节点。"
+    },
+    {
+      "id": "图 05-01",
+      "png": "illustrations/ch05-01-device-request.png",
+      "sha256": "bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "读取先经服务端权限检查；时序编号与消息均可读。"
+    },
+    {
+      "id": "图 05-02",
+      "png": "illustrations/ch05-02-space-relations.png",
+      "sha256": "7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "本地映射和来源目录分开；标签使用不透明白底。"
+    },
+    {
+      "id": "图 05-03",
+      "png": "illustrations/ch05-03-binding-readback.png",
+      "sha256": "86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "保存后独立回读，未画成修改上游目录。"
+    },
+    {
+      "id": "图 06-01",
+      "png": "illustrations/ch06-01-device-wireframe.png",
+      "sha256": "e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "桌面与窄屏均为教学界面示意，未知与模拟标识保留。"
+    },
+    {
+      "id": "图 06-02",
+      "png": "illustrations/ch06-02-components-state.png",
+      "sha256": "afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9",
+      "methods": [
+        "章节联系表实际查看",
+        "PNG 原图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "deviceId 标签已遮断底层连线，完整文字未被压线。"
+    },
+    {
+      "id": "图 06-03",
+      "png": "illustrations/ch06-03-page-states.png",
+      "sha256": "c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "失败、空目录、筛选无匹配和成功结果分组；旧快照规则保留。"
+    },
+    {
+      "id": "图 07-01",
+      "png": "illustrations/ch07-01-quality-cases.png",
+      "sha256": "9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "0/null、60000/60001 与 5000/5001 的边界值对应正文。"
+    },
+    {
+      "id": "图 07-02",
+      "png": "illustrations/ch07-02-history-gaps.png",
+      "sha256": "740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "缺失处断线，零值保留；横轴秒与接口毫秒分开。"
+    },
+    {
+      "id": "图 07-03",
+      "png": "illustrations/ch07-03-refresh-lifecycle.png",
+      "sha256": "fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "完成后等待 15 秒，离页取消和迟到响应失效清楚。"
+    },
+    {
+      "id": "图 08-01",
+      "png": "illustrations/ch08-01-role-scope.png",
+      "sha256": "e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "角色代码完整，管理员路径仍进入业务检查；是/否与处置标签不压线。"
+    },
+    {
+      "id": "图 08-02",
+      "png": "illustrations/ch08-02-denial-path.png",
+      "sha256": "adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "401 身份与 403 权限区分，服务端事实不再孤字换行。"
+    },
+    {
+      "id": "图 08-03",
+      "png": "illustrations/ch08-03-identity-race.png",
+      "sha256": "8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "生命周期标识留在前端，旧管理员响应在切换身份后丢弃。"
+    },
+    {
+      "id": "图 09-01",
+      "png": "illustrations/ch09-01-state-machine.png",
+      "sha256": "c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "四种处置状态与来源状态分开，重新分派和关闭路径清楚。"
+    },
+    {
+      "id": "图 09-02",
+      "png": "illustrations/ch09-02-close-gates.png",
+      "sha256": "31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "三组关闭条件及时间约束完整，401/403 与两种 409 键明确。"
+    },
+    {
+      "id": "图 09-03",
+      "png": "illustrations/ch09-03-recovery-sequence.png",
+      "sha256": "fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "UNKNOWN、恢复、重复恢复、核实和关闭的 v4 到 v8 序列一致。"
+    },
+    {
+      "id": "图 10-01",
+      "png": "illustrations/ch10-01-owner-event-model.png",
+      "sha256": "26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd",
+      "methods": [
+        "章节联系表实际查看",
+        "PNG 原图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "责任与事件主行及各自历史分列，创建时取责任与旧事件不改派的说明清楚。"
+    },
+    {
+      "id": "图 10-02",
+      "png": "illustrations/ch10-02-future-assignment.png",
+      "sha256": "9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "已补 A 开始处理后 IN_PROGRESS、事件 v2 基线；再切回 ADMIN 改责任。"
+    },
+    {
+      "id": "图 10-03",
+      "png": "illustrations/ch10-03-responsibility-timeline.png",
+      "sha256": "c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe",
+      "methods": [
+        "章节联系表实际查看",
+        "PNG 原图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "manager-a、manager-b 完整显示，v0 空历史及 v1/v2 历史保留。"
+    },
+    {
+      "id": "图 11-01",
+      "png": "illustrations/ch11-01-evidence-layers.png",
+      "sha256": "e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "五类证据范围和统一报告方式分列，未混淆构建与真实事务。"
+    },
+    {
+      "id": "图 11-02",
+      "png": "illustrations/ch11-02-concurrent-updates.png",
+      "sha256": "0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1",
+      "methods": [
+        "章节联系表实际查看",
+        "HTML 内图面截图实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "ADMIN 发起两个请求，胜者不固定，独立连接回读明确。"
+    },
+    {
+      "id": "图 11-03",
+      "png": "illustrations/ch11-03-transaction-rollback.png",
+      "sha256": "303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "提交前真实写入路径失败与整体回滚、独立回读、正向对照完整。"
+    },
+    {
+      "id": "图 11-04",
+      "png": "illustrations/ch11-04-debugging-loop.png",
+      "sha256": "4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "失败证据、最小定位和回归说明可读。"
+    },
+    {
+      "id": "图 12-01",
+      "png": "illustrations/ch12-01-delivery-flow.png",
+      "sha256": "403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "构建、运行、业务验证和同伴复现区分。"
+    },
+    {
+      "id": "图 12-02",
+      "png": "illustrations/ch12-02-controlled-change.png",
+      "sha256": "75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "变更基线、最小修改、失败与复验路径完整。"
+    },
+    {
+      "id": "图 12-03",
+      "png": "illustrations/ch12-03-code-data-recovery.png",
+      "sha256": "6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2",
+      "methods": [
+        "章节联系表实际查看"
+      ],
+      "status": "REVIEWED_NO_BLOCKING_FINDINGS",
+      "note": "代码兼容性与数据/schema 恢复审查分开，隔离验证后交接。"
+    }
+  ]
+}

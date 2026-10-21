@@ -1,0 +1,7 @@
+当前第08站：让一件事有人接手。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/CasesView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/CasesView.vue。
+使用给定事件API与类型写工作台：列表、详情、状态/处理人筛选、分页、三种本地模拟场景、分派、开始和NOTE。写请求带expectedVersion。409只回读最新记录并保留输入，不自动重放。来源标为LOCAL_DEMO，不改原始报警。关闭区域由本阶段装配开关暂不显示。只修改本次目标文件；先列计划，等我确认后再改。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+当前先按教程给出本文件计划，等待我在本IDE确认。只允许CasesView.vue；不新建/修改/删除测试（含临时测试）、权限、装配、后端、工具、依赖。不读.private、lesson-bundles/**/files、journey-backups或教师答案，不启动服务、迁移或下一站。单测命令npm run test:unit -- --run。

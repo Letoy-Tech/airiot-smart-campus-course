@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/../tools/acceptance-probe.py", line 79, in <module>
+    result = locations()
+  File "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/../tools/acceptance-probe.py", line 54, in locations
+    admin = Client('admin')
+  File "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/../tools/acceptance-probe.py", line 32, in __init__
+    raise RuntimeError('Refusing a service without TEACHING_MOCK identity')
+RuntimeError: Refusing a service without TEACHING_MOCK identity

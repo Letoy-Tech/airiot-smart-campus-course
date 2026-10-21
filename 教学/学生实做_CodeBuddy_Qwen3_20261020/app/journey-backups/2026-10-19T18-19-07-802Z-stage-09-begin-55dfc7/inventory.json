@@ -1,0 +1,11 @@
+[
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28"
+  },
+  {
+    "path": "frontend/src/views/CloseChecklist.vue",
+    "existed": false
+  }
+]

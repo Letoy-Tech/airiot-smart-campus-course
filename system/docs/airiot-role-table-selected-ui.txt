@@ -1,0 +1,151 @@
+@vom 1
+@view 1798x1025
+@layers 1 focus=L1
+L1 page
+  RootWebArea "城大智慧校园中间件演示"
+    img
+    heading "城大智慧校园中间件演示"
+      StaticText "城大智慧校园中间件演示"
+    @e1 menuitem "数据管理" [ctx: 城大智慧校园中间件演示]
+    @e2 menuitem "设备监控 [has-submenu]"
+    @e3 menuitem "报警管理 [has-submenu]"
+    @e4 menuitem "数据分析 [has-submenu]"
+    @e5 menuitem "AI仓库" [ctx: 城大智慧校园中间件演示]
+    @e6 menuitem "可视化" [ctx: 城大智慧校园中间件演示]
+    @e7 menuitem "业务流程 [has-submenu]"
+    @e8 menuitem "扩展开发 [has-submenu]"
+    @e9 menuitem "数据接口" [ctx: 城大智慧校园中间件演示]
+    @e10 menuitem "通用功能 [has-submenu]"
+    @e11 menuitem "日志管理 [has-submenu]"
+    @e12 menuitem "权限管理 [has-submenu]"
+    @e13 menuitem "系统设置" [ctx: 城大智慧校园中间件演示]
+    @e14 menuitem "备份管理 [has-submenu]"
+    @e15 menuitem "消息" [ctx: 城大智慧校园中间件演示]
+    @e16 menuitem "帮助中心 [has-submenu]"
+    @e17 menuitem "admin [has-submenu]"
+    @e18 button "城大智慧校园中间件演示"
+    @e19 button "返回"
+    StaticText "创建 角色"
+    form "* 名称 : * 描述 : 用户列表 : 请选择用户 角色权限 : 全选 分组 管理 数据表 查看 创建 修改 删除 锁定 数据表记录 查看 添加 编辑 删除 禁用 黑名单"
+      LabelText "* 名称 :"
+        StaticText "*"
+        StaticText ":"
+        StaticText "名称"
+        image "question-circle"
+      @e20 textbox "智慧校园BE专用服务" [default] ="智慧校园BE专用服务"
+      LabelText "* 描述 :"
+        StaticText "*"
+        StaticText ":"
+        StaticText "描述"
+        image "question-circle"
+      @e21 textbox "MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。" [default] ="MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。"
+      LabelText "用户列表 :"
+        StaticText ":"
+        StaticText "用户列表"
+        image "question-circle"
+      @e22 combobox
+      StaticText "请选择用户"
+      LabelText "角色权限 :"
+        StaticText ":"
+        StaticText "角色权限"
+      @e23 textbox "搜索权限" [empty] placeholder="搜索权限"
+      @e24 button "search"
+      @e25 tab "通用功能" [ctx: 名称]
+      @e26 tab "系统设置" [ctx: 名称]
+      @e27 tab "设备监控" [ctx: 名称]
+      @e28 tab "权限管理" [ctx: 名称]
+      @e29 tab "表管理"
+        [§ active: 表管理]
+          全选
+          查看
+          选 择
+          添加
+          编辑
+          删除
+          分组
+          管理
+          数据表
+          创建
+          修改
+          锁定
+          数据表记录
+      @e30 tab "可视化" [ctx: 名称]
+      @e31 tab "数据分析" [ctx: 名称]
+      @e32 tab "业务流程" [ctx: 名称]
+      @e33 tab "二次开发"
+      @e34 tab "数据接口" [ctx: 名称]
+      @e35 tab "视频权限"
+      @e36 tab "其他"
+      img "ellipsis"
+      tabpanel "表管理"
+        LabelText "全选"
+          @e37 button "全选" [ctx: 名称]
+          @e38 checkbox "全选" [ctx: 名称] [unchecked] ="on"
+          @e39 button "全选" [ctx: 名称]
+        LabelText "分组"
+          @e40 button "分组" [ctx: 名称]
+          @e41 checkbox "分组" [ctx: 名称] [unchecked] ="on"
+          @e42 button "分组" [ctx: 名称]
+        LabelText "管理"
+          @e43 button "管理" [ctx: 名称]
+          @e44 checkbox "管理" [ctx: 名称] [unchecked] ="catalogtable.manage"
+          @e45 button "管理" [ctx: 名称]
+        LabelText "数据表"
+          @e46 button "数据表" [ctx: 名称]
+          @e47 checkbox "数据表" [ctx: 名称] [unchecked] ="on"
+          @e48 button "数据表" [ctx: 名称]
+        LabelText "查看"
+          @e49 button "查看" [ctx: 名称]
+          @e50 checkbox "查看" [ctx: 名称] [checked] ="table.view"
+          @e51 button "查看" [ctx: 名称]
+        LabelText "创建"
+          @e52 button "创建" [ctx: 名称]
+          @e53 checkbox "创建" [ctx: 名称] [unchecked] ="table.add"
+          @e54 button "创建" [ctx: 名称]
+        LabelText "修改"
+          @e55 button "修改" [ctx: 名称]
+          @e56 checkbox "修改" [ctx: 名称] [unchecked] ="table.edit"
+          @e57 button "修改" [ctx: 名称]
+        LabelText "删除"
+          @e58 button "删除" [ctx: 名称]
+          @e59 checkbox "删除" [ctx: 名称] [unchecked] ="table.delete"
+          @e60 button "删除" [ctx: 名称]
+        LabelText "锁定"
+          @e61 button "锁定" [ctx: 名称]
+          @e62 checkbox "锁定" [ctx: 名称] [unchecked] ="table.lock"
+          @e63 button "锁定" [ctx: 名称]
+        LabelText "数据表记录"
+          @e64 button "数据表记录" [ctx: 名称]
+          @e65 checkbox "数据表记录" [ctx: 名称] [unchecked] ="on"
+          @e66 button "数据表记录" [ctx: 名称]
+        LabelText "查看"
+          @e67 button "查看" [ctx: 名称]
+          @e68 checkbox "查看" [ctx: 名称] [checked] ="ext.view"
+          @e69 button "查看" [ctx: 名称]
+        @e70 button "选 择" [ctx: 名称]
+        LabelText "添加"
+          @e71 button "添加" [ctx: 名称]
+          @e72 checkbox "添加" [ctx: 名称] [unchecked] ="ext.add"
+          @e73 button "添加" [ctx: 名称]
+        @e74 button "选 择" [ctx: 名称] [disabled]
+        LabelText "编辑"
+          @e75 button "编辑" [ctx: 名称]
+          @e76 checkbox "编辑" [ctx: 名称] [unchecked] ="ext.edit"
+          @e77 button "编辑" [ctx: 名称]
+        @e78 button "选 择" [ctx: 名称] [disabled]
+        LabelText "删除"
+          @e79 button "删除" [ctx: 名称]
+          @e80 checkbox "删除" [ctx: 名称] [unchecked] ="ext.delete"
+          @e81 button "删除" [ctx: 名称]
+        @e82 button "选 择" [ctx: 名称] [disabled]
+      LabelText "禁用"
+        @e83 button "禁用" [ctx: 描述]
+        @e84 checkbox "禁用" [ctx: 描述] [unchecked]
+        @e85 button "禁用" [ctx: 描述]
+      image "question-circle"
+      LabelText "黑名单"
+        @e86 button "黑名单" [ctx: 用户列表 请选择用户]
+        @e87 checkbox "黑名单" [ctx: 用户列表 请选择用户] [unchecked] ="false"
+        @e88 button "黑名单" [ctx: 用户列表 请选择用户]
+      @e89 button "保 存"
+      @e90 button "取 消"

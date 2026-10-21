@@ -1,0 +1,59 @@
+{
+  "runId": "d39e34c149a78",
+  "requests": [
+    {
+      "id": "d39e34c149a78:n1",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": null,
+      "state": "failed",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector",
+      "intervention": {
+        "rule_id": "d39e34c149a78:r1",
+        "type": "block",
+        "state": "applied"
+      }
+    },
+    {
+      "id": "d39e34c149a78:n2",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "error": null,
+      "intervention": null
+    },
+    {
+      "id": "d39e34c149a78:n3",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "error": null,
+      "intervention": null
+    }
+  ],
+  "rules": [
+    {
+      "match": {
+        "url": "http://127.0.0.1:5173/api/campus/overview",
+        "method": "GET"
+      },
+      "effect": {
+        "type": "block"
+      },
+      "times": 1,
+      "id": "d39e34c149a78:r1",
+      "state": "exhausted",
+      "hits": 1,
+      "failures": 0,
+      "created_at": 1791107318094.0
+    }
+  ],
+  "note": "One locally blocked read tested client failure behavior; subsequent uncontrolled real HTTP200 recovered. Snapshot caught failure; screenshot was taken after automatic recovery.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

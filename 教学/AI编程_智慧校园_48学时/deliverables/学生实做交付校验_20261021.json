@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-10-21T05:28:15.508733",
+  "steps": 64,
+  "knownLocalCredentialValuesChecked": 8,
+  "credentialsIncluded": false,
+  "sourceExport": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab/.runtime/hand-in-final-2/campus-lab",
+  "archives": [
+    {
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/deliverables/学生实做源码_64步_20261021-2.zip",
+      "files": 142,
+      "bytes": 397976,
+      "sha256": "965dfb07abb537d474f211e6843be748071d7ab7181078c31cd12d97291e2e13"
+    },
+    {
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip",
+      "files": 1961,
+      "bytes": 30534327,
+      "sha256": "bde1a4391b66c6f30a61204d72173cc5c5070f6f6bddf9043f18abcb2557caf8"
+    }
+  ]
+}

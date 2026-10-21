@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T16:22:25.255Z",
+  "browser": "149.0.7827.55",
+  "scope": "离线资源页显示与夹具交互；不是后端实验",
+  "records": [
+    {
+      "width": 1440,
+      "imagesLoaded": true,
+      "noPageOverflow": true,
+      "counts": [
+        16,
+        4,
+        1,
+        1
+      ],
+      "errors": [],
+      "remote": [],
+      "brokenAnchors": []
+    },
+    {
+      "width": 390,
+      "imagesLoaded": true,
+      "noPageOverflow": true,
+      "counts": [
+        16,
+        4,
+        1,
+        1
+      ],
+      "errors": [],
+      "remote": [],
+      "brokenAnchors": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+已准备骨架：第10站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/OwnersView.vue
+  frontend/src/views/AuditView.vue
+  frontend/src/views/IntegrationView.vue
+备份：journey-backups/2026-10-19T18-25-07-105Z-stage-10-begin-d25b6b
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

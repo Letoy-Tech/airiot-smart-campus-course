@@ -1,0 +1,2 @@
+请画NEW→ASSIGNED→IN_PROGRESS→CLOSED四个状态；本课先做到IN_PROGRESS。列出触发、分派、开始、NOTE分别由谁执行、成功后state和version如何变化。
+按本项目当前契约简洁回答即可（不超过12行），只做Ask澄清，不改文件，不读取.private、lesson-bundles/*/files、journey-backups或教师答案。

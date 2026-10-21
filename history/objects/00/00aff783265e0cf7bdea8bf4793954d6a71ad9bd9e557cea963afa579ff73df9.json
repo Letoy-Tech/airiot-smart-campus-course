@@ -1,0 +1,24 @@
+{
+  "exists": true,
+  "mode": "600",
+  "fields": [
+    {
+      "key": "DB_PASSWORD",
+      "length": 40
+    },
+    {
+      "key": "MYSQL_ROOT_PASSWORD",
+      "length": 40
+    },
+    {
+      "key": "REDIS_PASSWORD",
+      "length": 40
+    },
+    {
+      "key": "DEMO_PASSWORD",
+      "length": 20
+    }
+  ],
+  "allDistinct": true,
+  "unchanged": true
+}

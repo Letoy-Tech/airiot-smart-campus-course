@@ -1,0 +1,200 @@
+{
+  "completedAt": "2026-10-19T19:08:16.466Z",
+  "courseVersion": "1.2.0",
+  "mode": "real student simulation in CodeBuddy standalone IDE",
+  "selectedModelLabel": "Deepseek-V4.1-Flash 300K",
+  "upstreamModelIdExposed": false,
+  "aliYunRequests": false,
+  "stages": [
+    {
+      "id": "01",
+      "title": "先做出两台设备",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "09-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "让页面从后端拿设备",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "23-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "从16台设备中找到一台",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "18-accept.exit",
+          "exit": "1"
+        },
+        {
+          "file": "19-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "把设备放到正确的楼里",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "14-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "一眼找到异常的空间",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "13-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "看变化，再看原始报警",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "25-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "换一个人登录，权限也要换",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "15-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "让一件事有人接手",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "19-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "先核实恢复，再关闭",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "19-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "换负责人，不改旧事件",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "30-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "故意弄错一次，再修好",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "30-accept.exit",
+          "exit": "0"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "交给另一个人运行",
+      "accepted": true,
+      "receipts": [
+        {
+          "file": "33-accept.exit",
+          "exit": "0"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "frontend": {
+      "tests": 74,
+      "passed": 74
+    },
+    "fullMysqlBackend": {
+      "tests": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ordinaryBackend": {
+      "total": 50,
+      "executed": 34,
+      "skipped": 16
+    },
+    "freshDirectoryRun": "passed, same operator",
+    "twoPhysicalWindowConflicts": [
+      "event",
+      "owner"
+    ]
+  },
+  "sourceProvenance": {
+    "teacher": "public backend/API/components/types/tools/tests",
+    "ideModel": "business views and scoped repairs/documentation/tool exclusion",
+    "operator": "GUI/CLI operation, isolated DB helper adaptation, test harnesses, source audits, evidence and packages",
+    "teacherAnswerImport": false,
+    "osIsolation": false
+  },
+  "serviceCleanup": {
+    "backend8091": "stopped",
+    "frontend5178": "stopped",
+    "mysql23491": "stopped",
+    "listenerLogBytes": 0
+  },
+  "usage": {
+    "calls": 44,
+    "credits": 45.54,
+    "totalUiTokens": 29349322,
+    "cashBill": null,
+    "aliYunBill": null
+  },
+  "sourceExport": {
+    "path": "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app-handoff-20261019T190629046Z",
+    "files": 163,
+    "businessParityMismatches": []
+  },
+  "unverified": [
+    "another human receiver",
+    "Windows",
+    "real campus database",
+    "real AIRIOT"
+  ],
+  "integrityResults": "See separately generated delivery-manifest.json and archive DELIVERY-INTEGRITY.json"
+}

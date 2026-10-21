@@ -1,0 +1,7 @@
+当前第10站：换负责人，不改旧事件。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OwnersView.vue、frontend/src/views/AuditView.vue、frontend/src/views/IntegrationView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/AuditView.vue。
+按目标文件分别做责任登记、接入状态或只读命令审计。责任保存带expectedVersion，409回读且保留输入；接入把配置、连通、能力分开；审计保留来源和simulated标识、分页，仅管理员可读。不要伪造真实AIRIOT成功，不增加控制或外部通知按钮。每次只改本次目标文件。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+审计实际读取接口在已@引用的api/read-models.ts。严格只改AuditView.vue，不改/增删测试（含临时测试）、权限、装配、后端、工具或依赖。不读.private、lesson-bundles/**/files、journey-backups或教师答案，不启停服务迁移。正确单测命令npm run test:unit -- --run。报告简洁。

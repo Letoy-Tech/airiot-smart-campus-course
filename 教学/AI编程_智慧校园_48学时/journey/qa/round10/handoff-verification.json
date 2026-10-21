@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Author isolated hand-in source export; hash and secret exclusion verification only",
+  "recordedAt": "2026-10-19T15:47:11.644090+00:00",
+  "destination": ".runtime/round10-lab/app-handoff-20261019T154439006Z",
+  "fileCount": 343,
+  "manifestSHA256": "a0875d8fc97a327cbdbc74016f6ed77260a2bf08a75d6d120b675e9f66e490f5",
+  "toolSHA256": "082464e138f229afeb67405b72e94495f19a37127d3f77eeca034a86304f3789",
+  "allFileHashesMatch": true,
+  "forbiddenPathCount": 0,
+  "knownPasswordLeakCount": 0,
+  "preserved": {
+    "docs/HANDOFF.md": true,
+    "evidence/round10-author-check.json": true,
+    "journey-state.json": true,
+    "backend/README.md": true
+  },
+  "receiverFullBusinessRerun": false,
+  "note": "Final export includes the frozen README. HANDOFF and author evidence are synthetic preservation probes, not student work. No reference source files were modified.",
+  "rebuild": {
+    "status": "PASS",
+    "recordedAt": "2026-10-19T15:47:11.611142+00:00",
+    "directory": ".runtime/round10-lab/app-handoff-20261019T154439006Z",
+    "source": "Actual newly exported hand-in directory; npm ci run there with no copied node_modules",
+    "nodeVersion": "22.21.1",
+    "javaVersion": "17.0.12",
+    "frontend": {
+      "install": "npm ci",
+      "typeCheck": "PASS",
+      "tests": 74,
+      "passed": 74,
+      "failed": 0,
+      "pending": 0,
+      "build": "PASS",
+      "unitReportSHA256": "58bcc4d788859b5d4997075e049a8b1f769170e0971f31bd426b91f883c98d66",
+      "distIndexSHA256": "45e5a0331427ec27756e7b34fe9a42583add29c4346c44a0e30fae6c683f5caa"
+    },
+    "backend": {
+      "command": "sh ./mvnw package",
+      "build": "PASS",
+      "totals": {
+        "tests": 50,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 16
+      },
+      "suites": [
+        {
+          "name": "edu.campus.course.CatalogReaderTest",
+          "tests": "7",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.CloseRulesTest",
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.FirstChainTest",
+          "tests": "7",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.HistoryFixtureTest",
+          "tests": "3",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.LocalAccountDirectoryTest",
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.QualityPolicyTest",
+          "tests": "3",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.ReadFixtureValidationTest",
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.ReadOnlyModelsTest",
+          "tests": "7",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.SnapshotConsistencyTest",
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "5"
+        },
+        {
+          "name": "edu.campus.course.SourceSelectionTest",
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "edu.campus.course.TeacherDbTest",
+          "tests": "11",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "11"
+        }
+      ],
+      "jarSHA256": "0a662939b920188ee3e35ebdb5a03215f34d8fa06529bd643ffd5baa8b3e9252",
+      "note": "Ordinary package in recipient export explicitly skips16DB tests; prior independent authorMySQL50/50 remains a separate report."
+    },
+    "attempts": [
+      {
+        "command": "./mvnw package",
+        "status": "FAILED_TO_START",
+        "reason": "Exported wrapper has no execute bit. Tutorial already uses sh; this was an author invocation mismatch."
+      },
+      {
+        "command": "sh ./mvnw package",
+        "status": "PASS",
+        "reason": "Same invocation used by course.mjs on macOS."
+      }
+    ],
+    "newDirectoryBuildActuallyExecuted": true,
+    "receiverBusinessServicesStarted": false
+  },
+  "newDirectoryBuildActuallyExecuted": true
+}

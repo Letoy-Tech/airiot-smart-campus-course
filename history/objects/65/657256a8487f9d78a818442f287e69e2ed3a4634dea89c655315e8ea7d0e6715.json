@@ -1,0 +1,278 @@
+{
+  "updatedAt": "2026-10-19T19:06:26.467Z",
+  "source": "CodeBuddy visible completed-response statistics",
+  "serviceChannel": "CodeBuddy built-in",
+  "selectedUiModel": "Deepseek-V4.1-Flash",
+  "upstreamModelIdExposed": false,
+  "entries": [
+    {
+      "id": "model-check/001",
+      "label": "minimum connectivity",
+      "credits": 0.12,
+      "totalTokens": 8302
+    },
+    {
+      "id": "stage-01/04-state-ask-ui.txt",
+      "credits": 0.1,
+      "totalTokens": 19973
+    },
+    {
+      "id": "stage-01/05-project-card-ask-output-ui.txt",
+      "credits": 0.09,
+      "totalTokens": 12935,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-01/06-craft-static-output-ui.txt",
+      "credits": 0.7,
+      "totalTokens": 281409,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-02/05-read-chain-ask-output-ui.txt",
+      "credits": 0.31,
+      "totalTokens": 31924,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-02/06-craft-first-read-output-ui.txt",
+      "credits": 1.5,
+      "totalTokens": 668197,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-02/15-real-failure-diagnosis-output-ui.txt",
+      "credits": 0.62,
+      "totalTokens": 118550,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-02/17-craft-refresh-repair-output-ui.txt",
+      "credits": 0.76,
+      "totalTokens": 769816,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-03/04-catalog-acceptance-ask-output-ui.txt",
+      "credits": 0.4,
+      "totalTokens": 57725,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-03/07-craft-catalog-output-ui.txt",
+      "credits": 1.84,
+      "totalTokens": 964259,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-04/03-relationships-ask-output-ui.txt",
+      "credits": 0.84,
+      "totalTokens": 248203,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-04/04-craft-locations-output-ui.txt",
+      "credits": 2,
+      "totalTokens": 895715,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-05/03-ask-output-ui.txt",
+      "credits": 0.4,
+      "totalTokens": 121784,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-05/04-craft-overview-output-ui.txt",
+      "credits": 2.07,
+      "totalTokens": 732368,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-05/06-craft-energy-output-ui.txt",
+      "credits": 0.85,
+      "totalTokens": 485427,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-06/03-ask-output-ui.txt",
+      "credits": 0.38,
+      "totalTokens": 111707,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-06/04-craft-history-output-ui.txt",
+      "credits": 3.54,
+      "totalTokens": 2769631,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-06/05-craft-raw-alarms-output-ui.txt",
+      "credits": 2.38,
+      "totalTokens": 2820036,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-06/18-craft-device-history-link-output-ui.txt",
+      "credits": 0.59,
+      "totalTokens": 1140349,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-06/19-craft-energy-compare-output-ui.txt",
+      "credits": 1.07,
+      "totalTokens": 723672,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-07/03-ask-output-ui.txt",
+      "credits": 0.3,
+      "totalTokens": 72298,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-07/05-craft-access-output-ui.txt",
+      "credits": 1.73,
+      "totalTokens": 978449,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-08/03-ask-output-ui.txt",
+      "credits": 0.34,
+      "totalTokens": 100101,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-08/04-craft-cases-plan-output-ui.txt",
+      "credits": 1.05,
+      "totalTokens": 460421,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-08/05-craft-cases-execute-output-ui.txt",
+      "credits": 2.04,
+      "totalTokens": 1009679,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-09/03-ask-output-ui.txt",
+      "credits": 0.35,
+      "totalTokens": 74979,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-09/05-craft-close-checklist-output-ui.txt",
+      "credits": 1.3,
+      "totalTokens": 613030,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-09/07-craft-close-wiring-output-ui.txt",
+      "credits": 1.23,
+      "totalTokens": 1240371,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-10/03-ask-output-ui.txt",
+      "credits": 0.39,
+      "totalTokens": 114197,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-10/04-craft-owners-output-ui.txt",
+      "credits": 1.67,
+      "totalTokens": 768905,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-10/05-craft-audit-output-ui.txt",
+      "credits": 0.8,
+      "totalTokens": 770962,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-10/12-craft-integration-output-ui.txt",
+      "credits": 0.58,
+      "totalTokens": 587686,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/03-ask-output-ui.txt",
+      "credits": 0.03,
+      "totalTokens": 8746,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/09-real-failure-diagnosis-output-ui.txt",
+      "credits": 0.08,
+      "totalTokens": 20928,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/11-craft-one-line-repair-output-ui.txt",
+      "credits": 0.17,
+      "totalTokens": 86081,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/13-craft-workflow-regressions-output-ui.txt",
+      "credits": 3.5,
+      "totalTokens": 2404431,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/16-craft-monitoring-regressions-output-ui.txt",
+      "credits": 3.14,
+      "totalTokens": 2730092,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/20-craft-read-pages-regressions-output-ui.txt",
+      "credits": 1.56,
+      "totalTokens": 931541,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-11/23-craft-energy-scope-repair-output-ui.txt",
+      "credits": 1.13,
+      "totalTokens": 715278,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-12/03-ask-delivery-output-ui.txt",
+      "credits": 0.38,
+      "totalTokens": 46428,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-12/05-craft-delivery-docs-tool-output-ui.txt",
+      "credits": 1.57,
+      "totalTokens": 653461,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-12/07-craft-doc-review-fixes-output-ui.txt",
+      "credits": 0.86,
+      "totalTokens": 968531,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-12/28-craft-final-handoff-results-output-ui.txt",
+      "credits": 0.55,
+      "totalTokens": 685371,
+      "promptLocated": true
+    },
+    {
+      "id": "stage-12/34-craft-acceptance-status-output-ui.txt",
+      "credits": 0.23,
+      "totalTokens": 325374,
+      "promptLocated": true
+    }
+  ],
+  "totalCreditsDisplayed": 45.54,
+  "totalTokensDisplayed": 29349322,
+  "cashCost": null,
+  "alibabaUsage": null,
+  "limitations": "CodeBuddy completed-response UI totals, possibly repeated internal calls; no input/output split, cash bill, or upstream exact model ID. Not Aliyun usage. Pending response excluded.",
+  "missingCompletedStatistics": []
+}

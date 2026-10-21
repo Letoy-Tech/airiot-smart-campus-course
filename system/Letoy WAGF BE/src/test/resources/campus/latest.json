@@ -1,0 +1,198 @@
+[
+  {
+    "id": "env_demo_01",
+    "tableId": "campus_environment",
+    "tagId": "temperature_c",
+    "time": 1791053777001,
+    "value": 25.5
+  },
+  {
+    "id": "env_demo_01",
+    "tableId": "campus_environment",
+    "tagId": "humidity_pct",
+    "time": 1791053777001,
+    "value": 57.7
+  },
+  {
+    "id": "env_demo_02",
+    "tableId": "campus_environment",
+    "tagId": "temperature_c",
+    "time": 1791053777001,
+    "value": 25
+  },
+  {
+    "id": "env_demo_02",
+    "tableId": "campus_environment",
+    "tagId": "humidity_pct",
+    "time": 1791053777001,
+    "value": 52.6
+  },
+  {
+    "id": "env_demo_03",
+    "tableId": "campus_environment",
+    "tagId": "temperature_c",
+    "time": 1791053777001,
+    "value": 31.5
+  },
+  {
+    "id": "env_demo_03",
+    "tableId": "campus_environment",
+    "tagId": "humidity_pct",
+    "time": 1791053777001,
+    "value": 46.9
+  },
+  {
+    "id": "env_demo_04",
+    "tableId": "campus_environment",
+    "tagId": "temperature_c",
+    "time": 1791053777002,
+    "value": 24.6
+  },
+  {
+    "id": "env_demo_04",
+    "tableId": "campus_environment",
+    "tagId": "humidity_pct",
+    "time": 1791053777002,
+    "value": 56.6
+  },
+  {
+    "id": "energy_demo_01",
+    "tableId": "campus_energy",
+    "tagId": "voltage_v",
+    "time": 1791053777001,
+    "value": 229.9
+  },
+  {
+    "id": "energy_demo_01",
+    "tableId": "campus_energy",
+    "tagId": "power_kw",
+    "time": 1791053777001,
+    "value": 10.73
+  },
+  {
+    "id": "energy_demo_02",
+    "tableId": "campus_energy",
+    "tagId": "voltage_v",
+    "time": 1791053777001,
+    "value": 222
+  },
+  {
+    "id": "energy_demo_02",
+    "tableId": "campus_energy",
+    "tagId": "power_kw",
+    "time": 1791053777001,
+    "value": 8.9
+  },
+  {
+    "id": "energy_demo_03",
+    "tableId": "campus_energy",
+    "tagId": "voltage_v",
+    "time": 1791053777001,
+    "value": 221.1
+  },
+  {
+    "id": "energy_demo_03",
+    "tableId": "campus_energy",
+    "tagId": "power_kw",
+    "time": 1791053777001,
+    "value": 11.92
+  },
+  {
+    "id": "energy_demo_04",
+    "tableId": "campus_energy",
+    "tagId": "voltage_v",
+    "time": 1791053777001,
+    "value": 225.3
+  },
+  {
+    "id": "energy_demo_04",
+    "tableId": "campus_energy",
+    "tagId": "power_kw",
+    "time": 1791053777001,
+    "value": 4.6
+  },
+  {
+    "id": "facility_demo_01",
+    "tableId": "campus_facility",
+    "tagId": "run_state",
+    "time": 1791053777001,
+    "value": 1
+  },
+  {
+    "id": "facility_demo_01",
+    "tableId": "campus_facility",
+    "tagId": "equipment_temperature_c",
+    "time": 1791053777001,
+    "value": 60.3
+  },
+  {
+    "id": "facility_demo_02",
+    "tableId": "campus_facility",
+    "tagId": "run_state",
+    "time": 1791053777001,
+    "value": 1
+  },
+  {
+    "id": "facility_demo_02",
+    "tableId": "campus_facility",
+    "tagId": "equipment_temperature_c",
+    "time": 1791053777001,
+    "value": 49.9
+  },
+  {
+    "id": "facility_demo_03",
+    "tableId": "campus_facility",
+    "tagId": "run_state",
+    "time": 1791053777001,
+    "value": 1
+  },
+  {
+    "id": "facility_demo_03",
+    "tableId": "campus_facility",
+    "tagId": "equipment_temperature_c",
+    "time": 1791053777001,
+    "value": 57.9
+  },
+  {
+    "id": "facility_demo_04",
+    "tableId": "campus_facility",
+    "tagId": "run_state",
+    "time": 1791053777001,
+    "value": 1
+  },
+  {
+    "id": "facility_demo_04",
+    "tableId": "campus_facility",
+    "tagId": "equipment_temperature_c",
+    "time": 1791053777001,
+    "value": 52.3
+  },
+  {
+    "id": "light_demo_01",
+    "tableId": "campus_lighting",
+    "tagId": "illuminance_lux",
+    "time": 1791053777001,
+    "value": 639
+  },
+  {
+    "id": "light_demo_02",
+    "tableId": "campus_lighting",
+    "tagId": "illuminance_lux",
+    "time": 1791053777001,
+    "value": 359
+  },
+  {
+    "id": "light_demo_03",
+    "tableId": "campus_lighting",
+    "tagId": "illuminance_lux",
+    "time": 1791053777001,
+    "value": 602
+  },
+  {
+    "id": "light_demo_04",
+    "tableId": "campus_lighting",
+    "tagId": "illuminance_lux",
+    "time": 1791053777001,
+    "value": 577
+  }
+]

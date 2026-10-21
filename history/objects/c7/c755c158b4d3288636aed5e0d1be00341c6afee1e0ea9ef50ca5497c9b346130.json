@@ -1,0 +1,87 @@
+{
+  "url": "https://desktop.docker.com/mac/main/arm64/Docker.dmg",
+  "bytes": 599061934,
+  "sha256": "d21bd8787e8761b22c2b1b78c34ffa99abb6c06219b43ba84b6b45087a35c9fe",
+  "parts": [
+    {
+      "i": 0,
+      "bytes": 37441371,
+      "sha256": "9dfa408fa617a0f4bf43e1966726196e8fa47cd23f8a5f5b0ad25c20db76595a"
+    },
+    {
+      "i": 1,
+      "bytes": 37441371,
+      "sha256": "70ff0c222dd9600a6afb1a767049d8a98c3b06ff534a2f45c616ab016b1ef61f"
+    },
+    {
+      "i": 2,
+      "bytes": 37441371,
+      "sha256": "574daa04de81e27a681e05dc8d88b2349efded3d73678a83d91c0412a68cae36"
+    },
+    {
+      "i": 3,
+      "bytes": 37441371,
+      "sha256": "857f9252e2241c70dd2da9697311c33c867f6a9a4497461aad9fdb07b2178ae3"
+    },
+    {
+      "i": 4,
+      "bytes": 37441371,
+      "sha256": "009469ae99a20851237d9b29d24519ddb1f37e9f2d128c6bfe712c18f30d1e52"
+    },
+    {
+      "i": 5,
+      "bytes": 37441371,
+      "sha256": "e20ee7146e18e68c6fd750ac8218d4237586b6eaa5826a3e9ebe7e71fafe1191"
+    },
+    {
+      "i": 6,
+      "bytes": 37441371,
+      "sha256": "4fd9cd58f1cf7d98a9876cd155da6fff3d1015d5287d914fe0a6b14b0eb485d0"
+    },
+    {
+      "i": 7,
+      "bytes": 37441371,
+      "sha256": "5253112bb590bde32a05204afb303fa5873f3d7656cf90a4b1795dc9ed820291"
+    },
+    {
+      "i": 8,
+      "bytes": 37441371,
+      "sha256": "0af0b70bbb53c65103492005808ad4a5a8c087e28b25e742c802b5f0e3fe8304"
+    },
+    {
+      "i": 9,
+      "bytes": 37441371,
+      "sha256": "446e57c03d984633cf32659804991e4b5590bb985a5a906dcc775bf747456baf"
+    },
+    {
+      "i": 10,
+      "bytes": 37441371,
+      "sha256": "c8b3c2d1633146054337feaacf95b00cf884f414d650a7175d84a6e0a9ad3273"
+    },
+    {
+      "i": 11,
+      "bytes": 37441371,
+      "sha256": "23140c1229e7a7608cdb92a1f9c466ab96c543f906d97917cafd8c5b4fce3146"
+    },
+    {
+      "i": 12,
+      "bytes": 37441371,
+      "sha256": "88dbd576a6be626d19eed18317ec6cc4b4fabfaad32c2a51ae3698524dac2bc7"
+    },
+    {
+      "i": 13,
+      "bytes": 37441371,
+      "sha256": "828a26b41e4fcd09d20f3ddf9937fe840041d09e2b20586759a198dc0c0aaa81"
+    },
+    {
+      "i": 14,
+      "bytes": 37441371,
+      "sha256": "0e9b2c092ab6336b7a93334490254b26304ea5a972fc1f5c4d8675a8aa645ecc"
+    },
+    {
+      "i": 15,
+      "bytes": 37441369,
+      "sha256": "27f69a86e394bd17bafd3db10a1642ae147b57b4391bba127ea6d9eed4422458"
+    }
+  ]
+}

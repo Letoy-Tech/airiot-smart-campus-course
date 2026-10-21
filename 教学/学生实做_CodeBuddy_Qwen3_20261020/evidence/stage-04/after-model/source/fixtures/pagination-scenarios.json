@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "SCENARIO_SPEC",
+  "executionStatus": "NOT_EXECUTED",
+  "endpoint": "GET /campus/alarm-cases",
+  "setup": {
+    "actorKey": "teaching_viewer",
+    "matchingRowCount": 4,
+    "concurrentWrites": false,
+    "filters": {}
+  },
+  "sortSemantics": "createdAt DESC, id DESC；先按筛选条件计数，再排序分页。此处4条/limit=2为API边界规格，不是第12章UI分页演示种子，执行状态仍为NOT_EXECUTED。",
+  "basis": "limit=1..100、skip=0..10000沿现有接口范围；这些范围用于事件列表，不外推至其他接口",
+  "cases": [
+    {
+      "id": "first-page",
+      "query": {
+        "limit": 2,
+        "skip": 0
+      },
+      "expectedHttpStatus": 200,
+      "expectedItemsLength": 2,
+      "expectedTotal": 4
+    },
+    {
+      "id": "past-end",
+      "query": {
+        "limit": 2,
+        "skip": 4
+      },
+      "expectedHttpStatus": 200,
+      "expectedItemsLength": 0,
+      "expectedTotal": 4
+    },
+    {
+      "id": "minimum-limit",
+      "query": {
+        "limit": 1,
+        "skip": 0
+      },
+      "expectedHttpStatus": 200,
+      "expectedItemsLength": 1,
+      "expectedTotal": 4
+    },
+    {
+      "id": "maximum-limit",
+      "query": {
+        "limit": 100,
+        "skip": 0
+      },
+      "expectedHttpStatus": 200,
+      "expectedItemsLength": 4,
+      "expectedTotal": 4
+    },
+    {
+      "id": "maximum-skip",
+      "query": {
+        "limit": 2,
+        "skip": 10000
+      },
+      "expectedHttpStatus": 200,
+      "expectedItemsLength": 0,
+      "expectedTotal": 4
+    },
+    {
+      "id": "limit-too-small",
+      "query": {
+        "limit": 0,
+        "skip": 0
+      },
+      "expectedHttpStatus": 400,
+      "expectedNoWrite": true
+    },
+    {
+      "id": "limit-too-large",
+      "query": {
+        "limit": 101,
+        "skip": 0
+      },
+      "expectedHttpStatus": 400,
+      "expectedNoWrite": true
+    },
+    {
+      "id": "skip-negative",
+      "query": {
+        "limit": 2,
+        "skip": -1
+      },
+      "expectedHttpStatus": 400,
+      "expectedNoWrite": true
+    },
+    {
+      "id": "skip-too-large",
+      "query": {
+        "limit": 2,
+        "skip": 10001
+      },
+      "expectedHttpStatus": 400,
+      "expectedNoWrite": true
+    }
+  ]
+}

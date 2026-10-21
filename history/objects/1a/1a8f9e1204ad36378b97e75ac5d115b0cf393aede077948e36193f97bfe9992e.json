@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "stage": 11,
+  "title": "调试与测试",
+  "mode": "真实数据库另用独立_test库",
+  "goal": "修复真实缺陷并读并发回滚证据",
+  "contract": "前端测试不是MySQL回滚证明；400/403/409不是事务回滚成功",
+  "acceptance": "保留修复前后测试；真实DB因果链由实际报告证明",
+  "businessFiles": [],
+  "scaffoldingFiles": [
+    "frontend/src/journey/features.ts",
+    "frontend/src/tests/case-trigger-race.test.ts",
+    "frontend/src/tests/comparison.test.ts",
+    "frontend/src/tests/monitoring-views.test.ts",
+    "frontend/src/tests/read-api.test.ts",
+    "frontend/src/tests/read-models.test.ts",
+    "frontend/src/tests/read-pages.test.ts",
+    "frontend/src/tests/workflow-views.test.ts",
+    "frontend/src/tests/journey-navigation.test.ts",
+    "docs/调试记录.md"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8",
+      "bytes": 131,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144,
+      "role": "foundation"
+    },
+    {
+      "path": "docs/调试记录.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

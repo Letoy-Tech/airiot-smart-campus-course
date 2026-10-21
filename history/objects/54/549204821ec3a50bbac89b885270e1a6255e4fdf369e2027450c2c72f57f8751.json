@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-21T03:39:47.654912+08:00",
+  "version": "2.0.2",
+  "scope": "Sampled desktop lessons10/11/12 and emulated390px lessons10/12; not all pages, not physical mobile",
+  "viewportCss": [
+    1265,
+    723
+  ],
+  "checks": [
+    "chapter10 navigation shows correct lesson and version",
+    "step5 anchor scrolls to the correct heading",
+    "Chinese text and code wrap without overlap or right clipping",
+    "copy button produced actual success/selection feedback; clipboard contents not read",
+    "lesson11 creation prompt visibly includes same-transaction case.create audit",
+    "lesson12 desktop step3 uses isolated Compose project instructions",
+    "390px steps10-5 and12-3 wrap Chinese and long code without horizontal clipping; corrected12 screenshot re-anchored after viewport reflow"
+  ],
+  "sourceLessonSha256": "e8bfff9c653214cf997c582281a9e6d32d95bf05502796cdb25f85acdc9b7530",
+  "builderSha256": "2cfdec65bc6044f7970dbaddf3c85dc1c8478523c2ffcec6264cb2be196b624c",
+  "screenshots": [
+    {
+      "file": "reader-v202-10-desktop.png",
+      "sha256": "cbdc2a780b7183e3883d76f4cf270be91d5e65f45ff0eb306f723f3b38930734",
+      "pngPixels": [
+        2560,
+        1446
+      ],
+      "visuallyOpened": true
+    },
+    {
+      "file": "reader-v202-10-version-prompt.png",
+      "sha256": "1b1688096b156e45d3bfbb5dc4341cd065e82bf4c6f99aa6c7d9c655ec1ecf2f",
+      "pngPixels": [
+        2560,
+        1446
+      ],
+      "visuallyOpened": true
+    },
+    {
+      "file": "reader-v202-11-create-prompt.png",
+      "sha256": "20a9fde587957fac0e401eb225be5d9c9da1640e7f70c1a9329637f0cfb1625e",
+      "pngPixels": [
+        2560,
+        1446
+      ],
+      "visuallyOpened": true
+    },
+    {
+      "file": "reader-v202-12-handoff-desktop.png",
+      "sha256": "c9ca8ef12c9792bf8083ae6e2d852e10c7e01a35b35e3fd322b654b1bc809815",
+      "pngPixels": [
+        2560,
+        1446
+      ],
+      "visuallyOpened": true
+    },
+    {
+      "file": "reader-v202-10-version-mobile.png",
+      "sha256": "cc7cfebf08c09097ee55291916458b03c5eef62ae1f3ead64fbb54d0c035e04c",
+      "pngPixels": [
+        1170,
+        2532
+      ],
+      "visuallyOpened": true
+    },
+    {
+      "file": "reader-v202-12-handoff-mobile-anchored.png",
+      "sha256": "a29e14ad08ebfc4e4437e3d68342edd46199735a4768495dbb0d921e13e4dfab",
+      "pngPixels": [
+        1170,
+        2532
+      ],
+      "visuallyOpened": true
+    }
+  ],
+  "mobileChecked": true,
+  "printedPdfChecked": false,
+  "mobileEnvironment": {
+    "browser": "Chrome CDP iPhone14 preset",
+    "cssViewport": [
+      390,
+      843
+    ],
+    "physicalDeviceVerified": false
+  },
+  "sources": {
+    "11-让一件演练有始有终.md": "5dbe93e538d9ed602dc7624c268821a3f2ca28e6475b43691afd4f6d29102248",
+    "10-逐页接回真实后端.md": "e8bfff9c653214cf997c582281a9e6d32d95bf05502796cdb25f85acdc9b7530",
+    "12-把作品交到新目录.md": "9ea3bbbf735038917e92d712539beff3639ee0f2e756898b06e1cb373d8740a5"
+  }
+}

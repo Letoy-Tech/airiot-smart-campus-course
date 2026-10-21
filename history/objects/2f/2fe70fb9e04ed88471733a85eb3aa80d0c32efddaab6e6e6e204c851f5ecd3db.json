@@ -1,0 +1,15 @@
+{
+  "name": "campus-ai-course-illustration-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render:shared": "node render-figures.mjs",
+    "reader:sample": "node build-reader.mjs --sample",
+    "reader:book": "node build-reader.mjs --strict",
+    "verify:sample": "node verify-reader.mjs --sample"
+  },
+  "dependencies": {
+    "mermaid": "11.12.2"
+  },
+  "engines": { "node": ">=22" }
+}

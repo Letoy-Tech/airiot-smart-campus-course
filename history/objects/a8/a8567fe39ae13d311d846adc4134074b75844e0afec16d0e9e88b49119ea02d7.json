@@ -1,0 +1,10 @@
+{
+  "comparedRoots": [
+    "frontend",
+    "backend",
+    "fixtures",
+    "tools"
+  ],
+  "mismatches": [],
+  "documentationUpdatedAfterRun": true
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-19T15:44:38.726807+00:00",
+  "processesStartedAndStopped": [
+    {
+      "service": "backend",
+      "pid": 48175,
+      "port": 8091
+    },
+    {
+      "service": "frontend",
+      "pid": 45497,
+      "port": 5178
+    },
+    {
+      "service": "mysql",
+      "pid": 42016,
+      "port": 13328
+    }
+  ],
+  "listenersRemaining": "",
+  "onlyRound10ProcessesTouched": true
+}

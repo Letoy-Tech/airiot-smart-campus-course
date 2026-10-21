@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant A as 客户端 A
+    participant B as 客户端 B
+    participant S as 后端事务
+    participant D as 教学 MySQL
+    Note over A,B: 两者均已读取 version=3
+    A->>S: 动作请求 expectedVersion=3
+    S->>D: 开始事务并锁定事件行
+    D-->>S: 当前 version=3
+    B->>S: 动作请求 expectedVersion=3
+    S->>D: B 开始事务并请求同一行锁
+    Note over S,D: B 对同一行的锁请求等待
+    S->>D: A 更新主记录至4并插入时间线
+    S->>D: A 提交事务并释放锁
+    S-->>A: 返回确认结果 version=4
+    D-->>S: B 取得锁，当前 version=4
+    Note over S,D: B 不修改主记录，不追加成功时间线
+    S-->>B: 409 VERSION_CONFLICT
+    Note over B,S: 保留输入、回读最新记录，由人重新决定

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "stage": 8,
+  "title": "事件接收与处理",
+  "mode": "teacher-db",
+  "goal": "场景、列表、分派、开始、NOTE",
+  "contract": "演练是DEMO/LOCAL_DEMO；expectedVersion；本人已分派范围",
+  "acceptance": "创建→分派A→A开始/NOTE；B拒绝；来源与业务状态分开",
+  "businessFiles": [
+    "frontend/src/views/CasesView.vue"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/CasesView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7",
+      "bytes": 1189,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/CasesView.vue",
+      "sha256": "acd2ef451c6403e47fc459ab3324c14e5c97cf1402c0da4f69a25f87c773281b",
+      "bytes": 20655,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>事件接收与处理</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

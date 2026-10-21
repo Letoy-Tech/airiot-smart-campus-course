@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "ownedPortsClosed": {
+    "8091": true,
+    "5178": true,
+    "13328": true
+  },
+  "scope": "Only round9 author-owned application and isolated MySQL; no original system changes"
+}

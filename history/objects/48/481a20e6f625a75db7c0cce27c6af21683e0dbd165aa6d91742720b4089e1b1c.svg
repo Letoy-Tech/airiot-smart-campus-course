@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="968" viewBox="0 0 1280 968" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">教学工程：请求与数据的边界</title>
+  <desc id="figure-desc">教学设计示意。前端通过后端访问本地业务和读取端口；后端执行最终授权。读取端口显式选择教学模拟或选做的 AIRIOT 只读适配。前端不直接访问 AIRIOT，基础教学关闭远端控制和外部通知。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 1 1 L 9 5 L 1 9 Z" fill="#526b7c"/></marker>
+    <marker id="optional-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M 1 1 L 9 5 L 1 9 Z" fill="#a9781b"/></marker>
+    <style>
+      text {font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Heiti SC", sans-serif; fill:#17334b}
+      .title {font-size:32px;font-weight:600}.heading {font-size:28px;font-weight:600}.body {font-size:23px}.detail {font-size:21px;fill:#526b7c}.small {font-size:19px;fill:#526b7c}
+      .line {fill:none;stroke:#526b7c;stroke-width:2.5;stroke-linejoin:round;marker-end:url(#arrow)}
+      .box {stroke-width:2;rx:12}.label-bg {fill:white}
+    </style>
+  </defs>
+  <rect width="1280" height="968" fill="white"/>
+  <rect x="48" y="38" width="5" height="64" rx="2" fill="#245b81"/>
+  <text x="72" y="53" class="small">公共图 01 · 教学示意</text>
+  <text x="72" y="98" class="title">教学工程：请求与数据的边界</text>
+  <text x="64" y="150" class="detail">拟定教学工程 campus-ai-course/ · 各层职责先明确，再实现接口</text>
+
+  <rect x="64" y="202" width="288" height="174" class="box" fill="#edf4fb" stroke="#487ca4"/>
+  <text x="88" y="247" class="heading">学生自主设计的前端</text>
+  <text x="88" y="287" class="body">Vue 3 · TypeScript</text>
+  <text x="88" y="326" class="detail">展示数据与操作入口</text>
+  <text x="88" y="355" class="detail">按真实响应呈现状态</text>
+
+  <rect x="488" y="202" width="288" height="174" class="box" fill="#edf7f4" stroke="#558c7e"/>
+  <text x="512" y="247" class="heading">后端业务服务</text>
+  <text x="512" y="287" class="body">Java · Spring Boot</text>
+  <text x="512" y="326" class="detail">最终授权、参数与状态校验</text>
+  <text x="512" y="355" class="detail">事务与版本检查</text>
+
+  <rect x="912" y="202" width="304" height="174" class="box" fill="#f3f6f9" stroke="#8da6b8"/>
+  <text x="936" y="247" class="heading">统一读取端口</text>
+  <text x="936" y="287" class="body">CampusDataProvider</text>
+  <text x="936" y="326" class="detail">空间、设备、点值、历史</text>
+  <text x="936" y="355" class="detail">原始报警、接入状态</text>
+
+  <path d="M352 294 H488" class="line" marker-start="url(#arrow)"/>
+  <text x="420" y="251" text-anchor="middle" class="small">JSON</text>
+  <text x="420" y="278" text-anchor="middle" class="small">请求 / 响应</text>
+  <path d="M776 294 H912" class="line"/>
+  <text x="844" y="278" text-anchor="middle" class="small">读取请求</text>
+
+  <path d="M632 376 V436 H224 V566" class="line"/>
+  <rect x="279" y="417" width="220" height="37" class="label-bg"/>
+  <text x="389" y="443" text-anchor="middle" class="detail">本地事务读写</text>
+  <path d="M1064 376 V490 H632 V566" class="line"/>
+  <rect x="702" y="471" width="248" height="36" class="label-bg"/>
+  <text x="826" y="497" text-anchor="middle" class="detail">显式选择：必修模拟源</text>
+  <path d="M1064 490 V566" fill="none" stroke="#a9781b" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#optional-arrow)"/>
+  <text x="1082" y="538" class="small">选做</text>
+
+  <rect x="64" y="566" width="320" height="202" class="box" fill="#edf7f4" stroke="#558c7e"/>
+  <text x="88" y="611" class="heading">独立教学数据库</text>
+  <text x="88" y="652" class="body">映射 · 演练 · 设备责任</text>
+  <text x="88" y="692" class="detail">主记录与时间线同事务</text>
+  <text x="88" y="725" class="detail">保留服务端操作者与时间</text>
+
+  <rect x="488" y="566" width="288" height="202" class="box" fill="#f3f6f9" stroke="#8da6b8"/>
+  <text x="512" y="611" class="heading">教学模拟数据</text>
+  <text x="512" y="652" class="body">TEACHING_MOCK</text>
+  <text x="512" y="692" class="detail">确定性种子、可控时钟</text>
+  <text x="512" y="725" class="detail">simulated = true</text>
+
+  <rect x="912" y="566" width="304" height="202" class="box" fill="#fff5df" stroke="#b58429" stroke-dasharray="8 6"/>
+  <text x="936" y="611" class="heading">AIRIOT 只读适配</text>
+  <text x="936" y="652" class="body">AIRIOT · 课外选做</text>
+  <text x="936" y="692" class="detail">凭据仅留在后端</text>
+  <text x="936" y="725" class="detail">上游失败必须如实返回</text>
+
+  <rect x="64" y="812" width="1152" height="61" rx="8" fill="#f7fafc"/>
+  <text x="84" y="850" class="detail">source 与 simulated 含义不同：来源为 AIRIOT 的设备也可能是模拟设备。</text>
+  <line x1="48" y1="899" x2="1232" y2="899" stroke="#cfdae2"/>
+  <text x="48" y="934" class="small">基础教学关闭远端控制与外部通知 · 教学设计示意 · 不代表实验已验证</text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "stage": 4,
+  "title": "本地位置登记",
+  "mode": "teacher-db",
+  "goal": "校园、楼栋、空间绑定保存并回读",
+  "contract": "GET /locations；POST campuses/buildings；PUT spaces/{spaceId}；管理员写，合法引用",
+  "acceptance": "保存重读；非法引用拒绝；查看者403；原关系不变",
+  "businessFiles": [
+    "frontend/src/views/LocationsView.vue"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/LocationsView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3",
+      "bytes": 530,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>本地位置登记</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

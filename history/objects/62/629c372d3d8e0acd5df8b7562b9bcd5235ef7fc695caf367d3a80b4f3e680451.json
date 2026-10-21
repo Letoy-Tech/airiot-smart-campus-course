@@ -1,0 +1,59 @@
+{
+  "recordedAt": "2026-10-19T19:02:50.352Z",
+  "receiver": "same operator fresh-directory simulation",
+  "directory": "handoff-run/app",
+  "sourceFiles": 162,
+  "dependenciesInstalledFromLock": true,
+  "accountRegenerated": true,
+  "newPhysicalDatabaseDataDirectory": true,
+  "migrationsApplied": 2,
+  "mainDatabaseInitiallyEmptyCases": true,
+  "ports": {
+    "backend": 8091,
+    "frontend": 5178,
+    "mysql": 23491
+  },
+  "versions": {
+    "node": "22.21.1",
+    "java": "17.0.12",
+    "mysql": "8.4.10"
+  },
+  "frontendTests": {
+    "tests": 74,
+    "passed": 74
+  },
+  "ordinaryBackendTests": {
+    "tests": 50,
+    "skipped": 16,
+    "failed": 0,
+    "errors": 0
+  },
+  "sameDevice": "teaching_energy_01",
+  "history": {
+    "tag": "power",
+    "samples": 4,
+    "nulls": 1,
+    "validZeros": 1
+  },
+  "case": {
+    "id": "8f35eeea-3d65-4ac1-ae9e-7b0683dc4d7f",
+    "sequence": [
+      "NEW/v1",
+      "ASSIGNED/v2",
+      "IN_PROGRESS/v3",
+      "NOTE/v4",
+      "RECOVERED/v5",
+      "PASS/v6 still IN_PROGRESS",
+      "CLOSED/v7"
+    ],
+    "reloadConfirmed": true,
+    "conclusionPersisted": true
+  },
+  "notVerified": [
+    "another human receiver",
+    "Windows device",
+    "real campus database",
+    "real AIRIOT"
+  ],
+  "noSourceBusinessChangesDuringFreshRun": true
+}

@@ -1,0 +1,1843 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T10:47:08.783Z",
+  "output": "reading/AI编程图文初稿_V0.2_单文件.html",
+  "sha256": "b5b2976e5c81f602fb43d7207687fe8a678ee420fba1969bccab98679455ee92",
+  "mode": "BOOK_STRICT",
+  "embeddedImages": true,
+  "chapters": 12,
+  "figures": 40,
+  "dependency": {
+    "marked": "16.4.2"
+  },
+  "labVerified": false,
+  "documents": [
+    {
+      "file": "07-图文初稿阅读指南.md",
+      "frontmatterRemoved": false,
+      "sha256": "de5944b3cfc1b77dd40f830156a44ce4f0b4bb05a5560ac69c0cdd50c70499d8",
+      "id": "preface-1",
+      "chapter": null,
+      "headings": [
+        {
+          "text": "AI 编程图文初稿阅读指南",
+          "depth": 1,
+          "slug": "ai-编程图文初稿阅读指南",
+          "id": "preface-1"
+        },
+        {
+          "text": "一章怎样读",
+          "depth": 2,
+          "slug": "一章怎样读",
+          "id": "preface-1-一章怎样读"
+        },
+        {
+          "text": "三类示例",
+          "depth": 2,
+          "slug": "三类示例",
+          "id": "preface-1-三类示例"
+        },
+        {
+          "text": "核心与选做",
+          "depth": 2,
+          "slug": "核心与选做",
+          "id": "preface-1-核心与选做"
+        },
+        {
+          "text": "五个里程碑",
+          "depth": 2,
+          "slug": "五个里程碑",
+          "id": "preface-1-五个里程碑"
+        },
+        {
+          "text": "常见术语",
+          "depth": 2,
+          "slug": "常见术语",
+          "id": "preface-1-常见术语"
+        },
+        {
+          "text": "当前阅读边界",
+          "depth": 2,
+          "slug": "当前阅读边界",
+          "id": "preface-1-当前阅读边界"
+        }
+      ],
+      "title": "AI 编程图文初稿阅读指南",
+      "images": [
+        {
+          "id": "fig-shared-02-网页AI协作",
+          "chapter": null,
+          "stem": "shared-02-网页AI协作",
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "caption": "公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。",
+          "file": "illustrations/shared-02-网页AI协作.png",
+          "pngSha256": "542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929",
+          "width": 2560,
+          "height": 2182
+        },
+        {
+          "id": "fig-shared-01-教学工程边界",
+          "chapter": null,
+          "stem": "shared-01-教学工程边界",
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "caption": "公共图 01　教学工程：请求与数据的边界。蓝色为界面，青色为后端业务与本地持久化，灰蓝色为读取端口，金色虚线为选做只读接入。箭头说明请求方向；教学示意，非运行证据。",
+          "file": "illustrations/shared-01-教学工程边界.png",
+          "pngSha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+          "width": 2560,
+          "height": 1936
+        }
+      ]
+    },
+    {
+      "file": "manuscript/01-软件工程入门与网页AI协作.md",
+      "frontmatterRemoved": true,
+      "sha256": "6a27cf99061a76fcd0adc62f99d8754f65b639c8f12dfabd4a6794d4ad2d054d",
+      "id": "chapter-01",
+      "chapter": "01",
+      "headings": [
+        {
+          "text": "第 01 章 软件工程入门与网页 AI 协作",
+          "depth": 1,
+          "slug": "第-01-章-软件工程入门与网页-ai-协作",
+          "id": "chapter-01"
+        },
+        {
+          "text": "从一个看起来很小的请求开始",
+          "depth": 2,
+          "slug": "从一个看起来很小的请求开始",
+          "id": "chapter-01-从一个看起来很小的请求开始"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-01-进入条件与学习目标"
+        },
+        {
+          "text": "模块一：把代码放回工程过程（1 学时）",
+          "depth": 2,
+          "slug": "模块一把代码放回工程过程1-学时",
+          "id": "chapter-01-模块一把代码放回工程过程1-学时"
+        },
+        {
+          "text": "1.1 软件工程为什么从问题开始",
+          "depth": 3,
+          "slug": "11-软件工程为什么从问题开始",
+          "id": "chapter-01-11-软件工程为什么从问题开始"
+        },
+        {
+          "text": "1.2 一张功能卡怎样避免误解",
+          "depth": 3,
+          "slug": "12-一张功能卡怎样避免误解",
+          "id": "chapter-01-12-一张功能卡怎样避免误解"
+        },
+        {
+          "text": "模块二：与网页 AI 完成一个小任务（2 学时）",
+          "depth": 2,
+          "slug": "模块二与网页-ai-完成一个小任务2-学时",
+          "id": "chapter-01-模块二与网页-ai-完成一个小任务2-学时"
+        },
+        {
+          "text": "1.3 先知道对话框掌握了什么",
+          "depth": 3,
+          "slug": "13-先知道对话框掌握了什么",
+          "id": "chapter-01-13-先知道对话框掌握了什么"
+        },
+        {
+          "text": "1.4 好坏提示的差别在于是否可检查",
+          "depth": 3,
+          "slug": "14-好坏提示的差别在于是否可检查",
+          "id": "chapter-01-14-好坏提示的差别在于是否可检查"
+        },
+        {
+          "text": "1.5 三轮协作：从建议到人工判断",
+          "depth": 3,
+          "slug": "15-三轮协作从建议到人工判断",
+          "id": "chapter-01-15-三轮协作从建议到人工判断"
+        },
+        {
+          "text": "1.6 最小实验：留下可复查的三轮记录",
+          "depth": 3,
+          "slug": "16-最小实验留下可复查的三轮记录",
+          "id": "chapter-01-16-最小实验留下可复查的三轮记录"
+        },
+        {
+          "text": "模块三：把结论变成证据与交接（1 学时）",
+          "depth": 2,
+          "slug": "模块三把结论变成证据与交接1-学时",
+          "id": "chapter-01-模块三把结论变成证据与交接1-学时"
+        },
+        {
+          "text": "1.7 哪一种证据支持哪一种结论",
+          "depth": 3,
+          "slug": "17-哪一种证据支持哪一种结论",
+          "id": "chapter-01-17-哪一种证据支持哪一种结论"
+        },
+        {
+          "text": "1.8 接力不是复制聊天的最后一句",
+          "depth": 3,
+          "slug": "18-接力不是复制聊天的最后一句",
+          "id": "chapter-01-18-接力不是复制聊天的最后一句"
+        },
+        {
+          "text": "人工检查、常见错误与验收",
+          "depth": 2,
+          "slug": "人工检查常见错误与验收",
+          "id": "chapter-01-人工检查常见错误与验收"
+        },
+        {
+          "text": "课后巩固与答案要点",
+          "depth": 2,
+          "slug": "课后巩固与答案要点",
+          "id": "chapter-01-课后巩固与答案要点"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "chapter-01-交给下一章"
+        }
+      ],
+      "title": "第 01 章 软件工程入门与网页 AI 协作",
+      "images": [
+        {
+          "id": "fig-ch01-01-engineering-cycle",
+          "chapter": "01",
+          "stem": "ch01-01-engineering-cycle",
+          "alt": "使用问题依次进入需求、设计、实现、验证和交付；验证发现偏差后回到需求或设计，交付后的新问题开始下一轮。",
+          "caption": "图 01-01　从使用问题到可交接证据。教学示意，非运行证据。",
+          "file": "illustrations/ch01-01-engineering-cycle.png",
+          "pngSha256": "28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d",
+          "width": 2560,
+          "height": 1992
+        },
+        {
+          "id": "fig-ch01-02-prompt-comparison",
+          "chapter": "01",
+          "stem": "ch01-02-prompt-comparison",
+          "alt": "含糊提示只有“完整、专业”，输出范围无法判断；明确提示包含目标、输入、规则、边界和验收，可逐项核对模型建议。",
+          "caption": "图 01-02　从含糊要求到可检查的小任务。教学示意，非运行证据。",
+          "file": "illustrations/ch01-02-prompt-comparison.png",
+          "pngSha256": "132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc",
+          "width": 2560,
+          "height": 1900
+        },
+        {
+          "id": "fig-ch01-03-ai-evidence-loop",
+          "chapter": "01",
+          "stem": "ch01-03-ai-evidence-loop",
+          "alt": "学生提供目标和合同，网页 AI 给建议，学生审查并应用，再在本地核验；不符时回传证据，符合时记录结果并交接。",
+          "caption": "图 01-03　网页 AI 协作中的人工证据闭环。教学示意，非运行证据。",
+          "file": "illustrations/ch01-03-ai-evidence-loop.png",
+          "pngSha256": "02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065",
+          "width": 2560,
+          "height": 1992
+        }
+      ]
+    },
+    {
+      "file": "manuscript/02-需求分析与项目计划.md",
+      "frontmatterRemoved": true,
+      "sha256": "d4a25dcb90023233e363f55e39a6e4e039d5331ca55a784c889039092df7a9a4",
+      "id": "chapter-02",
+      "chapter": "02",
+      "headings": [
+        {
+          "text": "第 02 章 需求分析与项目计划",
+          "depth": 1,
+          "slug": "第-02-章-需求分析与项目计划",
+          "id": "chapter-02"
+        },
+        {
+          "text": "“处理完了”究竟是什么意思",
+          "depth": 2,
+          "slug": "处理完了究竟是什么意思",
+          "id": "chapter-02-处理完了究竟是什么意思"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-02-进入条件与学习目标"
+        },
+        {
+          "text": "模块一：把人的问题写成项目边界（1 学时）",
+          "depth": 2,
+          "slug": "模块一把人的问题写成项目边界1-学时",
+          "id": "chapter-02-模块一把人的问题写成项目边界1-学时"
+        },
+        {
+          "text": "2.1 用户故事需要有目的",
+          "depth": 3,
+          "slug": "21-用户故事需要有目的",
+          "id": "chapter-02-21-用户故事需要有目的"
+        },
+        {
+          "text": "2.2 把必修、选做与范围外放在同一张图里",
+          "depth": 3,
+          "slug": "22-把必修选做与范围外放在同一张图里",
+          "id": "chapter-02-22-把必修选做与范围外放在同一张图里"
+        },
+        {
+          "text": "模块二：写验收条件，再拆分版本（2 学时）",
+          "depth": 2,
+          "slug": "模块二写验收条件再拆分版本2-学时",
+          "id": "chapter-02-模块二写验收条件再拆分版本2-学时"
+        },
+        {
+          "text": "2.3 用“给定—当—则”消除含糊词",
+          "depth": 3,
+          "slug": "23-用给定当则消除含糊词",
+          "id": "chapter-02-23-用给定当则消除含糊词"
+        },
+        {
+          "text": "2.4 把事件关闭拆成可以反驳的规则",
+          "depth": 3,
+          "slug": "24-把事件关闭拆成可以反驳的规则",
+          "id": "chapter-02-24-把事件关闭拆成可以反驳的规则"
+        },
+        {
+          "text": "2.5 用追踪关系发现遗漏",
+          "depth": 3,
+          "slug": "25-用追踪关系发现遗漏",
+          "id": "chapter-02-25-用追踪关系发现遗漏"
+        },
+        {
+          "text": "2.6 计划围绕可观察结果组织",
+          "depth": 3,
+          "slug": "26-计划围绕可观察结果组织",
+          "id": "chapter-02-26-计划围绕可观察结果组织"
+        },
+        {
+          "text": "模块三：评审需求并处理变更（1 学时）",
+          "depth": 2,
+          "slug": "模块三评审需求并处理变更1-学时",
+          "id": "chapter-02-模块三评审需求并处理变更1-学时"
+        },
+        {
+          "text": "2.7 评审者要能提出反例",
+          "depth": 3,
+          "slug": "27-评审者要能提出反例",
+          "id": "chapter-02-27-评审者要能提出反例"
+        },
+        {
+          "text": "2.8 一次变更决定应该留下什么",
+          "depth": 3,
+          "slug": "28-一次变更决定应该留下什么",
+          "id": "chapter-02-28-一次变更决定应该留下什么"
+        },
+        {
+          "text": "最小实验与人工检查",
+          "depth": 2,
+          "slug": "最小实验与人工检查",
+          "id": "chapter-02-最小实验与人工检查"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-02-课后练习与答案要点"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "chapter-02-交给下一章"
+        }
+      ],
+      "title": "第 02 章 需求分析与项目计划",
+      "images": [
+        {
+          "id": "fig-ch02-01-scope-map",
+          "chapter": "02",
+          "stem": "ch02-01-scope-map",
+          "alt": "查看者需要设备和监测，管理人员需要本人事件处理，管理员需要映射、分派与责任管理；AIRIOT 只读接入是选做，真实控制、外部通知和真实学生信息不纳入基础范围。",
+          "caption": "图 02-01　使用者需要与课程范围。教学示意，非运行证据。",
+          "file": "illustrations/ch02-01-scope-map.png",
+          "pngSha256": "3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0",
+          "width": 2560,
+          "height": 1894
+        },
+        {
+          "id": "fig-ch02-02-traceability",
+          "chapter": "02",
+          "stem": "ch02-02-traceability",
+          "alt": "R06 演练闭环连接业务规则与事务任务，分别连接 AC07 闭环、AC08 并发和 AC09 回滚；执行后才产生响应、回读和时间线证据。",
+          "caption": "图 02-02　一条需求如何走到验收证据。教学示意，非运行证据。",
+          "file": "illustrations/ch02-02-traceability.png",
+          "pngSha256": "5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2",
+          "width": 2560,
+          "height": 1118
+        },
+        {
+          "id": "fig-ch02-03-milestones",
+          "chapter": "02",
+          "stem": "ch02-03-milestones",
+          "alt": "M1 第 01—03 章定义项目，M2 第 04—06 章让设备可见，M3 第 07—08 章让数据可信，M4 第 09—10 章完成业务闭环，M5 第 11—12 章测试交付；选做接入不阻塞主线。",
+          "caption": "图 02-03　五个里程碑及其依赖。教学示意，非运行证据。",
+          "file": "illustrations/ch02-03-milestones.png",
+          "pngSha256": "7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54",
+          "width": 2560,
+          "height": 2692
+        }
+      ]
+    },
+    {
+      "file": "manuscript/03-架构数据与接口设计.md",
+      "frontmatterRemoved": true,
+      "sha256": "67073dfe3e53d8e741316b03210840d0652db9d51ad2d919e5ff2bcddb5f833b",
+      "id": "chapter-03",
+      "chapter": "03",
+      "headings": [
+        {
+          "text": "第 03 章 架构、数据与接口设计",
+          "depth": 1,
+          "slug": "第-03-章-架构数据与接口设计",
+          "id": "chapter-03"
+        },
+        {
+          "text": "为什么同一个字段会让两个人都“没有写错”",
+          "depth": 2,
+          "slug": "为什么同一个字段会让两个人都没有写错",
+          "id": "chapter-03-为什么同一个字段会让两个人都没有写错"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-03-进入条件与学习目标"
+        },
+        {
+          "text": "模块一：先划分职责，再选择实现（1 学时）",
+          "depth": 2,
+          "slug": "模块一先划分职责再选择实现1-学时",
+          "id": "chapter-03-模块一先划分职责再选择实现1-学时"
+        },
+        {
+          "text": "3.1 一次读取经过哪些部分",
+          "depth": 3,
+          "slug": "31-一次读取经过哪些部分",
+          "id": "chapter-03-31-一次读取经过哪些部分"
+        },
+        {
+          "text": "3.2 数据源端口为什么不是“随便换一个网址”",
+          "depth": 3,
+          "slug": "32-数据源端口为什么不是随便换一个网址",
+          "id": "chapter-03-32-数据源端口为什么不是随便换一个网址"
+        },
+        {
+          "text": "模块二：把业务事实变成数据与 API（2 学时）",
+          "depth": 2,
+          "slug": "模块二把业务事实变成数据与-api2-学时",
+          "id": "chapter-03-模块二把业务事实变成数据与-api2-学时"
+        },
+        {
+          "text": "3.3 DTO、数据库记录和页面模型解决不同问题",
+          "depth": 3,
+          "slug": "33-dto数据库记录和页面模型解决不同问题",
+          "id": "chapter-03-33-dto数据库记录和页面模型解决不同问题"
+        },
+        {
+          "text": "3.4 一空间、两设备的最小读合同",
+          "depth": 3,
+          "slug": "34-一空间两设备的最小读合同",
+          "id": "chapter-03-34-一空间两设备的最小读合同"
+        },
+        {
+          "text": "3.5 用 ER 图区分观测与业务记录",
+          "depth": 3,
+          "slug": "35-用-er-图区分观测与业务记录",
+          "id": "chapter-03-35-用-er-图区分观测与业务记录"
+        },
+        {
+          "text": "3.6 两类状态不能压进一个“已解决”字段",
+          "depth": 3,
+          "slug": "36-两类状态不能压进一个已解决字段",
+          "id": "chapter-03-36-两类状态不能压进一个已解决字段"
+        },
+        {
+          "text": "3.7 版本描述你依据哪一份事实作决定",
+          "depth": 3,
+          "slug": "37-版本描述你依据哪一份事实作决定",
+          "id": "chapter-03-37-版本描述你依据哪一份事实作决定"
+        },
+        {
+          "text": "模块三：用样例评审合同（1 学时）",
+          "depth": 2,
+          "slug": "模块三用样例评审合同1-学时",
+          "id": "chapter-03-模块三用样例评审合同1-学时"
+        },
+        {
+          "text": "3.8 合同除了成功 JSON 还要写拒绝行为",
+          "depth": 3,
+          "slug": "38-合同除了成功-json-还要写拒绝行为",
+          "id": "chapter-03-38-合同除了成功-json-还要写拒绝行为"
+        },
+        {
+          "text": "3.9 让前后端角色只靠合同交流",
+          "depth": 3,
+          "slug": "39-让前后端角色只靠合同交流",
+          "id": "chapter-03-39-让前后端角色只靠合同交流"
+        },
+        {
+          "text": "最小实验与验收",
+          "depth": 2,
+          "slug": "最小实验与验收",
+          "id": "chapter-03-最小实验与验收"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-03-课后练习与答案要点"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "chapter-03-交给下一章"
+        }
+      ],
+      "title": "第 03 章 架构、数据与接口设计",
+      "images": [
+        {
+          "id": "fig-ch03-01-architecture",
+          "chapter": "03",
+          "stem": "ch03-01-architecture",
+          "alt": "Vue 前端调用 Spring Boot 后端；后端独立处理授权、业务和数据库持久化，并通过 CampusDataProvider 读取 TeachingMockProvider；AiriotProvider 只读接入是可选分支。",
+          "caption": "图 03-01　教学系统职责与数据源边界。教学示意，非运行证据。",
+          "file": "illustrations/ch03-01-architecture.png",
+          "pngSha256": "b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b",
+          "width": 2560,
+          "height": 2804
+        },
+        {
+          "id": "fig-ch03-02-local-records-er",
+          "chapter": "03",
+          "stem": "ch03-02-local-records-er",
+          "alt": "纳入教学集的设备预建一条责任主记录，初始版本为零且历史为空；设备可关联多条演练事件。每条事件至少有创建时间线，责任主记录可有零到多条变更历史。设备为提供器逻辑引用，不是已建本地设备表。",
+          "caption": "图 03-02　设备引用、本地事件与责任的概念 ER 图。教学示意，非运行证据。",
+          "file": "illustrations/ch03-02-local-records-er.png",
+          "pngSha256": "1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f",
+          "width": 2560,
+          "height": 4066
+        },
+        {
+          "id": "fig-ch03-03-two-state-axes",
+          "chapter": "03",
+          "stem": "ch03-03-two-state-axes",
+          "alt": "处置从待分派走向待处理、处理中，满足关闭关卡才到已关闭；管理员恢复来源后还需处理者请求服务端核实，恢复本身没有直达关闭的箭头。",
+          "caption": "图 03-03　来源恢复与处置关闭的两条事实线。教学示意，非运行证据。",
+          "file": "illustrations/ch03-03-two-state-axes.png",
+          "pngSha256": "19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef",
+          "width": 2560,
+          "height": 2432
+        },
+        {
+          "id": "fig-ch03-04-version-transaction",
+          "chapter": "03",
+          "stem": "ch03-04-version-transaction",
+          "alt": "A 和 B 都读取版本 3；A 锁定记录，修改至 4 并插入时间线后提交；B 等待取得锁，发现当前为 4，返回 409，不再修改主记录或追加成功时间线。",
+          "caption": "图 03-04　两个请求竞争同一事件版本。教学示意，非运行证据。",
+          "file": "illustrations/ch03-04-version-transaction.png",
+          "pngSha256": "fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9",
+          "width": 2560,
+          "height": 2436
+        }
+      ]
+    },
+    {
+      "file": "manuscript/04-开发环境版本控制与首次贯通.md",
+      "frontmatterRemoved": true,
+      "sha256": "55643226cfe7f0afea5c940a0dbaf2c10c4917ce361d353dbc2ec00bbbd7c97d",
+      "id": "chapter-04",
+      "chapter": "04",
+      "headings": [
+        {
+          "text": "第 04 章 开发环境、版本控制与首次贯通",
+          "depth": 1,
+          "slug": "第-04-章-开发环境版本控制与首次贯通",
+          "id": "chapter-04"
+        },
+        {
+          "text": "两张相同的页面可能证明不同的事",
+          "depth": 2,
+          "slug": "两张相同的页面可能证明不同的事",
+          "id": "chapter-04-两张相同的页面可能证明不同的事"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-04-进入条件与学习目标"
+        },
+        {
+          "text": "模块一：环境清单与 Git 基线（1 学时）",
+          "depth": 2,
+          "slug": "模块一环境清单与-git-基线1-学时",
+          "id": "chapter-04-模块一环境清单与-git-基线1-学时"
+        },
+        {
+          "text": "4.1 工具安装与工程运行是两个问题",
+          "depth": 3,
+          "slug": "41-工具安装与工程运行是两个问题",
+          "id": "chapter-04-41-工具安装与工程运行是两个问题"
+        },
+        {
+          "text": "4.2 Git 的三个位置",
+          "depth": 3,
+          "slug": "42-git-的三个位置",
+          "id": "chapter-04-42-git-的三个位置"
+        },
+        {
+          "text": "4.3 不依赖工程的文字版本练习",
+          "depth": 3,
+          "slug": "43-不依赖工程的文字版本练习",
+          "id": "chapter-04-43-不依赖工程的文字版本练习"
+        },
+        {
+          "text": "模块二：让一次读取穿过前后端（2 学时）",
+          "depth": 2,
+          "slug": "模块二让一次读取穿过前后端2-学时",
+          "id": "chapter-04-模块二让一次读取穿过前后端2-学时"
+        },
+        {
+          "text": "4.4 先核对运行条件，再执行命令",
+          "depth": 3,
+          "slug": "44-先核对运行条件再执行命令",
+          "id": "chapter-04-44-先核对运行条件再执行命令"
+        },
+        {
+          "text": "4.5 用一张时序图解释首次贯通",
+          "depth": 3,
+          "slug": "45-用一张时序图解释首次贯通",
+          "id": "chapter-04-45-用一张时序图解释首次贯通"
+        },
+        {
+          "text": "4.6 独立练习：一个显示函数也需要边界",
+          "depth": 3,
+          "slug": "46-独立练习一个显示函数也需要边界",
+          "id": "chapter-04-46-独立练习一个显示函数也需要边界"
+        },
+        {
+          "text": "4.7 制造一次能恢复的失败",
+          "depth": 3,
+          "slug": "47-制造一次能恢复的失败",
+          "id": "chapter-04-47-制造一次能恢复的失败"
+        },
+        {
+          "text": "模块三：定位问题、提交与复现（1 学时）",
+          "depth": 2,
+          "slug": "模块三定位问题提交与复现1-学时",
+          "id": "chapter-04-模块三定位问题提交与复现1-学时"
+        },
+        {
+          "text": "4.8 先缩小错误层次",
+          "depth": 3,
+          "slug": "48-先缩小错误层次",
+          "id": "chapter-04-48-先缩小错误层次"
+        },
+        {
+          "text": "4.9 小提交与他人复现",
+          "depth": 3,
+          "slug": "49-小提交与他人复现",
+          "id": "chapter-04-49-小提交与他人复现"
+        },
+        {
+          "text": "最小实验与验收",
+          "depth": 2,
+          "slug": "最小实验与验收",
+          "id": "chapter-04-最小实验与验收"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-04-课后练习与答案要点"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "chapter-04-交给下一章"
+        }
+      ],
+      "title": "第 04 章 开发环境、版本控制与首次贯通",
+      "images": [
+        {
+          "id": "fig-ch04-01-git-workflow",
+          "chapter": "04",
+          "stem": "ch04-01-git-workflow",
+          "alt": "工作区经 git add 进入暂存区，经 git commit 形成提交；两种 diff 检查不同边界，已提交错误可通过新修正提交保留历史。",
+          "caption": "图 04-01　工作区、暂存区与提交。教学示意，非运行证据。",
+          "file": "illustrations/ch04-01-git-workflow.png",
+          "pngSha256": "f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992",
+          "width": 2560,
+          "height": 1840
+        },
+        {
+          "id": "fig-ch04-02-first-request",
+          "chapter": "04",
+          "stem": "ch04-02-first-request",
+          "alt": "浏览器向前端开发服务请求带 api 前缀的设备地址，代理移除前缀后转到后端；后端检查身份和读取权限，再读取教学提供器，返回标准 JSON，前端从 data.items 显示两条模拟设备。",
+          "caption": "图 04-02　第一次设备读取的请求与返回。教学示意，非运行证据。",
+          "file": "illustrations/ch04-02-first-request.png",
+          "pngSha256": "da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda",
+          "width": 2560,
+          "height": 2156
+        },
+        {
+          "id": "fig-ch04-03-debug-path",
+          "chapter": "04",
+          "stem": "ch04-03-debug-path",
+          "alt": "先检查 Network 是否有请求；无请求看前端事件，有请求则区分 HTML、身份权限拒绝、服务错误与合法 JSON；最后分别检查代理、登录授权、后端日志或页面解析。",
+          "caption": "图 04-03　首次贯通的分层定位路径。教学示意，非运行证据。",
+          "file": "illustrations/ch04-03-debug-path.png",
+          "pngSha256": "7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed",
+          "width": 2560,
+          "height": 2460
+        }
+      ]
+    },
+    {
+      "file": "manuscript/05-后端空间与设备接口.md",
+      "frontmatterRemoved": true,
+      "sha256": "268986bcc5a44e6c5ed02495d90ae5ea831f07166989539ae2c96e40b17d75c2",
+      "id": "chapter-05",
+      "chapter": "05",
+      "headings": [
+        {
+          "text": "第 05 章 后端空间与设备接口",
+          "depth": 1,
+          "slug": "第-05-章-后端空间与设备接口",
+          "id": "chapter-05"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-05-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 把一个问题拆成边界清楚的请求（1 学时）",
+          "depth": 2,
+          "slug": "模块一-把一个问题拆成边界清楚的请求1-学时",
+          "id": "chapter-05-模块一-把一个问题拆成边界清楚的请求1-学时"
+        },
+        {
+          "text": "1.1 从浏览器到数据，不是一层函数完成所有工作",
+          "depth": 3,
+          "slug": "11-从浏览器到数据不是一层函数完成所有工作",
+          "id": "chapter-05-11-从浏览器到数据不是一层函数完成所有工作"
+        },
+        {
+          "text": "1.2 DTO 是给使用者的合同",
+          "depth": 3,
+          "slug": "12-dto-是给使用者的合同",
+          "id": "chapter-05-12-dto-是给使用者的合同"
+        },
+        {
+          "text": "1.3 先写成功和失败的含义",
+          "depth": 3,
+          "slug": "13-先写成功和失败的含义",
+          "id": "chapter-05-13-先写成功和失败的含义"
+        },
+        {
+          "text": "模块二 完成读取与本地空间映射（2 学时）",
+          "depth": 2,
+          "slug": "模块二-完成读取与本地空间映射2-学时",
+          "id": "chapter-05-模块二-完成读取与本地空间映射2-学时"
+        },
+        {
+          "text": "2.1 先理解关系，再写 SQL",
+          "depth": 3,
+          "slug": "21-先理解关系再写-sql",
+          "id": "chapter-05-21-先理解关系再写-sql"
+        },
+        {
+          "text": "2.2 读取两台设备，检查一处未知",
+          "depth": 3,
+          "slug": "22-读取两台设备检查一处未知",
+          "id": "chapter-05-22-读取两台设备检查一处未知"
+        },
+        {
+          "text": "2.3 先创建校园，再创建楼栋",
+          "depth": 3,
+          "slug": "23-先创建校园再创建楼栋",
+          "id": "chapter-05-23-先创建校园再创建楼栋"
+        },
+        {
+          "text": "2.4 绑定空间，并证明改变发生在哪里",
+          "depth": 3,
+          "slug": "24-绑定空间并证明改变发生在哪里",
+          "id": "chapter-05-24-绑定空间并证明改变发生在哪里"
+        },
+        {
+          "text": "2.5 用小任务与网页 AI 协作",
+          "depth": 3,
+          "slug": "25-用小任务与网页-ai-协作",
+          "id": "chapter-05-25-用小任务与网页-ai-协作"
+        },
+        {
+          "text": "模块三 用证据判断接口是否完成（1 学时）",
+          "depth": 2,
+          "slug": "模块三-用证据判断接口是否完成1-学时",
+          "id": "chapter-05-模块三-用证据判断接口是否完成1-学时"
+        },
+        {
+          "text": "3.1 最小实验与人工检查点",
+          "depth": 3,
+          "slug": "31-最小实验与人工检查点",
+          "id": "chapter-05-31-最小实验与人工检查点"
+        },
+        {
+          "text": "3.2 常见错误及定位顺序",
+          "depth": 3,
+          "slug": "32-常见错误及定位顺序",
+          "id": "chapter-05-32-常见错误及定位顺序"
+        },
+        {
+          "text": "3.3 练习与答案要点",
+          "depth": 3,
+          "slug": "33-练习与答案要点",
+          "id": "chapter-05-33-练习与答案要点"
+        }
+      ],
+      "title": "第 05 章 后端空间与设备接口",
+      "images": [
+        {
+          "id": "fig-ch05-01-device-request",
+          "chapter": "05",
+          "stem": "ch05-01-device-request",
+          "alt": "页面经控制器进入服务，服务先检查读取权限，再调用数据端口，将返回记录映射为 DTO 后响应。这里没有前端直连数据源的箭头。",
+          "caption": "图 05-01　设备读取的请求时序。教学示意，非运行证据。",
+          "file": "illustrations/ch05-01-device-request.png",
+          "pngSha256": "bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b",
+          "width": 2560,
+          "height": 1644
+        },
+        {
+          "id": "fig-ch05-02-space-relations",
+          "chapter": "05",
+          "stem": "ch05-02-space-relations",
+          "alt": "设备属于来源空间，本地楼栋属于校园，绑定保存来源空间标识、楼栋标识和楼层；跨数据源关联用虚线表示，不能在本地数据库直接建立指向外部服务的数据库外键。",
+          "caption": "图 05-02　来源目录与本地位置关系。教学示意，非运行证据。",
+          "file": "illustrations/ch05-02-space-relations.png",
+          "pngSha256": "7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737",
+          "width": 2560,
+          "height": 1182
+        },
+        {
+          "id": "fig-ch05-03-binding-readback",
+          "chapter": "05",
+          "stem": "ch05-03-binding-readback",
+          "alt": "管理员通过授权、来源空间和本地关系检查后，仅向本地数据库保存绑定；成功响应之后，再次发起读取核对当前关系。图中没有修改来源空间的调用。",
+          "caption": "图 05-03　空间绑定与独立回读。教学示意，非运行证据。",
+          "file": "illustrations/ch05-03-binding-readback.png",
+          "pngSha256": "86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db",
+          "width": 2560,
+          "height": 2070
+        }
+      ]
+    },
+    {
+      "file": "manuscript/06-前端设备台账与自主UI.md",
+      "frontmatterRemoved": true,
+      "sha256": "6c948f1c837760dc4c2f4bded116d49ca0ba1049bee86f2674a7a88dd9687e8c",
+      "id": "chapter-06",
+      "chapter": "06",
+      "headings": [
+        {
+          "text": "第 06 章 前端设备台账与自主 UI",
+          "depth": 1,
+          "slug": "第-06-章-前端设备台账与自主-ui",
+          "id": "chapter-06"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-06-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 从巡查任务设计信息结构（1 学时）",
+          "depth": 2,
+          "slug": "模块一-从巡查任务设计信息结构1-学时",
+          "id": "chapter-06-模块一-从巡查任务设计信息结构1-学时"
+        },
+        {
+          "text": "1.1 先画动作，再选组件",
+          "depth": 3,
+          "slug": "11-先画动作再选组件",
+          "id": "chapter-06-11-先画动作再选组件"
+        },
+        {
+          "text": "1.2 一个组件承担一个可以说清的职责",
+          "depth": 3,
+          "slug": "12-一个组件承担一个可以说清的职责",
+          "id": "chapter-06-12-一个组件承担一个可以说清的职责"
+        },
+        {
+          "text": "1.3 本地状态与共享状态",
+          "depth": 3,
+          "slug": "13-本地状态与共享状态",
+          "id": "chapter-06-13-本地状态与共享状态"
+        },
+        {
+          "text": "模块二 实现设备列表 筛选与详情（2 学时）",
+          "depth": 2,
+          "slug": "模块二-实现设备列表-筛选与详情2-学时",
+          "id": "chapter-06-模块二-实现设备列表-筛选与详情2-学时"
+        },
+        {
+          "text": "2.1 先把响应读对",
+          "depth": 3,
+          "slug": "21-先把响应读对",
+          "id": "chapter-06-21-先把响应读对"
+        },
+        {
+          "text": "2.2 让筛选成为可解释的计算",
+          "depth": 3,
+          "slug": "22-让筛选成为可解释的计算",
+          "id": "chapter-06-22-让筛选成为可解释的计算"
+        },
+        {
+          "text": "2.3 不用真假判断吞掉未知",
+          "depth": 3,
+          "slug": "23-不用真假判断吞掉未知",
+          "id": "chapter-06-23-不用真假判断吞掉未知"
+        },
+        {
+          "text": "2.4 将加载过程也当作界面的一部分",
+          "depth": 3,
+          "slug": "24-将加载过程也当作界面的一部分",
+          "id": "chapter-06-24-将加载过程也当作界面的一部分"
+        },
+        {
+          "text": "2.5 详情入口传递标识，并处理直接进入",
+          "depth": 3,
+          "slug": "25-详情入口传递标识并处理直接进入",
+          "id": "chapter-06-25-详情入口传递标识并处理直接进入"
+        },
+        {
+          "text": "2.6 最小实验与网页 AI 小任务",
+          "depth": 3,
+          "slug": "26-最小实验与网页-ai-小任务",
+          "id": "chapter-06-26-最小实验与网页-ai-小任务"
+        },
+        {
+          "text": "模块三 检查交互与解释页面状态（1 学时）",
+          "depth": 2,
+          "slug": "模块三-检查交互与解释页面状态1-学时",
+          "id": "chapter-06-模块三-检查交互与解释页面状态1-学时"
+        },
+        {
+          "text": "3.1 让同学完成一个具体任务",
+          "depth": 3,
+          "slug": "31-让同学完成一个具体任务",
+          "id": "chapter-06-31-让同学完成一个具体任务"
+        },
+        {
+          "text": "3.2 常见错误与定位",
+          "depth": 3,
+          "slug": "32-常见错误与定位",
+          "id": "chapter-06-32-常见错误与定位"
+        },
+        {
+          "text": "3.3 练习与答案要点",
+          "depth": 3,
+          "slug": "33-练习与答案要点",
+          "id": "chapter-06-33-练习与答案要点"
+        }
+      ],
+      "title": "第 06 章 前端设备台账与自主 UI",
+      "images": [
+        {
+          "id": "fig-ch06-01-device-wireframe",
+          "chapter": "06",
+          "stem": "ch06-01-device-wireframe",
+          "alt": "左侧桌面布局依次为标题、教学模拟来源、搜索和筛选、结果数量及两条设备行；右侧窄屏保留相同操作和一张设备卡片。示例显示两条返回记录，不代表最终十六台设备已加载。",
+          "caption": "图 06-01　设备台账的信息优先级。教学界面示意，非运行截图。",
+          "file": "illustrations/ch06-01-device-wireframe.png",
+          "pngSha256": "e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567",
+          "width": 2560,
+          "height": 1640
+        },
+        {
+          "id": "fig-ch06-02-components-state",
+          "chapter": "06",
+          "stem": "ch06-02-components-state",
+          "alt": "API 产生原始资源，用户输入产生筛选条件，二者共同计算列表与数量；请求状态决定反馈，设备标识决定详情目标。图中没有修改原始列表来完成筛选的箭头。",
+          "caption": "图 06-02　原始数据、派生结果与组件。教学示意，非运行证据。",
+          "file": "illustrations/ch06-02-components-state.png",
+          "pngSha256": "afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9",
+          "width": 2560,
+          "height": 2420
+        },
+        {
+          "id": "fig-ch06-03-page-states",
+          "chapter": "06",
+          "stem": "ch06-03-page-states",
+          "alt": "首次读取进入加载，成功后区分原始空目录、筛选无匹配和正常列表；首次失败展示错误，已有结果的再次读取失败保留带说明的旧快照。",
+          "caption": "图 06-03　页面数据状态与反馈。教学示意，非运行证据。",
+          "file": "illustrations/ch06-03-page-states.png",
+          "pngSha256": "c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1",
+          "width": 2560,
+          "height": 1900
+        }
+      ]
+    },
+    {
+      "file": "manuscript/07-实时监测历史与数据质量.md",
+      "frontmatterRemoved": true,
+      "sha256": "6c19e5d38576df82d54f58e461f6cda26c0d5121783c1f18f05e3cab2c1b77b3",
+      "id": "chapter-07",
+      "chapter": "07",
+      "headings": [
+        {
+          "text": "第 07 章 实时监测、历史与数据质量",
+          "depth": 1,
+          "slug": "第-07-章-实时监测历史与数据质量",
+          "id": "chapter-07"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-07-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 读数成立需要哪些条件（1 学时）",
+          "depth": 2,
+          "slug": "模块一-读数成立需要哪些条件1-学时",
+          "id": "chapter-07-模块一-读数成立需要哪些条件1-学时"
+        },
+        {
+          "text": "1.1 一条点值有两个时间",
+          "depth": 3,
+          "slug": "11-一条点值有两个时间",
+          "id": "chapter-07-11-一条点值有两个时间"
+        },
+        {
+          "text": "1.2 用边界例子理解四种质量",
+          "depth": 3,
+          "slug": "12-用边界例子理解四种质量",
+          "id": "chapter-07-12-用边界例子理解四种质量"
+        },
+        {
+          "text": "1.3 单位限制了能够讲述的结论",
+          "depth": 3,
+          "slug": "13-单位限制了能够讲述的结论",
+          "id": "chapter-07-13-单位限制了能够讲述的结论"
+        },
+        {
+          "text": "模块二 从最新值走到可信的历史展示（2 学时）",
+          "depth": 2,
+          "slug": "模块二-从最新值走到可信的历史展示2-学时",
+          "id": "chapter-07-模块二-从最新值走到可信的历史展示2-学时"
+        },
+        {
+          "text": "2.1 先实现一个可解释的最新值",
+          "depth": 3,
+          "slug": "21-先实现一个可解释的最新值",
+          "id": "chapter-07-21-先实现一个可解释的最新值"
+        },
+        {
+          "text": "2.2 把历史查询条件固定下来",
+          "depth": 3,
+          "slug": "22-把历史查询条件固定下来",
+          "id": "chapter-07-22-把历史查询条件固定下来"
+        },
+        {
+          "text": "2.3 图上的点必须能回到样本表",
+          "depth": 3,
+          "slug": "23-图上的点必须能回到样本表",
+          "id": "chapter-07-23-图上的点必须能回到样本表"
+        },
+        {
+          "text": "2.4 一轮结束后再等 15 秒",
+          "depth": 3,
+          "slug": "24-一轮结束后再等-15-秒",
+          "id": "chapter-07-24-一轮结束后再等-15-秒"
+        },
+        {
+          "text": "2.5 最小实验与网页 AI 协作",
+          "depth": 3,
+          "slug": "25-最小实验与网页-ai-协作",
+          "id": "chapter-07-25-最小实验与网页-ai-协作"
+        },
+        {
+          "text": "模块三 用故障判断页面有没有误导（1 学时）",
+          "depth": 2,
+          "slug": "模块三-用故障判断页面有没有误导1-学时",
+          "id": "chapter-07-模块三-用故障判断页面有没有误导1-学时"
+        },
+        {
+          "text": "3.1 人工核验顺序",
+          "depth": 3,
+          "slug": "31-人工核验顺序",
+          "id": "chapter-07-31-人工核验顺序"
+        },
+        {
+          "text": "3.2 常见错误及定位",
+          "depth": 3,
+          "slug": "32-常见错误及定位",
+          "id": "chapter-07-32-常见错误及定位"
+        },
+        {
+          "text": "3.3 练习与答案要点",
+          "depth": 3,
+          "slug": "33-练习与答案要点",
+          "id": "chapter-07-33-练习与答案要点"
+        }
+      ],
+      "title": "第 07 章 实时监测、历史与数据质量",
+      "images": [
+        {
+          "id": "fig-ch07-01-quality-cases",
+          "chapter": "07",
+          "stem": "ch07-01-quality-cases",
+          "alt": "观察时间固定为 O，合法零在 O 时刻是 fresh；O 减 60000 毫秒仍 fresh，减 60001 毫秒为 stale；缺失值为 missing；O 加 5000 毫秒在容差内，加 5001 毫秒为 invalid。另列数值字符串为无效类型。",
+          "caption": "图 07-01　同一观察时刻下的质量对照。教学示意，非运行证据。",
+          "file": "illustrations/ch07-01-quality-cases.png",
+          "pngSha256": "9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251",
+          "width": 2560,
+          "height": 1680
+        },
+        {
+          "id": "fig-ch07-02-history-gaps",
+          "chapter": "07",
+          "stem": "ch07-02-history-gaps",
+          "alt": "T0 的 0 kW 保留在零刻度；T0 加 60 秒为 null，曲线在此断开；加 120 秒和加 180 秒分别为 1.2、0.9 kW，可以视觉连线，右侧表保留四条原始记录。横轴为相对 T0 的秒，仅用于读图，接口时间仍为 epoch 毫秒。",
+          "caption": "图 07-02　曲线与原始样本一一核对。教学示意，非运行证据。",
+          "file": "illustrations/ch07-02-history-gaps.png",
+          "pngSha256": "740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead",
+          "width": 2560,
+          "height": 1600
+        },
+        {
+          "id": "fig-ch07-03-refresh-lifecycle",
+          "chapter": "07",
+          "stem": "ch07-03-refresh-lifecycle",
+          "alt": "请求完成后才开始十五秒等待；页面离开时清理等待器并取消进行中的请求，已经失效的响应也不能重新写入状态。",
+          "caption": "图 07-03　不重叠刷新与离页清理。教学示意，非运行证据。",
+          "file": "illustrations/ch07-03-refresh-lifecycle.png",
+          "pngSha256": "fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91",
+          "width": 2560,
+          "height": 2110
+        }
+      ]
+    },
+    {
+      "file": "manuscript/08-登录角色与权限验证.md",
+      "frontmatterRemoved": true,
+      "sha256": "7dd3921478482fc5cba76e1952913bfc6ba76c34e2236457079aa900342fcae7",
+      "id": "chapter-08",
+      "chapter": "08",
+      "headings": [
+        {
+          "text": "第 08 章 登录、角色与权限验证",
+          "depth": 1,
+          "slug": "第-08-章-登录角色与权限验证",
+          "id": "chapter-08"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-08-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 从业务规则得到权限矩阵（1 学时）",
+          "depth": 2,
+          "slug": "模块一-从业务规则得到权限矩阵1-学时",
+          "id": "chapter-08-模块一-从业务规则得到权限矩阵1-学时"
+        },
+        {
+          "text": "1.1 认证与授权回答两个不同问题",
+          "depth": 3,
+          "slug": "11-认证与授权回答两个不同问题",
+          "id": "chapter-08-11-认证与授权回答两个不同问题"
+        },
+        {
+          "text": "1.2 三角色与四身份",
+          "depth": 3,
+          "slug": "12-三角色与四身份",
+          "id": "chapter-08-12-三角色与四身份"
+        },
+        {
+          "text": "1.3 能力不是万能通行证",
+          "depth": 3,
+          "slug": "13-能力不是万能通行证",
+          "id": "chapter-08-13-能力不是万能通行证"
+        },
+        {
+          "text": "模块二 让身份 能力与服务端拒绝连起来（2 学时）",
+          "depth": 2,
+          "slug": "模块二-让身份-能力与服务端拒绝连起来2-学时",
+          "id": "chapter-08-模块二-让身份-能力与服务端拒绝连起来2-学时"
+        },
+        {
+          "text": "2.1 找到可信身份，再找业务边界",
+          "depth": 3,
+          "slug": "21-找到可信身份再找业务边界",
+          "id": "chapter-08-21-找到可信身份再找业务边界"
+        },
+        {
+          "text": "2.2 对象范围应写成独立、可解释的判断",
+          "depth": 3,
+          "slug": "22-对象范围应写成独立可解释的判断",
+          "id": "chapter-08-22-对象范围应写成独立可解释的判断"
+        },
+        {
+          "text": "2.3 能力字段只接受 Boolean true",
+          "depth": 3,
+          "slug": "23-能力字段只接受-boolean-true",
+          "id": "chapter-08-23-能力字段只接受-boolean-true"
+        },
+        {
+          "text": "2.4 退出和切换身份要使旧响应失效",
+          "depth": 3,
+          "slug": "24-退出和切换身份要使旧响应失效",
+          "id": "chapter-08-24-退出和切换身份要使旧响应失效"
+        },
+        {
+          "text": "2.5 最小实验按身份和接口展开",
+          "depth": 3,
+          "slug": "25-最小实验按身份和接口展开",
+          "id": "chapter-08-25-最小实验按身份和接口展开"
+        },
+        {
+          "text": "2.6 用网页 AI 查缺口，不把权限交给猜测",
+          "depth": 3,
+          "slug": "26-用网页-ai-查缺口不把权限交给猜测",
+          "id": "chapter-08-26-用网页-ai-查缺口不把权限交给猜测"
+        },
+        {
+          "text": "模块三 用拒绝证据证明边界（1 学时）",
+          "depth": 2,
+          "slug": "模块三-用拒绝证据证明边界1-学时",
+          "id": "chapter-08-模块三-用拒绝证据证明边界1-学时"
+        },
+        {
+          "text": "3.1 一条拒绝需要三类证据",
+          "depth": 3,
+          "slug": "31-一条拒绝需要三类证据",
+          "id": "chapter-08-31-一条拒绝需要三类证据"
+        },
+        {
+          "text": "3.2 常见错误与定位",
+          "depth": 3,
+          "slug": "32-常见错误与定位",
+          "id": "chapter-08-32-常见错误与定位"
+        },
+        {
+          "text": "3.3 练习与答案要点",
+          "depth": 3,
+          "slug": "33-练习与答案要点",
+          "id": "chapter-08-33-练习与答案要点"
+        }
+      ],
+      "title": "第 08 章 登录、角色与权限验证",
+      "images": [
+        {
+          "id": "fig-ch08-01-role-scope",
+          "chapter": "08",
+          "stem": "ch08-01-role-scope",
+          "alt": "三个角色都可读取，管理员具有管理资格；管理员和本人范围内的管理人员仍须通过事件业务检查；查看者及处理他人事件的管理人员被拒绝，所有角色的设备控制关闭。",
+          "caption": "图 08-01　角色资格与事件对象范围。教学示意，非运行证据。",
+          "file": "illustrations/ch08-01-role-scope.png",
+          "pngSha256": "e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383",
+          "width": 2560,
+          "height": 2926
+        },
+        {
+          "id": "fig-ch08-02-denial-path",
+          "chapter": "08",
+          "stem": "ch08-02-denial-path",
+          "alt": "无有效身份的请求返回 401；角色或适用对象范围不符返回 403；授权通过后仍检查参数和业务条件，只有全部满足才执行操作。被拒绝的写请求不得产生业务记录。",
+          "caption": "图 08-02　授权与拒绝路径。教学示意，非运行证据。",
+          "file": "illustrations/ch08-02-denial-path.png",
+          "pngSha256": "adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea",
+          "width": 2560,
+          "height": 2680
+        },
+        {
+          "id": "fig-ch08-03-identity-race",
+          "chapter": "08",
+          "stem": "ch08-03-identity-race",
+          "alt": "管理员请求尚未返回时先退出并切到查看者；前端接受当前身份的能力，丢弃旧管理员的迟到响应，管理入口不会恢复。",
+          "caption": "图 08-03　身份切换后的迟到响应。教学示意，非运行证据。",
+          "file": "illustrations/ch08-03-identity-race.png",
+          "pngSha256": "8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1",
+          "width": 2560,
+          "height": 2726
+        }
+      ]
+    },
+    {
+      "file": "manuscript/09-演练事件与状态机.md",
+      "frontmatterRemoved": true,
+      "sha256": "943b49dfcc46c4be6e879362bc1143691ea7855f6784dbcdb149e1b51aa407a9",
+      "id": "chapter-09",
+      "chapter": "09",
+      "headings": [
+        {
+          "text": "第 09 章 演练事件与状态机",
+          "depth": 1,
+          "slug": "第-09-章-演练事件与状态机",
+          "id": "chapter-09"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-09-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 从业务叙述建立状态机（1 学时）",
+          "depth": 2,
+          "slug": "模块一-从业务叙述建立状态机1-学时",
+          "id": "chapter-09-模块一-从业务叙述建立状态机1-学时"
+        },
+        {
+          "text": "1.1 状态记录的是当前业务位置",
+          "depth": 3,
+          "slug": "11-状态记录的是当前业务位置",
+          "id": "chapter-09-11-状态记录的是当前业务位置"
+        },
+        {
+          "text": "1.2 来源恢复不等于工作结束",
+          "depth": 3,
+          "slug": "12-来源恢复不等于工作结束",
+          "id": "chapter-09-12-来源恢复不等于工作结束"
+        },
+        {
+          "text": "1.3 角色与对象范围要同时判断",
+          "depth": 3,
+          "slug": "13-角色与对象范围要同时判断",
+          "id": "chapter-09-13-角色与对象范围要同时判断"
+        },
+        {
+          "text": "模块二 实现并观察一个完整闭环（2 学时）",
+          "depth": 2,
+          "slug": "模块二-实现并观察一个完整闭环2-学时",
+          "id": "chapter-09-模块二-实现并观察一个完整闭环2-学时"
+        },
+        {
+          "text": "2.1 把动作放在清楚的接口边界内",
+          "depth": 3,
+          "slug": "21-把动作放在清楚的接口边界内",
+          "id": "chapter-09-21-把动作放在清楚的接口边界内"
+        },
+        {
+          "text": "2.2 版本说明请求基于哪一次阅读",
+          "depth": 3,
+          "slug": "22-版本说明请求基于哪一次阅读",
+          "id": "chapter-09-22-版本说明请求基于哪一次阅读"
+        },
+        {
+          "text": "2.3 按版本账本完成最小实验",
+          "depth": 3,
+          "slug": "23-按版本账本完成最小实验",
+          "id": "chapter-09-23-按版本账本完成最小实验"
+        },
+        {
+          "text": "2.4 冲突时让使用者重新作决定",
+          "depth": 3,
+          "slug": "24-冲突时让使用者重新作决定",
+          "id": "chapter-09-24-冲突时让使用者重新作决定"
+        },
+        {
+          "text": "模块三 审查 AI 建议并完成核验（1 学时）",
+          "depth": 2,
+          "slug": "模块三-审查-ai-建议并完成核验1-学时",
+          "id": "chapter-09-模块三-审查-ai-建议并完成核验1-学时"
+        },
+        {
+          "text": "3.1 一次只交给网页 AI 一个动作",
+          "depth": 3,
+          "slug": "31-一次只交给网页-ai-一个动作",
+          "id": "chapter-09-31-一次只交给网页-ai-一个动作"
+        },
+        {
+          "text": "3.2 以反例检查真实行为",
+          "depth": 3,
+          "slug": "32-以反例检查真实行为",
+          "id": "chapter-09-32-以反例检查真实行为"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-09-课后练习与答案要点"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "chapter-09-交给下一章"
+        }
+      ],
+      "title": "第 09 章 演练事件与状态机",
+      "images": [
+        {
+          "id": "fig-ch09-01-state-machine",
+          "chapter": "09",
+          "stem": "ch09-01-state-machine",
+          "alt": "事件创建后按责任人有效性进入待分派或待处理；分派进入待处理，开始进入处理中，重新分派回到待处理，满足全部门槛后关闭，关闭后禁止修改。",
+          "caption": "图 09-01　事件处置状态与合法迁移。教学示意，非运行证据。",
+          "file": "illustrations/ch09-01-state-machine.png",
+          "pngSha256": "c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd",
+          "width": 2560,
+          "height": 2340
+        },
+        {
+          "id": "fig-ch09-02-close-gates",
+          "chapter": "09",
+          "stem": "ch09-02-close-gates",
+          "alt": "合法请求先经过身份权限和版本检查，再检查处理中、至少一条处置记录、本地演练已有效恢复、服务端核实通过且时间有效、关闭结论非空；满足全部条件才能提交关闭与时间线。",
+          "caption": "图 09-02　关闭事件的完整门槛。教学示意，非运行证据。",
+          "file": "illustrations/ch09-02-close-gates.png",
+          "pngSha256": "31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1",
+          "width": 2560,
+          "height": 3220
+        },
+        {
+          "id": "fig-ch09-03-recovery-sequence",
+          "chapter": "09",
+          "stem": "ch09-03-recovery-sequence",
+          "alt": "A 在未恢复时核实得到 UNKNOWN；管理员恢复并重置核实结果，按匹配版本重复恢复不产生新记录；A 再核实得到 PASS，然后提交结论关闭。各有效修改在主记录与时间线同一事务内保存。",
+          "caption": "图 09-03　模拟恢复、核实与关闭的时序。教学示意，非运行证据。",
+          "file": "illustrations/ch09-03-recovery-sequence.png",
+          "pngSha256": "fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577",
+          "width": 2560,
+          "height": 3240
+        }
+      ]
+    },
+    {
+      "file": "manuscript/10-设备责任与审计追踪.md",
+      "frontmatterRemoved": true,
+      "sha256": "30771a1ef0eeec8db18c1ac9f888e6b98e3b68b66ccc37eff57d926f28bd6dcb",
+      "id": "chapter-10",
+      "chapter": "10",
+      "headings": [
+        {
+          "text": "第 10 章 设备责任与审计追踪",
+          "depth": 1,
+          "slug": "第-10-章-设备责任与审计追踪",
+          "id": "chapter-10"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-10-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 设计可以追溯的责任关系（1 学时）",
+          "depth": 2,
+          "slug": "模块一-设计可以追溯的责任关系1-学时",
+          "id": "chapter-10-模块一-设计可以追溯的责任关系1-学时"
+        },
+        {
+          "text": "1.1 当前责任是规则输入，事件负责人是一次决定",
+          "depth": 3,
+          "slug": "11-当前责任是规则输入事件负责人是一次决定",
+          "id": "chapter-10-11-当前责任是规则输入事件负责人是一次决定"
+        },
+        {
+          "text": "1.2 没有登记也是一个明确状态",
+          "depth": 3,
+          "slug": "12-没有登记也是一个明确状态",
+          "id": "chapter-10-12-没有登记也是一个明确状态"
+        },
+        {
+          "text": "1.3 稳定标识和显示姓名的职责不同",
+          "depth": 3,
+          "slug": "13-稳定标识和显示姓名的职责不同",
+          "id": "chapter-10-13-稳定标识和显示姓名的职责不同"
+        },
+        {
+          "text": "模块二 登记责任并验证新旧事件的差异（2 学时）",
+          "depth": 2,
+          "slug": "模块二-登记责任并验证新旧事件的差异2-学时",
+          "id": "chapter-10-模块二-登记责任并验证新旧事件的差异2-学时"
+        },
+        {
+          "text": "2.1 让表单提交一项明确决定",
+          "depth": 3,
+          "slug": "21-让表单提交一项明确决定",
+          "id": "chapter-10-21-让表单提交一项明确决定"
+        },
+        {
+          "text": "2.2 把主记录与历史作为一个事务",
+          "depth": 3,
+          "slug": "22-把主记录与历史作为一个事务",
+          "id": "chapter-10-22-把主记录与历史作为一个事务"
+        },
+        {
+          "text": "2.3 用 E1 和 E2 完成最小实验",
+          "depth": 3,
+          "slug": "23-用-e1-和-e2-完成最小实验",
+          "id": "chapter-10-23-用-e1-和-e2-完成最小实验"
+        },
+        {
+          "text": "2.4 拒绝请求也要验证数据没有变化",
+          "depth": 3,
+          "slug": "24-拒绝请求也要验证数据没有变化",
+          "id": "chapter-10-24-拒绝请求也要验证数据没有变化"
+        },
+        {
+          "text": "模块三 通过时间线重建事实（1 学时）",
+          "depth": 2,
+          "slug": "模块三-通过时间线重建事实1-学时",
+          "id": "chapter-10-模块三-通过时间线重建事实1-学时"
+        },
+        {
+          "text": "3.1 审计从可回答的问题开始",
+          "depth": 3,
+          "slug": "31-审计从可回答的问题开始",
+          "id": "chapter-10-31-审计从可回答的问题开始"
+        },
+        {
+          "text": "3.2 网页 AI 协作与人工审查",
+          "depth": 3,
+          "slug": "32-网页-ai-协作与人工审查",
+          "id": "chapter-10-32-网页-ai-协作与人工审查"
+        },
+        {
+          "text": "3.3 验收与常见错误定位",
+          "depth": 3,
+          "slug": "33-验收与常见错误定位",
+          "id": "chapter-10-33-验收与常见错误定位"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-10-课后练习与答案要点"
+        }
+      ],
+      "title": "第 10 章 设备责任与审计追踪",
+      "images": [
+        {
+          "id": "fig-ch10-01-owner-event-model",
+          "chapter": "10",
+          "stem": "ch10-01-owner-event-model",
+          "alt": "设备关联一条当前责任记录，责任记录对应多条责任变更历史；事件创建时读取责任作为分派依据，之后保存独立负责人，事件再对应自己的动作时间线。",
+          "caption": "图 10-01　当前责任、责任历史与事件的关系。教学示意，非运行证据。",
+          "file": "illustrations/ch10-01-owner-event-model.png",
+          "pngSha256": "26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd",
+          "width": 2560,
+          "height": 2300
+        },
+        {
+          "id": "fig-ch10-02-future-assignment",
+          "chapter": "10",
+          "stem": "ch10-02-future-assignment",
+          "alt": "ADMIN 登记 A 并创建 E1，A 开始处理后为 IN_PROGRESS、事件版本 2；随后设备责任改为 B，E1 的负责人、状态、版本和历史保持该基线；新建 E2 分派给 B，事件版本为 1。",
+          "caption": "图 10-02　责任变更影响未来事件，不改派已有事件。教学示意，非运行证据。",
+          "file": "illustrations/ch10-02-future-assignment.png",
+          "pngSha256": "9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e",
+          "width": 2560,
+          "height": 2378
+        },
+        {
+          "id": "fig-ch10-03-responsibility-timeline",
+          "chapter": "10",
+          "stem": "ch10-03-responsibility-timeline",
+          "alt": "初始责任为空且版本为零；第一条历史记录管理员将空责任改为 A 并附原因；第二条记录将 A 改为 B。当前责任显示 B，但旧历史继续保留前后 uid、操作者、说明与各自版本。",
+          "caption": "图 10-03　从责任时间线解释当前分工。教学示意，非运行证据。",
+          "file": "illustrations/ch10-03-responsibility-timeline.png",
+          "pngSha256": "c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe",
+          "width": 2560,
+          "height": 1760
+        }
+      ]
+    },
+    {
+      "file": "manuscript/11-测试调试与质量改进.md",
+      "frontmatterRemoved": true,
+      "sha256": "1eb1d43f30cf52f29d97ad73d303d08bf308a836e493a004751c08105e33f064",
+      "id": "chapter-11",
+      "chapter": "11",
+      "headings": [
+        {
+          "text": "第 11 章 测试调试与质量改进",
+          "depth": 1,
+          "slug": "第-11-章-测试调试与质量改进",
+          "id": "chapter-11"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-11-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 从风险建立独立的测试预期（1 学时）",
+          "depth": 2,
+          "slug": "模块一-从风险建立独立的测试预期1-学时",
+          "id": "chapter-11-模块一-从风险建立独立的测试预期1-学时"
+        },
+        {
+          "text": "1.1 预期不能从待测代码照抄",
+          "depth": 3,
+          "slug": "11-预期不能从待测代码照抄",
+          "id": "chapter-11-11-预期不能从待测代码照抄"
+        },
+        {
+          "text": "1.2 按证据能力选择层级",
+          "depth": 3,
+          "slug": "12-按证据能力选择层级",
+          "id": "chapter-11-12-按证据能力选择层级"
+        },
+        {
+          "text": "1.3 先为每次实验建立基线",
+          "depth": 3,
+          "slug": "13-先为每次实验建立基线",
+          "id": "chapter-11-13-先为每次实验建立基线"
+        },
+        {
+          "text": "模块二 执行并发、回滚与缺陷修复（2 学时）",
+          "depth": 2,
+          "slug": "模块二-执行并发回滚与缺陷修复2-学时",
+          "id": "chapter-11-模块二-执行并发回滚与缺陷修复2-学时"
+        },
+        {
+          "text": "2.1 并发实验的关键是同版本与真实重叠",
+          "depth": 3,
+          "slug": "21-并发实验的关键是同版本与真实重叠",
+          "id": "chapter-11-21-并发实验的关键是同版本与真实重叠"
+        },
+        {
+          "text": "2.2 让时间线失败，观察整个事务是否撤销",
+          "depth": 3,
+          "slug": "22-让时间线失败观察整个事务是否撤销",
+          "id": "chapter-11-22-让时间线失败观察整个事务是否撤销"
+        },
+        {
+          "text": "2.3 调试是缩小因果范围",
+          "depth": 3,
+          "slug": "23-调试是缩小因果范围",
+          "id": "chapter-11-23-调试是缩小因果范围"
+        },
+        {
+          "text": "模块三 交叉审查证据与质量结论（1 学时）",
+          "depth": 2,
+          "slug": "模块三-交叉审查证据与质量结论1-学时",
+          "id": "chapter-11-模块三-交叉审查证据与质量结论1-学时"
+        },
+        {
+          "text": "3.1 把问题交给网页 AI，而不是交出判断标准",
+          "depth": 3,
+          "slug": "31-把问题交给网页-ai而不是交出判断标准",
+          "id": "chapter-11-31-把问题交给网页-ai而不是交出判断标准"
+        },
+        {
+          "text": "3.2 同伴审查从证据缺口入手",
+          "depth": 3,
+          "slug": "32-同伴审查从证据缺口入手",
+          "id": "chapter-11-32-同伴审查从证据缺口入手"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-11-课后练习与答案要点"
+        }
+      ],
+      "title": "第 11 章 测试调试与质量改进",
+      "images": [
+        {
+          "id": "fig-ch11-01-evidence-layers",
+          "chapter": "11",
+          "stem": "ch11-01-evidence-layers",
+          "alt": "需求规则分别连接构建与单元、真实数据库、带身份 API、浏览器流程及选做外部接入；每类证据只支持其覆盖范围，不能用 mock 证明锁或事务，也不能用构建代替浏览器验收。",
+          "caption": "图 11-01　测试证据的层级与证明范围。教学示意，非运行证据。",
+          "file": "illustrations/ch11-01-evidence-layers.png",
+          "pngSha256": "e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c",
+          "width": 2560,
+          "height": 2140
+        },
+        {
+          "id": "fig-ch11-02-concurrent-updates",
+          "chapter": "11",
+          "stem": "ch11-02-concurrent-updates",
+          "alt": "两个管理员请求经屏障放行并使用版本 n；第一个获得锁后提交负责人 A、版本 n 加一及一条历史；第二个等待后读取新版本，返回 409；独立连接确认仅有一次修改。",
+          "caption": "图 11-02　同版本并发时只有一个修改提交。教学示意，非运行证据。",
+          "file": "illustrations/ch11-02-concurrent-updates.png",
+          "pngSha256": "0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1",
+          "width": 2560,
+          "height": 2340
+        },
+        {
+          "id": "fig-ch11-03-transaction-rollback",
+          "chapter": "11",
+          "stem": "ch11-03-transaction-rollback",
+          "alt": "先记录主行和历史基线，业务事务锁行并更新主行，时间线插入发生测试注入失败，异常触发回滚；请求结束后独立连接读取，与基线比较字段、版本和历史均未变。",
+          "caption": "图 11-03　时间线失败时主记录一同回滚。教学示意，非运行证据。",
+          "file": "illustrations/ch11-03-transaction-rollback.png",
+          "pngSha256": "303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740",
+          "width": 2560,
+          "height": 1992
+        },
+        {
+          "id": "fig-ch11-04-debugging-loop",
+          "chapter": "11",
+          "stem": "ch11-04-debugging-loop",
+          "alt": "保存失败，固定最小复现，从事实形成假设并补观察，定位后进行最小修改，再运行原失败与相邻回归；若未解释失败则继续定位，解释成立后记录缺陷关闭证据。",
+          "caption": "图 11-04　从失败证据到最小修复与回归。教学示意，非运行证据。",
+          "file": "illustrations/ch11-04-debugging-loop.png",
+          "pngSha256": "4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807",
+          "width": 2560,
+          "height": 2324
+        }
+      ]
+    },
+    {
+      "file": "manuscript/12-构建交付变更与答辩.md",
+      "frontmatterRemoved": true,
+      "sha256": "477bfcec3fe0b7762c0d3dddcd9542ccd2635a85ef518d07663ccd8002b1dfdc",
+      "id": "chapter-12",
+      "chapter": "12",
+      "headings": [
+        {
+          "text": "第 12 章 构建交付变更与答辩",
+          "depth": 1,
+          "slug": "第-12-章-构建交付变更与答辩",
+          "id": "chapter-12"
+        },
+        {
+          "text": "进入条件与学习目标",
+          "depth": 2,
+          "slug": "进入条件与学习目标",
+          "id": "chapter-12-进入条件与学习目标"
+        },
+        {
+          "text": "模块一 定义可以复现的交付物（1 学时）",
+          "depth": 2,
+          "slug": "模块一-定义可以复现的交付物1-学时",
+          "id": "chapter-12-模块一-定义可以复现的交付物1-学时"
+        },
+        {
+          "text": "1.1 四个阶段不能互相替代",
+          "depth": 3,
+          "slug": "11-四个阶段不能互相替代",
+          "id": "chapter-12-11-四个阶段不能互相替代"
+        },
+        {
+          "text": "1.2 用清单让隐含条件变得可见",
+          "depth": 3,
+          "slug": "12-用清单让隐含条件变得可见",
+          "id": "chapter-12-12-用清单让隐含条件变得可见"
+        },
+        {
+          "text": "1.3 构建命令要与实际资源对应",
+          "depth": 3,
+          "slug": "13-构建命令要与实际资源对应",
+          "id": "chapter-12-13-构建命令要与实际资源对应"
+        },
+        {
+          "text": "模块二 干净复现与一次受控变更（2 学时）",
+          "depth": 2,
+          "slug": "模块二-干净复现与一次受控变更2-学时",
+          "id": "chapter-12-模块二-干净复现与一次受控变更2-学时"
+        },
+        {
+          "text": "2.1 让同伴从说明开始，而不是从作者提示开始",
+          "depth": 3,
+          "slug": "21-让同伴从说明开始而不是从作者提示开始",
+          "id": "chapter-12-21-让同伴从说明开始而不是从作者提示开始"
+        },
+        {
+          "text": "2.2 用一个小需求学习维护",
+          "depth": 3,
+          "slug": "22-用一个小需求学习维护",
+          "id": "chapter-12-22-用一个小需求学习维护"
+        },
+        {
+          "text": "2.3 回退代码和恢复数据是两件事",
+          "depth": 3,
+          "slug": "23-回退代码和恢复数据是两件事",
+          "id": "chapter-12-23-回退代码和恢复数据是两件事"
+        },
+        {
+          "text": "模块三 演示、个人答辩与复盘（1 学时）",
+          "depth": 2,
+          "slug": "模块三-演示个人答辩与复盘1-学时",
+          "id": "chapter-12-模块三-演示个人答辩与复盘1-学时"
+        },
+        {
+          "text": "3.1 用可解释的因果关系讲解作品",
+          "depth": 3,
+          "slug": "31-用可解释的因果关系讲解作品",
+          "id": "chapter-12-31-用可解释的因果关系讲解作品"
+        },
+        {
+          "text": "3.2 让网页 AI 帮助查漏与准备解释",
+          "depth": 3,
+          "slug": "32-让网页-ai-帮助查漏与准备解释",
+          "id": "chapter-12-32-让网页-ai-帮助查漏与准备解释"
+        },
+        {
+          "text": "3.3 验收表与常见交付故障",
+          "depth": 3,
+          "slug": "33-验收表与常见交付故障",
+          "id": "chapter-12-33-验收表与常见交付故障"
+        },
+        {
+          "text": "课后练习与答案要点",
+          "depth": 2,
+          "slug": "课后练习与答案要点",
+          "id": "chapter-12-课后练习与答案要点"
+        },
+        {
+          "text": "课程交接与完成边界",
+          "depth": 2,
+          "slug": "课程交接与完成边界",
+          "id": "chapter-12-课程交接与完成边界"
+        }
+      ],
+      "title": "第 12 章 构建交付变更与答辩",
+      "images": [
+        {
+          "id": "fig-ch12-01-delivery-flow",
+          "chapter": "12",
+          "stem": "ch12-01-delivery-flow",
+          "alt": "确认源码与依赖基线后执行检查构建，取得带标识的产物；在独立环境启动，再用真实身份验证业务；同伴根据说明复现并提交问题记录，形成可交接包。",
+          "caption": "图 12-01　从源码基线到可复现业务交付。教学示意，非运行证据。",
+          "file": "illustrations/ch12-01-delivery-flow.png",
+          "pngSha256": "403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03",
+          "width": 2560,
+          "height": 2392
+        },
+        {
+          "id": "fig-ch12-02-controlled-change",
+          "chapter": "12",
+          "stem": "ch12-02-controlled-change",
+          "alt": "接收筛选需求后写验收条件，核对现有合同与影响范围，保存基线，再修改页面与测试；通过受影响检查和浏览器验证后更新交付说明，失败则保留证据继续修复。",
+          "caption": "图 12-02　小变更的影响分析与验证流程。教学示意，非运行证据。",
+          "file": "illustrations/ch12-02-controlled-change.png",
+          "pngSha256": "75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136",
+          "width": 2560,
+          "height": 1992
+        },
+        {
+          "id": "fig-ch12-03-code-data-recovery",
+          "chapter": "12",
+          "stem": "ch12-03-code-data-recovery",
+          "alt": "变更失败后先保存证据并判断是否改变数据结构或数据；代码问题在兼容性确认后恢复旧代码并回归，数据恢复则需要受审查的备份与隔离恢复流程，不能直接清库覆盖。",
+          "caption": "图 12-03　代码回退与数据恢复的不同条件。教学示意，非运行证据。",
+          "file": "illustrations/ch12-03-code-data-recovery.png",
+          "pngSha256": "6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2",
+          "width": 2560,
+          "height": 2320
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

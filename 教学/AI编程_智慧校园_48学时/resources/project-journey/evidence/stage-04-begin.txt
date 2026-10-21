@@ -1,0 +1,7 @@
+$ node tools/progress.mjs begin 04
+已准备骨架：第04站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/LocationsView.vue
+备份：journey-backups/2026-10-19T15-35-14-024Z-stage-04-begin-bbaefb
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

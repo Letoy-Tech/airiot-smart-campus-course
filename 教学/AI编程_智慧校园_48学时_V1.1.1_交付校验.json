@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T14:12:39.318034+00:00",
+  "version": "1.1.1",
+  "archive": "AI编程_智慧校园_48学时_V1.1.1_完整教学包.zip",
+  "bytes": 271283279,
+  "files": 2383,
+  "sha256": "b90d375ad91198fe9b88dde61023d21a0c5991088082627fcd11ef4d3b2b3282",
+  "crcAndContentHashes": "PASS",
+  "freshUnzipAllFileHashes": "PASS",
+  "freshUnzipDirectory": ".runtime/package-v1.1.1-626e86c1dab5424cb2f5c52237cb294d/fresh-unzip",
+  "entry": "AI编程_智慧校园_48学时/先打开这里.html",
+  "staticEntryChecks": {
+    "status": "PASS_STATIC",
+    "entries": [
+      "先打开这里.html",
+      "index.html",
+      "walkthroughs/index.html",
+      "reading/index.html",
+      "lesson-plans/手把手主线授课衔接.html",
+      "lesson-plans/index.html",
+      "resources/index.html"
+    ],
+    "localReferences": 976,
+    "externalReferencesNotRequested": [
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://www.qianwen.com/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://code.visualstudio.com/download",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://adoptium.net/temurin/releases/?version=17",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://git-scm.com/downloads/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://code.visualstudio.com/download",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://adoptium.net/temurin/releases/?version=17",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "https://git-scm.com/downloads/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "walkthroughs/index.html",
+        "reference": "http://127.0.0.1:5178/#cases?state=malformed",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "http://127.0.0.1:5178/#first-read；根页现在是设备台账。失败保留快照由教师框架提供，学生观察并解释。课前完成工具安装、首次依赖下载和每台学生机的资源预检，课内才有余量完成1＋2＋1。达到任务卡的最小证据就停，不重复执行全套构建或制作额外页面。",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://git-scm.com/docs/git-add",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://git-scm.com/docs/git-revert",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://docs.npmjs.com/cli/v11/commands/npm-ci/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "http://127.0.0.1:5178/#first-read。端口被占用时先确认占用者，脚本不自动杀进程；结束时在对应终端Ctrl+C。修改后端后应重新build再启动，不能用旧JAR证明新源码。学生版未补TODO时可以构建，但对应任务测试失败和页面待完成提示属于预期。",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://vite.dev/config/server-options.html#server-proxy",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/responsebody.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://cn.vuejs.org/guide/components/props.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://cn.vuejs.org/guide/essentials/watchers.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://github.com/QwenLM/Qwen3-Coder",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://qwenlm.github.io/qwen-code-docs/zh/users/quickstart/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://www.qianwen.com/",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "reading/index.html",
+        "reference": "https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "resources/index.html",
+        "reference": "https://dev.mysql.com/doc/connector-j/en/connector-j-reference-using-ssl.html",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "from": "resources/index.html",
+        "reference": "https://dev.mysql.com/doc/refman/8.4/en/grant.html",
+        "status": "NOT_REQUESTED"
+      }
+    ],
+    "historicalReferencesNotPackaged": [
+      {
+        "from": "reading/index.html",
+        "reference": "../../../system/docs/api-contract.md",
+        "status": "HISTORICAL_REFERENCE_NOT_PACKAGED"
+      }
+    ],
+    "browserUsed": false,
+    "networkUsed": false,
+    "javascriptExecuted": false
+  },
+  "documentChecks": "walkthroughs/qa/round9/document-checks.json",
+  "round9GateReports": {
+    "course-index.json": "e495329b37e585b76de319edb10ce7ee2eaaedcf5ba6fda2963b8d15df730a64",
+    "walkthroughs/qa/round9/student-files.json": "9b4ce59f99fee5811e40bddb9922ac313c027b82032dea6fa86c7c65692d7ce0",
+    "walkthroughs/qa/round9/http/first.json": "afa3639ade014e1741e05074be2ca787305f6a32e73a983dd5e6b7efe5f0b198",
+    "walkthroughs/qa/round9/http/restart.json": "f71aee9495f065e2ab56222337e5cf480f5f1ce8c50f6040c5facc1f152f4fd4",
+    "walkthroughs/qa/round9/http/locations.json": "9c1565ef1525bcb47a18d0243c5d47c74ea8c763cd1ac76367ff8fdd25f6d375",
+    "walkthroughs/qa/round9/http/console.json": "bf631410f64d9e027476cc6be9635dc24032005a0f7a881ebb28c51bef187205",
+    "walkthroughs/qa/round9/http/catalog.json": "457dd691b0c17bb8ed59fca389e5640cf82ea026126c1fe99a35fa4f6f42f8e3",
+    "walkthroughs/qa/round9/http/workflow.json": "5e122d9a1617c258f9f83e0cf476568d611450f7ae67101e383dc38196893077",
+    "walkthroughs/qa/round9/http/pagination.json": "be1d3ee11e16d34da62058fdbd66e1c6fd7ef6f146b2c4e34c658dcc424691c0",
+    "walkthroughs/qa/round9/full-api/verification.json": "f3b66dbbcb9956abd6e58ad6ae32cd99c23e6dc952113f8702692cd09a607d63",
+    "walkthroughs/qa/round9/lab-browser/verification.json": "34b1b6922b404d9fb6f9d43c2217f4d4a8fd78c9b8d43d83f831f8b04d762992",
+    "walkthroughs/qa/round9/handoff.json": "bb00d65fdfd2302c15663258c08233808427b447352e3ca110b7a5040604c6a2",
+    "walkthroughs/qa/round9/author-verification.json": "36f6d0234bd7ed9ad926e853e48949d0bfd3b2f3fd649d5ebfa96f72057a4f43",
+    "walkthroughs/build.json": "0957370374ad6004fa6b2316d7cdc4fdf53e4d8d65389550eab6089a92768807",
+    "reading/index.build.json": "6f5dff077555d35b1c7455fe53557d542f1efab91b571ad8b9a4a670702593ee",
+    "walkthroughs/qa/round9/offline-static.json": "04c4d88da6d43af94754b1c9f792dac68f7c17761754b6a0830972e091f2e8db",
+    "walkthroughs/qa/round9/offline-manual-review.json": "f1cf23797829858e167b2db43107a77eedab68a991891f62d6544db63f4c660b"
+  },
+  "historicalArchivesUnchanged": {
+    "AI编程_智慧校园_48学时_V1.0.2_完整教学包.zip": "1083e348cca3085b802f04c76971635883af65c58324e323d82244039206c1d5",
+    "AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip": "625042673d2f3da39ab2b889e17a22495e25cee870725e37de176dbd5429ee87"
+  },
+  "historicalReferenceAndChapterStartersUnchanged": true,
+  "originalWordPdfPreserved": true,
+  "privatePathsExcluded": true,
+  "knownCredentialScan": "PASS",
+  "credentialScanScope": "Course-local reference and round8/round9 rehearsal passwords; not a universal secret detector.",
+  "freshUnzipBrowserCheck": "NOT_RUN_THIS_ROUND_STATIC_ONLY",
+  "limitations": {
+    "offlineHtml": "新离线HTML仅进行本轮静态检查，未进行本轮离线浏览器复测。",
+    "offlineBrowserRetestedThisRound": false,
+    "windowsPhysicalMachine": false,
+    "classroomTrial": false,
+    "schoolDatabase": false,
+    "realAiriot": false,
+    "realQwenSession": false,
+    "note": "作者工程与HTTP/应用浏览器结果不能代替Windows实机、学校环境或学生课堂验收。"
+  }
+}

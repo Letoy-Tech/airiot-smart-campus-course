@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Author same-machine fresh ZIP receiver, not another student or physical Windows machine",
+  "checks": [
+    {
+      "name": "doctor",
+      "exit": 0
+    },
+    {
+      "name": "install",
+      "exit": 0
+    },
+    {
+      "name": "init",
+      "exit": 0
+    },
+    {
+      "name": "check",
+      "exit": 0
+    },
+    {
+      "name": "build",
+      "exit": 0
+    },
+    {
+      "name": "prepared-state-preserved",
+      "exit": 0
+    },
+    {
+      "name": "new accounts and 11 design documents, completed C12 preserved",
+      "passed": true
+    },
+    {
+      "name": "fresh receiver HTTP catalogue, event lifecycle and viewer denial",
+      "passed": true
+    },
+    {
+      "name": "final export includes latest reproduction, commit record and 11 designs; ZIP CRC and every hash",
+      "passed": true
+    }
+  ],
+  "at": "2026-10-19T14:10:11.500811+00:00",
+  "candidate": "app-handoff-20261019T140557074Z",
+  "final": "app-handoff-20261019T141011465Z",
+  "files": 153,
+  "designFiles": 11,
+  "sourceCommit": "4fecb36bf59bffd1995ca70ff26e567cc938cb3e",
+  "finalZipSha256": "3083182d14d9694eac74741fba6f05a58b4285a55722d7e5010afe24cdd1590d",
+  "reproductionCopiedBack": true,
+  "finalExportAfterCommitRecord": true,
+  "privateExcluded": true
+}

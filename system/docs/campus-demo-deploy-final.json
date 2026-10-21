@@ -1,0 +1,149 @@
+{
+  "state": "activated and technically verified",
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "publicURL": "https://demo.example.invalid/campus-demo/",
+  "checkedAt": "2026-10-05T01:56:07.230611+08:00",
+  "backend": {
+    "sha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a",
+    "bytes": 101694540,
+    "pid": "360464",
+    "health": true,
+    "oldRelease": "REL_20261005-0143-SCHOOL-DEMO"
+  },
+  "frontend": {
+    "unchangedFromV1": true,
+    "indexSha256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+  },
+  "services": {
+    "campus-demo-mysql.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351060",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:43:10 CST"
+    },
+    "campus-demo-redis.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "351064",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:43:10 CST"
+    },
+    "campus-demo.service": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "360464",
+      "UnitFileState": "enabled",
+      "ActiveEnterTimestamp": "Mon 2026-10-05 01:50:40 CST"
+    }
+  },
+  "credentialExposureChecks": {
+    "ordinaryProperties": false,
+    "units": false,
+    "commandLine": false,
+    "processEnvironment": false,
+    "backendJournal": false
+  },
+  "proxy": {
+    "vhostSha256": "e0bbec236e36ddf2fbe14e41e245f831328887bb84f0112f094b0233447a246b",
+    "existingDemoRoutesRetained": true,
+    "finalNginxReloadPerformed": false,
+    "sharedDomainChecks": [
+      {
+        "domain": "demo.example.invalid",
+        "path": "/portal/index.html",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "200 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "302 0"
+      },
+      {
+        "domain": "demo.example.invalid",
+        "path": "/",
+        "httpTLS": "302 0"
+      }
+    ],
+    "publicDocumentMatchesActiveRelease": true
+  },
+  "sharedAiriot": {
+    "containerCount": 49,
+    "identitiesAndImagesUnchanged": true,
+    "runtimeStateChanges": [],
+    "intentionalRestartPerformed": false
+  },
+  "backup": {
+    "path": "/srv/campus-demo/backups/database-20261004T175348Z-2ea2de/smart_campus_demo.sql.gz",
+    "sha256": "14c8d96a0100b6a6afe262fbae8e1d3610f98b776258f1ed6d62b8768fabe4e0",
+    "tableCount": 18,
+    "snapshotCases": 4,
+    "snapshotCaseEvents": 18,
+    "restoredInIsolation": true,
+    "temporarySchemaRemoved": true,
+    "liveDatabaseRestored": false
+  },
+  "networkLimits": [
+    "本机198.18/15地址是代理fake-IP，不能作为公网DNS或学校外网直连证据。",
+    "本机正常域名HTTPS、证书校验及文档/API/module哈希均通过。",
+    "城大服务器DNS同为192.0.2.233，接口地址主要为192.0.2.123和WireGuard192.0.2.189，未发现frps/frpc运行。公网NAT/边界网关配置未在本次范围内核实。",
+    "服务器访问自己公网域名超时（curl28）；学校外部网络没有实际验收。保留这项网络覆盖缺口，不把本机成功或回环SNI检查等同于外校网络验收。"
+  ],
+  "retainedFailureReports": [
+    "campus-demo-deploy-publish-attempts.json",
+    "campus-demo-deploy-publish-failures.json"
+  ],
+  "evidence": [
+    "campus-demo-deploy-prepared.json",
+    "campus-demo-deploy-staged.json",
+    "campus-demo-deploy-backend.json",
+    "campus-demo-deploy-published.json",
+    "campus-demo-deploy-technical.json",
+    "campus-demo-deploy-public-network.json",
+    "campus-demo-deploy-backup.json",
+    "campus-demo-deploy-restore.json"
+  ],
+  "scope": "Synthetic school showcase; physicalcontrol disabled. Business/API/browser acceptance owned by root task, separate from deployment checks.",
+  "cleanup": {
+    "sshTunnelSession": 97227,
+    "localForwardPort": 18092,
+    "closed": true,
+    "checkedAt": "2026-10-05T01:57:11.000121+08:00",
+    "demoServicesIntentionallyKeptRunning": true
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

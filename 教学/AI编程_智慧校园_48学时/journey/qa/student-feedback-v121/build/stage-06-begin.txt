@@ -1,0 +1,15 @@
+$ node tools/progress.mjs begin 06
+已准备骨架：第06站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/HistoryView.vue
+  frontend/src/views/RawAlarmsView.vue
+  frontend/src/api/read-models.ts
+  frontend/src/types/read-models.ts
+  frontend/src/composables/useReadPage.ts
+  frontend/src/tests/comparison.test.ts
+  frontend/src/tests/monitoring-views.test.ts
+  frontend/src/tests/read-api.test.ts
+  frontend/src/tests/read-models.test.ts
+备份：journey-backups/2026-10-19T22-17-41-324Z-stage-06-begin-d988e4
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

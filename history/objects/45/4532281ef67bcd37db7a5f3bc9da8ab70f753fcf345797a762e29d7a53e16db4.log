@@ -1,0 +1,418 @@
+
+> campus-ai-course-frontend@0.1.0 dev
+> vite
+
+
+  VITE v7.3.7  ready in 113 ms
+
+  ➜  Local:   http://127.0.0.1:5178/
+  ➜  press h + enter to show help
+1:32:10 AM [vite] http proxy error: /api/campus/devices
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:32:10 AM [vite] http proxy error: /api/campus/spaces
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:32:22 AM [vite] http proxy error: /api/campus/devices
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:32:22 AM [vite] http proxy error: /api/campus/spaces
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:36:05 AM [vite] (client) hmr update /src/views/FirstDeviceRead.vue
+1:36:05 AM [vite] http proxy error: /api/campus/devices
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:36:05 AM [vite] http proxy error: /api/campus/spaces
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:36:08 AM [vite] (client) hmr update /src/views/FirstDeviceRead.vue
+1:36:10 AM [vite] (client) hmr update /src/views/FirstDeviceRead.vue
+1:36:51 AM [vite] http proxy error: /api/campus/devices
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:36:51 AM [vite] http proxy error: /api/campus/spaces
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:39:22 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+1:42:11 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+1:42:11 AM [vite] (client) warning: <p> cannot be child of <p>, according to HTML specifications. This can cause hydration errors or potentially disrupt future functionality.
+130|      <p v-if="isStale" class="notice" role="status">
+131|        <strong>本次刷新未成功，台账保留上次成功快照</strong>
+132|        <p>
+   |        ^^^
+133|          以下 {{ total }} 台设备与采样时刻 {{ timeText(store.observedAt) }} 来自上一次成功读取，不代表本次真实状态。
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+134|        </p>
+   |  ^^^^^^^^^^
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/DeviceCatalog.vue
+1:42:21 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+1:47:09 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+1:51:54 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+1:56:30 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+2:01:53 AM [vite] (client) ✨ new dependencies optimized: echarts/core, echarts/charts, echarts/components, echarts/renderers
+2:01:53 AM [vite] (client) ✨ optimized dependencies changed. reloading
+2:03:30 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:03:33 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:04:25 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:04:27 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:04:29 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue?vue&type=style&index=0&scoped=9fde4a99&lang.css
+2:06:13 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:06:15 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:06:20 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:06:21 AM [vite] (client) hmr update /src/views/EnergyView.vue?vue&type=style&index=0&scoped=2e3237a3&lang.css
+2:07:31 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+2:11:40 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+2:19:07 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:20:50 AM [vite] (client) hmr update /src/views/CloseChecklist.vue
+2:22:12 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:13 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:18 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:23 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:26 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:28 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:22:37 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:25:07 AM [vite] (client) hmr update /src/views/FullWorkspace.vue
+2:25:07 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:35:21 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:36:10 AM [vite] (client) hmr update /src/App.vue, /src/views/FullWorkspace.vue, /src/views/FirstDeviceRead.vue, /src/views/DeviceCatalog.vue, /src/views/OverviewView.vue, /src/views/EnergyView.vue, /src/views/HistoryView.vue, /src/views/RawAlarmsView.vue, /src/views/AuditView.vue, /src/components/CompareHistory.vue, /src/views/CasesView.vue, /src/views/OwnersView.vue, /src/views/IntegrationView.vue, /src/views/LocationsView.vue, /src/views/AccessView.vue
+2:36:52 AM [vite] (client) hmr update /src/App.vue, /src/views/FullWorkspace.vue, /src/views/FirstDeviceRead.vue, /src/views/DeviceCatalog.vue, /src/views/OverviewView.vue, /src/views/EnergyView.vue, /src/views/HistoryView.vue, /src/views/RawAlarmsView.vue, /src/views/AuditView.vue, /src/components/CompareHistory.vue, /src/views/CasesView.vue, /src/views/OwnersView.vue, /src/views/IntegrationView.vue, /src/views/LocationsView.vue, /src/views/AccessView.vue
+2:38:55 AM [vite] (client) hmr update /src/App.vue, /src/views/FullWorkspace.vue, /src/views/FirstDeviceRead.vue, /src/views/DeviceCatalog.vue, /src/views/OverviewView.vue, /src/views/EnergyView.vue, /src/views/HistoryView.vue, /src/views/RawAlarmsView.vue, /src/views/AuditView.vue, /src/components/CompareHistory.vue, /src/views/CasesView.vue, /src/views/OwnersView.vue, /src/views/IntegrationView.vue, /src/views/LocationsView.vue, /src/views/AccessView.vue
+2:42:11 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:12 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:15 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:17 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:18 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:21 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:23 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:26 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:27 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:29 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:29 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:30 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:30 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:31 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:33 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:34 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:37 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:39 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:41 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:42 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:45 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:48 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:49 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:49 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:52 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:52 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:53 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:53 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:54 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:56 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:57 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:57 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:57 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:42:58 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:43:00 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:00 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:00 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:01 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:01 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:01 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:02 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:02 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:02 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:04 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:04 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:04 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:05 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:05 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:05 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:05 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:05 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:05 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:07 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:07 AM [vite] http proxy error: /api/campus/alarm-cases/handlers
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:07 AM [vite] http proxy error: /api/campus/device-owners
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:43:08 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:11 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:11 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:12 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:16 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:16 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:16 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:16 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:16 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:16 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:16 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:17 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:17 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:17 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:17 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:43:17 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:17 AM [vite] Internal server error: Element is missing end tag.
+  Plugin: vite:vue
+  File: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/src/views/OwnersView.vue:472:11
+  470 |            </div>
+  471 |  
+  472 |            <form class="action-panel" @submit.prevent="submitChange">
+      |             ^
+  473 |              <h3>变更责任人</h3>
+  474 |              <p class="tiny muted">
+      at createCompilerError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3036:5)
+      at Object.onclosetag (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2403:13)
+      at Tokenizer.stateInClosingTagName (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3075:13)
+      at Object.parse (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:916:23)
+      at Object.parse$1 [as parse] (/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1918:24)
+      at createDescriptor (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:54:42)
+      at handleHotUpdate (file:///Users/learner/My%20Projects/Airiot%E5%A4%A7%E6%B9%BE%E5%8C%BA%E9%AB%98%E6%A0%A1%E4%BA%A7%E4%B8%9A%E8%81%94%E7%9B%9F/%E6%95%99%E5%AD%A6/%E5%AD%A6%E7%94%9F%E5%AE%9E%E5%81%9A_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/@vitejs/plugin-vue/dist/index.mjs:1162:25)
+2:43:18 AM [vite] (client) hmr update /src/views/OwnersView.vue
+2:47:37 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:40 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:44 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:49 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:52 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:55 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:57 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:47:58 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:48:00 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:48:00 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:48:04 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:48:06 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue?vue&type=style&index=0&scoped=9fde4a99&lang.css
+2:48:06 AM [vite] (client) hmr update /src/views/OverviewView.vue
+2:48:10 AM [vite] (client) hmr update /src/views/HistoryView.vue
+2:48:15 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:20 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:22 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:25 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:28 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:31 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:33 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:37 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:38 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:40 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:48:41 AM [vite] (client) hmr update /src/views/EnergyView.vue?vue&type=style&index=0&scoped=2e3237a3&lang.css
+2:49:08 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:49:11 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:49:11 AM [vite] (client) hmr update /src/views/DeviceCatalog.vue
+2:50:30 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:50:32 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:50:34 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:50:37 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:50:45 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:50:48 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:50:54 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:50:57 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:50:57 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:51:00 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:51:02 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:51:08 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:51:09 AM [vite] (client) hmr update /src/views/AuditView.vue
+2:51:11 AM [vite] (client) hmr update /src/views/RawAlarmsView.vue
+2:52:19 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:24 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:26 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:31 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:33 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:36 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:52:39 AM [vite] (client) hmr update /src/views/EnergyView.vue
+2:53:18 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:53:33 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:53:48 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:54:03 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:54:09 AM [vite] (client) hmr update /src/views/CasesView.vue
+2:54:18 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:54:33 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:54:48 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+2:55:03 AM [vite] http proxy error: /api/campus/overview
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)

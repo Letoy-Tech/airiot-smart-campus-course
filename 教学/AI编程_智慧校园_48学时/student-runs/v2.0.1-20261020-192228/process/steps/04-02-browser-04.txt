@@ -1,0 +1,278 @@
+@vom 1
+@view 1265x799
+@layers 1 focus=L1
+L1 page
+  RootWebArea "晨光校园值班台"
+    banner "晨光校园值班台 教学模拟项目"
+      heading "晨光校园值班台"
+        StaticText "晨光校园值班台"
+      paragraph "教学模拟项目"
+        StaticText "教学模拟项目"
+    complementary
+      navigation "主导航"
+        @e1 button "概览"
+        @e2 button "设备"
+        @e3 button "空间"
+        @e4 button "能源" [ctx: 晨光校园值班台 教学模拟项目]
+        @e5 button "历史"
+        @e6 button "原始报警"
+        @e7 button "演练事件"
+        @e8 button "设备责任"
+        @e9 button "管理"
+    main "设备 搜索 类型 空间 在线情况 设备列表 编号 设备名称 类型 空间 在线情况 操作 d01 温湿度01 环境 101教室（教学楼A 2层） 在线 d02 温湿度02 环境 201教室（教学楼 2层） 在线 d03 温湿度03 环境 101实验室（实验楼 1层） 未知 d04 温湿度04 环境 201实验室（实验楼 2层） 离线 d05 电表01 能源 101教室（教学楼A 2层） 在线 d06 电表02 能源 201教室（教学楼 2层） 在线 d07 电表03 能源 10"
+      heading "设备"
+        StaticText "设备"
+      group "设备筛选"
+        LabelText "搜索"
+          StaticText "搜索"
+          @e10 searchbox "搜索" [empty] placeholder="名称或编号"
+        LabelText "类型"
+          StaticText "类型"
+          @e11 combobox "类型 [has-submenu]"
+        LabelText "空间"
+          StaticText "空间"
+          @e12 combobox "空间 [has-submenu]"
+        LabelText "在线情况"
+          StaticText "在线情况"
+          @e13 combobox "在线情况 [has-submenu]"
+        @e14 button "清空筛选"
+      table "设备列表"
+        caption "设备列表"
+          StaticText "设备列表"
+        rowgroup "编号 设备名称 类型 空间 在线情况 操作"
+          row "编号 设备名称 类型 空间 在线情况 操作"
+            columnheader "编号"
+            columnheader "设备名称"
+            columnheader "类型"
+            columnheader "空间"
+            columnheader "在线情况"
+            columnheader "操作"
+        row "d01 温湿度01 环境 101教室（教学楼A 2层） 在线"
+          cell "d01"
+          cell "温湿度01"
+          cell "环境"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e15 button "查看" [ctx: 环境]
+        row "d02 温湿度02 环境 201教室（教学楼 2层） 在线"
+          cell "d02"
+          cell "温湿度02"
+          cell "环境"
+          cell "201教室（教学楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e16 button "查看" [ctx: 环境]
+        row "d03 温湿度03 环境 101实验室（实验楼 1层） 未知"
+          cell "d03"
+          cell "温湿度03"
+          cell "环境"
+          cell "101实验室（实验楼 1层）"
+          cell "未知"
+          cell "查看"
+            @e17 button "查看" [ctx: 环境]
+              [§ active: 查看]
+                正在读取当前负责人和空间
+                读数
+                该设备暂无读数
+                固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。
+                设备详情
+                收起详情
+                编号
+                d03
+                名称
+                温湿度03
+                类型
+                环境
+                空间
+                101实验室（实验楼 1层）
+                在线情况
+                未知
+                当前负责人
+                尚未登记
+                备注
+                查看责任登记
+                查看所在空间
+                设备读数
+                点位
+                数值
+                单位
+                采样时间
+                质量
+                缺失
+                °C
+                无采样时间
+                61.4
+                %
+                2026/10/20 08:00:00
+                温度
+                temperature
+                湿度
+                humidity
+                正常
+        row "d04 温湿度04 环境 201实验室（实验楼 2层） 离线"
+          cell "d04"
+          cell "温湿度04"
+          cell "环境"
+          cell "201实验室（实验楼 2层）"
+          cell "离线"
+          cell "查看"
+            @e18 button "查看" [ctx: 环境]
+        row "d05 电表01 能源 101教室（教学楼A 2层） 在线"
+          cell "d05"
+          cell "电表01"
+          cell "能源"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e19 button "查看" [ctx: 能源]
+        row "d06 电表02 能源 201教室（教学楼 2层） 在线"
+          cell "d06"
+          cell "电表02"
+          cell "能源"
+          cell "201教室（教学楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e20 button "查看" [ctx: 能源]
+        row "d07 电表03 能源 101实验室（实验楼 1层） 在线"
+          cell "d07"
+          cell "电表03"
+          cell "能源"
+          cell "101实验室（实验楼 1层）"
+          cell "在线"
+          cell "查看"
+            @e21 button "查看" [ctx: 能源]
+        row "d08 电表04 能源 201实验室（实验楼 2层） 在线"
+          cell "d08"
+          cell "电表04"
+          cell "能源"
+          cell "201实验室（实验楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e22 button "查看" [ctx: 能源]
+        row "d09 设施01 设施 101教室（教学楼A 2层） 在线"
+          cell "d09"
+          cell "设施01"
+          cell "设施"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e23 button "查看" [ctx: 设施]
+        row "d10 设施02 设施 201教室（教学楼 2层） 在线"
+          cell "d10"
+          cell "设施02"
+          cell "设施"
+          cell "201教室（教学楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e24 button "查看" [ctx: 设施]
+        row "d11 设施03 设施 101实验室（实验楼 1层） 在线"
+          cell "d11"
+          cell "设施03"
+          cell "设施"
+          cell "101实验室（实验楼 1层）"
+          cell "在线"
+          cell "查看"
+            @e25 button "查看" [ctx: 设施]
+        row "d12 设施04 设施 201实验室（实验楼 2层） 在线"
+          cell "d12"
+          cell "设施04"
+          cell "设施"
+          cell "201实验室（实验楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e26 button "查看" [ctx: 设施]
+        row "d13 灯光01 照明 101教室（教学楼A 2层） 在线"
+          cell "d13"
+          cell "灯光01"
+          cell "照明"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e27 button "查看" [ctx: 照明]
+        row "d14 灯光02 照明 201教室（教学楼 2层） 在线"
+          cell "d14"
+          cell "灯光02"
+          cell "照明"
+          cell "201教室（教学楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e28 button "查看" [ctx: 照明]
+        row "d15 灯光03 照明 101实验室（实验楼 1层） 在线"
+          cell "d15"
+          cell "灯光03"
+          cell "照明"
+          cell "101实验室（实验楼 1层）"
+          cell "在线"
+          cell "查看"
+            @e29 button "查看" [ctx: 照明]
+        row "d16 灯光04 照明 201实验室（实验楼 2层） 在线"
+          cell "d16"
+          cell "灯光04"
+          cell "照明"
+          cell "201实验室（实验楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e30 button "查看" [ctx: 照明]
+      paragraph "当前显示 16 台 / 全部 16 台"
+        StaticText "当前显示 16 台 / 全部 16 台"
+      heading "设备详情"
+        StaticText "设备详情"
+      @e31 button "收起详情"
+      DescriptionList "编号 d03 名称 温湿度03 类型 环境 空间 101实验室（实验楼 1层） 在线情况 未知 当前负责人 尚未登记 备注 尚未登记"
+        term "编号"
+          StaticText "编号"
+        definition "d03"
+          StaticText "d03"
+        term "名称"
+          StaticText "名称"
+        definition "温湿度03"
+          StaticText "温湿度03"
+        term "类型"
+          StaticText "类型"
+        definition "环境"
+          StaticText "环境"
+        term "空间"
+          StaticText "空间"
+        definition "101实验室（实验楼 1层）"
+          StaticText "101实验室（实验楼 1层）"
+        term "在线情况"
+          StaticText "在线情况"
+        definition "未知"
+          StaticText "未知"
+        term "当前负责人"
+          StaticText "当前负责人"
+        definition "尚未登记"
+          StaticText "尚未登记"
+        term "备注"
+          StaticText "备注"
+        definition "尚未登记"
+          StaticText "尚未登记"
+      @e32 button "查看责任登记"
+      @e33 button "查看所在空间"
+      heading "读数"
+        StaticText "读数"
+      table "设备读数"
+        caption "设备读数"
+          StaticText "设备读数"
+        rowgroup "点位 数值 单位 采样时间 质量"
+          row "点位 数值 单位 采样时间 质量"
+            columnheader "点位"
+            columnheader "数值"
+            columnheader "单位"
+            columnheader "采样时间"
+            columnheader "质量"
+        row "温度 temperature 缺失 °C 无采样时间 缺失"
+          cell "温度 temperature"
+          cell "缺失"
+          cell "°C"
+          cell "无采样时间"
+          cell "缺失"
+        row "湿度 humidity 61.4 % 2026/10/20 08:00:00 正常"
+          cell "湿度 humidity"
+          cell "61.4"
+          cell "%"
+          cell "2026/10/20 08:00:00"
+          cell "正常"
+      paragraph "固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。"
+        StaticText "固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。"

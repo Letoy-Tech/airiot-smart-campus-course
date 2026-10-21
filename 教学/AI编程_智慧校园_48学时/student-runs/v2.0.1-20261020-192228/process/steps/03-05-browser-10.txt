@@ -1,0 +1,153 @@
+@vom 1
+@view 1265x800
+@layers 1 focus=L1
+L1 page
+  RootWebArea "晨光校园值班台"
+    banner "晨光校园值班台 教学模拟项目"
+      heading "晨光校园值班台"
+        StaticText "晨光校园值班台"
+      paragraph "教学模拟项目"
+        StaticText "教学模拟项目"
+    complementary
+      navigation "主导航"
+        @e1 button "概览"
+        @e2 button "设备"
+        @e3 button "空间"
+        @e4 button "能源" [ctx: 晨光校园值班台 教学模拟项目]
+        @e5 button "历史"
+        @e6 button "原始报警"
+        @e7 button "演练事件"
+        @e8 button "设备责任"
+        @e9 button "管理"
+    main "设备 搜索 类型 空间 在线情况 设备列表 编号 设备名称 类型 空间 在线情况 操作 d01 温湿度01 环境 101教室（教学楼A 2层） 在线 当前显示 1 台 / 全部 16 台 设备详情 编号 d01 名称 温湿度01 类型 环境 空间 101教室（教学楼A 2层） 在线情况 在线 当前负责人 manager 备注 日常巡查联系这位处理人（回读核对） 读数 设备读数 标签 数值 单位 采样时间 质量 temperature 24 °C 2026/10/20 08:0"
+      heading "设备"
+        StaticText "设备"
+      group "设备筛选"
+        LabelText "搜索"
+          StaticText "搜索"
+          @e10 searchbox "搜索" [filled] placeholder="名称或编号" ="d01"
+        LabelText "类型"
+          StaticText "类型"
+          @e11 combobox "类型 [has-submenu]"
+        LabelText "空间"
+          StaticText "空间"
+          @e12 combobox "空间 [has-submenu]"
+        LabelText "在线情况"
+          StaticText "在线情况"
+          @e13 combobox "在线情况 [has-submenu]"
+        @e14 button "清空筛选"
+      table "设备列表"
+        caption "设备列表"
+          StaticText "设备列表"
+        rowgroup "编号 设备名称 类型 空间 在线情况 操作"
+          row "编号 设备名称 类型 空间 在线情况 操作"
+            columnheader "编号"
+            columnheader "设备名称"
+            columnheader "类型"
+            columnheader "空间"
+            columnheader "在线情况"
+            columnheader "操作"
+        row "d01 温湿度01 环境 101教室（教学楼A 2层） 在线"
+          cell "d01"
+          cell "温湿度01"
+          cell "环境"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e15 button "查看"
+              [§ active: 查看]
+                正在读取当前负责人和空间
+                读数
+                该设备暂无读数
+                设备详情
+                收起详情
+                编号
+                d01
+                名称
+                温湿度01
+                类型
+                环境
+                空间
+                101教室（教学楼A 2层）
+                在线情况
+                在线
+                当前负责人
+                manager
+                备注
+                日常巡查联系这位处理人（回读核对）
+                查看责任登记
+                查看所在空间
+                设备读数
+                标签
+                数值
+                单位
+                采样时间
+                质量
+                temperature
+                24
+                °C
+                2026/10/20 08:00:00
+                正常
+                humidity
+                61
+                %
+      paragraph "当前显示 1 台 / 全部 16 台"
+        StaticText "当前显示 1 台 / 全部 16 台"
+      heading "设备详情"
+        StaticText "设备详情"
+      @e16 button "收起详情"
+      DescriptionList "编号 d01 名称 温湿度01 类型 环境 空间 101教室（教学楼A 2层） 在线情况 在线 当前负责人 manager 备注 日常巡查联系这位处理人（回读核对）"
+        term "编号"
+          StaticText "编号"
+        definition "d01"
+          StaticText "d01"
+        term "名称"
+          StaticText "名称"
+        definition "温湿度01"
+          StaticText "温湿度01"
+        term "类型"
+          StaticText "类型"
+        definition "环境"
+          StaticText "环境"
+        term "空间"
+          StaticText "空间"
+        definition "101教室（教学楼A 2层）"
+          StaticText "101教室（教学楼A 2层）"
+        term "在线情况"
+          StaticText "在线情况"
+        definition "在线"
+          StaticText "在线"
+        term "当前负责人"
+          StaticText "当前负责人"
+        definition "manager"
+          StaticText "manager"
+        term "备注"
+          StaticText "备注"
+        definition "日常巡查联系这位处理人（回读核对）"
+          StaticText "日常巡查联系这位处理人（回读核对）"
+      @e17 button "查看责任登记"
+      @e18 button "查看所在空间"
+      heading "读数"
+        StaticText "读数"
+      table "设备读数"
+        caption "设备读数"
+          StaticText "设备读数"
+        rowgroup "标签 数值 单位 采样时间 质量"
+          row "标签 数值 单位 采样时间 质量"
+            columnheader "标签"
+            columnheader "数值"
+            columnheader "单位"
+            columnheader "采样时间"
+            columnheader "质量"
+        row "temperature 24 °C 2026/10/20 08:00:00 正常"
+          cell "temperature"
+          cell "24"
+          cell "°C"
+          cell "2026/10/20 08:00:00"
+          cell "正常"
+        row "humidity 61 % 2026/10/20 08:00:00 正常"
+          cell "humidity"
+          cell "61"
+          cell "%"
+          cell "2026/10/20 08:00:00"
+          cell "正常"

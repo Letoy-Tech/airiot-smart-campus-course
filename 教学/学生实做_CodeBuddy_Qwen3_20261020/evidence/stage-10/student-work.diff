@@ -1,0 +1,1072 @@
+--- before/docs/项目卡.md
++++ after/docs/项目卡.md
+@@ -48,3 +48,7 @@
+ 
+ 关闭要求：处理中、人工NOTE、来源已恢复、发生/恢复/核实时刻合法、恢复后服务端核实PASS、非空结论、当前expectedVersion、管理员或本人处理人权限。DEMO_RECOVER/VERIFY_RECOVERY不算NOTE。任何缺项由既有后端拒绝，前端检查只是辅助，不改现有服务端规则或拒绝顺序。
+ 
++# 第10站 Ask 结论（操作者摘录）
++
++设备负责人A改B后，旧事件assigneeUid保留A；之后新触发事件按当时负责人快照自动分派B。若B无资格则新事件待分派，不回退A。两人读取同一责任version后，先保存者version+1，后保存的旧expectedVersion返回409，不覆盖；回读后人工决定再提交。
++
+--- before/frontend/src/views/AuditView.vue
++++ after/frontend/src/views/AuditView.vue
+@@ -1,3 +1,331 @@
++<script setup lang="ts">
++import { computed, watch } from 'vue'
++import ReadStatus from '../components/ReadStatus.vue'
++import SourceBanner from '../components/SourceBanner.vue'
++import { getAuditPage } from '../api/read-models'
++import { useReadPage } from '../composables/useReadPage'
++import { strictCapability, timeText } from '../domain/course'
++import { useCampusStore } from '../stores/campus'
++import type { AuditPage, CommandAudit } from '../types/read-models'
++
++const store = useCampusStore()
++/** 审计接口仅 ADMIN 可读；能力只认服务端布尔 true，roles 只用于显示。 */
++const canAdmin = computed(() => store.user !== null && strictCapability(store.capabilities?.canAdmin))
++
++const {
++  data,
++  limit,
++  scenario,
++  snapshotSkip,
++  snapshotLimit,
++  denied,
++  refresh,
++  filtersChanged,
++  page: goPage,
++  scope,
++} = useReadPage<CommandAudit>(getAuditPage, () => canAdmin.value)
++const { busy, error } = scope
++
++const total = computed(() => data.value?.total ?? 0)
++/** 页面级样例标识由服务端附加，读取失败时保持上次成功快照的标识。 */
++const sampleKind = computed(() => (data.value as AuditPage | null)?.sampleKind ?? '')
++const currentPage = computed(() => Math.floor(snapshotSkip.value / snapshotLimit.value) + 1)
++const pageCount = computed(() => Math.max(1, Math.ceil(total.value / snapshotLimit.value)))
++const canPrev = computed(() => snapshotSkip.value > 0 && !busy.value && !denied.value)
++const canNext = computed(
++  () =>
++    data.value !== null &&
++    snapshotSkip.value + snapshotLimit.value < data.value.total &&
++    !busy.value &&
++    !denied.value,
++)
++const emptyHeading = computed(() => {
++  if (!data.value) return ''
++  if (data.value.total === 0) return error.value ? '上次成功快照为空' : '查询已成功，当前页没有审计记录'
++  return '当前页没有记录'
++})
++const scenarioNames: Record<string, string> = {
++  normal: '正常样本',
++  empty: '成功空结果',
++  failure: '读取失败',
++}
++
++function refreshNow() {
++  if (!busy.value && !denied.value && canAdmin.value) void refresh()
++}
++
++function filtersChangedNow() {
++  if (denied.value || !canAdmin.value) return
++  // 条件变化时取消旧请求，再从第 1 页读取，避免旧条件的结果覆盖新条件。
++  scope.cancel()
++  filtersChanged()
++}
++
++/** 原始布尔值与 null 都照原样显示，不把“未确认”解释成成功或失败。 */
++function boolText(value: boolean | null): string {
++  return value === null ? 'null（未知）' : String(value)
++}
++
++watch(canAdmin, (value) => {
++  if (value) {
++    denied.value = false
++    void refresh()
++  }
++})
++watch(
++  () => store.user?.uid ?? '',
++  () => {
++    denied.value = false
++  },
++)
++</script>
++
+ <template>
+-  <section class="workspace full-page"><h1>责任、审计与接入</h1><p role="alert">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>
++  <section class="workspace full-page" data-testid="audit-page">
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第10站 · 责任、审计与接入</p>
++        <h1>命令审计只读：保留来源与样例标识</h1>
++        <p class="muted">
++          审计记录来自教学历史样例（HISTORICAL_TEACHING_SAMPLE），source=TEACHING_MOCK、simulated=true，
++          不是真实下发过的命令；outcome、reason、before/requested/confirmed 与 error 原样展示，不改写、不映射。
++        </p>
++      </div>
++      <button
++        type="button"
++        class="button primary"
++        :disabled="busy || denied || !canAdmin"
++        data-testid="audit-refresh"
++        @click="refreshNow"
++      >
++        {{ busy ? '正在读取…' : data ? '重新读取' : '开始读取' }}
++      </button>
++    </header>
++
++    <SourceBanner :time="data?.observedAt" />
++    <p class="refresh-note">
++      仅 ADMIN 可读；首次进入立即读取一次，此后每次完成后等 30 秒再读，请求未完成不叠加，离页或会话变化即停止。
++    </p>
++
++    <ReadStatus :busy="busy" :error="error" :has-data="data !== null" />
++
++    <div v-if="!store.user" class="notice" role="status">
++      <strong>需要已确认的身份</strong>
++      <p>命令审计仅管理员可读；请先用顶部登录。本页不会用空表冒充成功结果。</p>
++    </div>
++    <div v-else-if="!canAdmin" class="notice warning" role="status">
++      <strong>当前身份不能读取命令审计</strong>
++      <p>接口按 ADMIN 判定并会再次核对当前有效身份；本页不发起请求，也不展示任何审计内容。</p>
++    </div>
++    <div v-if="denied" class="notice error" role="alert">
++      <strong>服务端拒绝读取（403）</strong>
++      <p>审计内容已清除，请重新登录并核对当前身份的权限。</p>
++    </div>
++
++    <div class="notice" role="status">
++      <strong>只读记录，没有下发入口</strong>
++      <p>
++        本页没有命令下发、设备控制、远端操作或外部通知按钮；远端控制与外部通知保持关闭，
++        也不把教学样例说成真实 AIRIOT 成功。
++      </p>
++    </div>
++
++    <div class="query-bar">
++      <label
++        >每页<select v-model.number="limit" :disabled="denied || !canAdmin" data-testid="audit-limit" @change="filtersChangedNow">
++          <option :value="5">5 条</option>
++          <option :value="10">10 条</option>
++          <option :value="20">20 条</option>
++          <option :value="50">50 条</option>
++        </select></label
++      >
++      <label
++        >教学读取情境<select v-model="scenario" :disabled="denied || !canAdmin" data-testid="audit-scenario" @change="filtersChangedNow">
++          <option value="normal">正常样本</option>
++          <option value="empty">成功空结果</option>
++          <option value="failure">读取失败</option>
++        </select></label
++      >
++      <p class="query-hint">
++        limit 取 5/10/20/50，skip 由分页计算；切换每页条数或情境都从第 1 页重新读取。
++        情境只影响教学样例，不代表真实设备命令。
++      </p>
++    </div>
++
++    <div v-if="canAdmin && !data && !busy && !error" class="notice" role="status">
++      <strong>尚未取得审计记录</strong>
++      <p>读取需要已登录且有效的管理员身份；若长时间没有结果，请核对身份后点右上角读取。</p>
++    </div>
++
++    <template v-if="data">
++      <p class="audit-meta">
++        来源 {{ data.source }} · simulated={{ data.simulated }} · {{ sampleKind }} ·
++        成功查询：{{ timeText(data.queriedAt) }} · 固定教学采样时刻：{{ timeText(data.observedAt) }}
++        · 当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页
++        {{ data.items.length }} 条 · limit={{ snapshotLimit }} · skip={{ snapshotSkip }}
++        · 情境 {{ scenarioNames[scenario] ?? scenario }}
++      </p>
++      <p v-if="error" class="muted tiny">
++        本次读取失败；以下仍是上次成功快照（第 {{ currentPage }} 页，共 {{ data.total }} 条），不是新的空结果。
++      </p>
++
++      <div v-if="data.issues.length" class="notice warning" role="status">
++        <strong>响应附带 {{ data.issues.length }} 条 issues</strong>
++        <ul class="issue-list">
++          <li v-for="issue in data.issues" :key="`${issue.code}-${issue.scope}-${issue.message}`">
++            <code>{{ issue.code }}</code>
++            <span>{{ issue.message }}</span>
++            <small>{{ issue.scope }}</small>
++          </li>
++        </ul>
++      </div>
++
++      <section class="panel">
++        <div class="section-heading">
++          <h2>命令审计记录</h2>
++          <span>服务端按 createdAt DESC、id DESC 返回；本页不排序、不合并、不改写结果。</span>
++        </div>
++
++        <div v-if="data.items.length === 0" class="empty-state" role="status">
++          <h3>{{ emptyHeading }}</h3>
++          <p v-if="error">本次读取失败，这里显示的是上次成功快照，不是新的空结果。</p>
++          <p v-else-if="data.total === 0">这是成功空结果；不补造命令记录，也不据此判定接入成功。</p>
++          <p v-else>共 {{ data.total }} 条，当前 skip={{ snapshotSkip }}；请返回上一页查看。</p>
++        </div>
++        <div v-else class="table-scroll">
++          <table class="data-table audit-table">
++            <caption>
++              记录来自 GET /api/campus/command-audit?limit={{ snapshotLimit }}&amp;skip={{ snapshotSkip }}&amp;scenario={{ scenario }}；
++              outcome、reason、error 是样例原文，不映射为接入能力。
++            </caption>
++            <thead>
++              <tr>
++                <th scope="col">命令记录</th>
++                <th scope="col">操作者</th>
++                <th scope="col">设备与表</th>
++                <th scope="col">请求与确认</th>
++                <th scope="col">结果与原因</th>
++                <th scope="col">发生时间</th>
++              </tr>
++            </thead>
++            <tbody>
++              <tr v-for="item in data.items" :key="item.id">
++                <td>
++                  <strong>{{ item.id }}</strong>
++                  <small>{{ item.source }} · simulated={{ item.simulated }}</small>
++                  <code>{{ item.sampleKind }}</code>
++                </td>
++                <td>
++                  <strong>{{ item.actorName }}</strong>
++                  <code>{{ item.actorId }}</code>
++                </td>
++                <td>
++                  <code>{{ item.deviceId }}</code>
++                  <small>表 {{ item.tableId }}</small>
++                </td>
++                <td>
++                  <span>before：{{ boolText(item.before) }}</span>
++                  <span>requested：{{ boolText(item.requested) }}</span>
++                  <small>confirmed：{{ boolText(item.confirmed) }}</small>
++                </td>
++                <td>
++                  <strong>{{ item.outcome }}</strong>
++                  <span>{{ item.reason }}</span>
++                  <small>error：{{ item.error ?? 'null（无）' }}</small>
++                </td>
++                <td class="time-cell">
++                  <span>{{ timeText(item.createdAt) }}</span>
++                  <small>服务端记录时间</small>
++                </td>
++              </tr>
++            </tbody>
++          </table>
++        </div>
++
++        <div class="pagination">
++          <span>
++            第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++          </span>
++          <div class="pagination-actions">
++            <button type="button" class="button subtle" :disabled="!canPrev" data-testid="audit-prev" @click="goPage(-1)">
++              上一页
++            </button>
++            <button type="button" class="button subtle" :disabled="!canNext" data-testid="audit-next" @click="goPage(1)">
++              下一页
++            </button>
++          </div>
++        </div>
++
++        <p class="ledger-footnote">
++          只读：没有命令下发、确认、控制或通知按钮；读取失败保留上次成功快照，空结果不显示为错误。
++        </p>
++      </section>
++    </template>
++  </section>
+ </template>
++
++<style scoped>
++.refresh-note {
++  margin: -16px 0 22px;
++  color: var(--muted);
++  font-size: 0.76rem;
++  line-height: 1.7;
++}
++.query-hint {
++  margin: 0;
++  color: var(--muted);
++  font-size: 0.72rem;
++  line-height: 1.7;
++}
++.audit-meta {
++  margin: -6px 0 18px;
++  color: var(--muted);
++  font-size: 0.75rem;
++  line-height: 1.8;
++}
++.audit-table td:first-child {
++  min-width: 190px;
++}
++.audit-table td span {
++  display: block;
++  font-size: 0.78rem;
++  line-height: 1.7;
++  overflow-wrap: anywhere;
++}
++.pagination-actions {
++  display: flex;
++  gap: 8px;
++}
++.issue-list {
++  list-style: none;
++  margin: 8px 0 0;
++  padding: 0;
++}
++.issue-list li {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 4px 10px;
++  align-items: baseline;
++  padding: 5px 0;
++  border-top: 1px solid var(--line);
++  font-size: 0.8rem;
++}
++.issue-list li:first-child {
++  border-top: 0;
++}
++.issue-list small {
++  color: var(--muted);
++  font-size: 0.7rem;
++}
++@media (max-width: 740px) {
++  .refresh-note {
++    margin-top: -12px;
++  }
++  .pagination-actions {
++    width: 100%;
++  }
++  .pagination-actions .button {
++    flex: 1;
++  }
++}
++</style>
+--- before/frontend/src/views/IntegrationView.vue
++++ after/frontend/src/views/IntegrationView.vue
+@@ -1,3 +1,227 @@
++<script setup lang="ts">
++import { computed, ref, watch } from 'vue'
++import ReadStatus from '../components/ReadStatus.vue'
++import { getIntegration } from '../api/full'
++import { ApiError } from '../api/http'
++import { useRequestScope } from '../composables/useRequestScope'
++import { strictCapability } from '../domain/course'
++import { useCampusStore } from '../stores/campus'
++import type { IntegrationStatus } from '../types/full'
++
++const store = useCampusStore()
++/** 接入状态接口仅 ADMIN 可读；能力只认服务端布尔 true。 */
++const canAdmin = computed(() => store.user !== null && strictCapability(store.capabilities?.canAdmin))
++
++const status = ref<IntegrationStatus | null>(null)
++const hasData = ref(false)
++const written = ref('')
++
++const scope = useRequestScope()
++const { busy, error } = scope
++
++/** 只有服务端同时确认为已配置且已连通，页面才允许写“已连通”。 */
++const connectedAndConfigured = computed(
++  () => status.value?.configured === true && status.value?.connected === true,
++)
++const connectionText = computed(() => {
++  if (!status.value) return '未读取'
++  return connectedAndConfigured.value ? '服务端报告已配置且已连通' : '未接通（配置与连通分开判定）'
++})
++const controlText = computed(() => {
++  if (!status.value) return '未读取'
++  return status.value.controlEnabled === false
++    ? 'controlEnabled=false（本页不提供控制入口）'
++    : `服务端返回 controlEnabled=${String(status.value.controlEnabled)}，超出教学契约；本页仍不提供控制入口`
++})
++const pendingCount = computed(
++  () => status.value?.capabilities.filter((item) => item.status !== 'READY').length ?? 0,
++)
++
++function failureHint(reason: unknown): string {
++  if (!(reason instanceof ApiError)) return ''
++  if (reason.status === 403) return '仅 ADMIN 可读取接入状态；服务端会再次核对当前有效身份。'
++  if (reason.status === 503) return '服务端未提供接入状态；未配置不等于已接通，页面不补造 configured/connected。'
++  if (reason.status === 401) return '登录已失效，请重新登录。'
++  return ''
++}
++
++async function load() {
++  if (!canAdmin.value || busy.value) return
++  written.value = ''
++  const ok = await scope.run(
++    (signal) => getIntegration(signal),
++    (data) => {
++      status.value = data
++      hasData.value = true
++    },
++    (reason) => {
++      written.value = failureHint(reason)
++    },
++  )
++  if (!ok && !written.value) written.value = error.value || '接入状态读取未完成，请核对身份与教学服务。'
++}
++
++watch(
++  canAdmin,
++  (value) => {
++    if (!value) return
++    void load()
++  },
++  { immediate: true },
++)
++watch(
++  () => store.user?.uid ?? '',
++  () => {
++    status.value = null
++    hasData.value = false
++    written.value = ''
++    if (canAdmin.value) void load()
++  },
++)
++</script>
++
+ <template>
+-  <section class="workspace full-page"><h1>责任、审计与接入</h1><p role="alert">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>
++  <section class="workspace full-page" data-testid="integration-view">
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第10站 · 责任、审计与接入</p>
++        <h1>接入状态：配置、连通、能力分开看</h1>
++        <p class="muted">
++          configured 只说明服务端是否已提供接入配置，connected 才是当前连通结果，
++          capabilities 各自给出状态。页面不下发命令、不保存凭据、不通知外部，也不把未配置或 PENDING 说成接通。
++        </p>
++      </div>
++      <button
++        type="button"
++        class="button primary"
++        :disabled="busy || !canAdmin"
++        data-testid="integration-refresh"
++        @click="load"
++      >
++        {{ busy ? '正在读取…' : status ? '重新读取' : '开始读取' }}
++      </button>
++    </header>
++
++    <div v-if="!store.user" class="notice" role="status">
++      <strong>需要已确认的身份</strong>
++      <p>接入状态仅 ADMIN 可读；请先用顶部登录。本页不会用默认值冒充服务端结果。</p>
++    </div>
++    <div v-else-if="!canAdmin" class="notice warning" role="status">
++      <strong>当前身份不能读取接入状态</strong>
++      <p>接口按 ADMIN 判定；本页不发起请求，也不展示猜测的配置或连通状态。</p>
++    </div>
++
++    <div class="notice" role="status">
++      <strong>只读，且没有写入入口</strong>
++      <p>
++        本页不提供凭据输入、保存配置、设备控制、远端操作或外部通知按钮；所有字段都直接取自
++        GET /api/campus/integrations/airiot/status 的返回。
++      </p>
++    </div>
++
++    <ReadStatus :busy="busy" :error="error" :has-data="hasData" />
++    <div v-if="written" class="notice error" role="alert">
++      <strong>本次读取未完成</strong>
++      <p>{{ written }}</p>
++    </div>
++    <div v-if="canAdmin && !status && !busy && !error" class="notice" role="status">
++      <strong>尚未读取接入状态</strong>
++      <p>点右上角读取；接口无返回时页面保持“未读取”，不显示 configured=false 之类的猜测值。</p>
++    </div>
++
++    <template v-if="status">
++      <section class="panel">
++        <div class="section-heading">
++          <h2>真实返回的三个判定</h2>
++          <span>接口不返回观测时刻，本页不补造时间</span>
++        </div>
++        <dl class="detail-grid">
++          <div>
++            <dt>配置 configured</dt>
++            <dd>
++              <code>{{ String(status.configured) }}</code>
++              <template v-if="status.configured">
++                已提供接入配置；这只说明配置存在，不代表已经连通。
++              </template>
++              <template v-else>未提供接入配置；不能据此认为已接通。</template>
++            </dd>
++          </div>
++          <div>
++            <dt>连通 connected</dt>
++            <dd>
++              <code>{{ String(status.connected) }}</code>
++              <template v-if="status.connected">服务端报告当前已连通。</template>
++              <template v-else>服务端报告当前未连通；不把配置当成连通。</template>
++            </dd>
++          </div>
++          <div>
++            <dt>控制 controlEnabled</dt>
++            <dd>{{ controlText }}</dd>
++          </div>
++          <div>
++            <dt>结论</dt>
++            <dd>{{ connectionText }}</dd>
++          </div>
++          <div>
++            <dt>服务端说明</dt>
++            <dd><code>{{ status.message }}</code></dd>
++          </div>
++          <div>
++            <dt>能力完成度</dt>
++            <dd>{{ status.capabilities.length }} 项 · 非 READY {{ pendingCount }} 项</dd>
++          </div>
++        </dl>
++      </section>
++
++      <section class="panel">
++        <div class="section-heading">
++          <h2>能力清单</h2>
++          <span>状态原样展示；PENDING 或未知都不算接通</span>
++        </div>
++        <p v-if="status.capabilities.length === 0" class="tiny muted">
++          服务端未返回能力项；这不表示能力已就绪。
++        </p>
++        <div v-else class="table-scroll">
++          <table class="data-table integration-table">
++            <caption>
++              来自 GET /api/campus/integrations/airiot/status 的 capabilities；name、status、detail 均为原文。
++            </caption>
++            <thead>
++              <tr>
++                <th scope="col">能力</th>
++                <th scope="col">状态（原文）</th>
++                <th scope="col">说明</th>
++              </tr>
++            </thead>
++            <tbody>
++              <tr v-for="item in status.capabilities" :key="item.name">
++                <td><strong>{{ item.name }}</strong></td>
++                <td>
++                  <code>{{ item.status }}</code>
++                  <small>{{ item.status === 'READY' ? '服务端报告就绪' : '未就绪，不能视为接通' }}</small>
++                </td>
++                <td><span class="detail-text">{{ item.detail }}</span></td>
++              </tr>
++            </tbody>
++          </table>
++        </div>
++        <p class="ledger-footnote">
++          本页只读：没有保存配置、输入凭据、下发命令、控制设备或发送外部通知的入口；
++          未配置或能力 PENDING 时，页面不会写成“已接入成功”。
++        </p>
++      </section>
++    </template>
++  </section>
+ </template>
++
++<style scoped>
++.integration-table td:first-child {
++  min-width: 170px;
++}
++.detail-text {
++  display: block;
++  font-size: 0.8rem;
++  line-height: 1.7;
++  overflow-wrap: anywhere;
++}
++</style>
+--- before/frontend/src/views/OwnersView.vue
++++ after/frontend/src/views/OwnersView.vue
+@@ -1,3 +1,470 @@
++<script setup lang="ts">
++import { computed, reactive, ref, watch } from 'vue'
++import ReadStatus from '../components/ReadStatus.vue'
++import SourceBanner from '../components/SourceBanner.vue'
++import { getHandlers, getOwner, getOwners, saveOwner } from '../api/full'
++import { ApiError, safeError } from '../api/http'
++import { useRequestScope } from '../composables/useRequestScope'
++import { strictCapability, timeText } from '../domain/course'
++import { useCampusStore } from '../stores/campus'
++import type { Handler, Owner, OwnerDetail } from '../types/full'
++
++const store = useCampusStore()
++
++const owners = ref<Owner[]>([])
++const observedAt = ref<number | null>(null)
++const hasList = ref(false)
++const keyword = ref('')
++const selectedId = ref('')
++const detail = ref<OwnerDetail | null>(null)
++const handlers = ref<Handler[]>([])
++
++const form = reactive({ ownerUid: '', note: '' })
++const writeBusy = ref(false)
++const writeError = ref('')
++const writeNotice = ref('')
++
++const listScope = useRequestScope()
++const detailScope = useRequestScope()
++const handlersScope = useRequestScope()
++const listBusy = listScope.busy
++const listError = listScope.error
++const detailBusy = detailScope.busy
++const detailError = detailScope.error
++const handlersBusy = handlersScope.busy
++const handlersError = handlersScope.error
++
++/** 能力只认服务端布尔 true；roles 只用于显示。 */
++const canAdmin = computed(() => strictCapability(store.capabilities?.canAdmin))
++
++/** 设备名来自台账读取结果，未读取时只显示 deviceId，不拼造名称。 */
++const deviceNames = computed(() => new Map(store.devices.map((item) => [item.id, item.name])))
++function deviceLabel(deviceId: string): string {
++  const name = deviceNames.value.get(deviceId)
++  return name ? `${name}（${deviceId}）` : deviceId
++}
++
++const filtered = computed(() => {
++  const text = keyword.value.trim().toLocaleLowerCase()
++  if (!text) return owners.value
++  return owners.value.filter((item) =>
++    `${item.deviceId} ${deviceNames.value.get(item.deviceId) ?? ''}`.toLocaleLowerCase().includes(text),
++  )
++})
++const selectedInList = computed(
++  () => detail.value !== null && owners.value.some((item) => item.deviceId === detail.value?.deviceId),
++)
++/** 当前责任人可能已无处理资格，因而不在可选处理人列表里。 */
++const currentOwnerNotEligible = computed(
++  () =>
++    detail.value?.ownerUid != null &&
++    detail.value.ownerUid !== '' &&
++    !handlers.value.some((item) => item.uid === detail.value?.ownerUid),
++)
++
++async function loadOwners() {
++  await listScope.run(
++    (signal) => getOwners(signal),
++    (data) => {
++      owners.value = data.items
++      observedAt.value = data.observedAt
++      hasList.value = true
++    },
++  )
++}
++
++async function loadDetail(deviceId: string) {
++  await detailScope.run(
++    (signal) => getOwner(deviceId, signal),
++    (data) => {
++      if (selectedId.value !== deviceId) return
++      detail.value = data
++      if (!form.ownerUid) form.ownerUid = data.ownerUid ?? ''
++    },
++  )
++}
++
++async function loadHandlers() {
++  await handlersScope.run(
++    (signal) => getHandlers(signal),
++    (data) => {
++      handlers.value = data.items
++    },
++  )
++}
++
++function refreshAll() {
++  void loadHandlers()
++  void loadOwners()
++  if (selectedId.value) void loadDetail(selectedId.value)
++}
++
++function selectDevice(deviceId: string) {
++  if (selectedId.value !== deviceId) {
++    form.ownerUid = ''
++    form.note = ''
++    writeError.value = ''
++    writeNotice.value = ''
++  }
++  selectedId.value = deviceId
++  detail.value = null
++  void loadDetail(deviceId)
++}
++
++function writeFailureText(error: unknown): string {
++  if (error instanceof ApiError) {
++    if (error.status === 403) {
++      if (error.code === 'CSRF_INVALID') return '登录保护校验未通过，请重新登录后再提交。'
++      return '服务端拒绝本次操作（403）：仅 ADMIN 可修改责任人，页面入口只作提示。'
++    }
++    if (error.status === 404) return '设备或责任记录不存在（404），请重新读取清单后再决定。'
++    return error.message
++  }
++  return safeError(error)
++}
++
++/** 409 只回读，不重放；表单输入原样保留，由操作者核对后手动重新提交。 */
++async function readBackAfterConflict(deviceId: string) {
++  writeError.value = '服务端判定责任记录已变化（409）：本次输入不会自动重放，正在回读最新记录…'
++  await loadOwners()
++  const readBack = await detailScope.run(
++    (signal) => getOwner(deviceId, signal),
++    (data) => {
++      detail.value = data
++      selectedId.value = data.deviceId
++    },
++  )
++  const latest = detail.value
++  writeError.value =
++    readBack && latest
++      ? `责任记录已被其他人更新（409）：已回读到最新 version=${latest.version}、当前责任人 ${latest.ownerName ?? latest.ownerUid ?? '未指定'}。你的输入仍保留在表单里，请核对后手动重新提交。`
++      : '责任记录已被其他人更新（409），但回读最新记录未成功。你的输入仍保留在表单里，请刷新后再决定。'
++}
++
++function noteProblem(note: string): string {
++  if (!note) return '请填写变更说明（去掉首尾空格后 1..500 字）。'
++  if (note.length > 500) return '变更说明最多 500 字。'
++  return ''
++}
++
++/** 保存成功必须独立回读确认；确认不了就不显示成功。 */
++async function submitChange() {
++  const target = detail.value
++  if (!target) {
++    writeError.value = '请先在清单中选择一台设备。'
++    return
++  }
++  if (!canAdmin.value) {
++    writeError.value = '当前身份没有修改责任人的能力（页面只隐藏入口，服务端最终判定）。'
++    return
++  }
++  if (!form.ownerUid) {
++    writeError.value = '请选择新的责任人。'
++    return
++  }
++  if (form.ownerUid === target.ownerUid) {
++    writeError.value = '所选责任人就是当前责任人，本次未提交。'
++    return
++  }
++  const note = form.note.trim()
++  const problem = noteProblem(note)
++  if (problem) {
++    writeError.value = problem
++    return
++  }
++  if (writeBusy.value) return
++  const actor = store.user?.uid
++  if (!actor) {
++    writeError.value = '当前没有已确认的身份，写操作未提交。'
++    return
++  }
++  writeBusy.value = true
++  writeError.value = ''
++  writeNotice.value = ''
++  const deviceId = target.deviceId
++  const beforeVersion = target.version
++  try {
++    const saved = await saveOwner(deviceId, form.ownerUid, note, beforeVersion, store.csrf)
++    if (store.user?.uid !== actor) return
++    const confirmed = await detailScope.run(
++      (signal) => getOwner(saved.deviceId, signal),
++      (data) => {
++        if (selectedId.value === saved.deviceId) detail.value = data
++      },
++    )
++    const latest = detail.value
++    const same = confirmed && latest !== null && latest.version === saved.version && latest.ownerUid === saved.ownerUid
++    if (same && latest) {
++      form.note = ''
++      writeNotice.value = `已保存并独立回读确认：${deviceId} 的责任人 ${target.ownerName ?? target.ownerUid ?? '未指定'} → ${latest.ownerName ?? latest.ownerUid ?? '未指定'}，version ${beforeVersion} → ${latest.version}。旧事件仍保留原处理人、不会改派；此后新建的事件才跟随新责任人。`
++      await loadOwners()
++    } else {
++      writeError.value = `服务端已返回保存（version=${saved.version}），但独立回读未确认最新记录；请手动重新读取核对，本次输入未清空。`
++    }
++  } catch (reason) {
++    if (reason instanceof ApiError && reason.status === 401) {
++      store.expireSession()
++      return
++    }
++    if (reason instanceof ApiError && reason.status === 409) {
++      await readBackAfterConflict(deviceId)
++      return
++    }
++    writeError.value = writeFailureText(reason)
++  } finally {
++    writeBusy.value = false
++  }
++}
++
++/** 身份变化即清空该身份看到的清单、详情与输入，避免跨身份残留。 */
++watch(
++  () => store.user?.uid ?? '',
++  (uid) => {
++    owners.value = []
++    observedAt.value = null
++    hasList.value = false
++    keyword.value = ''
++    selectedId.value = ''
++    detail.value = null
++    handlers.value = []
++    form.ownerUid = ''
++    form.note = ''
++    writeBusy.value = false
++    writeError.value = ''
++    writeNotice.value = ''
++    if (!uid) return
++    void loadHandlers()
++    void loadOwners()
++  },
++  { immediate: true },
++)
++</script>
++
+ <template>
+-  <section class="workspace full-page"><h1>责任、审计与接入</h1><p role="alert">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>
++  <section class="workspace full-page" data-testid="owners-view">
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第10站 · 责任、审计与接入</p>
++        <h1>换负责人，不改旧事件</h1>
++        <p class="muted">
++          责任记录有自己的 version，与事件版本互相独立。改责任人不批量改写已存在的事件处理人；
++          新事件在创建时才读取当时的责任人。保存必须带 expectedVersion，409 只回读并保留输入，不自动重放。
++        </p>
++      </div>
++      <button type="button" class="button subtle" :disabled="listBusy" @click="refreshAll">
++        {{ listBusy ? '正在读取…' : '重新读取' }}
++      </button>
++    </header>
++
++    <SourceBanner :business="true" />
++
++    <div v-if="!store.user" class="notice" role="status">
++      <strong>需要已确认的身份</strong>
++      <p>读取责任人需要校园身份；修改责任人仅 ADMIN，且由服务端最终判定。请先用顶部登录。</p>
++    </div>
++
++    <section class="panel">
++      <div class="section-heading">
++        <h2>责任归属规则</h2>
++        <span>责任版本与事件版本分开计数</span>
++      </div>
++      <ul class="owner-rules">
++        <li><strong>旧事件不追改</strong>：A→B 之后，A 名下已存在的事件仍记 A，A 仍可按原权限办理，不会自动改派给 B。</li>
++        <li><strong>新事件跟当时责任人</strong>：只在创建事件时读取当前责任人；B 无有效处理资格时保持待分派，不回头找 A。</li>
++        <li><strong>同时修改</strong>：两人带同一 expectedVersion 提交，后者得到 409；须回读最新 version 后人工重判，不覆盖前一次成功结果。</li>
++      </ul>
++    </section>
++
++    <div class="case-layout">
++      <section class="panel">
++        <div class="section-heading">
++          <h2>设备责任清单</h2>
++          <span>共 {{ owners.length }} 台 · 显示 {{ filtered.length }} 台</span>
++        </div>
++        <div class="query-bar compact">
++          <label for="owner-keyword">
++            <span>按设备名称或 ID 过滤</span>
++            <input id="owner-keyword" v-model="keyword" type="search" placeholder="例如 device 或 空调" />
++          </label>
++        </div>
++        <p class="tiny muted">
++          清单由 GET /api/campus/device-owners 读取，按 deviceId 排序；责任人不含名称时只显示 uid。
++          <template v-if="observedAt !== null">读取时间 {{ timeText(observedAt) }}。</template>
++        </p>
++        <ReadStatus :busy="listBusy" :error="listError" :has-data="hasList" />
++        <div v-if="hasList && filtered.length === 0" class="notice" role="status">
++          <strong>当前筛选下 0 台设备</strong>
++          <p>这是读取成功后的空结果，与读取失败不同；可清空关键词重新查看。</p>
++        </div>
++        <div v-if="filtered.length > 0" class="case-list">
++          <button
++            v-for="item in filtered"
++            :key="item.deviceId"
++            type="button"
++            class="case-row"
++            :class="{ selected: item.deviceId === selectedId }"
++            :aria-current="item.deviceId === selectedId ? 'true' : undefined"
++            @click="selectDevice(item.deviceId)"
++          >
++            <span class="case-row-head">
++              <strong>{{ deviceLabel(item.deviceId) }}</strong>
++              <span class="state-badge">{{ item.ownerName ?? '未指定' }}</span>
++            </span>
++            <span>
++              责任人：{{ item.ownerName ?? item.ownerUid ?? '未指定' }}
++              <template v-if="item.ownerUid"> · <code>{{ item.ownerUid }}</code></template>
++            </span>
++            <small>责任 version {{ item.version }} · 更新 {{ timeText(item.updatedAt) }}</small>
++            <code>{{ item.deviceId }}</code>
++          </button>
++        </div>
++      </section>
++
++      <div>
++        <p v-if="!detail && detailBusy" class="muted" role="status">正在读取责任详情…</p>
++        <div v-else-if="!detail && detailError" class="notice error" role="alert">
++          <strong>责任详情读取失败</strong>
++          <p>{{ detailError }}</p>
++        </div>
++        <div v-else-if="!detail" class="notice" role="status">
++          <strong>尚未选择设备</strong>
++          <p>在左侧清单点一台设备，读取当前责任人与责任时间线；清单和详情是两次独立读取。</p>
++        </div>
++
++        <section v-if="detail" class="panel" data-testid="owner-detail">
++          <div class="section-heading">
++            <h2>责任详情</h2>
++            <span>责任 version {{ detail.version }} · 与事件 version 独立</span>
++          </div>
++          <ReadStatus :busy="detailBusy" :error="detailError" :has-data="true" />
++          <p v-if="!selectedInList" class="tiny muted">
++            该设备已不在当前清单中，以下内容以本次回读的服务端记录为准。
++          </p>
++          <dl class="detail-grid">
++            <div>
++              <dt>设备</dt>
++              <dd>{{ deviceLabel(detail.deviceId) }}</dd>
++            </div>
++            <div>
++              <dt>当前责任人</dt>
++              <dd>
++                {{ detail.ownerName ?? '未指定' }}
++                <template v-if="detail.ownerUid"> · <code>{{ detail.ownerUid }}</code></template>
++              </dd>
++            </div>
++            <div>
++              <dt>责任版本</dt>
++              <dd>version {{ detail.version }}</dd>
++            </div>
++            <div>
++              <dt>最近更新</dt>
++              <dd>{{ timeText(detail.updatedAt) }}</dd>
++            </div>
++            <div>
++              <dt>当前身份</dt>
++              <dd>{{ store.user?.displayName ?? '未登录' }} · <code>{{ store.user?.uid ?? '—' }}</code></dd>
++            </div>
++            <div>
++              <dt>保存能力</dt>
++              <dd>{{ canAdmin ? 'ADMIN（页面入口可见）' : '不显示入口，服务端最终判定' }}</dd>
++            </div>
++          </dl>
++
++          <div class="timeline-heading">
++            <h3>责任时间线</h3>
++            <span class="tiny muted">每条记录带责任 version；时间取服务端操作时间，不使用浏览器时钟。</span>
++          </div>
++          <p v-if="detail.timeline.length === 0" class="tiny muted">尚无责任变更记录。</p>
++          <ol v-else class="timeline">
++            <li v-for="item in detail.timeline" :key="item.id">
++              <div>
++                <strong>{{ item.previousOwnerUid ?? '未指定' }} → {{ item.ownerUid }}</strong>
++                <span>{{ item.actorName }}（{{ item.actorUid }}） · {{ timeText(item.createdAt) }} · v{{ item.version }}</span>
++              </div>
++              <p v-if="item.note">{{ item.note }}</p>
++            </li>
++          </ol>
++
++          <div v-if="writeError" class="notice error" role="alert">
++            <strong>本次保存未确认成功</strong>
++            <p>{{ writeError }}</p>
++          </div>
++          <div v-if="writeNotice" class="notice" role="status">
++            <strong>服务端已确认（已独立回读）</strong>
++            <p>{{ writeNotice }}</p>
++          </div>
++
++          <div class="action-panel">
++            <h3>变更责任人</h3>
++            <p class="tiny muted">
++              仅 ADMIN 可保存；请求携带点击时的 expectedVersion={{ detail.version }}，成功后责任 version 加 1，
++              旧事件的处理人保持不变。能力：{{ canAdmin ? '允许' : '不据此授权' }}。
++            </p>
++            <ReadStatus :busy="handlersBusy" :error="handlersError" :has-data="handlers.length > 0" />
++            <label for="owner-person">
++              新责任人
++              <select
++                id="owner-person"
++                v-model="form.ownerUid"
++                :disabled="!canAdmin || writeBusy"
++              >
++                <option value="">请选择处理人</option>
++                <option v-for="handler in handlers" :key="handler.uid" :value="handler.uid">
++                  {{ handler.displayName }}（{{ handler.uid }}）
++                </option>
++              </select>
++            </label>
++            <p v-if="currentOwnerNotEligible" class="tiny muted">
++              当前责任人不在可选处理人列表里，说明已无有效处理资格；这种状态下新建事件不会自动指派，也不会回退给旧责任人。
++            </p>
++            <label for="owner-note">
++              变更说明（1..500 字）
++              <textarea
++                id="owner-note"
++                v-model="form.note"
++                rows="3"
++                maxlength="500"
++                :disabled="!canAdmin || writeBusy"
++              />
++            </label>
++            <div class="action-buttons">
++              <button
++                type="button"
++                class="button primary"
++                :disabled="!canAdmin || writeBusy"
++                @click="submitChange"
++              >
++                {{ writeBusy ? '正在保存…' : `保存责任人（expectedVersion=${detail.version}）` }}
++              </button>
++            </div>
++            <p class="tiny muted">
++              保存成功后独立回读确认；409 只回读最新记录并保留本次输入，不自动重放。保存失败不会显示为成功。
++            </p>
++          </div>
++
++          <p class="tiny muted">
++            审计与接入状态在各自页面只读查看；本页不提供远端控制或外部通知入口，也不伪造真实 AIRIOT 成功。
++          </p>
++        </section>
++      </div>
++    </div>
++  </section>
+ </template>
++
++<style scoped>
++.owner-rules {
++  margin: 0;
++  padding-left: 20px;
++  font-size: 0.82rem;
++  line-height: 1.9;
++  color: var(--ink);
++}
++.owner-rules strong {
++  font-weight: 600;
++}
++.timeline-heading h3,
++.action-panel h3 {
++  font-size: 0.95rem;
++  margin: 0 0 6px;
++}
++</style>
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -141,7 +141,18 @@
+     "frontend/src/views/AuditView.vue": "ccd5b6bde01ec1d6e538ec0e38d3de7c2d34b402f4d0e8158e96e4ee97a5e553",
+     "frontend/src/views/IntegrationView.vue": "ccd5b6bde01ec1d6e538ec0e38d3de7c2d34b402f4d0e8158e96e4ee97a5e553"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 10,
++    "at": "2026-10-19T18:34:26.901Z",
++    "sourceFingerprint": "fea0e2eee51c7a3cd4d4cb733d5f473e3f8cad05ceaad9b74e403291f3a74aee",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "stage": 5,
+  "title": "概览与能源",
+  "mode": "teacher-db",
+  "goal": "概览及V/kW能源页",
+  "contract": "GET /overview；source/simulated/observedAt/points/quality；不以kW推电量",
+  "acceptance": "0/null/质量有区别；统计对应响应；离页停止刷新",
+  "businessFiles": [
+    "frontend/src/views/OverviewView.vue",
+    "frontend/src/views/EnergyView.vue"
+  ],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts",
+    "frontend/src/components/CompareHistory.vue",
+    "frontend/src/components/HistoryChart.vue"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/OverviewView.vue",
+    "frontend/src/views/EnergyView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820",
+      "bytes": 748,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>概览与能源</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    },
+    {
+      "path": "frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106,
+      "role": "foundation"
+    },
+    {
+      "path": "frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>概览与能源</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

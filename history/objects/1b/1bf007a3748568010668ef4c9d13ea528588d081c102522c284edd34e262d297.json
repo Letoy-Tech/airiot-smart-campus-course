@@ -1,0 +1,16 @@
+{
+  "name": "campus-ai-course",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0 <23" },
+  "scripts": {
+    "doctor": "node tools/course.mjs doctor",
+    "init": "node tools/course.mjs init",
+    "backend": "node tools/course.mjs backend",
+    "frontend": "node tools/course.mjs frontend",
+    "check:fixtures": "node tools/validate-fixtures.mjs",
+    "check": "node tools/course.mjs check",
+    "build": "node tools/course.mjs build"
+  }
+}

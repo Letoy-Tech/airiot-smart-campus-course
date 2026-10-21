@@ -1,0 +1,550 @@
+{
+  "chapter": "12",
+  "linkAdjustments": [
+    {
+      "file": "backend/README.md",
+      "originalHref": "evidence/round5/test-summary.json",
+      "coursePath": "resources/campus-ai-course/backend/evidence/round5/test-summary.json",
+      "reason": "excluded-or-unavailable"
+    },
+    {
+      "file": "backend/README.md",
+      "originalHref": "evidence/round5/mysql-snapshot-evidence.json",
+      "coursePath": "resources/campus-ai-course/backend/evidence/round5/mysql-snapshot-evidence.json",
+      "reason": "excluded-or-unavailable"
+    },
+    {
+      "file": "backend/README.md",
+      "originalHref": "evidence/round5/verification.json",
+      "coursePath": "resources/campus-ai-course/backend/evidence/round5/verification.json",
+      "reason": "excluded-or-unavailable"
+    },
+    {
+      "file": "backend/README.md",
+      "originalHref": "evidence/test-summary.json",
+      "coursePath": "resources/campus-ai-course/backend/evidence/test-summary.json",
+      "reason": "excluded-or-unavailable"
+    },
+    {
+      "file": "backend/README.md",
+      "originalHref": "evidence/mysql-transaction-evidence.json",
+      "coursePath": "resources/campus-ai-course/backend/evidence/mysql-transaction-evidence.json",
+      "reason": "excluded-or-unavailable"
+    },
+    {
+      "file": "fixtures/schema.md",
+      "originalHref": "../../../contracts/教学接口约定.md",
+      "coursePath": "contracts/教学接口约定.md",
+      "reason": "outside-checkpoint"
+    }
+  ],
+  "fixtureManifestRehashedFiles": [
+    "schema.md"
+  ],
+  "markers": [
+    {
+      "file": "frontend/src/domain/course.ts",
+      "marker": "C12",
+      "referenceSha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "studentSha256": "166ace596e29d30713a124556802404f53f729b8747d2372a5f0020534860550"
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "4368da40d419bbc6f3584c257bf82297e18aded9eb946c87cd4df5d8eb40b3d1"
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42"
+    },
+    {
+      "path": "backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+    },
+    {
+      "path": "backend/docs/full-api.json",
+      "sha256": "99ce858995b120a82bcf4c82122058f8a52898c68f86ef32dce9fa335d0c0a5c"
+    },
+    {
+      "path": "backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+    },
+    {
+      "path": "backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+    },
+    {
+      "path": "backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89"
+    },
+    {
+      "path": "backend/README.md",
+      "sha256": "1b004566a90a123785e16dd19df56f422ea4f1f094feecfad2e788aad785585f"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "afb05f1c0da4e7e1ad36ab719c118289367f082b299c25ce35840d6be675d561"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "9ad0fda8a88fe95eadbf407bf558583005dcef9961a6306dc67eeacd278381be"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "0ca7f71ee7f77847e58de214ba83d46b3e6ffc3a6f587e57a85d2e1ad0b18eea"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "45988559fd842626e884cda4405fdd5dc406c902505ea3d90bace8eeee7f3f7f"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "dc686ddf57dde3cb860ca05c7bc086c34ded24e39aca036ae79865ea25290bfd"
+    },
+    {
+      "path": "backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef"
+    },
+    {
+      "path": "backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738"
+    },
+    {
+      "path": "backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "4b2942d417fdc68a97092e401f31213eead08759363c29c7ebab5ecca672bb85"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed"
+    },
+    {
+      "path": "backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890"
+    },
+    {
+      "path": "backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9"
+    },
+    {
+      "path": "backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9"
+    },
+    {
+      "path": "docs/01-跨平台启动.md",
+      "sha256": "2261291b2ad63c86f1d85239a4d93791020bbb488a8b9a7da72e9e2c8f0cbc7f"
+    },
+    {
+      "path": "docs/02-教师数据库交接单.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8"
+    },
+    {
+      "path": "docs/03-资源与章节映射.md",
+      "sha256": "e0455640ecdc918466842d0bc2a110c072aa4bd15a36f19a2f655ff9c391997d"
+    },
+    {
+      "path": "docs/04-首次贯通操作单.md",
+      "sha256": "4b5fb8bfe1c0dddc22f6bfc5fefb2829d2d32381bfc80ef588ca9bf41cdff003"
+    },
+    {
+      "path": "docs/05-空间关系保存操作单.md",
+      "sha256": "0b495771c18ebc9fdc1d53c91d8aa9ed9f644d40ee11f4d7f1467dd3dc691e8e"
+    },
+    {
+      "path": "docs/06-台账筛选与自主UI操作单.md",
+      "sha256": "739ec76a4b5be62e0b4c7012b7093a8256ff0c84fc290bb586af36ffce5427d8"
+    },
+    {
+      "path": "docs/07-质量历史与刷新操作单.md",
+      "sha256": "162663cd33e7c1a603c2cfffc0c0a8622732a0aa567e13c1aae5d31183f2c32c"
+    },
+    {
+      "path": "docs/08-权限撤销与竞态操作单.md",
+      "sha256": "2b35b479bb12ae49b2972e1c43f9c4f2c92f6831a022ead9260ab13ed1d8e8c9"
+    },
+    {
+      "path": "docs/09-演练闭环与关闭规则操作单.md",
+      "sha256": "c19edd96965c7fa138737b8f2747d2c9e6c7044a48d9625ccb9413dc41b2dca3"
+    },
+    {
+      "path": "docs/10-责任变更与时间线操作单.md",
+      "sha256": "6806e986c1d7e6c04aaea4f4847d228fe459021d1d8b34a4f05c361d40000469"
+    },
+    {
+      "path": "docs/11-并发回滚与证据操作单.md",
+      "sha256": "85309e35ba19e4b6c7beb0b3d84f97692030788d847b2de631317a9fae301cdc"
+    },
+    {
+      "path": "docs/12-交付变更与答辩操作单.md",
+      "sha256": "7ec55dbc09e47b9254d339860c4ce7b6328aa5f70181cf947aab6afe101956f5"
+    },
+    {
+      "path": "evidence/README.md",
+      "sha256": "d5b8995b02c02991246e080d8e59b29c02489843c457ff82a949414f4dc885c0"
+    },
+    {
+      "path": "fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32"
+    },
+    {
+      "path": "fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787"
+    },
+    {
+      "path": "fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e"
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "sha256": "f03069bafb59d84fef66abe7904823a9e211d3957e6940777c9df370ee7a44fe"
+    },
+    {
+      "path": "fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2"
+    },
+    {
+      "path": "fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4"
+    },
+    {
+      "path": "fixtures/quality-cases.json",
+      "sha256": "ce4637f969949b8ac61474492e756997ac6202987e186c2f2e8d7d92bc36df26"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "1d9305de7bd7214b37d066725e81fabe6312f3da0b17bbdfb7cab57b8ce411ea"
+    },
+    {
+      "path": "fixtures/schema.md",
+      "sha256": "926a1f2b0db0cd3f18a6b298c6b77405de33c4f7fb22f87f57112ea0b1a478a7"
+    },
+    {
+      "path": "fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403"
+    },
+    {
+      "path": "frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5"
+    },
+    {
+      "path": "frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300"
+    },
+    {
+      "path": "frontend/README.md",
+      "sha256": "3d91cbc95cc0b251dbe83382fa0b62e48abbac032d5d49b2192d4a5f45198eed"
+    },
+    {
+      "path": "frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262"
+    },
+    {
+      "path": "frontend/src/api/campus.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886"
+    },
+    {
+      "path": "frontend/src/api/full.ts",
+      "sha256": "afd277dc8804b857c284f8726d422329b566e2a0139aef70bf7c36ea7abc9325"
+    },
+    {
+      "path": "frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "sha256": "4b5d0b06423aa1ee46a15f746f6a71f1487bfd79f80be7c9dcd817cb076d7459"
+    },
+    {
+      "path": "frontend/src/components/HistoryChart.vue",
+      "sha256": "33186e01922039d44ae0edb22c0a85f2cc2a3fe09496949f3745bdf95bfae6b5"
+    },
+    {
+      "path": "frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5"
+    },
+    {
+      "path": "frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3"
+    },
+    {
+      "path": "frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c"
+    },
+    {
+      "path": "frontend/src/domain/course.ts",
+      "sha256": "166ace596e29d30713a124556802404f53f729b8747d2372a5f0020534860550"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382"
+    },
+    {
+      "path": "frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "063f3e65b7e674a04e9d551bbff04bbe477e41ee0a3f9bffd476bea928d6573d"
+    },
+    {
+      "path": "frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493"
+    },
+    {
+      "path": "frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893"
+    },
+    {
+      "path": "frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67"
+    },
+    {
+      "path": "frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f"
+    },
+    {
+      "path": "frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70"
+    },
+    {
+      "path": "frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a"
+    },
+    {
+      "path": "frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e"
+    },
+    {
+      "path": "frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849"
+    },
+    {
+      "path": "frontend/src/tests/workflow-views.test.ts",
+      "sha256": "062b810f3d65e1995f4069dde5661d2b2677a17b7ddcc21e577692d92a6b4148"
+    },
+    {
+      "path": "frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0"
+    },
+    {
+      "path": "frontend/src/types/full.ts",
+      "sha256": "342da9671c7390412a0a1e3eca113f76d91634704280f93d7e44b34498ba5a68"
+    },
+    {
+      "path": "frontend/src/views/CasesView.vue",
+      "sha256": "02a7c32fd2b21a52fc2b6226443a789ba1724b3104e192a972a31b7addcff7fa"
+    },
+    {
+      "path": "frontend/src/views/DeviceCatalog.vue",
+      "sha256": "4b3ae23242e12c37c92edd87dc951e207566847e60c3cd5ce5a989ce22f165cd"
+    },
+    {
+      "path": "frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda"
+    },
+    {
+      "path": "frontend/src/views/FullWorkspace.vue",
+      "sha256": "92ba67605bdf8331d9c6a2d84ca43a111e94790ea33ee9a24cbcb3500c1a43dc"
+    },
+    {
+      "path": "frontend/src/views/HistoryView.vue",
+      "sha256": "1d09056c6e6c37a1e8b0ba6f5203505f0d455ebc0e60f318dfb3aa48214b4ebb"
+    },
+    {
+      "path": "frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0"
+    },
+    {
+      "path": "frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6"
+    },
+    {
+      "path": "frontend/src/views/OverviewView.vue",
+      "sha256": "3c778ff0acda8c974225f6643d70bb4c405c5b5a48646b30b8b2a42b4113aebb"
+    },
+    {
+      "path": "frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30"
+    },
+    {
+      "path": "README.md",
+      "sha256": "085c7bc4aa7990f22205c37040c6a4a2ab079b0b65b1adf2700c9ccda9cccb7b"
+    },
+    {
+      "path": "tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689"
+    },
+    {
+      "path": "tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66"
+    },
+    {
+      "path": "tools/private-json.test.mjs",
+      "sha256": "081d49abdc930c2edc89e812d2b541d4db35ba63176183d745cbfc3d842fc541"
+    },
+    {
+      "path": "tools/validate-fixtures.mjs",
+      "sha256": "00de8a1a03a37afe6af8d61341e961ad5795f777bd8ae9bd3a8c43f0a3421cc3"
+    }
+  ]
+}

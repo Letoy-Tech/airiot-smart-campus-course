@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:19:23.719Z",
+  "checks": [
+    {
+      "file": "先打开这里.html",
+      "width": 1440,
+      "passed": true,
+      "sha256": "51736cc19ee1a9822c243606feedec30e0bd5e8dffff59c47ed65464eadaf158"
+    },
+    {
+      "file": "先打开这里.html",
+      "width": 390,
+      "passed": true,
+      "sha256": "51736cc19ee1a9822c243606feedec30e0bd5e8dffff59c47ed65464eadaf158"
+    },
+    {
+      "file": "lesson-plans/手把手主线授课衔接.html",
+      "width": 1440,
+      "passed": true,
+      "sha256": "4b539b280bafbc8a0a568f1eb60ab8dd2276a57816315f42e4e21f680cda97e7"
+    },
+    {
+      "file": "lesson-plans/手把手主线授课衔接.html",
+      "width": 390,
+      "passed": true,
+      "sha256": "4b539b280bafbc8a0a568f1eb60ab8dd2276a57816315f42e4e21f680cda97e7"
+    },
+    {
+      "file": "resources/index.html",
+      "width": 1440,
+      "passed": true,
+      "sha256": "0c95aaf85737dee907f7977ee0b569561c05fa177488763bbb8e93c66fc359d9"
+    },
+    {
+      "file": "resources/index.html",
+      "width": 390,
+      "passed": true,
+      "sha256": "0c95aaf85737dee907f7977ee0b569561c05fa177488763bbb8e93c66fc359d9"
+    }
+  ]
+}

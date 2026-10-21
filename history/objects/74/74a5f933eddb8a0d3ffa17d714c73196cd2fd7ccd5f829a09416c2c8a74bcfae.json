@@ -1,0 +1,69 @@
+{
+  "mysqlVersion" : "8.4.10",
+  "javaVersion" : "17.0.6",
+  "recordedAt" : "2026-10-18T16:12:20.981086Z",
+  "database" : "campus_course_test",
+  "scenarios" : [ {
+    "scenario" : "owner_timeline_rollback",
+    "objectId" : "teaching_env_01",
+    "httpStatus" : 500,
+    "faultHit" : true,
+    "rowsAffectedBeforeFault" : 1,
+    "versionObservedInsideTransaction" : 1,
+    "connectionIds" : {
+      "before" : 35,
+      "fault" : 31,
+      "after" : 36,
+      "normalControlRead" : 37
+    },
+    "versionBefore" : 0,
+    "versionAfterFailure" : 0,
+    "timelineBefore" : 0,
+    "timelineAfterFailure" : 0,
+    "masterSnapshotUnchanged" : true,
+    "timelineSnapshotUnchanged" : true,
+    "normalControl" : {
+      "timeline" : 1,
+      "httpStatus" : 200,
+      "version" : 1
+    }
+  }, {
+    "statuses" : [ 200, 409 ],
+    "versionAfter" : 1,
+    "mysqlConnections" : [ 31, 32 ],
+    "timelineAdded" : 1,
+    "scenario" : "owner_concurrent_update",
+    "priorEventUnchanged" : true
+  }, {
+    "scenario" : "event_timeline_rollback",
+    "objectId" : "30a81077-d948-4c89-96c5-88856c12abc6",
+    "httpStatus" : 500,
+    "faultHit" : true,
+    "rowsAffectedBeforeFault" : 1,
+    "versionObservedInsideTransaction" : 8,
+    "connectionIds" : {
+      "before" : 38,
+      "fault" : 31,
+      "after" : 39,
+      "normalControlRead" : 40
+    },
+    "versionBefore" : 7,
+    "versionAfterFailure" : 7,
+    "timelineBefore" : 7,
+    "timelineAfterFailure" : 7,
+    "masterSnapshotUnchanged" : true,
+    "timelineSnapshotUnchanged" : true,
+    "normalControl" : {
+      "timeline" : 8,
+      "httpStatus" : 200,
+      "version" : 8
+    }
+  }, {
+    "statuses" : [ 200, 409 ],
+    "versionAfter" : 8,
+    "mysqlConnections" : [ 31, 32 ],
+    "timelineAdded" : 1,
+    "scenario" : "event_concurrent_notes",
+    "versionBefore" : 7
+  } ]
+}

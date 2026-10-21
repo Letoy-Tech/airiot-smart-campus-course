@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-18T16:13:04.010Z",
+  "platform": "darwin/arm64",
+  "browser": "149.0.7827.55",
+  "scope": "真实回环前后端、教学隔离MySQL与Chromium；无AIRIOT/外部控制；390px为浏览器视口而非手机/Windows真机",
+  "checks": [
+    {
+      "name": "管理员真实登录与16设备台账",
+      "passed": true,
+      "width": 1440,
+      "deviceCount": 16,
+      "horizontalOverflow": false
+    },
+    {
+      "name": "真实空间和点值质量",
+      "passed": true,
+      "spaces": 4,
+      "points": 28,
+      "completedPollObserved": true
+    },
+    {
+      "name": "真实浏览器离开监测后停止轮询",
+      "passed": true,
+      "requestsBeforeLeave": 2,
+      "requestsAfterLeave": 2
+    },
+    {
+      "name": "历史power真实样本与图表",
+      "passed": true,
+      "device": "teaching_energy_01",
+      "tag": "power",
+      "hasNull": true,
+      "hasZero": true,
+      "canvasRendered": true
+    },
+    {
+      "name": "管理员在真实页面登记责任并显示时间线",
+      "passed": true,
+      "deviceId": "teaching_env_01",
+      "owner": "manager-a"
+    },
+    {
+      "name": "真实页面事件闭环和409",
+      "passed": true,
+      "caseId": "2486fab5-d108-412d-8f9d-2368b9807cdf",
+      "finalVersion": 8,
+      "closed": true,
+      "conflictVersion": 4,
+      "inputPreserved": true,
+      "readbackConfirmed": true,
+      "noAutomaticReplay": true
+    },
+    {
+      "name": "真实角色边界：本人处理/他人只读",
+      "passed": true,
+      "assignedUid": "manager-a",
+      "managerAActed": true,
+      "managerBWriteControlsAbsent": true
+    },
+    {
+      "name": "AIRIOT选做边界",
+      "passed": true,
+      "configurationNotVerified": true,
+      "controlDisabled": true
+    },
+    {
+      "name": "390px与查看者/first-read兼容",
+      "passed": true,
+      "horizontalOverflow": false,
+      "devices": 16,
+      "history": true,
+      "owners": true,
+      "closedCase": true,
+      "writeControlsAbsent": true,
+      "blockedRequestSnapshotRetained": true
+    },
+    {
+      "name": "全部页面无未捕获JavaScript错误且无浏览器存储令牌",
+      "passed": true,
+      "pageErrors": [],
+      "storageKeysEmpty": true
+    }
+  ],
+  "status": "PASS",
+  "caseId": "2486fab5-d108-412d-8f9d-2368b9807cdf"
+}

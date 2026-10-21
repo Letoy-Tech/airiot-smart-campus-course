@@ -1,0 +1,1 @@
+{"scenario": "close-empty-conclusion", "caseId": "5bd33750-0afd-475d-8c99-c97b42f7429f", "httpStatus": 400, "businessMessage": "INVALID_REQUEST", "expectedStatus": 400, "stateVersionTimelineUnchanged": true, "state": "IN_PROGRESS", "version": 6, "passed": true, "recordedAt": "2026-10-19T18:23:31.703782+00:00"}

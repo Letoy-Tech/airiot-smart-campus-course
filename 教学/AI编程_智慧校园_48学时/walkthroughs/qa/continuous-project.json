@@ -1,0 +1,216 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:00:55.855Z",
+  "scope": "Same project prepares 9 task blocks sequentially; reviewed reference solutions exercised. Not a real Qwen/student session.",
+  "results": [
+    {
+      "name": "dependencies",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-04",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-04",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "expected-failure-04",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "repaired-04",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-05",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-05",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-06",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-06",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "expected-failure-06",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "repaired-06",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-07",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-07",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-08",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-08",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "expected-failure-08",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "repaired-08",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-09",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-09",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-10",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-10",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-11",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-11",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-12",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "prepare-idempotent-12",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "expected-failure-12",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "repaired-12",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "refuse-edited-block",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "full-check",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "full-build",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "init",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "export-refuses-secret",
+      "passed": true,
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "source-export",
+      "passed": true,
+      "exit": 0,
+      "expected": 0
+    }
+  ],
+  "sourceExportFiles": 129,
+  "mysqlTest": {
+    "status": "PASS",
+    "report": "round8-mysql-transactions.json",
+    "tests": 39,
+    "skipped": 0,
+    "entry": "Spring MockMvc with real isolated MySQL; not actual HTTP concurrency"
+  },
+  "classroomTrial": false,
+  "windowsPhysicalMachine": false,
+  "chapterGuardFollowup": "chapter-guard.json"
+}

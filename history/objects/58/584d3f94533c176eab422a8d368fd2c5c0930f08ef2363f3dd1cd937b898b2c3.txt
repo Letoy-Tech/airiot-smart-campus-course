@@ -1,0 +1,7 @@
+当前第06站：看变化，再看原始报警。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/HistoryView.vue、frontend/src/views/RawAlarmsView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/RawAlarmsView.vue。
+按目标文件制作历史页或原始报警页。历史使用原采样时间和值，null断线，不插值；保留设备/点位上下文及查询时刻。报警保留status/level/occurredAt/recoveredAt，支持total/limit/skip和30秒不重叠刷新；空结果、读取失败分开。只读，无确认/恢复/关闭上游按钮。直接修改本次Vue文件。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+相关实际接口补充：frontend/src/api/read-models.ts、types/read-models.ts、composables/useReadPage.ts，直接读当前文件。不读.private、lesson-bundles/*/files、journey-backups或教师答案。严格只改RawAlarmsView.vue，不改/新建/删除测试（含临时测试），不改装配/权限/后端/依赖，不启动服务迁移。单测命令 npm run test:unit -- --run。

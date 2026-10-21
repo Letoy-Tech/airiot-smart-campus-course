@@ -1,0 +1,1 @@
+只读取当前学生工程里的 CODEBUDDY.md 和 journey-state.json，告诉我现在第几站，先不要改文件。不要读取 lesson-bundles 内的业务答案、reference、journey-backups 或 .private。后续所有业务实现由你完成，不能复制教师答案，也不要自动推进下一站。

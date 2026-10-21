@@ -1,0 +1,73 @@
+--- before/frontend/src/views/FirstDeviceRead.vue
++++ after/frontend/src/views/FirstDeviceRead.vue
+@@ -56,6 +56,10 @@
+ const readLabel = computed(() => (store.hasSucceeded ? '重新读取' : '开始读取'))
+ const canRead = computed(() => store.capabilities?.canRead === true)
+ 
++/** 成功过一次后再次失败：devices / observedAt 只是上次成功快照，本次结果以 readError 为准。 */
++const isStale = computed(() => store.hasSucceeded && store.readError !== '')
++const sampleLabel = computed(() => (isStale.value ? '上次采样时刻（固定教学时钟）' : '采样时刻（固定教学时钟）'))
++
+ function readOnce() {
+   if (store.loading) return
+   // 只调用已有认证链路上的 store 动作：会话、CSRF、cookie 都由 store 与 HTTP 层负责。
+@@ -88,31 +92,37 @@
+ 
+     <p v-if="store.loading" class="notice" role="status">正在读取设备与空间，请稍候…</p>
+ 
+-    <div v-else-if="!store.hasSucceeded && store.readError" class="notice error" role="alert">
+-      <strong>首次读取未成功</strong>
++    <div v-if="store.readError" class="notice error" role="alert">
++      <strong>{{ isStale ? '本次重新读取未成功' : '首次读取未成功' }}</strong>
+       <p>{{ store.readError }}</p>
+-      <small>读取失败不等于设备为空，本页不会用 0 台设备冒充成功结果。</small>
++      <small v-if="isStale">
++        下面是 {{ store.devices.length }} 台旧设备与上次采样时刻 {{ sampleTime }}，属于上一次成功读取的快照，不代表本次刷新结果。
++      </small>
++      <small v-else>读取失败不等于设备为空，本页不会用 0 台设备冒充成功结果。</small>
+     </div>
+ 
+-    <div v-else-if="!store.hasSucceeded" class="notice" role="status">
++    <div v-if="!store.hasSucceeded && !store.loading && !store.readError" class="notice" role="status">
+       <strong>尚未完成首次读取</strong>
+       <p>需要已登录会话且具备读取权限，点击右上角发起请求。</p>
+       <small v-if="!store.user">尚未确认登录身份，本次请求可能被服务端按 401 拒绝。</small>
+       <small v-else-if="!canRead">当前身份没有读取权限（403），请由教师核对角色。</small>
+     </div>
+ 
+-    <div v-else class="ledger">
++    <div v-if="store.hasSucceeded" class="ledger">
+       <div class="ledger-heading">
+-        <p class="small-label">后端返回的设备目录（成功一次后不再清空）</p>
+         <p class="small-label">
+-          采样时刻（固定教学时钟）
++          后端返回的设备目录
++          <span v-if="isStale" class="state-badge">上次成功读取的旧快照</span>
++        </p>
++        <p class="small-label">
++          {{ sampleLabel }}
+           <strong class="numeric">{{ sampleTime }}</strong>
+         </p>
+       </div>
+ 
+       <div v-if="store.devices.length === 0" class="notice" role="status">
+-        <strong>目录暂无设备</strong>
+-        <p>HTTP 与业务 code 均成功，但 data.items 为空；这不是读取失败。</p>
++        <strong>{{ isStale ? '上次成功读取时目录为空' : '目录暂无设备' }}</strong>
++        <p>{{ isStale ? '本次刷新未成功，无法确认当前是否仍为空。' : 'HTTP 与业务 code 均成功，但 data.items 为空；这不是读取失败。' }}</p>
+       </div>
+ 
+       <template v-else>
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -118,8 +118,8 @@
+   },
+   "verification": {
+     "stage": 2,
+-    "at": "2026-10-19T17:28:48.463Z",
+-    "sourceFingerprint": "a2b927e05e63d4d0201779b339da4fcd4e945eb5dd369d4a03c2636c8fc8f2b3",
++    "at": "2026-10-19T17:37:16.269Z",
++    "sourceFingerprint": "2613110cd65d0ed46e7fd946b37ae7c6cac9bc75935857d2bf66f75e4752e8b8",
+     "typeCheck": "PASS",
+     "unitTests": "PASS",
+     "frontendBuild": "PASS",

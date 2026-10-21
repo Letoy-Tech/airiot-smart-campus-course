@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T18:52:50.310Z",
+  "browser": "151.0.7922.34",
+  "scope": "离线资源页显示与夹具交互；不是后端实验",
+  "records": [
+    {
+      "width": 1440,
+      "imagesLoaded": true,
+      "noPageOverflow": true,
+      "counts": [
+        16,
+        4,
+        1,
+        1
+      ],
+      "errors": [],
+      "remote": [],
+      "brokenAnchors": [],
+      "localFileLinks": 54,
+      "crossChapterRequestToolLink": "PASS"
+    },
+    {
+      "width": 390,
+      "imagesLoaded": true,
+      "noPageOverflow": true,
+      "counts": [
+        16,
+        4,
+        1,
+        1
+      ],
+      "errors": [],
+      "remote": [],
+      "brokenAnchors": [],
+      "localFileLinks": 54,
+      "crossChapterRequestToolLink": "PASS"
+    }
+  ]
+}

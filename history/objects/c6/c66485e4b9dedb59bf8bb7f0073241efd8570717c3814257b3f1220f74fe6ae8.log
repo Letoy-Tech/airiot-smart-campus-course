@@ -1,0 +1,68 @@
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run src/tests/http.test.ts
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend[39m
+
+ [31m❯[39m src/tests/http.test.ts [2m([22m[2m10 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 12[2mms[22m[39m
+     [32m✓[39m 只给相对合同路径添加一次 /api，并带同源凭据[32m 4[2mms[22m[39m
+     [32m✓[39m HTTP 200 HTML 不能充当设备数据[32m 1[2mms[22m[39m
+     [32m✓[39m 保留 HTTP 401 状态且不显示服务端内部文本[32m 0[2mms[22m[39m
+     [32m✓[39m 保留 HTTP 403 状态且不显示服务端内部文本[32m 0[2mms[22m[39m
+     [32m✓[39m 保留 HTTP 404 状态且不显示服务端内部文本[32m 0[2mms[22m[39m
+     [32m✓[39m 保留 HTTP 503 状态且不显示服务端内部文本[32m 0[2mms[22m[39m
+[31m     [31m×[31m 200 与非零业务码仍是失败[39m[32m 3[2mms[22m[39m
+     [32m✓[39m 成功但缺少合同字段必须失败[32m 1[2mms[22m[39m
+[31m     [31m×[31m 成功空数组仍保留后端观察时间[39m[32m 1[2mms[22m[39m
+     [32m✓[39m 字符串权限不授权，Boolean true 才授权[32m 0[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/tests/http.test.ts[2m > [22m统一请求边界[2m > [22m200 与非零业务码仍是失败
+[31m[1mAssertionError[22m: expected TypeError: Cannot read properties of null… to match object { code: 7 }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- {[39m
+[32m-   "code": 7,[39m
+[31m+ TypeError {[39m
+[31m+   "message": "Cannot read properties of null (reading 'items')",[39m
+[2m  }[22m
+
+[36m [2m❯[22m src/tests/http.test.ts:[2m40:30[22m[39m
+    [90m 38|[39m     [35mconst[39m response [33m=[39m [35mawait[39m [34mrequestEnvelope[39m([32m'/campus/devices'[39m)
+    [90m 39|[39m     [34mexpect[39m(() [33m=>[39m [34massertBusinessSuccess[39m(response))[33m.[39m[34mtoThrow[39m()
+    [90m 40|[39m     [35mawait[39m [34mexpect[39m([34mgetDevices[39m())[33m.[39mrejects[33m.[39m[34mtoMatchObject[39m({ code[33m:[39m [34m7[39m })
+    [90m   |[39m                              [31m^[39m
+    [90m 41|[39m   })
+    [90m 42|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/http.test.ts[2m > [22m统一请求边界[2m > [22m成功空数组仍保留后端观察时间
+[31m[1mAssertionError[22m: promise rejected "ApiError: 设备读取未成功，请核对业务响应。 { …(2) }" instead of resolving[39m
+[36m [2m❯[22m src/tests/http.test.ts:[2m50:30[22m[39m
+    [90m 48|[39m   [34mit[39m([32m'成功空数组仍保留后端观察时间'[39m[33m,[39m [35masync[39m () [33m=>[39m {
+    [90m 49|[39m     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(json({ code: 0, m…
+    [90m 50|[39m     await expect(getDevices()).resolves.toEqual({ items: [], observedA…
+    [90m   |[39m                              [31m^[39m
+    [90m 51|[39m   })
+    [90m 52|[39m
+
+[31m[1mCaused by: ApiError[22m: 设备读取未成功，请核对业务响应。[39m
+[36m [2m❯[22m extractFirstRead src/api/campus.ts:[2m30:34[22m[39m
+[90m [2m❯[22m getDevices src/api/campus.ts:[2m37:10[22m[39m
+[90m [2m❯[22m src/tests/http.test.ts:[2m50:5[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ status: 200, code: +0 }[39m
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (10)[39m
+[2m   Start at [22m 02:37:07
+[2m   Duration [22m 324ms[2m (transform 32ms, setup 0ms, import 42ms, tests 12ms, environment 206ms)[22m
+

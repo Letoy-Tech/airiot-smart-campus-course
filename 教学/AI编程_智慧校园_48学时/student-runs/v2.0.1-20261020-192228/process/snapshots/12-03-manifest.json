@@ -1,0 +1,707 @@
+[
+  {
+    "path": ".env.example",
+    "bytes": 1476,
+    "sha256": "7f45f13f78ca05a19fffe98fe0ad89eb58573dc1e0f271e90c4828f5bdc87ebf"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 321,
+    "sha256": "6e5d953632b1f9f3c6a6f4a863428118fc808c5b97dfe067eb1f66d423089b32"
+  },
+  {
+    "path": "README.md",
+    "bytes": 27122,
+    "sha256": "90b67851fef1b3082478be59e7e89a62ef93c3066de9c93e0ffdc319d937de92"
+  },
+  {
+    "path": "SHA256SUMS.txt",
+    "bytes": 17204,
+    "sha256": "b49c1e5e38239a5feb2ed303833d2102e835235f1c9abf5a26e99ee7ceacd99a"
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.jar",
+    "bytes": 58727,
+    "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+    "bytes": 233,
+    "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+  },
+  {
+    "path": "backend/mvnw",
+    "bytes": 10284,
+    "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+  },
+  {
+    "path": "backend/mvnw.cmd",
+    "bytes": 6734,
+    "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+  },
+  {
+    "path": "backend/pom.xml",
+    "bytes": 2991,
+    "sha256": "85f36586cbbe56bcf5cd34e251a6a233699090b6bc732426e2d55018765ecb2a"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/CampusApplication.java",
+    "bytes": 428,
+    "sha256": "fbee9eb971ab241146d666d278ae9c3666fbd6331be2b00d44b22db20a80b672"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/alarm/Alarm.java",
+    "bytes": 485,
+    "sha256": "a88f6125b30fe166ad037d8f842016eb151eab901ac0eb273f68c617f43f01ca"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/alarm/AlarmRepository.java",
+    "bytes": 849,
+    "sha256": "b6add5db2f11036991687f1ef4dcc26c57808a9333d6e51f1e7d2894997b5844"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/alarm/AlarmRowMapper.java",
+    "bytes": 800,
+    "sha256": "ff4ca5905d441c0e26967ca455274f8a0250928d51cd1402269821ebaef73c6b"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/audit/AuditEntry.java",
+    "bytes": 357,
+    "sha256": "f0e3c9bdb6e04dd9893d04bf1e61d4a7ddb0fe175373ab71ac865063e2aa2efc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/audit/AuditRepository.java",
+    "bytes": 1382,
+    "sha256": "73d9d8c6d91eafa40e6b6acb440360d80e6e9855e6c43eabad40c7186c3e9993"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/audit/AuditRowMapper.java",
+    "bytes": 633,
+    "sha256": "b7f68a9d9ce43bbf1fa2bd50b89b787404f7749834fd8a7e4e06d2a7a0e18fc6"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/audit/AuditService.java",
+    "bytes": 609,
+    "sha256": "6ed6549a802495348b045bbcd1a581647b21c4bd14e2d8fff760d59f5821c406"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/AuthWebConfig.java",
+    "bytes": 744,
+    "sha256": "560c1e65ea9afcb3d285dec1bdbc6258ba3dd6e6f4b420a1fd4636d443aad761"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/LoginSessionStore.java",
+    "bytes": 422,
+    "sha256": "770f45dd36741aeaff0bab7e67efc49981fc57df4260f5ff3dc87df4b9c3f2cf"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/LoginTokenGenerator.java",
+    "bytes": 771,
+    "sha256": "293a6dbee1ca5ab0dda9fd070dc97b04142ba74d61e39d7aa82f74601a774495"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/RedisLoginSessionStore.java",
+    "bytes": 3006,
+    "sha256": "76f0d43d195574fd1de7e104dfec6500fd7183996081a371bf0e3ec1144badd8"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/RequireRole.java",
+    "bytes": 584,
+    "sha256": "e0a25b913dfc2e641618bae24f4847ea9d2a9e8ea2e3642d3f89d3ffe5cff12a"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/RoleInterceptor.java",
+    "bytes": 2017,
+    "sha256": "51d91ac918e6a692dba1a15117beaf68f2bf0846ad59e22384fc8ecf5bde8878"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/SessionAuthFilter.java",
+    "bytes": 4212,
+    "sha256": "a7cbc1f0772e90cff132f05482023f5c972ea08b385643c3e383187b054763c7"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/auth/SessionStoreUnavailableException.java",
+    "bytes": 426,
+    "sha256": "844ccd68f4ff72b08a6b9dbe1f67eb9624fb1964003c4da23c0a06dcf9a04c9d"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/Case.java",
+    "bytes": 991,
+    "sha256": "fc1046a021ce7a5c0cdecb68599c89c7b15ad6b27cdeb8301c396cdcaaa72aa2"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseActionForbiddenException.java",
+    "bytes": 334,
+    "sha256": "27147101d86258042146520193f44a51e0c0af9446552b58a03cd1172bec17cd"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseNotFoundException.java",
+    "bytes": 292,
+    "sha256": "4675a05acc10e67428879768481180e5be150e1462ef596c3a45f7d44388c4f2"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseRepository.java",
+    "bytes": 7578,
+    "sha256": "c476bd35781107a1b93655d8f6feb793421d149be8edd28fd85edcc7b8924367"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseRowMapper.java",
+    "bytes": 888,
+    "sha256": "10dc2ab8aae0f576cc44a983d6fa192f5ef691b8e3274bdf23cfdd28734528b2"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseService.java",
+    "bytes": 15899,
+    "sha256": "0ebef9896e37dcfd3b9fd17c693e42f964f3c51e1ed10b48b84a7430c50d2a36"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseStateException.java",
+    "bytes": 349,
+    "sha256": "25f071c62745fef541ef2d5dd858c42ae4eb2f1f709c8ceb88b07f98a0d7b860"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseTimelineEntry.java",
+    "bytes": 333,
+    "sha256": "3e302b3d62c3d9e0790471bdc4209614a6b230b2b8eac2ea91d871a7da734efb"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseTimelineRowMapper.java",
+    "bytes": 608,
+    "sha256": "a09d7edf437e4fcc46b36e99e2c2db8f38e3cc2b56da0d33d0ed14fbdd137e21"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseValidationException.java",
+    "bytes": 346,
+    "sha256": "a3f50aa68b7ca7fe7516dc2afe239bf3f475e5170761d8d04e176f33fabb9475"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/caseflow/CaseVersionConflictException.java",
+    "bytes": 406,
+    "sha256": "0d1df4d23b1f0ff05815628fd26849d04f91bd954fc31ed8c0d3f51a88dbaaa4"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/Device.java",
+    "bytes": 363,
+    "sha256": "490d8bbf52ec17c9c44b3bf2716328957f6d94a524798d6faa803dc15585e827"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceRepository.java",
+    "bytes": 1178,
+    "sha256": "620a6bd0f4513d5d67e604be45055b43abe05a5ed313386e4d29bfdedcdca6bf"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceRowMapper.java",
+    "bytes": 1251,
+    "sha256": "d15ac40e069948938b5e250f63e047a01940636e958f314c6ab10406ebf8f1f1"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceService.java",
+    "bytes": 537,
+    "sha256": "6d7007ccefba0d6ba2356e443ab062c714353e78e5b6446327ad45a639f20674"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/history/History.java",
+    "bytes": 472,
+    "sha256": "301eee49910eaa0ea1bf33516b38525dda4e5f8d23a00868f0166a179d8e9d7a"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/history/HistoryGrouping.java",
+    "bytes": 1618,
+    "sha256": "e319cb0afc4a08ccc499c3836985d7f6039c881439310a2ac90c585f59212853"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/history/HistoryRepository.java",
+    "bytes": 1484,
+    "sha256": "1163f77b4ce3f61cc3db8291aa8529ce86439deed928474bbc17b2cde35e9dea"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/history/HistoryRow.java",
+    "bytes": 372,
+    "sha256": "d8e6b3b1a23f52ba78b19a090bed01e8865b4e2dc095dbc1ea74a79fe99a40d0"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/history/HistorySample.java",
+    "bytes": 306,
+    "sha256": "b294463d0838de072c551bd23582794794dde4144cf1e4b05ac7ae6ed5da9246"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/overview/Overview.java",
+    "bytes": 678,
+    "sha256": "e6b7d17f67aecf28703045816acb6699c2c5919c221b93c969188f422e77acce"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/overview/OverviewService.java",
+    "bytes": 1598,
+    "sha256": "2458f911c45e4cbe81fce46b4646c7e1b666e599b39cc5405511ee37ed1bff91"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/DeviceNotFoundException.java",
+    "bytes": 533,
+    "sha256": "6fbfc56314fbc57467023763d4a8a295a5a69d5ecb7d9a9801fbf1909252aa27"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/Owner.java",
+    "bytes": 326,
+    "sha256": "76e5cc2ac478145cb1af96c8faff6d3d1a706a0b43457a32f978b0bd2439d5c9"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/OwnerRepository.java",
+    "bytes": 2387,
+    "sha256": "183af6e862950e018d1873f4c0f33d6d99731e61dc0413164128fda38a3cacc2"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/OwnerRowMapper.java",
+    "bytes": 581,
+    "sha256": "753193313909847657b1622ef4ba7276d30e8a75300e5df1c67db6148e8b3276"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/OwnerService.java",
+    "bytes": 4745,
+    "sha256": "d4f8c9c708e3165f948fc45b98349c884b5c58a22dd4065e16f725331dfeb14f"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/OwnerValidationException.java",
+    "bytes": 390,
+    "sha256": "feca93270c3745791a8f1d6bd34e10f9613071dd2fb77ec53e4d0a03fdd1895c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/owner/OwnerVersionConflictException.java",
+    "bytes": 421,
+    "sha256": "9cc35bd70a46f7035c9ad97ac14a4800cfd9c8004b00a9f3b7bcbf3ea771e50c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/point/Point.java",
+    "bytes": 578,
+    "sha256": "a8650d5f88abfea16a8b700c5995e3a6fa629f62574c2427f6a3054b75cd0a8e"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/point/PointRepository.java",
+    "bytes": 875,
+    "sha256": "1a854fc71b3e73e0ef9b94e0b08213e290021209cb6d19dce573954654295c6c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/point/PointRowMapper.java",
+    "bytes": 822,
+    "sha256": "640ffbc79d599d2646f45d683b70080572e35b04dcbf015a015d7dc1952d5cdc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/point/PointValues.java",
+    "bytes": 1120,
+    "sha256": "72043f4194f0bfa47b39b70361e3c3db62ce16c05c62dd956bdabb05592d8bed"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/Space.java",
+    "bytes": 284,
+    "sha256": "66fa39e778e377d511bdae30a93e606db44c485542c859622d0f5e25bc4c5e8c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/SpaceNotFoundException.java",
+    "bytes": 497,
+    "sha256": "fcd89c2984a628ced1afdbaf07496d63268e98640be1ef89dcfa537a6585ba93"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/SpaceRepository.java",
+    "bytes": 1612,
+    "sha256": "5dfea8144fcfcf881bd2e09b657affd85f877847ca65feca2389e523d6894a0e"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/SpaceRowMapper.java",
+    "bytes": 575,
+    "sha256": "feae70c6d06e4a169be97a4d4234712649b62c00e4de076274c2c47d07dee125"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/SpaceService.java",
+    "bytes": 3174,
+    "sha256": "dc447454e5b50e8105e8d9f749060118186a69efdd2d854114c2894038b108a7"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/space/SpaceValidationException.java",
+    "bytes": 390,
+    "sha256": "480dfc321db10589278c1153873ce5ed60120e7fd039015fd65c219f2bed615e"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/AuthenticatedUser.java",
+    "bytes": 461,
+    "sha256": "2e1013009da8eab5a446105fd7e52e8faaae0a9599820c8f8b57306450c266dc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/DemoAccountInitializer.java",
+    "bytes": 3407,
+    "sha256": "2fb1b4822ca29b1848cbedaeb0b91eab7fe6fcd3d85ee34a236d058e99871a50"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/JdbcUserRepository.java",
+    "bytes": 2169,
+    "sha256": "38df6f96195501be98be4a3c919272f0e02fdd3948836e17a9103f83f5973a8a"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/PasswordEncoderConfig.java",
+    "bytes": 606,
+    "sha256": "1b77c3a2b630c8b17560eb481b1e6176a65b2f1e953ce7ca3fe2d586ab43e1c4"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/Role.java",
+    "bytes": 167,
+    "sha256": "45de7695f4bfdb1d11c0a93392f6814945bceefa1c3f65669a01ea09efcbeb6c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/UserAccount.java",
+    "bytes": 696,
+    "sha256": "1159fb922f674773e7a47ac4eb0736bf55ece84e49462e1a3929a14e68842818"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/UserAuthenticationService.java",
+    "bytes": 1813,
+    "sha256": "d5bf22eebe672471e0f6d2c29ae3faa286961a936bbf31532dbabfc53d473260"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/user/UserRepository.java",
+    "bytes": 408,
+    "sha256": "3f734661e66abdbcac25edd9dba11ccca016a52e602a6fd7310e5b1271d7eb35"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/ApiErrors.java",
+    "bytes": 933,
+    "sha256": "075874aba2e9a48611aa5fed8b72b79635fa64ed2709164f297fd12ef564a9f4"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/ApiExceptionHandler.java",
+    "bytes": 6139,
+    "sha256": "a741d138b26931ccfb6386697dd1a44751e9d77b0cda5fa1282b902f8e43daef"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/ApiResponse.java",
+    "bytes": 290,
+    "sha256": "629d14236dd3a3dc09dacfaeb1cc58549e6ed4e4c36852857f9f9cad317bea48"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/AuditController.java",
+    "bytes": 1053,
+    "sha256": "4047c3fe95b5f1d3ed8184287e7a9abafe986ecc19d1dc4ec932359d60c07009"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/AuthController.java",
+    "bytes": 3859,
+    "sha256": "04e54c7928a570213cf3a6740d0de4d8a1755419e4625c91c5345b81f6dbc09d"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/CaseActionRequest.java",
+    "bytes": 689,
+    "sha256": "df895695e8bccd015e7d9e8c1031b26e587f73980706f638d19ad4a5fee165d1"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/CaseController.java",
+    "bytes": 3541,
+    "sha256": "cb469412e31c8bae0f8c5e92b8f814160a692b86e745f8a3fdf5ce3c53c8623e"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/CaseCreateRequest.java",
+    "bytes": 279,
+    "sha256": "40d2ff44330481c6d48cc02b6d78e083dda450abe71a9857d70ebe97796d6079"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/DeviceController.java",
+    "bytes": 862,
+    "sha256": "5635da330296ed21e3c9c17ec4c5baf8d2b19e75dc1b05d93e6332ffc8805bfc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/HealthController.java",
+    "bytes": 558,
+    "sha256": "fff40b1fcfd0c3e2b2b629d1d9456850afe45a02270cb7cd3976f11e2a18aabf"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/IntegrationController.java",
+    "bytes": 721,
+    "sha256": "c9ef78b6c00cdd1a37d309c4a3ba168ef06e36b66fb0b38887985105917e8d60"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/IntegrationStatus.java",
+    "bytes": 392,
+    "sha256": "5a62ce580060da23a3709f9a0526d46e563d0546d75342b798c3eefc6e872fb3"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/LoginRequest.java",
+    "bytes": 337,
+    "sha256": "4a83ed931fb2d6f274588dd3d9ba6add734a6a2858f39843347afac25f8700cc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/LoginResponse.java",
+    "bytes": 187,
+    "sha256": "1247dc627bcfe1b9ac8bf855229c0f671d15966721ec93a1dd3803c42ab94907"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/OverviewController.java",
+    "bytes": 978,
+    "sha256": "0c5e5e8f0073a7f2e816524fd5eda53a1ebd24fd39eee5442ad2656706a6f05c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/OwnerController.java",
+    "bytes": 2692,
+    "sha256": "7b007c17c7d1fd1b2bcd5a024ef8b8dea94f825f44491a6bedc8bc77f37c545d"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/OwnerSaveRequest.java",
+    "bytes": 695,
+    "sha256": "e2cd862861ebd225414f513e9332e9933efb09ab6274cc2158a7dbfd933d162f"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/SpaceController.java",
+    "bytes": 2294,
+    "sha256": "fdb40286b2deb7208c514778af2259e8ed540299cfb64afa33b90cb4aff3a11c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/SpaceLocationRequest.java",
+    "bytes": 342,
+    "sha256": "45b10f61c8f7d2f7086ecb7a65e0906996afd4a7aaa32f4cb3c90b2798f6f10c"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/StrictNonNegativeIntDeserializer.java",
+    "bytes": 1716,
+    "sha256": "875523cce0a18f7a5a3fb9f0127c1469f9bd27dee5404355d8460428e4c75fe9"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/UserView.java",
+    "bytes": 212,
+    "sha256": "dd46d399b6e4fa6378665c4007d922c1ccfb606910c3c9eaac02f9aac5959582"
+  },
+  {
+    "path": "backend/src/main/resources/application.properties",
+    "bytes": 3001,
+    "sha256": "5d38d549ebe1a861784d425c46ad4d6e5779f291f83c86fe47d18bebea36e663"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V1__init_spaces_devices.sql",
+    "bytes": 2896,
+    "sha256": "81d93f33426fe1e336a7550aff0370afc26c0e2fd5d290c93e921cd9f96d721d"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V2__create_users.sql",
+    "bytes": 1483,
+    "sha256": "6e919308584dade6a99c4793d100793e1d41ae807f7cbb42e7088dc99daa634b"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V3__create_points_history_alarms_owners.sql",
+    "bytes": 14295,
+    "sha256": "e0b38c1a8e678328eff8f3959b574623678ab53b0d1febbbbfe644963a88daeb"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V4__create_cases_timeline_audit.sql",
+    "bytes": 4512,
+    "sha256": "dc20b0e2c0faf54a158a0670587fcfe4d02bc0b2a457310a527a9c0a013dd412"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/auth/AdminOnlyDemoController.java",
+    "bytes": 700,
+    "sha256": "4e5ed8b54d1744aeb7caeb0c9af15dbbc27af3e5f35269b90cd83cb594d43f78"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/auth/LoginTokenGeneratorTest.java",
+    "bytes": 817,
+    "sha256": "1239c4b16aafc4daeeabe9586442a2c0c4c1613414f56a43fdfe2bbbbfb121a8"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/auth/RedisLoginSessionStoreTest.java",
+    "bytes": 4152,
+    "sha256": "cc4272eed9e2348ef3beaaedb83b6a7fd6ca4ef28edd38bfa02d8a4955be1039"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/auth/RoleInterceptorTest.java",
+    "bytes": 2678,
+    "sha256": "28e7197d63f4e2da7de75dc92756fe3a90607a83869a243f1345554c6179679b"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/caseflow/CaseActionServiceTest.java",
+    "bytes": 32541,
+    "sha256": "268e390b7c6176a935c65d12ac62a86a52bd5abeecde7700cefa507811027b30"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/caseflow/CaseServiceTest.java",
+    "bytes": 5808,
+    "sha256": "7d4cfea7f8bf8398857bfd24c08beba0c2a3a8d6dbd5aa0431b8d113a7fa7063"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/device/DeviceRowMapperTest.java",
+    "bytes": 1861,
+    "sha256": "29cf93685bbc95dce6c1932e77d4b12945e09545a71e5c4c729bba29cc463728"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/history/HistoryGroupingTest.java",
+    "bytes": 2470,
+    "sha256": "86486595e4340ae68cd9ad623d9abaf536523ce0cda0a609c76cc3f8fd9c5641"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/history/HistoryRepositorySqlTest.java",
+    "bytes": 1216,
+    "sha256": "2458b673dcc23bf383ee7d5a8bb7bee406329ac2881a0b13bfb57d7a5e7882e1"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/owner/OwnerServiceAuditTest.java",
+    "bytes": 3448,
+    "sha256": "f683ea33e6a53c26b9476ac6f6c262e54d4db00f672d076c89e3efd8e5e9dc61"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/point/PointRowMapperTest.java",
+    "bytes": 2592,
+    "sha256": "ba755ec4522b6ba5fa470a06559661ef08caabf88ad6969c4fc4901b42c9a4af"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/space/SpaceServiceAuditTest.java",
+    "bytes": 2625,
+    "sha256": "b98513a4bb06506478b8ea71ab5984ef78817206025bc77eea7fd8aa77997efb"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/user/DemoAccountInitializerTest.java",
+    "bytes": 6085,
+    "sha256": "da1bf9ca1143a7a0fd98f0d7ecf47b7948443c3df7f7ceb4a34ac9895946ca64"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/user/InMemoryUserRepository.java",
+    "bytes": 819,
+    "sha256": "622158c0404a782d591523bb8f153bea3e00d9214dca461bed76346b811b519d"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/user/UserAuthenticationServiceTest.java",
+    "bytes": 3738,
+    "sha256": "8ab701202fddbe50b0956e42bac82cebc615deee17c9ce839418e7adc063a8bf"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/AuditAccessControllerTest.java",
+    "bytes": 5610,
+    "sha256": "0af56ca4dbebf764600c58cb27ec3e99abcb6444f860f41ca50929f7550f85f6"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/AuthControllerTest.java",
+    "bytes": 11250,
+    "sha256": "438535cccf607506d81f2c313a3ab71a7b804be466c2f2ae01b080c5a63d73b1"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/CaseControllerTest.java",
+    "bytes": 17174,
+    "sha256": "02b48e9d04943e397624e384beb9e0371f65891cbb1f6e997d1f9d2e4f70d123"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/DeviceControllerTest.java",
+    "bytes": 3489,
+    "sha256": "219d058940295e0b0b4f4160a4f9818427b50205ae98bb24b782bcd1325e963c"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/HealthControllerTest.java",
+    "bytes": 1713,
+    "sha256": "5a0c02f65546f2a54dac3203b1efc61ae5fa11eb3ef6c712d17f64fe95565459"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/OverviewControllerTest.java",
+    "bytes": 5533,
+    "sha256": "55448c0c7f3cf34ee144834f60e94f4f606691432bcc5415c7e19c383c69d270"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/OwnerControllerTest.java",
+    "bytes": 9382,
+    "sha256": "d8616a399896ecab1e9f716aedcfb88b8d3a1997a0036af58fcef6bb8388e806"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/SpaceControllerTest.java",
+    "bytes": 7371,
+    "sha256": "9b4aed1a347388b512e89abe98cc52e9ed4739285e6c728a62bffd7c7362e334"
+  },
+  {
+    "path": "compose.yaml",
+    "bytes": 5050,
+    "sha256": "9a2ab1be5042fd78657fef9f65a1eb19097366df8fcf32527eacec5fe3143462"
+  },
+  {
+    "path": "docs/后端启动笔记.md",
+    "bytes": 23441,
+    "sha256": "dc6e909a4b11bce2e53e7669f00f8fc09a216520e94fc9391e02a481f3a0d294"
+  },
+  {
+    "path": "docs/本组实做记录.md",
+    "bytes": 12165,
+    "sha256": "f97b50229475f6eec8e9af1602e073408a1d0f6f1495483cf82ebdb304d954c3"
+  },
+  {
+    "path": "docs/页面需要的数据.md",
+    "bytes": 8303,
+    "sha256": "5454da1d03167a732a696ec44dd2e88de26e5507a34a996951c1f69ffd56bdee"
+  },
+  {
+    "path": "frontend/app.js",
+    "bytes": 259864,
+    "sha256": "9954640997f0a645fd364ffe888c20937178037b60a17d15730c8ed7ac5d8b1c"
+  },
+  {
+    "path": "frontend/data-service.js",
+    "bytes": 63661,
+    "sha256": "9b0fe4b533ada269b82527cc6956ee3aae43a86687819189e0517901c978bb94"
+  },
+  {
+    "path": "frontend/index.html",
+    "bytes": 6224,
+    "sha256": "20d70f09cbeaee34e0cc6c2ac2bbcc708d9542142e01cb491f8bbdf1ff5bc1ab"
+  },
+  {
+    "path": "frontend/mock-data.js",
+    "bytes": 23945,
+    "sha256": "bbec73eca47f167d197dfec9a8caeb91a69b0db9d4ba21ffbb28322193d7fcd3"
+  },
+  {
+    "path": "frontend/request-guard.js",
+    "bytes": 759,
+    "sha256": "5910f22bdfa4667bf49e502f9b1caa49080b191121e1c8af03e88999b3075d4a"
+  },
+  {
+    "path": "frontend/styles.css",
+    "bytes": 45220,
+    "sha256": "6509aa27ac87e8e5a414fe489b6f2bc0f8e73ef969f85b17b38e3428f557eee7"
+  },
+  {
+    "path": "frontend/tests/request-guard.test.mjs",
+    "bytes": 880,
+    "sha256": "54c2765038b1b2b19ce5d79fb90ce0332dfb3d6c278fc13456764c8f69e5da1c"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.jar",
+    "bytes": 58727,
+    "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.properties",
+    "bytes": 233,
+    "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw",
+    "bytes": 10284,
+    "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw.cmd",
+    "bytes": 6734,
+    "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+  },
+  {
+    "path": "materials/mock-campus.json",
+    "bytes": 23788,
+    "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3"
+  },
+  {
+    "path": "materials/约定卡.md",
+    "bytes": 8182,
+    "sha256": "0fa94f392afd4052b7532dde5cd2cd0c1f8e92e7af59c3298ae64324c91b9210"
+  },
+  {
+    "path": "tools/export-source.mjs",
+    "bytes": 16081,
+    "sha256": "af34484ff69e4dbdd1605390acff4866effda5adbe70717a424134a4dac060a3"
+  },
+  {
+    "path": "tools/serve.mjs",
+    "bytes": 6686,
+    "sha256": "33bdb66badd2fcc3a41d4d50e4e2b87de3283027f754c73a19a3af7b512930e4"
+  },
+  {
+    "path": "tools/setup-env.mjs",
+    "bytes": 4006,
+    "sha256": "a9f37681c048f12985479a3159dc209e932865323ce6aacde0d3553056222438"
+  }
+]

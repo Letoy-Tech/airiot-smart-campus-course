@@ -1,0 +1,6 @@
+{
+  "adminHistoricalMarker": true,
+  "viewerDirectRouteDenied": true,
+  "viewerDataTableCount": 0,
+  "permissionRevocationWhileMounted": "covered by unit test, not simulated by changing real server roles"
+}

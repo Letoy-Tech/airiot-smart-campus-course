@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T18:51:30.404673+00:00",
+  "lessons": 12,
+  "hours": 48,
+  "minutes": 2160,
+  "pdfPages": 37,
+  "visualReview": "All 37 current PDF pages actually opened and inspected; no missing Chinese, clipping, broken tables or overlap. Small auxiliary labels on pages16/19 remain readable at original size; physical print untested.",
+  "reviews": [
+    "qa/round5-visual-pages-01-19.json",
+    "qa/round5-visual-pages-20-37.json"
+  ],
+  "files": [
+    {
+      "path": "lesson-source.json",
+      "bytes": 21185,
+      "sha256": "8d73020e9e85e8944f9f743bee8069dd3a8e8fc2faf41a5172b133e490890262"
+    },
+    {
+      "path": "完整教案.md",
+      "bytes": 34970,
+      "sha256": "fc69c6c6bae295596360d9735a1ec081feb91b62d5f4c865cb3bd762bd0d02ec"
+    },
+    {
+      "path": "index.html",
+      "bytes": 27455,
+      "sha256": "bdd52e70acde10c1b7125db00107d3cf47538d0726a506c1dfc95b9b8eb1fea7"
+    },
+    {
+      "path": "AI编程智慧校园48学时教案.docx",
+      "bytes": 2890390,
+      "sha256": "7a125f557824d0262227eadc90a4ac40057fbb02a034bcc0da82f7dc4b8b3406"
+    },
+    {
+      "path": "AI编程智慧校园48学时教案.pdf",
+      "bytes": 3409482,
+      "sha256": "c2b4bff3a9795c6ccb7fc7667654de6f393b7f41ed86c5acab7070b0cfc430b2"
+    }
+  ]
+}

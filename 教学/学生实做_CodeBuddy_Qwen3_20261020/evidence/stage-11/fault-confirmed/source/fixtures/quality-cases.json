@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "kind": "RAW_QUALITY_CASES",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "baseRaw": {
+    "value": 24.5,
+    "time": 1792303199000
+  },
+  "policy": {
+    "staleAfterMs": 60000,
+    "futureToleranceMs": 5000,
+    "combinedErrorPrecedence": "INVALID_NON_NULL_FIELD_BEFORE_MISSING",
+    "nonFiniteJsonPolicy": "NaN/Infinity不是JSON值；脚本仅在内存中另测数值类型边界"
+  },
+  "cases": [
+    {
+      "id": "valid-number",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303199000
+      },
+      "expectedQuality": "fresh",
+      "reason": "正常有限数值"
+    },
+    {
+      "id": "valid-zero",
+      "raw": {
+        "value": 0,
+        "time": 1792303199000
+      },
+      "expectedQuality": "fresh",
+      "reason": "零是有效测量，不是缺失"
+    },
+    {
+      "id": "age-59999ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303140001
+      },
+      "expectedQuality": "fresh",
+      "reason": "只改变采样时间"
+    },
+    {
+      "id": "age-60000ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303140000
+      },
+      "expectedQuality": "fresh",
+      "reason": "恰好60秒仍新鲜"
+    },
+    {
+      "id": "age-60001ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303139999
+      },
+      "expectedQuality": "stale",
+      "reason": "超过60秒才过期"
+    },
+    {
+      "id": "future-4999ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303204999
+      },
+      "expectedQuality": "fresh",
+      "reason": "未来时间容差内，保留原始时间"
+    },
+    {
+      "id": "future-5000ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303205000
+      },
+      "expectedQuality": "fresh",
+      "reason": "恰好5秒仍在容差内"
+    },
+    {
+      "id": "future-5001ms",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303205001
+      },
+      "expectedQuality": "invalid",
+      "reason": "超过5秒为无效"
+    },
+    {
+      "id": "missing-value",
+      "raw": {
+        "value": null,
+        "time": 1792303199000
+      },
+      "expectedQuality": "missing",
+      "reason": "只有值缺失"
+    },
+    {
+      "id": "missing-time",
+      "raw": {
+        "value": 24.5,
+        "time": null
+      },
+      "expectedQuality": "missing",
+      "reason": "只有时间缺失"
+    },
+    {
+      "id": "string-value",
+      "raw": {
+        "value": "24.5",
+        "time": 1792303199000
+      },
+      "expectedQuality": "invalid",
+      "reason": "数字字符串不是数值"
+    },
+    {
+      "id": "boolean-value",
+      "raw": {
+        "value": true,
+        "time": 1792303199000
+      },
+      "expectedQuality": "invalid",
+      "reason": "布尔值不是数值"
+    },
+    {
+      "id": "string-time",
+      "raw": {
+        "value": 24.5,
+        "time": "1792303199000"
+      },
+      "expectedQuality": "invalid",
+      "reason": "数字字符串不是时间整数"
+    },
+    {
+      "id": "fractional-time",
+      "raw": {
+        "value": 24.5,
+        "time": 1792303199000.5
+      },
+      "expectedQuality": "invalid",
+      "reason": "时间必须是epoch毫秒整数"
+    },
+    {
+      "id": "non-date-time",
+      "raw": {
+        "value": 24.5,
+        "time": 8640000000000001
+      },
+      "expectedQuality": "invalid",
+      "reason": "超出可表示日期范围，单独无效时间"
+    }
+  ],
+  "combinedCases": [
+    {
+      "id": "invalid-value-missing-time",
+      "raw": {
+        "value": "bad",
+        "time": null
+      },
+      "expectedQuality": "invalid",
+      "reason": "与QualityPolicyTest已有组合断言相同：非空非法读数优先于缺失时间"
+    },
+    {
+      "id": "missing-value-invalid-time",
+      "raw": {
+        "value": null,
+        "time": "bad"
+      },
+      "expectedQuality": "invalid",
+      "reason": "同一规则用于两个字段：非空非法时间不能被缺失读数掩盖"
+    },
+    {
+      "id": "both-missing",
+      "raw": {
+        "value": null,
+        "time": null
+      },
+      "expectedQuality": "missing",
+      "reason": "没有非空非法字段时，两项缺失仍为missing"
+    }
+  ]
+}

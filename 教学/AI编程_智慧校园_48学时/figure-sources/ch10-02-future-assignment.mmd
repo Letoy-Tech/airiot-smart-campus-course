@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant M as 当前操作人
+    participant O as 设备责任
+    participant S as 事件服务
+    participant E1 as 事件 E1
+    participant E2 as 事件 E2
+    Note over M,E2: 教学预期：先以 ADMIN 开始，A 与 B 均有效
+    M->>O: 登记 A，expectedVersion=0
+    O-->>M: owner=A，责任 v1
+    M->>S: 触发温度巡查，无 body
+    S->>O: 读取 A 并核对资格
+    S->>E1: 创建 ASSIGNED，assignee=A，事件 v1
+    Note over M,S: 切换为 A；A 开始处理 E1，expectedVersion=1
+    S->>E1: IN_PROGRESS，事件 v2，追加 START
+    Note over M,E1: 回读并保存基线：A、IN_PROGRESS、v2、现有时间线
+    Note over M,O: 切回 ADMIN，再登记设备责任
+    M->>O: 改为 B，expectedVersion=1
+    O-->>M: owner=B，责任 v2
+    Note over O,E1: 责任更新不写 E1；负责人、状态、版本、历史均保持
+    M->>S: 再次触发温度巡查，无 body
+    S->>O: 读取 B 并核对资格
+    S->>E2: 创建 ASSIGNED，assignee=B，事件 v1
+    Note over E1,E2: 不同事件 id/sourceId，分别保留各自时间线

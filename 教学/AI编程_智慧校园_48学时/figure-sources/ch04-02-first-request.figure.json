@@ -1,0 +1,8 @@
+{
+  "id": "图 04-02",
+  "title": "第一次设备读取的请求与返回",
+  "alt": "浏览器向前端开发服务请求带 api 前缀的设备地址，代理保留前缀后转到后端；后端检查身份和读取权限，再读取教学提供器，返回标准 JSON，前端从 data.items 显示两条模拟设备。",
+  "caption": "图 04-02　第一次设备读取的请求与返回。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 73,
+    "sha256": "3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b"
+  },
+  {
+    "path": "README.md",
+    "bytes": 659,
+    "sha256": "451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8"
+  },
+  {
+    "path": "frontend/app.js",
+    "bytes": 65421,
+    "sha256": "0b82aeac11a37624dca010537c72c219e2b637d646bec6c7aec9c62a36415628"
+  },
+  {
+    "path": "frontend/data-service.js",
+    "bytes": 7512,
+    "sha256": "bb7d07b95145197efbb465f05b5ba81a09ed4f1ca1fe94eb28a24214e42d64bb"
+  },
+  {
+    "path": "frontend/index.html",
+    "bytes": 2787,
+    "sha256": "e1690868e2fc4f2cbb4649b189aa9188aa422b4cd0c00c50b655318302bd528b"
+  },
+  {
+    "path": "frontend/mock-data.js",
+    "bytes": 23945,
+    "sha256": "bbec73eca47f167d197dfec9a8caeb91a69b0db9d4ba21ffbb28322193d7fcd3"
+  },
+  {
+    "path": "frontend/styles.css",
+    "bytes": 20766,
+    "sha256": "677c5c22a2b39cd9a8a94876e2b0b432f7d079fececc152bf415b7c79c935318"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.jar",
+    "bytes": 58727,
+    "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.properties",
+    "bytes": 233,
+    "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw",
+    "bytes": 10284,
+    "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw.cmd",
+    "bytes": 6734,
+    "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+  },
+  {
+    "path": "materials/mock-campus.json",
+    "bytes": 23788,
+    "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3"
+  },
+  {
+    "path": "materials/约定卡.md",
+    "bytes": 7816,
+    "sha256": "603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83"
+  },
+  {
+    "path": "notes/01-我的第一张页面.md",
+    "bytes": 360,
+    "sha256": "c1f96690fe7900c4f5c449d1e87f01af143ab3e455f7260d5856c848f88df995"
+  },
+  {
+    "path": "notes/02-设备台账.md",
+    "bytes": 300,
+    "sha256": "42b4b65cd62d92d43a17cf9e67eeb302e8854536df3c504782c7fc7a151950da"
+  },
+  {
+    "path": "notes/03-位置和责任.md",
+    "bytes": 335,
+    "sha256": "5e2dbddadca46fe31cd51a3175a789fd5eedc007dbaadc5c4601adb8921a3543"
+  },
+  {
+    "path": "tools/serve.mjs",
+    "bytes": 6686,
+    "sha256": "33bdb66badd2fcc3a41d4d50e4e2b87de3283027f754c73a19a3af7b512930e4"
+  }
+]

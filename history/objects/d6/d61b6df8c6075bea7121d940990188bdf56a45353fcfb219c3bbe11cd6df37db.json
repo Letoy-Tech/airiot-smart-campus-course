@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "CATALOG_SELECTION",
+  "profiles": {
+    "first-chain": {
+      "spaceIds": [
+        "teaching_space_01"
+      ],
+      "deviceIds": [
+        "teaching_env_01",
+        "teaching_energy_01"
+      ],
+      "includeAllTagsForSelectedDevices": true
+    },
+    "full": {
+      "spaceIds": [
+        "teaching_space_01",
+        "teaching_space_02",
+        "teaching_space_03",
+        "teaching_space_04"
+      ],
+      "deviceIds": [
+        "teaching_env_01",
+        "teaching_energy_01",
+        "teaching_facility_01",
+        "teaching_light_01",
+        "teaching_env_02",
+        "teaching_energy_02",
+        "teaching_facility_02",
+        "teaching_light_02",
+        "teaching_env_03",
+        "teaching_energy_03",
+        "teaching_facility_03",
+        "teaching_light_03",
+        "teaching_env_04",
+        "teaching_energy_04",
+        "teaching_facility_04",
+        "teaching_light_04"
+      ],
+      "includeAllTagsForSelectedDevices": true
+    }
+  }
+}

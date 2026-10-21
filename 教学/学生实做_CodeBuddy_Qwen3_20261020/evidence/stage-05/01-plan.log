@@ -1,0 +1,14 @@
+第05站 概览与能源
+模式：teacher-db
+目标：概览及V/kW能源页
+  阶段装配  frontend/src/journey/registry.ts
+  阶段装配  frontend/src/journey/features.ts
+  学生业务  frontend/src/views/OverviewView.vue
+  公共参考  frontend/src/components/CompareHistory.vue
+  公共参考  frontend/src/components/HistoryChart.vue
+  学生业务  frontend/src/views/EnergyView.vue
+
+本次契约：GET /overview；source/simulated/observedAt/points/quality；不以kW推电量
+人工过关：0/null/质量有区别；统计对应响应；离页停止刷新
+完整参考：lesson-bundles/stage-05/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

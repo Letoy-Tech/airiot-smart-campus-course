@@ -1,0 +1,45 @@
+{
+  "name": "原始报警正常分页、成功空结果和失败快照",
+  "status": "PASS",
+  "previousAttempt": "Automation exact accessible label locator timed out; no write action was involved.",
+  "startedAt": "2026-10-19T15:36:08.183Z",
+  "controls": [
+    {
+      "labels": [
+        "每页2 条5 条20 条"
+      ],
+      "options": [
+        "2",
+        "5",
+        "20"
+      ]
+    },
+    {
+      "labels": [
+        "教学读取情境正常样本成功空结果读取失败"
+      ],
+      "options": [
+        "normal",
+        "empty",
+        "failure"
+      ]
+    }
+  ],
+  "screenshot": {
+    "file": "06-原始报警失败保留快照.png",
+    "sha256": "312921b3c5865e8c5fa267b55b011f800586481aceab3819ba52899ec4fcaabb",
+    "url": "http://127.0.0.1:5178/#raw-alarms",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "evidence": {
+    "normalTotal": 5,
+    "pageSize": 2,
+    "secondPage": true,
+    "successEmpty": true,
+    "failureRetainsSnapshot": true
+  },
+  "finishedAt": "2026-10-19T15:36:08.698Z"
+}

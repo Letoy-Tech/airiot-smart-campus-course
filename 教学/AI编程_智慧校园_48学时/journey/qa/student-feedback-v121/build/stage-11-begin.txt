@@ -1,0 +1,6 @@
+$ node tools/progress.mjs begin 11
+已准备骨架：第11站。
+  frontend/src/journey/features.ts
+  docs/调试记录.md
+备份：journey-backups/2026-10-19T22-18-05-710Z-stage-11-begin-a0ffed
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

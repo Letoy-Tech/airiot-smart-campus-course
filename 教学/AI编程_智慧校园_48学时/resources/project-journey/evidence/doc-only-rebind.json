@@ -1,0 +1,23 @@
+{
+  "status": "PASS_DOCUMENTATION_ONLY_REBIND",
+  "executedSourceManifestSha256": "f0c97649ed0357dd1e2c8822f2bb00a69a13efe783dc886f421a61ce7b6a3c37",
+  "finalSourceManifestSha256": "073768bb0e301178174c77351b49446686b9ac9dfb08aa38247431185b6b0c77",
+  "changedFiles": [
+    "app/lesson-bundles/stage-02/manifest.json",
+    "app/lesson-bundles/stage-02/files/backend/README.md",
+    "reference/backend/README.md",
+    "reference/lesson-bundles/stage-02/manifest.json",
+    "reference/lesson-bundles/stage-02/files/backend/README.md",
+    "reference/journey-state.json"
+  ],
+  "changedUpstreamSourceFiles": [
+    "backend/README.md"
+  ],
+  "unchangedGeneratedFileCount": 551,
+  "runtimeCodeChanged": false,
+  "testRerunRequired": false,
+  "reason": "README only: excluded evidence link replaced by plain course location; early skipped-DB run distinguished from subsequent independent MySQL verification. Stage manifests and reference managed hash updated. Other 551 generated files identical to original 12-stage executed manifest.",
+  "retainedBuildEvidence": "author-verification.json",
+  "retainedDebugEvidence": "debug-wrong-fixed.json",
+  "separateMySqlEvidence": "journey/qa/round10/mysql-verification.json"
+}

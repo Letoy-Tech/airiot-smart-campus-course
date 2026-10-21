@@ -1,0 +1,97 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.campus.course:campus-ai-course >-----------------
+[INFO] Building Campus AI Course First Chain 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ campus-ai-course ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ campus-ai-course ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ campus-ai-course ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ campus-ai-course ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.2:test (default-test) @ campus-ai-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.campus.course.SourceSelectionTest
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.475 s -- in edu.campus.course.SourceSelectionTest
+[INFO] Running edu.campus.course.HistoryFixtureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 s -- in edu.campus.course.HistoryFixtureTest
+[INFO] Running edu.campus.course.QualityPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in edu.campus.course.QualityPolicyTest
+[INFO] Running edu.campus.course.CatalogReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in edu.campus.course.CatalogReaderTest
+[INFO] Running edu.campus.course.FirstChainTest
+23:22:18.013 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.campus.course.FirstChainTest]: FirstChainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:22:18.068 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.FirstChainTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-19T23:22:18.213+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Starting FirstChainTest using Java 17.0.6 with PID 31219 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/student-project/backend)
+2026-10-19T23:22:18.214+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : The following 1 profile is active: "first-chain"
+2026-10-19T23:22:18.832+08:00  INFO 31219 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-19T23:22:19.038+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-19T23:22:19.038+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-19T23:22:19.039+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-19T23:22:19.051+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Started FirstChainTest in 0.943 seconds (process running for 1.91)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.010 s -- in edu.campus.course.FirstChainTest
+[INFO] Running edu.campus.course.ReadFixtureValidationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in edu.campus.course.ReadFixtureValidationTest
+[INFO] Running edu.campus.course.CloseRulesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in edu.campus.course.CloseRulesTest
+[INFO] Running edu.campus.course.LocalAccountDirectoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 s -- in edu.campus.course.LocalAccountDirectoryTest
+[INFO] Running edu.campus.course.ReadOnlyModelsTest
+2026-10-19T23:22:20.364+08:00  INFO 31219 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.ReadOnlyModelsTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-19T23:22:20.375+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Starting ReadOnlyModelsTest using Java 17.0.6 with PID 31219 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/student-project/backend)
+2026-10-19T23:22:20.375+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : The following 1 profile is active: "teacher-db"
+2026-10-19T23:22:20.501+08:00  INFO 31219 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-19T23:22:20.527+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-19T23:22:20.528+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-19T23:22:20.528+08:00  INFO 31219 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-19T23:22:20.531+08:00  INFO 31219 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Started ReadOnlyModelsTest in 0.166 seconds (process running for 3.39)
+2026-10-19T23:22:20.575+08:00  WARN 31219 --- [campus-course-backend] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 s -- in edu.campus.course.ReadOnlyModelsTest
+[INFO] Running edu.campus.course.TeacherDbTest
+[WARNING] Tests run: 11, Failures: 0, Errors: 0, Skipped: 11, Time elapsed: 0 s -- in edu.campus.course.TeacherDbTest
+[INFO] Running edu.campus.course.SnapshotConsistencyTest
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0 s -- in edu.campus.course.SnapshotConsistencyTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 50, Failures: 0, Errors: 0, Skipped: 16
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.940 s
+[INFO] Finished at: 2026-10-19T23:22:20+08:00
+[INFO] ------------------------------------------------------------------------

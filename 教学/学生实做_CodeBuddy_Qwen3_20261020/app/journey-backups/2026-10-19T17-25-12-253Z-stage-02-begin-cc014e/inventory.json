@@ -1,0 +1,363 @@
+[
+  {
+    "path": "frontend/src/App.vue",
+    "existed": true,
+    "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83"
+  },
+  {
+    "path": "backend/.gitignore",
+    "existed": false
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.jar",
+    "existed": false
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+    "existed": false
+  },
+  {
+    "path": "backend/README.md",
+    "existed": false
+  },
+  {
+    "path": "backend/docs/debug-read-pagination.md",
+    "existed": false
+  },
+  {
+    "path": "backend/docs/full-api.json",
+    "existed": false
+  },
+  {
+    "path": "backend/docs/round10-read-api.json",
+    "existed": false
+  },
+  {
+    "path": "backend/mvnw",
+    "existed": false
+  },
+  {
+    "path": "backend/mvnw.cmd",
+    "existed": false
+  },
+  {
+    "path": "backend/pom.xml",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/Access.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/AccountAdmin.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/AccountDirectory.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/ApiErrors.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/ApiFailure.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/ApiResponse.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/AuthController.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CampusController.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CampusMapper.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CampusProvider.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CatalogReader.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CommandAuditController.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CoreBeans.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CourseApplication.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/CourseModels.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/FullCampusController.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/Inputs.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/LocationService.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/OperationsService.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/resources/application-first-chain.properties",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/resources/application-teacher-db.properties",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/resources/application.properties",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V1__local_campus.sql",
+    "existed": false
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/FirstChainTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+    "existed": false
+  },
+  {
+    "path": "backend/src/test/resources/catalog-test.json",
+    "existed": false
+  },
+  {
+    "path": "backend/tools/account-admin.mjs",
+    "existed": false
+  },
+  {
+    "path": "backend/tools/test-mysql.mjs",
+    "existed": false
+  },
+  {
+    "path": "fixtures/README.md",
+    "existed": false
+  },
+  {
+    "path": "fixtures/catalog.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/command-audit.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/concurrency-rollback-scenarios.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/history-cases.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/history-series.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/manifest.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/pagination-scenarios.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/permission-scenarios.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/quality-cases.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/raw-alarms.json",
+    "existed": false
+  },
+  {
+    "path": "fixtures/schema.md",
+    "existed": false
+  },
+  {
+    "path": "fixtures/selectors.json",
+    "existed": false
+  },
+  {
+    "path": "tools/course.mjs",
+    "existed": false
+  },
+  {
+    "path": "tools/private-json.mjs",
+    "existed": false
+  },
+  {
+    "path": "tools/validate-fixtures.mjs",
+    "existed": false
+  },
+  {
+    "path": "docs/02-教师数据库交接单.md",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/FullWorkspace.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/stores/campus.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/api/auth.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/domain/course.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/types/campus.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/api/http.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/types/full.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/api/campus.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/FirstDeviceRead.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/first-device-view.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/http.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/request-timeout.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/session-races.test.ts",
+    "existed": false
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "version": "2.0.1",
+  "created": "2026-10-20T18:49:23.302470",
+  "archives": [
+    {
+      "file": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_学生空白起点_V2.0.1.zip",
+      "bytes": 66476,
+      "files": 9,
+      "sha256": "c4a2f53ef9cbc665dd056bf294d1ab785119b898fa4927c57dc4ccc78a3e3177"
+    },
+    {
+      "file": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_V2.0.1_手把手教学包.zip",
+      "bytes": 543680,
+      "files": 96,
+      "sha256": "33fc6fc94f5ee98edcfc4810a0fea7660f0262085bd1323f6704d506ed2c3cc2"
+    }
+  ]
+}

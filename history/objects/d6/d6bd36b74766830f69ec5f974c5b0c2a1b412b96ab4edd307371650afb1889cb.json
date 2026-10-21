@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "COMMAND_AUDIT_SAMPLES",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "sampleKind": "HISTORICAL_TEACHING_SAMPLE",
+  "description": "人工编写的历史命令审计教学样本；本轮没有发送命令、调用设备或产生控制记录。",
+  "items": [
+    {
+      "id": "teaching_audit_001",
+      "actorId": "teaching_sample_actor",
+      "actorName": "历史教学角色（虚构）",
+      "deviceId": "teaching_light_01",
+      "tableId": "teaching_lighting",
+      "before": false,
+      "requested": true,
+      "confirmed": true,
+      "outcome": "CONFIRMED",
+      "reason": "人工编写的历史记录样例，没有向设备发送命令",
+      "createdAt": 1792302600000,
+      "error": null,
+      "source": "TEACHING_MOCK",
+      "simulated": true,
+      "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+    },
+    {
+      "id": "teaching_audit_002",
+      "actorId": "teaching_sample_actor",
+      "actorName": "历史教学角色（虚构）",
+      "deviceId": "teaching_facility_02",
+      "tableId": "teaching_facility",
+      "before": true,
+      "requested": false,
+      "confirmed": true,
+      "outcome": "READBACK_MISMATCH",
+      "reason": "人工编写的历史记录样例，没有向设备发送命令",
+      "createdAt": 1792302000000,
+      "error": "人工样例：回读与目标不一致",
+      "source": "TEACHING_MOCK",
+      "simulated": true,
+      "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+    },
+    {
+      "id": "teaching_audit_003",
+      "actorId": "teaching_sample_actor",
+      "actorName": "历史教学角色（虚构）",
+      "deviceId": "teaching_light_03",
+      "tableId": "teaching_lighting",
+      "before": null,
+      "requested": true,
+      "confirmed": null,
+      "outcome": "DENIED",
+      "reason": "人工编写的历史记录样例，没有向设备发送命令",
+      "createdAt": 1792301400000,
+      "error": "人工样例：未获控制能力",
+      "source": "TEACHING_MOCK",
+      "simulated": true,
+      "sampleKind": "HISTORICAL_TEACHING_SAMPLE"
+    }
+  ]
+}

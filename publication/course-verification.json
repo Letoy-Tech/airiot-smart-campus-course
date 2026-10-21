@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21T14:37:32.012343+08:00",
+  "scope": "Public sanitized repository course V2.0.2 and final 64-step student campus-lab backend",
+  "status": "PASS_WITH_EXPLICIT_UNTESTED_BOUNDARIES",
+  "preflight": {
+    "checkedAt": "2026-10-21",
+    "studentBackend": "student-runs/v2.0.1-20261020-192228/campus-lab/backend",
+    "pomReviewed": true,
+    "javaVersion": "17",
+    "springBootVersion": "3.4.2",
+    "mavenPlugins": [
+      "spring-boot-maven-plugin (repackage only in package lifecycle)"
+    ],
+    "applicationConfiguration": {
+      "httpBind": "127.0.0.1:8098",
+      "mysql": "127.0.0.1:23501/campus_course",
+      "redis": "127.0.0.1:23502",
+      "databasePassword": "Required DB_PASSWORD placeholder",
+      "demoPassword": "DEMO_PASSWORD environment placeholder with empty fallback",
+      "redisPassword": "REDIS_PASSWORD environment placeholder with empty fallback",
+      "startupWouldRequireOwnDatabaseAndCredentials": true,
+      "testsDoNotStartFullApplication": true,
+      "dotenvImportDisabledForThisTest": true,
+      "dotenvPresentInPublicSource": false
+    },
+    "testReview": {
+      "usesMockitoAndMockMvc": true,
+      "springBootTestCount": 0,
+      "testcontainersCount": 0,
+      "directRemoteNetworkClientsInTests": 0,
+      "fullServerOrContainerStartupRequested": false
+    },
+    "verifierReview": {
+      "verifyCourseWrites": [
+        "handbook-v2/author/evidence/v2.0.2-static-results.json",
+        "handbook-v2/index.html",
+        "handbook-v2/从空白开始_手把手教程_V2.0.2.html",
+        "course-index-v2.json",
+        "course-index.json"
+      ],
+      "executedInExternalIsolatedCopy": true,
+      "businessOrRemoteWrites": false
+    }
+  },
+  "courseStatic": {
+    "status": "PASS",
+    "executionLocation": "external isolated copy",
+    "script": "tools/v2/verify-course.py",
+    "exitCode": 0,
+    "details": {
+      "version": "2.0.2",
+      "lessons": [
+        {
+          "lesson": "01-从空白页面做出概览.md",
+          "steps": 5,
+          "minutes": [
+            40,
+            35,
+            25,
+            45,
+            35
+          ]
+        },
+        {
+          "lesson": "02-把设备放进台账.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            35,
+            40,
+            45,
+            30
+          ]
+        },
+        {
+          "lesson": "03-给设备安排位置和负责人.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            35,
+            35,
+            45,
+            35
+          ]
+        },
+        {
+          "lesson": "04-看懂读数再做能源页.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            40,
+            40,
+            35,
+            35
+          ]
+        },
+        {
+          "lesson": "05-把历史和原始报警接到页面.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            45,
+            30,
+            40,
+            35
+          ]
+        },
+        {
+          "lesson": "06-走完演练事件并串起整个前端.md",
+          "steps": 6,
+          "minutes": [
+            20,
+            25,
+            40,
+            45,
+            20,
+            30
+          ]
+        },
+        {
+          "lesson": "07-看着页面做第一个后端.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            30,
+            40,
+            40,
+            40
+          ]
+        },
+        {
+          "lesson": "08-把设备保存到MySQL.md",
+          "steps": 6,
+          "minutes": [
+            25,
+            30,
+            35,
+            30,
+            40,
+            20
+          ]
+        },
+        {
+          "lesson": "09-用Redis记住短时登录.md",
+          "steps": 6,
+          "minutes": [
+            25,
+            30,
+            40,
+            35,
+            30,
+            20
+          ]
+        },
+        {
+          "lesson": "10-逐页接回真实后端.md",
+          "steps": 5,
+          "minutes": [
+            35,
+            40,
+            35,
+            35,
+            35
+          ]
+        },
+        {
+          "lesson": "11-让一件演练有始有终.md",
+          "steps": 6,
+          "minutes": [
+            30,
+            35,
+            30,
+            30,
+            30,
+            25
+          ]
+        },
+        {
+          "lesson": "12-把作品交到新目录.md",
+          "steps": 5,
+          "minutes": [
+            30,
+            35,
+            50,
+            40,
+            25
+          ]
+        }
+      ],
+      "steps": 64,
+      "starter_empty": true,
+      "fixtures_and_contract_bodies_identical": true,
+      "reader_static_checked": true,
+      "reader_visual_review_in_this_check": false,
+      "reader_unique_ids": 100
+    },
+    "publicHistoricalEvidenceFilesUnchanged": 13,
+    "readerArtifacts": [
+      {
+        "path": "handbook-v2/index.html",
+        "sha256": "dd06a0855bf5154e235e2928e663dd6364feca12e45347812aa98c09b25d0fd7",
+        "uniqueIds": 100,
+        "missingLocalLinks": 0,
+        "inlineJavaScriptSyntaxPassed": true
+      },
+      {
+        "path": "handbook-v2/从空白开始_手把手教程_V2.0.2.html",
+        "sha256": "3535946241edfa982cf19662ba8398bb82e86eaff4225961a103a2d11854c81c",
+        "uniqueIds": 100,
+        "missingLocalLinks": 0,
+        "inlineJavaScriptSyntaxPassed": true
+      }
+    ],
+    "excludedScreenshotLinkRepair": {
+      "path": "handbook-v2/教师验证记录.md",
+      "beforeSha256": "f5d45d1a7722481fa6f64bd86ff63403b8b6ead2d83e0820da4984d938d16c56",
+      "afterSha256": "9aa65a1c12360acc2a900ed9fa1fe346eb6c2c8eed169ccda3c7f1a33b685a26",
+      "change": "Removed excluded screenshot link; added truthful public-redaction and historical-evidence explanation; six existing JSON evidence links preserved"
+    },
+    "freshResultStoredOutsideHistoricalEvidence": true
+  },
+  "studentBackend": {
+    "status": "PASS",
+    "javaVersion": "17.0.12",
+    "mavenVersion": "3.9.6",
+    "goal": "clean package",
+    "dotenvImportDisabled": true,
+    "settings": "empty task-specific settings; no real environment configuration",
+    "totals": {
+      "tests": 153,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suiteCount": 21,
+    "suites": [
+      {
+        "name": "edu.campus.v2.auth.LoginTokenGeneratorTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.auth.RedisLoginSessionStoreTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.auth.RoleInterceptorTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.caseflow.CaseActionServiceTest",
+        "tests": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.caseflow.CaseServiceTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.device.DeviceRowMapperTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.history.HistoryGroupingTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.history.HistoryRepositorySqlTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.owner.OwnerServiceAuditTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.point.PointRowMapperTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.space.SpaceServiceAuditTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.user.DemoAccountInitializerTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.user.UserAuthenticationServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.AuditAccessControllerTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.AuthControllerTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.CaseControllerTest",
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.DeviceControllerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.HealthControllerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.OverviewControllerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.OwnerControllerTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "edu.campus.v2.web.SpaceControllerTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "student-runs/v2.0.1-20261020-192228/campus-lab/backend/target/campus-v2-backend-0.0.1-SNAPSHOT.jar",
+        "bytes": 35946617,
+        "sha256": "f2eff1bc260e68d2cc3eee255e59565248523c48bda774f724cffd57c7fd68ad",
+        "generatedOnlyNotSourceRelease": true
+      }
+    ],
+    "sourceFilesUnchanged": true,
+    "runSeconds": 7.05,
+    "log": "student-public-maven-final.log",
+    "noServiceOrContainerStartup": true
+  },
+  "observedAndResolvedIssues": [
+    {
+      "issue": "Missing public historical screenshot link",
+      "resolution": "Public teacher record now explains local-only original screenshot; rebuilt public reader; all local links pass"
+    },
+    {
+      "issue": "Offline Maven cache had artifacts associated with a different repository ID",
+      "resolution": "Downloaded required public Maven artifacts using empty settings, then clean package passed"
+    },
+    {
+      "issue": "Concurrent broad redaction temporarily altered generic code words",
+      "resolution": "Root restored exact placeholders; all initial 208 source hashes matched before this link fix; final clean package and static rerun passed after restoration"
+    }
+  ],
+  "sourceChangesMadeHere": [
+    {
+      "path": "handbook-v2/从空白开始_手把手教程_V2.0.2.html",
+      "before": "b70fca0bb40ef604f4865905a8a289453a2c6cd6c9721e19b1292363bdef3e58",
+      "after": "3535946241edfa982cf19662ba8398bb82e86eaff4225961a103a2d11854c81c"
+    },
+    {
+      "path": "handbook-v2/index.html",
+      "before": "ffb3707a58bec2b202c2361335ee4dcb64fed34318b0c66dd1b30245edcdb32a",
+      "after": "dd06a0855bf5154e235e2928e663dd6364feca12e45347812aa98c09b25d0fd7"
+    },
+    {
+      "path": "handbook-v2/教师验证记录.md",
+      "before": "f5d45d1a7722481fa6f64bd86ff63403b8b6ead2d83e0820da4984d938d16c56",
+      "after": "9aa65a1c12360acc2a900ed9fa1fe346eb6c2c8eed169ccda3c7f1a33b685a26"
+    }
+  ],
+  "remainingBoundaries": [
+    "No MySQL/Redis integration or Docker/Compose startup in this publication check",
+    "No real AIRIOT, server, external notification, device control, or production write",
+    "No browser interactive acceptance or new visual reader review in this check",
+    "No Windows or physical student/classroom acceptance",
+    "No independent V2.0.2 CodeBuddy 64-step rerun from blank",
+    "Fresh public snapshot tests do not convert historical evidence into new business acceptance"
+  ],
+  "evidenceFiles": [
+    "course-validation-preflight.json",
+    "course-static-public-final.log",
+    "course-static-public-final-exit.json",
+    "course-public-reader-build.log",
+    "student-public-maven-final.log",
+    "student-public-maven-final-exit.json",
+    "course-validation-restored-changes.json"
+  ]
+}

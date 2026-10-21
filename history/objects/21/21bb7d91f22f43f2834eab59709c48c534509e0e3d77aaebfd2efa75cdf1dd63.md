@@ -1,0 +1,1 @@
+继续第12课03实际新目录接手。当前窗口必须只处理campus-lab-handoff，它来自本轮hand-in-v3公开导出；新.env已首次生成，新Compose项目为campus-v2-handoff，首次up遇到固定container_name冲突，已stop新项目。旧campus-v2容器与卷保留停止。不要读.env/.private/.runtime/上级目录/教师参考，不输出口令；不删卷/容器、不改名旧容器、不改密码/端口、不代启停服务。本条不调用工具、不修改文件，只回复收到，下一条给具体实测补救。

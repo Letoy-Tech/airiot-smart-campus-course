@@ -1,0 +1,16 @@
+{
+  "passed": 10,
+  "checks": [
+    "New generated local password works",
+    "Fresh schema has no previous cases or owners",
+    "16 seed devices imported in fresh schema",
+    "New directory saves owner",
+    "New directory auto assigns case",
+    "New directory complete event lifecycle",
+    "New directory writes audit",
+    "New directory logout",
+    "13 tests passed after clean-source build",
+    "39 exported source files independently built"
+  ],
+  "method": "clean source, new native MySQL schema and separate Redis; not a Docker run"
+}

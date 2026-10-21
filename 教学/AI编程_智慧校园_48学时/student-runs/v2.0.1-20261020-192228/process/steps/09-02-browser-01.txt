@@ -1,0 +1,39 @@
+@vom 1
+@view 1280x726
+@layers 1 focus=L1
+L1 page
+  RootWebArea "{ \"code\" : 0 , \"message\" : \"ok\" , : { \"status\" : \"UP\" } }"
+    list
+      listitem
+        @e1 link
+      listitem
+        @e2 link "Tree"
+      listitem
+        @e3 link "Chart"
+      listitem
+        @e4 link "JSON Editor"
+      listitem
+        @e5 link "Options" [→ eifflpmocdbdmepbjaopkkhbfmdgijcc]
+    @e6 link "▼" [ctx: Copy path Copy Value { } : , "code" 0 : , "message" "ok" : { } "data" : "status" "UP"]
+    list "\"code\" : 0 , \"message\" : \"ok\" , : { \"status\" : \"UP\" }"
+      listitem "\"code\" : 0 ,"
+        StaticText "\"code\""
+        StaticText ":"
+        StaticText "0"
+        StaticText ","
+      listitem "\"message\" : \"ok\" ,"
+        StaticText "\"message\""
+        StaticText ":"
+        StaticText "\"ok\""
+        StaticText ","
+      listitem ": { \"status\" : \"UP\" }"
+        @e7 link "▼ \"data\""
+        list "\"status\" : \"UP\""
+          listitem "\"status\" : \"UP\""
+            StaticText "\"status\""
+            StaticText ":"
+            StaticText "\"UP\""
+        StaticText ": {"
+        StaticText "}"
+    StaticText "{"
+    StaticText "}"

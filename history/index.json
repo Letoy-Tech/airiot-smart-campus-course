@@ -1,0 +1,683 @@
+{
+  "formatVersion": 1,
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "sourceArchives": [
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.1.1_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.1.1_完整教学包--b90d375ad9",
+      "sourceArchiveSha256": "b90d375ad91198fe9b88dde61023d21a0c5991088082627fcd11ef4d3b2b3282"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.2.0_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.2.0_完整教学包--1b1b9d5c77",
+      "sourceArchiveSha256": "1b1b9d5c77a501521cbf4b495369dc00f7fe6c72a28a5e03b44f889ace7ed720"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_V2.0.0_手把手教学包.zip",
+      "package": "AI编程_智慧校园_V2.0.0_手把手教学包--2543cdc2e9",
+      "sourceArchiveSha256": "2543cdc2e93bf3c36c9edd841bfed828b4d02cd86e3e33ffb4f2e7fdd710256a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V0.4_图文与起步资源.zip",
+      "package": "AI编程_智慧校园_48学时_V0.4_图文与起步资源--5fed671bc5",
+      "sourceArchiveSha256": "5fed671bc57f43b798ee51492183b107444d9bdede976489d9e951710ef59589"
+    },
+    {
+      "source": "教学/AI编程_CodeBuddy学生起点_V1.2.1.zip",
+      "package": "AI编程_CodeBuddy学生起点_V1.2.1--9b4d00c510",
+      "sourceArchiveSha256": "9b4d00c510b66d12c880acea342cc195ef7b19090e19c2b1a1cb778afac5bb0b"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.1.0_完整教学包--625042673d",
+      "sourceArchiveSha256": "625042673d2f3da39ab2b889e17a22495e25cee870725e37de176dbd5429ee87"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V0.3_第二轮图文稿.zip",
+      "package": "AI编程_智慧校园_48学时_V0.3_第二轮图文稿--a99c196b9f",
+      "sourceArchiveSha256": "a99c196b9f16d36510358a3fced8d2487efe8e804e74deff5f9e0131db3fb184"
+    },
+    {
+      "source": "教学/AI编程_第04章学生起点_V0.4.zip",
+      "package": "AI编程_第04章学生起点_V0.4--243d58992e",
+      "sourceArchiveSha256": "243d58992e1b3b6c1d8a43eea141f4de6ae21c810a63530403c428ce4bc68092"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.2.1_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.2.1_完整教学包--ecfad9e2c8",
+      "sourceArchiveSha256": "ecfad9e2c85824730f5b37a1733ae1894eda1fc4e72008fae0815c4b4f6fe2c4"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_V2.0.2_手把手教学包.zip",
+      "package": "AI编程_智慧校园_V2.0.2_手把手教学包--9c0d5794e8",
+      "sourceArchiveSha256": "9c0d5794e85927666917d59a35115441992a35c59137a31bd6e2b4d27a8403dd"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.0.2_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.0.2_完整教学包--1083e348cc",
+      "sourceArchiveSha256": "1083e348cca3085b802f04c76971635883af65c58324e323d82244039206c1d5"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V0.2_图文初稿.zip",
+      "package": "AI编程_智慧校园_48学时_V0.2_图文初稿--f984958354",
+      "sourceArchiveSha256": "f9849583549e31ceaaaa244c0c9518271ccc6add64499ab8b253efb87e07a90e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_V2.0.1_手把手教学包.zip",
+      "package": "AI编程_智慧校园_V2.0.1_手把手教学包--33fc6fc94f",
+      "sourceArchiveSha256": "33fc6fc94f5ee98edcfc4810a0fea7660f0262085bd1323f6704d506ed2c3cc2"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.0.1_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.0.1_完整教学包--01293e3a0b",
+      "sourceArchiveSha256": "01293e3a0b621b99fbf21fd5a99ff0b13ba70235040400c5e8fbba55be893ec3"
+    },
+    {
+      "source": "教学/AI编程_第04至12章学生起点_V1.0.zip",
+      "package": "AI编程_第04至12章学生起点_V1.0--04199e880e",
+      "sourceArchiveSha256": "04199e880e368822991e039409409605759afa682c9cdeece095102e554cf695"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V0.1.zip",
+      "package": "AI编程_智慧校园_48学时_V0.1--8ae65a473f",
+      "sourceArchiveSha256": "8ae65a473f2444befe0e01598a42815d4378321d7e7e729df641cc9eff7c1541"
+    },
+    {
+      "source": "教学/AI编程_学生空白起点_V2.0.2.zip",
+      "package": "AI编程_学生空白起点_V2.0.2--2ef2ae621f",
+      "sourceArchiveSha256": "2ef2ae621f6f26c805f4a32582f875a7401508af87174747a7d1de4e3c9dfba9"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时_V1.0_完整教学包.zip",
+      "package": "AI编程_智慧校园_48学时_V1.0_完整教学包--eff074912b",
+      "sourceArchiveSha256": "eff074912bf6be4b732495594864bd8af69f03d72fd2b48a9c9960c1ffdc813d"
+    },
+    {
+      "source": "教学/AI编程_学生空白起点_V2.0.1.zip",
+      "package": "AI编程_学生空白起点_V2.0.1--c4a2f53ef9",
+      "sourceArchiveSha256": "c4a2f53ef9cbc665dd056bf294d1ab785119b898fa4927c57dc4ccc78a3e3177"
+    },
+    {
+      "source": "教学/AI编程_第04至12章学生起点_V1.0.1.zip",
+      "package": "AI编程_第04至12章学生起点_V1.0.1--090be44dd9",
+      "sourceArchiveSha256": "090be44dd96202f590acf25ef8037ee443ace602c92c75d4fd5b02984ac83117"
+    },
+    {
+      "source": "教学/AI编程_学生空白起点_V2.0.0.zip",
+      "package": "AI编程_学生空白起点_V2.0.0--c226e18cb4",
+      "sourceArchiveSha256": "c226e18cb4bf7491cd1fe747de65ad098db0458c51a64af47f822a049264fa1d"
+    },
+    {
+      "source": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-source.zip",
+      "package": "codebuddy-deepseek-source--ee2bc30ada",
+      "sourceArchiveSha256": "ee2bc30ada5bb9c0087704a07f8f9a1cc6b662fc21bd3bb57eb85ceb70fb486d"
+    },
+    {
+      "source": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-evidence.zip",
+      "package": "codebuddy-deepseek-evidence--ca02951841",
+      "sourceArchiveSha256": "ca029518413c9e7a0d7a6abf49a7d5e0457c5a453cc8d62b22bc3bc7c4fa597c"
+    },
+    {
+      "source": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/share/codebuddy-deepseek-source.zip",
+      "package": "codebuddy-deepseek-source--ee2bc30ada",
+      "sourceArchiveSha256": "ee2bc30ada5bb9c0087704a07f8f9a1cc6b662fc21bd3bb57eb85ceb70fb486d"
+    },
+    {
+      "source": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/share/codebuddy-deepseek-evidence.zip",
+      "package": "codebuddy-deepseek-evidence--ca02951841",
+      "sourceArchiveSha256": "ca029518413c9e7a0d7a6abf49a7d5e0457c5a453cc8d62b22bc3bc7c4fa597c"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/07-completed-public-source.zip",
+      "package": "07-completed-public-source--7b3f57df76",
+      "sourceArchiveSha256": "7b3f57df763afb84bdda2ee2472f3fa3e8e736daeff75108c471c3720e778063"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter01-public-source.zip",
+      "package": "chapter01-public-source--460334937c",
+      "sourceArchiveSha256": "460334937c4c48c592c74aada207a292f3c1636ef3a8e963fa00b02ec1c6f59e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/11-04-attempt-1-source-public.zip",
+      "package": "11-04-attempt-1-source-public--e9e526b1fc",
+      "sourceArchiveSha256": "e9e526b1fc4f309e46795da549248ccb52800228d898f917caa676cd06b8f327"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter02-public-source.zip",
+      "package": "chapter02-public-source--900d961d14",
+      "sourceArchiveSha256": "900d961d146f7aeb30e643504bf1db75cd48d468e91cbc959eee374b1e7e0c1a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/06-completed-public-source.zip",
+      "package": "06-completed-public-source--dd9a113b16",
+      "sourceArchiveSha256": "dd9a113b1661d189616ef13a25c1d4d0464ff3fd0efc3320cb5155d1f73c8fa4"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter03-public-source.zip",
+      "package": "chapter03-public-source--8ff7518193",
+      "sourceArchiveSha256": "8ff7518193109fe2d0e87f9323d9b3146a78f86d909d2310c368465c27bedb7e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/10-source-public.zip",
+      "package": "10-source-public--19ece22cb6",
+      "sourceArchiveSha256": "19ece22cb6684b570abdc77ea48c1660425ad055bd9c10965570d4b7f5a829e3"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/09-source-public.zip",
+      "package": "09-source-public--0daa2ff5be",
+      "sourceArchiveSha256": "0daa2ff5be937a833b8a8bd5a4efc0d8a1f0741916db1bc65d17069d42d098d7"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/11-source-public.zip",
+      "package": "11-source-public--dd4cb7f3ea",
+      "sourceArchiveSha256": "dd4cb7f3ea6558f9eea56187322eed14548fb3e9ef49788bf648066e60efe009"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/08-source-public.zip",
+      "package": "08-source-public--e007502a14",
+      "sourceArchiveSha256": "e007502a1440e38837984e6072d7494288d97b9a7171c9c49381646659362deb"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/04-public-source.zip",
+      "package": "04-public-source--d9cf64556f",
+      "sourceArchiveSha256": "d9cf64556f076c3f9df19b7efd68d253a3fa569955c8c8b66de4e0f0faaf8c4a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/05-public-source.zip",
+      "package": "05-public-source--dd1ecb15d6",
+      "sourceArchiveSha256": "dd1ecb15d67a7991d020640878474a8966f0af611303e647b9b727f7a59e4b0d"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip",
+      "package": "实做报告与证据_64步_20261021--02e4cbf8ab",
+      "sourceArchiveSha256": "02e4cbf8abfb2cb3a4aa573be324d6f93d7f37663a08b8e793b6be396025868c"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/04-public-source.zip",
+      "package": "04-public-source--d9cf64556f",
+      "sourceArchiveSha256": "d9cf64556f076c3f9df19b7efd68d253a3fa569955c8c8b66de4e0f0faaf8c4a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/05-public-source.zip",
+      "package": "05-public-source--dd1ecb15d6",
+      "sourceArchiveSha256": "dd1ecb15d67a7991d020640878474a8966f0af611303e647b9b727f7a59e4b0d"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/06-completed-public-source.zip",
+      "package": "06-completed-public-source--dd9a113b16",
+      "sourceArchiveSha256": "dd9a113b1661d189616ef13a25c1d4d0464ff3fd0efc3320cb5155d1f73c8fa4"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/07-completed-public-source.zip",
+      "package": "07-completed-public-source--7b3f57df76",
+      "sourceArchiveSha256": "7b3f57df763afb84bdda2ee2472f3fa3e8e736daeff75108c471c3720e778063"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/08-source-public.zip",
+      "package": "08-source-public--e007502a14",
+      "sourceArchiveSha256": "e007502a1440e38837984e6072d7494288d97b9a7171c9c49381646659362deb"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/09-source-public.zip",
+      "package": "09-source-public--0daa2ff5be",
+      "sourceArchiveSha256": "0daa2ff5be937a833b8a8bd5a4efc0d8a1f0741916db1bc65d17069d42d098d7"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/10-source-public.zip",
+      "package": "10-source-public--19ece22cb6",
+      "sourceArchiveSha256": "19ece22cb6684b570abdc77ea48c1660425ad055bd9c10965570d4b7f5a829e3"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/11-04-attempt-1-source-public.zip",
+      "package": "11-04-attempt-1-source-public--e9e526b1fc",
+      "sourceArchiveSha256": "e9e526b1fc4f309e46795da549248ccb52800228d898f917caa676cd06b8f327"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/11-source-public.zip",
+      "package": "11-source-public--dd4cb7f3ea",
+      "sourceArchiveSha256": "dd4cb7f3ea6558f9eea56187322eed14548fb3e9ef49788bf648066e60efe009"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/chapter01-public-source.zip",
+      "package": "chapter01-public-source--460334937c",
+      "sourceArchiveSha256": "460334937c4c48c592c74aada207a292f3c1636ef3a8e963fa00b02ec1c6f59e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/chapter02-public-source.zip",
+      "package": "chapter02-public-source--900d961d14",
+      "sourceArchiveSha256": "900d961d146f7aeb30e643504bf1db75cd48d468e91cbc959eee374b1e7e0c1a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip!snapshots/chapter03-public-source.zip",
+      "package": "chapter03-public-source--8ff7518193",
+      "sourceArchiveSha256": "8ff7518193109fe2d0e87f9323d9b3146a78f86d909d2310c368465c27bedb7e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip",
+      "package": "实做报告与证据_64步_20261021-2--bde1a4391b",
+      "sourceArchiveSha256": "bde1a4391b66c6f30a61204d72173cc5c5070f6f6bddf9043f18abcb2557caf8"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/04-public-source.zip",
+      "package": "04-public-source--d9cf64556f",
+      "sourceArchiveSha256": "d9cf64556f076c3f9df19b7efd68d253a3fa569955c8c8b66de4e0f0faaf8c4a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/05-public-source.zip",
+      "package": "05-public-source--dd1ecb15d6",
+      "sourceArchiveSha256": "dd1ecb15d67a7991d020640878474a8966f0af611303e647b9b727f7a59e4b0d"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/06-completed-public-source.zip",
+      "package": "06-completed-public-source--dd9a113b16",
+      "sourceArchiveSha256": "dd9a113b1661d189616ef13a25c1d4d0464ff3fd0efc3320cb5155d1f73c8fa4"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/07-completed-public-source.zip",
+      "package": "07-completed-public-source--7b3f57df76",
+      "sourceArchiveSha256": "7b3f57df763afb84bdda2ee2472f3fa3e8e736daeff75108c471c3720e778063"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/08-source-public.zip",
+      "package": "08-source-public--e007502a14",
+      "sourceArchiveSha256": "e007502a1440e38837984e6072d7494288d97b9a7171c9c49381646659362deb"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/09-source-public.zip",
+      "package": "09-source-public--0daa2ff5be",
+      "sourceArchiveSha256": "0daa2ff5be937a833b8a8bd5a4efc0d8a1f0741916db1bc65d17069d42d098d7"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/10-source-public.zip",
+      "package": "10-source-public--19ece22cb6",
+      "sourceArchiveSha256": "19ece22cb6684b570abdc77ea48c1660425ad055bd9c10965570d4b7f5a829e3"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/11-04-attempt-1-source-public.zip",
+      "package": "11-04-attempt-1-source-public--e9e526b1fc",
+      "sourceArchiveSha256": "e9e526b1fc4f309e46795da549248ccb52800228d898f917caa676cd06b8f327"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/11-source-public.zip",
+      "package": "11-source-public--dd4cb7f3ea",
+      "sourceArchiveSha256": "dd4cb7f3ea6558f9eea56187322eed14548fb3e9ef49788bf648066e60efe009"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/chapter01-public-source.zip",
+      "package": "chapter01-public-source--460334937c",
+      "sourceArchiveSha256": "460334937c4c48c592c74aada207a292f3c1636ef3a8e963fa00b02ec1c6f59e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/chapter02-public-source.zip",
+      "package": "chapter02-public-source--900d961d14",
+      "sourceArchiveSha256": "900d961d146f7aeb30e643504bf1db75cd48d468e91cbc959eee374b1e7e0c1a"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip!snapshots/chapter03-public-source.zip",
+      "package": "chapter03-public-source--8ff7518193",
+      "sourceArchiveSha256": "8ff7518193109fe2d0e87f9323d9b3146a78f86d909d2310c368465c27bedb7e"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/学生实做源码_64步_20261021.zip",
+      "package": "学生实做源码_64步_20261021--a188d68c61",
+      "sourceArchiveSha256": "a188d68c61c8f89fb39cc344a979037c986489accc5370e748aa63fbd8182984"
+    },
+    {
+      "source": "教学/AI编程_智慧校园_48学时/deliverables/学生实做源码_64步_20261021-2.zip",
+      "package": "学生实做源码_64步_20261021-2--965dfb07ab",
+      "sourceArchiveSha256": "965dfb07abb537d474f211e6843be748071d7ab7181078c31cd12d97291e2e13"
+    }
+  ],
+  "packages": [
+    {
+      "package": "AI编程_智慧校园_48学时_V1.1.1_完整教学包--b90d375ad9",
+      "files": 1943,
+      "excluded": 483,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 723,
+        "omitted": 245,
+        "externalized": 723
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.2.0_完整教学包--1b1b9d5c77",
+      "files": 2621,
+      "excluded": 514,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 723,
+        "omitted": 245,
+        "externalized": 723
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_V2.0.0_手把手教学包--2543cdc2e9",
+      "files": 87,
+      "excluded": 4,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 0,
+        "omitted": 1,
+        "externalized": 0
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V0.4_图文与起步资源--5fed671bc5",
+      "files": 467,
+      "excluded": 67,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 363,
+        "omitted": 125,
+        "externalized": 363
+      }
+    },
+    {
+      "package": "AI编程_CodeBuddy学生起点_V1.2.1--9b4d00c510",
+      "files": 222,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.1.0_完整教学包--625042673d",
+      "files": 1929,
+      "excluded": 445,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 723,
+        "omitted": 245,
+        "externalized": 723
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V0.3_第二轮图文稿--a99c196b9f",
+      "files": 317,
+      "excluded": 72,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 243,
+        "omitted": 85,
+        "externalized": 243
+      }
+    },
+    {
+      "package": "AI编程_第04章学生起点_V0.4--243d58992e",
+      "files": 64,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.2.1_完整教学包--ecfad9e2c8",
+      "files": 2645,
+      "excluded": 604,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 723,
+        "omitted": 245,
+        "externalized": 723
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_V2.0.2_手把手教学包--9c0d5794e8",
+      "files": 96,
+      "excluded": 13,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 0,
+        "omitted": 1,
+        "externalized": 0
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.0.2_完整教学包--1083e348cc",
+      "files": 1749,
+      "excluded": 378,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 723,
+        "omitted": 245,
+        "externalized": 723
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V0.2_图文初稿--f984958354",
+      "files": 303,
+      "excluded": 7,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 123,
+        "omitted": 45,
+        "externalized": 123
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_V2.0.1_手把手教学包--33fc6fc94f",
+      "files": 93,
+      "excluded": 4,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 0,
+        "omitted": 1,
+        "externalized": 0
+      }
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.0.1_完整教学包--01293e3a0b",
+      "files": 1743,
+      "excluded": 335,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 603,
+        "omitted": 205,
+        "externalized": 603
+      }
+    },
+    {
+      "package": "AI编程_第04至12章学生起点_V1.0--04199e880e",
+      "files": 1066,
+      "excluded": 9,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V0.1--8ae65a473f",
+      "files": 29,
+      "excluded": 0,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_学生空白起点_V2.0.2--2ef2ae621f",
+      "files": 8,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_智慧校园_48学时_V1.0_完整教学包--eff074912b",
+      "files": 1643,
+      "excluded": 274,
+      "nested": 0,
+      "embeddedImageTransforms": {
+        "allowed": 483,
+        "omitted": 165,
+        "externalized": 483
+      }
+    },
+    {
+      "package": "AI编程_学生空白起点_V2.0.1--c4a2f53ef9",
+      "files": 8,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_第04至12章学生起点_V1.0.1--090be44dd9",
+      "files": 1120,
+      "excluded": 9,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "AI编程_学生空白起点_V2.0.0--c226e18cb4",
+      "files": 8,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "codebuddy-deepseek-source--ee2bc30ada",
+      "files": 166,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "codebuddy-deepseek-evidence--ca02951841",
+      "files": 5733,
+      "excluded": 71,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "07-completed-public-source--7b3f57df76",
+      "files": 30,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "chapter01-public-source--460334937c",
+      "files": 12,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "11-04-attempt-1-source-public--e9e526b1fc",
+      "files": 140,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "chapter02-public-source--900d961d14",
+      "files": 15,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "06-completed-public-source--dd9a113b16",
+      "files": 19,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "chapter03-public-source--8ff7518193",
+      "files": 16,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "10-source-public--19ece22cb6",
+      "files": 113,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "09-source-public--0daa2ff5be",
+      "files": 73,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "11-source-public--dd4cb7f3ea",
+      "files": 144,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "08-source-public--e007502a14",
+      "files": 42,
+      "excluded": 2,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "04-public-source--d9cf64556f",
+      "files": 17,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "05-public-source--dd1ecb15d6",
+      "files": 18,
+      "excluded": 1,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "实做报告与证据_64步_20261021--02e4cbf8ab",
+      "files": 1399,
+      "excluded": 551,
+      "nested": 12,
+      "embeddedImageTransforms": {
+        "allowed": 0,
+        "omitted": 35,
+        "externalized": 0
+      }
+    },
+    {
+      "package": "实做报告与证据_64步_20261021-2--bde1a4391b",
+      "files": 1399,
+      "excluded": 551,
+      "nested": 12,
+      "embeddedImageTransforms": {
+        "allowed": 0,
+        "omitted": 35,
+        "externalized": 0
+      }
+    },
+    {
+      "package": "学生实做源码_64步_20261021--a188d68c61",
+      "files": 139,
+      "excluded": 4,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    },
+    {
+      "package": "学生实做源码_64步_20261021-2--965dfb07ab",
+      "files": 139,
+      "excluded": 4,
+      "nested": 0,
+      "embeddedImageTransforms": {}
+    }
+  ],
+  "objectCount": 2819,
+  "objectBytes": 75192250,
+  "exclusionCounts": {
+    "unreviewed-native-browser-or-other-image": 2734,
+    "qa-capture-retained-locally": 632,
+    "opaque-office-document-handled-by-document-review": 21,
+    "generated-dependency-or-installation-binary": 179,
+    "raw-native-accessibility-capture-retained-locally": 848,
+    "original-integrity-manifest-stale-after-sanitization": 12
+  },
+  "sourceArchiveCount": 41,
+  "restorationCommand": "python3 history/tools/manage.py restore --package PACKAGE_ID --output NEW_EMPTY_PATH",
+  "limits": [
+    "Sanitized source/documentation derivative, not byte-identical original archives",
+    "Raw private environment files, caches, native captures, unreviewed binary documents/images remain local",
+    "Original runtime and classroom acceptance results are historical evidence only"
+  ]
+}

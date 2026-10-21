@@ -1,0 +1,10 @@
+{
+  "id": "图 06-03",
+  "title": "页面数据状态与反馈",
+  "alt": "首次读取进入加载，成功后区分原始空目录、筛选无匹配和正常列表；首次失败展示错误，已有结果的再次读取失败保留带说明的旧快照。",
+  "caption": "图 06-03　页面数据状态与反馈。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false,
+  "renderSource": "figure-sources/layouts/ch06-03-page-states.svg",
+  "layoutNote": "固定 SVG 版式；原 Mermaid 保留逻辑关系，实际图面以本 SVG 为准。"
+}

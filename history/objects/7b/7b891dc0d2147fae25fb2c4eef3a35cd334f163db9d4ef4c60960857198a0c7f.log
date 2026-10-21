@@ -1,0 +1,157 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.campus.course:campus-ai-course >-----------------
+[INFO] Building Campus AI Course First Chain 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ campus-ai-course ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ campus-ai-course ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ campus-ai-course ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ campus-ai-course ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.2:test (default-test) @ campus-ai-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.campus.course.SourceSelectionTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.462 s -- in edu.campus.course.SourceSelectionTest
+[INFO] Running edu.campus.course.HistoryFixtureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 s -- in edu.campus.course.HistoryFixtureTest
+[INFO] Running edu.campus.course.QualityPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in edu.campus.course.QualityPolicyTest
+[INFO] Running edu.campus.course.CatalogReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in edu.campus.course.CatalogReaderTest
+[INFO] Running edu.campus.course.FirstChainTest
+03:00:29.273 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.campus.course.FirstChainTest]: FirstChainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:00:29.335 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.FirstChainTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T03:00:29.486+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Starting FirstChainTest using Java 17.0.12 with PID 18674 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend)
+2026-10-20T03:00:29.488+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : The following 1 profile is active: "first-chain"
+2026-10-20T03:00:30.087+08:00  INFO 18674 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T03:00:30.315+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T03:00:30.315+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T03:00:30.316+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-20T03:00:30.328+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Started FirstChainTest in 0.956 seconds (process running for 1.926)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.030 s -- in edu.campus.course.FirstChainTest
+[INFO] Running edu.campus.course.ReadFixtureValidationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in edu.campus.course.ReadFixtureValidationTest
+[INFO] Running edu.campus.course.CloseRulesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in edu.campus.course.CloseRulesTest
+[INFO] Running edu.campus.course.LocalAccountDirectoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 s -- in edu.campus.course.LocalAccountDirectoryTest
+[INFO] Running edu.campus.course.ReadOnlyModelsTest
+2026-10-20T03:00:31.633+08:00  INFO 18674 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.ReadOnlyModelsTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T03:00:31.643+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Starting ReadOnlyModelsTest using Java 17.0.12 with PID 18674 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend)
+2026-10-20T03:00:31.643+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : The following 1 profile is active: "teacher-db"
+2026-10-20T03:00:31.790+08:00  INFO 18674 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T03:00:31.830+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T03:00:31.831+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T03:00:31.831+08:00  INFO 18674 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-20T03:00:31.835+08:00  INFO 18674 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Started ReadOnlyModelsTest in 0.2 seconds (process running for 3.433)
+2026-10-20T03:00:31.894+08:00  WARN 18674 --- [campus-course-backend] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.309 s -- in edu.campus.course.ReadOnlyModelsTest
+[INFO] Running edu.campus.course.TeacherDbTest
+[WARNING] Tests run: 11, Failures: 0, Errors: 0, Skipped: 11, Time elapsed: 0.001 s -- in edu.campus.course.TeacherDbTest
+[INFO] Running edu.campus.course.SnapshotConsistencyTest
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0 s -- in edu.campus.course.SnapshotConsistencyTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 50, Failures: 0, Errors: 0, Skipped: 16
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ campus-ai-course ---
+[INFO] Building jar: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend/target/campus-ai-course-0.1.0.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.4.2:repackage (repackage) @ campus-ai-course ---
+[INFO] Replacing main artifact /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend/target/campus-ai-course-0.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend/target/campus-ai-course-0.1.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.278 s
+[INFO] Finished at: 2026-10-20T03:00:32+08:00
+[INFO] ------------------------------------------------------------------------
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 667 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                             0.47 kB │ gzip:   0.34 kB
+dist/assets/IntegrationView-_hzycpEF.css                                    0.17 kB │ gzip:   0.15 kB
+dist/assets/OwnersView-CrP3stkq.css                                         0.27 kB │ gzip:   0.18 kB
+dist/assets/AccessView-BdSywoVq.css                                         0.45 kB │ gzip:   0.25 kB
+dist/assets/OverviewView-B5MyAl9H.css                                       0.71 kB │ gzip:   0.37 kB
+dist/assets/LocationsView-B7ln5TvL.css                                      0.90 kB │ gzip:   0.33 kB
+dist/assets/AuditView-BlE_mhJk.css                                          1.05 kB │ gzip:   0.41 kB
+dist/assets/RawAlarmsView-Y6ayxnDN.css                                      1.12 kB │ gzip:   0.47 kB
+dist/assets/DeviceCatalog-DDbb-HMy.css                                      1.57 kB │ gzip:   0.56 kB
+dist/assets/HistoryView-Bm5ewrXb.css                                        1.66 kB │ gzip:   0.59 kB
+dist/assets/CasesView-BOIMTMRe.css                                          1.82 kB │ gzip:   0.62 kB
+dist/assets/EnergyView-BIrIfu3O.css                                         2.27 kB │ gzip:   0.67 kB
+dist/assets/index-CQLMl6UL.css                                             21.87 kB │ gzip:   5.26 kB
+dist/assets/_plugin-vue_export-helper-DlAUqK2U.js                           0.09 kB │ gzip:   0.10 kB
+dist/assets/HistoryChart-E-TFhxx4.js                                        0.13 kB │ gzip:   0.14 kB
+dist/assets/SourceBanner.vue_vue_type_script_setup_true_lang-DF6aN-70.js    0.78 kB │ gzip:   0.63 kB
+dist/assets/read-models-DLSz8FwL.js                                         1.01 kB │ gzip:   0.49 kB
+dist/assets/useRequestScope-DJ6mWb3s.js                                     1.51 kB │ gzip:   0.92 kB
+dist/assets/useReadPage-DeaXfIdG.js                                         2.04 kB │ gzip:   1.07 kB
+dist/assets/full-BWqoZhiu.js                                                4.05 kB │ gzip:   1.89 kB
+dist/assets/FirstDeviceRead-BQuFccYn.js                                     5.29 kB │ gzip:   2.57 kB
+dist/assets/AccessView-DbRfT4X8.js                                          6.06 kB │ gzip:   2.98 kB
+dist/assets/IntegrationView-ByCAlJWO.js                                     6.49 kB │ gzip:   3.01 kB
+dist/assets/RawAlarmsView-DZ_0ljoe.js                                       8.77 kB │ gzip:   3.84 kB
+dist/assets/AuditView-XSM_OsR9.js                                          10.10 kB │ gzip:   4.38 kB
+dist/assets/OverviewView-CYZkse2f.js                                       11.16 kB │ gzip:   4.64 kB
+dist/assets/HistoryView-B1kkeiVN.js                                        11.62 kB │ gzip:   4.92 kB
+dist/assets/DeviceCatalog-B3VoUU2Z.js                                      12.34 kB │ gzip:   4.96 kB
+dist/assets/OwnersView-Bj2dIhBw.js                                         14.79 kB │ gzip:   6.10 kB
+dist/assets/EnergyView-B9a0_Byr.js                                         15.21 kB │ gzip:   6.62 kB
+dist/assets/LocationsView-CtEK2i2M.js                                      15.33 kB │ gzip:   5.42 kB
+dist/assets/CasesView-DJ11PELx.js                                          30.90 kB │ gzip:  10.33 kB
+dist/assets/index-B4EktylO.js                                              95.85 kB │ gzip:  38.51 kB
+dist/assets/HistoryChart.vue_vue_type_script_setup_true_lang-Orv9Van3.js  516.31 kB │ gzip: 176.19 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.73s

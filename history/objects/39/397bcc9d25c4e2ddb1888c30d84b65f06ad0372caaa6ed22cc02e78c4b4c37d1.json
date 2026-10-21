@@ -1,0 +1,104 @@
+{
+  "recordedAt": "2026-10-19T18:43:02.246655+00:00",
+  "schema": "campus_course_test",
+  "port": 23491,
+  "javaVersion": "17.0.12",
+  "mysqlVersion": "8.4.10",
+  "suites": [
+    {
+      "name": "edu.campus.course.CatalogReaderTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.016"
+    },
+    {
+      "name": "edu.campus.course.CloseRulesTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.002"
+    },
+    {
+      "name": "edu.campus.course.FirstChainTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.201"
+    },
+    {
+      "name": "edu.campus.course.HistoryFixtureTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.137"
+    },
+    {
+      "name": "edu.campus.course.LocalAccountDirectoryTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.336"
+    },
+    {
+      "name": "edu.campus.course.QualityPolicyTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.019"
+    },
+    {
+      "name": "edu.campus.course.ReadFixtureValidationTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.027"
+    },
+    {
+      "name": "edu.campus.course.ReadOnlyModelsTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.378"
+    },
+    {
+      "name": "edu.campus.course.SnapshotConsistencyTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.517"
+    },
+    {
+      "name": "edu.campus.course.SourceSelectionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.527"
+    },
+    {
+      "name": "edu.campus.course.TeacherDbTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.888"
+    }
+  ],
+  "totals": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "rawSurefirePropertiesNotExported": true
+}

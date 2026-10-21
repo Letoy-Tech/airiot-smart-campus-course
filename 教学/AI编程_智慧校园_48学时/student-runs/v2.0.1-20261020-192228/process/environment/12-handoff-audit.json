@@ -1,0 +1,58 @@
+[
+  {
+    "time": 1792529921156,
+    "actor": "admin",
+    "action": "space.update",
+    "targetId": "s1",
+    "note": "楼栋 交接教学楼，楼层 3层"
+  },
+  {
+    "time": 1792529934095,
+    "actor": "admin",
+    "action": "owner.save",
+    "targetId": "d01",
+    "note": "负责人 manager，版本 1"
+  },
+  {
+    "time": 1792529935479,
+    "actor": "admin",
+    "action": "case.create",
+    "targetId": "case-a4b66d456baa",
+    "note": "设备 d01"
+  },
+  {
+    "time": 1792529959598,
+    "actor": "manager",
+    "action": "case.start",
+    "targetId": "case-a4b66d456baa",
+    "note": "开始处理"
+  },
+  {
+    "time": 1792529968087,
+    "actor": "manager",
+    "action": "case.note",
+    "targetId": "case-a4b66d456baa",
+    "note": "填写处置记录"
+  },
+  {
+    "time": 1792529987878,
+    "actor": "admin",
+    "action": "case.recover",
+    "targetId": "case-a4b66d456baa",
+    "note": "本地演练来源已恢复"
+  },
+  {
+    "time": 1792530011502,
+    "actor": "manager",
+    "action": "case.verify",
+    "targetId": "case-a4b66d456baa",
+    "note": "核实本地演练来源恢复"
+  },
+  {
+    "time": 1792530011954,
+    "actor": "manager",
+    "action": "case.close",
+    "targetId": "case-a4b66d456baa",
+    "note": "关闭事件"
+  }
+]

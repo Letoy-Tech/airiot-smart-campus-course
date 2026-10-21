@@ -1,0 +1,10 @@
+flowchart TB
+    API[API 模块 按合同读取] --> Resource["资源状态<br/>原始设备与请求状态"]
+    User[用户输入] --> Filters[筛选条件 名称 类别 空间]
+    Resource --> Derived[computed 派生结果]
+    Filters --> Derived
+    Derived --> List[列表或卡片组件]
+    Derived --> Count[结果数量]
+    Resource --> Feedback[加载 空结果 错误反馈]
+    List -->|deviceId| Detail[详情路由]
+    List --> Status[通信三态标签]

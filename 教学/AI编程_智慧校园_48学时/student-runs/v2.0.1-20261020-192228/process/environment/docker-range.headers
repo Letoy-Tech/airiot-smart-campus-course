@@ -1,0 +1,15 @@
+HTTP/2 206 
+content-type: application/octet-stream; charset=utf-8
+content-length: 1
+server: AmazonS3
+date: Mon, 19 Oct 2026 15:28:29 GMT
+last-modified: Mon, 19 Oct 2026 15:22:32 GMT
+x-amz-version-id: DaCgs8YpPElWndTqp0vw_KC0w9aU_yAO
+etag: "2f678b8316f126124590527439994955"
+x-cache: Hit from cloudfront
+via: 1.1 1ffd5cdb315141702d5377ba909be92a.cloudfront.net (CloudFront)
+x-amz-cf-pop: LAX50-P1
+x-amz-cf-id: csVyWXUVyPx8z89-T3J0luO9E3aCcu_Egwk6bSQ3zdkvXnbZONQvMA==
+age: 71884
+content-range: bytes 0-0/599061934
+

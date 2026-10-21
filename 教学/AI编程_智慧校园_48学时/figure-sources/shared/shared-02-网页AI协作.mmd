@@ -1,0 +1,19 @@
+sequenceDiagram
+  autonumber
+  participant Student as 学生
+  participant AI as 网页 AI
+  participant Local as 本地教学工程
+  participant Evidence as 交接与证据包
+  Student->>AI: 提供小任务、必要片段与验收标准
+  AI-->>Student: 返回方案、代码草稿与解释
+  Note over Student,AI: 学生检查合同与边界，再决定采用哪些修改
+  Student->>Local: 人工编辑、执行命令与核验
+  Local-->>Student: 返回实际结果或错误信息
+  alt 结果符合验收预期
+    Student->>Evidence: 保存差异、实际证据和未决项
+    Student->>Evidence: 记录可接手的版本基线
+  else 结果未通过或证据不足
+    Student->>AI: 提供脱敏后的错误与上下文
+    AI-->>Student: 提出待人工核验的修正
+  end
+  Note over Student,Evidence: 网页 AI 建议不等于本地执行；未实测项目继续标记待验证

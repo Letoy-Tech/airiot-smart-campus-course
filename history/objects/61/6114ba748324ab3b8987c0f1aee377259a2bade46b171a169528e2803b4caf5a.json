@@ -1,0 +1,8 @@
+{
+  "deviceId": "teaching_env_01",
+  "observedAt": "2026-10-19T18:48:16.849Z",
+  "latestVersion": "v5",
+  "choice": "admin",
+  "reason": "第二窗口仍基于旧v4决定admin，409后应锁定且保留选择和理由。",
+  "saveEnabled": false
+}

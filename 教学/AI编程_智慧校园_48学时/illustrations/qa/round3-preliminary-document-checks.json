@@ -1,0 +1,64 @@
+{
+  "unchanged": 394,
+  "changed": [
+    "02-项目范围与教学架构.md",
+    "05-编写进度与教案转换.md",
+    "07-图文初稿阅读指南.md",
+    "README.md",
+    "appendices/教师资源制作清单.md",
+    "contracts/教学接口约定.md",
+    "course-index.json",
+    "figure-sources/ch04-02-first-request.figure.json",
+    "figure-sources/ch04-02-first-request.mmd",
+    "illustrations/ch04-02-first-request.png",
+    "illustrations/ch04-02-first-request.svg",
+    "manuscript/04-开发环境版本控制与首次贯通.md",
+    "manuscript/06-前端设备台账与自主UI.md",
+    "manuscript/09-演练事件与状态机.md",
+    "manuscript/10-设备责任与审计追踪.md",
+    "manuscript/11-测试调试与质量改进.md",
+    "manuscript/12-构建交付变更与答辩.md",
+    "reading/index.build.json",
+    "reading/index.html",
+    "tools/build-reader.mjs",
+    "tools/配图与阅读版说明.md",
+    "课程编写约定.md"
+  ],
+  "missing": [],
+  "localLinks": 696,
+  "originalProjectLinks": 31,
+  "linkIssues": [
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/01-软件工程入门与网页AI协作.md",
+      "target": "../appendices/Qwen与网页工具说明.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/02-需求分析与项目计划.md",
+      "target": "../contracts/教学接口约定.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/02-需求分析与项目计划.md",
+      "target": "../04-考核与验收.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/03-架构数据与接口设计.md",
+      "target": "../contracts/教学接口约定.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/05-后端空间与设备接口.md",
+      "target": "../contracts/教学接口约定.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/06-前端设备台账与自主UI.md",
+      "target": "../contracts/教学接口约定.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/07-实时监测历史与数据质量.md",
+      "target": "../contracts/教学接口约定.md"
+    },
+    {
+      "file": "tools/.cache/phase2-baseline-20261018T182805/manuscript/08-登录角色与权限验证.md",
+      "target": "../contracts/教学接口约定.md"
+    }
+  ]
+}

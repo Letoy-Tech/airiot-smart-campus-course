@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-21",
+  "sourceCategory": "Actual original and handoff environment-file fingerprints recorded in envFileHashes",
+  "distinctFingerprints": 2,
+  "files": [
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/12-03-env-isolation.json",
+      "category": "real-local-environment-file-fingerprint",
+      "redactedOccurrences": 2
+    }
+  ],
+  "originalRetainedLocally": true,
+  "sourceCodeHashesUnchangedByThisStep": true
+}

@@ -1,0 +1,61 @@
+{
+  "lessons": 12,
+  "steps": 64,
+  "all_step_structures_checked": true,
+  "starter_index_bytes": 0,
+  "starter_has_business_backend": false,
+  "fixtures_identical": true,
+  "reader_unique_ids": 98,
+  "relative_links_checked": true,
+  "lessons_detail": [
+    {
+      "lesson": "01-从空白页面做出概览.md",
+      "steps": 5
+    },
+    {
+      "lesson": "02-把设备放进台账.md",
+      "steps": 5
+    },
+    {
+      "lesson": "03-给设备安排位置和负责人.md",
+      "steps": 5
+    },
+    {
+      "lesson": "04-看懂读数再做能源页.md",
+      "steps": 5
+    },
+    {
+      "lesson": "05-把历史和原始报警接到页面.md",
+      "steps": 5
+    },
+    {
+      "lesson": "06-走完演练事件并串起整个前端.md",
+      "steps": 6
+    },
+    {
+      "lesson": "07-看着页面做第一个后端.md",
+      "steps": 5
+    },
+    {
+      "lesson": "08-把设备保存到MySQL.md",
+      "steps": 6
+    },
+    {
+      "lesson": "09-用Redis记住短时登录.md",
+      "steps": 6
+    },
+    {
+      "lesson": "10-逐页接回真实后端.md",
+      "steps": 5
+    },
+    {
+      "lesson": "11-让一件演练有始有终.md",
+      "steps": 6
+    },
+    {
+      "lesson": "12-把作品交到新目录.md",
+      "steps": 5
+    }
+  ],
+  "reader_visual_review": false
+}

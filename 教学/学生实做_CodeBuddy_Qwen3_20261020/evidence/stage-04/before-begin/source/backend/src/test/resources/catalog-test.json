@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "spaces": [{"id":"teaching_space_01","name":"测试空间（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null}],
+  "devices": [
+    {"id":"teaching_env_01","tableId":"teaching_environment","name":"环境（模拟）","category":"environment","spaceId":"teaching_space_01","spaceName":"测试空间（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"}]},
+    {"id":"teaching_energy_01","tableId":"teaching_energy","name":"电能（模拟）","category":"energy","spaceId":"teaching_space_01","spaceName":"测试空间（模拟）","online":null,"communicationTime":null,"simulated":true,"switchOn":null,"tags":[{"id":"power","name":"功率","unit":"kW"}]}
+  ],
+  "points": []
+}

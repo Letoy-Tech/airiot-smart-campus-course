@@ -1,0 +1,15 @@
+{
+  "scope": "Dedicated local student exercise, not school or platform DB",
+  "host": "127.0.0.1",
+  "port": 23491,
+  "schema": "campus_course_lab",
+  "runtimeUser": "course_student",
+  "mysqlVersion": "8.4.10",
+  "successfulMigrations": 2,
+  "runtimeGrants": [
+    "GRANT USAGE ON *.* TO `course_student`@`127.0.0.1`",
+    "GRANT SELECT, INSERT, UPDATE, DELETE ON `campus_course_lab`.* TO `course_student`@`127.0.0.1`"
+  ],
+  "otherSchemaDenied": true,
+  "passwordPrinted": false
+}

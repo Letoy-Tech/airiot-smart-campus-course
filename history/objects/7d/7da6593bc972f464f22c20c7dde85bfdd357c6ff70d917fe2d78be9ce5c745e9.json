@@ -1,0 +1,32 @@
+{
+  "from": "actual owned browser JSON viewer DOM",
+  "deviceCount": 16,
+  "ids": [
+    "d01",
+    "d02",
+    "d03",
+    "d04",
+    "d05",
+    "d06",
+    "d07",
+    "d08",
+    "d09",
+    "d10",
+    "d11",
+    "d12",
+    "d13",
+    "d14",
+    "d15",
+    "d16"
+  ],
+  "categories": {
+    "environment": 4,
+    "energy": 4,
+    "facility": 4,
+    "lighting": 4
+  },
+  "d01Online": true,
+  "d03Online": null,
+  "d04Online": false,
+  "allSimulated": true
+}

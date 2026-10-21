@@ -1,0 +1,105 @@
+{
+  "status": "PASS_NO_DB",
+  "jdk": "Oracle17.0.6",
+  "testSummary": "test-summary.json",
+  "mavenLog": "maven-test.txt",
+  "secretPatternScan": {
+    "authorizationHeader": 0,
+    "cookieHeader": 0,
+    "jdbcUrl": 0,
+    "passwordAssignment": 0,
+    "xmlProperties": 0
+  },
+  "sourceSha256": [
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841"
+    },
+    {
+      "path": "backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d"
+    },
+    {
+      "path": "backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502"
+    },
+    {
+      "path": "backend/docs/debug-read-pagination.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127"
+    },
+    {
+      "path": "fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26"
+    },
+    {
+      "path": "fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb"
+    },
+    {
+      "path": "fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6"
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780"
+    },
+    {
+      "path": "fixtures/schema.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3"
+    },
+    {
+      "path": "backend/README.md",
+      "sha256": "5d1e5abe824e33cf14d27e91ac0530e914c2a4880bacb71e9eda2a4636e6ab1a"
+    }
+  ],
+  "preservedLegacyHistorySha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+  "notVerified": [
+    "MySQL integration for this increment",
+    "live HTTP/browser rendering",
+    "Windows or classroom trial",
+    "real AIRIOT",
+    "generic administration modules"
+  ],
+  "noRemoteWrites": true,
+  "servicesStarted": false
+}

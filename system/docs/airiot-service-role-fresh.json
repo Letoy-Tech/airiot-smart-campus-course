@@ -1,0 +1,89 @@
+{
+  "session_id": "qzfr",
+  "run": {
+    "id": "db56f6cfcbafe",
+    "session_id": "qzfr",
+    "tab_id": 1075939033,
+    "name": "campus-be-role-create",
+    "url": "https://demo.example.invalid/admin/_p_000000000000000000000001",
+    "started_at": 1791105931089.0,
+    "state": "capturing",
+    "requests": 71,
+    "operations": 3,
+    "errors": 0,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 76,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 583,
+    "active_rules": 0,
+    "saved_at": 1791105958463.0,
+    "storage": {
+      "bytes": 1174642,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 71
+    },
+    "environment": {
+      "extension_version": "0.3.1",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/192.0.2.215 Safari/537.36"
+    }
+  },
+  "request": {
+    "id": "db56f6cfcbafe:n69",
+    "run_id": "db56f6cfcbafe",
+    "sequence": 568,
+    "started_at": 1791105956511.0,
+    "finished_at": 1791105956549.0,
+    "method": "GET",
+    "url": "https://demo.example.invalid/rest/core/role/915ee913bc8fdcd982d6e0f7",
+    "integrity": {
+      "url": "complete",
+      "metadata": "complete",
+      "response_headers": "complete"
+    },
+    "state": "complete",
+    "resource_type": "Fetch",
+    "frame_id": "49A08E99A64B614B26F8142D85A2E399",
+    "loader_id": "7AE08DE4711842087EC7056316A411BC",
+    "status": 200,
+    "mime_type": "application/json",
+    "duration_ms": 38.85,
+    "transfer_bytes": 1078.0,
+    "decoded_bytes": 902.0,
+    "from_service_worker": false,
+    "initiator": "pe https://demo.example.invalid/node_modules/@airiot/core/dist/index.js?version=4.9.18:2",
+    "request_body": {
+      "state": "empty",
+      "replay_safe": true
+    },
+    "response_body": {
+      "state": "available",
+      "text": "{\"id\":\"915ee913bc8fdcd982d6e0f7\",\"name\":\"智慧校园BE专用服务\",\"description\":\"MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。\",\"permission\":[\"homeDashboardConfig.view\",\"homeDashboardConfig\",\"data.view\",\"data\",\"table.view\",\"table\",\"ext.view\",\"ext.edit\",\"ext\",\"ext_campus_lighting.view\",\"ext_campus_lighting.edit\",\"ext_campus_lighting\",\"ext_campus_space.view\",\"ext_campus_space\",\"ext_campus_facility.view\",\"ext_campus_facility.edit\",\"ext_campus_facility\",\"ext_campus_energy.view\",\"ext_campus_energy\",\"ext_campus_environment.view\",\"ext_campus_environment\",\"ext_detailFilter\",\"warning.view\",\"warning\"],\"createTime\":\"2026-10-04T17:25:31+08:00\",\"disabled\":false,\"isBlackList\":false,\"modifyTime\":\"2026-10-04T17:25:31+08:00\",\"examineType\":\"\",\"examineStatus\":\"\",\"examineObj\":null,\"examineFinal\":\"\"}",
+      "chars": 786,
+      "offset": 0,
+      "redacted": false,
+      "replay_safe": true
+    },
+    "truncated": false
+  },
+  "output": {
+    "budget": 65536,
+    "omitted": [],
+    "truncated": false
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

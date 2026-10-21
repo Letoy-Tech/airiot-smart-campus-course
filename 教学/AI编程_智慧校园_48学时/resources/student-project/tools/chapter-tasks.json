@@ -1,0 +1,75 @@
+{
+  "chapters": {
+    "04": [
+      {
+        "file": "frontend/src/api/campus.ts",
+        "marker": "A",
+        "referenceBodySha256": "9f05f6cbd5c93c830141e44f0b6af7296d70e031d934cd5cd474bfa11c4b3286",
+        "stub": "  throw new ApiError('TODO-A：先核对业务code，再返回items与observedAt。')"
+      },
+      {
+        "file": "frontend/src/views/FirstDeviceRead.vue",
+        "marker": "B",
+        "referenceBodySha256": "b3c5a233f1fd2d5b08eb715fd58687aebb45c5f9b2537ce5f9bbfdb154d031b5",
+        "stub": "  void value\n  return '待完成 TODO-B'"
+      }
+    ],
+    "05": [
+      {
+        "file": "backend/src/main/java/edu/campus/course/LocationService.java",
+        "marker": "C05",
+        "referenceBodySha256": "d1db45db293dee7c711607f90a923ab5c26b6e99f8646eed440cd1b237a3acea",
+        "stub": "        throw new ApiFailure(501, \"TODO_C05\");"
+      }
+    ],
+    "06": [
+      {
+        "file": "frontend/src/domain/course.ts",
+        "marker": "C06",
+        "referenceBodySha256": "077a9f84742a6c2607985c35016bab6fbd8f110e5691a8e652cbab37c6bdab65",
+        "stub": "  void devices; void filter\n  return []"
+      }
+    ],
+    "07": [
+      {
+        "file": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+        "marker": "C07",
+        "referenceBodySha256": "0b5f04c0b9d05d6a9015efe77e696285958aa0c7263bc05b9a0ee41c08a0b662",
+        "stub": "        return \"missing\"; // TODO-C07：仅为可编译起点，须按合同实现所有质量分支。"
+      }
+    ],
+    "08": [
+      {
+        "file": "frontend/src/domain/course.ts",
+        "marker": "C08",
+        "referenceBodySha256": "f27372a979fd658593102142ef187a4b275e0bb227ecd0d272b48568dc3fde54",
+        "stub": "  void value\n  return false"
+      }
+    ],
+    "09": [
+      {
+        "file": "backend/src/main/java/edu/campus/course/OperationsService.java",
+        "marker": "C09",
+        "referenceBodySha256": "c6ff1e03b76616a96aae6dd509f09c149b803eaa57608cc452721c6ea747d8ba",
+        "stub": "        throw new ApiFailure(501, \"TODO_C09\");"
+      }
+    ],
+    "10": [
+      {
+        "file": "backend/src/main/java/edu/campus/course/OperationsService.java",
+        "marker": "C10",
+        "referenceBodySha256": "758d28bbc0a03bcb53b4765f2b3e7e0690c37bfbff5ba025e155e1bec2d07d99",
+        "stub": "        throw new ApiFailure(501, \"TODO_C10\");"
+      }
+    ],
+    "11": [],
+    "12": [
+      {
+        "file": "frontend/src/domain/course.ts",
+        "marker": "C12",
+        "referenceBodySha256": "36cb35caf4414497015f99e488b2ac8e687e4165837870f8a21235712371d8f0",
+        "stub": "  void state\n  return { state: '', skip: 0 }"
+      }
+    ]
+  }
+}

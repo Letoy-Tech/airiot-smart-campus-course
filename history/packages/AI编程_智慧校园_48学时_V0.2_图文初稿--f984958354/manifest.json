@@ -1,0 +1,2168 @@
+{
+  "formatVersion": 1,
+  "package": "AI编程_智慧校园_48学时_V0.2_图文初稿--f984958354",
+  "sourceArchive": "教学/AI编程_智慧校园_48学时_V0.2_图文初稿.zip",
+  "sourceArchiveSha256": "f9849583549e31ceaaaa244c0c9518271ccc6add64499ab8b253efb87e07a90e",
+  "sourceHashPurpose": "local historical input identity only; not the hash of any published derivative",
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "entries": [
+    {
+      "path": "AI编程_智慧校园_48学时/01-课程大纲.md",
+      "object": "objects/e0/e09b4921b71c39ca8023da39d72a256b1489a732146dc74b2a9e3fab9189a495.md",
+      "sha256": "e09b4921b71c39ca8023da39d72a256b1489a732146dc74b2a9e3fab9189a495",
+      "bytes": 7326,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/02-项目范围与教学架构.md",
+      "object": "objects/ca/ca3b6eb43dc037fb50e1c134a99ade49955ea18e2ee4e877b98b4efcae0722f6.md",
+      "sha256": "ca3b6eb43dc037fb50e1c134a99ade49955ea18e2ee4e877b98b4efcae0722f6",
+      "bytes": 5604,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/03-AI协作与接力规范.md",
+      "object": "objects/21/21225879978c7faa9a74845eb7322a7af9835feb76d44a77c873ad29e141e814.md",
+      "sha256": "21225879978c7faa9a74845eb7322a7af9835feb76d44a77c873ad29e141e814",
+      "bytes": 5018,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/04-考核与验收.md",
+      "object": "objects/5d/5d9f0ced5d02c01563c40a3010877f34b64fba25fa8f6b7cfe558a4b284c0288.md",
+      "sha256": "5d9f0ced5d02c01563c40a3010877f34b64fba25fa8f6b7cfe558a4b284c0288",
+      "bytes": 5173,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/05-编写进度与教案转换.md",
+      "object": "objects/10/107ed5cbaa979c9bd80538f0963cabb15ccc88eddd9606a56cfdcd0601a43e1a.md",
+      "sha256": "107ed5cbaa979c9bd80538f0963cabb15ccc88eddd9606a56cfdcd0601a43e1a",
+      "bytes": 5421,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/06-多会话接力与图文初稿任务书.md",
+      "object": "objects/ec/ec29f025cefca46bc7ddc0aedb5a1580d36a384209cda4d324ac40a34487a7a0.md",
+      "sha256": "ec29f025cefca46bc7ddc0aedb5a1580d36a384209cda4d324ac40a34487a7a0",
+      "bytes": 4981,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/07-图文初稿阅读指南.md",
+      "object": "objects/de/de5944b3cfc1b77dd40f830156a44ce4f0b4bb05a5560ac69c0cdd50c70499d8.md",
+      "sha256": "de5944b3cfc1b77dd40f830156a44ce4f0b4bb05a5560ac69c0cdd50c70499d8",
+      "bytes": 4411,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/08-图文初稿检查记录.md",
+      "object": "objects/1c/1c911eff29a5f4c27708c437d97afb1b9c1a70a4d5ff58dd541e8aa794b4e35f.md",
+      "sha256": "1c911eff29a5f4c27708c437d97afb1b9c1a70a4d5ff58dd541e8aa794b4e35f",
+      "bytes": 4329,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/README.md",
+      "object": "objects/b8/b819d4894a03ce15803701c205de636ddd9f3176ff7b6ce3133d95246a4289e8.md",
+      "sha256": "b819d4894a03ce15803701c205de636ddd9f3176ff7b6ce3133d95246a4289e8",
+      "bytes": 5875,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/AIRIOT进阶选做.md",
+      "object": "objects/92/924a996c47e67e796f7bd2da0ff5f9640f3970a7e3029ab982c5a87dd6c6dc2e.md",
+      "sha256": "924a996c47e67e796f7bd2da0ff5f9640f3970a7e3029ab982c5a87dd6c6dc2e",
+      "bytes": 3731,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/Qwen与网页工具说明.md",
+      "object": "objects/8f/8fd506b03e4e157ccaee36a06b8206db486be53e1bc06e45759ac0b3df3c623d.md",
+      "sha256": "8fd506b03e4e157ccaee36a06b8206db486be53e1bc06e45759ac0b3df3c623d",
+      "bytes": 3066,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/教师资源制作清单.md",
+      "object": "objects/67/676fc2ee63d835bb03e3086bb3ad42e65deb78d8c4f3403f0f63be7531747fb1.md",
+      "sha256": "676fc2ee63d835bb03e3086bb3ad42e65deb78d8c4f3403f0f63be7531747fb1",
+      "bytes": 3319,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/appendices/现有平台与原大纲映射.md",
+      "object": "objects/e8/e83720e0b336a6535112ac0d179a21d59ac86fc661b76960b063ad3b82cca740.md",
+      "sha256": "e83720e0b336a6535112ac0d179a21d59ac86fc661b76960b063ad3b82cca740",
+      "bytes": 4421,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/01-软件工程入门与网页AI协作.md",
+      "object": "objects/1b/1bdb230237fc6a86e41c1a4c19aaeb54b661a13fc627b5be35b1db4ed6afd9d4.md",
+      "sha256": "1bdb230237fc6a86e41c1a4c19aaeb54b661a13fc627b5be35b1db4ed6afd9d4",
+      "bytes": 6356,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/02-需求分析与项目计划.md",
+      "object": "objects/4d/4dfaa4a79aeb49d0553c44193e5ef860feee042db67f012cf3ef985f102112a5.md",
+      "sha256": "4dfaa4a79aeb49d0553c44193e5ef860feee042db67f012cf3ef985f102112a5",
+      "bytes": 6345,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/03-架构数据与接口设计.md",
+      "object": "objects/75/755ed1bab6055cb91c31ebf41d0c4aa4730d3ada2187ede6f3693b8f76a00f4b.md",
+      "sha256": "755ed1bab6055cb91c31ebf41d0c4aa4730d3ada2187ede6f3693b8f76a00f4b",
+      "bytes": 7159,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/04-开发环境版本控制与首次贯通.md",
+      "object": "objects/31/31e4e7c4ef809e7f3fcb38de70c707bd0b3a5c5bb80f10ad537d20fa5b8114b1.md",
+      "sha256": "31e4e7c4ef809e7f3fcb38de70c707bd0b3a5c5bb80f10ad537d20fa5b8114b1",
+      "bytes": 6822,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/05-后端空间与设备接口.md",
+      "object": "objects/b1/b107e51b5807a0c579a43fe7f914e016b1063846fa0266036ed42c32073b054f.md",
+      "sha256": "b107e51b5807a0c579a43fe7f914e016b1063846fa0266036ed42c32073b054f",
+      "bytes": 5939,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/06-前端设备台账与自主UI.md",
+      "object": "objects/4a/4a2c3eb3ecaf9e68b4b87374fe32e70def9cd96c6ac2c5d8ad110965c0c03395.md",
+      "sha256": "4a2c3eb3ecaf9e68b4b87374fe32e70def9cd96c6ac2c5d8ad110965c0c03395",
+      "bytes": 5681,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/07-实时监测历史与数据质量.md",
+      "object": "objects/d7/d79c5745b822b1e1603aed7fffbc2764930918f29d02c3da3a2a9853a9db5a41.md",
+      "sha256": "d79c5745b822b1e1603aed7fffbc2764930918f29d02c3da3a2a9853a9db5a41",
+      "bytes": 5443,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/08-登录角色与权限验证.md",
+      "object": "objects/d2/d2b42310832a10e197263a329e8398b5f42fa5d65d3a4f95b32e2f79428a929b.md",
+      "sha256": "d2b42310832a10e197263a329e8398b5f42fa5d65d3a4f95b32e2f79428a929b",
+      "bytes": 5893,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/09-演练事件与状态机.md",
+      "object": "objects/3b/3bfcbfe391d94420db961cdd33bf7a9a59e2548c56803f2119581da46ee965e5.md",
+      "sha256": "3bfcbfe391d94420db961cdd33bf7a9a59e2548c56803f2119581da46ee965e5",
+      "bytes": 6855,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/10-设备责任与审计追踪.md",
+      "object": "objects/8d/8d05df0c10ff5be588bcee1ac426962af9692d0e9fbb7dfe81eaefd61e8e496e.md",
+      "sha256": "8d05df0c10ff5be588bcee1ac426962af9692d0e9fbb7dfe81eaefd61e8e496e",
+      "bytes": 6330,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/11-测试调试与质量改进.md",
+      "object": "objects/0b/0b9bba3b972e3b9c5c950f0ef31e909bd9db927b5c23847c9bd69f5607a76660.md",
+      "sha256": "0b9bba3b972e3b9c5c950f0ef31e909bd9db927b5c23847c9bd69f5607a76660",
+      "bytes": 6169,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/chapters/12-构建交付变更与答辩.md",
+      "object": "objects/c6/c60478201fc214594501fa35d25032893e20006486c6818a04fc41b91069eb97.md",
+      "sha256": "c60478201fc214594501fa35d25032893e20006486c6818a04fc41b91069eb97",
+      "bytes": 6576,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/contracts/教学接口约定.md",
+      "object": "objects/0c/0c9b1708cc69aea095ccbe30167c874a17f13a1a1332d92ea6fa56407cc8761b.md",
+      "sha256": "0c9b1708cc69aea095ccbe30167c874a17f13a1a1332d92ea6fa56407cc8761b",
+      "bytes": 8176,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/course-index.json",
+      "object": "objects/b4/b44316a43b8212e95d38c01efd597dce122b630d8f33e553bd5af6a0e761f896.json",
+      "sha256": "b44316a43b8212e95d38c01efd597dce122b630d8f33e553bd5af6a0e761f896",
+      "bytes": 7284,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/delivery-manifest.json",
+      "object": "objects/65/65efe0201da0ef15c64dd0c789b809a2b1c60131832c597fc89cb16cebc09737.json",
+      "sha256": "65efe0201da0ef15c64dd0c789b809a2b1c60131832c597fc89cb16cebc09737",
+      "bytes": 47813,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-01-engineering-cycle.figure.json",
+      "object": "objects/7e/7e634b87866701962f9890bdaff98fd777ad60444c4285c3626ba988dd2aad43.json",
+      "sha256": "7e634b87866701962f9890bdaff98fd777ad60444c4285c3626ba988dd2aad43",
+      "bytes": 579,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-01-engineering-cycle.mmd",
+      "object": "objects/8b/8bd7f349d326aa9d1c44828efbc147e58865111b7edb574753e3474065a4b0cf.mmd",
+      "sha256": "8bd7f349d326aa9d1c44828efbc147e58865111b7edb574753e3474065a4b0cf",
+      "bytes": 335,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-02-prompt-comparison.figure.json",
+      "object": "objects/8b/8b192f38eca5f1bba47e4db0909ba132d25ce7d1ea3503c25444122207fa6070.json",
+      "sha256": "8b192f38eca5f1bba47e4db0909ba132d25ce7d1ea3503c25444122207fa6070",
+      "bytes": 600,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-02-prompt-comparison.mmd",
+      "object": "objects/db/db384d25afeed3892ed1b2ab38efed93234668a0dbe18f9dbb66264c82e33410.mmd",
+      "sha256": "db384d25afeed3892ed1b2ab38efed93234668a0dbe18f9dbb66264c82e33410",
+      "bytes": 457,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-03-ai-evidence-loop.figure.json",
+      "object": "objects/fe/fea48256ccd38434da88e9e9367ede37934770adc6b5a6f2e00b335a81609eef.json",
+      "sha256": "fea48256ccd38434da88e9e9367ede37934770adc6b5a6f2e00b335a81609eef",
+      "bytes": 593,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch01-03-ai-evidence-loop.mmd",
+      "object": "objects/ac/aca7a01e47545bebe0e6a1d397cd5fe0d87a8a35daa413268447d12b80e7ce45.mmd",
+      "sha256": "aca7a01e47545bebe0e6a1d397cd5fe0d87a8a35daa413268447d12b80e7ce45",
+      "bytes": 356,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-01-scope-map.figure.json",
+      "object": "objects/d6/d6aa2a4e64e14601e20e769f3c60862ec27be37c3895cd68a4bc3ecc9ac7b8cc.json",
+      "sha256": "d6aa2a4e64e14601e20e769f3c60862ec27be37c3895cd68a4bc3ecc9ac7b8cc",
+      "bytes": 464,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-01-scope-map.mmd",
+      "object": "objects/5c/5c496e8d1b0d81cc21f64f2b9cd2b5ea589bc49bbc9771414243b4b80ee4e708.mmd",
+      "sha256": "5c496e8d1b0d81cc21f64f2b9cd2b5ea589bc49bbc9771414243b4b80ee4e708",
+      "bytes": 431,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-02-traceability.figure.json",
+      "object": "objects/60/6032aa682274dcef8913edaa4fd00bf31e2717471964e8e3a92faf2ee7218ad2.json",
+      "sha256": "6032aa682274dcef8913edaa4fd00bf31e2717471964e8e3a92faf2ee7218ad2",
+      "bytes": 415,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-02-traceability.mmd",
+      "object": "objects/35/3511505a597b34ac91fbd2dbbeab89556eaa8a140e60aedb4f9eaa8f65883f20.mmd",
+      "sha256": "3511505a597b34ac91fbd2dbbeab89556eaa8a140e60aedb4f9eaa8f65883f20",
+      "bytes": 427,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-03-milestones.figure.json",
+      "object": "objects/39/39f0c8bd12087b4ba2a87f940cdabf8dc26ab61d1cb7be01ff87efdf5a993cff.json",
+      "sha256": "39f0c8bd12087b4ba2a87f940cdabf8dc26ab61d1cb7be01ff87efdf5a993cff",
+      "bytes": 442,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch02-03-milestones.mmd",
+      "object": "objects/b7/b7f7117988c44556000ec05f2478a72a477ad2c8ff6f9f7a6e56e802098d495d.mmd",
+      "sha256": "b7f7117988c44556000ec05f2478a72a477ad2c8ff6f9f7a6e56e802098d495d",
+      "bytes": 327,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-01-architecture.figure.json",
+      "object": "objects/b2/b26bd5cfde28cbca7f23071e46846fd714c8df4c5fe9dee1509fbbe0e2df2aa0.json",
+      "sha256": "b26bd5cfde28cbca7f23071e46846fd714c8df4c5fe9dee1509fbbe0e2df2aa0",
+      "bytes": 452,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-01-architecture.mmd",
+      "object": "objects/db/db16bed72a30e2f3ff35707c9977fba2d0196192888b9e1e5574cf67d59cbd4b.mmd",
+      "sha256": "db16bed72a30e2f3ff35707c9977fba2d0196192888b9e1e5574cf67d59cbd4b",
+      "bytes": 426,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-02-local-records-er.figure.json",
+      "object": "objects/d7/d72fd6ecb889c1d4d689c8ee3f8f435423e70e4123fce230602521d0e0c2de6b.json",
+      "sha256": "d72fd6ecb889c1d4d689c8ee3f8f435423e70e4123fce230602521d0e0c2de6b",
+      "bytes": 561,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-02-local-records-er.mmd",
+      "object": "objects/27/27382da398ce746ca6cae2a9d4b1b9c669ac5b1904cc26a067a1d989af0980c7.mmd",
+      "sha256": "27382da398ce746ca6cae2a9d4b1b9c669ac5b1904cc26a067a1d989af0980c7",
+      "bytes": 884,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-03-two-state-axes.figure.json",
+      "object": "objects/b8/b874c5d437af1cf3253d70c25f81bcdeb9fda2f56e4d7ed5ec50e6df76117fc8.json",
+      "sha256": "b874c5d437af1cf3253d70c25f81bcdeb9fda2f56e4d7ed5ec50e6df76117fc8",
+      "bytes": 460,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-03-two-state-axes.mmd",
+      "object": "objects/9e/9ec9d1fa405f639a806d79f1ac420f081c7d2e014ce77b936abb6fc76d9e0587.mmd",
+      "sha256": "9ec9d1fa405f639a806d79f1ac420f081c7d2e014ce77b936abb6fc76d9e0587",
+      "bytes": 628,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-04-version-transaction.figure.json",
+      "object": "objects/f3/f3888350a783c38193e3e2094206c4e169ead7f48f00681de01bb9c496a16960.json",
+      "sha256": "f3888350a783c38193e3e2094206c4e169ead7f48f00681de01bb9c496a16960",
+      "bytes": 441,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch03-04-version-transaction.mmd",
+      "object": "objects/fd/fd3ea825fd71a212cc32ad62cac99abde9e1f158521bad9ddc83f01d0cd7c874.mmd",
+      "sha256": "fd3ea825fd71a212cc32ad62cac99abde9e1f158521bad9ddc83f01d0cd7c874",
+      "bytes": 799,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-01-git-workflow.figure.json",
+      "object": "objects/a0/a088175b24b751706b58d9af42fe84159e557a419baf065f765cd2b9f634e50d.json",
+      "sha256": "a088175b24b751706b58d9af42fe84159e557a419baf065f765cd2b9f634e50d",
+      "bytes": 571,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-01-git-workflow.mmd",
+      "object": "objects/a4/a4c00374a095478ad5b7248cf8d20180761893526396f65d3483ce3448d01cd6.mmd",
+      "sha256": "a4c00374a095478ad5b7248cf8d20180761893526396f65d3483ce3448d01cd6",
+      "bytes": 339,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-02-first-request.figure.json",
+      "object": "objects/5c/5c45457b97fcd4a7d84d33812989a18c084ac54a16e63f836397852b91607f35.json",
+      "sha256": "5c45457b97fcd4a7d84d33812989a18c084ac54a16e63f836397852b91607f35",
+      "bytes": 494,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-02-first-request.mmd",
+      "object": "objects/95/952d84bae02d28c27e0c0abe54928f1dbebbd1f74024aa6e9aa82cd4228e8c93.mmd",
+      "sha256": "952d84bae02d28c27e0c0abe54928f1dbebbd1f74024aa6e9aa82cd4228e8c93",
+      "bytes": 649,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-03-debug-path.figure.json",
+      "object": "objects/49/49711e21ab2e3e751a59b0f08afa477273961399b8bbd1589f7ce5c44725cad2.json",
+      "sha256": "49711e21ab2e3e751a59b0f08afa477273961399b8bbd1589f7ce5c44725cad2",
+      "bytes": 630,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch04-03-debug-path.mmd",
+      "object": "objects/23/230b778d8084dddefe04a190cdc7ff7a56f2de332fd16701e69335d7210179de.mmd",
+      "sha256": "230b778d8084dddefe04a190cdc7ff7a56f2de332fd16701e69335d7210179de",
+      "bytes": 552,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-01-device-request.figure.json",
+      "object": "objects/13/13180793eb77134c7e961982da78a13bf5d4b5ddb1ab97f727e96ae515a28e01.json",
+      "sha256": "13180793eb77134c7e961982da78a13bf5d4b5ddb1ab97f727e96ae515a28e01",
+      "bytes": 408,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-01-device-request.mmd",
+      "object": "objects/1f/1f422324c6d6762188ab820bfe3682674439503a8494973d94500b89baf4ad37.mmd",
+      "sha256": "1f422324c6d6762188ab820bfe3682674439503a8494973d94500b89baf4ad37",
+      "bytes": 493,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-02-space-relations.figure.json",
+      "object": "objects/01/013844030ac82c0f3326b4ffafaadad50e95778c0d3738a2fd21129f488231eb.json",
+      "sha256": "013844030ac82c0f3326b4ffafaadad50e95778c0d3738a2fd21129f488231eb",
+      "bytes": 469,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-02-space-relations.mmd",
+      "object": "objects/23/23a633459bfc261202c76dbae13d8a078a03fea3c7fe2b57b76a8225522b669e.mmd",
+      "sha256": "23a633459bfc261202c76dbae13d8a078a03fea3c7fe2b57b76a8225522b669e",
+      "bytes": 469,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-03-binding-readback.figure.json",
+      "object": "objects/69/694aa01c32edf2742ae71a0f6c6f1e3b9c9f8716e1d6329f1d13e6df66386e70.json",
+      "sha256": "694aa01c32edf2742ae71a0f6c6f1e3b9c9f8716e1d6329f1d13e6df66386e70",
+      "bytes": 436,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch05-03-binding-readback.mmd",
+      "object": "objects/06/065774bb6283c58bcb97356c20194e0b8924681dc3403287747ab05e6f658511.mmd",
+      "sha256": "065774bb6283c58bcb97356c20194e0b8924681dc3403287747ab05e6f658511",
+      "bytes": 652,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-01-device-wireframe.figure.json",
+      "object": "objects/c8/c80fc9d0e07f5fb5ddd5062da2662e06ecde285ad143cfddde5dced009304b10.json",
+      "sha256": "c80fc9d0e07f5fb5ddd5062da2662e06ecde285ad143cfddde5dced009304b10",
+      "bytes": 487,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-01-device-wireframe.svg",
+      "object": "objects/13/135277a087dffe3a82be5de98579ce5ec49c030da798aa506fbd037604ce469d.svg",
+      "sha256": "135277a087dffe3a82be5de98579ce5ec49c030da798aa506fbd037604ce469d",
+      "bytes": 5303,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-02-components-state.figure.json",
+      "object": "objects/a1/a19f50cf3b9e6401a220979fa6459576f6ec3d7aa15bc559dcc7248a554e803c.json",
+      "sha256": "a19f50cf3b9e6401a220979fa6459576f6ec3d7aa15bc559dcc7248a554e803c",
+      "bytes": 464,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-02-components-state.mmd",
+      "object": "objects/cd/cd65e1192bd0ddac7ef02d9923ac4e2a89d447656a4e244e4a113bc432f827c2.mmd",
+      "sha256": "cd65e1192bd0ddac7ef02d9923ac4e2a89d447656a4e244e4a113bc432f827c2",
+      "bytes": 473,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-03-page-states.figure.json",
+      "object": "objects/02/026211b8693051014ba4861c9d39bdbec3ed61c415ff0286bc62fe3523797a86.json",
+      "sha256": "026211b8693051014ba4861c9d39bdbec3ed61c415ff0286bc62fe3523797a86",
+      "bytes": 591,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch06-03-page-states.mmd",
+      "object": "objects/72/72a2d99f3a68bf86f256d459a82ea09533da42ae2fd02b6411d1b355e909ff5b.mmd",
+      "sha256": "72a2d99f3a68bf86f256d459a82ea09533da42ae2fd02b6411d1b355e909ff5b",
+      "bytes": 508,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-01-quality-cases.figure.json",
+      "object": "objects/0b/0bb16dc1a72dcedd76f340befeb8a60731f6dd059cc039604ca4709a2753c575.json",
+      "sha256": "0bb16dc1a72dcedd76f340befeb8a60731f6dd059cc039604ca4709a2753c575",
+      "bytes": 493,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-01-quality-cases.svg",
+      "object": "objects/03/0352ec27a9a58985353764c18b88c9931d885af96ddee99cfc24fa67db00bbfd.svg",
+      "sha256": "0352ec27a9a58985353764c18b88c9931d885af96ddee99cfc24fa67db00bbfd",
+      "bytes": 3384,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-02-history-gaps.figure.json",
+      "object": "objects/50/5016c7598286543569467934e2ad74e4eed0d6f87b41ebfc90ec62132a7ead6e.json",
+      "sha256": "5016c7598286543569467934e2ad74e4eed0d6f87b41ebfc90ec62132a7ead6e",
+      "bytes": 512,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-02-history-gaps.svg",
+      "object": "objects/f5/f547fb82bf24e4863c40ff36b8f0afa32f4b5c027f5db58a02cc01ba000a803e.svg",
+      "sha256": "f547fb82bf24e4863c40ff36b8f0afa32f4b5c027f5db58a02cc01ba000a803e",
+      "bytes": 3820,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-03-refresh-lifecycle.figure.json",
+      "object": "objects/d2/d242a0d1e6471756569342273411e838c1e4993299764f5c41c1c5745a5bef0b.json",
+      "sha256": "d242a0d1e6471756569342273411e838c1e4993299764f5c41c1c5745a5bef0b",
+      "bytes": 394,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch07-03-refresh-lifecycle.mmd",
+      "object": "objects/3c/3c42357678211f59da8be8dc86076009f3df7e086e89daf1ba32d4c443f830ff.mmd",
+      "sha256": "3c42357678211f59da8be8dc86076009f3df7e086e89daf1ba32d4c443f830ff",
+      "bytes": 476,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-01-role-scope.figure.json",
+      "object": "objects/42/4277cd9015e0c7feae9d487b474180b3ca59f71e8979b7c93f40db0af18bc7cd.json",
+      "sha256": "4277cd9015e0c7feae9d487b474180b3ca59f71e8979b7c93f40db0af18bc7cd",
+      "bytes": 472,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-01-role-scope.mmd",
+      "object": "objects/f3/f35607b088ebe3830c89710eafefcbd546b88cbd4816c1f3a24cbee6d9e395a8.mmd",
+      "sha256": "f35607b088ebe3830c89710eafefcbd546b88cbd4816c1f3a24cbee6d9e395a8",
+      "bytes": 510,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-02-denial-path.figure.json",
+      "object": "objects/e4/e4e7e86a7539946e372efaaad17fa0e2a0df4f697d0662f36a3ee3704aad8c72.json",
+      "sha256": "e4e7e86a7539946e372efaaad17fa0e2a0df4f697d0662f36a3ee3704aad8c72",
+      "bytes": 611,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-02-denial-path.mmd",
+      "object": "objects/6f/6f798ac549f8bccdff19e9f5c73b037c57e6fb0ac8250646808de99364f21943.mmd",
+      "sha256": "6f798ac549f8bccdff19e9f5c73b037c57e6fb0ac8250646808de99364f21943",
+      "bytes": 460,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-03-identity-race.figure.json",
+      "object": "objects/65/658166cb364c0afe6f63806ce81f051c34a9e16cb7c4eab5dcada8af5510b61b.json",
+      "sha256": "658166cb364c0afe6f63806ce81f051c34a9e16cb7c4eab5dcada8af5510b61b",
+      "bytes": 400,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch08-03-identity-race.mmd",
+      "object": "objects/b4/b45da80defd17691861ba3397c4f8203180f73d63a576568a0546025d8300536.mmd",
+      "sha256": "b45da80defd17691861ba3397c4f8203180f73d63a576568a0546025d8300536",
+      "bytes": 500,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-01-state-machine.figure.json",
+      "object": "objects/93/933a0597331c0f68ad48cacd1de012538762fc66a379ef2bd12d1b8c230766bf.json",
+      "sha256": "933a0597331c0f68ad48cacd1de012538762fc66a379ef2bd12d1b8c230766bf",
+      "bytes": 620,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-01-state-machine.mmd",
+      "object": "objects/39/39217452ef34cc8f2148364a5d9bf44487ed04cf1523226f2ed62bd5dec47b3d.mmd",
+      "sha256": "39217452ef34cc8f2148364a5d9bf44487ed04cf1523226f2ed62bd5dec47b3d",
+      "bytes": 792,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-02-close-gates.figure.json",
+      "object": "objects/de/de27975f18441c7453f48466dde5506d2100dcb7cdeb0a376e98a934ed85db87.json",
+      "sha256": "de27975f18441c7453f48466dde5506d2100dcb7cdeb0a376e98a934ed85db87",
+      "bytes": 648,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-02-close-gates.mmd",
+      "object": "objects/ec/ec42040aa93bae12e71d62fbaa4d652f51f8145c8c3f110e029dee68c879ea32.mmd",
+      "sha256": "ec42040aa93bae12e71d62fbaa4d652f51f8145c8c3f110e029dee68c879ea32",
+      "bytes": 838,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-03-recovery-sequence.figure.json",
+      "object": "objects/76/762e173fd99eadcc2c6130f2a5881a6cb9ec13b90fff44aed7f14868423227c7.json",
+      "sha256": "762e173fd99eadcc2c6130f2a5881a6cb9ec13b90fff44aed7f14868423227c7",
+      "bytes": 501,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch09-03-recovery-sequence.mmd",
+      "object": "objects/8c/8c189eb71dd4d9905f5a3b35c0a1ac968d1cd024e1f97f695bb6d792d1aba72c.mmd",
+      "sha256": "8c189eb71dd4d9905f5a3b35c0a1ac968d1cd024e1f97f695bb6d792d1aba72c",
+      "bytes": 1054,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-01-owner-event-model.figure.json",
+      "object": "objects/2f/2ffc9648ed58285a4aada0628dbc56fec0375d5d2dd7a663dcef44e13ca5e11c.json",
+      "sha256": "2ffc9648ed58285a4aada0628dbc56fec0375d5d2dd7a663dcef44e13ca5e11c",
+      "bytes": 654,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-01-owner-event-model.mmd",
+      "object": "objects/83/833ddbccc57f4e573580c17b8f0e2e66e3abda0a8fadbc6b57f3fd86d93d35f8.mmd",
+      "sha256": "833ddbccc57f4e573580c17b8f0e2e66e3abda0a8fadbc6b57f3fd86d93d35f8",
+      "bytes": 465,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-02-future-assignment.figure.json",
+      "object": "objects/8e/8ee3f5b574ae3a876b768a17a680e41a5792df64fe9ad1d0e58fdb002942b15c.json",
+      "sha256": "8ee3f5b574ae3a876b768a17a680e41a5792df64fe9ad1d0e58fdb002942b15c",
+      "bytes": 504,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-02-future-assignment.mmd",
+      "object": "objects/da/dad9d4e4a2fd08bd8b661b36629487ffbeaa3f938f977ce9e1c26594d182c713.mmd",
+      "sha256": "dad9d4e4a2fd08bd8b661b36629487ffbeaa3f938f977ce9e1c26594d182c713",
+      "bytes": 1097,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-03-responsibility-timeline.figure.json",
+      "object": "objects/75/751b224f6702df08b3f3f649920f96480cc14996d3e412b1a83cc246addb991b.json",
+      "sha256": "751b224f6702df08b3f3f649920f96480cc14996d3e412b1a83cc246addb991b",
+      "bytes": 668,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch10-03-responsibility-timeline.mmd",
+      "object": "objects/de/de990d4707123d07f9622e6d9d09768f023e23f3cd8cffb45c3eaf53b31eccc6.mmd",
+      "sha256": "de990d4707123d07f9622e6d9d09768f023e23f3cd8cffb45c3eaf53b31eccc6",
+      "bytes": 471,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-01-evidence-layers.figure.json",
+      "object": "objects/be/bee554b544d84c425004cc285b78d63aa952790a17cfb26eb0e029b443a954ba.json",
+      "sha256": "bee554b544d84c425004cc285b78d63aa952790a17cfb26eb0e029b443a954ba",
+      "bytes": 662,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-01-evidence-layers.mmd",
+      "object": "objects/64/64be72660c2bdf4ac764a63dd5ebdc5e9b59bb6b5138a0616086cd3674a5ef42.mmd",
+      "sha256": "64be72660c2bdf4ac764a63dd5ebdc5e9b59bb6b5138a0616086cd3674a5ef42",
+      "bytes": 604,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-02-concurrent-updates.figure.json",
+      "object": "objects/86/8656e2c511f87a4771ce1a20db1959c71a6a3855d136dbea0980acad72cfd36e.json",
+      "sha256": "8656e2c511f87a4771ce1a20db1959c71a6a3855d136dbea0980acad72cfd36e",
+      "bytes": 483,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-02-concurrent-updates.mmd",
+      "object": "objects/7d/7d9597ff3c6658a1725f78a9a2b3c61e0b38abb27a7feaae533f2cc1ff4b866f.mmd",
+      "sha256": "7d9597ff3c6658a1725f78a9a2b3c61e0b38abb27a7feaae533f2cc1ff4b866f",
+      "bytes": 957,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-03-transaction-rollback.figure.json",
+      "object": "objects/7a/7a42d8497d551b3a1a5751be1bd6f90400375e839c478681743e0f0d56e183dc.json",
+      "sha256": "7a42d8497d551b3a1a5751be1bd6f90400375e839c478681743e0f0d56e183dc",
+      "bytes": 660,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-03-transaction-rollback.mmd",
+      "object": "objects/20/20b9a5d96c9439035b59402799676061db7d0ad53fd8d97e043a593e331812b4.mmd",
+      "sha256": "20b9a5d96c9439035b59402799676061db7d0ad53fd8d97e043a593e331812b4",
+      "bytes": 691,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-04-debugging-loop.figure.json",
+      "object": "objects/70/70246b683ded5726d85250d778678275f66652ad2c62d3a6398072068b4ae547.json",
+      "sha256": "70246b683ded5726d85250d778678275f66652ad2c62d3a6398072068b4ae547",
+      "bytes": 651,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch11-04-debugging-loop.mmd",
+      "object": "objects/ac/ac97133357522cde19ee17e1b10061f0df4b8af6bd739461e568e01d702d8a48.mmd",
+      "sha256": "ac97133357522cde19ee17e1b10061f0df4b8af6bd739461e568e01d702d8a48",
+      "bytes": 402,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-01-delivery-flow.figure.json",
+      "object": "objects/bb/bb84eb82f6b63e5e63717ad14fd4a601a8c3e8e206d51280eb6b919cb970f20c.json",
+      "sha256": "bb84eb82f6b63e5e63717ad14fd4a601a8c3e8e206d51280eb6b919cb970f20c",
+      "bytes": 638,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-01-delivery-flow.mmd",
+      "object": "objects/86/862d002f7be346e7c57e57ce15659403c4313ce0faa4838d33f51bf52699275a.mmd",
+      "sha256": "862d002f7be346e7c57e57ce15659403c4313ce0faa4838d33f51bf52699275a",
+      "bytes": 514,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-02-controlled-change.figure.json",
+      "object": "objects/86/8692665b9b315a2d60060d43ce3429e7bfafe51c812c692f9634e43c9399667b.json",
+      "sha256": "8692665b9b315a2d60060d43ce3429e7bfafe51c812c692f9634e43c9399667b",
+      "bytes": 654,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-02-controlled-change.mmd",
+      "object": "objects/29/29c51fcdad293bd2fe2472ecc737450734ad6d7746c8fb3cb8a8849532f8c3c1.mmd",
+      "sha256": "29c51fcdad293bd2fe2472ecc737450734ad6d7746c8fb3cb8a8849532f8c3c1",
+      "bytes": 598,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-03-code-data-recovery.figure.json",
+      "object": "objects/a1/a19a9675c0b043da90e85dcc104216fdbe08e53002427e3af92569f44926f2f3.json",
+      "sha256": "a19a9675c0b043da90e85dcc104216fdbe08e53002427e3af92569f44926f2f3",
+      "bytes": 670,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/ch12-03-code-data-recovery.mmd",
+      "object": "objects/4d/4d01037f3bcba9e7e14998871300c50a66cb34d52c5fd4efd31ec1dc55bd9835.mmd",
+      "sha256": "4d01037f3bcba9e7e14998871300c50a66cb34d52c5fd4efd31ec1dc55bd9835",
+      "bytes": 661,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch01-01-engineering-cycle.svg",
+      "object": "objects/d0/d0cd1e0d93225395f1d62d6b78b83303937d79fd18b0960683941039cd049e16.svg",
+      "sha256": "d0cd1e0d93225395f1d62d6b78b83303937d79fd18b0960683941039cd049e16",
+      "bytes": 4442,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch01-02-prompt-comparison.svg",
+      "object": "objects/dc/dc80dfe26b80d4e88bfc166e2f7601a6de3e4ff0f2a33c074bd52080ea3db7ec.svg",
+      "sha256": "dc80dfe26b80d4e88bfc166e2f7601a6de3e4ff0f2a33c074bd52080ea3db7ec",
+      "bytes": 5089,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch01-03-ai-evidence-loop.svg",
+      "object": "objects/8f/8f48b37c8b6abbf36d247978256696ee56c126f1cb166735a139bf9ca70b66a1.svg",
+      "sha256": "8f48b37c8b6abbf36d247978256696ee56c126f1cb166735a139bf9ca70b66a1",
+      "bytes": 4661,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch04-01-git-workflow.svg",
+      "object": "objects/20/20dc6cf58ba924230af7593afe20c83b9e76e0f694dcff35aeeb827a284b2da3.svg",
+      "sha256": "20dc6cf58ba924230af7593afe20c83b9e76e0f694dcff35aeeb827a284b2da3",
+      "bytes": 3703,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch04-03-debug-path.svg",
+      "object": "objects/54/5447692efd318973fe2a304e3849eb8ac586579afec26ac2787074b0f2de68d6.svg",
+      "sha256": "5447692efd318973fe2a304e3849eb8ac586579afec26ac2787074b0f2de68d6",
+      "bytes": 5751,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch06-03-page-states.svg",
+      "object": "objects/71/71f3c3c7eaeea6ef18c5eae5a90c7e379c5e37525e0d09744bfb590ab9746ec1.svg",
+      "sha256": "71f3c3c7eaeea6ef18c5eae5a90c7e379c5e37525e0d09744bfb590ab9746ec1",
+      "bytes": 5165,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch08-02-denial-path.svg",
+      "object": "objects/0c/0c33ee90ea9116094d7fe7209030244279823eac1c495cc507871a3c855a93bc.svg",
+      "sha256": "0c33ee90ea9116094d7fe7209030244279823eac1c495cc507871a3c855a93bc",
+      "bytes": 6815,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch09-01-state-machine.svg",
+      "object": "objects/21/215b1f9e7edb38ee0abbf15f6124f6bd409fe4a21c9848413af8efe05b197ba5.svg",
+      "sha256": "215b1f9e7edb38ee0abbf15f6124f6bd409fe4a21c9848413af8efe05b197ba5",
+      "bytes": 5974,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch09-02-close-gates.svg",
+      "object": "objects/2d/2da275d70042d145870934fa8f20b77a1c94286f2975cae1979bac83cb53663a.svg",
+      "sha256": "2da275d70042d145870934fa8f20b77a1c94286f2975cae1979bac83cb53663a",
+      "bytes": 5337,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch10-01-owner-event-model.svg",
+      "object": "objects/63/63ff84b8605f53dada41f1400811c68f8e7bdf8ae09a281f67d0f939adb14c6c.svg",
+      "sha256": "63ff84b8605f53dada41f1400811c68f8e7bdf8ae09a281f67d0f939adb14c6c",
+      "bytes": 4871,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch10-03-responsibility-timeline.svg",
+      "object": "objects/a0/a097807ff86f4b4f31e44b3117ceeb2c3d42c096c79ae120c2079af743c72261.svg",
+      "sha256": "a097807ff86f4b4f31e44b3117ceeb2c3d42c096c79ae120c2079af743c72261",
+      "bytes": 4420,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch11-01-evidence-layers.svg",
+      "object": "objects/83/836278b4093a596a15fd2bf2555afc6bbfb2ba181c823d4fc8cad6d6dd7816fb.svg",
+      "sha256": "836278b4093a596a15fd2bf2555afc6bbfb2ba181c823d4fc8cad6d6dd7816fb",
+      "bytes": 4758,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch11-03-transaction-rollback.svg",
+      "object": "objects/b9/b9cb84405ae8789d4c27c119b4c8b25c4429349167f6c3a9d2fcfa7a790faa21.svg",
+      "sha256": "b9cb84405ae8789d4c27c119b4c8b25c4429349167f6c3a9d2fcfa7a790faa21",
+      "bytes": 4692,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch11-04-debugging-loop.svg",
+      "object": "objects/88/88a7584fa1cdf41c70ebb64f54258775005fc76ac6a66616d810b7a91b30efed.svg",
+      "sha256": "88a7584fa1cdf41c70ebb64f54258775005fc76ac6a66616d810b7a91b30efed",
+      "bytes": 5695,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch12-01-delivery-flow.svg",
+      "object": "objects/9e/9e8a2301d26f54ee3f9de2fc0e18b3eda8036e0697c386e557ea805c2d851a6d.svg",
+      "sha256": "9e8a2301d26f54ee3f9de2fc0e18b3eda8036e0697c386e557ea805c2d851a6d",
+      "bytes": 5132,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch12-02-controlled-change.svg",
+      "object": "objects/01/012a6a7f359b46f93cdd0255aafbbee87f314258b10cd69524e36022490c22d8.svg",
+      "sha256": "012a6a7f359b46f93cdd0255aafbbee87f314258b10cd69524e36022490c22d8",
+      "bytes": 4787,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/layouts/ch12-03-code-data-recovery.svg",
+      "object": "objects/2f/2f7479c0c5c2fdae758e5205fbe90c83630e66f3fb3ac1ebf556b85eedb4afd2.svg",
+      "sha256": "2f7479c0c5c2fdae758e5205fbe90c83630e66f3fb3ac1ebf556b85eedb4afd2",
+      "bytes": 5775,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/shared/shared-01-教学工程边界.figure.json",
+      "object": "objects/f6/f676bdaf410832de34ac8700de3f4c5d056de50fdbedb4ae2caf0eaa84841448.json",
+      "sha256": "f676bdaf410832de34ac8700de3f4c5d056de50fdbedb4ae2caf0eaa84841448",
+      "bytes": 646,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/shared/shared-01-教学工程边界.svg",
+      "object": "objects/38/38357a8c9fd445283c0e38e170fd36d9a0ac8ac0662dbefcd9a16431051ad929.svg",
+      "sha256": "38357a8c9fd445283c0e38e170fd36d9a0ac8ac0662dbefcd9a16431051ad929",
+      "bytes": 5407,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/shared/shared-02-网页AI协作.figure.json",
+      "object": "objects/4a/4a65f2dc0532e57be9cc86c91b1b5aed7edea562ee4e3f69e012db8b25cb6af7.json",
+      "sha256": "4a65f2dc0532e57be9cc86c91b1b5aed7edea562ee4e3f69e012db8b25cb6af7",
+      "bytes": 623,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/figure-sources/shared/shared-02-网页AI协作.mmd",
+      "object": "objects/7d/7d68b9e58368a69e08cbcc39d340d028a6befe969102d223d0f14773a7ef0228.mmd",
+      "sha256": "7d68b9e58368a69e08cbcc39d340d028a6befe969102d223d0f14773a7ef0228",
+      "bytes": 892,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/figures-ready.md",
+      "object": "objects/12/124719c8bd0d6bdc469a0efbb4750adb752df277c19f37995d193a80c862ea37.md",
+      "sha256": "124719c8bd0d6bdc469a0efbb4750adb752df277c19f37995d193a80c862ea37",
+      "bytes": 10082,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/illustration-final.md",
+      "object": "objects/24/249d5c7721a91afd72fec847dc3153a7af22885367a56789ce4f9e185ea3552a.md",
+      "sha256": "249d5c7721a91afd72fec847dc3153a7af22885367a56789ce4f9e185ea3552a",
+      "bytes": 7310,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/illustration-preparation.md",
+      "object": "objects/cc/ccd9d690780249430b4899282f79e727eb9d2b7117eb4ad1df530a10af926f7e.md",
+      "sha256": "ccd9d690780249430b4899282f79e727eb9d2b7117eb4ad1df530a10af926f7e",
+      "bytes": 5900,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/parent-review-checklist.md",
+      "object": "objects/0b/0ba3a488f39f9c69c91b17a1eb810e9df3d6c945555c8d2570374ebe0896d831.md",
+      "sha256": "0ba3a488f39f9c69c91b17a1eb810e9df3d6c945555c8d2570374ebe0896d831",
+      "bytes": 1819,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/peer-review-01-04.md",
+      "object": "objects/4f/4fd6d6e1473bb3a448c138fe5a21c309be9608f9e1a34cdcc4894db0e5de1484.md",
+      "sha256": "4fd6d6e1473bb3a448c138fe5a21c309be9608f9e1a34cdcc4894db0e5de1484",
+      "bytes": 13931,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/peer-review-05-08.md",
+      "object": "objects/38/38b275746a6aa52a05b517d952630678bd4d4c41913773bb0096364f2cc1ebcc.md",
+      "sha256": "38b275746a6aa52a05b517d952630678bd4d4c41913773bb0096364f2cc1ebcc",
+      "bytes": 11806,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/peer-review-09-12.md",
+      "object": "objects/6c/6c34654eca7b74e480532e3e5ce5a624efd90afa50b4de808d8ea1496c9ca29d.md",
+      "sha256": "6c34654eca7b74e480532e3e5ce5a624efd90afa50b4de808d8ea1496c9ca29d",
+      "bytes": 14382,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/thread-registry.json",
+      "object": "objects/56/561aa2538e6ca14fe529531894bc4a271ae4f303185ecf795b9862f866ddd1df.json",
+      "sha256": "561aa2538e6ca14fe529531894bc4a271ae4f303185ecf795b9862f866ddd1df",
+      "bytes": 1138,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/writer-01-04.md",
+      "object": "objects/e1/e17bffe8c93d08a652f98685332b860e3e058c2e49d02c4b312fca4b63451694.md",
+      "sha256": "e17bffe8c93d08a652f98685332b860e3e058c2e49d02c4b312fca4b63451694",
+      "bytes": 9172,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/writer-05-08.md",
+      "object": "objects/bf/bfe97790f065a79192a0c390e4ec955b9f545af98d6e1e6b7c89c0156711d657.md",
+      "sha256": "bfe97790f065a79192a0c390e4ec955b9f545af98d6e1e6b7c89c0156711d657",
+      "bytes": 9175,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/handoffs/writer-09-12.md",
+      "object": "objects/18/1830d6649817c6a38da3c9d7e9fefa8791db3bf440aa5c5b47c0b3dac3073e7e.md",
+      "sha256": "1830d6649817c6a38da3c9d7e9fefa8791db3bf440aa5c5b47c0b3dac3073e7e",
+      "bytes": 9307,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/__archive_images__/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png",
+      "object": "objects/37/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png",
+      "sha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+      "bytes": 405336,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-01-engineering-cycle.png",
+      "object": "objects/28/28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d.png",
+      "sha256": "28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d",
+      "bytes": 215696,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-01-engineering-cycle.svg",
+      "object": "objects/70/7087263a2230415bf621145c714b2730dbb74882796d12a47eea31994e805939.svg",
+      "sha256": "7087263a2230415bf621145c714b2730dbb74882796d12a47eea31994e805939",
+      "bytes": 4482,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-02-prompt-comparison.png",
+      "object": "objects/13/132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc.png",
+      "sha256": "132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc",
+      "bytes": 296637,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-02-prompt-comparison.svg",
+      "object": "objects/06/064f6eb539ae5b4b438e9a064ea29ba7ee8bb40b61849072d444a0ea057ccb94.svg",
+      "sha256": "064f6eb539ae5b4b438e9a064ea29ba7ee8bb40b61849072d444a0ea057ccb94",
+      "bytes": 5129,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-03-ai-evidence-loop.png",
+      "object": "objects/02/02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065.png",
+      "sha256": "02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065",
+      "bytes": 257395,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch01-03-ai-evidence-loop.svg",
+      "object": "objects/fe/fe2f7708075503bbf4cdb15737e536d83553affe300fd921b613e495099e57e6.svg",
+      "sha256": "fe2f7708075503bbf4cdb15737e536d83553affe300fd921b613e495099e57e6",
+      "bytes": 4701,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-01-scope-map.png",
+      "object": "objects/34/3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0.png",
+      "sha256": "3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0",
+      "bytes": 191780,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-01-scope-map.svg",
+      "object": "objects/b2/b250a15576c072d484d096a1aaec212911e5b219d2e740a2f074e533d84e39ea.svg",
+      "sha256": "b250a15576c072d484d096a1aaec212911e5b219d2e740a2f074e533d84e39ea",
+      "bytes": 17196,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-02-traceability.png",
+      "object": "objects/54/5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2.png",
+      "sha256": "5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2",
+      "bytes": 148062,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-02-traceability.svg",
+      "object": "objects/cb/cbe27f7143e75f0db489af4d0e9e5b41fd136b7e79030c1f932826ca04a0e32e.svg",
+      "sha256": "cbe27f7143e75f0db489af4d0e9e5b41fd136b7e79030c1f932826ca04a0e32e",
+      "bytes": 20792,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-03-milestones.png",
+      "object": "objects/7a/7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54.png",
+      "sha256": "7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54",
+      "bytes": 178641,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch02-03-milestones.svg",
+      "object": "objects/e9/e9c257b944aa5009c0bae26407fa15f3aaa96ea1720cadabd2a32f915d73f9bd.svg",
+      "sha256": "e9c257b944aa5009c0bae26407fa15f3aaa96ea1720cadabd2a32f915d73f9bd",
+      "bytes": 17253,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-01-architecture.png",
+      "object": "objects/b0/b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b.png",
+      "sha256": "b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b",
+      "bytes": 258033,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-01-architecture.svg",
+      "object": "objects/1d/1dfec72f40dc835377b31cd6c2a589f22ca88b8e84575f69cb32d7c3b180699d.svg",
+      "sha256": "1dfec72f40dc835377b31cd6c2a589f22ca88b8e84575f69cb32d7c3b180699d",
+      "bytes": 18795,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-02-local-records-er.png",
+      "object": "objects/1e/1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f.png",
+      "sha256": "1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f",
+      "bytes": 398819,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-02-local-records-er.svg",
+      "object": "objects/5e/5e30a714637fc6bf1af19f187629de9da071a11e8fc4db5507fd982da4ea61dc.svg",
+      "sha256": "5e30a714637fc6bf1af19f187629de9da071a11e8fc4db5507fd982da4ea61dc",
+      "bytes": 74758,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-03-two-state-axes.png",
+      "object": "objects/19/19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef.png",
+      "sha256": "19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef",
+      "bytes": 227455,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-03-two-state-axes.svg",
+      "object": "objects/46/469072e2a078492f438c8b405034869c03bff1c4fc102251922383d2566caebb.svg",
+      "sha256": "469072e2a078492f438c8b405034869c03bff1c4fc102251922383d2566caebb",
+      "bytes": 23864,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-04-version-transaction.png",
+      "object": "objects/fa/fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9.png",
+      "sha256": "fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9",
+      "bytes": 247660,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch03-04-version-transaction.svg",
+      "object": "objects/5f/5fab181a638c916b356bc32c1211c227585ae828ba1de8014fbf973e3466c5e7.svg",
+      "sha256": "5fab181a638c916b356bc32c1211c227585ae828ba1de8014fbf973e3466c5e7",
+      "bytes": 29798,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-01-git-workflow.png",
+      "object": "objects/f1/f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992.png",
+      "sha256": "f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992",
+      "bytes": 172762,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-01-git-workflow.svg",
+      "object": "objects/da/daa4939b6073e1b62597c309fd6b85a0093db4ba248c0bd7c418951fa44d30ba.svg",
+      "sha256": "daa4939b6073e1b62597c309fd6b85a0093db4ba248c0bd7c418951fa44d30ba",
+      "bytes": 3743,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-02-first-request.png",
+      "object": "objects/da/da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda.png",
+      "sha256": "da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda",
+      "bytes": 227386,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-02-first-request.svg",
+      "object": "objects/06/06e48b78bb7302a2f7bbb3c0c9be290c3afa3da4bb024c111bf5d7e84705e73b.svg",
+      "sha256": "06e48b78bb7302a2f7bbb3c0c9be290c3afa3da4bb024c111bf5d7e84705e73b",
+      "bytes": 28006,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-03-debug-path.png",
+      "object": "objects/74/7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed.png",
+      "sha256": "7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed",
+      "bytes": 304323,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch04-03-debug-path.svg",
+      "object": "objects/38/3871324873f3e244347291386e82b43539cc04ce73b91df098544a7956a20400.svg",
+      "sha256": "3871324873f3e244347291386e82b43539cc04ce73b91df098544a7956a20400",
+      "bytes": 5791,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-01-device-request.png",
+      "object": "objects/bb/bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b.png",
+      "sha256": "bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b",
+      "bytes": 165545,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-01-device-request.svg",
+      "object": "objects/df/dfd10834ba5fe4c17c6f50b488e22ebbc6e34d1b0a21512b549adf2595fd95da.svg",
+      "sha256": "dfd10834ba5fe4c17c6f50b488e22ebbc6e34d1b0a21512b549adf2595fd95da",
+      "bytes": 29644,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-02-space-relations.png",
+      "object": "objects/7c/7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737.png",
+      "sha256": "7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737",
+      "bytes": 148264,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-02-space-relations.svg",
+      "object": "objects/21/2196d7ab2150f3360c4847d162750e00111c6d6e13d6336ae2fe5e30a9e27af6.svg",
+      "sha256": "2196d7ab2150f3360c4847d162750e00111c6d6e13d6336ae2fe5e30a9e27af6",
+      "bytes": 17434,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-03-binding-readback.png",
+      "object": "objects/86/86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db.png",
+      "sha256": "86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db",
+      "bytes": 188028,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch05-03-binding-readback.svg",
+      "object": "objects/48/48fb3379eae03e4619df4ed450f11b4625726ebb798403b3428fd5f145786311.svg",
+      "sha256": "48fb3379eae03e4619df4ed450f11b4625726ebb798403b3428fd5f145786311",
+      "bytes": 30308,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-01-device-wireframe.png",
+      "object": "objects/e6/e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567.png",
+      "sha256": "e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567",
+      "bytes": 335623,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-01-device-wireframe.svg",
+      "object": "objects/18/1895e317d928b6842b06320aa44516d670a4f60e7e7ab55c217e3e081e8fe568.svg",
+      "sha256": "1895e317d928b6842b06320aa44516d670a4f60e7e7ab55c217e3e081e8fe568",
+      "bytes": 5342,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-02-components-state.png",
+      "object": "objects/af/afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9.png",
+      "sha256": "afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9",
+      "bytes": 221961,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-02-components-state.svg",
+      "object": "objects/5a/5ac5f3703d919e22bb518d2f07a2901bbfef1ead6d60832956c118a97a77bfe3.svg",
+      "sha256": "5ac5f3703d919e22bb518d2f07a2901bbfef1ead6d60832956c118a97a77bfe3",
+      "bytes": 21774,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-03-page-states.png",
+      "object": "objects/c5/c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1.png",
+      "sha256": "c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1",
+      "bytes": 288601,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch06-03-page-states.svg",
+      "object": "objects/13/13554902d00bd84de9d532b646ce58f206e365540726b327126fc44ae87e528a.svg",
+      "sha256": "13554902d00bd84de9d532b646ce58f206e365540726b327126fc44ae87e528a",
+      "bytes": 5205,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-01-quality-cases.png",
+      "object": "objects/9b/9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251.png",
+      "sha256": "9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251",
+      "bytes": 242627,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-01-quality-cases.svg",
+      "object": "objects/88/880aca1c3abc555160ec3eed1cb060f0f65118950491dd77918a773ce463aabe.svg",
+      "sha256": "880aca1c3abc555160ec3eed1cb060f0f65118950491dd77918a773ce463aabe",
+      "bytes": 3423,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-02-history-gaps.png",
+      "object": "objects/74/740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead.png",
+      "sha256": "740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead",
+      "bytes": 239205,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-02-history-gaps.svg",
+      "object": "objects/d9/d964d4a2b6a6e463740feb9f86666521f5aa336e142e1d03be99e7c81076c08b.svg",
+      "sha256": "d964d4a2b6a6e463740feb9f86666521f5aa336e142e1d03be99e7c81076c08b",
+      "bytes": 3859,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-03-refresh-lifecycle.png",
+      "object": "objects/fd/fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91.png",
+      "sha256": "fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91",
+      "bytes": 161933,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch07-03-refresh-lifecycle.svg",
+      "object": "objects/63/63876c29bf7104cef1fa146a439848d3d02da375e0ec9ab3b5a5547fc9a29ec1.svg",
+      "sha256": "63876c29bf7104cef1fa146a439848d3d02da375e0ec9ab3b5a5547fc9a29ec1",
+      "bytes": 26102,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-01-role-scope.png",
+      "object": "objects/e8/e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383.png",
+      "sha256": "e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383",
+      "bytes": 254969,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-01-role-scope.svg",
+      "object": "objects/21/21453afd958f3d1e652cb5bd09429514bc9160ade14d3c5bc1783c49d3bbd66f.svg",
+      "sha256": "21453afd958f3d1e652cb5bd09429514bc9160ade14d3c5bc1783c49d3bbd66f",
+      "bytes": 22461,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-02-denial-path.png",
+      "object": "objects/ad/adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea.png",
+      "sha256": "adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea",
+      "bytes": 353468,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-02-denial-path.svg",
+      "object": "objects/7b/7b934f59fa3750fb0809f22c98aaffa4cfd98730c13d725a7f762c36641f6796.svg",
+      "sha256": "7b934f59fa3750fb0809f22c98aaffa4cfd98730c13d725a7f762c36641f6796",
+      "bytes": 6855,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-03-identity-race.png",
+      "object": "objects/8b/8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1.png",
+      "sha256": "8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1",
+      "bytes": 214403,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch08-03-identity-race.svg",
+      "object": "objects/2b/2b9f4440186b227a5b5e99b38aeb411db6ab83e24d8d53d52b18dcf554b84b04.svg",
+      "sha256": "2b9f4440186b227a5b5e99b38aeb411db6ab83e24d8d53d52b18dcf554b84b04",
+      "bytes": 26499,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-01-state-machine.png",
+      "object": "objects/c5/c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd.png",
+      "sha256": "c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd",
+      "bytes": 376300,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-01-state-machine.svg",
+      "object": "objects/9d/9db9481f2f70717242b7b56385db48902e88715e85b7c671105e1e32021487ee.svg",
+      "sha256": "9db9481f2f70717242b7b56385db48902e88715e85b7c671105e1e32021487ee",
+      "bytes": 6014,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-02-close-gates.png",
+      "object": "objects/31/31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1.png",
+      "sha256": "31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1",
+      "bytes": 483369,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-02-close-gates.svg",
+      "object": "objects/d9/d9328f5eac42c49a382bc000a3f36bd4506b92f5c70d8d65036734505796f813.svg",
+      "sha256": "d9328f5eac42c49a382bc000a3f36bd4506b92f5c70d8d65036734505796f813",
+      "bytes": 5377,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-03-recovery-sequence.png",
+      "object": "objects/fe/fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577.png",
+      "sha256": "fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577",
+      "bytes": 338280,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch09-03-recovery-sequence.svg",
+      "object": "objects/db/db4ae4d6d306667a1c8b6f45bb973147ff4657dee8cafd45d8c10e1ebfe3c4b5.svg",
+      "sha256": "db4ae4d6d306667a1c8b6f45bb973147ff4657dee8cafd45d8c10e1ebfe3c4b5",
+      "bytes": 33360,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-01-owner-event-model.png",
+      "object": "objects/26/26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd.png",
+      "sha256": "26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd",
+      "bytes": 258807,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-01-owner-event-model.svg",
+      "object": "objects/78/7845f892ca4559123695e4d8897850ddb5e0b3ddad1c6a3631007f482ef22786.svg",
+      "sha256": "7845f892ca4559123695e4d8897850ddb5e0b3ddad1c6a3631007f482ef22786",
+      "bytes": 4911,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-02-future-assignment.png",
+      "object": "objects/9b/9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e.png",
+      "sha256": "9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e",
+      "bytes": 273867,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-02-future-assignment.svg",
+      "object": "objects/ad/addefbb81ae5a38381d7ebbcb9eee25fe5d6542537d0e3cec2cf2d9be9b5e304.svg",
+      "sha256": "addefbb81ae5a38381d7ebbcb9eee25fe5d6542537d0e3cec2cf2d9be9b5e304",
+      "bytes": 32184,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-03-responsibility-timeline.png",
+      "object": "objects/c7/c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe.png",
+      "sha256": "c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe",
+      "bytes": 248901,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch10-03-responsibility-timeline.svg",
+      "object": "objects/ef/eff35935df4e5bdbfeca3b83f348c4878dfbb72e3198b2273e4974a70b66dbd7.svg",
+      "sha256": "eff35935df4e5bdbfeca3b83f348c4878dfbb72e3198b2273e4974a70b66dbd7",
+      "bytes": 4460,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-01-evidence-layers.png",
+      "object": "objects/e6/e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c.png",
+      "sha256": "e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c",
+      "bytes": 333113,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-01-evidence-layers.svg",
+      "object": "objects/0c/0c5387dd80cbd99bf41b905786403eaf149675b5db63a83385bfca7a5966efc2.svg",
+      "sha256": "0c5387dd80cbd99bf41b905786403eaf149675b5db63a83385bfca7a5966efc2",
+      "bytes": 4798,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-02-concurrent-updates.png",
+      "object": "objects/0b/0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1.png",
+      "sha256": "0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1",
+      "bytes": 242109,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-02-concurrent-updates.svg",
+      "object": "objects/19/19fc557283d6411fefb52330099fffc99f6596e0f907e75c27f51fc13105940c.svg",
+      "sha256": "19fc557283d6411fefb52330099fffc99f6596e0f907e75c27f51fc13105940c",
+      "bytes": 31905,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-03-transaction-rollback.png",
+      "object": "objects/30/303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740.png",
+      "sha256": "303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740",
+      "bytes": 275867,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-03-transaction-rollback.svg",
+      "object": "objects/4b/4be39496560720cdae2f589438838b29af3ac47c6040516586b03e09ad4e490d.svg",
+      "sha256": "4be39496560720cdae2f589438838b29af3ac47c6040516586b03e09ad4e490d",
+      "bytes": 4732,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-04-debugging-loop.png",
+      "object": "objects/4c/4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807.png",
+      "sha256": "4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807",
+      "bytes": 303554,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch11-04-debugging-loop.svg",
+      "object": "objects/ec/eca3e8dc6585974b73e0e17445455f4836f49cf4ababc98781f7cf6c98679844.svg",
+      "sha256": "eca3e8dc6585974b73e0e17445455f4836f49cf4ababc98781f7cf6c98679844",
+      "bytes": 5735,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-01-delivery-flow.png",
+      "object": "objects/40/403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03.png",
+      "sha256": "403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03",
+      "bytes": 293565,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-01-delivery-flow.svg",
+      "object": "objects/62/625a25a544b3e24e69f8166fca131038a53ffe9344c3cd593cb12daafd6c5e32.svg",
+      "sha256": "625a25a544b3e24e69f8166fca131038a53ffe9344c3cd593cb12daafd6c5e32",
+      "bytes": 5172,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-02-controlled-change.png",
+      "object": "objects/75/75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136.png",
+      "sha256": "75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136",
+      "bytes": 298861,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-02-controlled-change.svg",
+      "object": "objects/50/50f0efcebb41fa596c489d4b9640f65c06b7eb7718c2311202974ae74e2ab218.svg",
+      "sha256": "50f0efcebb41fa596c489d4b9640f65c06b7eb7718c2311202974ae74e2ab218",
+      "bytes": 4827,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-03-code-data-recovery.png",
+      "object": "objects/6f/6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2.png",
+      "sha256": "6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2",
+      "bytes": 358883,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/ch12-03-code-data-recovery.svg",
+      "object": "objects/1d/1d44803b171e287e0a86ee43d361a2f11c9e7dd7f5921c097605e98d6c06437c.svg",
+      "sha256": "1d44803b171e287e0a86ee43d361a2f11c9e7dd7f5921c097605e98d6c06437c",
+      "bytes": 5815,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/chapter-figures.json",
+      "object": "objects/5e/5e005fd6be49fa914bb3c7576249cd61009a02e3b0e39133069e87eca1d546f3.json",
+      "sha256": "5e005fd6be49fa914bb3c7576249cd61009a02e3b0e39133069e87eca1d546f3",
+      "bytes": 58436,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/er-check.json",
+      "object": "objects/cd/cd86ca760f9dd19886c599c67aea012d5a68e40b41f3bc34216c93dbf861fa4b.json",
+      "sha256": "cd86ca760f9dd19886c599c67aea012d5a68e40b41f3bc34216c93dbf861fa4b",
+      "bytes": 1782,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/figures-ready.json",
+      "object": "objects/3b/3b9f8f6f9e77354e0ccdd6fe6c43f9d8e82c4ec83b5f0eccfd59dfb497fe8716.json",
+      "sha256": "3b9f8f6f9e77354e0ccdd6fe6c43f9d8e82c4ec83b5f0eccfd59dfb497fe8716",
+      "bytes": 44551,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/final-visual-review.json",
+      "object": "objects/77/7784a9db8e2a4683dd62b9a8d7000601e44dc0710bf7d6646038fb90cf2eee61.json",
+      "sha256": "7784a9db8e2a4683dd62b9a8d7000601e44dc0710bf7d6646038fb90cf2eee61",
+      "bytes": 17802,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/reader-sample-standalone.build.json",
+      "object": "objects/cf/cf364b6a561d635cdabab94141744ede22ee415c1b190e011f6b25dcdcd64f17.json",
+      "sha256": "cf364b6a561d635cdabab94141744ede22ee415c1b190e011f6b25dcdcd64f17",
+      "bytes": 2951,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/reader-sample-standalone.html",
+      "object": "objects/82/82e484cece14024aaf9fc2ec7a613c85846a4edc6cc5e44d4be31a825b1af1c3.html",
+      "sha256": "82e484cece14024aaf9fc2ec7a613c85846a4edc6cc5e44d4be31a825b1af1c3",
+      "bytes": 15953,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/reader-sample.build.json",
+      "object": "objects/ee/ee305bb515f44642dfd0e4ddbb9c45b35e48825f4d91b34f684d69908986b3f9.json",
+      "sha256": "ee305bb515f44642dfd0e4ddbb9c45b35e48825f4d91b34f684d69908986b3f9",
+      "bytes": 2941,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/reader-sample.html",
+      "object": "objects/bc/bc976ce277d8e83a86b711c1d43fcb9858d3e096b169c232521917b034dff463.html",
+      "sha256": "bc976ce277d8e83a86b711c1d43fcb9858d3e096b169c232521917b034dff463",
+      "bytes": 14111,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/render-report.json",
+      "object": "objects/2f/2faaa492716c8332101b80b96be564658d5298b8182a90c409b88e3bac1eef20.json",
+      "sha256": "2faaa492716c8332101b80b96be564658d5298b8182a90c409b88e3bac1eef20",
+      "bytes": 56357,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/sample-visual-review.json",
+      "object": "objects/6d/6d1ad7e3f145d38f31192f0da16b7005695f98e024f6ef60af941d238107771d.json",
+      "sha256": "6d1ad7e3f145d38f31192f0da16b7005695f98e024f6ef60af941d238107771d",
+      "bytes": 2892,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/shared-01-教学工程边界.png",
+      "object": "objects/37/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png",
+      "sha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+      "bytes": 405336,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/shared-01-教学工程边界.svg",
+      "object": "objects/48/481a20e6f625a75db7c0cce27c6af21683e0dbd165aa6d91742720b4089e1b1c.svg",
+      "sha256": "481a20e6f625a75db7c0cce27c6af21683e0dbd165aa6d91742720b4089e1b1c",
+      "bytes": 5446,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/shared-02-网页AI协作.png",
+      "object": "objects/54/542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929.png",
+      "sha256": "542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929",
+      "bytes": 287875,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/shared-02-网页AI协作.svg",
+      "object": "objects/fc/fc11e9ffe3f52d84bdac6f3eae51db9fd5fb19d069c7263a1a0df5b0e689a63f.svg",
+      "sha256": "fc11e9ffe3f52d84bdac6f3eae51db9fd5fb19d069c7263a1a0df5b0e689a63f",
+      "bytes": 30955,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/图表目录.md",
+      "object": "objects/a2/a2645b7a65e27fed915970dd69eb80fc2a37ebaf49acbe8e086040684635f517.md",
+      "sha256": "a2645b7a65e27fed915970dd69eb80fc2a37ebaf49acbe8e086040684635f517",
+      "bytes": 9864,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/01-软件工程入门与网页AI协作.md",
+      "object": "objects/6a/6a27cf99061a76fcd0adc62f99d8754f65b639c8f12dfabd4a6794d4ad2d054d.md",
+      "sha256": "6a27cf99061a76fcd0adc62f99d8754f65b639c8f12dfabd4a6794d4ad2d054d",
+      "bytes": 19182,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/02-需求分析与项目计划.md",
+      "object": "objects/d4/d4a25dcb90023233e363f55e39a6e4e039d5331ca55a784c889039092df7a9a4.md",
+      "sha256": "d4a25dcb90023233e363f55e39a6e4e039d5331ca55a784c889039092df7a9a4",
+      "bytes": 20036,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/03-架构数据与接口设计.md",
+      "object": "objects/67/67073dfe3e53d8e741316b03210840d0652db9d51ad2d919e5ff2bcddb5f833b.md",
+      "sha256": "67073dfe3e53d8e741316b03210840d0652db9d51ad2d919e5ff2bcddb5f833b",
+      "bytes": 21515,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/04-开发环境版本控制与首次贯通.md",
+      "object": "objects/55/55643226cfe7f0afea5c940a0dbaf2c10c4917ce361d353dbc2ec00bbbd7c97d.md",
+      "sha256": "55643226cfe7f0afea5c940a0dbaf2c10c4917ce361d353dbc2ec00bbbd7c97d",
+      "bytes": 21403,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/05-后端空间与设备接口.md",
+      "object": "objects/26/268986bcc5a44e6c5ed02495d90ae5ea831f07166989539ae2c96e40b17d75c2.md",
+      "sha256": "268986bcc5a44e6c5ed02495d90ae5ea831f07166989539ae2c96e40b17d75c2",
+      "bytes": 17927,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/06-前端设备台账与自主UI.md",
+      "object": "objects/6c/6c948f1c837760dc4c2f4bded116d49ca0ba1049bee86f2674a7a88dd9687e8c.md",
+      "sha256": "6c948f1c837760dc4c2f4bded116d49ca0ba1049bee86f2674a7a88dd9687e8c",
+      "bytes": 17786,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/07-实时监测历史与数据质量.md",
+      "object": "objects/6c/6c19e5d38576df82d54f58e461f6cda26c0d5121783c1f18f05e3cab2c1b77b3.md",
+      "sha256": "6c19e5d38576df82d54f58e461f6cda26c0d5121783c1f18f05e3cab2c1b77b3",
+      "bytes": 18183,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/08-登录角色与权限验证.md",
+      "object": "objects/7d/7dd3921478482fc5cba76e1952913bfc6ba76c34e2236457079aa900342fcae7.md",
+      "sha256": "7dd3921478482fc5cba76e1952913bfc6ba76c34e2236457079aa900342fcae7",
+      "bytes": 19099,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/09-演练事件与状态机.md",
+      "object": "objects/94/943b49dfcc46c4be6e879362bc1143691ea7855f6784dbcdb149e1b51aa407a9.md",
+      "sha256": "943b49dfcc46c4be6e879362bc1143691ea7855f6784dbcdb149e1b51aa407a9",
+      "bytes": 18606,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/10-设备责任与审计追踪.md",
+      "object": "objects/30/30771a1ef0eeec8db18c1ac9f888e6b98e3b68b66ccc37eff57d926f28bd6dcb.md",
+      "sha256": "30771a1ef0eeec8db18c1ac9f888e6b98e3b68b66ccc37eff57d926f28bd6dcb",
+      "bytes": 18902,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/11-测试调试与质量改进.md",
+      "object": "objects/1e/1eb1d43f30cf52f29d97ad73d303d08bf308a836e493a004751c08105e33f064.md",
+      "sha256": "1eb1d43f30cf52f29d97ad73d303d08bf308a836e493a004751c08105e33f064",
+      "bytes": 18498,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/manuscript/12-构建交付变更与答辩.md",
+      "object": "objects/47/477bfcec3fe0b7762c0d3dddcd9542ccd2635a85ef518d07663ccd8002b1dfdc.md",
+      "sha256": "477bfcec3fe0b7762c0d3dddcd9542ccd2635a85ef518d07663ccd8002b1dfdc",
+      "bytes": 19296,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/AI编程图文初稿_V0.2_单文件.build.json",
+      "object": "objects/42/42ba27e0e4ca91eebc34799fae897d718ef145f17887e17047bb4165ae09a827.json",
+      "sha256": "42ba27e0e4ca91eebc34799fae897d718ef145f17887e17047bb4165ae09a827",
+      "bytes": 79183,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/AI编程图文初稿_V0.2_单文件.html",
+      "object": "objects/f2/f2b344009fbaaa5439faf762304aa7ad3999692148377a468cee9ac04a701710.html",
+      "sha256": "f2b344009fbaaa5439faf762304aa7ad3999692148377a468cee9ac04a701710",
+      "bytes": 338015,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065.png",
+      "object": "objects/02/02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065.png",
+      "sha256": "02a66e054d922703be12e48fc49aee03d1037844ace15b02d8dac6373c206065",
+      "bytes": 257395,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1.png",
+      "object": "objects/0b/0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1.png",
+      "sha256": "0b4ccca9da06f5f3b1da7ba53d22b27da362666cedfe01e02d2e2326f66dbca1",
+      "bytes": 242109,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc.png",
+      "object": "objects/13/132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc.png",
+      "sha256": "132841a5024b6a905b12ea6d76a20a508a4a1f3dd6a3a88f1e7c6ff2932c44bc",
+      "bytes": 296637,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef.png",
+      "object": "objects/19/19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef.png",
+      "sha256": "19fb1bf0822c2bd26f54887e8ef957f9e5b0d6d131b5f7c345a2c04123aebcef",
+      "bytes": 227455,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f.png",
+      "object": "objects/1e/1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f.png",
+      "sha256": "1e800cfb8ca64f28ba239c50ec22ceb85748dc19fb9aff919f7437f40c2e241f",
+      "bytes": 398819,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd.png",
+      "object": "objects/26/26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd.png",
+      "sha256": "26ebe946fb539ee3a3e8fdfbefe201ae210a52e9d5b112c44cfd41118f5a8edd",
+      "bytes": 258807,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d.png",
+      "object": "objects/28/28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d.png",
+      "sha256": "28493d7e247b748dea4163b287cb3e2c1c6e1b695fec41e8f78d63b5eb7d139d",
+      "bytes": 215696,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740.png",
+      "object": "objects/30/303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740.png",
+      "sha256": "303e13bda09b8b80fbf5d430267d629502b191af5c861b235851b804666ad740",
+      "bytes": 275867,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1.png",
+      "object": "objects/31/31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1.png",
+      "sha256": "31256295fb69b3c22fbba77f0dcd81512595aec84a022ad949d4cdff44a530f1",
+      "bytes": 483369,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0.png",
+      "object": "objects/34/3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0.png",
+      "sha256": "3492830b1ec6af5c9bfd44c960cc9f30ed39597344f8f6502ffe96527486d2f0",
+      "bytes": 191780,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png",
+      "object": "objects/37/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png",
+      "sha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+      "bytes": 405336,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03.png",
+      "object": "objects/40/403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03.png",
+      "sha256": "403dbab4a374afcf3a35d4d55b43cac76f5d3b27076dae41581575c99127dc03",
+      "bytes": 293565,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807.png",
+      "object": "objects/4c/4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807.png",
+      "sha256": "4c6b8408e1d8231a05f9b4d45e019c22e9efbe97b892cdc546d055b9d272f807",
+      "bytes": 303554,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2.png",
+      "object": "objects/54/5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2.png",
+      "sha256": "5414ce64a77af5f78850d4b9ca3487cb7b17cdc0ff9253c7f77eaa3c2a9830a2",
+      "bytes": 148062,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929.png",
+      "object": "objects/54/542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929.png",
+      "sha256": "542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929",
+      "bytes": 287875,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2.png",
+      "object": "objects/6f/6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2.png",
+      "sha256": "6f9abb5340310f579c6fda8bfa269a5957a1f9d1365c438a92fc50f6d56054f2",
+      "bytes": 358883,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed.png",
+      "object": "objects/74/7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed.png",
+      "sha256": "7402559b0114c9ab035f77ae9aab583bcdf97db6eb1b111eb2e3b0d117b1a6ed",
+      "bytes": 304323,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead.png",
+      "object": "objects/74/740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead.png",
+      "sha256": "740e2b588254e51f3c4722c5fd4b23da697601df67f03c600a06209461ab9ead",
+      "bytes": 239205,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136.png",
+      "object": "objects/75/75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136.png",
+      "sha256": "75e0a3753d1cac4ce15dc1c9e5a3128a02853a0ba1076289746a31eb200af136",
+      "bytes": 298861,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54.png",
+      "object": "objects/7a/7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54.png",
+      "sha256": "7a5b26ca596db3c63c4fb4c582d3d69a4674970386a3aca3863956f97ab26b54",
+      "bytes": 178641,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737.png",
+      "object": "objects/7c/7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737.png",
+      "sha256": "7c8bb878be675478265f737a0cf39b2f51899c6d86651304ddb0555692f7a737",
+      "bytes": 148264,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db.png",
+      "object": "objects/86/86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db.png",
+      "sha256": "86dcd9d92cf6d23c5103c6c945027173ebb6c2edac176e5587900343ca8644db",
+      "bytes": 188028,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1.png",
+      "object": "objects/8b/8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1.png",
+      "sha256": "8bc52a819f3448dffdb0f192a16d8013f27cf89079d0c6303682f3612e8b4eb1",
+      "bytes": 214403,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e.png",
+      "object": "objects/9b/9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e.png",
+      "sha256": "9b27637cb2bb07fcd92e929f6cf55fc6fd74c0646d50e804cefba031271feb1e",
+      "bytes": 273867,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251.png",
+      "object": "objects/9b/9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251.png",
+      "sha256": "9b4e9b42e033aed0e507a6ce52267bad8b7509c3208d198ef11f3fbe6a0cb251",
+      "bytes": 242627,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea.png",
+      "object": "objects/ad/adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea.png",
+      "sha256": "adc13134647831ddfd6193752c7f6a67ae124d8fc5427377031c29aca1a906ea",
+      "bytes": 353468,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9.png",
+      "object": "objects/af/afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9.png",
+      "sha256": "afcaef8d81cf6a44e269bbc9628df93ad9e89a909d8711fc462a64d078f782b9",
+      "bytes": 221961,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b.png",
+      "object": "objects/b0/b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b.png",
+      "sha256": "b0c8a0d0ee6d1aec48ba3bc9e049ddd35ad4875d07db11f9d5eac5460bfcd00b",
+      "bytes": 258033,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b.png",
+      "object": "objects/bb/bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b.png",
+      "sha256": "bbaa3f301342781826a4fcdd80488661f286bc490a7a1cb2933f17d7a4960d8b",
+      "bytes": 165545,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1.png",
+      "object": "objects/c5/c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1.png",
+      "sha256": "c516bcfe1031e21c043ebb5cc19a3294bb05f271d6154bac3948affe70e776c1",
+      "bytes": 288601,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd.png",
+      "object": "objects/c5/c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd.png",
+      "sha256": "c5c0e288f1069b3b741609302a68b01ce9dfc731b796b38f725ceb4a8c1302bd",
+      "bytes": 376300,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe.png",
+      "object": "objects/c7/c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe.png",
+      "sha256": "c78dad138573aec83869ceb942dd546c914a9ef4d31cd2facaab1e55fa5433fe",
+      "bytes": 248901,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda.png",
+      "object": "objects/da/da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda.png",
+      "sha256": "da97163ef27d53952292fb564e91996c53a9fb8cb17426b53b9414a2c204edda",
+      "bytes": 227386,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567.png",
+      "object": "objects/e6/e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567.png",
+      "sha256": "e6918999774c111d7439dada2ea24e1ac91bb466e1f9117899f744ac4b65a567",
+      "bytes": 335623,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c.png",
+      "object": "objects/e6/e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c.png",
+      "sha256": "e6f2714f5d40a8e5e9473fec10532a9564597ee411237524d4b460b9123e1f1c",
+      "bytes": 333113,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383.png",
+      "object": "objects/e8/e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383.png",
+      "sha256": "e8a75510d7663570dd6d43c7d2be8aa70e27e6657bdad5afd31102661b333383",
+      "bytes": 254969,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992.png",
+      "object": "objects/f1/f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992.png",
+      "sha256": "f10f1b29d7ae2a44b7c0af536c8d93846d88b8949d6a4c57951e5a8fb1926992",
+      "bytes": 172762,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9.png",
+      "object": "objects/fa/fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9.png",
+      "sha256": "fa3be38303d306e1a4ad9d39f5158409c1c9edf97f93b84e8e2e365aa98080c9",
+      "bytes": 247660,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91.png",
+      "object": "objects/fd/fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91.png",
+      "sha256": "fd06e754347f1c3df0e199bfc9ca16b6424795866d96ebe067e48a910d37bd91",
+      "bytes": 161933,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/__archive_images__/fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577.png",
+      "object": "objects/fe/fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577.png",
+      "sha256": "fefee02c110551ec2f4b1de1141d977ad698b0c89f15fb8a588bf98787de3577",
+      "bytes": 338280,
+      "derived": "externalized-verified-teaching-diagram"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/index.build.json",
+      "object": "objects/e7/e7e390d89818f45090e480c64d37c51d9b62d3fd544f372e8c71d05a7187aec8.json",
+      "sha256": "e7e390d89818f45090e480c64d37c51d9b62d3fd544f372e8c71d05a7187aec8",
+      "bytes": 79154,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/reading/index.html",
+      "object": "objects/f8/f866a6b4ebab0b1da94e1fe4b8cac95153a9ac60a011981e98cf87f08fa82fe3.html",
+      "sha256": "f866a6b4ebab0b1da94e1fe4b8cac95153a9ac60a011981e98cf87f08fa82fe3",
+      "bytes": 317920,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/AI任务卡.md",
+      "object": "objects/6d/6d287f0ed932c14f76b99c2412afc49da69dd18ae00cf18e50865a6402f5c031.md",
+      "sha256": "6d287f0ed932c14f76b99c2412afc49da69dd18ae00cf18e50865a6402f5c031",
+      "bytes": 1593,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/AI接力包.md",
+      "object": "objects/80/8054a6ff2414d6d8748eb74fe51208f5a85608461d559b5d65f18639db337f97.md",
+      "sha256": "8054a6ff2414d6d8748eb74fe51208f5a85608461d559b5d65f18639db337f97",
+      "bytes": 1754,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/章节扩写模板.md",
+      "object": "objects/1f/1f25f3e92908d2a88fe3f59f94efe23b6209aea06762683e032cfd302dc707e4.md",
+      "sha256": "1f25f3e92908d2a88fe3f59f94efe23b6209aea06762683e032cfd302dc707e4",
+      "bytes": 3019,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/templates/需求与测试追踪表.md",
+      "object": "objects/cd/cd9f6a6ca35b4a426532f9c60c987940b77d1bcf1812596d5ff95a404b85d0fe.md",
+      "sha256": "cd9f6a6ca35b4a426532f9c60c987940b77d1bcf1812596d5ff95a404b85d0fe",
+      "bytes": 1799,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/.gitignore",
+      "object": "objects/af/af4ab05e427b8408f81adcadfbc042fc81f69e62cc750bece8b8bde1152886ee.txt",
+      "sha256": "af4ab05e427b8408f81adcadfbc042fc81f69e62cc750bece8b8bde1152886ee",
+      "bytes": 22,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/build-reader.mjs",
+      "object": "objects/09/09d642b49bd9a4cdb32e09253509d5c8c19e9c7a317e0a80e78f3a9359380084.mjs",
+      "sha256": "09d642b49bd9a4cdb32e09253509d5c8c19e9c7a317e0a80e78f3a9359380084",
+      "bytes": 14658,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/contact-sheets.mjs",
+      "object": "objects/0e/0ee52411fc9e477f6892d6e4397732963c76d8110084a11b826a673c87ab7caa.mjs",
+      "sha256": "0ee52411fc9e477f6892d6e4397732963c76d8110084a11b826a673c87ab7caa",
+      "bytes": 2171,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/fixtures/reader-sample.md",
+      "object": "objects/74/7407f32b5cd15cc77a74a9b76b756299cf03f66832f64d96a7072b0a25a6da2e.md",
+      "sha256": "7407f32b5cd15cc77a74a9b76b756299cf03f66832f64d96a7072b0a25a6da2e",
+      "bytes": 2959,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/make-fixed-layouts.py",
+      "object": "objects/62/62a23d6a4feb5ec4769afb07fe989fa7f205a0e5e1443a9fba768c8eadd97300.py",
+      "sha256": "62a23d6a4feb5ec4769afb07fe989fa7f205a0e5e1443a9fba768c8eadd97300",
+      "bytes": 19856,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/mermaid-theme.json",
+      "object": "objects/05/05e34b25c8b37baac0579fc72e126fba70f92de1a7d6f8d1c07275e1b8ff27b9.json",
+      "sha256": "05e34b25c8b37baac0579fc72e126fba70f92de1a7d6f8d1c07275e1b8ff27b9",
+      "bytes": 2134,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/package-lock.json",
+      "object": "objects/92/9261cec9eb1b48cc3785bac00c396df488e5f26cef1c53077bd192631fbfa395.json",
+      "sha256": "9261cec9eb1b48cc3785bac00c396df488e5f26cef1c53077bd192631fbfa395",
+      "bytes": 48587,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/package.json",
+      "object": "objects/2f/2fe70fb9e04ed88471733a85eb3aa80d0c32efddaab6e6e6e204c851f5ecd3db.json",
+      "sha256": "2fe70fb9e04ed88471733a85eb3aa80d0c32efddaab6e6e6e204c851f5ecd3db",
+      "bytes": 405,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/prepare-book-figures.py",
+      "object": "objects/53/534d91b177e971a822a93d64672748e0e2c6291b6ade0121f36c2bef642e96f1.py",
+      "sha256": "534d91b177e971a822a93d64672748e0e2c6291b6ade0121f36c2bef642e96f1",
+      "bytes": 5778,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/reader.css",
+      "object": "objects/06/0615e95d85aff4ae9e539e9205d98194e025caaffe97e16a30e9eec51b89639e.css",
+      "sha256": "0615e95d85aff4ae9e539e9205d98194e025caaffe97e16a30e9eec51b89639e",
+      "bytes": 6226,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/render-figures.mjs",
+      "object": "objects/e0/e0e930ef98587bc01903e55692489d45c8e7ce64d263c1d969f8d467dfd8632c.mjs",
+      "sha256": "e0e930ef98587bc01903e55692489d45c8e7ce64d263c1d969f8d467dfd8632c",
+      "bytes": 9500,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/runtime.mjs",
+      "object": "objects/57/57b979041fac417df04cf2c143431b89210cacfe19978101e0a3815b182058f7.mjs",
+      "sha256": "57b979041fac417df04cf2c143431b89210cacfe19978101e0a3815b182058f7",
+      "bytes": 3903,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/verify-reader.mjs",
+      "object": "objects/e2/e2ec988bd002e019ed5a9363b6527ebefd6fa48734e9a63d867e5c8648a2b991.mjs",
+      "sha256": "e2ec988bd002e019ed5a9363b6527ebefd6fa48734e9a63d867e5c8648a2b991",
+      "bytes": 7458,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/tools/配图与阅读版说明.md",
+      "object": "objects/fd/fdd6642ce3606a1c27ec0a18fe4ece006dbeb9c9f875ea00e7366ff4c6b6b47b.md",
+      "sha256": "fdd6642ce3606a1c27ec0a18fe4ece006dbeb9c9f875ea00e7366ff4c6b6b47b",
+      "bytes": 10258,
+      "executable": false
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/课程编写约定.md",
+      "object": "objects/b6/b6c352bd4f204b0408f0db85bdf19f94033a1481d2c567de838a5ef1b366c912.md",
+      "sha256": "b6c352bd4f204b0408f0db85bdf19f94033a1481d2c567de838a5ef1b366c912",
+      "bytes": 5915,
+      "executable": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/book-standalone/verification.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/book/verification.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/index.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/editorial-integrity.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/sample/verification.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/standalone/interaction.json",
+      "reason": "qa-capture-retained-locally"
+    },
+    {
+      "path": "AI编程_智慧校园_48学时/illustrations/qa/standalone/verification.json",
+      "reason": "qa-capture-retained-locally"
+    }
+  ],
+  "nestedPackages": [],
+  "embeddedImageTransforms": {
+    "allowed": 123,
+    "omitted": 45,
+    "externalized": 123
+  },
+  "integrityScope": "sha256 describes this sanitized derivative, not the original source ZIP members"
+}

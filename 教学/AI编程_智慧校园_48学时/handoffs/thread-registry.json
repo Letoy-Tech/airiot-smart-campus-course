@@ -1,0 +1,46 @@
+{
+  "updated_at": "2026-10-18",
+  "parent_thread_id": "01a14e57-f115-7de0-9632-8c7e8b6089fc",
+  "project_id": "516bcb2d-6521-4562-8737-7fa327bcb803",
+  "threads": [
+    {
+      "role": "writer_01_04",
+      "thread_id": "01a14e7a-1088-73e2-acbc-b219ed552b14",
+      "host_id": "local",
+      "handoff": "handoffs/writer-01-04.md",
+      "scope": "manuscript/01—04；figure-sources/ch01—04"
+    },
+    {
+      "role": "writer_05_08",
+      "thread_id": "01a14e7a-1306-74b0-a815-6c913eb3661b",
+      "host_id": "local",
+      "handoff": "handoffs/writer-05-08.md",
+      "scope": "manuscript/05—08；figure-sources/ch05—08"
+    },
+    {
+      "role": "writer_09_12",
+      "thread_id": "01a14e7a-158c-7193-b5ae-fe21a03fca86",
+      "host_id": "local",
+      "handoff": "handoffs/writer-09-12.md",
+      "scope": "manuscript/09—12；figure-sources/ch09—12"
+    },
+    {
+      "role": "illustration_editor",
+      "thread_id": "01a14e7a-7e4d-7bd3-924f-ead4fb67823f",
+      "host_id": "local",
+      "handoff": "handoffs/illustration-preparation.md",
+      "scope": "tools/；illustrations/；图文统稿第二阶段"
+    }
+  ],
+  "round2": {
+    "date": "2026-10-18",
+    "version": "0.3",
+    "chapter_review_agents": [
+      "/root/chapters_01_04",
+      "/root/course_source_audit",
+      "/root/qwen_course_research"
+    ],
+    "illustration_thread_id": "01a14e7a-7e4d-7bd3-924f-ead4fb67823f",
+    "integration": "主会话整合合同、实施分工、评分、检查与交付"
+  }
+}

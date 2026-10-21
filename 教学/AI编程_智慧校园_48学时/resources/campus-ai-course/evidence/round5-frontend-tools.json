@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T18:49:19.845240+00:00",
+  "status": "PASS",
+  "statusMeaning": "本轮授权修复、组件回归、构建与声明范围内独立工具复建通过；依赖审计仍有明确列出的两项低风险告警，PASS不表示零漏洞或全部端到端/真实校园/Windows验证。",
+  "frontend": {
+    "node": "22.21.1",
+    "unit": {
+      "status": "PASS",
+      "testFiles": 9,
+      "tests": 54,
+      "passed": 54,
+      "failed": 0,
+      "startedAt": "2026-10-18T18:47:57.136000+00:00",
+      "command": "npm run test:unit -- --run --reporter=json --outputFile=../evidence/round5-frontend/vitest.json",
+      "evidence": "evidence/round5-frontend/vitest.json"
+    },
+    "typeCheck": {
+      "status": "PASS",
+      "command": "vue-tsc --noEmit（npm run build的前置脚本）"
+    },
+    "build": {
+      "status": "PASS",
+      "command": "npm run build",
+      "exitCode": 0,
+      "evidence": "evidence/round5-frontend/build.txt"
+    },
+    "regressions": [
+      "新增演练事件后，旧详情迟到成功、403、网络错误不得替换/清空新详情；旧请求被取消，新事件清空待分派输入。",
+      "事件和责任列表/详情403清空缓存、选择、输入及写入口，要求重新核对身份；不能自动重发写操作。",
+      "成功空目录与筛选零匹配采用不同提示。",
+      "统一15秒请求期限，覆盖fetch及JSON解析；调用者取消与超时均终止请求并清timer/listener；超时保留已有成功快照并提示失败。"
+    ],
+    "evidenceBoundary": "Vitest/happy-dom组件与可控响应实证；不冒称本轮重跑所有真实数据库浏览器流程。"
+  },
+  "zipInspection": {
+    "status": "PASS_WITH_ORIGINAL_PACKAGE_FINDINGS_FIXED_IN_CANDIDATE",
+    "archives": [
+      {
+        "file": "AI编程_智慧校园_48学时_V1.0_完整教学包.zip",
+        "sha256": "eff074912bf6be4b732495594864bd8af69f03d72fd2b48a9c9960c1ffdc813d"
+      },
+      {
+        "file": "AI编程_第04至12章学生起点_V1.0.zip",
+        "sha256": "04199e880e368822991e039409409605759afa682c9cdeece095102e554cf695"
+      }
+    ],
+    "isolatedExtraction": "/tmp/demo-workspace",
+    "originalPackageChecks": [
+      "ZIP路径无绝对路径/遍历/符号链接；独立解压。",
+      "原包doctor通过；夹具9组验证通过；backend Maven离线跳过测试打包通过；未启动任何数据库或业务服务。",
+      "学生9起点manifest/hash匹配，学生Markdown本地链接未发现悬空。"
+    ],
+    "originalFindings": [
+      "出版工具只声明Mermaid，marked/playwright依赖隐藏环境；已修工具声明与runtime。",
+      "原包Python教案重建在缺失python-docx时失败，父任务负责依赖说明及后续重建。",
+      "旧verify-reader-round2仅适用于V0.3，不适用V1.0；本轮采用verify-reader.mjs。"
+    ],
+    "candidateOverlayOnly": [
+      "tools/package.json",
+      "tools/package-lock.json",
+      "tools/runtime.mjs",
+      "tools/verify-toolchain.mjs"
+    ],
+    "noBorrowedSource": "除明确列出的4个修复候选工具文件，其余复建输入来自独立ZIP解压目录；不借用未打包课程源文件。"
+  },
+  "toolRebuild": {
+    "status": "PASS",
+    "node": "22.21.1",
+    "jdkForOriginalPackageBuild": "17.0.12",
+    "dependencies": {
+      "marked": "17.0.5",
+      "mermaid": "11.17.2",
+      "playwright": "1.62.1"
+    },
+    "browser": "151.0.7922.34",
+    "hiddenRuntimeDisabled": [
+      "COURSE_NODE_MODULES unset",
+      "COURSE_CHROMIUM_PATH unset"
+    ],
+    "browserInstallation": "锁定Playwright通过网络下载到独立PLAYWRIGHT_BROWSERS_PATH",
+    "cacheBoundary": "npm ci使用本机npm缓存并允许网络；Maven -o使用本机已有~/.m2缓存；不是空缓存、离线或Windows验收。",
+    "commands": [
+      "npm ci --prefer-offline --no-audit --no-fund（解压包tools绝对cwd）",
+      "node tools/node_modules/playwright/cli.js install chromium",
+      "node tools/verify-toolchain.mjs",
+      "node tools/build-reader.mjs --strict --output reading/zip-review-rebuilt.html",
+      "node tools/verify-reader.mjs --input reading/zip-review-rebuilt.html --output illustrations/qa/zip-review --skip-pdf",
+      "node tools/render-figures.mjs --source figure-sources --output illustrations/qa/zip-review-render --report render-report.json"
+    ],
+    "reader": {
+      "status": "PASS",
+      "chapters": 12,
+      "figures": 40,
+      "widths": [
+        1440,
+        390
+      ],
+      "scope": "离线HTML资源、目录点击、锚点、尺寸、JS错误；不证明业务实验。",
+      "evidence": "evidence/round5-tools/reader-verification.json"
+    },
+    "render": {
+      "status": "PASS",
+      "figures": 40,
+      "mermaidSources": 19,
+      "fixedSvgSources": 21,
+      "evidence": "evidence/round5-tools/render-report.json",
+      "formalGraphicsUnchangedComparedWithOriginalZip": {
+        "files": 97,
+        "differences": 0
+      },
+      "visualReview": {
+        "inspected": 6,
+        "status": "PASS",
+        "scope": "实际查看下列6张重渲染PNG，文字/箭头/框布局可读，无明显裁切重叠；不是40张逐图全量视觉审校。",
+        "samples": [
+          {
+            "file": "evidence/round5-tools/visual-samples/ch01-01-engineering-cycle.png",
+            "sha256": "5f7a601516123140349d828908d66652fdf8e64f784cffffb0b5fea6bb47b7e0"
+          },
+          {
+            "file": "evidence/round5-tools/visual-samples/ch06-01-device-wireframe.png",
+            "sha256": "f52dba14d9b806e86c1a9a6b43369682b9fb504647a98a5a4341921d690e609f"
+          },
+          {
+            "file": "evidence/round5-tools/visual-samples/ch09-01-state-machine.png",
+            "sha256": "27578b44f7d5f88ec6de9555a0c3fb8823a50ae782779dfa36d2bd09abc0dc02"
+          },
+          {
+            "file": "evidence/round5-tools/visual-samples/ch05-01-device-request.png",
+            "sha256": "4f166bfc3a1ded5923e81bbf63b02e9a12328f95127f429e37df5e093fcf011a"
+          },
+          {
+            "file": "evidence/round5-tools/visual-samples/ch03-02-local-records-er.png",
+            "sha256": "33c67f791658d439799648f3f290bf50e155bfd935e0a27bda637dbb2dd1fb61"
+          },
+          {
+            "file": "evidence/round5-tools/visual-samples/ch07-03-refresh-lifecycle.png",
+            "sha256": "d729e8c19432ae3dd38a49b63e24295b6be0fc403451f8ffe7259a2534becc0a"
+          }
+        ]
+      }
+    },
+    "evidence": "evidence/round5-tools/toolchain.json"
+  },
+  "audit": {
+    "status": "LOW_FINDINGS_REMAIN",
+    "command": "npm audit --json（课程tools绝对cwd）",
+    "before": {
+      "info": 0,
+      "low": 1,
+      "moderate": 6,
+      "high": 1,
+      "critical": 0,
+      "total": 8
+    },
+    "after": {
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "exitCodeAfter": 1,
+    "beforeEvidence": "evidence/round5-tools-audit-before.json",
+    "afterEvidence": "evidence/round5-tools-audit-after.json",
+    "remaining": [
+      {
+        "packages": [
+          "katex@0.16.47",
+          "mermaid@11.17.2"
+        ],
+        "severity": "low",
+        "advisory": "https://github.com/advisories/GHSA-238p-pmpm-9mq7",
+        "description": "Existing prototype pollution can bypass trust restrictions",
+        "reasonNotForced": "Mermaid11.17.2约束KaTeX ^0.16.47，修复KaTeX下界0.18.2超出此约束；audit建议Mermaid12.2.0跨主版本。未强行override或擅自跨主版本。"
+      }
+    ]
+  },
+  "fileHashes": [
+    {
+      "path": "tools/package.json",
+      "sha256": "36b83e39a4aeea1bbd5c1b1fbf9fd3f3bdd3957b9ce4e1a40767921ed6fa4d46"
+    },
+    {
+      "path": "tools/package-lock.json",
+      "sha256": "ff12c6a72eae3b920ccade540b9a42d46c6a4a92fc763b41a7be8e5dcf33ce68"
+    },
+    {
+      "path": "tools/runtime.mjs",
+      "sha256": "a8395c269383348bbc7cdf6c3d161046dd40de0cab68d1e428e74b547e63a4bd"
+    },
+    {
+      "path": "tools/verify-toolchain.mjs",
+      "sha256": "21761540a914a955fcb8a9b7c83d322453edefca1ef0afb2e816e23139486f66"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/views/CasesView.vue",
+      "sha256": "02a7c32fd2b21a52fc2b6226443a789ba1724b3104e192a972a31b7addcff7fa"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "4b3ae23242e12c37c92edd87dc951e207566847e60c3cd5ce5a989ce22f165cd"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/tests/workflow-views.test.ts",
+      "sha256": "062b810f3d65e1995f4069dde5661d2b2677a17b7ddcc21e577692d92a6b4148"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5"
+    },
+    {
+      "path": "resources/campus-ai-course/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7"
+    }
+  ],
+  "limits": [
+    "本轮不启停原system、教师DB或业务服务，不写共享lab。",
+    "本轮不修改9个学生副本、旧round4验收、正式40张PNG/SVG/meta；副本同步由父任务统一执行。",
+    "本轮组件实证与工具复建不代表Windows实机、真实校园、AIRIOT真实对接或所有全栈E2E。",
+    "新打包ZIP由父任务生成；此报告列出的原V1.0包仍是原始基线，不能把修复候选复建结果冒充原包已具备修复。"
+  ]
+}

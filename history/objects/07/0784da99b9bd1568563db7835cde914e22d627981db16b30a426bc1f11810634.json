@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-21T05:25:22.701609",
+  "version": "2.0.2",
+  "scope": "sampled chapters 00/10/11/12 and teacher record; not every page or printed PDF",
+  "browser": "Chrome 155.0.0.0",
+  "desktopCssViewport": [
+    1280,
+    900
+  ],
+  "mobileEmulation": {
+    "preset": "iphone-14",
+    "cssViewport": [
+      390,
+      843
+    ],
+    "dpr": 3,
+    "physicalDevice": false
+  },
+  "allNineImagesActuallyOpened": true,
+  "copyFeedbackObserved": true,
+  "clipboardContentsRead": false,
+  "fileUrlReloadNavigationAndCopyFeedbackAfterHttpServerStopped": true,
+  "v2_0_2_promptsIndependentlyReplayedFromBlank": false,
+  "sourceHashes": {
+    "handbook-v2/00-先准备再开始.md": "878c9215ee25547d46c01e935fd6c87129b97507809a5c0733d1292d5fe3b68a",
+    "handbook-v2/lessons/08-把设备保存到MySQL.md": "b63947d880b43616a1c1c41ae7d9b3bad4319ed1febd01669eb83313c2d1bc16",
+    "handbook-v2/lessons/09-用Redis记住短时登录.md": "1712ed0e072a5fb30d8015bc59932bc1882e6f831fca8970c8860e5afc48adb5",
+    "handbook-v2/lessons/10-逐页接回真实后端.md": "d5e9affcfa2a4fbb1c08dad7b3e6fc90d29dc602326588d60a657def02ced031",
+    "handbook-v2/lessons/11-让一件演练有始有终.md": "d99a084c1982974f976a9220e410934c0516fab08d0a6becfc87868328eaa42c",
+    "handbook-v2/lessons/12-把作品交到新目录.md": "e60bdb188cf35b09234e0da86f4806a5d438bf80ccae7af44501a93fd8146203",
+    "handbook-v2/教师验证记录.md": "f5d45d1a7722481fa6f64bd86ff63403b8b6ead2d83e0820da4984d938d16c56",
+    "tools/v2/build-reader.mjs": "2cfdec65bc6044f7970dbaddf3c85dc1c8478523c2ffcec6264cb2be196b624c",
+    "handbook-v2/index.html": "ffb3707a58bec2b202c2361335ee4dcb64fed34318b0c66dd1b30245edcdb32a",
+    "handbook-v2/从空白开始_手把手教程_V2.0.2.html": "44e1277e162c7d46295825b79dd139ff67bab81046603d2f460a6822d83a1020"
+  },
+  "screenshots": [
+    {
+      "name": "reader-v202-final-00-ai-completion-desktop.png",
+      "sha256": "f8384eaaea8577500d6fd339fbb7dc9dd368ee0037aa17597dd500e57b315869",
+      "path": "v2.0.2-reader-shots/reader-v202-final-00-ai-completion-desktop.png"
+    },
+    {
+      "name": "reader-v202-final-10-owner-desktop.png",
+      "sha256": "20fda76be7acd87d2ae7a1bf36cc4c9e0c7a6d865ad649d58172364de83b54fb",
+      "path": "v2.0.2-reader-shots/reader-v202-final-10-owner-desktop.png"
+    },
+    {
+      "name": "reader-v202-final-11-refresh-desktop.png",
+      "sha256": "11dcf3a79acd761990884f5468d92fb23a4381087f5de0bf462995cfa9b309fd",
+      "path": "v2.0.2-reader-shots/reader-v202-final-11-refresh-desktop.png"
+    },
+    {
+      "name": "reader-v202-final-11-refresh-mobile-copy.png",
+      "sha256": "6ae7c8300295a6fa1232c39b1ac13137b8e7ef9e42290a17f95b88a3d752cc6d",
+      "path": "v2.0.2-reader-shots/reader-v202-final-11-refresh-mobile-copy.png"
+    },
+    {
+      "name": "reader-v202-final-12-export-desktop.png",
+      "sha256": "b92cc78eb563d7ee893c4c7ebcf7f728ad865953db2a3d6a60edd158ef96fd21",
+      "path": "v2.0.2-reader-shots/reader-v202-final-12-export-desktop.png"
+    },
+    {
+      "name": "reader-v202-final-12-handoff-desktop.png",
+      "sha256": "314f5aa1ac3c2de6fb02e2529841ae379f06543246ba3c77e4e9842be9a32d3b",
+      "path": "v2.0.2-reader-shots/reader-v202-final-12-handoff-desktop.png"
+    },
+    {
+      "name": "reader-v202-final-12-handoff-mobile.png",
+      "sha256": "16fd3003070c7fed388da8d367060002591c7883c4a403546162e55fa72c93e8",
+      "path": "v2.0.2-reader-shots/reader-v202-final-12-handoff-mobile.png"
+    },
+    {
+      "name": "reader-v202-final-file-offline-handoff.png",
+      "sha256": "a4edd52b6ef5567e3818c0f03eb1a69b2965f37be09a5f6c2c78bd4bbef69a5d",
+      "path": "v2.0.2-reader-shots/reader-v202-final-file-offline-handoff.png"
+    },
+    {
+      "name": "reader-v202-final-teacher-record-desktop.png",
+      "sha256": "1fe6a05cc224d42cd5a36142c4422374b04451128162645595f674c93f4ffb10",
+      "path": "v2.0.2-reader-shots/reader-v202-final-teacher-record-desktop.png"
+    }
+  ]
+}

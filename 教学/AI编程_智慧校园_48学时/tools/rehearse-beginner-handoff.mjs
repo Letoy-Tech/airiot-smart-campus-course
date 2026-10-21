@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {courseDir,writeJson} from './runtime.mjs';
+const root=path.join(courseDir,'.runtime/round9-lab');
+const paths=JSON.parse(fs.readFileSync(path.join(root,'receiver-path.json')));
+const app=paths.receiver;
+const file=path.join(courseDir,'walkthroughs/qa/round9/handoff.json');
+const report=fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):{status:'RUNNING',scope:'Author same-machine fresh ZIP receiver, not another student or physical Windows machine',checks:[]};
+const run=(name,cmd,args)=>{const r=spawnSync(cmd,args,{cwd:app,env:process.env,encoding:'utf8',maxBuffer:20*1024*1024});fs.writeFileSync(path.join(root,'receiver-'+name+'.log'),(r.stdout||'')+(r.stderr||''));assert.equal(r.status,0,name);report.checks.push({name,exit:r.status});writeJson(file,report);console.log('receiver-'+name+': PASS')};
+if(process.argv[2]==='prepare'){
+ assert(!fs.existsSync(path.join(app,'.private')));assert.equal(fs.readdirSync(path.join(app,'project-docs')).length,11);
+ const original=JSON.parse(fs.readFileSync(path.join(root,'student/campus-ai-lab/app/.private/accounts.json')));
+ run('doctor',process.execPath,['tools/course.mjs','doctor']);run('install','npm',['--prefix','frontend','ci']);run('init',process.execPath,['tools/course.mjs','init']);
+ const fresh=JSON.parse(fs.readFileSync(path.join(app,'.private/accounts.json')));assert(fresh.accounts.every(a=>original.accounts.find(b=>b.username===a.username).password!==a.password));
+ run('check',process.execPath,['tools/course.mjs','check']);run('build',process.execPath,['tools/course.mjs','build']);
+ const before=fs.readFileSync(path.join(app,'frontend/src/domain/course.ts'));
+ run('prepared-state-preserved',process.execPath,['tools/chapter.mjs','prepare','12']);assert.deepEqual(fs.readFileSync(path.join(app,'frontend/src/domain/course.ts')),before);
+ report.checks.push({name:'new accounts and 11 design documents, completed C12 preserved',passed:true});writeJson(file,report);
+}else throw Error('prepare');

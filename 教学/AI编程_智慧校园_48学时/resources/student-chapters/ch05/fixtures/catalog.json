@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "spaces": [
+    {
+      "id": "teaching_space_01",
+      "name": "教学空间01（模拟）",
+      "type": "classroom",
+      "campusId": null,
+      "buildingId": null,
+      "floor": null
+    },
+    {
+      "id": "teaching_space_02",
+      "name": "教学空间02（模拟）",
+      "type": "classroom",
+      "campusId": null,
+      "buildingId": null,
+      "floor": null
+    },
+    {
+      "id": "teaching_space_03",
+      "name": "教学空间03（模拟）",
+      "type": "classroom",
+      "campusId": null,
+      "buildingId": null,
+      "floor": null
+    },
+    {
+      "id": "teaching_space_04",
+      "name": "教学空间04（模拟）",
+      "type": "classroom",
+      "campusId": null,
+      "buildingId": null,
+      "floor": null
+    }
+  ],
+  "devices": [
+    {
+      "id": "teaching_env_01",
+      "tableId": "teaching_environment",
+      "name": "环境传感器01（模拟）",
+      "category": "environment",
+      "spaceId": "teaching_space_01",
+      "spaceName": "教学空间01（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "temperature",
+          "name": "温度",
+          "unit": "°C"
+        },
+        {
+          "id": "humidity",
+          "name": "湿度",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "teaching_energy_01",
+      "tableId": "teaching_energy",
+      "name": "电能监测器01（模拟）",
+      "category": "energy",
+      "spaceId": "teaching_space_01",
+      "spaceName": "教学空间01（模拟）",
+      "online": null,
+      "communicationTime": null,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "voltage",
+          "name": "电压",
+          "unit": "V"
+        },
+        {
+          "id": "power",
+          "name": "功率",
+          "unit": "kW"
+        }
+      ]
+    },
+    {
+      "id": "teaching_facility_01",
+      "tableId": "teaching_facility",
+      "name": "设施监测器01（模拟）",
+      "category": "facility",
+      "spaceId": "teaching_space_01",
+      "spaceName": "教学空间01（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "run_state",
+          "name": "运行状态",
+          "unit": ""
+        },
+        {
+          "id": "equipment_temperature",
+          "name": "设备温度",
+          "unit": "°C"
+        }
+      ]
+    },
+    {
+      "id": "teaching_light_01",
+      "tableId": "teaching_lighting",
+      "name": "照明监测器01（模拟）",
+      "category": "lighting",
+      "spaceId": "teaching_space_01",
+      "spaceName": "教学空间01（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "illuminance",
+          "name": "照度",
+          "unit": "lux"
+        }
+      ]
+    },
+    {
+      "id": "teaching_env_02",
+      "tableId": "teaching_environment",
+      "name": "环境传感器02（模拟）",
+      "category": "environment",
+      "spaceId": "teaching_space_02",
+      "spaceName": "教学空间02（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "temperature",
+          "name": "温度",
+          "unit": "°C"
+        },
+        {
+          "id": "humidity",
+          "name": "湿度",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "teaching_energy_02",
+      "tableId": "teaching_energy",
+      "name": "电能监测器02（模拟）",
+      "category": "energy",
+      "spaceId": "teaching_space_02",
+      "spaceName": "教学空间02（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "voltage",
+          "name": "电压",
+          "unit": "V"
+        },
+        {
+          "id": "power",
+          "name": "功率",
+          "unit": "kW"
+        }
+      ]
+    },
+    {
+      "id": "teaching_facility_02",
+      "tableId": "teaching_facility",
+      "name": "设施监测器02（模拟）",
+      "category": "facility",
+      "spaceId": "teaching_space_02",
+      "spaceName": "教学空间02（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "run_state",
+          "name": "运行状态",
+          "unit": ""
+        },
+        {
+          "id": "equipment_temperature",
+          "name": "设备温度",
+          "unit": "°C"
+        }
+      ]
+    },
+    {
+      "id": "teaching_light_02",
+      "tableId": "teaching_lighting",
+      "name": "照明监测器02（模拟）",
+      "category": "lighting",
+      "spaceId": "teaching_space_02",
+      "spaceName": "教学空间02（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "illuminance",
+          "name": "照度",
+          "unit": "lux"
+        }
+      ]
+    },
+    {
+      "id": "teaching_env_03",
+      "tableId": "teaching_environment",
+      "name": "环境传感器03（模拟）",
+      "category": "environment",
+      "spaceId": "teaching_space_03",
+      "spaceName": "教学空间03（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "temperature",
+          "name": "温度",
+          "unit": "°C"
+        },
+        {
+          "id": "humidity",
+          "name": "湿度",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "teaching_energy_03",
+      "tableId": "teaching_energy",
+      "name": "电能监测器03（模拟）",
+      "category": "energy",
+      "spaceId": "teaching_space_03",
+      "spaceName": "教学空间03（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "voltage",
+          "name": "电压",
+          "unit": "V"
+        },
+        {
+          "id": "power",
+          "name": "功率",
+          "unit": "kW"
+        }
+      ]
+    },
+    {
+      "id": "teaching_facility_03",
+      "tableId": "teaching_facility",
+      "name": "设施监测器03（模拟）",
+      "category": "facility",
+      "spaceId": "teaching_space_03",
+      "spaceName": "教学空间03（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "run_state",
+          "name": "运行状态",
+          "unit": ""
+        },
+        {
+          "id": "equipment_temperature",
+          "name": "设备温度",
+          "unit": "°C"
+        }
+      ]
+    },
+    {
+      "id": "teaching_light_03",
+      "tableId": "teaching_lighting",
+      "name": "照明监测器03（模拟）",
+      "category": "lighting",
+      "spaceId": "teaching_space_03",
+      "spaceName": "教学空间03（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "illuminance",
+          "name": "照度",
+          "unit": "lux"
+        }
+      ]
+    },
+    {
+      "id": "teaching_env_04",
+      "tableId": "teaching_environment",
+      "name": "环境传感器04（模拟）",
+      "category": "environment",
+      "spaceId": "teaching_space_04",
+      "spaceName": "教学空间04（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "temperature",
+          "name": "温度",
+          "unit": "°C"
+        },
+        {
+          "id": "humidity",
+          "name": "湿度",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "teaching_energy_04",
+      "tableId": "teaching_energy",
+      "name": "电能监测器04（模拟）",
+      "category": "energy",
+      "spaceId": "teaching_space_04",
+      "spaceName": "教学空间04（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": null,
+      "tags": [
+        {
+          "id": "voltage",
+          "name": "电压",
+          "unit": "V"
+        },
+        {
+          "id": "power",
+          "name": "功率",
+          "unit": "kW"
+        }
+      ]
+    },
+    {
+      "id": "teaching_facility_04",
+      "tableId": "teaching_facility",
+      "name": "设施监测器04（模拟）",
+      "category": "facility",
+      "spaceId": "teaching_space_04",
+      "spaceName": "教学空间04（模拟）",
+      "online": false,
+      "communicationTime": 1792303110000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "run_state",
+          "name": "运行状态",
+          "unit": ""
+        },
+        {
+          "id": "equipment_temperature",
+          "name": "设备温度",
+          "unit": "°C"
+        }
+      ]
+    },
+    {
+      "id": "teaching_light_04",
+      "tableId": "teaching_lighting",
+      "name": "照明监测器04（模拟）",
+      "category": "lighting",
+      "spaceId": "teaching_space_04",
+      "spaceName": "教学空间04（模拟）",
+      "online": true,
+      "communicationTime": 1792303199000,
+      "simulated": true,
+      "switchOn": false,
+      "tags": [
+        {
+          "id": "illuminance",
+          "name": "照度",
+          "unit": "lux"
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "deviceId": "teaching_env_01",
+      "tableId": "teaching_environment",
+      "tagId": "temperature",
+      "value": 24.0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_env_01",
+      "tableId": "teaching_environment",
+      "tagId": "humidity",
+      "value": 51,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "%"
+    },
+    {
+      "deviceId": "teaching_energy_01",
+      "tableId": "teaching_energy",
+      "tagId": "voltage",
+      "value": 221,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "V"
+    },
+    {
+      "deviceId": "teaching_energy_01",
+      "tableId": "teaching_energy",
+      "tagId": "power",
+      "value": 1.1,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "kW"
+    },
+    {
+      "deviceId": "teaching_facility_01",
+      "tableId": "teaching_facility",
+      "tagId": "run_state",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": ""
+    },
+    {
+      "deviceId": "teaching_facility_01",
+      "tableId": "teaching_facility",
+      "tagId": "equipment_temperature",
+      "value": 31,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_light_01",
+      "tableId": "teaching_lighting",
+      "tagId": "illuminance",
+      "value": 320,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "lux"
+    },
+    {
+      "deviceId": "teaching_env_02",
+      "tableId": "teaching_environment",
+      "tagId": "temperature",
+      "value": 24.5,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_env_02",
+      "tableId": "teaching_environment",
+      "tagId": "humidity",
+      "value": 52,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "%"
+    },
+    {
+      "deviceId": "teaching_energy_02",
+      "tableId": "teaching_energy",
+      "tagId": "voltage",
+      "value": 222,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "V"
+    },
+    {
+      "deviceId": "teaching_energy_02",
+      "tableId": "teaching_energy",
+      "tagId": "power",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "kW"
+    },
+    {
+      "deviceId": "teaching_facility_02",
+      "tableId": "teaching_facility",
+      "tagId": "run_state",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": ""
+    },
+    {
+      "deviceId": "teaching_facility_02",
+      "tableId": "teaching_facility",
+      "tagId": "equipment_temperature",
+      "value": 32,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_light_02",
+      "tableId": "teaching_lighting",
+      "tagId": "illuminance",
+      "value": 340,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "lux"
+    },
+    {
+      "deviceId": "teaching_env_03",
+      "tableId": "teaching_environment",
+      "tagId": "temperature",
+      "value": 25.0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_env_03",
+      "tableId": "teaching_environment",
+      "tagId": "humidity",
+      "value": 53,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "%"
+    },
+    {
+      "deviceId": "teaching_energy_03",
+      "tableId": "teaching_energy",
+      "tagId": "voltage",
+      "value": 223,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "V"
+    },
+    {
+      "deviceId": "teaching_energy_03",
+      "tableId": "teaching_energy",
+      "tagId": "power",
+      "value": 1.3,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "kW"
+    },
+    {
+      "deviceId": "teaching_facility_03",
+      "tableId": "teaching_facility",
+      "tagId": "run_state",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": ""
+    },
+    {
+      "deviceId": "teaching_facility_03",
+      "tableId": "teaching_facility",
+      "tagId": "equipment_temperature",
+      "value": 33,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_light_03",
+      "tableId": "teaching_lighting",
+      "tagId": "illuminance",
+      "value": 360,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "lux"
+    },
+    {
+      "deviceId": "teaching_env_04",
+      "tableId": "teaching_environment",
+      "tagId": "temperature",
+      "value": 25.5,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_env_04",
+      "tableId": "teaching_environment",
+      "tagId": "humidity",
+      "value": null,
+      "time": 1792303199000,
+      "quality": "missing",
+      "unit": "%"
+    },
+    {
+      "deviceId": "teaching_energy_04",
+      "tableId": "teaching_energy",
+      "tagId": "voltage",
+      "value": 224,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "V"
+    },
+    {
+      "deviceId": "teaching_energy_04",
+      "tableId": "teaching_energy",
+      "tagId": "power",
+      "value": 1.4,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "kW"
+    },
+    {
+      "deviceId": "teaching_facility_04",
+      "tableId": "teaching_facility",
+      "tagId": "run_state",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": ""
+    },
+    {
+      "deviceId": "teaching_facility_04",
+      "tableId": "teaching_facility",
+      "tagId": "equipment_temperature",
+      "value": 34,
+      "time": 1792303139999,
+      "quality": "stale",
+      "unit": "°C"
+    },
+    {
+      "deviceId": "teaching_light_04",
+      "tableId": "teaching_lighting",
+      "tagId": "illuminance",
+      "value": 0,
+      "time": 1792303199000,
+      "quality": "fresh",
+      "unit": "lux"
+    }
+  ]
+}

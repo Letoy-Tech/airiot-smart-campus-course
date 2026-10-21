@@ -1,0 +1,7 @@
+flowchart TB
+    UI["Vue 前端<br/>显示与交互"] --> BE["Spring Boot 后端<br/>授权、校验与业务"]
+    BE --> DB[("独立教学 MySQL<br/>映射、事件、责任、时间线")]
+    BE --> P["CampusDataProvider<br/>六项读取能力"]
+    P --> M["TeachingMockProvider<br/>固定种子与可控时钟"]
+    P -."课外选做".-> A["AiriotProvider<br/>只读适配"]
+    A --> UP["AIRIOT<br/>保留模拟标识"]

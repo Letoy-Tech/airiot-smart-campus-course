@@ -1,0 +1,7 @@
+[
+  "docs/接口与数据.md",
+  "docs/项目卡.md",
+  "frontend/src/views/EnergyView.vue",
+  "frontend/src/views/OverviewView.vue",
+  "journey-state.json"
+]

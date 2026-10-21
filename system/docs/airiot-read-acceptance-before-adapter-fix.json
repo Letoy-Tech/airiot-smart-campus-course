@@ -1,0 +1,948 @@
+{
+  "projectId": "000000000000000000000001",
+  "method": "actual compiled AiriotClient Java source runner; fixed negative HTTP reads",
+  "startedAt": 1791106540894,
+  "clientClassSha256": "40354b15ecf555df4887b1db4106a93e0907c1c4ce6625bbd26aef0d35fa740b",
+  "writesPerformed": false,
+  "crossProjectRequests": false,
+  "dedicated": {
+    "authentication": {
+      "configured": true,
+      "connected": true,
+      "isSuperFalse": true
+    },
+    "tables": {
+      "campus_space": {
+        "status": "PASS",
+        "data": {
+          "simulatedTrue": 0,
+          "ids": [
+            "demo_room_101",
+            "demo_room_102",
+            "demo_room_103",
+            "demo_room_104"
+          ],
+          "count": 4
+        }
+      },
+      "campus_environment": {
+        "status": "PASS",
+        "data": {
+          "simulatedTrue": 0,
+          "ids": [
+            "env_demo_01",
+            "env_demo_02",
+            "env_demo_03",
+            "env_demo_04"
+          ],
+          "count": 4
+        }
+      },
+      "campus_energy": {
+        "status": "PASS",
+        "data": {
+          "simulatedTrue": 0,
+          "ids": [
+            "energy_demo_01",
+            "energy_demo_02",
+            "energy_demo_03",
+            "energy_demo_04"
+          ],
+          "count": 4
+        }
+      },
+      "campus_facility": {
+        "status": "PASS",
+        "data": {
+          "simulatedTrue": 0,
+          "ids": [
+            "facility_demo_01",
+            "facility_demo_02",
+            "facility_demo_03",
+            "facility_demo_04"
+          ],
+          "count": 4
+        }
+      },
+      "campus_lighting": {
+        "status": "PASS",
+        "data": {
+          "simulatedTrue": 0,
+          "ids": [
+            "light_demo_01",
+            "light_demo_02",
+            "light_demo_03",
+            "light_demo_04"
+          ],
+          "count": 4
+        }
+      }
+    },
+    "latestRound1": {
+      "data": {
+        "uniqueTargets": 28,
+        "validTimes": 28,
+        "numericValues": 28,
+        "sampleTimes": {
+          "campus_energy/energy_demo_01/power_kw": 1791106542001,
+          "campus_energy/energy_demo_01/voltage_v": 1791106542001,
+          "campus_energy/energy_demo_02/power_kw": 1791106542001,
+          "campus_energy/energy_demo_02/voltage_v": 1791106542001,
+          "campus_energy/energy_demo_03/power_kw": 1791106542001,
+          "campus_energy/energy_demo_03/voltage_v": 1791106542001,
+          "campus_energy/energy_demo_04/power_kw": 1791106542001,
+          "campus_energy/energy_demo_04/voltage_v": 1791106542001,
+          "campus_environment/env_demo_01/humidity_pct": 1791106542001,
+          "campus_environment/env_demo_01/temperature_c": 1791106542001,
+          "campus_environment/env_demo_02/humidity_pct": 1791106542001,
+          "campus_environment/env_demo_02/temperature_c": 1791106542001,
+          "campus_environment/env_demo_03/humidity_pct": 1791106542001,
+          "campus_environment/env_demo_03/temperature_c": 1791106542001,
+          "campus_environment/env_demo_04/humidity_pct": 1791106542001,
+          "campus_environment/env_demo_04/temperature_c": 1791106542001,
+          "campus_facility/facility_demo_01/equipment_temperature_c": 1791106542001,
+          "campus_facility/facility_demo_01/run_state": 1791106542001,
+          "campus_facility/facility_demo_02/equipment_temperature_c": 1791106542001,
+          "campus_facility/facility_demo_02/run_state": 1791106542001,
+          "campus_facility/facility_demo_03/equipment_temperature_c": 1791106542001,
+          "campus_facility/facility_demo_03/run_state": 1791106542001,
+          "campus_facility/facility_demo_04/equipment_temperature_c": 1791106542001,
+          "campus_facility/facility_demo_04/run_state": 1791106542001,
+          "campus_lighting/light_demo_01/illuminance_lux": 1791106542001,
+          "campus_lighting/light_demo_02/illuminance_lux": 1791106542001,
+          "campus_lighting/light_demo_03/illuminance_lux": 1791106542001,
+          "campus_lighting/light_demo_04/illuminance_lux": 1791106542001
+        },
+        "count": 28
+      },
+      "status": "PASS"
+    },
+    "historyRange": {
+      "to": 1791106542247,
+      "from": 1791102942247
+    },
+    "histories": {
+      "campus_environment/env_demo_01/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "temperature_c"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_01/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "humidity_pct"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_02/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "temperature_c"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_02/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "humidity_pct"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_03/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "temperature_c"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_03/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "humidity_pct"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_04/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "temperature_c"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_environment/env_demo_04/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "humidity_pct"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_energy/energy_demo_01/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "voltage_v"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_01/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "power_kw"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_02/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "voltage_v"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_02/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "power_kw"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_03/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "voltage_v"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_03/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "power_kw"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_04/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "voltage_v"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_energy/energy_demo_04/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "power_kw"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_facility/facility_demo_01/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "run_state"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947001,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_facility/facility_demo_01/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_facility/facility_demo_02/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "run_state"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947001,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_facility/facility_demo_02/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_facility/facility_demo_03/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "run_state"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947001,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_facility/facility_demo_03/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_facility/facility_demo_04/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "run_state"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947001,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_facility/facility_demo_04/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 360,
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ]
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106537001
+        }
+      },
+      "campus_lighting/light_demo_01/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_lighting/light_demo_02/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_lighting/light_demo_03/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      },
+      "campus_lighting/light_demo_04/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102947000,
+          "lastTime": 1791106542001
+        }
+      }
+    },
+    "alarms": {
+      "status": "FAIL",
+      "code": "AIRIOT_UPSTREAM_ERROR",
+      "beStatus": 502
+    },
+    "latestRoundSeparationMs": 16002,
+    "latestRound2": {
+      "status": "PASS",
+      "data": {
+        "uniqueTargets": 28,
+        "validTimes": 28,
+        "numericValues": 28,
+        "sampleTimes": {
+          "campus_energy/energy_demo_01/power_kw": 1791106557001,
+          "campus_energy/energy_demo_01/voltage_v": 1791106557001,
+          "campus_energy/energy_demo_02/power_kw": 1791106557001,
+          "campus_energy/energy_demo_02/voltage_v": 1791106557001,
+          "campus_energy/energy_demo_03/power_kw": 1791106557001,
+          "campus_energy/energy_demo_03/voltage_v": 1791106557001,
+          "campus_energy/energy_demo_04/power_kw": 1791106557001,
+          "campus_energy/energy_demo_04/voltage_v": 1791106557001,
+          "campus_environment/env_demo_01/humidity_pct": 1791106557001,
+          "campus_environment/env_demo_01/temperature_c": 1791106557001,
+          "campus_environment/env_demo_02/humidity_pct": 1791106557001,
+          "campus_environment/env_demo_02/temperature_c": 1791106557001,
+          "campus_environment/env_demo_03/humidity_pct": 1791106557001,
+          "campus_environment/env_demo_03/temperature_c": 1791106557001,
+          "campus_environment/env_demo_04/humidity_pct": 1791106557001,
+          "campus_environment/env_demo_04/temperature_c": 1791106557001,
+          "campus_facility/facility_demo_01/equipment_temperature_c": 1791106557001,
+          "campus_facility/facility_demo_01/run_state": 1791106557001,
+          "campus_facility/facility_demo_02/equipment_temperature_c": 1791106557001,
+          "campus_facility/facility_demo_02/run_state": 1791106557001,
+          "campus_facility/facility_demo_03/equipment_temperature_c": 1791106557001,
+          "campus_facility/facility_demo_03/run_state": 1791106557001,
+          "campus_facility/facility_demo_04/equipment_temperature_c": 1791106557001,
+          "campus_facility/facility_demo_04/run_state": 1791106557001,
+          "campus_lighting/light_demo_01/illuminance_lux": 1791106557001,
+          "campus_lighting/light_demo_02/illuminance_lux": 1791106557001,
+          "campus_lighting/light_demo_03/illuminance_lux": 1791106557001,
+          "campus_lighting/light_demo_04/illuminance_lux": 1791106557001
+        },
+        "count": 28,
+        "advancedTargets": 28,
+        "notAdvancedTargets": 0
+      }
+    },
+    "writesPerformed": false,
+    "negativeReads": {
+      "schemaRead": {
+        "status": "FAIL",
+        "httpStatus": 200,
+        "code": "READ_NOT_DENIED"
+      },
+      "roleRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "denied": true
+      }
+    }
+  },
+  "legacyReadOnly": {
+    "authentication": {
+      "isSuperFalse": true,
+      "connected": true,
+      "configured": true
+    },
+    "tables": {
+      "campus_space": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "demo_room_101",
+            "demo_room_102",
+            "demo_room_103",
+            "demo_room_104"
+          ],
+          "simulatedTrue": 0
+        }
+      },
+      "campus_environment": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "env_demo_01",
+            "env_demo_02",
+            "env_demo_03",
+            "env_demo_04"
+          ],
+          "simulatedTrue": 0
+        }
+      },
+      "campus_energy": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "energy_demo_01",
+            "energy_demo_02",
+            "energy_demo_03",
+            "energy_demo_04"
+          ],
+          "simulatedTrue": 0
+        }
+      },
+      "campus_facility": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "facility_demo_01",
+            "facility_demo_02",
+            "facility_demo_03",
+            "facility_demo_04"
+          ],
+          "simulatedTrue": 0
+        }
+      },
+      "campus_lighting": {
+        "status": "FAIL",
+        "code": "AIRIOT_PERMISSION_DENIED",
+        "beStatus": 502
+      }
+    },
+    "historyRange": {
+      "from": 1791102960543,
+      "to": 1791106560543
+    },
+    "histories": {
+      "campus_environment/env_demo_01/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "temperature_c"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102962001,
+          "lastTime": 1791106557001
+        }
+      },
+      "campus_lighting/light_demo_04/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791102962001,
+          "lastTime": 1791106557001
+        }
+      }
+    },
+    "alarms": {
+      "status": "FAIL",
+      "code": "AIRIOT_PERMISSION_DENIED",
+      "beStatus": 502
+    },
+    "writesPerformed": false,
+    "negativeReads": {
+      "schemaRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "denied": true
+      },
+      "roleRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "denied": true
+      }
+    }
+  },
+  "finishedAt": 1791106562310,
+  "diagnosis": {
+    "recordsMissingBusinessFields": "Initial adapter query lacked project field projection, confirmed by independent explicit-project read. Not attributed to role field denial.",
+    "alarms400": "Initial table.id filter rejected by deployed warning query; fixed-scope tableId+$in with uid+$in returned HTTP200 and actual empty array. Pending actual-Java adapter re-run.",
+    "schema200": "Dedicated table.view intentionally permits schema read; no schema write tested."
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

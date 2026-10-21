@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant Page as 当前页面
+    participant API as 后端
+    participant Timer as 等待器
+    Page->>API: 本轮最新值请求
+    API-->>Page: 成功或失败
+    Page->>Page: 更新快照或标记失败
+    Page->>Timer: 本轮完成后等待 15 秒
+    Timer-->>Page: 到时且页面仍有效
+    Page->>API: 下一轮请求
+    Note over Page,API: 离页取消等待与进行中的请求
+    Note over Page,API: 失效响应不得写回页面

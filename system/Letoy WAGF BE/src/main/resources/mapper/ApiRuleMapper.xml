@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.letoy.main.permission.mapper.ApiRuleMapper">
+
+    <resultMap id="ApiRuleMap" type="com.letoy.main.permission.entity.ApiRule">
+        <id     column="id"                property="id"/>
+        <result column="name"              property="name"/>
+        <result column="pattern"           property="pattern"/>
+        <result column="methods"           property="methods"/>
+        <result column="group_policy"      property="groupPolicy"/>
+        <result column="allowed_group_ids" property="allowedGroupIds"/>
+        <result column="group_id_path_var" property="groupIdPathVar"/>
+        <result column="user_id_path_var"  property="userIdPathVar"/>
+        <result column="priority"          property="priority"/>
+        <result column="enabled"           property="enabled"/>
+        <result column="created_at"        property="createdAt"/>
+        <result column="updated_at"        property="updatedAt"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ApiRuleMap">
+        SELECT * FROM api_rule WHERE id = #{id}
+    </select>
+
+    <select id="getByIdList" resultMap="ApiRuleMap">
+        SELECT * FROM api_rule
+        WHERE id IN
+        <foreach collection="idList" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="getAll" resultMap="ApiRuleMap">
+        SELECT * FROM api_rule ORDER BY created_at DESC, id DESC
+    </select>
+
+    <select id="queryWithFilter" resultMap="ApiRuleMap">
+        SELECT * FROM api_rule
+        WHERE 1=1
+        <if test="name != null and name != ''">
+            AND name LIKE CONCAT('%', #{name}, '%')
+        </if>
+        <if test="pattern != null and pattern != ''">
+            AND pattern LIKE CONCAT('%', #{pattern}, '%')
+        </if>
+        <if test="methods != null and methods != ''">
+            AND methods LIKE CONCAT('%', #{methods}, '%')
+        </if>
+        <if test="groupPolicy != null and groupPolicy != ''">
+            AND group_policy = #{groupPolicy}
+        </if>
+        <if test="enabled != null">
+            AND enabled = #{enabled}
+        </if>
+        ORDER BY created_at DESC, id DESC
+    </select>
+
+    <select id="getAllEnabled" resultMap="ApiRuleMap">
+        SELECT * FROM api_rule WHERE enabled = 1
+        ORDER BY priority DESC, id ASC
+    </select>
+
+    <insert id="insert" parameterType="com.letoy.main.permission.entity.ApiRule" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO api_rule
+        (name, pattern, methods, group_policy, allowed_group_ids, group_id_path_var, user_id_path_var, priority, enabled)
+        VALUES
+            (#{name}, #{pattern}, #{methods}, #{groupPolicy}, #{allowedGroupIds}, #{groupIdPathVar}, #{userIdPathVar}, #{priority}, #{enabled})
+    </insert>
+
+    <update id="updateById" parameterType="com.letoy.main.permission.entity.ApiRule">
+        UPDATE api_rule
+        SET name = #{name},
+            pattern = #{pattern},
+            methods = #{methods},
+            group_policy = #{groupPolicy},
+            allowed_group_ids = #{allowedGroupIds},
+            group_id_path_var = #{groupIdPathVar},
+            user_id_path_var = #{userIdPathVar},
+            priority = #{priority},
+            enabled = #{enabled}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM api_rule WHERE id = #{id}
+    </delete>
+
+</mapper>

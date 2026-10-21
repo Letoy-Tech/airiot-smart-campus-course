@@ -1,0 +1,3816 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-19T15:47:56.104458+00:00",
+  "status": "PASS_STATIC",
+  "kind": "STATIC_ONLY",
+  "sourceDigest": "14ed1812a553942349a31e3f5aa03372837990bcde75cccb1db57f5ea58cbbad",
+  "counts": {
+    "assertions": 2275,
+    "htmlIds": 211,
+    "htmlLinks": 119,
+    "localLinks": 114,
+    "anchors": 48,
+    "externalLinksNotFetched": 5,
+    "htmlPages": 3,
+    "stationMarkdown": 12,
+    "manifestFileReferences": 922,
+    "stageManifests": 12,
+    "businessTargets": 14
+  },
+  "criteria": [
+    "两个根入口及 journey HTML 本地 href/src、唯一 id、锚点与 12 站 plan/begin/verify；不访问外链。",
+    "12 篇正文各有具体动作、prompt、预期和失败分支；已复核第 04/07/09 站既有合同修复及完成范围。",
+    "总清单与 12 个阶段：引用存在、SHA-256/bytes、角色、骨架、累计上下文文件；不实际导入阶段。",
+    "按实际 progress.mjs 分派器和 npm scripts 核对命令；verify 仅前端，后端/业务保留 NOT_CHECKED。",
+    "入口 build.json 绑定当前 HTML、Markdown、元数据、生成器、CSS/JS；所有审计输入再绑定独立摘要。"
+  ],
+  "findings": [],
+  "boundFiles": [
+    {
+      "path": "17-CodeBuddy项目主线与交付.md",
+      "sha256": "eb8e4265ad786875673e4991c363c9576b475871a66f69e9eb405f712d15fb5a",
+      "bytes": 2637
+    },
+    {
+      "path": "index.html",
+      "sha256": "85157610fac870018b6cc2c92704607c90b3fb0cf5aef52adb84627ea3ac98cd",
+      "bytes": 2808
+    },
+    {
+      "path": "journey/00-怎么开始.md",
+      "sha256": "fe71e701bc4dcd8b3f7e5e2a97a60a56c942590ddcfacc1db9ccdcf2f9bb5307",
+      "bytes": 5561
+    },
+    {
+      "path": "journey/01-先做出两台设备.md",
+      "sha256": "06ad87f99350633579ead2b6f260a1e2992ee99837c72665e15245e9233edff1",
+      "bytes": 2686
+    },
+    {
+      "path": "journey/02-让页面从后端拿设备.md",
+      "sha256": "9ae1029ab44d347122e468fb49bd948a65ee155629ddf1e77a17a726b8e2e873",
+      "bytes": 2597
+    },
+    {
+      "path": "journey/03-从16台设备中找到一台.md",
+      "sha256": "f87498ac64f4b00236ca375659555c6b032a8d35dd43559b87ef853d8df3690c",
+      "bytes": 2674
+    },
+    {
+      "path": "journey/04-把设备放到正确的楼里.md",
+      "sha256": "0c8bbfc145acde5f02469417c36c4e652b7304bd5920e3f71227a85a1bcd9559",
+      "bytes": 2720
+    },
+    {
+      "path": "journey/05-一眼找到异常的空间.md",
+      "sha256": "e06f4b6056172cdda815af4089951ea2f3a4fa4752b7c3d7746a3d51f9c221f2",
+      "bytes": 2701
+    },
+    {
+      "path": "journey/06-看变化，再看原始报警.md",
+      "sha256": "7d06870875d3e7f55673cf5e292fd5bcf748311e88673cf722a58e7319abfe31",
+      "bytes": 2829
+    },
+    {
+      "path": "journey/07-换一个人登录，权限也要换.md",
+      "sha256": "87fe4be84466a84518a4143f0cb4aeff539283046ea6f7d01904f60b74ae3b72",
+      "bytes": 2739
+    },
+    {
+      "path": "journey/08-让一件事有人接手.md",
+      "sha256": "3354d363d66c447a5999d960b4710c4454158e9fe677015594bfa8d636a94d85",
+      "bytes": 2588
+    },
+    {
+      "path": "journey/09-先核实恢复，再关闭.md",
+      "sha256": "9225ea1f2d6fa1b80902905a3a0d59742327929a6d78eb102dd8871b6307b5a3",
+      "bytes": 2695
+    },
+    {
+      "path": "journey/10-换负责人，不改旧事件.md",
+      "sha256": "3f897ca8a01c54cdb5f271f2b5d323423136ecbdde438716ec5f43a86d4d262a",
+      "bytes": 2767
+    },
+    {
+      "path": "journey/11-故意弄错一次，再修好.md",
+      "sha256": "c5bb38442838a69315b3ae2b2f9887ff599937151733ed29dd8305506f6b13c1",
+      "bytes": 3359
+    },
+    {
+      "path": "journey/12-交给另一个人运行.md",
+      "sha256": "90776f6066d7edcf52ecf6ad8025c83b2de3ac0e0b44c907cf726e8f32fa93a0",
+      "bytes": 3216
+    },
+    {
+      "path": "journey/build.json",
+      "sha256": "4c9ae84c4c5e335e86ee3b5cf7cf3e123c55a43617284627da013b2e99b813bb",
+      "bytes": 8684
+    },
+    {
+      "path": "journey/figures/stage-01.svg",
+      "sha256": "37c2d6cd1c488091e456da87b3a0f4412dc9c495d01566498472d900ab49bc7d",
+      "bytes": 2280
+    },
+    {
+      "path": "journey/figures/stage-02.svg",
+      "sha256": "37c2d6cd1c488091e456da87b3a0f4412dc9c495d01566498472d900ab49bc7d",
+      "bytes": 2280
+    },
+    {
+      "path": "journey/figures/stage-03.svg",
+      "sha256": "37c2d6cd1c488091e456da87b3a0f4412dc9c495d01566498472d900ab49bc7d",
+      "bytes": 2280
+    },
+    {
+      "path": "journey/figures/stage-04.svg",
+      "sha256": "d9d26f9bcc519802dd47b0a1cba7f6944d9468a23a730a7d436884d48fd7842b",
+      "bytes": 2274
+    },
+    {
+      "path": "journey/figures/stage-05.svg",
+      "sha256": "d9d26f9bcc519802dd47b0a1cba7f6944d9468a23a730a7d436884d48fd7842b",
+      "bytes": 2274
+    },
+    {
+      "path": "journey/figures/stage-06.svg",
+      "sha256": "ee1472117e153e43c9a8d6bbf1dd84d63aa9ba1ed78899897bbbf5facaefde15",
+      "bytes": 2268
+    },
+    {
+      "path": "journey/figures/stage-07.svg",
+      "sha256": "ee1472117e153e43c9a8d6bbf1dd84d63aa9ba1ed78899897bbbf5facaefde15",
+      "bytes": 2268
+    },
+    {
+      "path": "journey/figures/stage-08.svg",
+      "sha256": "8385b02bfa4327229e6f8bd8c88411e0b34c05df94bdd16de2e54de609537054",
+      "bytes": 2265
+    },
+    {
+      "path": "journey/figures/stage-09.svg",
+      "sha256": "2f1236535cb9bca22d7f7a3fe0cc4d99f070348d75057c82adac517823ad09b0",
+      "bytes": 2259
+    },
+    {
+      "path": "journey/figures/stage-10.svg",
+      "sha256": "2f1236535cb9bca22d7f7a3fe0cc4d99f070348d75057c82adac517823ad09b0",
+      "bytes": 2259
+    },
+    {
+      "path": "journey/figures/stage-11.svg",
+      "sha256": "2f1236535cb9bca22d7f7a3fe0cc4d99f070348d75057c82adac517823ad09b0",
+      "bytes": 2259
+    },
+    {
+      "path": "journey/figures/stage-12.svg",
+      "sha256": "f9a30f6a2e56ab3406f20774252f3c9fcb77cd15c78016758865b95e18a8ac66",
+      "bytes": 2253
+    },
+    {
+      "path": "journey/index.html",
+      "sha256": "884124d6cf35f0fb71d0c503d5c7a53597d9766abf8a4aa82e60aec7c30b62a5",
+      "bytes": 243280
+    },
+    {
+      "path": "journey/lessons.json",
+      "sha256": "2ed316e6cb4a5f5c549352d3da42c9c8e6876bb1e550b36c88b1e7d4f478b4c3",
+      "bytes": 22274
+    },
+    {
+      "path": "journey/qa/round10/01-设备卡片.png",
+      "sha256": "83c268e58c94f56dfa63c7cc0cec668fb26cf4d25f8f256980350aff90f265b6",
+      "bytes": 378281
+    },
+    {
+      "path": "journey/qa/round10/04-能源部分失败保留快照.png",
+      "sha256": "4ee1ee94e9c973f77394399d89e838974e29870461b857970f79a5250f1e0b40",
+      "bytes": 281978
+    },
+    {
+      "path": "journey/qa/round10/06-原始报警失败保留快照.png",
+      "sha256": "312921b3c5865e8c5fa267b55b011f800586481aceab3819ba52899ec4fcaabb",
+      "bytes": 169055
+    },
+    {
+      "path": "journey/qa/round10/07-命令审计历史样本.png",
+      "sha256": "b8867e8cd67999ea0b402795a75627b6b083cdb99e09253c71674ad0f9c10ae8",
+      "bytes": 171289
+    },
+    {
+      "path": "journey/qa/round10/08-事件处理人和状态筛选.png",
+      "sha256": "271b265041ded6ad5bcda6a889c172fd4f9b22f5f19b5966b94b51a8a8b5a236",
+      "bytes": 279136
+    },
+    {
+      "path": "journey/功能验收.md",
+      "sha256": "a8d4f39a31ab3bc261f35b61585712dc35e12f1e7a23c25d2c8ef8bbe233b3eb",
+      "bytes": 4110
+    },
+    {
+      "path": "journey/教师安排.md",
+      "sha256": "19efc9dc965a84280665e0907e39dcb4c7f77834837dcd25128313daec264237",
+      "bytes": 2980
+    },
+    {
+      "path": "lesson-plans/index.html",
+      "sha256": "bdd52e70acde10c1b7125db00107d3cf47538d0726a506c1dfc95b9b8eb1fea7",
+      "bytes": 27455
+    },
+    {
+      "path": "reading/index.html",
+      "sha256": "bc3709e30fcada8c044f8ee3cfafab030d8d3a7ce325cbfdd81b86ce5be666b5",
+      "bytes": 630173
+    },
+    {
+      "path": "resources/index.html",
+      "sha256": "1162172a664f20f1d0d10e561c62fb1169e27b90bb5202738cec771765093ad9",
+      "bytes": 129638
+    },
+    {
+      "path": "resources/project-journey/BUILD-MANIFEST.json",
+      "sha256": "073768bb0e301178174c77351b49446686b9ac9dfb08aa38247431185b6b0c77",
+      "bytes": 135948
+    },
+    {
+      "path": "resources/project-journey/README.md",
+      "sha256": "fae53d21873a7929ce13d3e8d88d73872d6492d68e4f2306a8d8f6cc369ca577",
+      "bytes": 1224
+    },
+    {
+      "path": "resources/project-journey/app/.gitignore",
+      "sha256": "f209910e78c16f50c3a2f678626c35846ecf897bbc705ed8718796e3b033c655",
+      "bytes": 88
+    },
+    {
+      "path": "resources/project-journey/app/.nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8
+    },
+    {
+      "path": "resources/project-journey/app/CODEBUDDY.md",
+      "sha256": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb",
+      "bytes": 1640
+    },
+    {
+      "path": "resources/project-journey/app/README.md",
+      "sha256": "df0a6db424a4a357bf52f8a846af8e4055bb6f7331f2b9614c106ca49cfc6821",
+      "bytes": 3706
+    },
+    {
+      "path": "resources/project-journey/app/docs/接口与数据.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165
+    },
+    {
+      "path": "resources/project-journey/app/docs/项目卡.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181
+    },
+    {
+      "path": "resources/project-journey/app/evidence/README.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215
+    },
+    {
+      "path": "resources/project-journey/app/frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54
+    },
+    {
+      "path": "resources/project-journey/app/frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129
+    },
+    {
+      "path": "resources/project-journey/app/frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340
+    },
+    {
+      "path": "resources/project-journey/app/frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362
+    },
+    {
+      "path": "resources/project-journey/app/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918
+    },
+    {
+      "path": "resources/project-journey/app/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/App.vue",
+      "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83",
+      "bytes": 320
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/domain/journey-exercises.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/project-settings.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/tests/journey-start.test.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731
+    },
+    {
+      "path": "resources/project-journey/app/frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/app/frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410
+    },
+    {
+      "path": "resources/project-journey/app/frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359
+    },
+    {
+      "path": "resources/project-journey/app/journey-state.json",
+      "sha256": "660fe076c5b295aaa325ac5fd3da988a0fae7028b660d05b2991c29dbac4c89e",
+      "bytes": 3242
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/README.md",
+      "sha256": "81a300623aa0ec3bd0e10713812de27db50bf3f3c0f0857f2baf9613920a4dfb",
+      "bytes": 1288
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/.gitignore",
+      "sha256": "f209910e78c16f50c3a2f678626c35846ecf897bbc705ed8718796e3b033c655",
+      "bytes": 88
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/.nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/CODEBUDDY.md",
+      "sha256": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb",
+      "bytes": 1640
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/docs/接口与数据.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/docs/项目卡.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/evidence/README.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/App.vue",
+      "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83",
+      "bytes": 320
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/domain/journey-exercises.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/project-settings.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/tests/journey-start.test.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/files/tools/progress.mjs",
+      "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127",
+      "bytes": 14683
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/manifest.json",
+      "sha256": "e21fa374f867cecb1caa65dddda07e5f9cb67c081fe0163d27b44a73a17f0922",
+      "bytes": 5565
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/README.md",
+      "sha256": "44f00a34c62f891a68ffd588833b1176ead834f72dde08186c67ea8b7a4a9152",
+      "bytes": 5902
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a",
+      "bytes": 36
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6",
+      "bytes": 58727
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/README.md",
+      "sha256": "20ba1091d71eb4b7f70aa2843a433c27f963eb81fc69bb2ed62c7de613e04d57",
+      "bytes": 14458
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/docs/debug-read-pagination.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127",
+      "bytes": 2844
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d",
+      "bytes": 16372
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502",
+      "bytes": 4935
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89",
+      "bytes": 2060
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9",
+      "bytes": 3143
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31",
+      "bytes": 1388
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec",
+      "bytes": 1927
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183",
+      "bytes": 1344
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702",
+      "bytes": 666
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb",
+      "bytes": 336
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9",
+      "bytes": 1531
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f",
+      "bytes": 2500
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6",
+      "bytes": 6465
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16",
+      "bytes": 1561
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477",
+      "bytes": 8189
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1",
+      "bytes": 1224
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807",
+      "bytes": 530
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a",
+      "bytes": 630
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091",
+      "bytes": 2512
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535",
+      "bytes": 499
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439",
+      "bytes": 1687
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0",
+      "bytes": 8340
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d",
+      "bytes": 1684
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3",
+      "bytes": 2343
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0",
+      "bytes": 3814
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a",
+      "bytes": 11272
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62",
+      "bytes": 14334
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000",
+      "bytes": 10464
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49",
+      "bytes": 2105
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e",
+      "bytes": 8151
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738",
+      "bytes": 587
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad",
+      "bytes": 749
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973",
+      "bytes": 198
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184",
+      "bytes": 2501
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258",
+      "bytes": 4739
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e",
+      "bytes": 2147
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c",
+      "bytes": 13732
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0",
+      "bytes": 3230
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7",
+      "bytes": 1006
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103",
+      "bytes": 2994
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78",
+      "bytes": 3859
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd",
+      "bytes": 10777
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2",
+      "bytes": 17905
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841",
+      "bytes": 1672
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed",
+      "bytes": 35924
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890",
+      "bytes": 910
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9",
+      "bytes": 1302
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9",
+      "bytes": 1401
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/docs/02-教师数据库交接单.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8",
+      "bytes": 5054
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/README.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780",
+      "bytes": 8767
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32",
+      "bytes": 15957
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb",
+      "bytes": 2112
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787",
+      "bytes": 4840
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+      "bytes": 585
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6",
+      "bytes": 9190
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494",
+      "bytes": 4335
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2",
+      "bytes": 2268
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4",
+      "bytes": 3338
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/quality-cases.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278",
+      "bytes": 4210
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26",
+      "bytes": 2562
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/schema.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3",
+      "bytes": 4594
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db",
+      "bytes": 1007
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/App.vue",
+      "sha256": "5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156",
+      "bytes": 4954
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+      "bytes": 2612
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/api/campus.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+      "bytes": 2661
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+      "bytes": 5079
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/domain/course.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "bytes": 4467
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/journey/features.ts",
+      "sha256": "241662ec80f0e85d3e7aa3f9f293b08ce6fcfb2ee176e42ff5dc3cd89d54c2a3",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/journey/registry.ts",
+      "sha256": "08972b81db69fd498a82f08b1ebf031391f741be8ce95e58e809d1aed37730c1",
+      "bytes": 307
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+      "bytes": 6256
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f",
+      "bytes": 1584
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+      "bytes": 3149
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+      "bytes": 4282
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+      "bytes": 6420
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+      "bytes": 1067
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/types/full.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+      "bytes": 3222
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda",
+      "bytes": 9440
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/frontend/src/views/FullWorkspace.vue",
+      "sha256": "c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1",
+      "bytes": 1263
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689",
+      "bytes": 7625
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66",
+      "bytes": 804
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/files/tools/validate-fixtures.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786",
+      "bytes": 20580
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/manifest.json",
+      "sha256": "4c9d34f19d0f5a00f509730ff6fcf32e5e8246ba98f0e1f1fb06f8fea9bef89e",
+      "bytes": 24343
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/README.md",
+      "sha256": "34c93fd42e0f6f3eb0abb1edc17de0cbe4f2dd9966fe576a9b8cba3796dee61a",
+      "bytes": 1033
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/journey/features.ts",
+      "sha256": "f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/journey/registry.ts",
+      "sha256": "7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665",
+      "bytes": 415
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/files/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/manifest.json",
+      "sha256": "4cbeda768691811ca6a461cf6f3284ba6da167176440037993b00221682ff815",
+      "bytes": 3650
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/README.md",
+      "sha256": "337b336ec1a81ae6ab541e0924aee5263b7a5cef8eaef8656a3c559ef41eedf8",
+      "bytes": 601
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/files/frontend/src/journey/features.ts",
+      "sha256": "b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/files/frontend/src/journey/registry.ts",
+      "sha256": "c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3",
+      "bytes": 530
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/files/frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/manifest.json",
+      "sha256": "38ac2d791aefa195189f69204acb9bab331cf903e07873d75a79ed1bd869d0c3",
+      "bytes": 1741
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/README.md",
+      "sha256": "7383248d6f12a639e37ca949d5f2236640dbbeb43a16d5d6acf180c587a44949",
+      "bytes": 718
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/journey/features.ts",
+      "sha256": "1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/journey/registry.ts",
+      "sha256": "32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820",
+      "bytes": 748
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/files/frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/manifest.json",
+      "sha256": "c5547c35e0c8dbfd8177d1e8212bd9ce39a5b23af7e93b1040649aca156f5e8a",
+      "bytes": 2716
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/README.md",
+      "sha256": "3910983e108fb8967b1fb440e358fdcb1dbb21ad06033875d1ab857184e34be3",
+      "bytes": 789
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/journey/features.ts",
+      "sha256": "2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/journey/registry.ts",
+      "sha256": "53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808",
+      "bytes": 974
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/files/frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/manifest.json",
+      "sha256": "8f8064147d257abd5107e60f26c59b45db3a05d4cd9050ca16646495b9db50df",
+      "bytes": 2979
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/README.md",
+      "sha256": "bf989010a07a7f76766b85acd2cbe13b26818ddedb22549191c4ad89ce7fe6c4",
+      "bytes": 574
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/files/frontend/src/journey/features.ts",
+      "sha256": "b5b82b3328c17768bbebc72852264d86a47fbf36c7315d043a669a64dcad9324",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/files/frontend/src/journey/registry.ts",
+      "sha256": "a6ca821f9f89176f1d54b9a159d5a17e2e1310104289dce4d0516ee2f497f364",
+      "bytes": 1083
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/files/frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e",
+      "bytes": 784
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/manifest.json",
+      "sha256": "1276cbe819550b2e1a7d6d7966fea303bbf6dc3f2c0313b142dfa7c01c260a91",
+      "bytes": 1711
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/README.md",
+      "sha256": "edcc2f56618f36492acd9500b38b112e48c61dde7e160dffbdd729f8e1bea6d2",
+      "bytes": 573
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/files/frontend/src/journey/features.ts",
+      "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/files/frontend/src/journey/registry.ts",
+      "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7",
+      "bytes": 1189
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/files/frontend/src/views/CasesView.vue",
+      "sha256": "acd2ef451c6403e47fc459ab3324c14e5c97cf1402c0da4f69a25f87c773281b",
+      "bytes": 20655
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/manifest.json",
+      "sha256": "73eecd95f32f271361207e5233b84342c7a61e339e59c1b2660057492902ffe5",
+      "bytes": 1710
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-09/README.md",
+      "sha256": "092d08ba829e314702f54d81690cf14b57beda6d8f6869f7b15e15bee960f1ae",
+      "bytes": 538
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-09/files/frontend/src/journey/features.ts",
+      "sha256": "0f153cebb92c95e6da59a6dcdbaaa3d588b65c116983ba410c99df8e4aaffa10",
+      "bytes": 130
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-09/files/frontend/src/views/CloseChecklist.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f",
+      "bytes": 566
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-09/manifest.json",
+      "sha256": "c62d3ff2d2ee4feebdbac6903758e5ca9600ec41440ab7368304dc6422e92178",
+      "bytes": 1500
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/README.md",
+      "sha256": "13e0cfd883239a403ec46a0890efa1eec8b720852921fc6c2a739a7b71547a0c",
+      "bytes": 738
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/files/frontend/src/journey/features.ts",
+      "sha256": "7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/files/frontend/src/journey/registry.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179",
+      "bytes": 1519
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/files/frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/files/frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/files/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/manifest.json",
+      "sha256": "847f1306d72fa43616ba2e6f933508568084b0acdf50bd247bb2546ae53647b2",
+      "bytes": 2849
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/README.md",
+      "sha256": "2a21b4005251a06c43a82aa5664fd5c76ebb51d08d50c373dbe069c55501c495",
+      "bytes": 987
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/docs/调试记录.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/journey/features.ts",
+      "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/files/frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/manifest.json",
+      "sha256": "1a8f9e1204ad36378b97e75ac5d115b0cf393aede077948e36193f97bfe9992e",
+      "bytes": 3195
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/README.md",
+      "sha256": "7701b52b3fad2f3d5bc311e109063ace1ab877a8fcf063822e58ff2dc89a458d",
+      "bytes": 567
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/files/docs/交付核对.md",
+      "sha256": "7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/files/frontend/src/journey/features.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/files/tools/hand-in.mjs",
+      "sha256": "082464e138f229afeb67405b72e94495f19a37127d3f77eeca034a86304f3789",
+      "bytes": 3442
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/manifest.json",
+      "sha256": "efb13ac78a30e1138226739521ec9b3b7deda629cce8567e1125c7ad3740e557",
+      "bytes": 1387
+    },
+    {
+      "path": "resources/project-journey/app/package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651
+    },
+    {
+      "path": "resources/project-journey/app/tools/progress.mjs",
+      "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127",
+      "bytes": 14683
+    },
+    {
+      "path": "resources/project-journey/authoring/progress.mjs",
+      "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127",
+      "bytes": 14683
+    },
+    {
+      "path": "resources/project-journey/reference/.gitignore",
+      "sha256": "f209910e78c16f50c3a2f678626c35846ecf897bbc705ed8718796e3b033c655",
+      "bytes": 88
+    },
+    {
+      "path": "resources/project-journey/reference/.nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8
+    },
+    {
+      "path": "resources/project-journey/reference/CODEBUDDY.md",
+      "sha256": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb",
+      "bytes": 1640
+    },
+    {
+      "path": "resources/project-journey/reference/README.md",
+      "sha256": "626b7bc96e45195d06fd5a75c97336483dabbd3dbece7f5b4f2c5a5b01c45db8",
+      "bytes": 221
+    },
+    {
+      "path": "resources/project-journey/reference/backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a",
+      "bytes": 36
+    },
+    {
+      "path": "resources/project-journey/reference/backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6",
+      "bytes": 58727
+    },
+    {
+      "path": "resources/project-journey/reference/backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233
+    },
+    {
+      "path": "resources/project-journey/reference/backend/README.md",
+      "sha256": "20ba1091d71eb4b7f70aa2843a433c27f963eb81fc69bb2ed62c7de613e04d57",
+      "bytes": 14458
+    },
+    {
+      "path": "resources/project-journey/reference/backend/docs/debug-read-pagination.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127",
+      "bytes": 2844
+    },
+    {
+      "path": "resources/project-journey/reference/backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d",
+      "bytes": 16372
+    },
+    {
+      "path": "resources/project-journey/reference/backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502",
+      "bytes": 4935
+    },
+    {
+      "path": "resources/project-journey/reference/backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284
+    },
+    {
+      "path": "resources/project-journey/reference/backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734
+    },
+    {
+      "path": "resources/project-journey/reference/backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89",
+      "bytes": 2060
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9",
+      "bytes": 3143
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31",
+      "bytes": 1388
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec",
+      "bytes": 1927
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183",
+      "bytes": 1344
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702",
+      "bytes": 666
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb",
+      "bytes": 336
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9",
+      "bytes": 1531
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f",
+      "bytes": 2500
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6",
+      "bytes": 6465
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16",
+      "bytes": 1561
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477",
+      "bytes": 8189
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1",
+      "bytes": 1224
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807",
+      "bytes": 530
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a",
+      "bytes": 630
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091",
+      "bytes": 2512
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535",
+      "bytes": 499
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439",
+      "bytes": 1687
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0",
+      "bytes": 8340
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d",
+      "bytes": 1684
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3",
+      "bytes": 2343
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0",
+      "bytes": 3814
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a",
+      "bytes": 11272
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62",
+      "bytes": 14334
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000",
+      "bytes": 10464
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49",
+      "bytes": 2105
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e",
+      "bytes": 8151
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738",
+      "bytes": 587
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad",
+      "bytes": 749
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973",
+      "bytes": 198
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184",
+      "bytes": 2501
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258",
+      "bytes": 4739
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e",
+      "bytes": 2147
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c",
+      "bytes": 13732
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0",
+      "bytes": 3230
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7",
+      "bytes": 1006
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103",
+      "bytes": 2994
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78",
+      "bytes": 3859
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd",
+      "bytes": 10777
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2",
+      "bytes": 17905
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841",
+      "bytes": 1672
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed",
+      "bytes": 35924
+    },
+    {
+      "path": "resources/project-journey/reference/backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890",
+      "bytes": 910
+    },
+    {
+      "path": "resources/project-journey/reference/backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9",
+      "bytes": 1302
+    },
+    {
+      "path": "resources/project-journey/reference/backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9",
+      "bytes": 1401
+    },
+    {
+      "path": "resources/project-journey/reference/docs/02-教师数据库交接单.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8",
+      "bytes": 5054
+    },
+    {
+      "path": "resources/project-journey/reference/docs/交付核对.md",
+      "sha256": "7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/reference/docs/接口与数据.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165
+    },
+    {
+      "path": "resources/project-journey/reference/docs/调试记录.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239
+    },
+    {
+      "path": "resources/project-journey/reference/docs/项目卡.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181
+    },
+    {
+      "path": "resources/project-journey/reference/evidence/README.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/README.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780",
+      "bytes": 8767
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32",
+      "bytes": 15957
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb",
+      "bytes": 2112
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787",
+      "bytes": 4840
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+      "bytes": 585
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6",
+      "bytes": 9190
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494",
+      "bytes": 4335
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2",
+      "bytes": 2268
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4",
+      "bytes": 3338
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/quality-cases.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278",
+      "bytes": 4210
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26",
+      "bytes": 2562
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/schema.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3",
+      "bytes": 4594
+    },
+    {
+      "path": "resources/project-journey/reference/fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db",
+      "bytes": 1007
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/README.md",
+      "sha256": "3d91cbc95cc0b251dbe83382fa0b62e48abbac032d5d49b2192d4a5f45198eed",
+      "bytes": 8649
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/App.vue",
+      "sha256": "5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156",
+      "bytes": 4954
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+      "bytes": 2612
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/api/campus.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+      "bytes": 2661
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+      "bytes": 5079
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/domain/course.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "bytes": 4467
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/domain/journey-exercises.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/journey/features.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/journey/registry.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179",
+      "bytes": 1519
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/project-settings.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+      "bytes": 6256
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f",
+      "bytes": 1584
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+      "bytes": 3149
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/journey-start.test.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+      "bytes": 4282
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+      "bytes": 6420
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+      "bytes": 1067
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/types/full.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+      "bytes": 3222
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e",
+      "bytes": 784
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/CasesView.vue",
+      "sha256": "acd2ef451c6403e47fc459ab3324c14e5c97cf1402c0da4f69a25f87c773281b",
+      "bytes": 20655
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/CloseChecklist.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f",
+      "bytes": 566
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda",
+      "bytes": 9440
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/FullWorkspace.vue",
+      "sha256": "c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1",
+      "bytes": 1263
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359
+    },
+    {
+      "path": "resources/project-journey/reference/journey-state.json",
+      "sha256": "c997cb3fad111e5d2c37cc497624e66ce5cf287c94231ae6f268a7cbfa8b2076",
+      "bytes": 17160
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/README.md",
+      "sha256": "81a300623aa0ec3bd0e10713812de27db50bf3f3c0f0857f2baf9613920a4dfb",
+      "bytes": 1288
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/.gitignore",
+      "sha256": "f209910e78c16f50c3a2f678626c35846ecf897bbc705ed8718796e3b033c655",
+      "bytes": 88
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/.nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/CODEBUDDY.md",
+      "sha256": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb",
+      "bytes": 1640
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/docs/接口与数据.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/docs/项目卡.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/evidence/README.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/App.vue",
+      "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83",
+      "bytes": 320
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/domain/journey-exercises.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/project-settings.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/tests/journey-start.test.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/files/tools/progress.mjs",
+      "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127",
+      "bytes": 14683
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-01/manifest.json",
+      "sha256": "e21fa374f867cecb1caa65dddda07e5f9cb67c081fe0163d27b44a73a17f0922",
+      "bytes": 5565
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/README.md",
+      "sha256": "44f00a34c62f891a68ffd588833b1176ead834f72dde08186c67ea8b7a4a9152",
+      "bytes": 5902
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a",
+      "bytes": 36
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6",
+      "bytes": 58727
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/README.md",
+      "sha256": "20ba1091d71eb4b7f70aa2843a433c27f963eb81fc69bb2ed62c7de613e04d57",
+      "bytes": 14458
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/docs/debug-read-pagination.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127",
+      "bytes": 2844
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d",
+      "bytes": 16372
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502",
+      "bytes": 4935
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89",
+      "bytes": 2060
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223",
+      "bytes": 939
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9",
+      "bytes": 3143
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31",
+      "bytes": 1388
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec",
+      "bytes": 1927
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183",
+      "bytes": 1344
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702",
+      "bytes": 666
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb",
+      "bytes": 336
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9",
+      "bytes": 1531
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f",
+      "bytes": 2500
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6",
+      "bytes": 6465
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16",
+      "bytes": 1561
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477",
+      "bytes": 8189
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1",
+      "bytes": 1224
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807",
+      "bytes": 530
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a",
+      "bytes": 630
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091",
+      "bytes": 2512
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535",
+      "bytes": 499
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439",
+      "bytes": 1687
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0",
+      "bytes": 8340
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d",
+      "bytes": 1684
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3",
+      "bytes": 2343
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0",
+      "bytes": 3814
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a",
+      "bytes": 11272
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62",
+      "bytes": 14334
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000",
+      "bytes": 10464
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49",
+      "bytes": 2105
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e",
+      "bytes": 8151
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738",
+      "bytes": 587
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad",
+      "bytes": 749
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973",
+      "bytes": 198
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184",
+      "bytes": 2501
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258",
+      "bytes": 4739
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e",
+      "bytes": 2147
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c",
+      "bytes": 13732
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0",
+      "bytes": 3230
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7",
+      "bytes": 1006
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103",
+      "bytes": 2994
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78",
+      "bytes": 3859
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd",
+      "bytes": 10777
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2",
+      "bytes": 17905
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841",
+      "bytes": 1672
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed",
+      "bytes": 35924
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890",
+      "bytes": 910
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9",
+      "bytes": 1302
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9",
+      "bytes": 1401
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/docs/02-教师数据库交接单.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8",
+      "bytes": 5054
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/README.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780",
+      "bytes": 8767
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32",
+      "bytes": 15957
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb",
+      "bytes": 2112
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787",
+      "bytes": 4840
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+      "bytes": 585
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6",
+      "bytes": 9190
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494",
+      "bytes": 4335
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2",
+      "bytes": 2268
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4",
+      "bytes": 3338
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/quality-cases.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278",
+      "bytes": 4210
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26",
+      "bytes": 2562
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/schema.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3",
+      "bytes": 4594
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db",
+      "bytes": 1007
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/App.vue",
+      "sha256": "5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156",
+      "bytes": 4954
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+      "bytes": 2612
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/api/campus.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+      "bytes": 2661
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+      "bytes": 5079
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/domain/course.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "bytes": 4467
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/journey/features.ts",
+      "sha256": "241662ec80f0e85d3e7aa3f9f293b08ce6fcfb2ee176e42ff5dc3cd89d54c2a3",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/journey/registry.ts",
+      "sha256": "08972b81db69fd498a82f08b1ebf031391f741be8ce95e58e809d1aed37730c1",
+      "bytes": 307
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+      "bytes": 6256
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f",
+      "bytes": 1584
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+      "bytes": 3149
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+      "bytes": 4282
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+      "bytes": 6420
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+      "bytes": 1067
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/types/full.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+      "bytes": 3222
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda",
+      "bytes": 9440
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/frontend/src/views/FullWorkspace.vue",
+      "sha256": "c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1",
+      "bytes": 1263
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689",
+      "bytes": 7625
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66",
+      "bytes": 804
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/files/tools/validate-fixtures.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786",
+      "bytes": 20580
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-02/manifest.json",
+      "sha256": "4c9d34f19d0f5a00f509730ff6fcf32e5e8246ba98f0e1f1fb06f8fea9bef89e",
+      "bytes": 24343
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/README.md",
+      "sha256": "34c93fd42e0f6f3eb0abb1edc17de0cbe4f2dd9966fe576a9b8cba3796dee61a",
+      "bytes": 1033
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/journey/features.ts",
+      "sha256": "f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/journey/registry.ts",
+      "sha256": "7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665",
+      "bytes": 415
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/files/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-03/manifest.json",
+      "sha256": "4cbeda768691811ca6a461cf6f3284ba6da167176440037993b00221682ff815",
+      "bytes": 3650
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-04/README.md",
+      "sha256": "337b336ec1a81ae6ab541e0924aee5263b7a5cef8eaef8656a3c559ef41eedf8",
+      "bytes": 601
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-04/files/frontend/src/journey/features.ts",
+      "sha256": "b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-04/files/frontend/src/journey/registry.ts",
+      "sha256": "c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3",
+      "bytes": 530
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-04/files/frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-04/manifest.json",
+      "sha256": "38ac2d791aefa195189f69204acb9bab331cf903e07873d75a79ed1bd869d0c3",
+      "bytes": 1741
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/README.md",
+      "sha256": "7383248d6f12a639e37ca949d5f2236640dbbeb43a16d5d6acf180c587a44949",
+      "bytes": 718
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/journey/features.ts",
+      "sha256": "1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/journey/registry.ts",
+      "sha256": "32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820",
+      "bytes": 748
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/files/frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-05/manifest.json",
+      "sha256": "c5547c35e0c8dbfd8177d1e8212bd9ce39a5b23af7e93b1040649aca156f5e8a",
+      "bytes": 2716
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/README.md",
+      "sha256": "3910983e108fb8967b1fb440e358fdcb1dbb21ad06033875d1ab857184e34be3",
+      "bytes": 789
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/journey/features.ts",
+      "sha256": "2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/journey/registry.ts",
+      "sha256": "53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808",
+      "bytes": 974
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/files/frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-06/manifest.json",
+      "sha256": "8f8064147d257abd5107e60f26c59b45db3a05d4cd9050ca16646495b9db50df",
+      "bytes": 2979
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-07/README.md",
+      "sha256": "bf989010a07a7f76766b85acd2cbe13b26818ddedb22549191c4ad89ce7fe6c4",
+      "bytes": 574
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-07/files/frontend/src/journey/features.ts",
+      "sha256": "b5b82b3328c17768bbebc72852264d86a47fbf36c7315d043a669a64dcad9324",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-07/files/frontend/src/journey/registry.ts",
+      "sha256": "a6ca821f9f89176f1d54b9a159d5a17e2e1310104289dce4d0516ee2f497f364",
+      "bytes": 1083
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-07/files/frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e",
+      "bytes": 784
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-07/manifest.json",
+      "sha256": "1276cbe819550b2e1a7d6d7966fea303bbf6dc3f2c0313b142dfa7c01c260a91",
+      "bytes": 1711
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-08/README.md",
+      "sha256": "edcc2f56618f36492acd9500b38b112e48c61dde7e160dffbdd729f8e1bea6d2",
+      "bytes": 573
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-08/files/frontend/src/journey/features.ts",
+      "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28",
+      "bytes": 63
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-08/files/frontend/src/journey/registry.ts",
+      "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7",
+      "bytes": 1189
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-08/files/frontend/src/views/CasesView.vue",
+      "sha256": "acd2ef451c6403e47fc459ab3324c14e5c97cf1402c0da4f69a25f87c773281b",
+      "bytes": 20655
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-08/manifest.json",
+      "sha256": "73eecd95f32f271361207e5233b84342c7a61e339e59c1b2660057492902ffe5",
+      "bytes": 1710
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-09/README.md",
+      "sha256": "092d08ba829e314702f54d81690cf14b57beda6d8f6869f7b15e15bee960f1ae",
+      "bytes": 538
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-09/files/frontend/src/journey/features.ts",
+      "sha256": "0f153cebb92c95e6da59a6dcdbaaa3d588b65c116983ba410c99df8e4aaffa10",
+      "bytes": 130
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-09/files/frontend/src/views/CloseChecklist.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f",
+      "bytes": 566
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-09/manifest.json",
+      "sha256": "c62d3ff2d2ee4feebdbac6903758e5ca9600ec41440ab7368304dc6422e92178",
+      "bytes": 1500
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/README.md",
+      "sha256": "13e0cfd883239a403ec46a0890efa1eec8b720852921fc6c2a739a7b71547a0c",
+      "bytes": 738
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/files/frontend/src/journey/features.ts",
+      "sha256": "7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/files/frontend/src/journey/registry.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179",
+      "bytes": 1519
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/files/frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/files/frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/files/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-10/manifest.json",
+      "sha256": "847f1306d72fa43616ba2e6f933508568084b0acdf50bd247bb2546ae53647b2",
+      "bytes": 2849
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/README.md",
+      "sha256": "2a21b4005251a06c43a82aa5664fd5c76ebb51d08d50c373dbe069c55501c495",
+      "bytes": 987
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/docs/调试记录.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/journey/features.ts",
+      "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/files/frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-11/manifest.json",
+      "sha256": "1a8f9e1204ad36378b97e75ac5d115b0cf393aede077948e36193f97bfe9992e",
+      "bytes": 3195
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-12/README.md",
+      "sha256": "7701b52b3fad2f3d5bc311e109063ace1ab877a8fcf063822e58ff2dc89a458d",
+      "bytes": 567
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-12/files/docs/交付核对.md",
+      "sha256": "7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688",
+      "bytes": 317
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-12/files/frontend/src/journey/features.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09",
+      "bytes": 131
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-12/files/tools/hand-in.mjs",
+      "sha256": "082464e138f229afeb67405b72e94495f19a37127d3f77eeca034a86304f3789",
+      "bytes": 3442
+    },
+    {
+      "path": "resources/project-journey/reference/lesson-bundles/stage-12/manifest.json",
+      "sha256": "efb13ac78a30e1138226739521ec9b3b7deda629cce8567e1125c7ad3740e557",
+      "bytes": 1387
+    },
+    {
+      "path": "resources/project-journey/reference/package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651
+    },
+    {
+      "path": "resources/project-journey/reference/tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689",
+      "bytes": 7625
+    },
+    {
+      "path": "resources/project-journey/reference/tools/hand-in.mjs",
+      "sha256": "082464e138f229afeb67405b72e94495f19a37127d3f77eeca034a86304f3789",
+      "bytes": 3442
+    },
+    {
+      "path": "resources/project-journey/reference/tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66",
+      "bytes": 804
+    },
+    {
+      "path": "resources/project-journey/reference/tools/progress.mjs",
+      "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127",
+      "bytes": 14683
+    },
+    {
+      "path": "resources/project-journey/reference/tools/validate-fixtures.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786",
+      "bytes": 20580
+    },
+    {
+      "path": "resources/student-project/.gitignore",
+      "sha256": "9795317298bc919b480feaa2f551f908b750963bc533260159f244fd43f3065e",
+      "bytes": 120
+    },
+    {
+      "path": "resources/student-project/.nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8
+    },
+    {
+      "path": "resources/student-project/README.md",
+      "sha256": "ea9ff38339718fbb02243e1bf217d70ea973955c7fbe1dd674c8b69dfe7bcabd",
+      "bytes": 2166
+    },
+    {
+      "path": "resources/student-project/backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a",
+      "bytes": 36
+    },
+    {
+      "path": "resources/student-project/backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6",
+      "bytes": 58727
+    },
+    {
+      "path": "resources/student-project/backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233
+    },
+    {
+      "path": "resources/student-project/backend/README.md",
+      "sha256": "ddf0e6f7e5d66a963fd8b0c86d64517ed37b512fbcdbd86c9b684ee3d721af06",
+      "bytes": 14353
+    },
+    {
+      "path": "resources/student-project/backend/docs/debug-read-pagination.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127",
+      "bytes": 2844
+    },
+    {
+      "path": "resources/student-project/backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d",
+      "bytes": 16372
+    },
+    {
+      "path": "resources/student-project/backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502",
+      "bytes": 4935
+    },
+    {
+      "path": "resources/student-project/backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284
+    },
+    {
+      "path": "resources/student-project/backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734
+    },
+    {
+      "path": "resources/student-project/backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89",
+      "bytes": 2060
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223",
+      "bytes": 939
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9",
+      "bytes": 3143
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31",
+      "bytes": 1388
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec",
+      "bytes": 1927
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183",
+      "bytes": 1344
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702",
+      "bytes": 666
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb",
+      "bytes": 336
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9",
+      "bytes": 1531
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f",
+      "bytes": 2500
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6",
+      "bytes": 6465
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16",
+      "bytes": 1561
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477",
+      "bytes": 8189
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1",
+      "bytes": 1224
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807",
+      "bytes": 530
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a",
+      "bytes": 630
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091",
+      "bytes": 2512
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535",
+      "bytes": 499
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439",
+      "bytes": 1687
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0",
+      "bytes": 8340
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d",
+      "bytes": 1684
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3",
+      "bytes": 2343
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0",
+      "bytes": 3814
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a",
+      "bytes": 11272
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62",
+      "bytes": 14334
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+      "bytes": 1144
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000",
+      "bytes": 10464
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49",
+      "bytes": 2105
+    },
+    {
+      "path": "resources/student-project/backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e",
+      "bytes": 8151
+    },
+    {
+      "path": "resources/student-project/backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef",
+      "bytes": 317
+    },
+    {
+      "path": "resources/student-project/backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738",
+      "bytes": 587
+    },
+    {
+      "path": "resources/student-project/backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad",
+      "bytes": 749
+    },
+    {
+      "path": "resources/student-project/backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973",
+      "bytes": 198
+    },
+    {
+      "path": "resources/student-project/backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184",
+      "bytes": 2501
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258",
+      "bytes": 4739
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e",
+      "bytes": 2147
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c",
+      "bytes": 13732
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0",
+      "bytes": 3230
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7",
+      "bytes": 1006
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103",
+      "bytes": 2994
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78",
+      "bytes": 3859
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd",
+      "bytes": 10777
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2",
+      "bytes": 17905
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841",
+      "bytes": 1672
+    },
+    {
+      "path": "resources/student-project/backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed",
+      "bytes": 35924
+    },
+    {
+      "path": "resources/student-project/backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890",
+      "bytes": 910
+    },
+    {
+      "path": "resources/student-project/backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9",
+      "bytes": 1302
+    },
+    {
+      "path": "resources/student-project/backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9",
+      "bytes": 1401
+    },
+    {
+      "path": "resources/student-project/docs/01-跨平台启动.md",
+      "sha256": "2261291b2ad63c86f1d85239a4d93791020bbb488a8b9a7da72e9e2c8f0cbc7f",
+      "bytes": 6891
+    },
+    {
+      "path": "resources/student-project/docs/02-教师数据库交接单.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8",
+      "bytes": 5054
+    },
+    {
+      "path": "resources/student-project/docs/03-资源与章节映射.md",
+      "sha256": "e0455640ecdc918466842d0bc2a110c072aa4bd15a36f19a2f655ff9c391997d",
+      "bytes": 3698
+    },
+    {
+      "path": "resources/student-project/docs/04-首次贯通操作单.md",
+      "sha256": "4b5fb8bfe1c0dddc22f6bfc5fefb2829d2d32381bfc80ef588ca9bf41cdff003",
+      "bytes": 5517
+    },
+    {
+      "path": "resources/student-project/docs/05-空间关系保存操作单.md",
+      "sha256": "0b495771c18ebc9fdc1d53c91d8aa9ed9f644d40ee11f4d7f1467dd3dc691e8e",
+      "bytes": 8539
+    },
+    {
+      "path": "resources/student-project/docs/06-台账筛选与自主UI操作单.md",
+      "sha256": "739ec76a4b5be62e0b4c7012b7093a8256ff0c84fc290bb586af36ffce5427d8",
+      "bytes": 6460
+    },
+    {
+      "path": "resources/student-project/docs/07-质量历史与刷新操作单.md",
+      "sha256": "162663cd33e7c1a603c2cfffc0c0a8622732a0aa567e13c1aae5d31183f2c32c",
+      "bytes": 7377
+    },
+    {
+      "path": "resources/student-project/docs/08-权限撤销与竞态操作单.md",
+      "sha256": "2b35b479bb12ae49b2972e1c43f9c4f2c92f6831a022ead9260ab13ed1d8e8c9",
+      "bytes": 7293
+    },
+    {
+      "path": "resources/student-project/docs/09-演练闭环与关闭规则操作单.md",
+      "sha256": "c19edd96965c7fa138737b8f2747d2c9e6c7044a48d9625ccb9413dc41b2dca3",
+      "bytes": 7300
+    },
+    {
+      "path": "resources/student-project/docs/10-责任变更与时间线操作单.md",
+      "sha256": "6806e986c1d7e6c04aaea4f4847d228fe459021d1d8b34a4f05c361d40000469",
+      "bytes": 7516
+    },
+    {
+      "path": "resources/student-project/docs/11-并发回滚与证据操作单.md",
+      "sha256": "85309e35ba19e4b6c7beb0b3d84f97692030788d847b2de631317a9fae301cdc",
+      "bytes": 6968
+    },
+    {
+      "path": "resources/student-project/docs/12-交付变更与答辩操作单.md",
+      "sha256": "7ec55dbc09e47b9254d339860c4ce7b6328aa5f70181cf947aab6afe101956f5",
+      "bytes": 9980
+    },
+    {
+      "path": "resources/student-project/docs/ch11-assertions.md",
+      "sha256": "ce1d0cdcfb927e5f90f5dda43f403378bfc9654c3dedc458df3209add17b33a9",
+      "bytes": 2261
+    },
+    {
+      "path": "resources/student-project/fixtures/README.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780",
+      "bytes": 8767
+    },
+    {
+      "path": "resources/student-project/fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32",
+      "bytes": 15957
+    },
+    {
+      "path": "resources/student-project/fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb",
+      "bytes": 2112
+    },
+    {
+      "path": "resources/student-project/fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787",
+      "bytes": 4840
+    },
+    {
+      "path": "resources/student-project/fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+      "bytes": 585
+    },
+    {
+      "path": "resources/student-project/fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6",
+      "bytes": 9190
+    },
+    {
+      "path": "resources/student-project/fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494",
+      "bytes": 4335
+    },
+    {
+      "path": "resources/student-project/fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2",
+      "bytes": 2268
+    },
+    {
+      "path": "resources/student-project/fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4",
+      "bytes": 3338
+    },
+    {
+      "path": "resources/student-project/fixtures/quality-cases.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278",
+      "bytes": 4210
+    },
+    {
+      "path": "resources/student-project/fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26",
+      "bytes": 2562
+    },
+    {
+      "path": "resources/student-project/fixtures/schema.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3",
+      "bytes": 4594
+    },
+    {
+      "path": "resources/student-project/fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db",
+      "bytes": 1007
+    },
+    {
+      "path": "resources/student-project/frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54
+    },
+    {
+      "path": "resources/student-project/frontend/DESIGN.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129
+    },
+    {
+      "path": "resources/student-project/frontend/PRODUCT.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340
+    },
+    {
+      "path": "resources/student-project/frontend/README.md",
+      "sha256": "3d91cbc95cc0b251dbe83382fa0b62e48abbac032d5d49b2192d4a5f45198eed",
+      "bytes": 8649
+    },
+    {
+      "path": "resources/student-project/frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362
+    },
+    {
+      "path": "resources/student-project/frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918
+    },
+    {
+      "path": "resources/student-project/frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730
+    },
+    {
+      "path": "resources/student-project/frontend/src/App.vue",
+      "sha256": "4b5d0b06423aa1ee46a15f746f6a71f1487bfd79f80be7c9dcd817cb076d7459",
+      "bytes": 4879
+    },
+    {
+      "path": "resources/student-project/frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+      "bytes": 2612
+    },
+    {
+      "path": "resources/student-project/frontend/src/api/campus.ts",
+      "sha256": "fab7812935e50f250d2fe019ee71e920a7a2e826571a7b9753e417cfa647ad95",
+      "bytes": 2551
+    },
+    {
+      "path": "resources/student-project/frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450
+    },
+    {
+      "path": "resources/student-project/frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+      "bytes": 5079
+    },
+    {
+      "path": "resources/student-project/frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518
+    },
+    {
+      "path": "resources/student-project/frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075
+    },
+    {
+      "path": "resources/student-project/frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106
+    },
+    {
+      "path": "resources/student-project/frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464
+    },
+    {
+      "path": "resources/student-project/frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793
+    },
+    {
+      "path": "resources/student-project/frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852
+    },
+    {
+      "path": "resources/student-project/frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677
+    },
+    {
+      "path": "resources/student-project/frontend/src/domain/course.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "bytes": 4467
+    },
+    {
+      "path": "resources/student-project/frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781
+    },
+    {
+      "path": "resources/student-project/frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166
+    },
+    {
+      "path": "resources/student-project/frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+      "bytes": 6256
+    },
+    {
+      "path": "resources/student-project/frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5774ea5866737b39969411da041c58d33f3c8e8d23aa99a691a3bdfb0abe411f",
+      "bytes": 1584
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+      "bytes": 3149
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+      "bytes": 4282
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+      "bytes": 6420
+    },
+    {
+      "path": "resources/student-project/frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323
+    },
+    {
+      "path": "resources/student-project/frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+      "bytes": 1067
+    },
+    {
+      "path": "resources/student-project/frontend/src/types/full.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+      "bytes": 3222
+    },
+    {
+      "path": "resources/student-project/frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/CasesView.vue",
+      "sha256": "6216e355897114f0b620a69734baff2683d4b07bb5f778118aed56042fa0607f",
+      "bytes": 20352
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "ac97952794c8fbdf49705abdf9e4bc1bfe47f759c4c7915c980221b21a471e00",
+      "bytes": 9300
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/FullWorkspace.vue",
+      "sha256": "8af55518def2ec551022c76cdc674588c2938f8d2d49b782ef2ad1ee86f412e6",
+      "bytes": 2560
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727
+    },
+    {
+      "path": "resources/student-project/frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607
+    },
+    {
+      "path": "resources/student-project/frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410
+    },
+    {
+      "path": "resources/student-project/frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359
+    },
+    {
+      "path": "resources/student-project/package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651
+    },
+    {
+      "path": "resources/student-project/tools/chapter-tasks.json",
+      "sha256": "0a1318b71b2857cbd0e86cdd2c4191a6f3d42f5d29f1b8f6f5194f93db15e288",
+      "bytes": 2678
+    },
+    {
+      "path": "resources/student-project/tools/chapter.mjs",
+      "sha256": "e730d83c9a0c64269c80ab208764773ac7889a9ec1407220029a593015584333",
+      "bytes": 3693
+    },
+    {
+      "path": "resources/student-project/tools/course.mjs",
+      "sha256": "c8f9dfc0fa9e061282140e856f71a355db100b0ebc7c9591adfc041c359f7689",
+      "bytes": 7625
+    },
+    {
+      "path": "resources/student-project/tools/hand-in.mjs",
+      "sha256": "70ca79a7291a2f4ce358fb61ddf9db172c13406d3db2a52934f604035754732c",
+      "bytes": 3371
+    },
+    {
+      "path": "resources/student-project/tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66",
+      "bytes": 804
+    },
+    {
+      "path": "resources/student-project/tools/private-json.test.mjs",
+      "sha256": "081d49abdc930c2edc89e812d2b541d4db35ba63176183d745cbfc3d842fc541",
+      "bytes": 5356
+    },
+    {
+      "path": "resources/student-project/tools/validate-fixtures.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786",
+      "bytes": 20580
+    },
+    {
+      "path": "tools/build-journey.mjs",
+      "sha256": "8e5699ef9abe68fd57aa4b2da23c29fad4cd65018db8749a4a42e45a60ff9ff8",
+      "bytes": 13195
+    },
+    {
+      "path": "tools/build-progress-project.mjs",
+      "sha256": "513323ad0d90d086ed3d296a619ac9ca11609954c1fe54dc3022401dfe38f4bd",
+      "bytes": 35087
+    },
+    {
+      "path": "tools/journey.css",
+      "sha256": "441132d719363c28eb271bf2a029a1af289b0ae38683fc52af9e85c4b7247afa",
+      "bytes": 5662
+    },
+    {
+      "path": "tools/journey.js",
+      "sha256": "b0ad4d7b14ea37f94a347ca559f0ca2869f7a49846e69bd128f863affadec099",
+      "bytes": 3149
+    },
+    {
+      "path": "tools/verify-journey-static.py",
+      "sha256": "349c799e9e56d29a4a0524c972171a1fc25ea8ec9d8a41faa83b0a0972f30e38",
+      "bytes": 21653
+    },
+    {
+      "path": "walkthroughs/index.html",
+      "sha256": "fde104e70266b344df094bf1c26ceedf9fd9cb9eb10f3dec8c4eeb8f048a7432",
+      "bytes": 404051
+    },
+    {
+      "path": "先打开这里.html",
+      "sha256": "85157610fac870018b6cc2c92704607c90b3fb0cf5aef52adb84627ea3ac98cd",
+      "bytes": 2808
+    }
+  ],
+  "notExecuted": [
+    "browser/file://",
+    "HTTP server or API",
+    "CodeBuddy AI session",
+    "Windows runtime",
+    "Node/npm/Maven builds or tests",
+    "database",
+    "classroom timing",
+    "real AIRIOT"
+  ],
+  "interpretation": "PASS_STATIC 仅证明列出的当前文件与静态规则；四要素存在不证明新手操作成功，不能据此签课程业务完成。"
+}

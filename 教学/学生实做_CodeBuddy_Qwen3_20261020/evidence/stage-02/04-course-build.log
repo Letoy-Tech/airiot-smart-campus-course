@@ -1,0 +1,116 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.campus.course:campus-ai-course >-----------------
+[INFO] Building Campus AI Course First Chain 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ campus-ai-course ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ campus-ai-course ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 11 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.2:test (default-test) @ campus-ai-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.campus.course.SourceSelectionTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.481 s -- in edu.campus.course.SourceSelectionTest
+[INFO] Running edu.campus.course.HistoryFixtureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s -- in edu.campus.course.HistoryFixtureTest
+[INFO] Running edu.campus.course.QualityPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in edu.campus.course.QualityPolicyTest
+[INFO] Running edu.campus.course.CatalogReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in edu.campus.course.CatalogReaderTest
+[INFO] Running edu.campus.course.FirstChainTest
+01:25:39.983 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.campus.course.FirstChainTest]: FirstChainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:25:40.041 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.FirstChainTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T01:25:40.185+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Starting FirstChainTest using Java 17.0.12 with PID 90949 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend)
+2026-10-20T01:25:40.186+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : The following 1 profile is active: "first-chain"
+2026-10-20T01:25:40.760+08:00  INFO 90949 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T01:25:40.973+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T01:25:40.973+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T01:25:40.973+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-20T01:25:40.983+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Started FirstChainTest in 0.895 seconds (process running for 1.87)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.942 s -- in edu.campus.course.FirstChainTest
+[INFO] Running edu.campus.course.ReadFixtureValidationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in edu.campus.course.ReadFixtureValidationTest
+[INFO] Running edu.campus.course.CloseRulesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in edu.campus.course.CloseRulesTest
+[INFO] Running edu.campus.course.LocalAccountDirectoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.327 s -- in edu.campus.course.LocalAccountDirectoryTest
+[INFO] Running edu.campus.course.ReadOnlyModelsTest
+2026-10-20T01:25:42.259+08:00  INFO 90949 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.ReadOnlyModelsTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T01:25:42.268+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Starting ReadOnlyModelsTest using Java 17.0.12 with PID 90949 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend)
+2026-10-20T01:25:42.268+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : The following 1 profile is active: "teacher-db"
+2026-10-20T01:25:42.377+08:00  INFO 90949 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T01:25:42.402+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T01:25:42.402+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T01:25:42.402+08:00  INFO 90949 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-20T01:25:42.404+08:00  INFO 90949 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Started ReadOnlyModelsTest in 0.144 seconds (process running for 3.292)
+2026-10-20T01:25:42.435+08:00  WARN 90949 --- [campus-course-backend] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.207 s -- in edu.campus.course.ReadOnlyModelsTest
+[INFO] Running edu.campus.course.TeacherDbTest
+[WARNING] Tests run: 11, Failures: 0, Errors: 0, Skipped: 11, Time elapsed: 0 s -- in edu.campus.course.TeacherDbTest
+[INFO] Running edu.campus.course.SnapshotConsistencyTest
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0 s -- in edu.campus.course.SnapshotConsistencyTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 50, Failures: 0, Errors: 0, Skipped: 16
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ campus-ai-course ---
+[INFO] Building jar: /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend/target/campus-ai-course-0.1.0.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.4.2:repackage (repackage) @ campus-ai-course ---
+[INFO] Replacing main artifact /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend/target/campus-ai-course-0.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend/target/campus-ai-course-0.1.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.175 s
+[INFO] Finished at: 2026-10-20T01:25:42+08:00
+[INFO] ------------------------------------------------------------------------
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+src/tests/first-device-view.test.ts(4,27): error TS2614: Module '"../views/FirstDeviceRead.vue"' has no exported member 'onlineLabel'. Did you mean to use 'import onlineLabel from "../views/FirstDeviceRead.vue"' instead?
+命令失败，退出码 2: npm run build

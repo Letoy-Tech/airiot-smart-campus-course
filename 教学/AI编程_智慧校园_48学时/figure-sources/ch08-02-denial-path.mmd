@@ -1,0 +1,10 @@
+flowchart TD
+    Request[受保护请求] --> Identity{身份有效}
+    Identity -->|否| NoLogin[401 身份无效]
+    Identity -->|是| Role{角色有资格}
+    Role -->|否| Forbidden[403 权限不足]
+    Role -->|是| Scope{对象在范围内}
+    Scope -->|否| Forbidden
+    Scope -->|是| Business{业务条件满足}
+    Business -->|否| Rejected["400 / 404 / 409<br/>按合同拒绝"]
+    Business -->|是| Execute[执行并返回服务端事实]

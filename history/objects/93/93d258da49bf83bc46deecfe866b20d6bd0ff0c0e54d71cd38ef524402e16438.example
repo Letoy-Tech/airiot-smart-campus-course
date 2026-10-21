@@ -1,0 +1,6 @@
+# 这是说明模板。请在工程根目录运行 node tools/setup-env.mjs 生成本机 .env。
+# 不要直接复制这些占位文字当密码。不要把 .env 发给 AI、同学或教师。
+DB_PASSWORD=GENERATED_LOCALLY
+MYSQL_ROOT_PASSWORD=GENERATED_LOCALLY
+REDIS_PASSWORD=GENERATED_LOCALLY
+DEMO_PASSWORD=GENERATED_LOCALLY

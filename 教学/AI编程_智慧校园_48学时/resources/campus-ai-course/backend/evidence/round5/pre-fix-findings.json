@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-18T18:40:48.388881+00:00",
+  "scope": "Independent read-only delivered-source audit with temporary copied reproducers",
+  "sourceModified": false,
+  "serverGlobalIsolationChanged": false,
+  "databaseUsed": "campus_course_test only",
+  "environment": "macOS / JDK17.0.6 / Node22.21.1 / isolated MySQL8.4.10",
+  "findings": [
+    {
+      "id": "AUDIT-R5-BE-01",
+      "priority": "P2",
+      "title": "只读事务未固定隔离级别，教师库 READ COMMITTED 下主行/时间线混合版本",
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "lines": [
+        113,
+        117,
+        316,
+        321
+      ],
+      "trigger": "Connection isolation READ COMMITTED; writer commits atomic owner+timeline update after owner SELECT but before ownerEvents SELECT.",
+      "observed": "Real isolated MySQL: response master version=0, timeline version=1. Writer committed both in one transaction.",
+      "reproducer": "backend/src/test/java/edu/campus/course/SnapshotAuditTest.java",
+      "evidence": "backend/audit-snapshot.log",
+      "recommendation": "For multi-query read aggregates explicitly require REPEATABLE_READ (or freeze connection isolation with validation), including detail/owner/list and LocationService aggregate reads. Retain a two-connection barrier regression test under a READ COMMITTED connection baseline."
+    },
+    {
+      "id": "AUDIT-R5-BE-02",
+      "priority": "P2",
+      "title": "UTF-8 BOM 配置导致三个教师脚本无法执行",
+      "paths": [
+        "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/tools/course.mjs:49",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/tools/course.mjs:55",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/tools/account-admin.mjs:6",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/tools/test-mysql.mjs:7"
+      ],
+      "trigger": "Valid .private/database.json/test-database.json prefixed with UTF-8 BOM U+FEFF; equivalent to Windows PowerShell 5.1 Set-Content -Encoding UTF8 output.",
+      "observed": "All three tools exit 1 in JSON.parse before Java/Maven spawn. Reproduced on Node 22.21.1 using synthetic non-secret files; not a Windows physical-host test.",
+      "recommendation": "Centralize private JSON reading, strip a single leading UTF-8 BOM before JSON.parse, validate config shape and emit sanitized errors. Document UTF-8 creation; detect unsupported UTF-16 without printing file text.",
+      "officialEncodingSource": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1"
+    },
+    {
+      "id": "AUDIT-R5-BE-03",
+      "priority": "P2",
+      "title": "历史夹具单位未校验且被目录单位静默覆盖",
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "lines": [
+        33,
+        36,
+        113
+      ],
+      "trigger": "Copy valid history-cases.json; change data.unit from kW to V without modifying samples.",
+      "observed": "Provider starts; returns unchanged four samples under unit=kW, issues=[], so input V values are mislabeled as kW.",
+      "reproducer": "backend/src/test/java/edu/campus/course/BoundaryAuditTest.java#historyWrongUnitIsSilentlyRelabeled",
+      "evidence": "backend/audit-boundary.log",
+      "recommendation": "Validate history unit type and exact equality with device/tag catalog before accepting fixture; reject mismatch or explicitly report unit error, never relabel unchanged numeric values. Validate successful response envelope alongside metadata."
+    },
+    {
+      "id": "AUDIT-R5-BE-04",
+      "priority": "P2",
+      "title": "目录时间戳未执行统一 epoch 上限，向页面输出不可用时刻",
+      "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "lines": [
+        65,
+        110,
+        198,
+        204
+      ],
+      "trigger": "Set catalog observedAt and a device communicationTime to Long.MAX_VALUE.",
+      "observed": "CatalogReader accepts and exposes 9223372036854775807; QualityPolicy.time rejects same value under MAX_EPOCH=8640000000000000. Frontend timestamp contract cannot accept it.",
+      "reproducer": "backend/src/test/java/edu/campus/course/BoundaryAuditTest.java#catalogAcceptsTimestampOutsideSupportedEpochRange",
+      "evidence": "backend/audit-boundary.log",
+      "recommendation": "Use the shared epoch validation for observedAt/communicationTime and reject out-of-range catalog values at startup; add boundary MAX_EPOCH/MAX_EPOCH+1 tests."
+    }
+  ],
+  "testsNote": "Three focused JUnit methods intentionally assert the bad behavior to establish reproduction; test success does not mean the implementation is correct. BOM scripts reproduce pre-spawn failure independently."
+}

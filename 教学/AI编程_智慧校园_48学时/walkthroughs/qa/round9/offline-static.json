@@ -1,0 +1,4766 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "recordedAt": "2026-10-19T14:10:39.738Z",
+  "method": "Markdown token inspection and Python HTMLParser over local files only",
+  "semantics": "Step indicators are heuristics. Their presence does not prove completeness, correctness, usability, or classroom acceptance.",
+  "nodeVersion": "v22.21.1",
+  "pythonVersion": "3.14.6",
+  "toolSha256": "9fab63141022f79db92863b2ac6a7c5c0ca3f56223623f2f56ea95965eb2b84a",
+  "browserUsed": false,
+  "networkUsed": false,
+  "classroomVerified": false,
+  "manualReviewRequired": true,
+  "errors": [],
+  "warnings": [],
+  "sources": [
+    {
+      "file": "walkthroughs/00-第一次用AI做项目.md",
+      "sha256": "23d9245a26184a05b47a6149fb4b9ade62540edafc1c7c66cbefe70f67976170",
+      "steps": [
+        {
+          "title": "如果你刚收到一个ZIP，先这样打开教程",
+          "line": 7,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "aiPrompt"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "已经在带有“保存 AI 回答”按钮的教程网页里，可以直接看下一节。若手里只有教师发的压缩包（名字最后是 `.zip`），先完成下面动作： 1. 把ZIP下载到电脑“下载”文件夹。Windows在ZIP上点右键，选“全部解压缩”，保留目标位置并点“提取”；macOS双击ZIP，等待旁边出现解压后的文件夹。不要在Windows压缩包预览窗口里",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "urces`、`reading` 的那一层。如果只看到另一个同名文件夹，再打开一层。 3. 打开 `walkthroughs`，双击 `index.html`。若没有用浏览器打开，右键该文件，选“打开方式”→Chrome、Edge或Safari。应看到“从第一句话，到一个能交付的项目”和“保存 AI 回答”，点“从第 00 步开始”。看见原始代码或只有文件名列表时，先核对是否选",
+              "approximateLine": 11
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "AI 回答”按钮的教程网页里，可以直接看下一节。若手里只有教师发的压缩包（名字最后是 `.zip`），先完成下面动作： 1. 把ZIP下载到电脑“下载”文件夹。Windows在ZIP上点右键，选“全部解压缩”，保留目标位置并点“提取”；macOS双击ZIP，等待旁边出现解压后的文件夹。不要在Windows压缩包预览窗口里直接操作工程。 2. 打开解压后的文件夹，找到同时放着",
+              "approximateLine": 8
+            }
+          }
+        },
+        {
+          "title": "准备一：在桌面建两个文件夹",
+          "line": 37,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "aiPrompt"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "一步找不到。 **Windows：** 1. 按键盘上的 `Windows 键 + D`，回到桌面。 2. 在桌面的空白处点鼠标右键，选“新建”→“文件夹”。 3. 输入 `campus-ai-lab`，按 Enter。请照抄这个英文名字，里面是短横线。 4. 双击这个文件夹。在打开的窗口空白处再次右键，选“新建”→“文件夹”。 5. 输入 `docs`，按 Enter。",
+              "approximateLine": 42
+            },
+            "aiPrompt": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "同名文件夹已经存在，直接打开，不删除原文件。现在你应该能打开“桌面→campus-ai-lab→docs”。暂时是空的，正常。 ![桌面中的campus-ai-lab文件夹内有docs文件夹；稍后把01到11号Markdown文件都放在docs中](figures/02-文件位置.svg) 图 00-2：这是位置示意，不是你的电脑截图。你现在只需要建立蓝色的两个文件夹，文件",
+              "approximateLine": 54
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "的文件袋。我们把所有产物放进同一个位置，防止下一步找不到。 **Windows：** 1. 按键盘上的 `Windows 键 + D`，回到桌面。 2. 在桌面的空白处点鼠标右键，选“新建”→“文件夹”。 3. 输入 `campus-ai-lab`，按 Enter。请照抄这个英文名字，里面是短横线。 4. 双击这个文件夹。在打开的窗口空白处再次右键，选“新建”→“文件夹”。",
+              "approximateLine": 38
+            }
+          }
+        },
+        {
+          "title": "准备二：同时保留教程和 AI 两个网页",
+          "line": 61,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "留当前教程页。不要关掉，否则找不到下一步。 2. 点击这个链接：[打开千问网页](https://www.qianwen.com/)。它会打开另一页。也可以在浏览器地址栏输入 `https://www.qianwen.com/` 后按 Enter。 3. 若网页要求登录，请自行完成登录。我们不需要购买模型 API，也不需要填写 API Key。 4. 找到网页中的聊天输入框。已",
+              "approximateLine": 63
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我第一次用网页AI做项目。请只回答“收到，我们每次只做一小步”，不要开始写代码。",
+              "approximateLine": 69
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "送按钮。它通常是输入框旁的箭头图标。 **你应该看到什么：**输入的话出现在聊天区，随后出现 AI 的回复。回答不一定一字不差，只要它收到你的意思即可。若一直在转圈，等回复结束；若显示网络错误，先按网页的重试入口。这一步还没有任何需要保存的项目成果。 本课程用 Qwen3 说明大模型协作方法。当前网页提供哪些模型、是否显示模型名称，以实际页面为准；不要求为了匹配名字而安",
+              "approximateLine": 70
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "1. 保留当前教程页。不要关掉，否则找不到下一步。 2. 点击这个链接：[打开千问网页](https://www.qianwen.com/)。它会打开另一页。也可以在浏览器地址栏输入 `https://www.qianwen.com/` 后按 Enter。 3. 若网页要求登录，请自行完成登录。我们不需要购买模型 API，也不需要填写 API Key。 4. 找到",
+              "approximateLine": 62
+            }
+          }
+        },
+        {
+          "title": "准备三：先练一次复制、发送和保存",
+          "line": 79,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "条练手。成功后再开始正式项目，免得到了长文档时不会保存。 ### 1. 复制一段提示词 在下面绿色框右上角点“复制提示词”。按钮显示“已复制”后，切到 AI 网页，点击输入框，Windows 按 `Ctrl + V`，macOS 按 `Command + V`。看一眼开头是“请只输出下面四行”，再点发送。 “复制”按钮如果不可用，用鼠标从这段提示的第一个字拖到最后一个",
+              "approximateLine": 80
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请只输出下面四行普通文字，不加解释，不加代码框：\n# 我的第一次项目记录\n项目名称：智慧校园教学平台\n本次目标：学会把AI回答保存成文件\n完成状态：等待我自己下载并检查",
+              "approximateLine": 87
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "下面用一张只有四行的小纸条练手。成功后再开始正式项目，免得到了长文档时不会保存。 ### 1. 复制一段提示词 在下面绿色框右上角点“复制提示词”。按钮显示“已复制”后，切到 AI 网页，点击输入框，Windows 按 `Ctrl + V`，macOS 按 `Command + V`。看一眼开头是“请只输出下面四行”，再点发送。 “复制”按钮如果不可",
+              "approximateLine": 80
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "请只输出下面四行”，再点发送。 “复制”按钮如果不可用，用鼠标从这段提示的第一个字拖到最后一个字，Windows 按 `Ctrl + C`，macOS 按 `Command + C`，再去粘贴。只复制框里的文字，不用复制“复制提示词”这个按钮文字。 ### 2. 复制 AI 给你的回答 等 AI 回复结束，使用**这条回答**旁的复制按钮；没有复制按钮时，用鼠标选中四",
+              "approximateLine": 88
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/01-从想法到项目任务书.md",
+      "sha256": "8cfec9dfbb7d78a814583ab4712343ec78a14cf6c88f8d567ed998cd086a82e8",
+      "steps": [
+        {
+          "title": "先准备保存位置",
+          "line": 9,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "s-ai-lab` 文件夹及里面的 `docs`。打开“保存 AI 回答”工具，保留这个网页标签。 2. 每次收到合格回答，复制完整正文，切到该工具，点文本框后先全选再粘贴，替换旧文字；选择本篇指定的文件名，确认标题与文件名对应，再点击下载。 3. 打开电脑的“下载”文件夹，把下载的 `.md` 文件拖到桌面 `campus-ai-lab/docs`。`.md` 表示 Mark",
+              "approximateLine": 10
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "于复制，只复制框内文字。若 AI 只返回修改片段，发送：“请把修改合入全文，重新输出这份文件的完整正文，不要只给片段或摘要。”收到全文再保存，不手工拼接。 三步都是文字作业。本篇“新会话”表示新聊天看不到旧聊天的材料，所以按下文先逐份发送自己已经保存的文件，再发新任务；复制一份就发送一份，不能连续复制多份后只粘贴一次。",
+              "approximateLine": 15
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "成另一份作业。 代码框用于复制，只复制框内文字。若 AI 只返回修改片段，发送：“请把修改合入全文，重新输出这份文件的完整正文，不要只给片段或摘要。”收到全文再保存，不手工拼接。 三步都是文字作业。本篇“新会话”表示新聊天看不到旧聊天的材料，所以按下文先逐份发送自己已经保存的文件，再发新任务；复制一份就发送一份，不能连续复制多份后只粘贴一次。",
+              "approximateLine": 15
+            }
+          }
+        },
+        {
+          "title": "第一步：让 AI 先问清楚问题",
+          "line": 20,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "### 1. 打开新会话，发送第一句话 打开国内 AI 网页并登录，点“新建对话”，点击输入框，粘贴下面整段并发送。模型名称按网页实际显示记录。 AI 可能这样回答： 若AI问了一长串技术问题，或要求你先调查学校、上传设备表，不需要临时去收集资料。在同一聊天发： 本练习给定了访谈答案，不需要采访学校。在**同一会话**继续",
+              "approximateLine": 21
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我是一名学过一门编程语言、没有完整项目经验的学生。我要用48学时学习制作一个智慧校园小平台，现在先弄清楚要解决的问题，不要写代码。\n\n已知情况：校园设备资料散在不同表格里，查设备时不方便；有的设备没有通信信息，使用者容易把“不知道”误认为“离线”；报修之后谁接手、做了什么、是否核实恢复，常常没有完整记录。\n\n课堂使用教师提供的模拟数据，不接真实设备。请像采访者一样，只问3个问题",
+              "approximateLine": 26
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "，再用工具打开检查。也可以先用上面的完整示例练习。看到标题和四段内容才算保存成功。 下一步始终带上这份已保存的 `01-项目想法.md`，即使沿用教学示例也要完整发送一次，练习让新会话接到真实材料。不要只发文件名，也不要默认AI能看见另一个聊天。",
+              "approximateLine": 49
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "实际显示记录。 AI 可能这样回答： 若AI问了一长串技术问题，或要求你先调查学校、上传设备表，不需要临时去收集资料。在同一聊天发： 本练习给定了访谈答案，不需要采访学校。在**同一会话**继续发送： ### 2. 看回答，并做出第一份文件 AI 示例回答如下。这一框也是 `01-项目想法.md` 的**完整示例正文**： 先检查三处：有没有把“",
+              "approximateLine": 31
+            }
+          }
+        },
+        {
+          "title": "第二步：让 AI 提方案，再亲手删掉做不完的部分",
+          "line": 95,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "正 AI。 ### 1. 新开会话，明确取舍 点击网页的“新建对话”。先发送“下一条是我已保存的01-项目想法.md，请先只确认收到，等我给范围任务”；回保存工具打开该文件、复制当前全文，在新聊天注明文件名后粘贴发送。确认聊天里有正文，再发送下面整段。它补充固定课堂条件；若与本人文件冲突，让AI先列冲突，不悄悄覆盖你的决定。 AI 有时会忽略边界。下面是一个**故意保",
+              "approximateLine": 102
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我要把下面的项目想法收缩成48学时能完成的第一版，请不要写代码。\n\n项目想法：设备资料分散，未知通信状态容易被当作离线，处置过程缺少记录。使用者是管理员、处理人、查看者。先做设备目录、模拟点值、本地演练处置。课堂使用教师提供的模拟数据，不连接真实AIRIOT，不控制真实设备，不发送真实通知，UI不必复刻原平台。没有做过真实学校调研。\n\n学生学过一门语言，没有完整项目经验，使用网",
+              "approximateLine": 105
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "文件、复制当前全文，在新聊天注明文件名后粘贴发送。确认聊天里有正文，再发送下面整段。它补充固定课堂条件；若与本人文件冲突，让AI先列冲突，不悄悄覆盖你的决定。 AI 有时会忽略边界。下面是一个**故意保留错误的完整候选回答，不能直接保存为决定**： 它把短信和远程重启放进了必做范围。找到这句错误，在**同一会话**发送纠偏追问： 实际回答没有超范围时，不必假造",
+              "approximateLine": 102
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "聊天里有正文，再发送下面整段。它补充固定课堂条件；若与本人文件冲突，让AI先列冲突，不悄悄覆盖你的决定。 AI 有时会忽略边界。下面是一个**故意保留错误的完整候选回答，不能直接保存为决定**： 它把短信和远程重启放进了必做范围。找到这句错误，在**同一会话**发送纠偏追问： 实际回答没有超范围时，不必假造错误；让 AI 按上述要求输出完整文件，如实记录“未发",
+              "approximateLine": 102
+            }
+          }
+        },
+        {
+          "title": "第三步：生成一份能交给下一位同学继续做的任务书",
+          "line": 163,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "### 1. 在新会话发送完整要求 新建对话，先发送“我将依次给01-项目想法.md和02-范围确认.md，请只确认收到，等两份齐全并收到任务后再工作”。用保存工具打开01、复制并在AI发出；再打开02、复制并发出。聊天中应有两份带文件名的正文，而不只是第二份。确认后发送下面完整要求： AI 示例回答如下，也是 `03-项目任务书.md` 的",
+              "approximateLine": 164
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请为“智慧校园设备与演练小平台”写一份简短、完整、可保存的项目任务书，不写代码，也不要提前展开数据库和接口设计。\n\n先逐项对照刚收到的01、02全文与下面固定教学条件；如有矛盾，先指出具体句子并等我确认，不擅自改掉已保存的范围。\n固定教学条件如下：\n问题：设备资料分散；未知通信状态容易被误读为离线；处置过程缺少连续记录。这是课堂给定情境，未做真实学校调研。\n对象：管理员、处理人",
+              "approximateLine": 169
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "、复制并在AI发出；再打开02、复制并发出。聊天中应有两份带文件名的正文，而不只是第二份。确认后发送下面完整要求： AI 示例回答如下，也是 `03-项目任务书.md` 的完整示例正文： ### 2. 你来签收，不由 AI 宣布完成 对照前两份文件：三项必做、角色和模拟限制是否一致？验收能实际操作吗？有无编造“已测试通过”？有问题就发送下面这句，再检查： 把",
+              "approximateLine": 166
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "文。不要要求网页 AI “读取我桌面的文件”。 如果AI指出01与02不一致，先回到本篇对应步骤，请它按已确认的课堂边界完整重发那份文件；核对、重新下载并按00的旧稿保留办法放回docs，再把修正全文发到任务书会话。只改聊天、没更新电脑文件，会把旧决定带到下一篇。",
+              "approximateLine": 186
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/02-从项目任务书到需求规格.md",
+      "sha256": "f4b4ce5782252efc96b2cd7b1cf9cd11051a8ba9fda84288e32fbef0d7fa2724",
+      "steps": [
+        {
+          "title": "第一步：先说清楚谁在什么情况下使用平台",
+          "line": 20,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "写法，先按中文意思检查，不需要现在写筛选代码。 点击网页输入框，完整发送： 以下示例回答也是本步完整保存样例： 保存前圈出每个写入动作，核对属于谁。下面追问中的 `assigneeUid` 就是“这件事件分派给谁的账号标识”，`uid` 是当前人的账号标识；不用学习代码语法，先理解“只能办理分给自己的事”。如果 AI 写出“管理人员可以处理所有事件”，发送下面的纠",
+              "approximateLine": 27
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "你是我的需求分析助教。我们在做48学时智慧校园AI编程课程，学生学过一门语言但没有完整项目经验，只用通义等网页AI，不调用模型API。教师提供数据库和认证基础。\n已确定：独立教学工程，4个模拟空间、16台模拟设备、28个采集点；最小可用范围是设备台账、模拟点值、本地演练事件，并包含校园/楼栋与来源空间的本地绑定。真实AIRIOT只读接入留作选做；不控制设备、不发外部通知、不使用",
+              "approximateLine": 30
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "不用学习代码语法，先理解“只能办理分给自己的事”。如果 AI 写出“管理人员可以处理所有事件”，发送下面的纠偏追问： 检查修订后，复制完整正文到“保存AI回答”工具，选择 `04-角色与场景.md`，下载并移到桌面 `campus-ai-lab/docs/`；用工具重新打开，确认四个身份和四个场景均完整。确认四身份三角色无混淆，“温度巡查”未变成真实超温；下一轮继续使用本",
+              "approximateLine": 35
+            }
+          }
+        },
+        {
+          "title": "第二步：把场景改成能判定对错的需求",
+          "line": 68,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "000毫秒是60秒。先对照读，不用背英文。 用“保存AI回答”工具打开刚保存的 `04-角色与场景.md`，复制显示的全文，在同一网页对话中粘贴发送。随后发送： 以下为完整示例回答，每个小编号对应一项后续检查： 人工核对时，把 R01-E 与 R01-F1 并排读：两者都可能没有列表，但一个是查询成功、一个是无法取得数据。如果 AI 合并它们，发送： 若做了",
+              "approximateLine": 81
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请把角色与场景变成05-验收条件.md，只写需求，不写实现代码。\n固定课堂范围：48学时；4模拟空间、16模拟设备、28点；教师提供数据库和认证；网页AI，无模型API。身份admin有ADMIN+CAMPUS_VIEWER，A/B均为CAMPUS_MANAGER，viewer只读。AIRIOT选做，UI可自定。\n编号固定：R01设备读取与筛选，R02本地空间绑定，R03本地演",
+              "approximateLine": 84
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "* “验收条件”就是：给定什么情况，做什么动作，应该看到什么。这里的“应该”是未来检查目标，还不是你已经运行成功的记录。R01、R02是需求编号，供后续页面、接口和测试引用。 先认识三个记号：`online`是设备是否在线的字段，`null`表示没有足够信息判断；`expectedVersion`是“我根据记录的第几版作出这次决定”。另外，`DEMO/LOCAL_DEMO`",
+              "approximateLine": 75
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "![设备正常返回、成功空目录、读取失败与通信状态未知分别对应不同页面结果](figures/05-需求判断.svg) 图 02-1：先看这四行，再要求 AI 写可检查的条件；它们不能合成“显示正常”。 **现在只做“什么表现才算符合要求”的文字判断，不必理解接口请求代码或测试框架。** “验收条件”就是：给定什么情况，做什么动作，应该看到什么。这里的“应该",
+              "approximateLine": 69
+            }
+          }
+        },
+        {
+          "title": "第三步：先决定失败怎么办，再决定哪些功能本次必须做",
+          "line": 141,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "**现在只做“失败后怎么办、本次先做什么”的选择，不必理解异常处理代码或数据库事务。** “优先级”是时间不够时先保住什么。MVP指“最小可用范围”，不是只实现正常点击，把权限和失败处理都留到以后。 用“保存AI回答”工具依次打开 `04-角色与场景.md`、`05-验收条件.md`，逐份复制全文到原网页对话，每份前面加一行文件名并分别发送。再发送： 可接受的示",
+              "approximateLine": 142
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请生成06-异常与优先级.md，依据我们已确认的四条需求：R01设备读取/筛选/三态/空与失败，R02仅管理员本地绑定且引用有效，R03本人范围与完整关闭条件/版本冲突/时间线，R04模拟点值的零/缺失/时间/质量/单位。\n48学时只做这条主线，教师提供数据库和认证，学生使用网页AI。用“必须、可选、本次不做”分类，并解释一次失败后用户下一步做什么。\n错误含义沿课程合同：未登录",
+              "approximateLine": 149
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "，重新打开确认异常清单和优先级都在。请同桌提问：“保存后断网，再按十次保存行不行？”能回答“先确认是否已写入，再决定”，再继续。",
+              "approximateLine": 162
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "**现在只做“失败后怎么办、本次先做什么”的选择，不必理解异常处理代码或数据库事务。** “优先级”是时间不够时先保住什么。MVP指“最小可用范围”，不是只实现正常点击，把权限和失败处理都留到以后。 用“保存AI回答”工具依次打开 `04-角色与场景.md`、`05-验收条件.md`，逐份复制全文到原网页对话，每份前面加一行文件名并分别发",
+              "approximateLine": 142
+            }
+          }
+        },
+        {
+          "title": "第四步：合成一份下一位 AI 能继续使用的需求规格",
+          "line": 196,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "还没有确认。下一轮设计须能追溯到需求编号。 用“保存AI回答”工具依次打开 `03-项目任务书.md`、`04-角色与场景.md`、`05-验收条件.md`、`06-异常与优先级.md`，每份全文复制到同一对话，消息第一行写清文件名。文件长时分段发送并标“第1/2段”“第2/2段”，最后发“资料已全部发完”。随后发送： 以下完整样例可独立交接；可删重复解释，不能删失败与",
+              "approximateLine": 201
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请把刚给你的四份文档合成为07-需求规格.md v0.1，后面用于系统设计，不生成代码。\n完整保留已确认边界：48学时、单门语言基础、网页AI、教师提供数据库与认证；4空间16设备28点均为教学模拟；三角色四身份；R01台账读取/筛选/三态及空/失败，R02仅ADMIN本地绑定，R03本地演练本人范围与完整关闭/版本/时间线，R04模拟点值质量与单位。真实AIRIOT只读选做，",
+              "approximateLine": 204
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "以下完整样例可独立交接；可删重复解释，不能删失败与范围条件。 先在“保存AI回答”工具选择 `07-需求规格.md`，粘贴最终全文、下载、移到桌面 `campus-ai-lab/docs/`，再重新打开。自己最后检查一次：R01是否同时有正常、空、失败和三态；R02是否有保存、独立回读、越权/引用拒绝；R03是否同时检查本人范围与关闭门槛；所有结果是否仍标待执行。如",
+              "approximateLine": 205
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/03-从需求规格到系统设计.md",
+      "sha256": "b3882c5568f7b4ffc94e198e6fb5d166ba85f2ad2ab9cf4e164fa6e44c075e5e",
+      "steps": [
+        {
+          "title": "开始前：把上一阶段接过来",
+          "line": 9,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "failureHandling"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "1. 打开桌面的 `campus-ai-lab` 文件夹，再打开 `docs`。确认有 `03-项目任务书.md` 和 `07-需求规格.md`。没有文件时，先回上一段完成；不要让 AI 猜测缺失需求。 2. 打开通义等网页聊天工具，可以继续本项目的对话，也可以另开对话；先发送下面这句话。不要只贴文件名：网页 AI 不能读取你的桌面。",
+              "approximateLine": 10
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我们继续“智慧校园教学平台”项目。我没有做过完整项目。\n下面会分两条消息给你03-项目任务书.md和07-需求规格.md全文。\n请先只确认收到，不改需求、不生成代码。等我说“开始页面设计”再工作。",
+              "approximateLine": 14
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "s-ai-lab` 文件夹，再打开 `docs`。确认有 `03-项目任务书.md` 和 `07-需求规格.md`。没有文件时，先回上一段完成；不要让 AI 猜测缺失需求。 2. 打开通义等网页聊天工具，可以继续本项目的对话，也可以另开对话；先发送下面这句话。不要只贴文件名：网页 AI 不能读取你的桌面。 3. 回本教程点“保存AI回答”→“打开已有 .md 文件”，选0",
+              "approximateLine": 10
+            },
+            "failureHandling": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            }
+          }
+        },
+        {
+          "title": "第一步：先决定用户看到什么、接下来点什么",
+          "line": 35,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "。 “页面设计”就是先画草稿；“操作流程”就是从打开页面到办完事情的步骤。页面常叫前端；接收请求、检查规则的服务器程序常叫后端；数据库负责保存记录。现在不用懂具体框架。 ### 1. 在网页发送完整任务 ### 2. 对照并保存一份完整样例 收到回答后，先看有无漏页、漏步骤。下面是一份可保存的基准内容；你的需求相同，可将核对后的这一整块保存为 `08-页面与流程.m",
+              "approximateLine": 40
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "开始页面设计。依据刚收到的03任务书、07需求规格，输出完整的\n08-页面与流程.md。先检查两份上游文件有无矛盾；有矛盾先指出，不擅自选边。\n\n按07的R01—R04设计四个业务页面：设备目录、空间绑定、设备点值、\n演练事件。空间绑定是目录配套的本地位置登记。登录和身份使用教师基础。\n首屏用teaching_env_01 online=true与teaching_energy",
+              "approximateLine": 45
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "任何一步不知道下一步点哪里，就还没有设计清楚。 若 AI 把“恢复”直接画成“关闭”，原样发送： 收到修订后，复制文档正文到保存工具，选择本步的文件名，重新下载并移入 `docs`。再用“打开已有 .md 文件”检查修改已经保存，才进入下一步。",
+              "approximateLine": 56
+            }
+          }
+        },
+        {
+          "title": "第二步：把页面上用到的信息变成数据字典",
+          "line": 154,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult",
+            "failureHandling"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "说明表：每项叫什么、允许什么值、空白代表什么、由谁填写。先把它想成表格的列，不需要先会建数据库。 ### 1. 把刚保存的08-页面与流程.md全文贴回网页，再发送 ### 2. 保存 `09-数据字典.md` ### 3. 用三个小问题检查 遮住中文列，看自己能否解释 `online`、`value`、`version`。再检查：页面上每项需要的数据能在表里找",
+              "approximateLine": 155
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "依据07需求规格及刚贴入的08页面与流程，输出完整09-数据字典.md。\n请先用一句白话解释数据字典。分设备、采集点、演练事件、事件时间线，\n每项写字段名、中文含义、类型、是否可空、样例、由谁提供。\n补R02校园/楼栋/空间绑定的关系；保留R01—R04对应。\n使用既有教学命名：设备id/online/simulated；点deviceId/tagId/value/time/\n",
+              "approximateLine": 160
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            }
+          }
+        },
+        {
+          "title": "第三步：约定页面怎样向服务器提出请求",
+          "line": 278,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "口像一张申请单。这一步只约定格式，下一阶段才用程序发送。 把服务器想成办事窗口：页面提交“我要查哪台设备”或“我要给事件加记录”，服务器检查身份和规则后回复。**接口约定**就是双方共同填写的申请单格式。GET表示读取，POST表示提交动作；这一阶段只写申请单，不发送请求。 ### 1. 粘贴09-数据字典.md全文，再发送 请求中的JSON就是按固定符号写成的字段和值；",
+              "approximateLine": 281
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "依据07、08、09，输出完整10-接口约定.md。给零基础读者先解释\nGET/POST、路径、请求体、响应各是什么；然后列出MVP所需请求。\n下面是教师给定的冻结路由清单，不另造路径。所有路径加/api/campus前缀：\nGET /devices、/spaces：返回data.items及observedAt。\nGET /locations：返回campuses/build",
+              "approximateLine": 291
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "对照 回到08的七步，每步在10里找到一个请求；若“追加记录”没有对应请求，就不能交给开发。再把09中的 `version` 和10中的 `expectedVersion` 圈出来：前者是读到的当前版本，后者是提交时声明“我依据的是这个版本”。 若 AI 建议409后自动把版本加一重试，发送： 收到修订后，复制文档正文到保存工具，选择本步的文件名，重新下载并移入 `d",
+              "approximateLine": 298
+            }
+          }
+        },
+        {
+          "title": "第四步：把设计变成下一步能执行的开发任务",
+          "line": 413,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "“任务拆分”就是让每项工作都有明确输入、修改范围和看得见的完成现象。教师文件里的TODO是“这里留给你完成”的标记，不是让你重写整个文件。 ### 1. 粘贴10-接口约定.md全文，再发送 ### 2. 保存 `11-开发任务.md` ### 3. 最后核对与下一条消息 每次收到纠偏后的完整文件，都通过00工具重新保存，并重新打开确认修改已进入",
+              "approximateLine": 414
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请依据03、07、08、09、10输出完整11-开发任务.md。\n我是第一次做项目，请按“先看到两台设备→切换教师完整模式→本地空间绑定与\n完整设备台账→模拟点值→本地演练闭环→测试与交付”排序，每项写前置条件、输入文档、要改的业务、教师\n已提供什么、完成时看到什么、最小正常/失败检查、需要保存什么证据。\n先把认证、数据库、模拟提供器、通用请求封装列为教师准备，不能写成\n学生已",
+              "approximateLine": 419
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "滚动到最后，核对内容后在纸上或自己的记录里打勾。只看到11个文件图标不够；旧稿、带 `(1)` 的重复下载及00保存练习不计入11份。 | 文件 | 打开后至少找到这些内容 | | --- | --- | | 01-项目想法.md | 问题、使用者、第一版三件事、模拟边界 | | 02-范围确认.md | 必做含本地位置登记、以后选做、本次不做 | | 03-项目任务书.md",
+              "approximateLine": 430
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "06-异常与优先级.md | 必须/可选/不做，失败后下一步 | | 07-需求规格.md | 四条需求、角色、异常和未知事实，结尾完整 | | 08-页面与流程.md | 四个业务页、R02绑定、完整演练步骤 | | 09-数据字典.md | 设备/位置/点值/事件/时间线，0与null及版本的含义 | | 10-接口约定.md | 读取和写入表、NOTE申请示例、失败处理",
+              "approximateLine": 439
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/04-安装工具与第一次改代码.md",
+      "sha256": "e4f3c70aa87721afd913a17d790c21142622975217a50b5e24780369f27940fc",
+      "steps": [
+        {
+          "title": "第一步：准备编辑器、Node、Java 和 Git",
+          "line": 9,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "“编辑器”用来打开和保存代码，“终端”用来输入命令。Node 运行前端工具，Java 运行后端，Git 记录代码版本。你暂时只需装好它们，不必先学会所有原理。 本课后面的网页检查统一用 **Chrome 或 Edge**，任选电脑已有的一种；没有时先请教师协助从官方入口安装。打开课程文件和打开本地程序是两件事：现在读的是教材，程序要等第八步",
+              "approximateLine": 10
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在准备智慧校园课堂工程，需要本地VS Code、Node22.21.1、JDK17和Git。\n我会下一条贴系统类型、失败的官方网址和错误文字，不含账号密码。\n请先只判断问题发生在下载、安装还是版本识别，给一个最小排查动作。\n不要推荐不明下载站，不要让我删现有项目、关闭安全保护或升级项目依赖。",
+              "approximateLine": 38
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "load)，选择 Windows 对应安装包。下载完成后双击，按安装程序完成安装，再从开始菜单打开 Visual Studio Code。它是本地编辑器，不是浏览器中的 vscode.dev。 3. 打开 [Node 22.21.1 官方归档](https://nodejs.org/en/download/archive/v22.21.1)，在 Installer Packag",
+              "approximateLine": 17
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "打开“终端”输入 `git --version`。若系统提示安装命令行开发工具，按系统提示完成，再重新运行；已显示版本则不用重复安装。其他安装方式见 [Git 官方入口](https://git-scm.com/downloads/)。 上面是官方入口与本课冻结版本，核对日期 2026-10-19；网页排版可能变化。本课使用 Node 22.21.1 和 JDK 17，先不要",
+              "approximateLine": 29
+            }
+          }
+        },
+        {
+          "title": "第二步：把教学起点复制成自己的 app",
+          "line": 45,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "*不要直接在 ZIP 预览窗口里编辑。** 2. 打开解压后的 `AI编程_智慧校园_48学时`，再打开 `resources`，找到 `student-project` 文件夹。 3. 复制整个 `student-project`，粘贴到桌面 `campus-ai-lab`，把副本重命名为 `app`。Windows 选中副本按 F2；macOS 选中按 Return。若已存",
+              "approximateLine": 47
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我正在打开教师发放的student-project副本，目标是桌面campus-ai-lab/app。\n我下一条只贴VS Code左侧顶层目录名与其下一层文件名，不贴.private内容。\n预期直接看到backend、frontend、tools、fixtures和package.json。\n请判断我是否多套一层文件夹，并只告诉我应在“打开文件夹”中选哪一层。\n不要让我创建缺失",
+              "approximateLine": 68
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "`，继续使用它，不覆盖。 4. 双击 `app`，应看到 `backend`、`frontend`、`fixtures`、`tools`、`docs`、`evidence`、`package.json`。如果只看到另一个 `student-project` 文件夹，说明多套了一层，请把真正含这些文件的目录作为 app。 5. 在 VS Code 菜单点“File/文件”→“Op",
+              "approximateLine": 49
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "中副本按 F2；macOS 选中按 Return。若已存在自己的 `app`，继续使用它，不覆盖。 4. 双击 `app`，应看到 `backend`、`frontend`、`fixtures`、`tools`、`docs`、`evidence`、`package.json`。如果只看到另一个 `student-project` 文件夹，说明多套了一层，请把真正含这些文件的目录",
+              "approximateLine": 48
+            }
+          }
+        },
+        {
+          "title": "第三步：在正确位置打开终端，逐行检查工具",
+          "line": 76,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "rminal/终端”→“New Terminal/新建终端”。下方出现输入区域。Windows 使用 PowerShell；若显示的是其他终端，点终端区域右上角 `＋` 旁的下拉箭头，再选“PowerShell”。macOS 通常是 zsh。 2. 每次只复制下面**一行**，在终端粘贴后按 Enter，等这一行结束再执行下一行。不要复制代码框的语言名称或反引号。 **预",
+              "approximateLine": 77
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在campus-ai-lab/app工程根执行doctor，要求Node22（至少22.12）、JDK17、JAVA_HOME，端口8091/5178。\n我下一条贴node版本、java版本、当前目录、doctor错误原文，不含私人配置。\n请先指出哪一个前提不满足，再只给一条适合我当前系统的排查命令。\n不能改业务代码、绕过版本检查、杀未知进程或连接学校生产库。\n执行结果由我再",
+              "approximateLine": 120
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "行。不要复制代码框的语言名称或反引号。 **预期：**Node 为 `v22.21.1`；Java 第一行含 `17`（小版本可不同）；Git 有版本号；最后一行的目录以 `campus-ai-lab/app` 或 Windows 的 `campus-ai-lab\\app` 结尾。Java 的版本文字有时显示在错误输出通道，但仅打印版本不是启动失败。 路径不对时，关闭当",
+              "approximateLine": 82
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "区域。Windows 使用 PowerShell；若显示的是其他终端，点终端区域右上角 `＋` 旁的下拉箭头，再选“PowerShell”。macOS 通常是 zsh。 2. 每次只复制下面**一行**，在终端粘贴后按 Enter，等这一行结束再执行下一行。不要复制代码框的语言名称或反引号。 **预期：**Node 为 `v22.21.1`；Java 第一行含 `17`（",
+              "approximateLine": 77
+            }
+          }
+        },
+        {
+          "title": "第四步：装依赖、生成本地账号、记录起点",
+          "line": 128,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在 `app` 的终端逐行执行： Windows 如果第一行提示 `npm.ps1` 无法运行，改用 `npm.cmd --prefix frontend ci`，不必修改全局执行策略。`ci` 按锁文件安装依赖，第一次需要联网。停在下载时先等命令结束；如果出现 `npm ERR`，保留最后一段错误，不改用随机升级命令。 `init` 预期显示已",
+              "approximateLine": 129
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在桌面campus-ai-lab/app完成第04章起点准备。接下来提供实际目录、失败\n命令及第一段无秘密错误。请先判断是依赖下载、初始化还是Git问题，每次只\n给一个核对动作。不要升级依赖、删除锁文件、重建账号、清理仓库或绕过防护。\n暂存清单若含.private或密码，先让我停止提交，不把“已生成”说成测试通过。",
+              "approximateLine": 170
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "后一段错误，不改用随机升级命令。 `init` 预期显示已生成 `.private/accounts.json` 或“已存在，保留原内容”。该文件里的四个账号密码是你的本机秘密，之后只在本机查看和登录，不能粘给网页 AI。`prepare 04` 显示 A/B 已是起点或已准备，**不是测试通过**。同时生成的 `.lesson-state.json` 只记录已准备的章节，不",
+              "approximateLine": 135
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "app` 的终端逐行执行： Windows 如果第一行提示 `npm.ps1` 无法运行，改用 `npm.cmd --prefix frontend ci`，不必修改全局执行策略。`ci` 按锁文件安装依赖，第一次需要联网。停在下载时先等命令结束；如果出现 `npm ERR`，保留最后一段错误，不改用随机升级命令。 `init` 预期显示已生成 `.private/ac",
+              "approximateLine": 133
+            }
+          }
+        },
+        {
+          "title": "第五步：把两个真实源文件交给 AI",
+          "line": 177,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "failureHandling"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "整个项目。我们只改两个小函数。 ![编辑源文件到保存并运行的操作链：快速打开文件、复制上下文、只替换标记内部、保存、运行针对性测试](figures/10-编辑到验证.svg) 图 04-1：网页 AI 只负责给建议，VS Code 中的保存和终端中的执行由你完成。 1. 在 VS Code 按 Windows `Ctrl+P` / macOS `Command+P`，输",
+              "approximateLine": 180
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我们进入智慧校园项目第04步。我会下一条提供frontend/src/api/campus.ts全文。\n请先阅读，暂时不要改。这个文件中STUDENT_TODO_A_BEGIN到STUDENT_TODO_A_END之间是任务A。\n目标：extractFirstRead先判断业务code，非0抛ApiError；等于0时返回同一响应的items和observedAt。\nvalid",
+              "approximateLine": 189
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "，分别显示在线、离线、未知。未知不是离线。 **预期：**AI 能指出 A 是响应解包，B 是状态文字。若它没有收到文件，却声称看过本地磁盘，发：",
+              "approximateLine": 193
+            },
+            "failureHandling": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            }
+          }
+        },
+        {
+          "title": "第六步：改任务 A，保存，再改任务 B",
+          "line": 207,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "aiPrompt"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "代码示例是： 回到 `campus.ts`，按查找快捷键（Windows `Ctrl+F` / macOS `Command+F`），搜索 `STUDENT_TODO_A_BEGIN`。找到后按 Esc 关闭搜索框。 **只选中 BEGIN 下一行至 END 上一行**，当前应该是抛出 `TODO-A` 错误的一行。用 AI 给出的两行替换。保留 BEGIN、END 两",
+              "approximateLine": 218
+            },
+            "aiPrompt": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "中 BEGIN 下一行至 END 上一行**，当前应该是抛出 `TODO-A` 错误的一行。用 AI 给出的两行替换。保留 BEGIN、END 两行、外面的函数大括号和 import。按 Windows `Ctrl+S` / macOS `Command+S` 保存，文件标签的小圆点消失表示保存完成。 ### B：把三个值分别变成中文 发给 AI： 合格示例：",
+              "approximateLine": 220
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "D 上一行**，当前应该是抛出 `TODO-A` 错误的一行。用 AI 给出的两行替换。保留 BEGIN、END 两行、外面的函数大括号和 import。按 Windows `Ctrl+S` / macOS `Command+S` 保存，文件标签的小圆点消失表示保存完成。 ### B：把三个值分别变成中文 发给 AI： 合格示例： 按同样方法打开 `FirstD",
+              "approximateLine": 220
+            }
+          }
+        },
+        {
+          "title": "第七步：先用测试查两段代码，再构建",
+          "line": 256,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "“测试”就是程序自动给函数喂几个输入，再核对输出。它不能替你确认真实课堂电脑、数据库或硬件。 在 `app` 终端运行： Windows 有脚本策略限制时将开头 `npm` 改为 `npm.cmd`。第一个命令结束后应该显示指定文件的用例通过，不应有红色 FAIL；第二个命令结束且没有类型错误。相关用例包括“200 与非零业务码仍是失败”“成功空数组仍",
+              "approximateLine": 257
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只修改了任务A/B，接下来分两条贴修改后的函数和真实失败输出。\n请先把失败用例翻译成白话，再指出输入、预期与我的实际输出哪个不同。\n只修改对应标记内部；不要删测试、改断言预期、关闭类型检查或返回硬编码通过。\n给出完整替换块和需要重跑的同一个命令。没有实际运行就不能写“已通过”。",
+              "approximateLine": 271
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "pm` 改为 `npm.cmd`。第一个命令结束后应该显示指定文件的用例通过，不应有红色 FAIL；第二个命令结束且没有类型错误。相关用例包括“200 与非零业务码仍是失败”“成功空数组仍保留后端观察时间”“非法字符串不能冒充 Boolean 或合法未知”。不要死记总数，读失败用例的名字。 若失败，先复制**失败用例名称、Expected/Received 和报错行**，不复",
+              "approximateLine": 263
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "过，不应有红色 FAIL；第二个命令结束且没有类型错误。相关用例包括“200 与非零业务码仍是失败”“成功空数组仍保留后端观察时间”“非法字符串不能冒充 Boolean 或合法未知”。不要死记总数，读失败用例的名字。 若失败，先复制**失败用例名称、Expected/Received 和报错行**，不复制账号配置。然后发送： 示例：`null` 的预期是“未知”，实际“",
+              "approximateLine": 263
+            }
+          }
+        },
+        {
+          "title": "第八步：开两个终端，登录并看真实结果",
+          "line": 288,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "终端都在同一个app目录，后端修改需构建重启，前端保存后查看页面](figures/11-两个终端.svg) 图 04-4：终端 A、B 是两个独立输入区域，不能把构建命令输入正在输出服务器日志的窗口。 1. 当前终端作为 A。确认 JDK 设置仍在，运行： 它会持续占用终端，不回到输入提示符是正常的。看到 `first-chain`、8091，以及 `Started",
+              "approximateLine": 289
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我使用同一app，后端first-chain在8091，前端在5178，打开#first-read。\n预期teaching_env_01在线、teaching_energy_01未知，共2台。接下来是实际\n页面文字、devices请求状态及响应摘要。请区分服务没启动、会话失败、业务\ncode失败和A/B代码错误，一次只给一项检查。不要改地址、删库或猜密码。",
+              "approximateLine": 326
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "终端都在同一个app目录，后端修改需构建重启，前端保存后查看页面](figures/11-两个终端.svg) 图 04-4：终端 A、B 是两个独立输入区域，不能把构建命令输入正在输出服务器日志的窗口。 1. 当前终端作为 A。确认 JDK 设置仍在，运行： 它会持续占用终端，不回到输入提示符是正常的。看到 `first-chain`、8091，以及 `Started",
+              "approximateLine": 289
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "d CourseApplication` 后继续；若出现 `APPLICATION FAILED TO START` 并回到提示符，就还没有启动成功。不要在这个日志窗口输入下一项命令。 2. VS Code 菜单“终端→新建终端”，作为 B。新终端也从 app 开始；按第三步重新设置 JAVA_HOME，再运行： 3. 看到 Vite 地址后，在浏览器地址栏输入 `ht",
+              "approximateLine": 297
+            }
+          }
+        },
+        {
+          "title": "第九步：亲手制造一次读取失败，再恢复",
+          "line": 333,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "留成功的设备页，不刷新浏览器。 2. 回终端 A，按 **Ctrl+C**（macOS 也是 Control+C，不是 Command+C），停止自己的后端。终端 B 保持。 3. 回页面点“重新读取”，等待请求失败。预期旧两条还在，页面明确“本次更新失败，以下保留上次成功快照”，观察时刻不变。 4. 回 A 再执行 `node tools/course.mjs backend",
+              "approximateLine": 335
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在做“已有成功快照后刷新失败”实验：先读到2台，再Ctrl+C停止本人后端，前端不关、浏览器不刷新，然后点重新读取。\n我会贴页面错误文字、devices请求的状态和无秘密响应、后端停止后的日志。\n重启后端后的401应要求重新登录；请把停止期间的读取失败与重启后的会话失效分开判断。\n请判断请求是否真的发出、是否命中了已停止的服务，以及旧快照是否被诚实标记。\n不要建议填空数组、改",
+              "approximateLine": 347
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "保持。 3. 回页面点“重新读取”，等待请求失败。预期旧两条还在，页面明确“本次更新失败，以下保留上次成功快照”，观察时刻不变。 4. 回 A 再执行 `node tools/course.mjs backend`，等到 `Started CourseApplication`，再点“重新读取”。**这次先出现“登录已失效，请重新登录。”是正常的**：后端重启后，先前登录状态已经",
+              "approximateLine": 336
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "B 保持。 3. 回页面点“重新读取”，等待请求失败。预期旧两条还在，页面明确“本次更新失败，以下保留上次成功快照”，观察时刻不变。 4. 回 A 再执行 `node tools/course.mjs backend`，等到 `Started CourseApplication`，再点“重新读取”。**这次先出现“登录已失效，请重新登录。”是正常的**：后端重启后，先前登录状",
+              "approximateLine": 336
+            }
+          }
+        },
+        {
+          "title": "第十步：保存自己的记录，带着它进入下一章",
+          "line": 355,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "`evidence`，右键→“New File/新建文件”，输入 `ch04.md`。粘贴下面格式，**实际结果先保留“未执行”再按自己的观察修改**，按保存。 完成后终端执行 `git diff -- frontend/src/api/campus.ts frontend/src/views/FirstDeviceRead.vue`。逐行看 `+` 是新增、`-` 是",
+              "approximateLine": 356
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请检查我接下来贴的ch04本人记录，区分预测、实际执行和未完成。逐项找出\nA/B修改、测试、两台设备读取、失败恢复是否有本人证据；缺少的保留未执行。\n只整理已有事实并完整返回记录，不替我填通过，不借用教师截图或虚构日志。",
+              "approximateLine": 375
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "“未执行”再按自己的观察修改**，按保存。 完成后终端执行 `git diff -- frontend/src/api/campus.ts frontend/src/views/FirstDeviceRead.vue`。逐行看 `+` 是新增、`-` 是删除，确认本章源码只改了两处。证据和章节进度单独保存。仅当记录需要整理时，在同一 AI 会话发下段，再贴 `eviden",
+              "approximateLine": 360
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "没有 `.private`、密码或无关改动才提交；若名单异常，停止提交并请教师核对，不删除文件来清理名单。 停下核对上面的名单，确认后才运行： 若提交报错，保留记录文件，按第四步的排错提示处理；提交失败不能写成已保存到 Git。下课前在 A、B 各按 Ctrl+C。下一章仍打开这份 app，执行 `node tools/chapter.mjs prepare 05`",
+              "approximateLine": 364
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/05-后端空间与设备接口.md",
+      "sha256": "d1d1476f3da6ca2ff66afb1aa8e063eefead161f2d5a9c11bb87525b42dfcf6d",
+      "steps": [
+        {
+          "title": "第1步：留在原工程，找到今天要补的两行",
+          "line": 9,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在VS Code点“文件→打开文件夹”，选桌面 `campus-ai-lab/app`。已有该窗口就继续用。先点运行后端、前端的两个终端，各按一次 `Ctrl+C` 停止自己的进程，再点“终端→新建终端”。终端应在 `app`，不是 `backend` 或 `frontend`。逐行执行： **先核对新终端的Java位置：**第04章的 `JAVA_H",
+              "approximateLine": 10
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在做智慧校园课程第05章，app是同一个长期工程。接下来一条消息是\nbackend/src/main/java/edu/campus/course/LocationService.java的完整源码。\n请先只解释validateBinding在bind调用链中做什么，不修改代码。\n固定规则：教师已提供登录、ADMIN授权、输入校验、事务和Mapper。\n来源空间来自provi",
+              "approximateLine": 32
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "终端也分别做一次。复用已经设置好的原终端无需重设。完成后再执行下面命令。 `prepare 05`首次只把本章尚未编辑的 `C05` 教师块改成练习入口，保留之前成果；已经准备过本章时会保留当前代码。若首次准备发现个人改动而拒绝覆盖，就停下来检查提示，**不要删文件或 `.lesson-state.json` 重来**。`doctor`检查环境和端口，不证明组数据库已通。",
+              "approximateLine": 12
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "口，保留之前成果；已经准备过本章时会保留当前代码。若首次准备发现个人改动而拒绝覆盖，就停下来检查提示，**不要删文件或 `.lesson-state.json` 重来**。`doctor`检查环境和端口，不证明组数据库已通。第04章已经初始化账号，本章继续使用，不重新生成密码。 按 `Ctrl+P`（macOS为 `Command+P`），输入下面路径，按Enter打开：",
+              "approximateLine": 16
+            }
+          }
+        },
+        {
+          "title": "第2步：向AI要最小修复，并只替换标记里面",
+          "line": 54,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在刚才同一会话发送： 与实际参考代码一致的一种回答如下： `noneMatch`在这里表示“没有一个空间ID匹配”；`||`表示两种错误任意一种成立就拒绝。先用手指分别指出“空间不存在”和“楼栋不存在”。如果AI用了 `&&`，两者必须同时错才拒绝，会漏掉只错一个的请求。 回VS Code选中两条标记之间的原始 `throw .",
+              "approximateLine": 55
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "现在只补validateBinding的STUDENT_TODO_C05_BEGIN与END之间。\nspaceId必须存在于provider.spaces().items()，按s.id().equals(spaceId)判断；\nbuildingId必须能由mapper.building(buildingId)查到，查不到返回null。\n任一不存在就throw ApiFailu",
+              "approximateLine": 58
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "留上下两条注释、方法的大括号以及文件其余内容。**保存后在 `app` 终端执行： 这是查看改动，不是执行Java。第04章已建立个人Git基线时，应只看到本章局部变化；若其他章节也有你的改动，保留它们，不用撤销命令清理。若底部显示 `(END)` 或冒号，按小写 `q` 退出查看，再输入下一条命令。 若AI给出整文件或编译报错，把当前 `validateBinding",
+              "approximateLine": 65
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "这里表示“没有一个空间ID匹配”；`||`表示两种错误任意一种成立就拒绝。先用手指分别指出“空间不存在”和“楼栋不存在”。如果AI用了 `&&`，两者必须同时错才拒绝，会漏掉只错一个的请求。 回VS Code选中两条标记之间的原始 `throw ...TODO_C05` 那一行，用AI检查通过的代码替换。**保留上下两条注释、方法的大括号以及文件其余内容。**保存后在 `ap",
+              "approximateLine": 63
+            }
+          }
+        },
+        {
+          "title": "第3步：构建，再切到教师提供的组数据库",
+          "line": 95,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "从本章起，保存的数据放在教师提供的本组数据库里。“迁移”在这里是按工程已有文件建好需要的表，由教师操作。**不要自行安装MySQL、猜地址，或把数据库口令发给AI。**完整说明位于 `app/docs/02-教师数据库交接单.md`；这份说明的示例里有大写占位符，不能当成可直接连接的配置。 先完成下面的实际交接： 1. 告诉教师自己的",
+              "approximateLine": 96
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我运行的是app目录中的node tools/course.mjs backend-db，目标是教师组库。\n接下来是脱敏错误，请区分环境/数据库连接/未迁移/业务TODO四类。\n每次只给一项我能核对的操作；不要让我改用root、关TLS、删除迁移历史或\n把数据库切成原平台。没有足够证据时明确缺哪条非秘密错误信息。",
+              "approximateLine": 134
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "database.json` 文件**。请教师同时确认：这是本组日常库、是否需校园网/VPN、迁移是否完成、日常账号是否已换好。没有收到真实文件，或里面仍有 `DB_HOST`、`GROUP_USER` 之类占位符，就停在本步；不向AI要一组“能用”的参数。 2. 在VS Code左侧展开 `.private`。对其中的 `accounts.json` 点右键，选“Reveal",
+              "approximateLine": 100
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "件夹**，保留原 `accounts.json`。如果已存在数据库配置，先让教师确认本组原文件，不直接覆盖。 3. 回VS Code，展开左侧 `.private` 并双击 `database.json`。只在本机确认文件能打开，且 `url`、`username`、`password` 都由教师填好了。Windows 在文件资源管理器“查看→显示”中启用“文件扩展名”，确认不",
+              "approximateLine": 101
+            }
+          }
+        },
+        {
+          "title": "第4步：亲手建立一条关系，再看服务器实际返回的ID",
+          "line": 143,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "就先检查原记录，不重复创建。 1. “校区名称”输入 `G01教学园区`，点“保存校区”，等到“服务端已确认保存。”。 2. “所属校区”选刚建立的 `G01教学园区`；“楼栋名称”输入 `G01实验楼`，点“保存楼栋”。 3. “空间”选 `教学空间01（模拟）`；“楼栋”选 `G01教学园区 / G01实验楼`；楼层填 `1`，点“保存绑定”。 4. 上方“空间与本地归属",
+              "approximateLine": 146
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "接下来是我本组GET locations和GET spaces的两份实际响应正文，不含请求头。\n请只核对teaching_space_01：绑定的buildingId是否指向真实楼栋，楼栋的\ncampusId是否指向真实校区，spaces合并字段是否与locations一致。\n请列出你实际找到的三个ID和floor，不猜ID，不把名称当ID，不宣布已测重启。",
+              "approximateLine": 156
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "“保存绑定”。 4. 上方“空间与本地归属”表中，应出现 `G01教学园区 / G01实验楼 / 1`。点“刷新映射”，再看一次。 接着在页面空白处右键→“检查”，点“Network/网络”，在过滤框输入 `locations`，再点“刷新映射”。点刚出现的 `locations` GET，选“Response/响应”；只看JSON正文，**不复制Headers中的Cooki",
+              "approximateLine": 149
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "属”页面按顺序操作。下面 `G01` 是示例组号；若你的组号不同，校区、楼栋两处名称都换成自己的组号。已做过就先检查原记录，不重复创建。 1. “校区名称”输入 `G01教学园区`，点“保存校区”，等到“服务端已确认保存。”。 2. “所属校区”选刚建立的 `G01教学园区`；“楼栋名称”输入 `G01实验楼`，点“保存楼栋”。 3. “空间”选 `教学空间01（模拟）`；“",
+              "approximateLine": 144
+            }
+          }
+        },
+        {
+          "title": "第5步：让服务器拒绝一条错误引用和一个只读身份",
+          "line": 169,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "下拉框会阻止你选择不存在的楼栋，所以这一步使用浏览器的Console（控制台），直接向**本组当前页面**发请求。右键“检查”→“Console/控制台”。先阅读下面函数，再整段复制到输入行并按Enter。若浏览器禁止粘贴，按教师演示手动输入或由教师带做，不关闭浏览器防护。 函数沿用页面当前登录身份；CSRF是服务器要求的防护值，函数内",
+              "approximateLine": 170
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只测试本组教学空间绑定。管理员+不存在楼栋应404；管理员+合法楼栋但\n不存在空间也应404。两个请求只错一个引用。viewer+已有合法\n绑定应403；admin+同一合法绑定应200。请按身份、引用、输入逐项区分。\n不要建议放宽权限或把异常改成成功；先检查C05与实际启动模式。\n根据我实际结果指出哪个条件没有隔离，不把预期写成实际。",
+              "approximateLine": 239
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "只把楼栋ID改为不存在的值： 展开结果对象，预期 `status: 404`。回“空间归属”点“刷新映射”，原关系仍在。若返回501，检查是否保存并重建了C05；若返回200，不算成功，说明错误引用被接受了。 仍保持 `admin`，再测试另一项检查：这次楼栋合法，只让空间不存在。复制下面完整一段到Console执行；它先读取刚保存的合法楼栋ID，再尝试绑定不存在的空间",
+              "approximateLine": 180
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "先阅读下面函数，再整段复制到输入行并按Enter。若浏览器禁止粘贴，按教师演示手动输入或由教师带做，不关闭浏览器防护。 函数沿用页面当前登录身份；CSRF是服务器要求的防护值，函数内部获取，不打印，也不要截图它。出现 `undefined` 只是函数定义完成。它没有写入数据。刷新网页或换标签后函数可能消失，需要重新粘贴定义。 仍以 `admin` 登录，执行这一条；只把",
+              "approximateLine": 170
+            }
+          }
+        },
+        {
+          "title": "第6步：重启回读，证明不是只留在页面里",
+          "line": 249,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "点后端终端A，按 `Ctrl+C`（macOS也是Control+C）；确认回到输入提示符后，仍在 `app` 执行 `node tools/course.mjs backend-db`，等 `Started CourseApplication`。前端B继续运行。刷新浏览器，此时旧登录已失效，重新用原 `admin` 登录，打开“空间归属”，",
+              "approximateLine": 250
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我重启同一app的backend-db后正在核对空间绑定。接下来是实际错误和\nlocations/spaces中的相关ID。请先区分启动模式、读取失败、关系缺失及\n测试失败；给一项只读核对动作。不再次POST创建，不清库，不猜连接信息。",
+              "approximateLine": 263
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "trl+C`（macOS也是Control+C）；确认回到输入提示符后，仍在 `app` 执行 `node tools/course.mjs backend-db`，等 `Started CourseApplication`。前端B继续运行。刷新浏览器，此时旧登录已失效，重新用原 `admin` 登录，打开“空间归属”，点“刷新映射”；三个ID与楼层应仍一致。不要重新创建校区来",
+              "approximateLine": 250
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "立测试库流程，不能在本章日常组库执行清理测试。 若重启后关系不见了或检查失败，先保存实际错误，不重建关系或重置数据库。在同一AI会话发下段，再分别贴脱敏错误和两个读取响应中的相关ID： 最后把 `evidence/ch05.md` 全文交给AI，先发： 保存最终记录。停点：一条真实保存的本地关系、两个错误引用分别404、viewer的403及admin对照、一次重",
+              "approximateLine": 258
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/06-设备台账与自主UI.md",
+      "sha256": "4151f57b29a062d244c95bca1402a2c5d0e59d1d8e30c4ce64e22558a5ec26b5",
+      "steps": [
+        {
+          "title": "第1步：先预测筛选结果，再打开真正要改的文件",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在VS Code继续打开 `app`。把正在运行的前后端终端各按一次 `Ctrl+C` 停止，在位于 `app` 的新终端执行： 新终端先按[第04章第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)重新设置 `JAVA_HOME`，再执行下面命令。该设置只对当前终端有效；本章后面新开的后端、前端或检查终端也要分别设置。",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在智慧校园第06章，只修course.ts中的C06 filterDevices。\n接下来是course.ts和types/campus.ts两份真实源码。先不要写代码。\n请解释DeviceFilter的四个条件各表示什么，用AND表示全部条件同时满足。\n固定例子：空间01有4台，环境类型只有teaching_env_01且online=true；\n再选unknown应0台。",
+              "approximateLine": 42
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "发送 `.private` 或整个文件夹。 应得到“全部满足才保留”的解释。若AI说任意条件匹配即可，直接追问：“这是查同一条设备，不是合并几组结果。请用空间01+环境+未知重算；必须同时符合，重新解释AND，不写代码。”",
+              "approximateLine": 30
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "05和第04章修改；已经准备过本章时保留当前代码。若首次准备因当前块已有个人改动而被拒绝，就查看已有工作，不强行重置或删除 `.lesson-state.json`。 按 `Ctrl+P` / `Command+P` 打开 `fixtures/catalog.json`，用查找依次找到 `teaching_space_01`、`teaching_env_01`、`teachi",
+              "approximateLine": 14
+            }
+          }
+        },
+        {
+          "title": "第2步：把返回空数组的练习入口，改成真正的筛选",
+          "line": 53,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "配设备；这不等于服务器没有设备。 在同一AI会话发送： 与真实参考实现相同的可用代码是： 只选中C06两条标记中间的内容，粘贴替换，保留注释、函数外层大括号及C08/C12。`&&`连接四个大条件；最后一组里的 `||`是允许选择哪一种通信状态。**不能把所有符号统一改成同一种。**保存文件。 打开 `frontend/src/tests/course-doma",
+              "approximateLine": 56
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请只给STUDENT_TODO_C06_BEGIN与END之间的完整TypeScript替换代码。\n保留filterDevices(devices: Device[], filter: DeviceFilter): Device[]签名。\n关键词trim后不区分大小写，匹配设备name或id；关键词/spaceId/category为空\n表示该项不限制。online为all时不",
+              "approximateLine": 59
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "`toEqual(['B'])`，这就是第一组输入应返回的ID；最后检查原数组还是A、B、C。它是教师写的检查，不是你的实现。 若不知道报错怎么改，先发下面提示，再贴**当前整个filterDevices函数、DeviceFilter定义和实际错误全文**：",
+              "approximateLine": 70
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "是A、B、C。它是教师写的检查，不是你的实现。 若不知道报错怎么改，先发下面提示，再贴**当前整个filterDevices函数、DeviceFilter定义和实际错误全文**：",
+              "approximateLine": 72
+            }
+          }
+        },
+        {
+          "title": "第3步：先让检查指出错误，再打开页面",
+          "line": 102,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在 `app` 终端逐行执行；Windows若拦截 `npm.ps1`，把命令开头的 `npm` 换成 `npm.cmd`，其余不变： 预期类型检查无错误退出，C06测试通过。这个文件也含其他章检查，那些代码目前由教师预置；不能把它们通过写成“我独立实现了全部功能”。如果出现红字，保留实际输出，回第2步；不删除测试。 检查通过后，复用当前已设置",
+              "approximateLine": 103
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我已补C06，使用teacher-db和viewer访问本地#devices。请依据接下来实际\n页面文字与devices响应，区分后端只有两台、读取失败、筛选函数错误。\n不能因为页面空就说接口失败；先看items长度与筛选条件。不修改固定夹具。",
+              "approximateLine": 133
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "m` 换成 `npm.cmd`，其余不变： 预期类型检查无错误退出，C06测试通过。这个文件也含其他章检查，那些代码目前由教师预置；不能把它们通过写成“我独立实现了全部功能”。如果出现红字，保留实际输出，回第2步；不删除测试。 检查通过后，复用当前已设置 `JAVA_HOME` 的终端作为A，目录仍为 `app`，启动后端： 等看到 `teacher-db` 和",
+              "approximateLine": 107
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "在 `app` 终端逐行执行；Windows若拦截 `npm.ps1`，把命令开头的 `npm` 换成 `npm.cmd`，其余不变： 预期类型检查无错误退出，C06测试通过。这个文件也含其他章检查，那些代码目前由教师预置；不能把它们通过写成“我独立实现了全部功能”。如果出现红字，保留实际输出，回第2步；不删除测试。 检查通过后，复用当前已设置 `JAVA_HOM",
+              "approximateLine": 103
+            }
+          }
+        },
+        {
+          "title": "第4步：按同一条筛选路线，从16走到1，再走到0",
+          "line": 141,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "failureHandling"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "标题里的“条匹配记录”，不是上方“设备总数”： 点击下拉框选完一项就会立即筛选，关键词输入后也立即生效，不需要另找“查询”按钮。**下面各行接着上一行做，只有写了“清除”的地方才清除**；每次等表格更新后再记录数量。 | 操作 | 应看到什么 | | --- | --- | | 点“清除全部筛选” | 当前完整16条，设备总数仍16 | | “空间”选“教学空间01（模拟）",
+              "approximateLine": 144
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "下面是我的实际筛选记录。请按顺序检查四条件AND、unknown严格null、\n清除后原数组仍完整。空间01+环境+未知应0；请指出实际哪一步与预测不同。\n数量只能引用我的记录，不能补造。若需修C06，先解释原因，再返回标记内\n完整代码。详情必须以deviceId定位，不新增未约定设备详情接口。",
+              "approximateLine": 160
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "*；每次等表格更新后再记录数量。 | 操作 | 应看到什么 | | --- | --- | | 点“清除全部筛选” | 当前完整16条，设备总数仍16 | | “空间”选“教学空间01（模拟）” | 4条 | | “设备类型”再选“环境” | 1条，ID `teaching_env_01` | | “在线状态”再选“未知” | 0条，显示“暂无匹配设备，请调整筛选。” | |",
+              "approximateLine": 146
+            },
+            "failureHandling": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            }
+          }
+        },
+        {
+          "title": "第5步：做自己的页面外观，但不重写行为",
+          "line": 169,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在VS Code打开 `frontend/src/views/DeviceCatalog.vue`。搜索 `<style`：教师起点没有样式块，样式来自共用文件。这次只在文件最后的 `</template>` **后面**增加本页样式，不替换模板、不移动请求逻辑。 先把当前 `DeviceCatalog.vue` 全文贴给同一AI会话，再发送",
+              "approximateLine": 170
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请只为刚贴的DeviceCatalog.vue增加一个<style scoped>块，不改script/template。\n我想让设备表更容易扫描：台账外框圆角、表头浅绿色、行间距稍大；窄于600px\n时标题与刷新按钮上下排。使用已有.ledger、.data-table、.page-heading类。\n不要改三态颜色含义、教学模拟标识、单位、设备ID、错误提示及按钮行为，\n不",
+              "approximateLine": 175
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "键逐次移动到“清除全部筛选”，按Enter试一次。完成后再点一次手机/平板图标退出窄屏预览。浏览器预览不是手机真机验收。 若布局出错，可直接追问： 保存一张自己的页面截图，记录文件位置及一句理由，如“增大行间距便于定位设备ID”。不要把配色相同或不同当作功能通过的依据。",
+              "approximateLine": 182
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "浏览器应自动更新；可按自己的选择改变边框色与间距。若已存在你自己写的 `<style>`，不要盲目追加重复规则：把现有样式贴给AI，要求“保留现有决定，合并为一份完整style块”，再只替换该样式块。 页面右键→“检查”，点开发者工具的手机/平板图标进入响应式预览；上方设备下拉框选“Responsive/响应式”，把宽度输入框改成 `390` 并按Enter。确认页面能读、输",
+              "approximateLine": 180
+            }
+          }
+        },
+        {
+          "title": "第6步：检查空、失败和旧快照，不让好看的页面撒谎",
+          "line": 226,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "，选“Network/网络”，清空以前的过滤文字，输入 `devices`；点页面“刷新台账”，在新出现的设备GET请求行上右键→“Block request URL/阻止请求网址”。确认底部“Network request blocking/网络请求阻止”面板已勾选启用，规则只对应 `/api/campus/devices`。**不要选择阻止域名，不要切换整个浏览器为Offl",
+              "approximateLine": 227
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我正在区分成功空目录、筛选无结果、首次读取失败、已有快照后失败。\n接下来是实际页面文字、devices状态和失败测试名。请先判断请求阻止是否\n仍生效，再检查状态分支；不要清空设备、改API地址或把失败写成成功空列表。",
+              "approximateLine": 249
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "* 回页面点“刷新台账”，不要按浏览器整页刷新。预期显示： 旧设备列表仍在，Network中对应请求应显示被浏览器阻止，例如 `blocked:devtools`；它没有得到后端HTTP响应，不能记成400或500。若要检查首次失败，保持阻止后再点浏览器地址栏旁的刷新按钮，等待页面重新读取；预期“本次读取失败，尚无成功数据”，不能显示“目录暂无设备”。完成后在请求阻止面",
+              "approximateLine": 229
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "没有得到后端HTTP响应，不能记成400或500。若要检查首次失败，保持阻止后再点浏览器地址栏旁的刷新按钮，等待页面重新读取；预期“本次读取失败，尚无成功数据”，不能显示“目录暂无设备”。完成后在请求阻止面板取消该规则的勾选，再点“刷新台账”，确认恢复。找不到阻止入口时请教师演示，不修改源代码URL制造故障。 “成功返回空目录”不能靠网络断开来制造。A、B仍运行时，点“终端→",
+              "approximateLine": 233
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/07-监测历史与数据质量.md",
+      "sha256": "635b41f903b0853797a0a4c5c052ac552206e13e26e8c45d92ba273f36274e01",
+      "steps": [
+        {
+          "title": "第1步：停下旧程序，用固定时间手算四个边界",
+          "line": 7,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在VS Code打开 `app`。到正在运行的前后端终端，各按 `Ctrl+C` 停止自己的进程。在 `app` 新终端执行： 新终端先按[第04章第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)重新设置 `JAVA_HOME`，再执行下面命令。该设置只对当前终端有效；后面新开的检查、构建、后端及前端终端也分别设置",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我做智慧校园第07章。接下来是QualityPolicy.java的完整源码，先不要改代码。\n固定观察O=1792303200000，读数先取24.5；采样分别是O-60000、O-60001、\nO+5000、O+5001。请预测fresh/stale/invalid，再解释0、null、字符串\"0\"区别。\n规则：先判非空非法类型/时间，再missing，再未来超过5000毫秒",
+              "approximateLine": 49
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "有结果暂时返回 `missing`，已有质量测试会失败；不能删测试，也不能继续用旧JAR的教师实现来验收自己的修改。 已经准备过本章时，工具保留当前代码；首次准备若发现已有个人修改而拒绝覆盖，先请教师核对，不删除代码或 `.lesson-state.json` 强行重来。 按 `Ctrl+P` / `Command+P` 打开： 搜索 `STUDENT_TODO_C0",
+              "approximateLine": 14
+            }
+          }
+        },
+        {
+          "title": "第2步：补C07，让判断按正确顺序进行",
+          "line": 59,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "sonNode` 是教师已提供的“装着一项JSON输入的对象”，所以它能表示数字、文字或null；本章不要求自己编写JSON解析器。名字相同的 `value(value)`，左边是检查函数，括号内是输入；不要因为看起来重复就改掉它。 在同一AI会话发送： 经真实参考源码核对的完整块如下： 在VS Code只替换两条C07标记之间的 `return \"missing",
+              "approximateLine": 60
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "现在只给QualityPolicy.classify的STUDENT_TODO_C07_BEGIN与END之间代码。\n沿用教师missing(JsonNode)、value(JsonNode)、time(JsonNode)，不改它们。\n顺序必须是：非空但类型/时间非法→invalid；任一缺失→missing；\nage=observedAt-time.longValue()，a",
+              "approximateLine": 65
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "线只为便于阅读。 回头检查第一行先检查非法类型；如果先判断缺失，`value=\"bad\"、time=null`就会被写成missing，掩盖非法值。两个条件都为空不需要调用 `longValue()`，所以缺失判断必须在计算age之前。 出错时先发送下段，再贴当前整个 `classify` 函数及实际编译错误： 在证据文件记一条本人解释：“为什么有效0不能用真假判断过",
+              "approximateLine": 72
+            }
+          }
+        },
+        {
+          "title": "第3步：运行真正调用这个函数的检查，再重新打包",
+          "line": 98,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在 `app` 终端执行： 这会运行夹具结构检查、后端普通测试、前端类型和单元测试。打开 `backend/src/test/java/edu/campus/course/QualityPolicyTest.java`，搜索： 它逐条读取 `fixtures/quality-cases.json` 的原始输入，调用你的 `Quality",
+              "approximateLine": 99
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "下面是我实际运行check后QualityPolicyTest的失败输出，以及当前C07函数。\n请只分析这次失败的输入、预期、实际和错误分支。保持固定O与原始样本，\n不能修改expectedQuality凑通过。给最小修正，再告诉我应重新核对哪一项。",
+              "approximateLine": 118
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "alityPolicy.classify`，再比较预期。用快速打开进入该JSON，搜索 `age-60000ms`、`age-60001ms`、`future-5000ms`、`future-5001ms`；每项的 `raw` 是输入，`expectedQuality` 是要比较的答案。先读输入、自己算，再看答案；文件里写了expected不等于已经执行成功。NaN/Infin",
+              "approximateLine": 107
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "..` 时要分开记，跳过的MySQL测试不算执行。若看不到该测试名，在VS Code左侧依次展开 `backend → target → surefire-reports`，双击 `edu.campus.course.QualityPolicyTest.txt` 核对结果；结合本次命令执行时间，不能借用其他工程的旧报告。只有本次实际运行后才填预测表的“实际”列。 失败时，终端",
+              "approximateLine": 109
+            }
+          }
+        },
+        {
+          "title": "第4步：在真实表格中找到零、缺失、陈旧三条记录",
+          "line": 146,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "为新鲜。 右键“检查”→Network，在过滤框输入 `/overview`，点页面“立即刷新”，打开最新GET的Response正文。在 `data.points` 中按上表ID找对象，再确认同一对象的 `tagId`，避免误取同设备的另一个采样点。核对value、unit、time、quality；前两条time为 `1792303199000`，陈旧那条为 `17923",
+              "approximateLine": 159
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "下面是我实际overview响应中的三条Point及observedAt。请按deviceId+tagId\n逐条解释页面为什么显示0、新鲜/缺失/陈旧，保留原单位与采样时间。\n不能用设备online推断点质量，不能把kW当kWh、费用或节能率。\n如果我的响应与固定示例不同，指出差异，不替我把值改成示例。",
+              "approximateLine": 164
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "“校园监测”上方应出现空间覆盖 `4 / 4`、设备覆盖 `16 / 16`、点位覆盖 `28 / 28`，来源标记为教学模拟。覆盖数来自返回数据，不从题目抄到页面。 用浏览器查找（`Ctrl+F` / `Command+F`）依次找以下设备名；同设备多个点时继续看第二行的采样点名称和ID： | 找哪一行 | 响应中的deviceId |",
+              "approximateLine": 147
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "制这三个对象及observedAt，不复制请求头。如果响应太长不好选，可把无秘密的这份overview响应正文完整发给AI，让它先抽出三项，由你对照原文确认。 复制这三条Point和外层observedAt到AI，先发： 若AI写“功率0说明设备故障”，追问：“0是合法数值，没有真实故障规则。请只解释数据含义和质量，不推断故障原因，不声称学校设备已核实。”记录三行实际读",
+              "approximateLine": 159
+            }
+          }
+        },
+        {
+          "title": "第5步：对照四条历史原始样本，看见一个断点和一个零",
+          "line": 173,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "打开 `http://127.0.0.1:5178/#history`。在“设备”选 `电能监测器01（模拟）`，“采样点”选功率对应的 `kW` 项，“教学时钟之前”选“15 分钟”，点“查询样本”。页面标题是“历史样本”。 Network把之前的 `/overview` 过滤文字改成 `/history`，点“查询样本”后",
+              "approximateLine": 174
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请手算historySeries对刚才四条样本的返回，逐条保留time与value。\n再解释为什么不能加.filter(sample => sample.value)：它会同时删除0与null。\n本章不改这个教师函数，也不重写图表；只给四项数组和错误解释。\n不要把功率kW积分成费用，不生成不存在的时间点，不声称已经看见我的浏览器。",
+              "approximateLine": 207
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "制Cookie等请求头。核对： 当前固定样本应有4条；对照页面“原始样本表”和响应 `data.samples`： 原始表的null行应写“缺失：保留断点”；0行仍是 `0 kW`，不是缺失。图表不跨过null连成一条测量曲线，也不能增加未返回的采样时刻。图表刻度按浏览器时区，表格明确用北京时间；判断是不是同一点要比较原始毫秒值，不凭两处文字看起来不同就改时区。",
+              "approximateLine": 180
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "ring Parameters/查询字符串参数”；若浏览器将它放在“Headers/标头”中，只阅读这部分参数，不复制Cookie等请求头。核对： 当前固定样本应有4条；对照页面“原始样本表”和响应 `data.samples`： 原始表的null行应写“缺失：保留断点”；0行仍是 `0 kW`，不是缺失。图表不跨过null连成一条测量曲线，也不能增加未返回的采样时",
+              "approximateLine": 176
+            }
+          }
+        },
+        {
+          "title": "第6步：让一个非法时间窗口失败，而不是伪装成空样本",
+          "line": 220,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "库： 这里from比to大，只改了时间顺序。打开该标签的开发者工具Network，刷新此标签并点请求，看状态应为 `400`；响应为错误，不能记成成功空数组。再打开以下地址，时间顺序合法，但跨度比6小时多1毫秒，也预期400： 两条分开记录。若得到401，先回课程页面确认登录同一来源，再读；不能把未登录当作时间校验通过。回“历史样本”用原来15分钟重新查询，仍应正常",
+              "approximateLine": 225
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "下面是本地历史查询的两个单变量反例：第一条from>to，第二条合法顺序但\n超过21600000毫秒。请核对实际HTTP状态与错误是否对应，不把400说成无数据。\n若401，先指出身份前提未满足，不评价时间规则。正常15分钟对照仍需单独记录。\n请只解释这些实际响应，不能建议扩大后端上限来让错误请求成功。",
+              "approximateLine": 240
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "发者工具Network，刷新此标签并点请求，看状态应为 `400`；响应为错误，不能记成成功空数组。再打开以下地址，时间顺序合法，但跨度比6小时多1毫秒，也预期400： 两条分开记录。若得到401，先回课程页面确认登录同一来源，再读；不能把未登录当作时间校验通过。回“历史样本”用原来15分钟重新查询，仍应正常显示4条。 还可以打开 `backend/src/test/j",
+              "approximateLine": 225
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "刷新此标签并点请求，看状态应为 `400`；响应为错误，不能记成成功空数组。再打开以下地址，时间顺序合法，但跨度比6小时多1毫秒，也预期400： 两条分开记录。若得到401，先回课程页面确认登录同一来源，再读；不能把未登录当作时间校验通过。回“历史样本”用原来15分钟重新查询，仍应正常显示4条。 还可以打开 `backend/src/test/java/edu/camp",
+              "approximateLine": 225
+            }
+          }
+        },
+        {
+          "title": "第7步：观察刷新会停止，保留一次失败，再交接",
+          "line": 249,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "回到 `#overview`，打开Network并过滤 `/overview`，清空当前请求记录。等第一轮完成，观察后续读取：**完成后约15秒再开始下一轮**。不要求整齐到毫秒，也不通过修改电脑时间制造结果。 按第06章方法，右键overview请求行→“阻止请求网址”，只启用 `/api/campus/overview` 这一条规则，再点“立即刷新”。",
+              "approximateLine": 250
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在检查监测页失败恢复和离页停止。接下来是页面地址、overview请求开始\n时间和实际错误。请区分离页前已在途请求与离页后新请求，先确认阻止规则\n已取消；只给一项排查动作，不改成任意延时、不删除测试或伪造成功结果。",
+              "approximateLine": 270
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "清空当前请求记录。等第一轮完成，观察后续读取：**完成后约15秒再开始下一轮**。不要求整齐到毫秒，也不通过修改电脑时间制造结果。 按第06章方法，右键overview请求行→“阻止请求网址”，只启用 `/api/campus/overview` 这一条规则，再点“立即刷新”。已有表格保留，预期“本次更新失败，以下仍是上次成功快照”。**这条阻止规则会持续生效，不会自动只失败",
+              "approximateLine": 250
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "则，再点“立即刷新”。已有表格保留，预期“本次更新失败，以下仍是上次成功快照”。**这条阻止规则会持续生效，不会自动只失败一次**；看到失败后手动取消规则勾选，再点“立即刷新”应恢复。不要在这期间修改代码、停止后端或整页重载来冒充这个请求失败实验。 接着切到“设备台账”，保留Network面板观察20秒。离开监测页后不应继续新发overview轮询；已在途请求结束与新建请求要",
+              "approximateLine": 252
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/08-登录权限与失败排查.md",
+      "sha256": "b1da9222201207478921fef9da859674bf52745cdb88ee34c8dfd8ad1339f2a0",
+      "steps": [
+        {
+          "title": "第1步：准备本章，不动前面成果",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "1. 在 VS Code 用“文件 → 打开文件夹”选择桌面 `campus-ai-lab/app`，左侧应直接看到 `frontend`、`backend`、`tools`。 2. 沿用第04段的两个终端。一个运行后端 `backend-db`，一个运行前端 `frontend`。先在前端终端按 Ctrl+C，等出现可以输入命令的提示符；不要把命令打进仍在运行的进程",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在长期工程campus-ai-lab/app执行node tools/chapter.mjs prepare 08失败。\n下一条给实际错误。请先判断是目录、缺文件还是已有修改冲突；不要重建工程、\n覆盖前章成果或让我删除数据库。只给下一项只读检查，等我返回结果再继续。",
+              "approximateLine": 34
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "`campus-ai-lab/app`，左侧应直接看到 `frontend`、`backend`、`tools`。 2. 沿用第04段的两个终端。一个运行后端 `backend-db`，一个运行前端 `frontend`。先在前端终端按 Ctrl+C，等出现可以输入命令的提示符；不要把命令打进仍在运行的进程。 3. 在这个终端执行： 若你新建了终端或重开了 VS Code",
+              "approximateLine": 8
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "进仍在运行的进程。 3. 在这个终端执行： 若你新建了终端或重开了 VS Code，先按[第04段第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)在要运行命令的终端重新设置 `JAVA_HOME`；之前的设置不会自动传到新终端。复用原来已经设置好的终端无需重设。 首次准备只将本章尚未编辑的参考标记块置为 TODO，意思是“这一小块留给你做”；",
+              "approximateLine": 14
+            }
+          }
+        },
+        {
+          "title": "第2步：把两个准确的源文件交给 AI",
+          "line": 40,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "failureHandling"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "Windows 按 Ctrl+P，macOS 按 Command+P，输入 `frontend/src/domain/course.ts`，回车。用 Ctrl+F／Command+F 搜索 `STUDENT_TODO_C08_BEGIN`，应看到 `strictCapability` 函数。准备后的块内通常是： 它暂时让所有能力都关闭，所",
+              "approximateLine": 41
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我现在做第08段，只改frontend/src/domain/course.ts里\nSTUDENT_TODO_C08_BEGIN到STUDENT_TODO_C08_END之间的代码。\n我会分两条发送course.ts和frontend/src/api/auth.ts全文；请先确认收到，\n等我说“开始C08”再分析。文件是无秘密源代码，不包含账号或数据库配置。",
+              "approximateLine": 53
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "`STUDENT_TODO_C08_BEGIN`，应看到 `strictCapability` 函数。准备后的块内通常是： 它暂时让所有能力都关闭，所以这时页面提示无读取权限并不证明账号坏了。不要修改数据库角色来“修好”这个 TODO。 回到网页 AI，先发： 回 VS Code，点进 `course.ts` 编辑区，Ctrl+A、Ctrl+C（macOS 用 C",
+              "approximateLine": 41
+            },
+            "failureHandling": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            }
+          }
+        },
+        {
+          "title": "第3步：只替换一小块，先看测试再看页面",
+          "line": 80,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "和 `return false`，替换为： 保存后，这个函数应完整呈现为： 不要把整个 `course.ts` 换成这个函数，否则会丢掉前面的筛选代码。按 Ctrl+S／Command+S。前端终端仍在 `app`，依次执行： Windows 的 PowerShell 若阻止 `npm.ps1`，把前两条开头的 `npm` 换成 `npm.cmd`，其他不变。",
+              "approximateLine": 85
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "C08已按两条标记之间替换并保存，下一条是实际测试或类型错误，随后是\ncourse.ts全文。请定位第一处错误，只修该块或我误删的必要括号；不能删测试、\n把所有值放行、覆盖C06，也不能把跳过的测试说成已经通过。",
+              "approximateLine": 112
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "和 `return false`，替换为： 保存后，这个函数应完整呈现为： 不要把整个 `course.ts` 换成这个函数，否则会丢掉前面的筛选代码。按 Ctrl+S／Command+S。前端终端仍在 `app`，依次执行： Windows 的 PowerShell 若阻止 `npm.ps1`，把前两条开头的 `npm` 换成 `npm.cmd`，其他不变。",
+              "approximateLine": 85
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "Windows 的 PowerShell 若阻止 `npm.ps1`，把前两条开头的 `npm` 换成 `npm.cmd`，其他不变。第一条应通过名称含 `C08 仅 Boolean true 授权` 的测试；其他被筛选跳过的用例不算失败。第二条应正常结束且无类型错误。第三条保持运行，等待出现 `127.0.0.1:5178`。 本段没改 Java，已有 `backe",
+              "approximateLine": 93
+            }
+          }
+        },
+        {
+          "title": "第4步：实际登录两个身份，比较同一页面",
+          "line": 122,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "打开 `http://127.0.0.1:5178/#locations`。教师提供的本机账号密码只在本机查看和输入；如第04段已教过，可在 VS Code 本地打开 `.private/accounts.json` 找对应密码，随后关闭该文件。**不全选复制给 AI，不把密码框拍进截图。** 1. 若当前已登录，点右上角 *",
+              "approximateLine": 123
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我已按顺序退出、登录viewer、看设备台账和空间归属，再退出、登录admin。\n请用两列列出各身份预期可见内容，并说明这只是页面入口证据，下一步还要\n用查看者自己的合法会话直接提交请求。不要建议修改浏览器存储伪造角色。",
+              "approximateLine": 133
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "登录，点右上角 **“退出 / 切换身份”**。等看到 **“教学账号登录”**；若显示“重新确认退出”，先完成退出，不能假定身份已切换。 2. 在“教学账号”填 `viewer`，在“密码”填本组对应密码，点 **“登录并查看设备”**。 3. 点顶部 **“设备台账”**，确认有实际设备；再点 **“空间归属”**。应能读取已有映射，下方出现 **“当前身份只读。校区、楼栋",
+              "approximateLine": 125
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "选复制给 AI，不把密码框拍进截图。** 1. 若当前已登录，点右上角 **“退出 / 切换身份”**。等看到 **“教学账号登录”**；若显示“重新确认退出”，先完成退出，不能假定身份已切换。 2. 在“教学账号”填 `viewer`，在“密码”填本组对应密码，点 **“登录并查看设备”**。 3. 点顶部 **“设备台账”**，确认有实际设备；再点 **“空间归属”**。",
+              "approximateLine": 125
+            }
+          }
+        },
+        {
+          "title": "第5步：按钮被隐藏后，服务器是否真的拒绝",
+          "line": 141,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "这一步只写本组教学库，不能在学校真实平台执行。先退出admin，重新登录viewer，留在 `#locations`。 1. 保留教程标签，切到地址以 `http://127.0.0.1:5178/` 开头的**课程应用标签**。在应用空白处右键 **“检查”**，选择 **“Console／控制台”**；看不到时点开发者工具上方 `»`。点击控制台底部 `>` 后",
+              "approximateLine": 142
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在127.0.0.1:5178、viewer自己的登录会话使用courseWrite创建校区，\n预期403/ACCESS_DENIED且locations不变。下一条只给status/message与\n前后业务数据，不给凭据。请区分角色拒绝、会话/CSRF问题、名称重复和网络失败；\n先指出证据缺什么，不修改后端Access，不把任何403都算授权通过。",
+              "approximateLine": 168
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "peof courseWrite`，按Enter；应得到 `\"function\"`。若是 `\"undefined\"`，检查标签地址、是否刷新或换过标签，再重新定义。切换身份后也重新做这项检查；函数沿用**当前**登录身份，不记住上次的viewer或admin。它只向本机教学接口发请求，内部携带防伪标记，不打印秘密。 4. 确认右上显示查看者后，整段复制下面代码到同一控制台的新输",
+              "approximateLine": 146
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "cOS用Command+V粘贴，按一次Enter。若浏览器禁止粘贴，保留防护提示，请教师带着手工输入，不关闭防护。出现 `undefined` 只是函数定义完成，尚未执行本步写请求。 3. 在新的 `>` 输入行输入 `typeof courseWrite`，按Enter；应得到 `\"function\"`。若是 `\"undefined\"`，检查标签地址、是否刷新或换过标签，再重",
+              "approximateLine": 145
+            }
+          }
+        },
+        {
+          "title": "第6步：看懂“旧响应晚到”与保存交接",
+          "line": 175,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "重写。 在 VS Code Ctrl+P 依次打开 `frontend/src/composables/useRequestScope.ts` 和 `frontend/src/tests/request-scope.test.ts`，分别 Ctrl+A复制全文、注明文件名，分两条发给 AI，再发： 在前端终端 Ctrl+C 停止本组Vite后执行，结束再启动：",
+              "approximateLine": 178
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "只解释刚收到的两个文件，不改代码。把sessionEpoch说成“身份轮次”，\nrequestSeq说成“请求次序”。沿测试说明：旧成功、旧失败、旧finally晚到时\n为什么都不能影响新页面；找出对应判断。最后给我三道预测题，不先给答案。",
+              "approximateLine": 181
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "+C 停止本组Vite后执行，结束再启动： 预期选定文件通过，但这证明的是可控测试场景，不是你手工制造了全部网络竞态。测试失败时把首条失败、相关无秘密文件发给 AI，要求“先解释失败，不删断言、不加入随意延时”。 最后在 `evidence/ch08.md` 补齐：C08一行差异、七项预测、实际测试结果、两身份页面、viewer403及数据不变、admin成功回读、仍未",
+              "approximateLine": 186
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "是可控测试场景，不是你手工制造了全部网络竞态。测试失败时把首条失败、相关无秘密文件发给 AI，要求“先解释失败，不删断言、不加入随意延时”。 最后在 `evidence/ch08.md` 补齐：C08一行差异、七项预测、实际测试结果、两身份页面、viewer403及数据不变、admin成功回读、仍未执行的项。保存。下一段仍用这个 `app`，开始处理一条真正保存到教学库的本地",
+              "approximateLine": 186
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/09-演练事件与关闭规则.md",
+      "sha256": "3d53ca83efcfb6f817a8a90d667c771e3714914ddfc5c8a916c7f0e748ec9b16",
+      "steps": [
+        {
+          "title": "第1步：进入本章并留下起点",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在 VS Code 打开 `app`。在后端终端按 Ctrl+C 停止本组 `backend-db`，等待出现命令提示符，然后执行： 若这是新终端或重新打开的 VS Code，先按[第04段第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)在这个终端设置 `JAVA_HOME`，再执行构建和启动命令。另一个旧终端中的",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在长期工程campus-ai-lab/app执行node tools/chapter.mjs prepare 09。\n下一条给实际错误。请只区分路径、缺文件和已有修改冲突，先给一项只读检查。\n保留前章成果，不重建工程、不清库，也不要把失败写成准备成功。",
+              "approximateLine": 33
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "“未执行”，后面每完成一步再填。本步不改Java。保存后应能在VS Code左侧看到 `evidence/ch09.md`，准备成功后下一步应找到C09留空块。准备失败时先向网页AI发送下面文字，再单独贴脱敏错误：",
+              "approximateLine": 20
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "d-db`，等待出现命令提示符，然后执行： 若这是新终端或重新打开的 VS Code，先按[第04段第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)在这个终端设置 `JAVA_HOME`，再执行构建和启动命令。另一个旧终端中的设置不会自动继承过来。 前端终端可继续运行。首次准备只处理C09，保留其他章；已准备过本章则保留当前实现，不删 `.l",
+              "approximateLine": 12
+            }
+          }
+        },
+        {
+          "title": "第2步：让 AI 对着真实方法讲规则",
+          "line": 39,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "Ctrl+P／Command+P 输入 `backend/src/main/java/edu/campus/course/OperationsService.java`，回车；Ctrl+F搜索 `STUDENT_TODO_C09_BEGIN`。它位于： `c` 是当前事件，`timeline` 是它的操作记录。501/TODO_C09表示课程留空，不是要去",
+              "approximateLine": 40
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我做第09段，只补OperationsService.java的C09标记块。我会分条给你\n该文件全文、ApiFailure.java全文和CloseRulesTest.java全文。先确认收到，\n等“开始C09”后再分析。不得删除已有C08成果，不改数据库和公共鉴权。",
+              "approximateLine": 55
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "： 本步只读。把自己的关闭条件清单写入账本。若AI只检查“已恢复”，追问：“你漏了NOTE与核实时间等条件，请逐条对照我的清单，完整重发C09块内代码，不只给零散补丁。”",
+              "approximateLine": 58
+            }
+          }
+        },
+        {
+          "title": "第3步：只替换C09，并用现有测试核对",
+          "line": 84,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "相等符合条件，不能误写成必须大于。 Ctrl+S保存。**先看后端终端：若还在输出日志，按Ctrl+C，等输入提示符恢复。** 即使先前停过，只要中途又启动，就要再次停下；不能一边运行JAR一边用build覆盖它。在这个已停止后端的 `app` 终端依次执行： 只有第一条完成才执行第二条。build包含Java普通测试和前端构建，应无编译错误；`CloseRulesTe",
+              "approximateLine": 91
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只替换了C09并保存，build失败。请先定位下一条实际错误：是Java括号/\n类型、CloseRulesTest规则失败，还是环境问题。只修C09必要内容，不删测试、\n不改预期为全成功、不去掉事务或授权。请给完整块内替换代码和复查命令。",
+              "approximateLine": 115
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "若报错，先给网页AI发下面提示，再分条贴首条错误和保存后的 `OperationsService.java` 全文，不贴数据库配置： 记录实际构建结果。页面若仍返回TODO_C09，先确认旧后端确已Ctrl+C停止、build成功、新进程用backend-db启动；只保存Java不会自动更新正在运行的JAR。 如果误在后端运行中构建，随后出现类加载错误、`ClassNo",
+              "approximateLine": 97
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "必须大于。 Ctrl+S保存。**先看后端终端：若还在输出日志，按Ctrl+C，等输入提示符恢复。** 即使先前停过，只要中途又启动，就要再次停下；不能一边运行JAR一边用build覆盖它。在这个已停止后端的 `app` 终端依次执行： 只有第一条完成才执行第二条。build包含Java普通测试和前端构建，应无编译错误；`CloseRulesTest`中完整条件放行、逐",
+              "approximateLine": 91
+            }
+          }
+        },
+        {
+          "title": "第4步：管理员创建并分派一条真实本地事件",
+          "line": 125,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "打开 `http://127.0.0.1:5178/#cases`。重启后端会使旧会话失效，需要重新登录。按第08段的方法，用本机 `admin` 账号登录；密码只在本机输入。 先把“事件状态”选成“全部状态”、“负责范围”选成“当前可读全部”。E1、E2只是账本中的短名字，不是系统ID；完整ID是一串带连字符的文字，必须从页",
+              "approximateLine": 126
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "C09构建已完成。我现在用admin在事件工作台触发温度巡查并分派给A。\n请根据已读OperationsService说明无设备责任人与已有责任两种初始状态，\n以及分派后应核对的ID、状态、版本和时间线。先给预测，实际值等我回传；\n不要编造ID，不把本地演练写成设备故障。",
+              "approximateLine": 139
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "**，点 **“分派 / 重新分派”**。 5. 成功后应显示分派给A、已分派，版本前进并增加分派时间线。刷新页面，再按账本ID点对应列表项确认仍存在。不要仅看“成功”文字。 本步不改代码。AI可以帮助预测，不替你点页面： 若下拉框没有A或演练被禁用，保留页面说明，请教师核对本组资格和模式，不手改源码放开按钮。回传AI时只给缺少哪个候选/状态及脱敏错误。 ![参考工程",
+              "approximateLine": 134
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "`、**“演练源”**、版本和处置时间线。 3. 若当前无设备责任人，应是待分派v1；若已有责任，会自动已分派。记录实际情况，不为凑v1清库。 4. 在 **“处理记录 / 分派说明”** 填 `第09段：交给管理人员A处理本地演练`；在 **“接收人”** 选择 **“管理人员 A（manager-a）”**，点 **“分派 / 重新分派”**。 5. 成功后应显示分派给A、",
+              "approximateLine": 132
+            }
+          }
+        },
+        {
+          "title": "第5步：切换身份，走完开始到关闭",
+          "line": 152,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "每次切换都点右上 **“退出 / 切换身份”**，等登录表单出现，输入目标账号及它自己的本机密码，再点“登录并查看设备”。不能只改网页上显示的名字。两个普通标签共享会话，不能当作A/B两个独立身份。 按下表操作；每次重新登录后点“事件工作台”，按账本里的E1 ID找到并打开详情，等读取结束。 | 当前身份 | 填什么、点什么 |",
+              "approximateLine": 153
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我将下一条给E1实际操作账本，不含密码或令牌。请逐行核对开始→NOTE→\n管理员恢复→A请求服务端核实→A填写结论关闭。指出缺少哪条独立回读，\n区分sourceState与state；不得把我尚未记录的步骤补成成功。",
+              "approximateLine": 170
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "，时间线新增关闭 | 最后刷新页面，再打开E1，确认“事件已关闭，记录不可再修改。”及结论仍在。输入框提交后可能清空，这是成功后的正常行为；不要重复提交。标准无额外操作流程可能从v1到v7，但必须写实际返回版本。 本步无代码改动，把表中每一行的实际状态和版本填写到账本。让AI检查时发： 若“提交结论并关闭”灰色，先读 **“关闭前检查”** 列表，不修改按钮的disa",
+              "approximateLine": 165
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "实际状态和版本填写到账本。让AI检查时发： 若“提交结论并关闭”灰色，先读 **“关闭前检查”** 列表，不修改按钮的disabled。若核实UNKNOWN，核对是不是同一个E1、管理员是否真正恢复；修正前提后再由人发起核实。 任何一步出现409，先停止点击：页面会保留输入并回读最新详情。看到“最新详情已回读”后，比较ID、负责人、状态、版本和时间线；有“重试回读”就先",
+              "approximateLine": 171
+            }
+          }
+        },
+        {
+          "title": "第6步：专门证明“缺NOTE不能关闭”",
+          "line": 189,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": ". 触发另一条温度巡查，记E2实际ID；分派给A，填写开始说明并点 **“开始处理”**。管理员可处理该事件。 2. **故意不点“提交处理记录”**。点“恢复演练源”，再点“服务端核实恢复”，确认PASS。此时只缺NOTE，其余关闭条件应满足；“开始处理”那条不是NOTE。 3. 先把E2“当前记录”的完整ID保存到账本。按[第08段第5步](08-登录权限与失败排查.md)",
+              "approximateLine": 192
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我用admin对另一个IN_PROGRESS、已恢复、核实PASS且没有NOTE的事件请求关闭，\n结论非空，版本取自刚读取的详情。下一条是实际结果。请判断是否只改变了\nNOTE这一条件；若是403、VERSION_CONFLICT或前提不符，不算关闭门槛证明。\n不要建议加入NOTE后把刚才失败改写成通过，也不要删requireClosable。",
+              "approximateLine": 225
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "。输入 `typeof courseWrite` 应得到 `\"function\"`。再整段粘贴下方代码并按一次Enter；浏览器弹框中从账本粘贴E2实际ID，点“确定”，不输入字母E2。取消或留空应停止，不产生关闭请求。 预期 `409 / STATE_CONFLICT`，回读成功、详情完全不变；不是 `VERSION_CONFLICT`，也不是403。若其他条件不符，不",
+              "approximateLine": 194
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "保存到账本。按[第08段第5步](08-登录权限与失败排查.md)，在**5178应用标签**右键“检查”→Console，点底部 `>` 输入行；回[第05段第5步](05-后端空间与设备接口.md)复制完整 `courseWrite` 定义，粘贴后按Enter。输入 `typeof courseWrite` 应得到 `\"function\"`。再整段粘贴下方代码并按一次Ent",
+              "approximateLine": 194
+            }
+          }
+        },
+        {
+          "title": "第7步：保存“做了什么”和“还没证明什么”",
+          "line": 232,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在VS Code打开 `evidence/ch09.md`，补上C09差异、构建输出摘要、E1完整账本与刷新回读、E2缺NOTE的后端拒绝和前后不变。截图只截已登录业务页，不截密码或请求头。 可以给AI发送这份无秘密记录全文，请它执行： 核对后只在VS Code更新证据文件并保存，不用下载工具生成代码。下一段沿用同一个app，学习“设备",
+              "approximateLine": 233
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "请审阅我的第09段记录，只指出缺步骤或证据矛盾。区分已执行、失败、未执行。\n本章证明关闭正常路径和一个缺NOTE反例；并发、所有角色反例、真实数据库\n故障回滚未在本段全部验证。请整理一份完整ch09.md建议，保留我的原始结果，\n不能补造成功。不要改任何业务源文件。",
+              "approximateLine": 238
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "责任人”和“已有事件负责人”为何不能混为一人。 保存后重新打开 `evidence/ch09.md`，应仍有E1账本、E2拒绝、实际构建结果和未完成项。若AI把未执行写成成功，退回它的建议，保留自己的原记录，再发送：“请仅依据我已贴的原始记录完整重发ch09.md，删除无证据的通过结论，未执行项原样保留。”",
+              "approximateLine": 241
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "应仍有E1账本、E2拒绝、实际构建结果和未完成项。若AI把未执行写成成功，退回它的建议，保留自己的原记录，再发送：“请仅依据我已贴的原始记录完整重发ch09.md，删除无证据的通过结论，未执行项原样保留。”",
+              "approximateLine": 241
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/10-设备责任与时间线.md",
+      "sha256": "2e9d987e9d38befc1acfad6e68201dae460a292ea69ee79c018ae46317b1bf16",
+      "steps": [
+        {
+          "title": "第1步：准备C10，打开准确的位置",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "VS Code打开 `app`。在运行后端的终端按 Ctrl+C，等命令提示符出现后执行： 若这是新建终端或重开 VS Code 后的终端，按[第04段第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)先在这个终端设置 `JAVA_HOME`。设置只在当前终端有效，不能因为另一个终端设置过就省略。 首次只准备",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在campus-ai-lab/app执行prepare 10，随后打开OperationsService.java，\n但没有找到STUDENT_TODO_C10_BEGIN。下一条给实际错误，再下一条给源码全文。\n请先只定位标记或目录问题，保留C09成果，不替换整个工程，不清空责任记录。\n等我发完再回答；不要求.private配置或密码。",
+              "approximateLine": 44
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "ence/ch10.md`： 本步不改源码。保存后应在左侧看到 `evidence/ch10.md`；C10方法内的501是待完成提示。若找不到标记，先向网页AI发送下面文字，再分条发送准备命令的实际错误和该无秘密源文件全文：",
+              "approximateLine": 26
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "按 Ctrl+C，等命令提示符出现后执行： 若这是新建终端或重开 VS Code 后的终端，按[第04段第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)先在这个终端设置 `JAVA_HOME`。设置只在当前终端有效，不能因为另一个终端设置过就省略。 首次只准备当前章标记，不更换工程，不重置第09段代码和数据库；已准备过本章则保留当前实现，不删",
+              "approximateLine": 12
+            }
+          }
+        },
+        {
+          "title": "第2步：先看调用位置，再向AI要一行代码",
+          "line": 51,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在同一文件搜索 `checkOwnerVersion(`。除方法定义外，应在 `changeOwner` 内看到一次调用，顺序是：取得当前责任行 `mapper.lockOwner(deviceId)`，检查版本，然后修改负责人、版本并插入责任历史。不能把检查移到加锁之前。 向网页AI先发： 点VS Code编辑区，Ctrl+A、",
+              "approximateLine": 52
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我做第10段，只补OperationsService.java的C10标记块。\n下一条给这个文件全文，随后给ApiFailure.java全文。请先确认收到，\n等我说“开始C10”再给代码。文件是无秘密源码，不含.private配置。",
+              "approximateLine": 57
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "除方法定义外，应在 `changeOwner` 内看到一次调用，顺序是：取得当前责任行 `mapper.lockOwner(deviceId)`，检查版本，然后修改负责人、版本并插入责任历史。不能把检查移到加锁之前。 向网页AI先发： 点VS Code编辑区，Ctrl+A、Ctrl+C（macOS用Command）复制 `OperationsService.java`",
+              "approximateLine": 52
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "是初始责任版本示例，不能强行让已有数据回到0。 若AI建议“失败后刷新版本重试”，追问：",
+              "approximateLine": 64
+            }
+          }
+        },
+        {
+          "title": "第3步：替换、保存、重新构建后端",
+          "line": 83,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "不要把整个Java文件换成这个方法。Ctrl+S保存，确认上方第09段的 `requireClosable` 没有丢失。看后端终端是否仍输出日志；若是，先Ctrl+C并等命令提示符恢复。**不能运行着JAR再build覆盖它**。在已停止后端的 `app` 终端执行： 第一条完整成功才执行第二条。另一个终端保持前端运行；若已停止，在它的 `app` 目录执行 `node",
+              "approximateLine": 92
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只用ApiFailure.version(expected, actual)替换C10，Java构建失败。\n下一条给首条错误和OperationsService.java全文。请核对方法位置、括号、\n参数和分号，只给最小修复；不要把版本比较移到事务外，不删除C09或失败测试。",
+              "approximateLine": 112
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "和END之间那一行501，替换成： 完整方法应为： 不要把整个Java文件换成这个方法。Ctrl+S保存，确认上方第09段的 `requireClosable` 没有丢失。看后端终端是否仍输出日志；若是，先Ctrl+C并等命令提示符恢复。**不能运行着JAR再build覆盖它**。在已停止后端的 `app` 终端执行： 第一条完整成功才执行第二条。另一个终端保",
+              "approximateLine": 88
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "sable` 没有丢失。看后端终端是否仍输出日志；若是，先Ctrl+C并等命令提示符恢复。**不能运行着JAR再build覆盖它**。在已停止后端的 `app` 终端执行： 第一条完整成功才执行第二条。另一个终端保持前端运行；若已停止，在它的 `app` 目录执行 `node tools/course.mjs frontend`。普通构建通过只能说明本次纳入的检查通过；本",
+              "approximateLine": 92
+            }
+          }
+        },
+        {
+          "title": "第4步：登记A，创建一条已经开始处理的旧事件E1",
+          "line": 126,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "打开 `http://127.0.0.1:5178/#owners`，按第08段流程用admin登录。重启后端后需要重新登录；密码从本机教师账号资料取得，不发AI。 1. 点顶部 **“责任登记”**。在 **“设备责任台账”** 找带编号 `teaching_env_01` 的行并点击。详情显示当前责任人、版本和 **“责任",
+              "approximateLine": 127
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我先登记设备责任A，再触发E1，并由A点击开始处理。下一条给E1脱敏基线。\n请确认是否具备随后验证“责任变更不改旧事件”的前提，指出需要保留哪些字段。\n不要编造版本，不把设备owner版本与事件version混用，不改变数据。",
+              "approximateLine": 157
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "交责任变更”**。 4. 等出现 **“责任登记已确认；已有事件的分派保持不变。”**，点 **“刷新登记”**，再选该设备。应看到A、更新后的版本和包含本次理由的时间线。只重复读取，不再点提交。 5. 点 **“事件工作台”**，场景选“温度巡查”，点一次“触发本地演练”。记实际ID为E1，确认已经自动分派给A、状态“已分派”。 6. 点右上“退出 / 切换身份”，等登录表单",
+              "approximateLine": 132
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "Command+S。不要复制请求头或账号资料。读取失败先核对登录与ID；不是IN_PROGRESS先修正操作顺序。刷新或换标签后必须重新执行整个只读代码框建立变量，不能只执行 `console.log` 那一行。 可发给AI核对：",
+              "approximateLine": 144
+            }
+          }
+        },
+        {
+          "title": "第5步：仅改设备责任为B，比较E1，再创建E2",
+          "line": 163,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "ager-a并登录admin。点“责任登记”，重新选择 `teaching_env_01`，让页面读到当前责任版本。 2. “责任人”改选 **“管理人员 B（manager-b）”**；“变更理由”填 `第10段：后续新事件改由B负责，旧事件保持原分派`；点“提交责任变更”。成功后刷新登记并重新选设备，确认B和新增责任时间线。 3. **这时不要操作E1。** 在Consol",
+              "approximateLine": 164
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只提交了device-owners的责任变更，没有重新分派E1。下一条给变更前后\nE1的id/assigneeUid/state/version/timeline，以及责任变更响应。\n请先判断是否读错事件或发生额外动作，再检查OperationsService.changeOwner\n有没有修改旧事件。只给定位顺序，不把旧事件跟随owner变化说成正确行为。",
+              "approximateLine": 174
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "由B负责，旧事件保持原分派`；点“提交责任变更”。成功后刷新登记并重新选设备，确认B和新增责任时间线。 3. **这时不要操作E1。** 在Console重新执行第4步的读取代码，输入同一个E1实际ID。把结果存为“责任改B后E1”。与上一份逐项比较：`assigneeUid`仍A、`state`仍IN_PROGRESS、`version`不变、`timeline`内容不变。仅",
+              "approximateLine": 165
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "assignee`是某条事件自己保存的负责人。 若E1跟着变成B，先别继续后面的NOTE。向AI发两份脱敏快照及这段：",
+              "approximateLine": 171
+            }
+          }
+        },
+        {
+          "title": "第6步：B虽然是现任责任人，也不能给A的E1加记录",
+          "line": 181,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "用manager-b登录，点“事件工作台”，按ID打开E1。应仍显示A，B没有处理它的入口；不要选“仅分派给我”，否则会把E1筛掉。 2. 按第08段第5步打开**当前manager-b应用标签**的Console，点底部 `>` 输入行。回[第05段第5步](05-后端空间与设备接口.md)复制完整 `courseWrite` 定义并按Enter执行；输入 `typeof c",
+              "approximateLine": 184
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "当前设备责任B，但E1保存的assignee仍A且IN_PROGRESS。我先用B合法会话\n提交非空NOTE和当前事件版本，再用A做正常对照。下一条给两次实际结果。\n请分别核对身份、对象、状态、版本和前后时间线；不得因为B是当前owner\n就允许其处理旧事件，也不能把403改为空列表成功。",
+              "approximateLine": 214
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "ger-b登录，点“事件工作台”，按ID打开E1。应仍显示A，B没有处理它的入口；不要选“仅分派给我”，否则会把E1筛掉。 2. 按第08段第5步打开**当前manager-b应用标签**的Console，点底部 `>` 输入行。回[第05段第5步](05-后端空间与设备接口.md)复制完整 `courseWrite` 定义并按Enter执行；输入 `typeof course",
+              "approximateLine": 184
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "403/ACCESS_DENIED，前后详情不变。若是401、CSRF相关错误或409，先核对会话、事件状态与版本，不能算本人范围拒绝。 展开结果，把 `id/status/message/readSucceeded/unchanged` 保存到 `ch10.md` 后才切换身份。函数未定义就补定义；提示“前提不符”则用第4步只读代码核对ID、负责人和状态，不略过检查行直接执",
+              "approximateLine": 189
+            }
+          }
+        },
+        {
+          "title": "第7步：两个标签页制造旧版本，亲自看409如何保留输入",
+          "line": 221,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "真实数据库并发。 1. 退出A，登录admin，打开“责任登记”，选择 `teaching_env_01`，确认当前责任为B。右键**浏览器最上方标签标题**选“复制标签页／Duplicate”，不是网页空白处；没有该菜单时，Ctrl+L／Command+L选中地址，Ctrl+C／Command+C复制，点“＋”新建标签再粘贴并回车。两个标签都打开 `http://127.0",
+              "approximateLine": 224
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我完成了C10一行修改、A/B责任交接、E1不变/E2新分派、B拒绝/A正常NOTE、\n两个admin标签页旧版本409。下一条是我实际记录全文。请只指出缺证据或\n混淆之处，整理完整ch10.md建议。顺序旧版本测试不冒充真实并发或回滚；\n未执行项目保留未执行，不改业务代码，不自动重放第二标签的意图。",
+              "approximateLine": 237
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "3. 只在第一标签点“提交责任变更”，等成功；它应显示A和n+1。**不要刷新第二标签，不点击别的设备。** 4. 回第二标签点“提交责任变更”。应显示 **“409：责任记录已变化，原输入已保留。”** 随后显示 **“最新责任与时间线已回读，请重新判断。”**。检查第二标签原来的B选择和理由仍在，但最新责任已经是A。 5. 点 **“已核对最新责任”** 只是确认你看过最",
+              "approximateLine": 226
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "外改写，本次停在这里，不再点“提交责任变更”。 若回读失败，页面应出现“重试回读”；先恢复读取再点它，不可把未回读当冲突已经解决。若两边都成功，先核对第二页是否在提交前意外刷新过版本，再检查C10调用，不盲目增加版本。 本步不改代码。把两个版本、第一标签成功、第二标签409、输入保留与最新责任回读写入 `evidence/ch10.md`。截图只截业务区域。 最后给AI发",
+              "approximateLine": 230
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/11-调试测试与证据.md",
+      "sha256": "d3128ce84db8655ecc0303ad407e350bf6e9b4a89f2e720331a378c49e1f4b69",
+      "steps": [
+        {
+          "title": "先找到本章工作位置",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "1. 在 VS Code 打开一直使用的 `campus-ai-lab/app`，左边应有 `frontend`、`backend`、`tools`、`docs`。不是这个文件夹时，用“文件 → 打开文件夹”重新选择。 2. 点“终端 → 新建终端”。这是输入命令的地方，不是网页 AI 输入框。确认终端在 `app`，先按[第04篇第三步“让后端找到同一",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在长期工程campus-ai-lab/app准备第11章，尚未制造故意故障。\n本章prepare 11只准备docs/ch11-assertions.md；正常前提是teacher-db下\n设备台账能读到16台。下一条给本次实际命令、错误或页面现象，请等材料。\n请先区分工作目录、准备冲突、服务或会话问题，每次只给一项核对动作。\n不重建工程、不删.lesson-state.js",
+              "approximateLine": 28
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "用的 `campus-ai-lab/app`，左边应有 `frontend`、`backend`、`tools`、`docs`。不是这个文件夹时，用“文件 → 打开文件夹”重新选择。 2. 点“终端 → 新建终端”。这是输入命令的地方，不是网页 AI 输入框。确认终端在 `app`，先按[第04篇第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)设置这",
+              "approximateLine": 8
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "的设备台账应能读到16台设备。先确认这条正常路径；如果现在就是失败，先记录真实问题，请教师检查，**不要叠加下面的故意故障**。登录密码只在本机使用，不复制给 AI。 若准备命令报错，或正常台账还没恢复，可打开网页 AI 新对话，先发下面提示，再另发本次命令与脱敏错误原文；页面问题只补当前地址、页面提示及无秘密的请求路径/状态，不发请求头。预期 AI 先给一项核对动作，确认起",
+              "approximateLine": 21
+            }
+          }
+        },
+        {
+          "title": "第一步：制造一个能恢复的小故障，并留下三个观察",
+          "line": 37,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "”的定位，不改数据库，不改权限。 ### 1. 保存修改前的一小段代码 在 VS Code 左边打开 `frontend/src/api/campus.ts`。按 Windows `Ctrl+F` / macOS `Command+F`，查找 `extractFirstRead`。它把后端回信里的设备列表和观察时间拿出来。教师参考逻辑如下；如果你的写法不同，先把实际函数复制",
+              "approximateLine": 40
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只在extractFirstRead把code!==0故意改成code===0。预期HTTP200/code0却被前端拒绝，但实际现象不同。下一条是我的函数、脱敏Network观察和测试输出。请先核对是否保存到同一个app、请求是否成功、是否真的运行http.test.ts，每次只给一项检查。不要替我制造日志、删测试或改数据库；资料不足请指出缺哪一条。先等我贴实际材料。",
+              "approximateLine": 102
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "est URL` 和 `Status Code`。预期路径是 `/api/campus/devices`，状态200。 2. 点“Response / 响应”，找到最外层 `code`，预期为0；再展开 `data`，应有 `items` 和 `observedAt`。只记录字段、数量和一个模拟ID，不必复制16台设备全文。 3. 看页面。故障条件下，页面会显示“设备读取未成功",
+              "approximateLine": 58
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "信里的设备列表和观察时间拿出来。教师参考逻辑如下；如果你的写法不同，先把实际函数复制到 `evidence/ch11.md` 的“修改前”，请教师指出等价的成功/失败分支，再只改那个条件，不强行整文件覆盖。 `!==` 表示“不等于”。合同规定 `code=0` 才是业务成功，因此原句是“不是0就拒绝”。为了本次练习，**只把这个条件的 `!==` 改为 `===`**，",
+              "approximateLine": 42
+            }
+          }
+        },
+        {
+          "title": "第二步：把三个观察交给 AI，只接受能解释它们的最小修复",
+          "line": 110,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "现在打开网页通义，新建本章对话，完整发送下面这段。它只包含教学数据，没有凭据： 再回 VS Code，复制 `ch11.md` 中刚记下的路径/状态、code和页面现象，以及 `ch11-test-before.txt` 的实际失败片段，粘到网页同一对话，写一句：“以上是我的实际结果，可以开始分析。”如果与你的现象不同，就发不",
+              "approximateLine": 111
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在做智慧校园教学工程，桌面campus-ai-lab/app。学生只用网页AI，教师已提供认证、请求封装和数据库。本轮只修一个前端判断，不改数据库、登录、路由或测试预期。\n教师合同：GET /api/campus/devices返回{code:0,message:\"ok\",data:{items:[设备],observedAt:毫秒整数}}。code=0成功，非0失败；成功空",
+              "approximateLine": 114
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "ch11-test-before.txt` 的实际失败片段，粘到网页同一对话，写一句：“以上是我的实际结果，可以开始分析。”如果与你的现象不同，就发不同的真实结果。 合格的示例回答应类似： 若 AI 建议删掉 `if`，发送纠偏： 人工核对两种输入：0应进入 `return`，7应抛错。然后在 VS Code 只把 `===` 恢复成 `!==`，保存。这个修复就",
+              "approximateLine": 115
+            }
+          }
+        },
+        {
+          "title": "第三步：在同一条件下重测，不把改完当成修好",
+          "line": 146,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "1. 重跑原命令，将**这一次**输出保存为 `evidence/ch11-test-after.txt`。检查原先失败的测试已经通过，并且“200与非零业务码仍是失败”也通过。 2. 回浏览器，在 Network 保持 `devices` 筛选，刷新或点击“刷新台账”。核对这次请求仍是200/code0，页面恢复实际设备列表、观察时间和模拟标记。清除设备筛选，完整",
+              "approximateLine": 147
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我已把extractFirstRead的条件恢复为!==0，正在做修复后回归。下一条会贴当前函数、同一测试的实际结果、浏览器请求状态和普通check的首个失败。请区分代码未保存、运行目录不符、会话/服务故障或相邻测试失败，给一个能证伪原因的下一步。不要把单测通过等同浏览器通过，不删断言、不重置数据库。先等实际材料。",
+              "approximateLine": 162
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "备列表、观察时间和模拟标记。清除设备筛选，完整模式应显示实际16台；不知道数量时读响应，不能在页面写死16。 3. 在第三个终端运行普通回归。若中途关闭过它或重新打开VS Code，先回第04篇第三步重新设置当前终端的 `JAVA_HOME`，再执行： 它检查夹具、普通Java测试、前端类型及前端测试。若失败，先保留输出；若数据库测试显示 skipped，不要改成 pas",
+              "approximateLine": 148
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "ch11-test-after.txt`。检查原先失败的测试已经通过，并且“200与非零业务码仍是失败”也通过。 2. 回浏览器，在 Network 保持 `devices` 筛选，刷新或点击“刷新台账”。核对这次请求仍是200/code0，页面恢复实际设备列表、观察时间和模拟标记。清除设备筛选，完整模式应显示实际16台；不知道数量时读响应，不能在页面写死16。 3. 在第三个",
+              "approximateLine": 147
+            }
+          }
+        },
+        {
+          "title": "第四步：先预测，再逐字段读真实MySQL报告",
+          "line": 197,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "### 1. 学生先填四个预测，教师再运行 打开 `docs/ch11-assertions.md`，先填写四组预测： 在VS Code按Ctrl+P／Command+P，输入这个完整相对路径并回车。表中四行依次对应文件的C11-A、B、C、D：将自己的预测写在各自“预测”条目后，实际结果先写“未执行”。不要全选覆盖整份断言模板，其他信息稍后补。 | 场景名 | 用白",
+              "approximateLine": 202
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我只判读教师提供的MySQL报告，不运行或清理数据库。下一条给文件名、来源、\nrecordedAt和已有scenario名称。请区分未收到文件、扩展名错误、历史报告、\n场景缺失和本次执行失败；给一个核对动作。不要生成JSON报告或补造字段，\n没有本次证据就保留未执行，提醒我向教师领取原文件与控制台结果。",
+              "approximateLine": 235
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "不同日期报告，先保留旧件为带日期名称，不默默覆盖。确认结尾是 `.json`，不是 `.json.txt`；Windows可在“查看→显示→文件扩展名”中显示后缀。 3. 回VS Code按Ctrl+P／Command+P打开 `evidence/ch11-mysql-raw.json`；应看到从 `{` 开始的报告正文。把教师的脱敏控制台输出另存 `evidence/ch11",
+              "approximateLine": 224
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "几乎同时修改同一条记录；“事务回滚”是一次修改中途失败后，已做的改动一并撤销。普通函数测试不能证明数据库真的锁住了同一条记录。 ### 1. 学生先填四个预测，教师再运行 打开 `docs/ch11-assertions.md`，先填写四组预测： 在VS Code按Ctrl+P／Command+P，输入这个完整相对路径并回车。表中四行依次对应文件的C11-A、B、C、D：",
+              "approximateLine": 198
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "walkthroughs/12-构建交付与接力.md",
+      "sha256": "28cb060eb6d64d199c97870218b0f0a707025f924aa2f7879a5e29a3b83e0cd9",
+      "steps": [
+        {
+          "title": "第一步：准备本章任务，先看未完成会怎样",
+          "line": 7,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在 VS Code 打开 `app`，保留第11章的代码、报告与账号。若本组两个服务正在运行，此刻不重复启动；第三步切换分页演示库时必须停止并重启后端。另开一个终端，目录仍是 `app`，先按[第04篇第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)设置当前终端的 `JAVA_HOME`。 **先留一份变更前快照，再启",
+              "approximateLine": 8
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在同一app运行prepare 12，工具用.lesson-state.json记录已准备章节，重复运行不会挖空。下一条会贴prepare输出、当前changeCaseState和针对性测试结果。请判断是首次占位、此前已完成、目录错误还是其他章失败。只给一个核对动作，不删状态文件、不强制覆盖、不要求我制造红色测试。先等材料。",
+              "approximateLine": 50
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "章准备前快照；已验证范围见ch11.md”，保存。确认个人文档中没有秘密后，在这个 `app` 终端运行： 它只导出源码和文档，不停服务、不改数据库。把终端“已生成源码交付目录”后面的完整路径复制到 `ch12.md`，标为“A：C12变更前”，保留该目录。它的已验证范围取决于第11章记录，不叫“全部通过版”。若工具拒绝，按本章第五步处理，不能跳过秘密检查。随后才执行：",
+              "approximateLine": 10
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "打开 `app`，保留第11章的代码、报告与账号。若本组两个服务正在运行，此刻不重复启动；第三步切换分页演示库时必须停止并重启后端。另开一个终端，目录仍是 `app`，先按[第04篇第三步“让后端找到同一个JDK17”](04-安装工具与第一次改代码.md)设置当前终端的 `JAVA_HOME`。 **先留一份变更前快照，再启用C12。** 在左侧 `evidence` 上右",
+              "approximateLine": 8
+            }
+          }
+        },
+        {
+          "title": "第二步：让 AI 先推演，再给只改一小块的答案",
+          "line": 54,
+          "status": "REVIEW_REQUIRED",
+          "missing": [
+            "expectedResult"
+          ],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在网页AI新建对话，先发：“我先提供两个真实源文件，请逐条确认收到，等我发任务再分析，不改文件。”回VS Code按Ctrl+P／Command+P分别打开 `frontend/src/domain/course.ts` 与 `frontend/src/views/CasesView.vue`，点击编辑区全选复制全文，注明路径后分别发送。",
+              "approximateLine": 55
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我继续智慧校园教学工程，只有桌面campus-ai-lab/app这一份长期工程，前面章节已完成。本轮只改frontend/src/domain/course.ts的changeCaseState，不修改接口、数据库、身份或其他章节。\n事件状态固定NEW、ASSIGNED、IN_PROGRESS、CLOSED，空文字代表全部。已有函数validCaseState(value:s",
+              "approximateLine": 58
+            },
+            "expectedResult": {
+              "present": false,
+              "evidence": null,
+              "approximateLine": null
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "and+S，不把AI整页回答或反引号粘进源码。 若 AI 返回 `state` 原值、不校验，或建议把接口改为固定返回两条，发送： 重跑第一步同一条测试命令，保存实际输出为 `evidence/ch12-test-after.txt`。同时打开 `frontend/src/views/CasesView.vue`，查找 `updateState`，读这三行的关系：调用",
+              "approximateLine": 65
+            }
+          }
+        },
+        {
+          "title": "第三步：在真正的14条演示数据上检查页面",
+          "line": 93,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "远应该返回的数量。 ### 1. 先停旧后端，再切换分页演示库 `course.mjs`只在**启动后端时**读取 `.private/database.json`。教师换好了配置，不代表正在运行的服务已经换库；不能直接沿用原来的页面开始数14条。收到教师的分页演示库交接后，依次操作： 1. 在原课程页面先点“退出”，等退出完成。回原后端终端A按 `Ctrl+C`，看到输",
+              "approximateLine": 100
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在teacher-db分页演示库测试，教师预置全部14、NEW12、ASSIGNED2、IN_PROGRESS0。我已停旧后端、交接配置、重启并重新登录。下一条贴实际state/skip/limit、total/items数量和changeCaseState。请区分未切到正确库、负责范围条件、状态丢失、skip未归零四类；一次只给一个只读核对动作。不能硬编码数量、清库或触发更",
+              "approximateLine": 158
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "作页面种子数据。 教师在空白、已迁移的授权演示库确认环境设备没有责任人，创建14条温度巡查事件，再仅将其中2条分派给 `manager-a`，不开始处理；其余12条保持NEW。教师须独立回读：全部14、NEW12、ASSIGNED2、IN_PROGRESS0，记下准备日期、14个ID与库代号。学生不靠连续乱点“触发”追数量。用的是 `teacher-db` 完整模式，由教师交",
+              "approximateLine": 96
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": ". 本章只改前端，可以使用前章已经构建过的JAR。若前面还有尚未构建的Java改动，先在前端终端B也按 `Ctrl+C`，然后在 `app` 执行下列构建。新开的构建终端须先按第04篇第三步设置自己的 `JAVA_HOME`： 4. 在已停止的终端A重新启动完整后端。若A是新建的，先按第04篇第三步设置当前 `JAVA_HOME`。这一次启动才会读入新的数据库配置：",
+              "approximateLine": 106
+            }
+          }
+        },
+        {
+          "title": "第四步：完整检查一次，再让 AI 写能执行的运行说明",
+          "line": 162,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "使用已设置好 `JAVA_HOME` 的终端；若新建终端或重开VS Code，先按第04篇第三步重新设置。逐条运行，上一条失败就先处理，不把后面的成功覆盖前面的失败： `check`包含夹具、普通后端、前端类型与测试；`build`会生成 `backend/target/campus-ai-course-0.1.0.jar` 和 `frontend/dist/`。这里的",
+              "approximateLine": 163
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我在app执行最终check/build，当前只允许修复本次交付发现的问题。下一条会给命令、Node/Java版本、JAVA_HOME是否设置及脱敏首个错误。请先判断依赖下载、类型、测试还是构建失败，给一项最小检查。不能删锁文件、跳过测试、自动升级依赖或把失败写成通过。先等材料。",
+              "approximateLine": 177
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "d` 与 `docs/HANDOFF.md`，确认看到刚保存的新正文。 若 AI 只给修改摘要，追问：“请把修订合入全文，分别重新输出完整README和HANDOFF，未执行项原样保留。”用VS Code保存后重新打开核对，不只留在聊天里。 ![从文档和代码到测试记录、源码交付、接手者重新运行的流程](figures/13-交付接力.svg) 图：交付不止是压缩目",
+              "approximateLine": 181
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "` 使用已设置好 `JAVA_HOME` 的终端；若新建终端或重开VS Code，先按第04篇第三步重新设置。逐条运行，上一条失败就先处理，不把后面的成功覆盖前面的失败： `check`包含夹具、普通后端、前端类型与测试；`build`会生成 `backend/target/campus-ai-course-0.1.0.jar` 和 `frontend/dist/`。这里",
+              "approximateLine": 163
+            }
+          }
+        },
+        {
+          "title": "第五步：生成没有秘密的交付目录，再压缩",
+          "line": 284,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "mpus-ai-lab/docs` 的需求设计资料复制为 `project-docs/`。接手者再次交付时，优先保留工程根已有的 `project-docs`，不依赖原作者电脑上的外层目录。工具不自动压缩。 白名单会排除 `.private`、`.git`、`.lesson-backups`、`node_modules`、`target`、`dist`、私密 `.env`、H",
+              "approximateLine": 291
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我运行node tools/hand-in.mjs生成源码交付目录，尚未发布。下一条只贴脱敏报错和文件名，不贴配置、密码或请求头。请区分秘密扫描拒绝、缺文件或压缩层级错误；保留源码与.lesson-state.json。只给一个安全检查动作，不关闭扫描、不扩大白名单纳入.private/target/dist，不生成假清单。先等材料。",
+              "approximateLine": 312
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "n`应保留，`.private`与 `.git`不应出现。文件缺失时回原 `app` 修正并再次导出，不在ZIP内临时补文件。 回新交付目录的**上一层**，只选刚才记录的 `app-handoff-日期时间` 文件夹。Windows右键“压缩为ZIP文件”（旧版“发送到→压缩(zipped)文件夹”）；macOS右键“压缩…”。等同名 `.zip` 出现再继续。压缩的是这个",
+              "approximateLine": 301
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "连接密码；不要放整段浏览器请求头。教师历史PASS若用于判读，应明确来源并与本人结果分开，不能作为个人通过证据。 在 `app` 根目录运行： 工具会在 `app` 同级生成 `app-handoff-日期时间/`，不是覆盖你正在编辑的工程。里面的源码直接在目录根；工程内的学生 `docs`、`evidence` 和 `.lesson-state.json` 一并交付，",
+              "approximateLine": 285
+            }
+          }
+        },
+        {
+          "title": "第六步：在新目录复现，留下可回退的版本",
+          "line": 316,
+          "status": "INDICATORS_PRESENT",
+          "missing": [],
+          "checks": {
+            "operation": {
+              "present": true,
+              "evidence": "在桌面空白处右键“新建文件夹”（macOS为“新建文件夹”），命名 `campus-ai-review`；将刚生成的B候选ZIP复制进去。Windows右键ZIP选“全部解压缩→提取”，macOS双击ZIP等待完成；**不要在Windows直接浏览ZIP里的文件就启动工程**。 进入解压后的文件夹，直到同一层直接看到 `backend`、`fr",
+              "approximateLine": 317
+            },
+            "aiPrompt": {
+              "present": true,
+              "evidence": "我正在新解压目录按README复现学生作品，不在原app运行。下一条会给当前目录末两层、系统与Node/Java版本、JAVA_HOME是否在当前终端设置、实际命令、脱敏错误，以及数据库交接是否完成。请定位失败阶段，给一个最小核对步骤。不要复制旧密码、连接日常库、删除数据库或把未完成写成通过；代码回退与数据恢复必须分开。先等材料。",
+              "approximateLine": 352
+            },
+            "expectedResult": {
+              "present": true,
+              "evidence": "动工程**。 进入解压后的文件夹，直到同一层直接看到 `backend`、`frontend`、`tools` 和 `README.md`。可能需要多进一层 `app-handoff-日期时间`，不能打开外层 `campus-ai-review`。在VS Code选“文件→新建窗口”，再“文件→打开文件夹”，选择这一层。左侧顶层应是新交付目录名；原长期工程窗口保留，不混用两边",
+              "approximateLine": 319
+            },
+            "failureHandling": {
+              "present": true,
+              "evidence": "frontend` 或 `backend` 结尾。若不符，停止，重新用“打开文件夹”选择工程根；不在错误终端里试启动。 按[第04篇第三步](04-安装工具与第一次改代码.md)为这个终端设置JAVA_HOME，再逐行执行，上一条结束且无错误才做下一条： PowerShell限制 `npm.ps1` 时仅将第二条改为 `npm.cmd --prefix frontend",
+              "approximateLine": 325
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "file": "index.html",
+      "sha256": "e52205e4bf28f0a350edfce210461e92379213002229e22f8f02d99e010ca5ba",
+      "references": 11,
+      "images": 1
+    },
+    {
+      "file": "walkthroughs/index.html",
+      "sha256": "72ad2a807c3d75df3b30f81c1fea0e88609788ced4e658d0145d625c231e4d32",
+      "references": 197,
+      "images": 22
+    }
+  ],
+  "referenceChecks": [
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "walkthroughs/index.html",
+      "line": 1,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "walkthroughs/index.html#part-04",
+      "line": 1,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "walkthroughs/index.html",
+      "line": 1,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "resources/student-project/README.md",
+      "line": 1,
+      "kind": "local",
+      "target": "resources/student-project/README.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "lesson-plans/手把手主线授课衔接.html",
+      "line": 1,
+      "kind": "local",
+      "target": "lesson-plans/手把手主线授课衔接.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "lesson-plans/index.html",
+      "line": 1,
+      "kind": "local",
+      "target": "lesson-plans/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "reading/index.html",
+      "line": 1,
+      "kind": "local",
+      "target": "reading/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "resources/index.html",
+      "line": 1,
+      "kind": "local",
+      "target": "resources/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "README.md",
+      "line": 1,
+      "kind": "local",
+      "target": "README.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "16-新手全流程走查与补齐.md",
+      "line": 1,
+      "kind": "local",
+      "target": "16-新手全流程走查与补齐.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "walkthroughs/figures/13-交付接力.svg",
+      "line": 1,
+      "kind": "local",
+      "target": "walkthroughs/figures/13-交付接力.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#main",
+      "line": 3,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "main",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#top",
+      "line": 3,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "top",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../reading/index.html",
+      "line": 3,
+      "kind": "local",
+      "target": "reading/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h12",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h12",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h14",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h14",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00-h15",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00-h15",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01-h8",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01-h8",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03-h10",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03-h10",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03-h14",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03-h14",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h8",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h8",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h9",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h9",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h10",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h10",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h13",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h13",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h14",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h14",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h16",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h16",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04-h17",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04-h17",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07-h7",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07-h7",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09-h7",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09-h7",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h4",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h4",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h5",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h5",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10-h7",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10-h7",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11-h7",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11-h7",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11-h8",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11-h8",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h1",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h1",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h2",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h2",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h3",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h3",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h6",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h6",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h7",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h7",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12-h8",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12-h8",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-00",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-00",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01",
+      "line": 4,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/01-操作循环.svg",
+      "line": 16,
+      "kind": "local",
+      "target": "walkthroughs/figures/01-操作循环.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/01-操作循环.svg",
+      "line": 16,
+      "kind": "local",
+      "target": "walkthroughs/figures/01-操作循环.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/02-文件位置.svg",
+      "line": 40,
+      "kind": "local",
+      "target": "walkthroughs/figures/02-文件位置.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/02-文件位置.svg",
+      "line": 40,
+      "kind": "local",
+      "target": "walkthroughs/figures/02-文件位置.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://www.qianwen.com/",
+      "line": 44,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/03-对话到文件.svg",
+      "line": 60,
+      "kind": "local",
+      "target": "walkthroughs/figures/03-对话到文件.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/03-对话到文件.svg",
+      "line": 60,
+      "kind": "local",
+      "target": "walkthroughs/figures/03-对话到文件.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/09-保存工具实图.png",
+      "line": 72,
+      "kind": "local",
+      "target": "walkthroughs/figures/09-保存工具实图.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/09-保存工具实图.png",
+      "line": 72,
+      "kind": "local",
+      "target": "walkthroughs/figures/09-保存工具实图.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../reading/index.html",
+      "line": 242,
+      "kind": "local",
+      "target": "reading/index.html",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "00-%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8AI%E5%81%9A%E9%A1%B9%E7%9B%AE.md",
+      "line": 243,
+      "kind": "local",
+      "target": "walkthroughs/00-第一次用AI做项目.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-01",
+      "line": 243,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-01",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/04-范围取舍.svg",
+      "line": 291,
+      "kind": "local",
+      "target": "walkthroughs/figures/04-范围取舍.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/04-范围取舍.svg",
+      "line": 291,
+      "kind": "local",
+      "target": "walkthroughs/figures/04-范围取舍.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "01-%E4%BB%8E%E6%83%B3%E6%B3%95%E5%88%B0%E9%A1%B9%E7%9B%AE%E4%BB%BB%E5%8A%A1%E4%B9%A6.md",
+      "line": 376,
+      "kind": "local",
+      "target": "walkthroughs/01-从想法到项目任务书.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-02",
+      "line": 376,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-02",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/05-需求判断.svg",
+      "line": 432,
+      "kind": "local",
+      "target": "walkthroughs/figures/05-需求判断.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/05-需求判断.svg",
+      "line": 432,
+      "kind": "local",
+      "target": "walkthroughs/figures/05-需求判断.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/08-贯穿追踪.svg",
+      "line": 543,
+      "kind": "local",
+      "target": "walkthroughs/figures/08-贯穿追踪.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/08-贯穿追踪.svg",
+      "line": 543,
+      "kind": "local",
+      "target": "walkthroughs/figures/08-贯穿追踪.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "02-%E4%BB%8E%E9%A1%B9%E7%9B%AE%E4%BB%BB%E5%8A%A1%E4%B9%A6%E5%88%B0%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC.md",
+      "line": 545,
+      "kind": "local",
+      "target": "walkthroughs/02-从项目任务书到需求规格.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-03",
+      "line": 545,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-03",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/06-页面草图.svg",
+      "line": 585,
+      "kind": "local",
+      "target": "walkthroughs/figures/06-页面草图.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/06-页面草图.svg",
+      "line": 585,
+      "kind": "local",
+      "target": "walkthroughs/figures/06-页面草图.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/07-接口传话.svg",
+      "line": 777,
+      "kind": "local",
+      "target": "walkthroughs/figures/07-接口传话.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/07-接口传话.svg",
+      "line": 777,
+      "kind": "local",
+      "target": "walkthroughs/figures/07-接口传话.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 989,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/student-project/README.md",
+      "line": 990,
+      "kind": "local",
+      "target": "resources/student-project/README.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "03-%E4%BB%8E%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E5%88%B0%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md",
+      "line": 993,
+      "kind": "local",
+      "target": "walkthroughs/03-从需求规格到系统设计.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 993,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://code.visualstudio.com/download",
+      "line": 1000,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://nodejs.org/en/download/archive/v22.21.1",
+      "line": 1001,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://adoptium.net/temurin/releases/?version=17",
+      "line": 1002,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://git-scm.com/downloads/",
+      "line": 1003,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://code.visualstudio.com/download",
+      "line": 1008,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://nodejs.org/en/download/archive/v22.21.1",
+      "line": 1009,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://adoptium.net/temurin/releases/?version=17",
+      "line": 1010,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "https://git-scm.com/downloads/",
+      "line": 1011,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/10-编辑到验证.svg",
+      "line": 1078,
+      "kind": "local",
+      "target": "walkthroughs/figures/10-编辑到验证.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/10-编辑到验证.svg",
+      "line": 1078,
+      "kind": "local",
+      "target": "walkthroughs/figures/10-编辑到验证.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/11-两个终端.svg",
+      "line": 1125,
+      "kind": "local",
+      "target": "walkthroughs/figures/11-两个终端.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/11-两个终端.svg",
+      "line": 1125,
+      "kind": "local",
+      "target": "walkthroughs/figures/11-两个终端.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/campus-ai-course/evidence/first-chain-v1/desktop-ledger.png",
+      "line": 1139,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/first-chain-v1/desktop-ledger.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../resources/campus-ai-course/evidence/first-chain-v1/desktop-ledger.png",
+      "line": 1139,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/first-chain-v1/desktop-ledger.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/campus-ai-course/evidence/first-chain-v1/desktop-failure.png",
+      "line": 1155,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/first-chain-v1/desktop-failure.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../resources/campus-ai-course/evidence/first-chain-v1/desktop-failure.png",
+      "line": 1155,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/first-chain-v1/desktop-failure.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "04-%E5%AE%89%E8%A3%85%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%94%B9%E4%BB%A3%E7%A0%81.md",
+      "line": 1180,
+      "kind": "local",
+      "target": "walkthroughs/04-安装工具与第一次改代码.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05",
+      "line": 1180,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1184,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../illustrations/ch05-03-binding-readback.png",
+      "line": 1251,
+      "kind": "local",
+      "target": "illustrations/ch05-03-binding-readback.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../illustrations/ch05-03-binding-readback.png",
+      "line": 1251,
+      "kind": "local",
+      "target": "illustrations/ch05-03-binding-readback.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "05-%E5%90%8E%E7%AB%AF%E7%A9%BA%E9%97%B4%E4%B8%8E%E8%AE%BE%E5%A4%87%E6%8E%A5%E5%8F%A3.md",
+      "line": 1311,
+      "kind": "local",
+      "target": "walkthroughs/05-后端空间与设备接口.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-06",
+      "line": 1311,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-06",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1314,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "qa/round8-lab-browser/01-设备台账.png",
+      "line": 1363,
+      "kind": "local",
+      "target": "walkthroughs/qa/round8-lab-browser/01-设备台账.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "qa/round8-lab-browser/01-设备台账.png",
+      "line": 1363,
+      "kind": "local",
+      "target": "walkthroughs/qa/round8-lab-browser/01-设备台账.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "06-%E8%AE%BE%E5%A4%87%E5%8F%B0%E8%B4%A6%E4%B8%8E%E8%87%AA%E4%B8%BBUI.md",
+      "line": 1459,
+      "kind": "local",
+      "target": "walkthroughs/06-设备台账与自主UI.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-07",
+      "line": 1459,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-07",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1462,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../illustrations/ch07-02-history-gaps.svg",
+      "line": 1571,
+      "kind": "local",
+      "target": "illustrations/ch07-02-history-gaps.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../illustrations/ch07-02-history-gaps.svg",
+      "line": 1571,
+      "kind": "local",
+      "target": "illustrations/ch07-02-history-gaps.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "07-%E7%9B%91%E6%B5%8B%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F.md",
+      "line": 1599,
+      "kind": "local",
+      "target": "walkthroughs/07-监测历史与数据质量.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08",
+      "line": 1599,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1606,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../illustrations/ch08-01-role-scope.png",
+      "line": 1647,
+      "kind": "local",
+      "target": "illustrations/ch08-01-role-scope.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../illustrations/ch08-01-role-scope.png",
+      "line": 1647,
+      "kind": "local",
+      "target": "illustrations/ch08-01-role-scope.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05",
+      "line": 1663,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "08-%E7%99%BB%E5%BD%95%E6%9D%83%E9%99%90%E4%B8%8E%E5%A4%B1%E8%B4%A5%E6%8E%92%E6%9F%A5.md",
+      "line": 1690,
+      "kind": "local",
+      "target": "walkthroughs/08-登录权限与失败排查.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-09",
+      "line": 1690,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-09",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1693,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/campus-ai-course/evidence/full-browser/desktop-case-closed.png",
+      "line": 1760,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/full-browser/desktop-case-closed.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../resources/campus-ai-course/evidence/full-browser/desktop-case-closed.png",
+      "line": 1760,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/full-browser/desktop-case-closed.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-08",
+      "line": 1812,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-08",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05",
+      "line": 1812,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "09-%E6%BC%94%E7%BB%83%E4%BA%8B%E4%BB%B6%E4%B8%8E%E5%85%B3%E9%97%AD%E8%A7%84%E5%88%99.md",
+      "line": 1845,
+      "kind": "local",
+      "target": "walkthroughs/09-演练事件与关闭规则.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-10",
+      "line": 1845,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-10",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1848,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/campus-ai-course/evidence/full-browser/desktop-owners.png",
+      "line": 1893,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/full-browser/desktop-owners.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "../resources/campus-ai-course/evidence/full-browser/desktop-owners.png",
+      "line": 1893,
+      "kind": "local",
+      "target": "resources/campus-ai-course/evidence/full-browser/desktop-owners.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-05",
+      "line": 1931,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-05",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "10-%E8%AE%BE%E5%A4%87%E8%B4%A3%E4%BB%BB%E4%B8%8E%E6%97%B6%E9%97%B4%E7%BA%BF.md",
+      "line": 1970,
+      "kind": "local",
+      "target": "walkthroughs/10-设备责任与时间线.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-11",
+      "line": 1970,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-11",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 1974,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 2009,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "line": 2017,
+      "kind": "local",
+      "target": "walkthroughs/qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "line": 2017,
+      "kind": "local",
+      "target": "walkthroughs/qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/12-测试证据.svg",
+      "line": 2070,
+      "kind": "local",
+      "target": "walkthroughs/figures/12-测试证据.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/12-测试证据.svg",
+      "line": 2070,
+      "kind": "local",
+      "target": "walkthroughs/figures/12-测试证据.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../resources/campus-ai-course/backend/evidence/mysql-transaction-evidence.json",
+      "line": 2108,
+      "kind": "local",
+      "target": "resources/campus-ai-course/backend/evidence/mysql-transaction-evidence.json",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "11-%E8%B0%83%E8%AF%95%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%AF%81%E6%8D%AE.md",
+      "line": 2224,
+      "kind": "local",
+      "target": "walkthroughs/11-调试测试与证据.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-12",
+      "line": 2224,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-12",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 2226,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "http://127.0.0.1:5178/#cases?state=malformed",
+      "line": 2311,
+      "kind": "external-not-requested",
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "figures/13-交付接力.svg",
+      "line": 2415,
+      "kind": "local",
+      "target": "walkthroughs/figures/13-交付接力.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "img",
+      "attribute": "src",
+      "value": "figures/13-交付接力.svg",
+      "line": 2415,
+      "kind": "local",
+      "target": "walkthroughs/figures/13-交付接力.svg",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "#part-04",
+      "line": 2435,
+      "kind": "local",
+      "target": "walkthroughs/index.html",
+      "anchor": "part-04",
+      "status": "PASS",
+      "anchorMatches": 1
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "12-%E6%9E%84%E5%BB%BA%E4%BA%A4%E4%BB%98%E4%B8%8E%E6%8E%A5%E5%8A%9B.md",
+      "line": 2480,
+      "kind": "local",
+      "target": "walkthroughs/12-构建交付与接力.md",
+      "anchor": null,
+      "status": "PASS"
+    },
+    {
+      "from": "walkthroughs/index.html",
+      "tag": "a",
+      "attribute": "href",
+      "value": "../reading/index.html",
+      "line": 2480,
+      "kind": "local",
+      "target": "reading/index.html",
+      "anchor": null,
+      "status": "PASS"
+    }
+  ],
+  "designOutputs": {
+    "expectedCount": 11,
+    "files": [
+      {
+        "name": "01-项目想法.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "02-范围确认.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "03-项目任务书.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "04-角色与场景.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "05-验收条件.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "06-异常与优先级.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "07-需求规格.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "08-页面与流程.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "09-数据字典.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "10-接口约定.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      },
+      {
+        "name": "11-开发任务.md",
+        "inFinalChecklist": true,
+        "inRenderedSaveOptions": true
+      }
+    ]
+  },
+  "summary": {
+    "chapters": 13,
+    "steps": 77,
+    "stepsRequiringReview": 18,
+    "errors": 0,
+    "warnings": 0,
+    "localReferences": 198
+  }
+}

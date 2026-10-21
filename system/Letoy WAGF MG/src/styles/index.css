@@ -1,0 +1,140 @@
+@import './vars.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 移动端：禁止整页橡皮筋回弹，避免滚动穿透到 body */
+  overscroll-behavior: none;
+  /* iOS 横竖屏切换时不要自动调整字号 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 动态视口高度：移动端浏览器地址栏收起/展开时 100vh 会跳变，dvh 才是可见高度 */
+@supports (height: 100dvh) {
+  html, body { height: 100dvh; }
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+}
+
+/* 触控设备上移除 :hover 造成的“粘滞高亮”（点击后样式残留） */
+@media (hover: none) {
+  a:hover { opacity: 1; }
+}
+
+/* 滚动条美化 (仅指针设备；移动端隐藏滚动条但保留滚动能力) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+  }
+}
+
+@media (pointer: coarse) {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+/* 可滚动容器统一使用惯性滚动，并阻断滚动链穿透 */
+.scroll-y {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* ---------------------------------------------------------------
+   移动端表单：iOS Safari 对 font-size < 16px 的输入框会在聚焦时
+   强制缩放整个页面（且无法自动缩回）。全局兜底提升到 16px。
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: var(--font-size-input-mobile);
+  }
+}
+
+/* ---------------------------------------------------------------
+   响应式工具类
+   --------------------------------------------------------------- */
+
+/* 长内容防溢出：中英文混排的 ID / 路径 / 邮箱在窄屏容易撑破布局 */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 公共动画库 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+/* 尊重系统“减少动态效果”偏好（移动端无障碍要求） */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

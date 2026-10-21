@@ -1,0 +1,8 @@
+{
+  "id": "图 10-02",
+  "title": "责任变更影响未来事件，不改派已有事件",
+  "alt": "ADMIN 登记 A 并创建 E1，A 开始处理后为 IN_PROGRESS、事件版本 2；随后设备责任改为 B，E1 的负责人、状态、版本和历史保持该基线；新建 E2 分派给 B，事件版本为 1。",
+  "caption": "图 10-02　责任变更影响未来事件，不改派已有事件。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false
+}

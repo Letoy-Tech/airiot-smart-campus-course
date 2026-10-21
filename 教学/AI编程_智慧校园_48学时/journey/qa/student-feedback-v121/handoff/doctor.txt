@@ -1,0 +1,2 @@
+Node 22.21.1; openjdk version "17.0.12" 2024-07-16; darwin/arm64
+文件与两个端口检查通过。尚未检查教师数据库、依赖下载或Windows实机兼容性。

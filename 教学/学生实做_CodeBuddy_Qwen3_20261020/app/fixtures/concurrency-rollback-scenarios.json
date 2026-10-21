@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "kind": "SCENARIO_SPEC",
+  "executionStatus": "NOT_EXECUTED",
+  "evidenceRequired": "REAL_ISOLATED_MYSQL_INTEGRATION",
+  "commonPreconditions": [
+    "教师提供的隔离MySQL；不可在生产、共享业务库执行",
+    "通过同一已实现服务的两个独立连接/请求参与并发；不把顺序调用冒充并发",
+    "两请求都先读取同一个当前版本，阻挡同步后同时发送；不要预先构造旧版本",
+    "身份、对象、字段、状态均合法，唯一冲突变量是同一版本竞争",
+    "写前写后用独立查询保存主记录与完整时间线快照；所有时间和操作者由后端生成"
+  ],
+  "scenarios": [
+    {
+      "id": "event-two-valid-notes-same-version",
+      "operation": "event_notes",
+      "setup": {
+        "state": "IN_PROGRESS",
+        "sourceState": "ACTIVE",
+        "assigneeKey": "teaching_manager_a",
+        "currentVersion": 7
+      },
+      "actorKeys": [
+        "teaching_manager_a",
+        "teaching_manager_a"
+      ],
+      "requests": [
+        {
+          "expectedVersion": 7,
+          "note": "并发记录甲"
+        },
+        {
+          "expectedVersion": 7,
+          "note": "并发记录乙"
+        }
+      ],
+      "expected": {
+        "httpStatusesUnordered": [
+          200,
+          409
+        ],
+        "finalVersion": 8,
+        "timelineAdded": 1,
+        "exactlyOneSubmittedNotePersisted": true,
+        "loserMustReadLatestAndMustNotAutoReplay": true
+      }
+    },
+    {
+      "id": "owner-two-valid-owners-same-version",
+      "operation": "owner_update",
+      "setup": {
+        "deviceId": "teaching_env_01",
+        "currentVersion": 0,
+        "ownerKey": null,
+        "existingEvent": {
+          "logicalId": "teaching_case_prior",
+          "state": "ASSIGNED",
+          "assigneeKey": "teaching_manager_a",
+          "version": 2,
+          "creationRule": "先独立创建事件并由管理员分派给A，保存快照；此事件早于本次责任变更"
+        }
+      },
+      "actorKeys": [
+        "teaching_admin",
+        "teaching_admin"
+      ],
+      "requests": [
+        {
+          "expectedVersion": 0,
+          "ownerKey": "teaching_manager_a",
+          "note": "责任登记甲"
+        },
+        {
+          "expectedVersion": 0,
+          "ownerKey": "teaching_manager_b",
+          "note": "责任登记乙"
+        }
+      ],
+      "expected": {
+        "httpStatusesUnordered": [
+          200,
+          409
+        ],
+        "finalVersion": 1,
+        "timelineAdded": 1,
+        "finalOwnerIsExactlyOneSubmittedCandidate": true,
+        "existingEventAssigneeUnchanged": true
+      }
+    },
+    {
+      "id": "event-timeline-insert-failure",
+      "operation": "event_notes",
+      "setup": {
+        "state": "IN_PROGRESS",
+        "sourceState": "ACTIVE",
+        "assigneeKey": "teaching_manager_a",
+        "currentVersion": 7
+      },
+      "actorKey": "teaching_manager_a",
+      "request": {
+        "expectedVersion": 7,
+        "note": "应整体回滚的记录"
+      },
+      "faultInjectionPoint": "主记录已执行UPDATE后、时间线INSERT时抛出异常；异常必须使事务回滚",
+      "expected": {
+        "responseIsSafeFailure": true,
+        "exactHttpStatus": "NOT_FROZEN",
+        "masterSnapshotUnchanged": true,
+        "timelineSnapshotUnchanged": true
+      }
+    },
+    {
+      "id": "owner-timeline-insert-failure",
+      "operation": "owner_update",
+      "setup": {
+        "deviceId": "teaching_env_01",
+        "currentVersion": 0,
+        "ownerKey": null,
+        "existingEvent": {
+          "logicalId": "teaching_case_prior",
+          "state": "ASSIGNED",
+          "assigneeKey": "teaching_manager_a",
+          "version": 2,
+          "creationRule": "先独立创建事件并由管理员分派给A，保存快照；此事件早于本次责任变更"
+        }
+      },
+      "actorKey": "teaching_admin",
+      "request": {
+        "expectedVersion": 0,
+        "ownerKey": "teaching_manager_a",
+        "note": "应整体回滚的责任登记"
+      },
+      "faultInjectionPoint": "责任主记录已执行UPDATE后、责任时间线INSERT时抛出异常；异常必须使事务回滚",
+      "expected": {
+        "responseIsSafeFailure": true,
+        "exactHttpStatus": "NOT_FROZEN",
+        "masterSnapshotUnchanged": true,
+        "timelineSnapshotUnchanged": true,
+        "existingEventAssigneeUnchanged": true
+      }
+    }
+  ],
+  "pendingImplementation": [
+    "逻辑actorKey/ownerKey映射真实教学uid；ownerKey不是API字段，API使用ownerUid",
+    "事件创建/推进、并发屏障、故障注入仅在隔离测试实现",
+    "未冻结失败响应正文结构及多错误优先级",
+    "本JSON不执行SQL、不创建账户，不证明锁、事务或回滚有效"
+  ]
+}

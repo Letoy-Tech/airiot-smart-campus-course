@@ -1,0 +1,27 @@
+// Author-side behavioral check of the browser-only lessons. No services or student files are modified.
+import assert from 'node:assert/strict';
+import {webcrypto} from 'node:crypto';
+const memory=new Map();globalThis.localStorage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,String(v))};
+if(!globalThis.crypto)globalThis.crypto=webcrypto;
+const {dataService:d}=await import('../../resources/from-zero-v2/teacher-reference/frontend/data-service.js');
+let n=0;const pass=()=>n++;
+const overview=await d.getOverview();assert.equal(overview.devices.length,16);assert.equal(overview.points.length,28);pass();
+assert.equal(overview.devices.find(x=>x.id==='d03').online,null);assert.equal(overview.points.find(x=>x.deviceId==='d05'&&x.tagId==='power').value,0);pass();
+await assert.rejects(d.saveSpace('s1',{building:' ',floor:'1'}));pass();
+await d.saveSpace('s1',{building:'演示教学楼',floor:'2'});assert.equal((await d.getOverview()).spaces[0].building,'演示教学楼');pass();
+await d.saveOwner('d01',{username:'manager',note:'课程演示责任',expectedVersion:0});pass();
+await assert.rejects(d.saveOwner('d01',{username:'manager',note:'过期写入',expectedVersion:0}),e=>e.status===409);pass();
+assert.equal((await d.createCase({deviceId:'d01',message:'自动分派'})).state,'ASSIGNED');pass();
+let c=await d.createCase({deviceId:'d02',message:'手动分派演练'});assert.equal(c.state,'NEW');pass();
+await assert.rejects(d.caseAction(c.id,{action:'assign',username:'manager',note:' ',expectedVersion:c.version}));pass();
+c=await d.caseAction(c.id,{action:'assign',username:'manager',note:'安排检查',expectedVersion:c.version});d.setDemoRole('MANAGER');
+c=await d.caseAction(c.id,{action:'start',expectedVersion:c.version});pass();
+await assert.rejects(d.caseAction(c.id,{action:'close',note:'不得跳步',expectedVersion:c.version}));pass();
+c=await d.caseAction(c.id,{action:'note',note:'完成现场模拟检查',expectedVersion:c.version});pass();
+await assert.rejects(d.caseAction(c.id,{action:'recover',expectedVersion:c.version}),e=>e.status===403);pass();
+d.setDemoRole('ADMIN');c=await d.caseAction(c.id,{action:'recover',expectedVersion:c.version});d.setDemoRole('MANAGER');c=await d.caseAction(c.id,{action:'verify',expectedVersion:c.version});pass();
+c=await d.caseAction(c.id,{action:'close',note:'确认演练结束',expectedVersion:c.version});assert.equal(c.state,'CLOSED');assert.equal(c.version,7);pass();
+await assert.rejects(d.caseAction(c.id,{action:'note',note:'不可改',expectedVersion:c.version}));pass();
+d.setDemoRole('VIEWER');await assert.rejects(d.createCase({deviceId:'d03',message:'不可建'}),e=>e.status===403);pass();
+assert.ok(memory.has('campus-v2-demo'));assert.equal((await d.getCases()).find(x=>x.id===c.id).state,'CLOSED');pass();
+console.log(JSON.stringify({passed:n,scope:'browser mock data and behavior; in-memory localStorage only'}));

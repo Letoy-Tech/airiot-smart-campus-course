@@ -1,0 +1,7 @@
+$ node tools/progress.mjs begin 09
+已准备骨架：第09站。
+  frontend/src/journey/features.ts
+  frontend/src/views/CloseChecklist.vue
+  frontend/src/tests/closure-wiring.test.ts
+备份：journey-backups/2026-10-19T22-17-55-457Z-stage-09-begin-ca962c
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

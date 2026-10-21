@@ -1,0 +1,659 @@
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend[39m
+
+ [32m✓[39m src/tests/course-domain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/tests/read-api.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/tests/read-models.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m src/tests/http.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/tests/journey-navigation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/tests/session-races.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/tests/first-device-view.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/tests/request-timeout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/tests/journey-start.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/tests/request-scope.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/tests/comparison.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/tests/catalog-navigation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [31m❯[39m src/tests/case-trigger-race.test.ts [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 47[2mms[22m[39m
+[31m     [31m×[31m 旧事件详情迟到 success 不覆盖或清除新事件，也不留下旧错误[39m[32m 31[2mms[22m[39m
+[31m     [31m×[31m 旧事件详情迟到 forbidden 不覆盖或清除新事件，也不留下旧错误[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m 旧事件详情迟到 network-error 不覆盖或清除新事件，也不留下旧错误[39m[32m 4[2mms[22m[39m
+[31m     [31m×[31m 新事件不继承上一个事件尚未提交的分派人[39m[32m 5[2mms[22m[39m
+ [31m❯[39m src/tests/read-pages.test.ts [2m([22m[2m3 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 44[2mms[22m[39m
+[31m     [31m×[31m 分页失败保留带原页码快照，成功空结果不伪装失败[39m[32m 32[2mms[22m[39m
+     [32m✓[39m 请求结束后30秒才再读，pending不重叠，离页停止[32m 9[2mms[22m[39m
+[31m     [31m×[31m 审计仅Boolean管理员能力可读取，权限变更清除数据[39m[32m 3[2mms[22m[39m
+ [31m❯[39m src/tests/workflow-views.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m7 failed[39m[2m)[22m[32m 64[2mms[22m[39m
+[31m     [31m×[31m 任意有效负责人筛选与本页状态按钮都从第一页查询[39m[32m 33[2mms[22m[39m
+[31m     [31m×[31m 事件列表403清除已选详情、输入和写入口，重新登录前不重发[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m 责任列表403清除缓存详情、负责人和理由，不重发变更[39m[32m 5[2mms[22m[39m
+[31m     [31m×[31m NOTE 收到409后回读新版本、保留输入，确认前不允许重放[39m[32m 7[2mms[22m[39m
+[31m     [31m×[31m 责任变更409保留人选和理由，回读失败不能解除冲突[39m[32m 3[2mms[22m[39m
+[31m     [31m×[31m 从URL恢复合法state但忽略旧skip，状态改变后查询skip=0[39m[32m 5[2mms[22m[39m
+[31m     [31m×[31m 只读身份不显示业务写入口[39m[32m 5[2mms[22m[39m
+ [31m❯[39m src/tests/monitoring-views.test.ts [2m([22m[2m4 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 57[2mms[22m[39m
+[31m     [31m×[31m 概览空间与类型统计有真实筛选链接；能源四空间区分0与未知并切单位[39m[32m 34[2mms[22m[39m
+[31m     [31m×[31m 台账读hash联合筛选，可切卡片，点位链接带稳定deviceId/tagId[39m[32m 9[2mms[22m[39m
+[31m     [31m×[31m 历史恢复直达点位，未知ID明确错误而不查询第一台[39m[32m 10[2mms[22m[39m
+[31m     [31m×[31m 台账两类读取均完成后15秒轮询，离页停止[39m[32m 4[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 17 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/tests/case-trigger-race.test.ts[2m > [22m新建演练接管详情请求[2m > [22m旧事件详情迟到 success 不覆盖或清除新事件，也不留下旧错误
+[41m[1m FAIL [22m[49m src/tests/case-trigger-race.test.ts[2m > [22m新建演练接管详情请求[2m > [22m旧事件详情迟到 forbidden 不覆盖或清除新事件，也不留下旧错误
+[41m[1m FAIL [22m[49m src/tests/case-trigger-race.test.ts[2m > [22m新建演练接管详情请求[2m > [22m旧事件详情迟到 network-error 不覆盖或清除新事件，也不留下旧错误
+[31m[1mError[22m: Unable to get [data-testid="case-old-A"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">教学模拟 · 演练开关已开启 · 触发能力允许</span>
+    </div>
+    <!--v-if-->
+    <div data-v-d7ee0030="" class="scenario-grid">
+      <article data-v-d7ee0030="" class="scenario-card">
+        <h3 data-v-d7ee0030="">巡查</h3>
+        <p data-v-d7ee0030="" class="tiny muted">模拟</p><code data-v-d7ee0030="">patrol · new-B</code><button data-v-d7ee0030="" type="button" class="button primary">触发「巡查」</button>
+      </article>
+    </div>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">patrol</strong><span data-v-d7ee0030="" class="state-badge warning">待分派</span></span><span data-v-d7ee0030="">old-A</span><small data-v-d7ee0030=""> 处理人：未分派 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 1 · old-A</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/case-trigger-race.test.ts:[2m53:21[22m[39m
+    [90m 51|[39m       [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m 52|[39m       [35mawait[39m [34mflushPromises[39m()
+    [90m 53|[39m       [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-old-A"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                     [31m^[39m
+    [90m 54|[39m       [35mconst[39m oldSignal [33m=[39m vi[33m.[39m[34mmocked[39m(api[33m.[39mgetCase)[33m.[39mmock[33m.[39mcalls[[34m0[39m][33m?.[39m[[34m1[39m]
+    [90m 55|[39m       await wrapper.get('[data-testid="trigger-demo"]').trigger('click…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/case-trigger-race.test.ts[2m > [22m新建演练接管详情请求[2m > [22m新事件不继承上一个事件尚未提交的分派人
+[31m[1mError[22m: Unable to get [data-testid="case-old-A"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">教学模拟 · 演练开关已开启 · 触发能力允许</span>
+    </div>
+    <!--v-if-->
+    <div data-v-d7ee0030="" class="scenario-grid">
+      <article data-v-d7ee0030="" class="scenario-card">
+        <h3 data-v-d7ee0030="">巡查</h3>
+        <p data-v-d7ee0030="" class="tiny muted">模拟</p><code data-v-d7ee0030="">patrol · new-B</code><button data-v-d7ee0030="" type="button" class="button primary">触发「巡查」</button>
+      </article>
+    </div>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">patrol</strong><span data-v-d7ee0030="" class="state-badge warning">待分派</span></span><span data-v-d7ee0030="">old-A</span><small data-v-d7ee0030=""> 处理人：未分派 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 1 · old-A</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/case-trigger-race.test.ts:[2m78:19[22m[39m
+    [90m 76|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m 77|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m 78|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-old-A"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m 79|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m 80|[39m     const select = wrapper.get<HTMLSelectElement>('[data-testid="case-…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/monitoring-views.test.ts[2m > [22m监测、台账和点位历史连续导航[2m > [22m概览空间与类型统计有真实筛选链接；能源四空间区分0与未知并切单位
+[31m[1mAssertionError[22m: expected [] to have a length of 4 but got +0[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 4[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m src/tests/monitoring-views.test.ts:[2m35:77[22m[39m
+    [90m 33|[39m     expect(overviewView.find('a[href="#devices?spaceId=s1"]').exists()…
+    [90m 34|[39m     expect(overviewView.find('a[href="#devices?category=energy"]').exi…
+    [90m 35|[39m     expect(overviewView.findAll('[data-testid="quality-matrix"] tbody …
+    [90m   |[39m                                                                             [31m^[39m
+    [90m 36|[39m     overviewView[33m.[39m[34munmount[39m()
+    [90m 37|[39m     const energy = mount(EnergyView, { global: { stubs: { CompareHisto…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/monitoring-views.test.ts[2m > [22m监测、台账和点位历史连续导航[2m > [22m台账读hash联合筛选，可切卡片，点位链接带稳定deviceId/tagId
+[31m[1mAssertionError[22m: expected [] to have a length of 1 but got +0[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 1[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m src/tests/monitoring-views.test.ts:[2m48:60[22m[39m
+    [90m 46|[39m     history.replaceState(null, '', '#devices?spaceId=s1&category=energ…
+    [90m 47|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mDeviceCatalog[39m)[33m;[39m [35mawait[39m [34mflushPromises[39m()
+    [90m 48|[39m     expect(wrapper.findAll('tr[data-testid^="device-d"]')).toHaveLengt…
+    [90m   |[39m                                                            [31m^[39m
+    [90m 49|[39m     expect(wrapper.get('[data-testid="device-detail"]').text()).toCont…
+    [90m 50|[39m     expect(wrapper.get('[data-testid="device-detail"]').find('a[href="…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/monitoring-views.test.ts[2m > [22m监测、台账和点位历史连续导航[2m > [22m历史恢复直达点位，未知ID明确错误而不查询第一台
+[31m[1mAssertionError[22m: expected '第06站 · 历史样本按原采样时间看变化 读取固定教学时钟窗口内的原始样本…' to contain '链接中的设备或采样点不存在'[39m
+
+Expected: [32m"链接中的设备或采样点不存在"[39m
+Received: [31m"第06站 · 历史样本按原采样时间看变化 读取固定教学时钟窗口内的原始样本；横轴用样本 time，null 处断线，0 仍是有效零值，两者都不插值。 开始读取TEACHING_MOCK教学模拟数据 · simulated=true远端控制与外部通知关闭固定教学采样时刻：1970/01/01 09:06:40质量标签采用服务端结果；刷新只重新读取样本，不代表设备实时运行。 首次进入立即读取一次，此后每次完成后等 30 秒再读；同一查询不重叠，离页或会话变化即停止。 查询窗口以固定教学采样时刻为终点，不使用浏览器当前时间。 设备请选择设备能源1 · d1能源2 · d2采样点请选择采样点窗口15 分钟1 小时6 小时教学读取情境正常样本成功空结果读取失败查询历史设备 missing 不在本次设备目录，未发起查询。设备目录中无此设备missing采样点目录中无此点位power单位：由响应提供查询窗口60 分钟 · 固定教学时钟1970/01/01 08:06:40 至 1970/01/01 09:06:40"[39m
+
+[36m [2m❯[22m src/tests/monitoring-views.test.ts:[2m62:28[22m[39m
+    [90m 60|[39m     history.replaceState(null, '', '#history?deviceId=missing&tagId=po…
+    [90m 61|[39m     [35mconst[39m missing [33m=[39m [34mmount[39m([33mHistoryView[39m)[33m;[39m [35mawait[39m [34mflushPromises[39m()
+    [90m 62|[39m     [34mexpect[39m(missing[33m.[39m[34mtext[39m())[33m.[39m[34mtoContain[39m([32m'链接中的设备或采样点不存在'[39m)
+    [90m   |[39m                            [31m^[39m
+    [90m 63|[39m     [34mexpect[39m(api[33m.[39mgetHistory)[33m.[39mnot[33m.[39m[34mtoHaveBeenCalled[39m()
+    [90m 64|[39m     missing[33m.[39m[34munmount[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/monitoring-views.test.ts[2m > [22m监测、台账和点位历史连续导航[2m > [22m台账两类读取均完成后15秒轮询，离页停止
+[31m[1mAssertionError[22m: expected "vi.fn()" to be called 1 times, but got 0 times[39m
+[36m [2m❯[22m src/tests/monitoring-views.test.ts:[2m71:71[22m[39m
+    [90m 69|[39m     vi.mocked(api.getOverview).mockImplementationOnce(() => new Promis…
+    [90m 70|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mDeviceCatalog[39m)
+    [90m 71|[39m     await vi.advanceTimersByTimeAsync(45000); expect(api.getOverview).…
+    [90m   |[39m                                                                       [31m^[39m
+    [90m 72|[39m     resolve(overview); await flushPromises(); await vi.advanceTimersBy…
+    [90m 73|[39m     [34mexpect[39m(api[33m.[39mgetOverview)[33m.[39m[34mtoHaveBeenCalledTimes[39m([34m2[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/read-pages.test.ts[2m > [22m只读报警与命令审计[2m > [22m分页失败保留带原页码快照，成功空结果不伪装失败
+[31m[1mAssertionError[22m: expected '第06站 · 原始报警保留上游原文，只读分页 原始报警与本地演练事件分开；…' to contain '当前快照第 1 页'[39m
+
+Expected: [32m"当前快照第 1 页"[39m
+Received: [31m"第06站 · 原始报警保留上游原文，只读分页 原始报警与本地演练事件分开；status/level 按原文展示，不映射、不改写，也不改变上游状态。 重新读取TEACHING_MOCK教学模拟数据 · simulated=true远端控制与外部通知关闭固定教学采样时刻：1970/01/01 08:00:00质量标签采用服务端结果；刷新只重新读取样本，不代表设备实时运行。 首次进入立即读取一次，此后每次完成后等 30 秒再读；请求未完成不叠加，离页或会话变化即停止。 本次更新失败，以下仍是上次成功快照读取失败只读来源记录 读取报警不会创建或关闭本地演练事件，也不改变上游状态。本页没有确认、恢复或控制按钮； status、level、occurredAt、recoveredAt 保留服务端原文与空值，不替换成本地演练状态。 每页2 条5 条10 条20 条教学读取情境正常样本成功空结果读取失败 limit 取 2/5/10/20，skip 由分页计算；切换每页条数或情境都从第 1 页重新读取。  成功查询：1970/01/01 08:00:00 · 固定教学采样时刻：1970/01/01 08:00:00 · 当前快照第 1 / 2 页 · 共 6 条 · 本页 1 条 · limit=5 · skip=0 本次读取失败；以下仍是上次成功快照（第 1 页，共 6 条），不是新的空结果。 原始报警记录按服务端 occurredAt DESC、id DESC 返回；本页不排序、不合并、不改写状态。 记录来自 GET /api/campus/alarms；status 与 level 是上游原文，未知值也原样显示。 报警记录设备与点位状态 / 等级（原文）发生 / 恢复模拟报警raw-1TEACHING_MOCK · simulated=true教学设备d点位 power · 表 t 查看点位历史 ACTIVENOTICE原文保留，不映射本地状态发生：1970/01/01 08:00:00恢复：未知（null） 第 1 / 2 页 · 共 6 条 · 本页 1 条  上一页  下一页  只读：没有确认、恢复、关闭或控制上游报警的按钮；读取失败保留上次成功快照，空结果不显示为错误。"[39m
+
+[36m [2m❯[22m src/tests/read-pages.test.ts:[2m27:28[22m[39m
+    [90m 25|[39m     await wrapper.findAll('.pagination button')[1]!.trigger('click'); …
+    [90m 26|[39m     expect(api.getAlarmPage).toHaveBeenLastCalledWith(5, 5, 'normal', …
+    [90m 27|[39m     expect(wrapper.text()).toContain('当前快照第 1 页'); expect(wrapper.text…
+    [90m   |[39m                            [31m^[39m
+    [90m 28|[39m     [34mexpect[39m(wrapper[33m.[39m[34mtext[39m())[33m.[39m[34mtoContain[39m([32m'模拟报警'[39m)
+    [90m 29|[39m     vi.mocked(api.getAlarmPage).mockResolvedValue({ ...data, items: []…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/read-pages.test.ts[2m > [22m只读报警与命令审计[2m > [22m审计仅Boolean管理员能力可读取，权限变更清除数据
+[31m[1mAssertionError[22m: expected '第10站 · 责任、审计与接入命令审计只读：保留来源与样例标识 审计记录来…' to contain '只有管理员'[39m
+
+Expected: [32m"只有管理员"[39m
+Received: [31m"第10站 · 责任、审计与接入命令审计只读：保留来源与样例标识 审计记录来自教学历史样例（HISTORICAL_TEACHING_SAMPLE），source=TEACHING_MOCK、simulated=true， 不是真实下发过的命令；outcome、reason、before/requested/confirmed 与 error 原样展示，不改写、不映射。 开始读取TEACHING_MOCK教学模拟数据 · simulated=true远端控制与外部通知关闭固定教学采样时刻：未知质量标签采用服务端结果；刷新只重新读取样本，不代表设备实时运行。 仅 ADMIN 可读；首次进入立即读取一次，此后每次完成后等 30 秒再读，请求未完成不叠加，离页或会话变化即停止。 当前身份不能读取命令审计接口按 ADMIN 判定并会再次核对当前有效身份；本页不发起请求，也不展示任何审计内容。只读记录，没有下发入口 本页没有命令下发、设备控制、远端操作或外部通知按钮；远端控制与外部通知保持关闭， 也不把教学样例说成真实 AIRIOT 成功。 每页5 条10 条20 条50 条教学读取情境正常样本成功空结果读取失败 limit 取 5/10/20/50，skip 由分页计算；切换每页条数或情境都从第 1 页重新读取。 情境只影响教学样例，不代表真实设备命令。"[39m
+
+[36m [2m❯[22m src/tests/read-pages.test.ts:[2m48:77[22m[39m
+    [90m 46|[39m     const store = useCampusStore(); store.capabilities!.canAdmin = 'tr…
+    [90m 47|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mAuditView[39m)[33m;[39m [35mawait[39m [34mflushPromises[39m()
+    [90m 48|[39m     expect(api.getAuditPage).not.toHaveBeenCalled(); expect(wrapper.te…
+    [90m   |[39m                                                                             [31m^[39m
+    [90m 49|[39m     wrapper[33m.[39m[34munmount[39m()
+    [90m 50|[39m     store[33m.[39mcapabilities[33m![39m[33m.[39mcanAdmin [33m=[39m [35mtrue[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m任意有效负责人筛选与本页状态按钮都从第一页查询
+[31m[1mError[22m: Unable to get [data-testid="case-handler-filter"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">本地演练 · 演练开关已开启 · 触发能力允许</span>
+    </div>
+    <!--v-if-->
+    <p data-v-d7ee0030="" class="tiny muted">服务端未返回可用场景。</p>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">temperature-patrol</strong><span data-v-d7ee0030="" class="state-badge good">处理中</span></span><span data-v-d7ee0030="">教学设备</span><small data-v-d7ee0030=""> 处理人：甲 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 3 · case-a</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m93:19[22m[39m
+    [90m 91|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m 92|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m 93|[39m     await wrapper.get('[data-testid="case-handler-filter"]').setValue(…
+    [90m   |[39m                   [31m^[39m
+    [90m 94|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m 95|[39m     expect(api.getCases).toHaveBeenLastCalledWith('limit=10&skip=0&ass…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m事件列表403清除已选详情、输入和写入口，重新登录前不重发
+[31m[1mError[22m: Unable to get [data-testid="case-case-a"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">本地演练 · 演练开关已开启 · 触发能力允许</span>
+    </div>
+    <!--v-if-->
+    <p data-v-d7ee0030="" class="tiny muted">服务端未返回可用场景。</p>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">temperature-patrol</strong><span data-v-d7ee0030="" class="state-badge good">处理中</span></span><span data-v-d7ee0030="">教学设备</span><small data-v-d7ee0030=""> 处理人：甲 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 3 · case-a</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m106:19[22m[39m
+    [90m104|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m105|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m106|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-case-a"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m107|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m108|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-note"]'[39m)[33m.[39m[34msetValue[39m([32m'权限撤销前的草稿'[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m责任列表403清除缓存详情、负责人和理由，不重发变更
+[31m[1mError[22m: Unable to get [data-testid="owner-d"] within: <section data-v-6eac1288="" class="workspace full-page" data-testid="owners-view">
+  <header data-v-6eac1288="" class="page-heading">
+    <div data-v-6eac1288="">
+      <p data-v-6eac1288="" class="eyebrow">第10站 · 责任、审计与接入</p>
+      <h1 data-v-6eac1288="">换负责人，不改旧事件</h1>
+      <p data-v-6eac1288="" class="muted"> 责任记录有自己的 version，与事件版本互相独立。改责任人不批量改写已存在的事件处理人； 新事件在创建时才读取当时的责任人。保存必须带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-6eac1288="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-6eac1288="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-6eac1288="" class="panel">
+    <div data-v-6eac1288="" class="section-heading">
+      <h2 data-v-6eac1288="">责任归属规则</h2><span data-v-6eac1288="">责任版本与事件版本分开计数</span>
+    </div>
+    <ul data-v-6eac1288="" class="owner-rules">
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">旧事件不追改</strong>：A→B 之后，A 名下已存在的事件仍记 A，A 仍可按原权限办理，不会自动改派给 B。</li>
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">新事件跟当时责任人</strong>：只在创建事件时读取当前责任人；B 无有效处理资格时保持待分派，不回头找 A。</li>
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">同时修改</strong>：两人带同一 expectedVersion 提交，后者得到 409；须回读最新 version 后人工重判，不覆盖前一次成功结果。</li>
+    </ul>
+  </section>
+  <div data-v-6eac1288="" class="case-layout">
+    <section data-v-6eac1288="" class="panel">
+      <div data-v-6eac1288="" class="section-heading">
+        <h2 data-v-6eac1288="">设备责任清单</h2><span data-v-6eac1288="">共 1 台 · 显示 1 台</span>
+      </div>
+      <div data-v-6eac1288="" class="query-bar compact"><label data-v-6eac1288="" for="owner-keyword"><span data-v-6eac1288="">按设备名称或 ID 过滤</span><input data-v-6eac1288="" id="owner-keyword" type="search" placeholder="例如 device 或 空调"></label></div>
+      <p data-v-6eac1288="" class="tiny muted"> 清单由 GET /api/campus/device-owners 读取，按 deviceId 排序；责任人不含名称时只显示 uid。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-6eac1288="" class="case-list"><button data-v-6eac1288="" type="button" class="case-row"><span data-v-6eac1288="" class="case-row-head"><strong data-v-6eac1288="">d</strong><span data-v-6eac1288="" class="state-badge">甲</span></span><span data-v-6eac1288=""> 责任人：甲  · <code data-v-6eac1288="">a</code></span><small data-v-6eac1288="">责任 version 2 · 更新 1970/01/01 08:00:00</small><code data-v-6eac1288="">d</code></button></div>
+    </section>
+    <div data-v-6eac1288="">
+      <div data-v-6eac1288="" class="notice" role="status"><strong data-v-6eac1288="">尚未选择设备</strong>
+        <p data-v-6eac1288="">在左侧清单点一台设备，读取当前责任人与责任时间线；清单和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m125:19[22m[39m
+    [90m123|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mOwnersView[39m)
+    [90m124|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m125|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="owner-d"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m126|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m127|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="owner-note"]'[39m)[33m.[39m[34msetValue[39m([32m'待提交理由'[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22mNOTE 收到409后回读新版本、保留输入，确认前不允许重放
+[31m[1mError[22m: Unable to get [data-testid="case-case-a"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">本地演练 · 演练开关已开启 · 触发能力允许</span>
+    </div>
+    <!--v-if-->
+    <p data-v-d7ee0030="" class="tiny muted">服务端未返回可用场景。</p>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">temperature-patrol</strong><span data-v-d7ee0030="" class="state-badge good">处理中</span></span><span data-v-d7ee0030="">教学设备</span><small data-v-d7ee0030=""> 处理人：甲 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 3 · case-a</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m144:19[22m[39m
+    [90m142|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m143|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m144|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-case-a"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m145|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m146|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-note"]'[39m)[33m.[39m[34msetValue[39m([32m'保留我的检查记录'[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m责任变更409保留人选和理由，回读失败不能解除冲突
+[31m[1mError[22m: Unable to get [data-testid="owner-d"] within: <section data-v-6eac1288="" class="workspace full-page" data-testid="owners-view">
+  <header data-v-6eac1288="" class="page-heading">
+    <div data-v-6eac1288="">
+      <p data-v-6eac1288="" class="eyebrow">第10站 · 责任、审计与接入</p>
+      <h1 data-v-6eac1288="">换负责人，不改旧事件</h1>
+      <p data-v-6eac1288="" class="muted"> 责任记录有自己的 version，与事件版本互相独立。改责任人不批量改写已存在的事件处理人； 新事件在创建时才读取当时的责任人。保存必须带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-6eac1288="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-6eac1288="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-6eac1288="" class="panel">
+    <div data-v-6eac1288="" class="section-heading">
+      <h2 data-v-6eac1288="">责任归属规则</h2><span data-v-6eac1288="">责任版本与事件版本分开计数</span>
+    </div>
+    <ul data-v-6eac1288="" class="owner-rules">
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">旧事件不追改</strong>：A→B 之后，A 名下已存在的事件仍记 A，A 仍可按原权限办理，不会自动改派给 B。</li>
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">新事件跟当时责任人</strong>：只在创建事件时读取当前责任人；B 无有效处理资格时保持待分派，不回头找 A。</li>
+      <li data-v-6eac1288=""><strong data-v-6eac1288="">同时修改</strong>：两人带同一 expectedVersion 提交，后者得到 409；须回读最新 version 后人工重判，不覆盖前一次成功结果。</li>
+    </ul>
+  </section>
+  <div data-v-6eac1288="" class="case-layout">
+    <section data-v-6eac1288="" class="panel">
+      <div data-v-6eac1288="" class="section-heading">
+        <h2 data-v-6eac1288="">设备责任清单</h2><span data-v-6eac1288="">共 1 台 · 显示 1 台</span>
+      </div>
+      <div data-v-6eac1288="" class="query-bar compact"><label data-v-6eac1288="" for="owner-keyword"><span data-v-6eac1288="">按设备名称或 ID 过滤</span><input data-v-6eac1288="" id="owner-keyword" type="search" placeholder="例如 device 或 空调"></label></div>
+      <p data-v-6eac1288="" class="tiny muted"> 清单由 GET /api/campus/device-owners 读取，按 deviceId 排序；责任人不含名称时只显示 uid。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-6eac1288="" class="case-list"><button data-v-6eac1288="" type="button" class="case-row"><span data-v-6eac1288="" class="case-row-head"><strong data-v-6eac1288="">d</strong><span data-v-6eac1288="" class="state-badge">甲</span></span><span data-v-6eac1288=""> 责任人：甲  · <code data-v-6eac1288="">a</code></span><small data-v-6eac1288="">责任 version 2 · 更新 1970/01/01 08:00:00</small><code data-v-6eac1288="">d</code></button></div>
+    </section>
+    <div data-v-6eac1288="">
+      <div data-v-6eac1288="" class="notice" role="status"><strong data-v-6eac1288="">尚未选择设备</strong>
+        <p data-v-6eac1288="">在左侧清单点一台设备，读取当前责任人与责任时间线；清单和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m174:19[22m[39m
+    [90m172|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mOwnersView[39m)
+    [90m173|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m174|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="owner-d"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m175|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m176|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="owner-assignee"]'[39m)[33m.[39m[34msetValue[39m([32m'b'[39m)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m从URL恢复合法state但忽略旧skip，状态改变后查询skip=0
+[31m[1mAssertionError[22m: expected last "vi.fn()" call to have been called with [ Array(2) ][39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,7 +1,7 @@[39m
+[2m  [[22m
+[32m-   "limit=10&skip=0&state=CLOSED",[39m
+[31m+   "limit=10&skip=0",[39m
+[2m    AbortSignal {[22m
+[2m      Symbol(kEvents): Map {},[22m
+[2m      Symbol(events.maxEventTargetListeners): 0,[22m
+[2m      Symbol(events.maxEventTargetListenersWarned): false,[22m
+[2m      Symbol(kHandlers): Map {},[22m
+
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m200:26[22m[39m
+    [90m198|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m199|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m200|[39m     expect(api.getCases).toHaveBeenLastCalledWith('limit=10&skip=0&sta…
+    [90m   |[39m                          [31m^[39m
+    [90m201|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-state"]'[39m)[33m.[39m[34msetValue[39m([32m'NEW'[39m)
+    [90m202|[39m     [35mawait[39m [34mflushPromises[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/17]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/tests/workflow-views.test.ts[2m > [22m事件和责任的冲突交互[2m > [22m只读身份不显示业务写入口
+[31m[1mError[22m: Unable to get [data-testid="case-case-a"] within: <section data-v-d7ee0030="" class="workspace full-page" data-testid="cases-view">
+  <header data-v-d7ee0030="" class="page-heading">
+    <div data-v-d7ee0030="">
+      <p data-v-d7ee0030="" class="eyebrow">第08站 · 事件接收与处理</p>
+      <h1 data-v-d7ee0030="">让一件事有人接手</h1>
+      <p data-v-d7ee0030="" class="muted"> 本地演练事件（DEMO / LOCAL_DEMO / simulated=true）不是 AIRIOT 实时报警，也不改动原始报警。 业务状态按 NEW → ASSIGNED → IN_PROGRESS 记录；每次写请求都带 expectedVersion，409 只回读并保留输入，不自动重放。 </p>
+    </div><button data-v-d7ee0030="" type="button" class="button subtle">重新读取</button>
+  </header>
+  <aside data-v-d7ee0030="" class="source-banner">
+    <div><span class="source-pill"><span></span>TEACHING_MOCK</span><strong>教学模拟数据 · simulated=true</strong><span>远端控制与外部通知关闭</span></div>
+    <p><span class="clock-label">业务记录使用服务端操作时间</span>仅本地 DEMO 事件；与 AIRIOT 原始报警分开。</p>
+  </aside>
+  <!--v-if-->
+  <section data-v-d7ee0030="" class="panel">
+    <div data-v-d7ee0030="" class="section-heading">
+      <h2 data-v-d7ee0030="">本地模拟场景</h2><span data-v-d7ee0030="">本地演练 · 演练开关已开启 · 触发能力不据此授权</span>
+    </div>
+    <!--v-if-->
+    <p data-v-d7ee0030="" class="tiny muted">服务端未返回可用场景。</p>
+    <!--v-if-->
+  </section>
+  <div data-v-d7ee0030="" class="case-layout">
+    <section data-v-d7ee0030="" class="panel">
+      <div data-v-d7ee0030="" class="section-heading">
+        <h2 data-v-d7ee0030="">事件列表</h2><span data-v-d7ee0030="">共 1 条</span>
+      </div>
+      <div data-v-d7ee0030="" class="query-bar compact"><label data-v-d7ee0030="" for="case-state"><span data-v-d7ee0030="">业务状态</span><select data-v-d7ee0030="" id="case-state">
+            <option data-v-d7ee0030="" value="">全部状态</option>
+            <option data-v-d7ee0030="" value="NEW">待分派（NEW） </option>
+            <option data-v-d7ee0030="" value="ASSIGNED">已分派（ASSIGNED） </option>
+            <option data-v-d7ee0030="" value="IN_PROGRESS">处理中（IN_PROGRESS） </option>
+            <option data-v-d7ee0030="" value="CLOSED">已关闭（CLOSED） </option>
+          </select></label><button data-v-d7ee0030="" type="button" class="button subtle" aria-pressed="false">只看分派给我：关</button></div>
+      <p data-v-d7ee0030="" class="tiny muted"> 分派筛选使用 assigneeUid=（未启用）；每次切换状态都回到第 1 页。 读取时间 1970/01/01 08:00:00。</p>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-v-d7ee0030="" class="case-list"><button data-v-d7ee0030="" type="button" class="case-row"><span data-v-d7ee0030="" class="case-row-head"><strong data-v-d7ee0030="">temperature-patrol</strong><span data-v-d7ee0030="" class="state-badge good">处理中</span></span><span data-v-d7ee0030="">教学设备</span><small data-v-d7ee0030=""> 处理人：甲 · 发生：1970/01/01 08:00:00</small><code data-v-d7ee0030="">version 3 · case-a</code></button></div>
+      <div data-v-d7ee0030="" class="pagination"><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 上一页 </button><span data-v-d7ee0030="">第 1 / 1 页 · 每页 10 条</span><button data-v-d7ee0030="" type="button" class="button subtle" disabled=""> 下一页 </button></div>
+    </section>
+    <div data-v-d7ee0030="">
+      <div data-v-d7ee0030="" class="notice" role="status"><strong data-v-d7ee0030="">尚未选择事件</strong>
+        <p data-v-d7ee0030="">在列表点一条事件读取详情与时间线；列表和详情是两次独立读取。</p>
+      </div>
+      <!--v-if-->
+      <p data-v-d7ee0030="" class="tiny muted">选择一条事件后显示恢复、核实与关闭检查。</p>
+    </div>
+  </div>
+</section>[39m
+[90m [2m❯[22m VueWrapper.BaseWrapper.get node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js:[2m7279:15[22m[39m
+[36m [2m❯[22m src/tests/workflow-views.test.ts:[2m221:19[22m[39m
+    [90m219|[39m     [35mconst[39m wrapper [33m=[39m [34mmount[39m([33mCasesView[39m)
+    [90m220|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m221|[39m     [35mawait[39m wrapper[33m.[39m[35mget[39m([32m'[data-testid="case-case-a"]'[39m)[33m.[39m[34mtrigger[39m([32m'click'[39m)
+    [90m   |[39m                   [31m^[39m
+    [90m222|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m223|[39m     for (const key of ['trigger-demo', 'assign-case', 'note-case', 'cl…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/17]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m12 passed[39m[22m[90m (16)[39m
+[2m      Tests [22m [1m[31m17 failed[39m[22m[2m | [22m[1m[32m57 passed[39m[22m[90m (74)[39m
+[2m   Start at [22m 02:39:23
+[2m   Duration [22m 1.13s[2m (transform 1.97s, setup 0ms, import 3.93s, tests 408ms, environment 6.33s)[22m
+
+前端检查失败：npm run test:unit -- --run。保留输出，修好后重跑 verify。

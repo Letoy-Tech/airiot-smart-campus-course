@@ -1,0 +1,15 @@
+{
+  "state": "activated privately",
+  "release": "REL_20261005-0143-SCHOOL-DEMO",
+  "publicProxyActivated": false,
+  "health": true,
+  "service": "campus-demo.service",
+  "pid": "351495",
+  "bootstrapRequiredBeforePublish": true,
+  "backup": "/srv/campus-demo/backups/REL_20261005-0143-SCHOOL-DEMO",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

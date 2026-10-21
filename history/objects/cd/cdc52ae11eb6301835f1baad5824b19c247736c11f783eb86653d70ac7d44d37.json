@@ -1,0 +1,18 @@
+{
+  "C05": {
+    "path": "backend/src/main/java/edu/campus/course/LocationService.java",
+    "sha256": "b36963ba408bc2a2c19adf7b5321f205172a50d5e61758ea76781d5d0085f532"
+  },
+  "C09": {
+    "path": "backend/src/main/java/edu/campus/course/OperationsService.java",
+    "sha256": "fc4b5603cef5010067a6e022d90c2b345c8078d0499e7bfee01de90f5d131ca9"
+  },
+  "C10": {
+    "path": "backend/src/main/java/edu/campus/course/OperationsService.java",
+    "sha256": "f17be96fb6daad3771f8761bb97ca290558ce4bdbc16e3b0347aecbe1e061979"
+  },
+  "C07": {
+    "path": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+    "sha256": "67a6904864339b1fdcf74a6b3ef8fa7b6b9732fa8b0ce9703dad7c80e297ee40"
+  }
+}

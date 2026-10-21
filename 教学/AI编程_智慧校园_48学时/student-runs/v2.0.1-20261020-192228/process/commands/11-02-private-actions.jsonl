@@ -1,0 +1,4 @@
+{"at": "2026-10-21T03:19:54.200584", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:19:54.338653", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:20:27.695646", "action": "private-password-fill", "username": "manager", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T03:20:27.838684", "action": "login-submit", "username": "manager", "exit": 0, "valuesLogged": false}

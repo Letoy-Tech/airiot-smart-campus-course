@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "stage": 12,
+  "title": "交付与接力",
+  "mode": "本地或教师批准隔离环境",
+  "goal": "交接源码、记录和运行说明",
+  "contract": "不携带.private/node_modules/target/dist；无公网毕业门槛",
+  "acceptance": "另一人独立目录复现；对齐功能清单；未验证项如实保留",
+  "businessFiles": [],
+  "scaffoldingFiles": [
+    "frontend/src/journey/features.ts",
+    "tools/hand-in.mjs",
+    "docs/交付核对.md"
+  ],
+  "contextFiles": [
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09",
+      "bytes": 131,
+      "role": "assembly"
+    },
+    {
+      "path": "tools/hand-in.mjs",
+      "sha256": "082464e138f229afeb67405b72e94495f19a37127d3f77eeca034a86304f3789",
+      "bytes": 3442,
+      "role": "foundation"
+    },
+    {
+      "path": "docs/交付核对.md",
+      "sha256": "7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688",
+      "bytes": 317,
+      "role": "foundation"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

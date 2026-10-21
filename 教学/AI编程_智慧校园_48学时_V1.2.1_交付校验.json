@@ -1,0 +1,426 @@
+{
+  "status": "PASS",
+  "version": "1.2.1",
+  "full": {
+    "archive": "AI编程_智慧校园_48学时_V1.2.1_完整教学包.zip",
+    "bytes": 276057652,
+    "sha256": "ecfad9e2c85824730f5b37a1733ae1894eda1fc4e72008fae0815c4b4f6fe2c4",
+    "files": 3206,
+    "allExtractedHashesMatch": true,
+    "staticEntryChecks": {
+      "status": "PASS_STATIC",
+      "entries": [
+        "先打开这里.html",
+        "index.html",
+        "journey/index.html",
+        "walkthroughs/index.html",
+        "reading/index.html",
+        "lesson-plans/手把手主线授课衔接.html",
+        "lesson-plans/index.html",
+        "resources/index.html"
+      ],
+      "localReferences": 1079,
+      "externalReferencesNotRequested": [
+        {
+          "from": "journey/index.html",
+          "reference": "https://www.codebuddy.cn/downloads/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "http://127.0.0.1:5178",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Overview",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Rules",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "https://www.codebuddy.cn/docs/ide/User-guide/Agent-Mode/Results",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "https://www.codebuddy.cn/docs/ide/Features/models",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "journey/index.html",
+          "reference": "https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://www.qianwen.com/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://code.visualstudio.com/download",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://adoptium.net/temurin/releases/?version=17",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://git-scm.com/downloads/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://code.visualstudio.com/download",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://nodejs.org/en/download/archive/v22.21.1",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://adoptium.net/temurin/releases/?version=17",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "https://git-scm.com/downloads/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "walkthroughs/index.html",
+          "reference": "http://127.0.0.1:5178/#cases?state=malformed",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://github.com/QwenLM/Qwen3",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "http://127.0.0.1:5178/#first-read；根页现在是设备台账。失败保留快照由教师框架提供，学生观察并解释。课前完成工具安装、首次依赖下载和每台学生机的资源预检，课内才有余量完成1＋2＋1。达到任务卡的最小证据就停，不重复执行全套构建或制作额外页面。",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://git-scm.com/docs/git-add",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://git-scm.com/docs/git-revert",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://docs.npmjs.com/cli/v11/commands/npm-ci/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "http://127.0.0.1:5178/#first-read。端口被占用时先确认占用者，脚本不自动杀进程；结束时在对应终端Ctrl+C。修改后端后应重新build再启动，不能用旧JAR证明新源码。学生版未补TODO时可以构建，但对应任务测试失败和页面待完成提示属于预期。",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://vite.dev/config/server-options.html#server-proxy",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/responsebody.html",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://cn.vuejs.org/guide/components/props.html",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://cn.vuejs.org/guide/essentials/watchers.html",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://github.com/QwenLM/Qwen3",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://github.com/QwenLM/Qwen3-Coder",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://qwenlm.github.io/qwen-code-docs/zh/users/quickstart/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://www.qianwen.com/",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "reading/index.html",
+          "reference": "https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "resources/index.html",
+          "reference": "https://dev.mysql.com/doc/connector-j/en/connector-j-reference-using-ssl.html",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "from": "resources/index.html",
+          "reference": "https://dev.mysql.com/doc/refman/8.4/en/grant.html",
+          "status": "NOT_REQUESTED"
+        }
+      ],
+      "historicalReferencesNotPackaged": [
+        {
+          "from": "reading/index.html",
+          "reference": "../../../system/docs/api-contract.md",
+          "status": "HISTORICAL_REFERENCE_NOT_PACKAGED"
+        }
+      ],
+      "browserUsed": false,
+      "networkUsed": false,
+      "javascriptExecuted": false
+    }
+  },
+  "starter": {
+    "archive": "AI编程_CodeBuddy学生起点_V1.2.1.zip",
+    "bytes": 437854,
+    "sha256": "9b4d00c510b66d12c880acea342cc195ef7b19090e19c2b1a1cb778afac5bb0b",
+    "files": 223,
+    "allExtractedHashesMatch": true,
+    "freshExtractionBootstrap": [
+      {
+        "label": "npm-ci",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/npm-ci.txt",
+        "logSHA256": "34c503134ff4a296370c866004e58c3229180fa466380d6fce03c89a6132f826"
+      },
+      {
+        "label": "stage-01-verify",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/stage-01-verify.txt",
+        "logSHA256": "9136742aa5f938ac7ce7f21faa7020b7e8c830cca1d46182b9ca8fbba364deae"
+      },
+      {
+        "label": "begin-02",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/begin-02.txt",
+        "logSHA256": "199ce0f5e7697170f5ef184f66b957d8aa85383d509c28973e39d78d5266509c"
+      },
+      {
+        "label": "doctor-env",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/doctor-env.txt",
+        "logSHA256": "c1c7f8ea94bfd6be2896ef460bdefb9431119f219caf23fc83b644fb7652a2f4"
+      },
+      {
+        "label": "init",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/init.txt",
+        "logSHA256": "36d14218ce4510bd656360b529e0306b287d14726f0760bbee85926573e1090e"
+      },
+      {
+        "label": "build-backend-unfinished-front",
+        "exitCode": 0,
+        "log": ".runtime/package-v1.2.1-17af029b287f4135869c65b5d42e7a92/starter-bootstrap/build-backend-unfinished-front.txt",
+        "logSHA256": "ef0181f394a3bfcb07e5df2aa92b83483072faecb4692372fa86f7ee44ddf471"
+      }
+    ]
+  },
+  "documentChecks": {
+    "status": "PASS",
+    "at": "2026-10-19T22:37:21.705982+00:00",
+    "files": 3205,
+    "links": 1209,
+    "broken": [],
+    "excludedLinkedFiles": [],
+    "originalProjectReferenceLinks": [
+      [
+        "chapters/05-后端空间与设备接口.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+      ],
+      [
+        "chapters/05-后端空间与设备接口.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusLocationService.java"
+      ],
+      [
+        "chapters/06-前端设备台账与自主UI.md",
+        "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+      ],
+      [
+        "chapters/06-前端设备台账与自主UI.md",
+        "../../../system/Letoy WAGF MG/src/types/campus.ts"
+      ],
+      [
+        "chapters/07-实时监测历史与数据质量.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+      ],
+      [
+        "chapters/07-实时监测历史与数据质量.md",
+        "../../../system/Letoy WAGF MG/src/composables/useResource.ts"
+      ],
+      [
+        "chapters/08-登录角色与权限验证.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+      ],
+      [
+        "chapters/08-登录角色与权限验证.md",
+        "../../../system/Letoy WAGF MG/src/store/campus.ts"
+      ],
+      [
+        "contracts/教学接口约定.md",
+        "../../../system/docs/api-contract.md"
+      ],
+      [
+        "appendices/AIRIOT进阶选做.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotClient.java"
+      ],
+      [
+        "appendices/AIRIOT进阶选做.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotProperties.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/README.md"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/docs/api-contract.md"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../智能软件工程教材大纲_通用版.docx"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/types/campus.ts"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/api/campus.ts"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusDtos.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusAlarmDtos.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/store/campus.ts"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAlarmService.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V9__smart_campus_business.sql"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V10__campus_demo_operations.sql"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/views/campus/CaseDetail.vue"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/service/CampusAlarmTests.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/controller/CampusAlarmHttpTests.java"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/__tests__/campus.spec.ts"
+      ],
+      [
+        "appendices/现有平台与原大纲映射.md",
+        "../../../system/Letoy WAGF MG/src/__tests__/campus-navigation.spec.ts"
+      ]
+    ],
+    "credentialLeakPaths": [],
+    "privatePathsExcluded": true
+  },
+  "currentGateReports": {
+    "course-index.json": "245ce446e4d8999b31e3295b739078ccbf50b4dc306b5062d1f77c55600cf148",
+    "resources/project-journey/BUILD-MANIFEST.json": "65fd71caed55554e7632beb4c0685a469db03497524e31ca3c36104063c6821e",
+    "journey/build.json": "1854161e38b9e7aa1c1ae844ca17751d9127058ad52dd2f4a7cd28c97faa6e9c",
+    "reading/index.build.json": "c101927568968919e6dd3d7dba76e5e0ec4c529ab845fb62a9fd1d0e500a33a1",
+    "walkthroughs/build.json": "bfa2b361ce6536b232c6dfbf972631eeb3dd82a5918f2a42e9594e8cd25f20e2",
+    "journey/qa/student-feedback-v121/verification.json": "2d6d08b26d55322be4e072d2419e18a77a4191771f408e5bac146755bd5358f8",
+    "journey/qa/student-feedback-v121/build/author-verification.json": "5715d7457a0d80a5164bc10c6178d8f48a15690983823fa5dae4f357b764c243",
+    "journey/qa/student-feedback-v121/build/executed-source-manifest.json": "d67dc2cdddd7ef6b3a0de39395db1ecbc2fd574efdccee162e3aefa4ddca8336",
+    "journey/qa/student-feedback-v121/build/documentation-rebind-final.json": "7f532b6afc3e94db1bb465ae664c0b9d1862ab71c9a81f552c265805485ddb96",
+    "journey/qa/student-feedback-v121/static-final/static-review.json": "f4dd87e74e39e1ab5b4d8e2bee9bc52b54a76b13990819f43201700c071e9f63"
+  },
+  "privatePathsExcluded": true,
+  "knownCredentialScan": "PASS",
+  "credentialScanScope": "本课程历史及本轮两个隔离目录的已知密码；不是通用秘密识别器",
+  "historicalArchivesUnchanged": {
+    "AI编程_智慧校园_48学时_V1.1.1_完整教学包.zip": "b90d375ad91198fe9b88dde61023d21a0c5991088082627fcd11ef4d3b2b3282",
+    "AI编程_智慧校园_48学时_V1.0.2_完整教学包.zip": "1083e348cca3085b802f04c76971635883af65c58324e323d82244039206c1d5",
+    "AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip": "625042673d2f3da39ab2b889e17a22495e25cee870725e37de176dbd5429ee87",
+    "AI编程_智慧校园_48学时_V1.2.0_完整教学包.zip": "1b1b9d5c77a501521cbf4b495369dc00f7fe6c72a28a5e03b44f889ace7ed720"
+  },
+  "originalWordPdfAndLegacySourcesPreserved": true,
+  "browserUsedByPackager": false,
+  "limitations": {
+    "offlineHtmlBrowserRetestedThisRound": false,
+    "offlineHtmlStaticOnly": true,
+    "windowsPhysicalMachine": false,
+    "anotherHumanHandoff": false,
+    "classroomTrial": false,
+    "schoolDatabase": false,
+    "realAiriot": false,
+    "realQwenSessionThisRevision": false,
+    "realCodeBuddyStudentSessionThisRevision": false,
+    "realModelThisRevision": "NOT_RUN",
+    "historicalStudentRunPreserved": true,
+    "sameOperatorAuthorHandoff": true
+  }
+}

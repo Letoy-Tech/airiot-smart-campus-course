@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T18:46:28.705211+00:00",
+  "python": "3.12.14",
+  "platform": "darwin",
+  "dependencies": {
+    "python-docx": "1.2.0",
+    "Pillow": "12.3.0",
+    "lxml": "6.1.3",
+    "typing_extensions": "4.16.0"
+  },
+  "isolatedVenvInstallAndImports": "PASS",
+  "manifestSha256": "4b5444586d084b8dc3663dd7a73bc27d0f8739ce54151f53f0441b9231c23fe3",
+  "scope": "Fresh macOS Python3.12 virtualenv install/import check only; final DOCX/PDF built and rendered with bundled document runtime. Windows physical install not executed."
+}

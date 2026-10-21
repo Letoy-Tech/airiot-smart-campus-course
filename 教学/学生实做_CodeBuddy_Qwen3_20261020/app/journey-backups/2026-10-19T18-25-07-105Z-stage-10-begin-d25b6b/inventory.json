@@ -1,0 +1,24 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "0f153cebb92c95e6da59a6dcdbaaa3d588b65c116983ba410c99df8e4aaffa10"
+  },
+  {
+    "path": "frontend/src/views/OwnersView.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/AuditView.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/views/IntegrationView.vue",
+    "existed": false
+  }
+]

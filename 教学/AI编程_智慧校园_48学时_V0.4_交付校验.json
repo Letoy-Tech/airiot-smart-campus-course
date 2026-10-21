@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "generatedAt": "2026-10-18T15:28:30.725186+00:00",
+  "archives": [
+    {
+      "file": "AI编程_智慧校园_48学时_V0.4_图文与起步资源.zip",
+      "files": 492,
+      "bytes": 112318511,
+      "sha256": "5fed671bc57f43b798ee51492183b107444d9bdede976489d9e951710ef59589",
+      "crcAndHashes": "PASS"
+    },
+    {
+      "file": "AI编程_第04章学生起点_V0.4.zip",
+      "files": 65,
+      "bytes": 168999,
+      "sha256": "243d58992e1b3b6c1d8a43eea141f4de6ae21c810a63530403c428ce4bc68092",
+      "crcAndHashes": "PASS"
+    }
+  ]
+}

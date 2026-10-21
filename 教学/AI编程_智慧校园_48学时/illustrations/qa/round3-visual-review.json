@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T15:28:30.696292+00:00",
+  "scope": "实际打开查看上述运行和资源截图；文字/标签/响应式可读，非实机Windows",
+  "images": [
+    {
+      "file": "resources/campus-ai-course/evidence/browser/desktop-ledger.png",
+      "sha256": "e1f2606999224f33327f7fa3fb17b4d91609385f0c431833c6a7466adcfc1a59"
+    },
+    {
+      "file": "resources/campus-ai-course/evidence/browser/mobile-ledger.png",
+      "sha256": "55947ffe95e02f938940b600db1e5b98def73337da2b3c0d9088e3dd452a304f"
+    },
+    {
+      "file": "illustrations/qa/round3-resources/entry-1440.png",
+      "sha256": "063df29ea86d2498990746f15a6b9902987cf883f0495d088d6412f7b1a5b257"
+    },
+    {
+      "file": "illustrations/qa/round3-resources/catalog-390.png",
+      "sha256": "bbc833960344ca8e46b0bc8bb8ed2206f167506803431d2fca81977218f787c6"
+    },
+    {
+      "file": "illustrations/qa/round3-resources/task-1440.png",
+      "sha256": "2f2fbaa122c475b59ea98fa7d934456b4dc93a506d2190999c2cb84e5bc2b375"
+    }
+  ],
+  "figure04_02": "已查看保留/api版本并缩短底部标签，来源为教学图而非运行截图"
+}

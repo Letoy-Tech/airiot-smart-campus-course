@@ -1,0 +1,17 @@
+{
+  "state": "MG staged and verified",
+  "release": "REL_20261005-0338-MG-UI",
+  "rollbackRelease": "/srv/campus-demo/releases/REL_20261005-0338-MG-UI-rollback",
+  "originalCurrent": "/srv/campus-demo/releases/REL_20261005-0151-SCHOOL-DEMO",
+  "backendUploaded": false,
+  "backendHardlinked": true,
+  "backendPid": 360464,
+  "backendSha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a",
+  "retainedHashAssets": 123,
+  "indexSha256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

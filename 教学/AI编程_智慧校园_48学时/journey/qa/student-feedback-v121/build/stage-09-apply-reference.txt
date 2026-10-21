@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 09
+已导入完整参考：第09站。
+  frontend/src/views/CloseChecklist.vue
+备份：journey-backups/2026-10-19T22-17-55-483Z-stage-09-apply-993f54
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

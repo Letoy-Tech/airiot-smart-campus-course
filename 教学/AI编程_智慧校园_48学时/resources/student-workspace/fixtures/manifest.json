@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "kind": "FIXTURE_MANIFEST",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "clock": {
+    "epochMs": 1792303200000,
+    "isoUtc": "2026-10-18T06:00:00.000Z",
+    "origin": "人工固定教学时钟，不代表墙钟或真实采样"
+  },
+  "catalogCounts": {
+    "spaces": 4,
+    "devices": 16,
+    "uniquePoints": 28
+  },
+  "firstChain": {
+    "spaceIds": [
+      "teaching_space_01"
+    ],
+    "deviceIds": [
+      "teaching_env_01",
+      "teaching_energy_01"
+    ],
+    "uniquePoints": 4
+  },
+  "tagMappings": [
+    {
+      "category": "environment",
+      "teachingTagId": "temperature",
+      "referenceTagId": "temperature_c",
+      "unit": "°C"
+    },
+    {
+      "category": "environment",
+      "teachingTagId": "humidity",
+      "referenceTagId": "humidity_pct",
+      "unit": "%"
+    },
+    {
+      "category": "energy",
+      "teachingTagId": "voltage",
+      "referenceTagId": "voltage_v",
+      "unit": "V"
+    },
+    {
+      "category": "energy",
+      "teachingTagId": "power",
+      "referenceTagId": "power_kw",
+      "unit": "kW"
+    },
+    {
+      "category": "facility",
+      "teachingTagId": "run_state",
+      "referenceTagId": "run_state",
+      "unit": ""
+    },
+    {
+      "category": "facility",
+      "teachingTagId": "equipment_temperature",
+      "referenceTagId": "equipment_temperature_c",
+      "unit": "°C"
+    },
+    {
+      "category": "lighting",
+      "teachingTagId": "illuminance",
+      "referenceTagId": "illuminance_lux",
+      "unit": "lux"
+    }
+  ],
+  "referenceBasis": [
+    "contracts/教学接口约定.md",
+    "system/docs/api-contract.md",
+    "system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusCatalog.java"
+  ],
+  "referencesAreNotImportedData": true,
+  "labVerified": false,
+  "databaseVerified": false,
+  "pendingProviderDecisions": [
+    "非法历史输入报告结构及过滤规则",
+    "多错误优先级",
+    "历史端点包含和排序语义",
+    "实现配置与真实测试身份uid映射"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6491,
+      "sha256": "c3353390991f5718b1d86ef86149504112f2704944421cab98246ba7c7baa8d2"
+    },
+    {
+      "path": "schema.md",
+      "bytes": 3367,
+      "sha256": "0ae5ebe78a1d155d59c14c212a18e5aad6b86cb15a1221933bfcfa98d9e52575"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 15957,
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32"
+    },
+    {
+      "path": "selectors.json",
+      "bytes": 1007,
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db"
+    },
+    {
+      "path": "quality-cases.json",
+      "bytes": 3417,
+      "sha256": "ce4637f969949b8ac61474492e756997ac6202987e186c2f2e8d7d92bc36df26"
+    },
+    {
+      "path": "history-cases.json",
+      "bytes": 585,
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e"
+    },
+    {
+      "path": "permission-scenarios.json",
+      "bytes": 3338,
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4"
+    },
+    {
+      "path": "pagination-scenarios.json",
+      "bytes": 2213,
+      "sha256": "0f9c99e338c76d0542e5da978b4ca9bd7e0c543f63e5b79d46ef42e6646bf7bf"
+    },
+    {
+      "path": "concurrency-rollback-scenarios.json",
+      "bytes": 4840,
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787"
+    }
+  ]
+}

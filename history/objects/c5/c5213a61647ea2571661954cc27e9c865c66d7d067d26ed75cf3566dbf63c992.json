@@ -1,0 +1,788 @@
+{
+  "version": 2,
+  "at": "2026-10-18T16:32:38.975Z",
+  "status": "PASS_STARTER_VALIDATION",
+  "scope": "九个学生起点结构、编译及指定任务断言失败；不代表学生完成，不运行共享lab/E2E",
+  "environment": {
+    "node": "v22.21.1",
+    "platform": "darwin/arm64",
+    "npm": "10.9.4",
+    "java": "17.0.12"
+  },
+  "dependencyStrategy": "隔离临时副本链接冻结node_modules，交付目录无依赖链接及编译输出",
+  "priorRun": {
+    "at": "2026-10-18T16:31:49.903Z",
+    "status": "FAIL",
+    "sha256": "19cb1549f831ebbdd0c7794e660a64aadcae75ebe66d437653b6f1ad251cbe3c"
+  },
+  "chapters": [
+    {
+      "chapter": "04",
+      "studentTaskCompleted": false,
+      "markers": [
+        "A",
+        "B"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 32,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3224,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1708,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 780,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 15,
+        "passed": 9,
+        "failed": 6,
+        "skipped": 0,
+        "failedNames": [
+          "页面事实与三态 online=true 明确显示 在线",
+          "页面事实与三态 online=false 明确显示 离线",
+          "页面事实与三态 online=null 明确显示 未知",
+          "页面事实与三态 非法字符串不能冒充 Boolean 或合法未知",
+          "统一请求边界 200 与非零业务码仍是失败",
+          "统一请求边界 成功空数组仍保留后端观察时间"
+        ],
+        "failedTests": [
+          {
+            "name": "页面事实与三态 online=true 明确显示 在线",
+            "messageExcerpt": "AssertionError: expected '待完成 TODO-B' to be '在线' // Object.is equality"
+          },
+          {
+            "name": "页面事实与三态 online=false 明确显示 离线",
+            "messageExcerpt": "AssertionError: expected '待完成 TODO-B' to be '离线' // Object.is equality"
+          },
+          {
+            "name": "页面事实与三态 online=null 明确显示 未知",
+            "messageExcerpt": "AssertionError: expected '待完成 TODO-B' to be '未知' // Object.is equality"
+          },
+          {
+            "name": "页面事实与三态 非法字符串不能冒充 Boolean 或合法未知",
+            "messageExcerpt": "AssertionError: expected [Function] to throw an error"
+          },
+          {
+            "name": "统一请求边界 200 与非零业务码仍是失败",
+            "messageExcerpt": "Error: expected ApiError: TODO-A：先核对业务code，再返回items与obser… { …(2) } to match object { code: 7 } (2 matching properties omitted from actual)"
+          },
+          {
+            "name": "统一请求边界 成功空数组仍保留后端观察时间",
+            "messageExcerpt": "Error: promise rejected \"ApiError: TODO-A：先核对业务code，再返回items与obser… { …(2) }\" instead of resolving"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "05",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C05"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 32,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3224,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1723,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 848,
+          "accepted": true
+        },
+        {
+          "name": "backend TeacherDbTest#spaceBindingRejectsMissingReferences [isolated TEST DB]",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 3737,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0,
+        "skipped": 0,
+        "failedNames": [],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "backendTests": {
+        "usesDatabase": true,
+        "target": "TeacherDbTest#spaceBindingRejectsMissingReferences",
+        "suites": [
+          {
+            "name": "edu.campus.course.TeacherDbTest",
+            "tests": 1,
+            "failures": 1,
+            "errors": 0,
+            "skipped": 0
+          }
+        ],
+        "failedTests": [
+          {
+            "name": "spaceBindingRejectsMissingReferences",
+            "className": "edu.campus.course.TeacherDbTest",
+            "type": "java.lang.AssertionError",
+            "messageExcerpt": "Response status expected:<404> but was:<501>",
+            "reason": "空间绑定应拒绝未知空间为404；未完成的C05返回501。"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "06",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C06"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 31,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3199,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1671,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 660,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 5,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 4,
+        "failedNames": [
+          "章节业务小块 C06 同时按关键词、空间、类型和三态筛选且不修改原数组"
+        ],
+        "failedTests": [
+          {
+            "name": "章节业务小块 C06 同时按关键词、空间、类型和三态筛选且不修改原数组",
+            "messageExcerpt": "AssertionError: expected [] to deeply equal [ 'B' ]"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "07",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C07"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 33,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3207,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1644,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 832,
+          "accepted": true
+        },
+        {
+          "name": "backend QualityPolicyTest#qualityBoundariesAndMalformedTypes",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 1677,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0,
+        "skipped": 0,
+        "failedNames": [],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "backendTests": {
+        "usesDatabase": false,
+        "target": "QualityPolicyTest#qualityBoundariesAndMalformedTypes",
+        "suites": [
+          {
+            "name": "edu.campus.course.QualityPolicyTest",
+            "tests": 1,
+            "failures": 1,
+            "errors": 0,
+            "skipped": 0
+          }
+        ],
+        "failedTests": [
+          {
+            "name": "qualityBoundariesAndMalformedTypes",
+            "className": "edu.campus.course.QualityPolicyTest",
+            "type": "org.opentest4j.AssertionFailedError",
+            "messageExcerpt": "[valid-number] expected: \"fresh\" but was: \"missing\"",
+            "reason": "有效点值应判为fresh；未完成的C07固定返回missing。"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "08",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C08"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 41,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3246,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1638,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 620,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 5,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 4,
+        "failedNames": [
+          "章节业务小块 C08 仅 Boolean true 授权，字符串数字缺失均不授予能力"
+        ],
+        "failedTests": [
+          {
+            "name": "章节业务小块 C08 仅 Boolean true 授权，字符串数字缺失均不授予能力",
+            "messageExcerpt": "AssertionError: expected false to be true // Object.is equality"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "09",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C09"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 34,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3227,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1720,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 873,
+          "accepted": true
+        },
+        {
+          "name": "backend CloseRulesTest#eachMissingCloseConditionIsIndependentlyRejected",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 1676,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0,
+        "skipped": 0,
+        "failedNames": [],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "backendTests": {
+        "usesDatabase": false,
+        "target": "CloseRulesTest#eachMissingCloseConditionIsIndependentlyRejected",
+        "suites": [
+          {
+            "name": "edu.campus.course.CloseRulesTest",
+            "tests": 1,
+            "failures": 1,
+            "errors": 0,
+            "skipped": 0
+          }
+        ],
+        "failedTests": [
+          {
+            "name": "eachMissingCloseConditionIsIndependentlyRejected",
+            "className": "edu.campus.course.CloseRulesTest",
+            "type": "java.lang.AssertionError",
+            "messageExcerpt": "Expecting code not to raise a throwable but caught \"edu.campus.course.ApiFailure: TODO_C09",
+            "reason": "完整关闭条件应通过；未完成的C09抛出TODO_C09。"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "10",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C10"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 39,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3303,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1724,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 912,
+          "accepted": true
+        },
+        {
+          "name": "backend TeacherDbTest#ownerRequiresCurrentVersionAndChangesOnlyFutureAssignment [isolated TEST DB]",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 3609,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0,
+        "skipped": 0,
+        "failedNames": [],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "backendTests": {
+        "usesDatabase": true,
+        "target": "TeacherDbTest#ownerRequiresCurrentVersionAndChangesOnlyFutureAssignment",
+        "suites": [
+          {
+            "name": "edu.campus.course.TeacherDbTest",
+            "tests": 1,
+            "failures": 1,
+            "errors": 0,
+            "skipped": 0
+          }
+        ],
+        "failedTests": [
+          {
+            "name": "ownerRequiresCurrentVersionAndChangesOnlyFutureAssignment",
+            "className": "edu.campus.course.TeacherDbTest",
+            "type": "java.lang.AssertionError",
+            "messageExcerpt": "Response status expected:<200> but was:<501>",
+            "reason": "合法责任变更应返回200；未完成的C10返回501。"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    },
+    {
+      "chapter": "11",
+      "studentTaskCompleted": false,
+      "markers": [],
+      "static": {
+        "files": 120,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 35,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 3204,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1635,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 947,
+          "accepted": true
+        },
+        {
+          "name": "backend *Test",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 4406,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 41,
+        "passed": 41,
+        "failed": 0,
+        "skipped": 0,
+        "failedNames": [],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "backendTests": {
+        "usesDatabase": false,
+        "target": "*Test",
+        "suites": [
+          {
+            "name": "edu.campus.course.CatalogReaderTest",
+            "tests": 5,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.CloseRulesTest",
+            "tests": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.FirstChainTest",
+            "tests": 7,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.LocalAccountDirectoryTest",
+            "tests": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.QualityPolicyTest",
+            "tests": 3,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.SourceSelectionTest",
+            "tests": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0
+          },
+          {
+            "name": "edu.campus.course.TeacherDbTest",
+            "tests": 11,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 11
+          }
+        ],
+        "failedTests": [],
+        "expectedTaskFailuresVerified": false
+      },
+      "validationStatus": "PASS",
+      "assertionTemplate": "四组空白预测/断言仍待本人填写；教师测试通过不是学生完成"
+    },
+    {
+      "chapter": "12",
+      "studentTaskCompleted": false,
+      "markers": [
+        "C12"
+      ],
+      "static": {
+        "files": 119,
+        "hashesMatch": true,
+        "forbiddenPathsAbsent": true,
+        "symlinksAbsent": true,
+        "links": 22,
+        "anchors": 1,
+        "externalLinksConverted": 3,
+        "restoredSourceFiles": 70,
+        "answersRestoreExactReferenceHash": true
+      },
+      "steps": [
+        {
+          "name": "fixture schema",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 37,
+          "accepted": true
+        },
+        {
+          "name": "frontend type-check + build",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 2863,
+          "accepted": true
+        },
+        {
+          "name": "backend compile -DskipTests",
+          "expected": "PASS",
+          "exitCode": 0,
+          "durationMs": 1469,
+          "accepted": true
+        },
+        {
+          "name": "frontend selected tests",
+          "expected": "EXPECTED_FAILURE",
+          "exitCode": 1,
+          "durationMs": 585,
+          "accepted": true
+        }
+      ],
+      "frontendTests": {
+        "total": 5,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 4,
+        "failedNames": [
+          "章节业务小块 C12 切换和清空 state 都从 skip=0 开始；未知 state 不写入查询"
+        ],
+        "failedTests": [
+          {
+            "name": "章节业务小块 C12 切换和清空 state 都从 skip=0 开始；未知 state 不写入查询",
+            "messageExcerpt": "AssertionError: expected { state: '', skip: +0 } to deeply equal { state: 'NEW', skip: +0 }"
+          }
+        ],
+        "expectedTaskFailuresVerified": true
+      },
+      "validationStatus": "PASS"
+    }
+  ],
+  "testDatabase": {
+    "schema": "campus_course_test",
+    "explicitReset": true,
+    "scope": "独立TEST教学表，非lab"
+  },
+  "completedAt": "2026-10-18T16:33:13.933Z",
+  "noSharedLabOrE2E": true,
+  "answerRestoration": "in-memory only; delivered holes remain",
+  "postValidationHashesMatch": true
+}

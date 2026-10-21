@@ -1,0 +1,11 @@
+{
+  "newlyGenerated": true,
+  "usernames": [
+    "admin",
+    "manager-a",
+    "manager-b",
+    "viewer"
+  ],
+  "allPasswordsDifferentFromOriginal": true,
+  "passwordValuesExported": false
+}

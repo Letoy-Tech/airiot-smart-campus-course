@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-18T18:50:08.519255+00:00",
+  "reviewer": "chapters_01_04",
+  "scope": "round5-render第1—19页；本报告不覆盖第20—37页",
+  "method": "19页分别通过view_image查看原始PNG并人工判读正文、表格、图字、边界和断页；随后计算文件SHA256",
+  "sourcePdf": {
+    "path": "lesson-plans/qa/round5-render/AI编程智慧校园48学时教案.pdf",
+    "sha256": "c2b4bff3a9795c6ccb7fc7667654de6f393b7f41ed86c5acab7070b0cfc430b2"
+  },
+  "pageCountReviewed": 19,
+  "pages": [
+    {
+      "page": 1,
+      "image": "lesson-plans/qa/round5-render/page-1.png",
+      "sha256": "029287d268248f6fc33d90c3dffb377922f241a3ee368e11fd6bff09783a90c2",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "封面标题、适用对象、48学时/12次课、评分权重与12行课次表均完整；表格未越界，页脚正常。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 2,
+      "image": "lesson-plans/qa/round5-render/page-2.png",
+      "sha256": "c8fb13b4302154d33c5bc46edc34bb958584becae5a46a2ca4f9778348f11e01",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第01课目标、准备、板书说明、导入与AI提示均可读，中文和英文混排完整，无段落截断。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 3,
+      "image": "lesson-plans/qa/round5-render/page-3.png",
+      "sha256": "cbd40606ef3216b66ad36beae8d2a9dc41046c9f86e74dc5d960a52243a0b636",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第01课四学时活动表和评价、替代、反思字段完整，表格行内换行正常，未出现标题孤页。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 4,
+      "image": "lesson-plans/qa/round5-render/page-4.png",
+      "sha256": "911a2baae9f00d13d9d3b56eca0f2af85a01e49db41174472aea528660b924b1",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第01课独立配图六节点及箭头清晰；反馈说明、图注和模拟边界完整；无裁切。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 5,
+      "image": "lesson-plans/qa/round5-render/page-5.png",
+      "sha256": "a6a2f010961f60ef38cc836468655059740d9557ef720bba6feb49be8933c984",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第02课目标已显示正常两条/成功空数组/读取失败三情境；标题与AI任务无越界。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 6,
+      "image": "lesson-plans/qa/round5-render/page-6.png",
+      "sha256": "01e7a02d75581ca5756cd2a9991efa55c8b5eed2cd7d2b097d4348053e05eee0",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第02课第三学时单元格正常换行；未知通信/未登录为后续阅读的文字完整，评价与页脚无重叠。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 7,
+      "image": "lesson-plans/qa/round5-render/page-7.png",
+      "sha256": "0fc680dce9ae3e3d90cb9db909658804cde880109eaeb14c9c535aac463975a7",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第02课角色—必修/课外选做图文字可读，三行关系与范围外说明完整；无箭头或边框裁切。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 8,
+      "image": "lesson-plans/qa/round5-render/page-8.png",
+      "sha256": "23eba6baeab1ca4cb00dbba5acf1fe5a1e98b904fc20da0c151f007f0082c041",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第03课目标三字段、只读合同、课前材料和提示完整；中文字符无缺失，正常留白。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 9,
+      "image": "lesson-plans/qa/round5-render/page-9.png",
+      "sha256": "097438b95b6928ee76cf6af1c66f080ee87b0240aac94f98d02ec5146a71ba03",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第03课四学时表格及M1交付说明完整；所有行均在页面内，反思字段与页脚分离。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 10,
+      "image": "lesson-plans/qa/round5-render/page-10.png",
+      "sha256": "5d14336a960873203475ff76383ca7cbb16fe544f3db7b2a66e2449712e834ae",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第03课系统结构图中前后端、MySQL、provider和AIRIOT分支完整；节点文字清晰，无连线遮字。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 11,
+      "image": "lesson-plans/qa/round5-render/page-11.png",
+      "sha256": "30f29f3a4ca99b1cc45ed38b5a5fe79471f1265653d760031510808980c78e47",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第04课长标题仍在行内；A/B任务、依赖准备、失败实验说明与提示均完整。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 12,
+      "image": "lesson-plans/qa/round5-render/page-12.png",
+      "sha256": "7b596953f06895af6c4325efe02d4f718e24ca41ed38b706df4f3b5ddebf8b09",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第04课活动表显示/api代理、A/B、设备GET阻断与恢复顺序，表格无越界，底部参考文字完整。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 13,
+      "image": "lesson-plans/qa/round5-render/page-13.png",
+      "sha256": "0dae494d8965302490e678e7c67d25add7efdd1ce09abf9848eff7eab3b39471",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第04课工作区/暂存区/提交图可读；git add、commit、diff、cached关系和说明完整，无裁切。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 14,
+      "image": "lesson-plans/qa/round5-render/page-14.png",
+      "sha256": "135be6f0f4d38f00eaae2ae9256fc851cd9d41de584b04dca9c5249c76223879",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第05课目标明确C05及400/404；准备、提示、导入完整；正文无缺字。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 15,
+      "image": "lesson-plans/qa/round5-render/page-15.png",
+      "sha256": "54314093e8a08779116feeafae331e9ad79ef64ec85526b705f27ed00a40e952",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第05课四学时活动表、持久化及403证据说明完整；教师库阻塞替代方案正常换行。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 16,
+      "image": "lesson-plans/qa/round5-render/page-16.png",
+      "sha256": "a705b35899a2c012ea98bc3ee1217a05eab2c1ed49ca9cbf9e66455cf1deb220",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第05课时序图九步、五参与者、请求/DTO/响应标签均可辨；图中字小于正文但原尺寸可读，未压线或裁切。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS_WITH_NOTE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": [
+        "原图可辨；课堂投影或印刷前可使用原尺寸图，物理印刷未实测。"
+      ]
+    },
+    {
+      "page": 17,
+      "image": "lesson-plans/qa/round5-render/page-17.png",
+      "sha256": "3b14bbbf29c44ec8c2a9c54994ffa2f121990a124921fd90db03befa60028a93",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第06课长标题、筛选目标、窄屏准备、AI提示均完整；代码词与中文混排正常。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 18,
+      "image": "lesson-plans/qa/round5-render/page-18.png",
+      "sha256": "ada393329b700ec6b622a35c57d7a5e7d9e9f2498ff9cca708285b3dbaef1891",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第06课四学时表格、UI与C06交付说明完整；课程反思和参考行未溢出，未出现空白孤页。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "PASS",
+        "figureText": "NOT_APPLICABLE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": []
+    },
+    {
+      "page": 19,
+      "image": "lesson-plans/qa/round5-render/page-19.png",
+      "sha256": "742a4802d8d767a1126068fe1b89e306fbaffdc8b9f26477efc11ff217c1dd41",
+      "pixelSize": {
+        "width": 1414,
+        "height": 2000
+      },
+      "method": "view_image实际打开本页原始PNG；未以文字提取或缩略图替代",
+      "observations": "第06课桌面/窄屏UI示意完整；在线/未知、来源、数量、清筛选、加载/空目录/无匹配/失败说明可读；辅助字小于正文但未裁切。",
+      "checks": {
+        "chineseGlyphs": "PASS",
+        "bodyText": "PASS",
+        "tableBounds": "NOT_APPLICABLE",
+        "figureText": "PASS_WITH_NOTE",
+        "clippingOrOverlap": "NONE_OBSERVED",
+        "blankOrOrphanPage": "NONE_OBSERVED"
+      },
+      "conclusion": "PASS",
+      "notes": [
+        "原图可辨；课堂投影或印刷前可使用原尺寸图，物理印刷未实测。"
+      ]
+    }
+  ],
+  "result": "PASS",
+  "blockingIssues": [],
+  "nonBlockingNotes": [
+    {
+      "pages": [
+        16,
+        19
+      ],
+      "note": "图中辅助字比正文小但原尺寸可读；未出现越界或裁切。"
+    }
+  ],
+  "limitations": [
+    "仅证明所列渲染文件的视觉结果，不代表课程软件测试通过。",
+    "未实测物理打印、Windows Word显示或真实课堂投影。",
+    "任何页面重渲后须按新SHA重新确认相应页面。"
+  ]
+}

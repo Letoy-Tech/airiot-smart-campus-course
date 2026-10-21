@@ -1,0 +1,11 @@
+第07站 身份与权限验证
+模式：teacher-db；复用认证底座
+目标：解释当前身份和严格能力
+  阶段装配  frontend/src/journey/registry.ts
+  阶段装配  frontend/src/journey/features.ts
+  学生业务  frontend/src/views/AccessView.vue
+
+本次契约：身份来自me，能力只接受Boolean true；后端决定权限
+人工过关：viewer不能写；身份切换清旧数据；401/403分开
+完整参考：lesson-bundles/stage-07/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

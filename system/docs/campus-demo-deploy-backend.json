@@ -1,0 +1,18 @@
+{
+  "state": "activated behind existing proxy",
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "publicProxyActivated": true,
+  "publicHealthBefore": true,
+  "publicHealthAfter": true,
+  "previousBackendPID": "351495",
+  "health": true,
+  "service": "campus-demo.service",
+  "pid": "360464",
+  "bootstrapRequiredBeforePublish": false,
+  "backup": "/srv/campus-demo/backups/REL_20261005-0151-SCHOOL-DEMO",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

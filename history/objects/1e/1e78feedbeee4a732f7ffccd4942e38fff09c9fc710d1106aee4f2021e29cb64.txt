@@ -1,0 +1,4 @@
+我会贴实际验收结果。请生成一页交付说明：工具版本、安装、数据库准备、启动、主流程、已知未验证项。只写已有证据；模拟数据、选做AIRIOT和未测Windows要如实写，不编测试通过率。
+实际证据：V1.2.0学生起点215文件，CodeBuddy CN4.12.2内置Deepseek-V4.1-Flash(300K)，用户授权DeepSeek替代Qwen；没有阿里云调用、明文Key或购买。macOS arm64，Node22.21.1、JDK17.0.12、MySQL8.4.10。01–11站已accept；前端16文件74测试通过，后端完整独立_test库50测试0失败0跳过，有事务回滚/并发/快照JSON；普通非DB测试50中16跳过不算全通过。实际查设备/历史null与0/角色403/事件恢复核实关闭/责任与事件双物理窗口409已验证。真实AIRIOT configured/connected/control=false且远端控制外部通知关闭。教师公共后端/API/组件/测试作为基座，业务页面由IDE模型生成，Codex只操作、验证、文档记录；额外修复与失败均保留。
+本次专属端口BE8091/MG5178/MySQL23491，不用原平台端口。终端必须同时设JAVA_HOME及PATH里的JAVA_HOME/bin。运行公开工具node tools/course.mjs doctor/init/check/build/migrate/backend-db/frontend；数据库由教师提供.private配置，不给AI/不进包。本机另有外层tools/teacher-local-db.py，是教师公共工具改为专属端口的操作者辅助，不是学生业务成果。
+第12站新目录交接尚待真实执行，暂不能写已通过；另一真人/Windows/校园库/真实AIRIOT均未验证。请先Ask给一页文字建议，不改文件、不运行命令。实际上下文为docs/项目卡.md、docs/接口与数据.md、frontend/src/api/campus.ts、stores/campus.ts、api/full.ts、backend/docs/full-api.json；禁止读teacher答案/备份/私有及progress apply。

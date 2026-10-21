@@ -1,0 +1,9 @@
+已准备骨架：第05站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/OverviewView.vue
+  frontend/src/components/CompareHistory.vue
+  frontend/src/components/HistoryChart.vue
+  frontend/src/views/EnergyView.vue
+备份：journey-backups/2026-10-19T17-51-54-474Z-stage-05-begin-d64b02
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

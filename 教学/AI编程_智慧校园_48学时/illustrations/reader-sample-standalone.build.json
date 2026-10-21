@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T10:18:56.612Z",
+  "output": "illustrations/reader-sample-standalone.html",
+  "sha256": "92afc4166e4d6f54e212523072c01e3c4721dbbe520d925ca69e424c97a671e4",
+  "mode": "SAMPLE_ONLY",
+  "embeddedImages": true,
+  "chapters": 0,
+  "figures": 2,
+  "dependency": {
+    "marked": "16.4.2"
+  },
+  "labVerified": false,
+  "documents": [
+    {
+      "file": "tools/fixtures/reader-sample.md",
+      "sha256": "7407f32b5cd15cc77a74a9b76b756299cf03f66832f64d96a7072b0a25a6da2e",
+      "id": "sample",
+      "chapter": null,
+      "headings": [
+        {
+          "text": "两幅公共图，先验证如何读清楚",
+          "depth": 1,
+          "slug": "两幅公共图先验证如何读清楚",
+          "id": "sample"
+        },
+        {
+          "text": "先看请求经过哪些边界",
+          "depth": 2,
+          "slug": "先看请求经过哪些边界",
+          "id": "sample-先看请求经过哪些边界"
+        },
+        {
+          "text": "再看建议如何变成可检查的工作",
+          "depth": 2,
+          "slug": "再看建议如何变成可检查的工作",
+          "id": "sample-再看建议如何变成可检查的工作"
+        },
+        {
+          "text": "页面核验与接力",
+          "depth": 2,
+          "slug": "页面核验与接力",
+          "id": "sample-页面核验与接力"
+        }
+      ],
+      "title": "两幅公共图，先验证如何读清楚",
+      "images": [
+        {
+          "id": "fig-shared-01-教学工程边界",
+          "chapter": null,
+          "stem": "shared-01-教学工程边界",
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "caption": "公共图 01　教学工程：请求与数据的边界。蓝色为界面，青色为后端业务与本地持久化，灰蓝色为读取端口，金色虚线为选做只读接入。箭头说明请求方向；教学示意，非运行证据。",
+          "file": "illustrations/shared-01-教学工程边界.png",
+          "pngSha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+          "width": 2560,
+          "height": 1936
+        },
+        {
+          "id": "fig-shared-02-网页AI协作",
+          "chapter": null,
+          "stem": "shared-02-网页AI协作",
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "caption": "公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。",
+          "file": "illustrations/shared-02-网页AI协作.png",
+          "pngSha256": "ac27b450a21184646c04080a868814eefaccaf6b3dd27f9c4b5ebf396460d75a",
+          "width": 2560,
+          "height": 2182
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,2 @@
+给台账写四条验收条件：名称或ID、空间、类型、在线三态可以组合筛选；清空后恢复全部。只写“做什么→看到什么”，每条一行。
+当前第03站，先只写四条验收条件，不修改文件，不读.private、lesson-bundles/*/files、reference或journey-backups。

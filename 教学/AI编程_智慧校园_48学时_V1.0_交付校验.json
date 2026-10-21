@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "version": "1.0",
+  "at": "2026-10-18T16:34:20.989886+00:00",
+  "chapters": 12,
+  "hours": 48,
+  "figures": 40,
+  "lessonPlanPages": 37,
+  "studentCheckpoints": 9,
+  "linksChecked": 933,
+  "secretsScan": "current generated course passwords absent; private paths excluded",
+  "historicalArchivesUnchanged": true,
+  "archives": [
+    {
+      "file": "AI编程_智慧校园_48学时_V1.0_完整教学包.zip",
+      "bytes": 183199167,
+      "files": 1875,
+      "sha256": "eff074912bf6be4b732495594864bd8af69f03d72fd2b48a9c9960c1ffdc813d",
+      "crcAndContentHashes": "PASS"
+    },
+    {
+      "file": "AI编程_第04至12章学生起点_V1.0.zip",
+      "bytes": 2646607,
+      "files": 1075,
+      "sha256": "04199e880e368822991e039409409605759afa682c9cdeece095102e554cf695",
+      "crcAndContentHashes": "PASS"
+    }
+  ]
+}

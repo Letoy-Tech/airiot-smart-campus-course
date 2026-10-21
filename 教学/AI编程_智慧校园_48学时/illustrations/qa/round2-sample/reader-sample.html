@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="智慧校园 AI 编程课程图文初稿，教学示意与运行证据明确分开。"><title>V0.3 阅读器验证样张 · V0.3 · 第二轮修订</title><style>:root{color-scheme:light;--ink:#17334b;--muted:#526b7c;--blue:#245b81;--teal:#397769;--line:#d7e1e8;--paper:#fff;--wash:#f5f8fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:var(--wash);font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:17px;line-height:1.9}a{color:var(--blue);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:var(--teal)}a:focus-visible,summary:focus-visible{outline:3px solid #b58429;outline-offset:4px}button,input{font:inherit}p,li{overflow-wrap:anywhere}p{margin:1em 0}strong{font-weight:650}code{font-family:"SFMono-Regular",Consolas,monospace;font-size:.85em;background:#edf3f7;padding:.1em .3em;border-radius:4px;overflow-wrap:anywhere}pre{margin:1.3em 0;padding:20px 24px;background:#f1f5f8;border:1px solid var(--line);border-left:4px solid #7699b1;overflow-x:auto;line-height:1.65;font-size:15px}pre code{padding:0;background:none;white-space:pre;overflow-wrap:normal;font-size:1em}h1,h2,h3,h4{line-height:1.5;color:var(--ink);text-wrap:balance;scroll-margin-top:24px}h1{font-size:2rem;margin:.2em 0 .8em}h2{font-size:1.5rem;margin:2.2em 0 .8em;padding-bottom:.35em;border-bottom:1px solid var(--line)}h3{font-size:1.15rem;margin:1.8em 0 .6em}h4{font-size:1rem}ul,ol{padding-left:1.5em}li{margin:.3em 0}hr{border:0;border-top:1px solid var(--line);margin:2em 0}blockquote{margin:1.4em 0;padding:1px 22px;border-left:4px solid #789c92;background:#edf7f4}blockquote p{margin:.8em 0}
+.book-shell{display:grid;grid-template-columns:240px minmax(0,1000px);gap:32px;max-width:1344px;margin:0 auto;padding:40px 28px 100px}.book-nav{position:sticky;top:24px;align-self:start;max-height:calc(100vh - 48px);overflow-y:auto;font-size:14px;line-height:1.7}.book-nav summary{font-size:16px;font-weight:650;cursor:pointer;padding:8px 0}.book-nav ol{padding-left:1.4em}.book-nav li{margin:.6em 0}.book-nav a{text-decoration:none}.book-nav .nav-meta{color:var(--muted);font-size:13px}.book-main{min-width:0}.book-cover,.chapter,.figure-index{background:var(--paper);padding:42px 46px;border:1px solid var(--line);border-radius:6px;margin-bottom:28px}.book-cover{border-top:6px solid var(--teal)}.book-cover h1{font-size:2.45rem}.eyebrow{font-size:13px;font-weight:650;letter-spacing:.08em;color:var(--teal);margin:0 0 12px}.deck{font-size:20px;color:var(--muted);line-height:1.8}.status-note{padding:16px 20px;border-left:4px solid #b58429;background:#fff5df;font-size:15px;line-height:1.8;margin:24px 0 0}.status-note p{margin:0}.chapter-meta{font-size:13px;color:var(--muted);margin:0 0 24px}.chapter-footer{margin:32px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px}.book-footer{font-size:13px;color:var(--muted);padding:0 4px}.source-note{font-size:12px;margin-left:5px;color:#7a5b23}.raw-html{color:#85463e}
+.table-scroll{overflow-x:auto;margin:1.4em 0;border:1px solid var(--line);border-radius:4px;max-width:100%}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75}th,td{padding:11px 15px;vertical-align:top;border-bottom:1px solid var(--line);text-align:left}th{background:#edf3f7;font-weight:650}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#fafcfd}td code{font-size:12px}figure{margin:1.8em 0;padding:16px;background:#fff;border:1px solid var(--line);border-radius:5px;break-inside:avoid}figure .figure-open{display:block;line-height:0}figure img{display:block;width:100%;height:auto;margin:0;max-width:100%;background:white}figcaption{margin:14px 6px 4px;line-height:1.8;font-size:14px;color:var(--muted)}.figure-tools{display:flex;gap:16px;flex-wrap:wrap;margin:8px 6px 0;font-size:12px}.figure-badge{font-size:12px;background:#edf7f4;color:#366757;padding:0 7px;border-radius:3px;margin-right:8px;display:inline-block}.figure-index ol{font-size:15px}.figure-index li{margin:1em 0}.skip-link{position:absolute;left:10px;top:-100px;background:white;padding:12px;z-index:10}.skip-link:focus{top:10px}.back-to-top{position:fixed;right:18px;bottom:18px;padding:8px 14px;border:1px solid var(--line);border-radius:24px;background:#fff;font-size:13px;text-decoration:none;box-shadow:0 2px 10px #17334b0d}
+@media(max-width:900px){.book-shell{display:block;max-width:800px;padding:20px 16px 60px}.book-nav{position:static;max-height:none;border:1px solid var(--line);border-radius:5px;background:white;padding:12px 20px;margin-bottom:18px}.book-nav ol{columns:2;column-gap:28px}.book-nav li{break-inside:avoid}.book-cover,.chapter,.figure-index{padding:28px}.book-cover h1{font-size:2rem}.deck{font-size:18px}}
+@media(max-width:520px){body{font-size:16px}.book-shell{padding:12px 10px 60px}.book-nav{padding:10px 18px;font-size:13px}.book-nav ol{columns:1}.book-cover,.chapter,.figure-index{padding:24px 18px;margin-bottom:16px}.book-cover h1{font-size:1.9rem}h1{font-size:1.65rem}h2{font-size:1.3rem}h3{font-size:1.08rem}.deck{font-size:17px}.status-note{padding:12px 14px;font-size:14px}figure{padding:5px;margin:1.4em -7px}figcaption{font-size:13px}pre{padding:14px;font-size:13px}th,td{padding:9px 11px;min-width:92px}.back-to-top{right:12px;bottom:12px}}
+@media print{@page{size:A4;margin:16mm 15mm}html{scroll-behavior:auto}body{background:white;font-size:10.5pt;line-height:1.75}.book-shell{display:block;max-width:none;padding:0}.book-nav,.back-to-top,.skip-link,.figure-tools,.chapter-footer{display:none}.book-cover,.chapter,.figure-index{border:0;border-radius:0;padding:0;margin:0;break-before:page}.book-cover{break-before:auto}.book-cover h1{font-size:26pt}.book-cover{padding-top:20mm;min-height:230mm}.chapter{padding-top:3mm}h1{font-size:20pt}h2{font-size:15pt}h3{font-size:12pt}h1,h2,h3,h4{break-after:avoid}pre{white-space:pre-wrap;font-size:8.5pt;padding:12px}pre code{white-space:pre-wrap;overflow-wrap:anywhere}figure{border:0;padding:0;break-inside:avoid;margin:6mm 0}figure img{max-height:208mm;object-fit:contain}figcaption{font-size:9pt}.table-scroll{overflow:visible}table{font-size:9pt}th,td{padding:6px;min-width:0}tr{break-inside:avoid}a{color:inherit;text-decoration:none}.status-note{font-size:10pt}.book-footer{margin-top:10mm}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* V0.3: separate reading navigation, study resources and example purposes. */
+.book-nav details+details{border-top:1px solid var(--line);margin-top:10px;padding-top:8px}
+.book-nav .resource-nav ul{margin:8px 0 18px;padding-left:1.2em}
+.version-label{font-size:14px;font-weight:650;color:var(--teal)}
+.reader-help{font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:0}
+.chapter-nav{margin:24px 0 28px;padding:10px 16px;border-block:1px solid var(--line);background:var(--wash);font-size:14px;line-height:1.7}
+.chapter-nav summary{cursor:pointer;font-weight:650;padding:5px 0}
+.chapter-nav .nav-hint{font-size:12px;font-weight:400;color:var(--muted);margin-left:12px}
+.chapter-nav details[open] .nav-hint{display:none}
+.chapter-nav ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px;padding:0;margin:12px 0 6px}
+.chapter-nav li{margin:0}
+.chapter-nav a{display:block;padding:5px 0;text-decoration:none}
+.chapter-nav a:hover{text-decoration:underline}
+.code-example{margin:1.3em 0;max-width:100%;min-width:0}
+.code-label{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding:9px 14px;background:#e6eef3;border:1px solid var(--line);border-bottom:0;font-size:12px;line-height:1.6;color:var(--muted)}
+.code-label span:first-child{font-weight:650;color:var(--ink)}
+.code-example pre{margin:0}
+.code-example pre:focus-visible{outline:3px solid #b58429;outline-offset:2px}
+.prose-example pre{font-family:inherit;font-size:16px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.prose-example pre code{font-family:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:900px){.book-nav .nav-meta{margin:10px 0 2px}.book-nav .resource-nav ul{columns:2;column-gap:28px}.book-nav .resource-nav li{break-inside:avoid}}
+@media(max-width:520px){.book-nav .resource-nav ul{columns:1}.chapter-nav{padding:8px 12px;margin:18px 0 22px}.chapter-nav ul{grid-template-columns:1fr;gap:0}.chapter-nav a{padding:8px 0}.chapter-nav .nav-hint{display:block;margin-left:16px}.prose-example pre{font-size:15px;padding:14px}.reader-help{font-size:13px}.code-label{padding:8px 12px}}
+@media print{.chapter-nav{display:none}.code-label{background:#f1f5f8;font-size:8pt}.prose-example pre{font-size:9pt}.reader-help{font-size:9pt}}
+</style></head><body id="book-top"><a class="skip-link" href="#book-main">跳到正文</a><div class="book-shell"><nav class="book-nav" aria-label="阅读目录" id="contents"><details class="main-toc" data-desktop-open><summary>阅读目录（样张）</summary><p class="nav-meta">第二轮阅读器样张 · 导航、示例与资料入口检查</p><ol><li><a href="#sample">第二轮阅读器验证样张</a></li><li><a href="#figure-index">图表目录（1 幅）</a></li></ol></details><details class="resource-nav" id="resource-contents"><summary>常用资料（9）</summary><ul><li><a href="#resource-course-outline">AI 编程课程大纲</a></li><li><a href="#resource-api-contract">教学接口约定</a></li><li><a href="#resource-assessment">考核与验收</a></li><li><a href="#resource-class-workload">48 学时实施分工</a></li><li><a href="#resource-class-task">课堂任务单</a></li><li><a href="#resource-ai-task">AI 任务卡模板</a></li><li><a href="#resource-ai-handoff">AI 接力包模板</a></li><li><a href="#resource-traceability">需求与测试追踪表</a></li><li><a href="#resource-web-ai">Qwen 与网页工具说明</a></li></ul></details><details class="resource-nav"><summary>教师资料（1）</summary><ul><li><a href="#resource-teacher-resources">教师资源制作清单</a></li></ul></details><p class="nav-meta">点击图片打开大图。</p></nav><main class="book-main" id="book-main"><header class="book-cover"><p class="eyebrow">AI 编程 · 智慧校园</p><h1>V0.3 阅读器验证样张</h1><p class="deck">第二轮阅读器样张 · 导航、示例与资料入口检查</p><p class="version-label">V0.3 · 第二轮修订</p><div class="status-note"><p>此页为阅读器验证样张，包含 1 幅已有教学示意图。它不是整书成稿，不代表教学工程、实验或试讲已验证。</p></div><p class="reader-help">常用资料已编入本页，可通过资料目录打开。标注“需完整资料包”或“需原项目”的链接依赖其他文件；外部网站需要网络。</p></header><section class="chapter" data-document="sample" aria-label="第二轮阅读器验证样张"><p class="chapter-meta">版式样张 · 实验未验证</p><h1 id="sample">第二轮阅读器验证样张</h1>
+<nav class="chapter-nav" aria-label="本章定位：第二轮阅读器验证样张"><details data-desktop-open><summary>本章定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#sample-本章任务卡">本章任务卡</a></li><li><a href="#sample-模块一-阅读图与合同1-学时">模块一 阅读图与合同（1 学时）</a></li><li><a href="#sample-模块二-网页-ai-提示与代码2-学时">模块二 网页 AI 提示与代码（2 学时）</a></li><li><a href="#sample-模块三-验收与解释1-学时">模块三 验收与解释（1 学时）</a></li><li><a href="#sample-最小实验与验收">最小实验与验收</a></li><li><a href="#sample-课后练习">课后练习</a></li><li><a href="#sample-交给下一章">交给下一章</a></li></ul></details></nav><p>本文件仅验证阅读器排版与链接，不是新增教材正文。实验仍未验证。</p>
+<h2 id="sample-本章任务卡">本章任务卡</h2>
+<p>先打开<a href="#resource-class-task" data-link-kind="reader-section">课堂任务单</a>，再查阅<a href="#resource-api-contract-通用约定" data-link-kind="reader-section">教学接口约定</a>。资料应在同一 HTML 内可达。</p>
+<h2 id="sample-模块一-阅读图与合同1-学时">模块一 阅读图与合同（1 学时）</h2>
+<figure id="fig-shared-02-网页AI协作"><a class="figure-open" href="../../shared-02-%E7%BD%91%E9%A1%B5AI%E5%8D%8F%E4%BD%9C.png" target="_blank" rel="noopener" aria-label="打开大图：学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正"><img src="../../shared-02-%E7%BD%91%E9%A1%B5AI%E5%8D%8F%E4%BD%9C.png" alt="学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正" width="2560" height="2182" decoding="async"></a><figcaption><span class="figure-badge">教学示意</span>公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。</figcaption><div class="figure-tools"><a href="../../shared-02-%E7%BD%91%E9%A1%B5AI%E5%8D%8F%E4%BD%9C.png" target="_blank" rel="noopener">打开 PNG 大图</a><a href="../../shared-02-%E7%BD%91%E9%A1%B5AI%E5%8D%8F%E4%BD%9C.svg" target="_blank" rel="noopener">查看 SVG 矢量图</a></div></figure>
+<p>本样张复用已有公共图，不新增或修改图源。参见<a href="#resource-course-outline" data-link-kind="reader-section">课程大纲</a>及<a href="#resource-class-workload" data-link-kind="reader-section">资源分工</a>。</p>
+<h2 id="sample-模块二-网页-ai-提示与代码2-学时">模块二 网页 AI 提示与代码（2 学时）</h2>
+<h3 id="sample-网页-ai-提示">网页 AI 提示</h3>
+<div class="code-example prose-example" data-language="text" data-purpose="网页 AI 提示"><div class="code-label" id="sample-code-1"><span>网页 AI 提示</span><span>文本 · 自动折行</span></div><pre aria-labelledby="sample-code-1"><code class="language-text">你是我的 Java 业务接口助教。请先阅读我随后提供的合同、DTO、一个相邻 Controller 和教师数据端口定义。
+只协助 GET /campus/devices：Controller 调 Service，Service 保留校园读取授权并依赖数据端口。返回 {code:0,message,data}，data 为 {items,observedAt}。
+不要臆造端口方法签名。online 和 communicationTime 可能为 null。先解释修改范围，再给出最小修改及人工核查步骤。未执行的检查必须写未执行。
+</code></pre></div>
+<h3 id="sample-教学代码">教学代码</h3>
+<p>这段只检查代码展示，不是完整实现。</p>
+<div class="code-example" data-language="ts" data-purpose="教学代码 · 用途见正文"><div class="code-label" id="sample-code-2"><span>教学代码 · 用途见正文</span><span>TypeScript · 可左右滚动</span></div><pre tabindex="0" aria-labelledby="sample-code-2"><code class="language-ts">const categoryMatches = category.value === &#39;&#39; || device.category === category.value
+const spaceMatches = spaceId.value === &#39;&#39; || device.spaceId === spaceId.value
+</code></pre></div>
+<h3 id="sample-结构示例">结构示例</h3>
+<div class="code-example" data-language="text" data-purpose="文本 / 结构示例"><div class="code-label" id="sample-code-3"><span>文本 / 结构示例</span><span>文本 · 可左右滚动</span></div><pre tabindex="0" aria-labelledby="sample-code-3"><code class="language-text">begin transaction
+  require current user is ADMIN
+  require current.version == request.expectedVersion
+  update current record and append timeline
+commit
+</code></pre></div>
+<h2 id="sample-模块三-验收与解释1-学时">模块三 验收与解释（1 学时）</h2>
+<h3 id="sample-最小实验与验收">最小实验与验收</h3>
+<p>检查导航、折行、图片与内嵌资料。见<a href="#resource-assessment" data-link-kind="reader-section">考核与验收</a>、<a href="#resource-ai-task" data-link-kind="reader-section">AI 任务卡</a>、<a href="#resource-ai-handoff" data-link-kind="reader-section">AI 接力包</a>、<a href="#resource-traceability" data-link-kind="reader-section">需求追踪表</a>。</p>
+<h2 id="sample-课后练习">课后练习</h2>
+<p>对照<a href="#resource-web-ai" data-link-kind="reader-section">Qwen 与网页工具说明</a>理解模型名称记录方式。</p>
+<h2 id="sample-交给下一章">交给下一章</h2>
+<p>教师使用<a href="#resource-teacher-resources" data-link-kind="reader-section">资源制作清单</a>。<a href="../../../02-%E9%A1%B9%E7%9B%AE%E8%8C%83%E5%9B%B4%E4%B8%8E%E6%95%99%E5%AD%A6%E6%9E%B6%E6%9E%84.md" data-link-kind="course-package">项目范围</a><span class="source-note">需完整资料包</span>暂为完整资料包文件，应显示依赖标签。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · 源稿：tools/fixtures/reader-round2-sample.md</p></section>
+<section class="chapter resource-section" data-document="resource-course-outline" aria-label="AI 编程课程大纲"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-course-outline">AI 编程课程大纲</h1>
+<nav class="chapter-nav" aria-label="资料内定位：AI 编程课程大纲"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-course-outline-一-课程定位">一 课程定位</a></li><li><a href="#resource-course-outline-二-课程完成后的能力">二 课程完成后的能力</a></li><li><a href="#resource-course-outline-三-48-学时结构">三 48 学时结构</a></li><li><a href="#resource-course-outline-四-必修作品与进阶作品">四 必修作品与进阶作品</a></li><li><a href="#resource-course-outline-五-项目推进方式">五 项目推进方式</a></li><li><a href="#resource-course-outline-六-学时负担与降级方法">六 学时负担与降级方法</a></li><li><a href="#resource-course-outline-七-成果与后续编写">七 成果与后续编写</a></li></ul></details></nav><h2 id="resource-course-outline-一-课程定位">一 课程定位</h2>
+<p>课程名称为“AI 编程——以智慧校园平台重建为例”。面向学过一门编程语言、尚无完整项目经验的学生，课内 48 学时。学生使用通义等国内网页聊天工具，以 Qwen3 系列为模型案例，由自己完成文件编辑、命令执行、结果核验和版本提交。</p>
+<p>课程要培养的是借助 AI 完成软件工程任务的能力。平台本身不要求接入聊天机器人、训练大模型或部署推理服务。学生要能说清系统解决什么问题、数据从哪里来、业务规则为何这样设计、生成的代码如何验证，以及别人怎样接手。</p>
+<p>参考对象是现有智慧校园系统，采用 Vue 3 与 Java Spring Boot 的前后端结构。教学作品保留核心业务和工程约束，学生可自行设计 UI、布局和视觉风格。参考系统不作为全量复制任务，也不以代码相似度评分。</p>
+<h2 id="resource-course-outline-二-课程完成后的能力">二 课程完成后的能力</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>能力</th>
+<th>可观察表现</th>
+<th>主要证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求分析</td>
+<td>将“设备出问题后有人处理”转成角色、场景、规则与验收标准</td>
+<td>需求基线、用例、追踪表</td>
+</tr>
+<tr>
+<td>软件设计</td>
+<td>说明界面、业务服务、数据库和外部数据源的职责</td>
+<td>架构图、数据模型、接口合同</td>
+</tr>
+<tr>
+<td>AI 协作</td>
+<td>限定一次任务的文件和规则，识别生成结果中的错误</td>
+<td>任务卡、修改前后差异、核验记录</td>
+</tr>
+<tr>
+<td>代码构造</td>
+<td>完成设备、监测、权限及事件闭环的业务实现</td>
+<td>分阶段代码与运行演示</td>
+</tr>
+<tr>
+<td>质量保障</td>
+<td>主动验证失败、越权、冲突和回滚，而不仅测试成功页面</td>
+<td>自动化与人工测试证据</td>
+</tr>
+<tr>
+<td>工程交付</td>
+<td>让同学按文档复现运行，并完成一次受控变更</td>
+<td>交付包、交接记录、答辩</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-course-outline-三-48-学时结构">三 48 学时结构</h2>
+<p>各章按“概念与问题 1 学时、项目实践 2 学时、核验与接力 1 学时”组织，共 12×4=48 学时。具体课次可以拆为两次 2 学时；此处不把学时换算为分钟。安装检查安排在开课准备阶段，第 04 章仍预留环境排障和版本管理时间。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>三个模块</th>
+<th>关键工程制品</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>生命周期与项目边界；网页 AI 的小任务协作；证据与交接</td>
+<td>AI 任务卡、个人基线练习</td>
+</tr>
+<tr>
+<td>02</td>
+<td>场景与角色；需求、验收与范围；任务分解及风险</td>
+<td>需求规格、迭代计划</td>
+</tr>
+<tr>
+<td>03</td>
+<td>读取架构与职责；HTTP/JSON 读合同；字段与异常评审</td>
+<td>读取架构、一空间两设备读合同；ER/状态作为阅读预告</td>
+</tr>
+<tr>
+<td>04</td>
+<td>环境与依赖；最小前后端贯通；Git 提交及恢复</td>
+<td>可复现基线、运行记录</td>
+</tr>
+<tr>
+<td>05</td>
+<td>后端分层与校验；设备与空间映射；接口测试</td>
+<td>读接口、本地映射接口</td>
+</tr>
+<tr>
+<td>06</td>
+<td>信息结构与原型；设备列表、筛选与详情；UI 状态验证</td>
+<td>自主 UI、组件和交互</td>
+</tr>
+<tr>
+<td>07</td>
+<td>时间、单位与数据质量；最新值与历史图表；异常与刷新</td>
+<td>监测页面、原始样本表</td>
+</tr>
+<tr>
+<td>08</td>
+<td>认证与授权；三角色及对象范围；越权与撤权测试</td>
+<td>权限矩阵、拒绝证据</td>
+</tr>
+<tr>
+<td>09</td>
+<td>事件状态机；分派、处理、恢复核实及关闭；版本冲突</td>
+<td>演练事件闭环</td>
+</tr>
+<tr>
+<td>10</td>
+<td>设备责任关系；责任登记与自动分派；时间线及追溯</td>
+<td>责任模块、变更记录</td>
+</tr>
+<tr>
+<td>11</td>
+<td>独立测试设计；接口、并发与回滚测试；缺陷修复回归</td>
+<td>测试报告、缺陷单</td>
+</tr>
+<tr>
+<td>12</td>
+<td>构建与交付；变更维护及复现；个人答辩与复盘</td>
+<td>发布基线、交付说明</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-course-outline-四-必修作品与进阶作品">四 必修作品与进阶作品</h2>
+<p>基础作品必须能在没有 AIRIOT 账号、没有模型 API Key 的环境中完成。数据来自显式标识的教学模拟组件；事件与责任登记写入学生自己的数据库。</p>
+<p>**必修业务：**设备列表与筛选、空间映射、最新采集值与一类历史曲线、三角色权限、演练事件闭环、设备责任登记、相关时间线及交付文档。概览由这些数据汇总而来；能源展示仅作为已有电压或功率点的视图，不新增费用计算。原始报警保留只读合同和教师参考组件，其页面扩展及真实接入作为选做，不新增必修作业。</p>
+<p>**教师提供的基础：**依赖冻结的工程骨架、认证底层、最小账户数据、模拟数据组件、数据库环境与测试入口。学生需要阅读基础组件的边界，亲自补充校园业务授权和拒绝测试；提供基础并不等于提供全部业务答案。</p>
+<p>**进阶选做：**真实 AIRIOT 只读适配、更多图表与页面、复杂查询、自动化持续集成、隔离部署与恢复，以及对网页 AI 与编码工具的比较。进阶不占必修 48 学时，不以付费账号、服务器或硬件作为获得高基础成绩的条件。</p>
+<p>通用用户管理后台、复杂权限配置台、完整审计运营台、远端设备控制和外部通知不要求学生从零重建。它们可作为参考组件或后续课程内容。</p>
+<h2 id="resource-course-outline-五-项目推进方式">五 项目推进方式</h2>
+<p>采用短迭代：每次提出一个可检查的变化，学生先给出自己的理解，再请 AI 提供方案，完成局部代码、运行、评审和提交。网页 AI 不读取本地仓库，学生负责把准确的文件和运行证据提供给它。</p>
+<p>建议两人一组，轮换“实现者”和“审查者”，双方都要完成可归属的代码与核验记录。允许独立完成；团队规模不影响必修范围。每位学生保留个人 AI 使用记录并单独答辩。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>里程碑</th>
+<th>截止章节</th>
+<th>完成条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>M1 定义项目</td>
+<td>03</td>
+<td>需求、模型、接口和验收能相互对应</td>
+</tr>
+<tr>
+<td>M2 设备可见</td>
+<td>06</td>
+<td>教学数据通过后端进入自主设计的设备界面</td>
+</tr>
+<tr>
+<td>M3 数据可信</td>
+<td>08</td>
+<td>历史与异常状态明确，三角色权限有效</td>
+</tr>
+<tr>
+<td>M4 业务闭环</td>
+<td>10</td>
+<td>演练事件、责任人和时间线完成持久化流程</td>
+</tr>
+<tr>
+<td>M5 可交付</td>
+<td>12</td>
+<td>测试与复现通过，学生可解释并修改自己的作品</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-course-outline-六-学时负担与降级方法">六 学时负担与降级方法</h2>
+<p>48 学时的可行性依赖教师先完成并验证脚手架。若要求学生同时从零学习 Java、Vue、SQL、认证框架、部署和 AIRIOT，课程负担会超过当前设计。</p>
+<p>课堂落后时，先压缩装饰动画、额外图表、通用后台和进阶接入；保留设备读取、后端授权、事件关闭规则、版本冲突、测试和交接。提供章节检查点供学生定位差异，使用救援检查点须记录使用原因，再独立解释和补做关键改动。不能用整套成品覆盖作业来冒充完成过程。</p>
+<p>课后安排以巩固、阅读和整理证据为主。核心评分项目应能在课内完成；若试讲显示需要大量额外编码时间，应缩减功能或增加教师模板，不能把超载静默转移给学生。</p>
+<h2 id="resource-course-outline-七-成果与后续编写">七 成果与后续编写</h2>
+<p>每组交付源代码、依赖锁定文件、运行说明、需求和设计、测试报告、交接文件；每人交付代表性 AI 协作记录、对生成内容的纠错实例和答辩结果。评分见 <a href="#resource-assessment" data-link-kind="reader-section">考核与验收</a>。</p>
+<p>已完成全课程大纲、分模块设计及两轮图文正文编修。下一阶段制作独立教学工程，把正文操作对应到真实入口并实测、试讲；随后转为包含课次目标、教学活动、时间分配及形成性评价的教案。逐章课内分工见<a href="#resource-class-workload" data-link-kind="reader-section">48学时实施分工</a>，详细关卡见<a href="../../../05-%E7%BC%96%E5%86%99%E8%BF%9B%E5%BA%A6%E4%B8%8E%E6%95%99%E6%A1%88%E8%BD%AC%E6%8D%A2.md" data-link-kind="course-package">编写进度</a><span class="source-note">需完整资料包</span>。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：01-课程大纲.md</p></section>
+<section class="chapter resource-section" data-document="resource-api-contract" aria-label="教学接口约定"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-api-contract">教学接口约定</h1>
+<nav class="chapter-nav" aria-label="资料内定位：教学接口约定"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-api-contract-通用约定">通用约定</a></li><li><a href="#resource-api-contract-教学版与现有合同的明确差异">教学版与现有合同的明确差异</a></li><li><a href="#resource-api-contract-核心读取对象">核心读取对象</a></li><li><a href="#resource-api-contract-接口模块">接口模块</a></li><li><a href="#resource-api-contract-角色矩阵">角色矩阵</a></li><li><a href="#resource-api-contract-状态和并发">状态和并发</a></li><li><a href="#resource-api-contract-教学参数与夹具基线">教学参数与夹具基线</a></li><li><a href="#resource-api-contract-审计范围">审计范围</a></li></ul></details></nav><p>本文件规定课程各章使用的共同语义，是教学版待实现的合同基线。原始参考为 <a href="../../../../../system/docs/api-contract.md" data-link-kind="original-project">现有系统接口合同</a><span class="source-note">需原项目</span>。本文没有生成可运行 API，也不修改原系统合同。</p>
+<h2 id="resource-api-contract-通用约定">通用约定</h2>
+<p>成功响应使用 <code>{code:0,message,data}</code>；HTTP 状态与业务状态分开。参数无效 400、身份无效 401、权限不足 403、对象不存在 404、版本或状态冲突 409。上游异常由后端转为适当的 502/503，不转成前端登录过期。</p>
+<p>读取接口均在认证后的校园角色范围内。学生第一次贯通使用教师准备的教学登录基础；临时调试身份不能成为交付时绕过认证的入口。身份、操作者和系统时间由后端确定，不相信前端提交的 actor 或时间。</p>
+<p>所有时间为 epoch 毫秒；布尔权限只有 JSON Boolean <code>true</code> 授权；分页、时间窗和字段类型明确校验。响应不得出现 API Key、token 或密码。</p>
+<h2 id="resource-api-contract-教学版与现有合同的明确差异">教学版与现有合同的明确差异</h2>
+<p><code>source</code> 扩展为 <code>TEACHING_MOCK | AIRIOT</code>，并同步后端 DTO、前端类型和测试。模拟实现返回 <code>TEACHING_MOCK</code>，真实适配返回 <code>AIRIOT</code>。模拟对象另标 <code>simulated:true</code>，二者不可互相替代。其余核心字段和规则尽量保持参考合同语义。</p>
+<p>教学历史样本显式扩展为 <code>HistorySample={time:number,value:number|null}</code>。<code>time</code> 是有效的 epoch 毫秒整数；<code>value</code> 是有限数值，或来源明确返回的缺失标记 <code>null</code>。Java 教学 DTO 使用 <code>Double</code> 表达可空值，TypeScript 使用 <code>number | null</code>。现有参考系统的 <code>CampusDtos.Sample</code> 为 <code>double</code>、<code>HistoryResult.samples.value</code> 为 <code>number</code>，不能直接复制为本课程的类型；这属于教学版的明确差异，尚未在教学工程实施。</p>
+<p>有时间、无数值的原始样本保留为 <code>null</code> 断点，不算有效测量，也不补零。完全没有返回样本的时刻不创建记录。字符串数值、布尔值及非法时间不冒充合法样本；非有限数值不能写成 JSON 的 <code>NaN</code> 或 <code>Infinity</code>。数据源适配层应拒绝或按冻结的异常规则报告非法输入，不能无说明地转成 <code>null</code>。详细异常条目结构及过滤顺序在资源制作时冻结。</p>
+<p>数据源接口建议定义六项读取能力：空间、设备、最新点值、历史、原始报警、接入状态。业务服务依赖端口，不在前端直接请求 AIRIOT。实际 Java 方法签名在脚手架制作时冻结，所有章节随之更新。</p>
+<p>空间写入的错误语义也按教学合同统一：格式正确但引用的校园、楼栋或空间不存在，返回 404；空名称或不合法字段返回 400。现有参考 <code>CampusLocationService</code> 对部分不存在引用返回 400，移植为教学版时须连同测试改为上述规则。此差异不修改原平台，也不把名称判空等参数错误改成 404。</p>
+<h2 id="resource-api-contract-核心读取对象">核心读取对象</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>对象</th>
+<th>关键字段</th>
+<th>规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Space</td>
+<td>id、name、type、campusId、buildingId、floor</td>
+<td>映射字段可空，映射只存本地</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>id、tableId、name、category、spaceId、online、communicationTime、simulated、tags</td>
+<td>online 可为 null；category 为 environment/energy/facility/lighting</td>
+</tr>
+<tr>
+<td>Point</td>
+<td>deviceId、tableId、tagId、value、time、quality、unit</td>
+<td>value/time 可空；quality 为 fresh/stale/missing/invalid</td>
+</tr>
+<tr>
+<td>History</td>
+<td>source、deviceId、tagId、unit、from、to、observedAt、samples、truncated、issues</td>
+<td>samples 使用上述 HistorySample；原始 null 保留，不创建未采样时刻</td>
+</tr>
+<tr>
+<td>Capability</td>
+<td>roles、canRead、canControl、canAdmin、canAudit、canHandleAlarms、canAssignAlarms、canRunDemoScenarios</td>
+<td>基础教学中 canControl 一律 false</td>
+</tr>
+</tbody></table>
+</div><div class="code-example" data-language="json" data-purpose="数据示例"><div class="code-label" id="resource-api-contract-code-1"><span>数据示例</span><span>JSON · 可左右滚动</span></div><pre tabindex="0" aria-labelledby="resource-api-contract-code-1"><code class="language-json">{
+  &quot;code&quot;: 0,
+  &quot;message&quot;: &quot;ok&quot;,
+  &quot;data&quot;: {
+    &quot;source&quot;: &quot;TEACHING_MOCK&quot;,
+    &quot;deviceId&quot;: &quot;teaching_energy_01&quot;,
+    &quot;tagId&quot;: &quot;power&quot;,
+    &quot;unit&quot;: &quot;kW&quot;,
+    &quot;from&quot;: 1000,
+    &quot;to&quot;: 3000,
+    &quot;observedAt&quot;: 3000,
+    &quot;samples&quot;: [{&quot;time&quot;:1000,&quot;value&quot;:0},{&quot;time&quot;:3000,&quot;value&quot;:1.2}],
+    &quot;truncated&quot;: false,
+    &quot;issues&quot;: []
+  }
+}
+</code></pre></div>
+<p>上例时间为缩小的教学样例；实际数据使用真实格式的 epoch 毫秒。1000 与 3000 之间没有样本，图表不据此声称发生过 2000 时刻的测量；允许视觉连线时须保留采样语义，缺失或无效数据按断点处理。</p>
+<h2 id="resource-api-contract-接口模块">接口模块</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>主要接口</th>
+<th>学生任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能力</td>
+<td>GET /campus/capabilities</td>
+<td>服务端能力与前端入口一致</td>
+</tr>
+<tr>
+<td>监测</td>
+<td>GET /campus/overview、/spaces、/devices</td>
+<td>读取和聚合，实际数量与质量</td>
+</tr>
+<tr>
+<td>空间</td>
+<td>GET /campus/locations；POST /campus/locations/campuses、/buildings；PUT /campus/locations/spaces/{spaceId}</td>
+<td>仅管理员写、本地持久化与关联校验</td>
+</tr>
+<tr>
+<td>历史</td>
+<td>GET /campus/history</td>
+<td>deviceId/tagId/from/to 合法性、原始样本</td>
+</tr>
+<tr>
+<td>原始报警</td>
+<td>GET /campus/alarms</td>
+<td>只读，空列表不代表机制已验证</td>
+</tr>
+<tr>
+<td>事件</td>
+<td>GET /campus/alarm-cases 及 /{id}、/handlers；POST /{id}/assign、/start、/notes、/verify-recovery、/close</td>
+<td>状态、本人范围、版本和时间线</td>
+</tr>
+<tr>
+<td>演练</td>
+<td>GET /campus/demo/status；POST /campus/demo-alarm-scenarios/{scenario}/trigger；POST /campus/demo-alarm-events/{id}/recover</td>
+<td>仅本地 DEMO，触发/恢复仅管理员</td>
+</tr>
+<tr>
+<td>责任</td>
+<td>GET /campus/device-owners 及 /{deviceId}；PUT /campus/device-owners/{deviceId}</td>
+<td>有效负责人、版本和责任时间线</td>
+</tr>
+</tbody></table>
+</div><p>表中事件操作的 <code>/{id}</code> 均接在 <code>/campus/alarm-cases</code> 后；演练恢复接口的 id 也是 AlarmCase.id。第 04 章最小桩和后续实现须使用同一合同，不另建一套无法演进的接口。</p>
+<h2 id="resource-api-contract-角色矩阵">角色矩阵</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>ADMIN</th>
+<th>CAMPUS_MANAGER</th>
+<th>CAMPUS_VIEWER</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>读取校园与演练记录</td>
+<td>允许</td>
+<td>允许</td>
+<td>允许</td>
+</tr>
+<tr>
+<td>空间/责任登记、分派、演练触发及恢复</td>
+<td>允许</td>
+<td>拒绝</td>
+<td>拒绝</td>
+</tr>
+<tr>
+<td>开始、记录、核实和关闭</td>
+<td>所有合规事件</td>
+<td>仅本人已分派事件</td>
+<td>拒绝</td>
+</tr>
+<tr>
+<td>远端设备控制与外部通知</td>
+<td>关闭</td>
+<td>关闭</td>
+<td>关闭</td>
+</tr>
+</tbody></table>
+</div><p>角色资格以当前有效账户和启用角色为依据。实际认证组件可保留原系统更多管理员角色，但不改变以上课堂角色矩阵。禁用账户、撤销角色和对象范围检查必须在后端生效。</p>
+<h2 id="resource-api-contract-状态和并发">状态和并发</h2>
+<p>事件业务状态为 NEW、ASSIGNED、IN_PROGRESS、CLOSED；来源状态为 ACTIVE、RECOVERED、UNKNOWN，两类状态分别保存。触发场景创建独立 DEMO/LOCAL_DEMO 事件；有有效设备责任人时可以自动进入 ASSIGNED。</p>
+<p>关闭需同时满足：处理中；至少一条处置记录；演练来源已经恢复；服务端独立核实 PASS 且核实时间有效；有非空结论；操作者获准；expectedVersion 匹配。已关闭事件不可修改。重新分派未关闭事件回到 ASSIGNED，旧记录保留，新负责人重新开始。</p>
+<p><code>expectedVersion</code> 为非负 JSON 整数，不接受字符串或布尔值。写操作在同一数据库事务中锁定当前记录、核对版本、修改主记录并追加时间线；旧版本返回 409。该参考方案是行锁配合版本检查，不能在讲义中误称纯乐观锁更新。教师也可设计有充分测试的替代方案，但需统一合同和实现解释。</p>
+<p>版本字段仅适用于合同规定的事件更新与责任登记。场景触发为空 body 或 <code>{}</code>，创建版本为 1。版本匹配、未关闭且已经恢复的事件再次执行恢复，返回当前详情，不重复增加版本或时间线；关闭后的事件仍禁止修改。</p>
+<p>设备责任初始 version 为 0；修改后递增并保存时间线。责任人变更影响未来事件的自动分派，不改写已经生成事件的 assignee。并发冲突和时间线失败回滚需真实数据库证据。</p>
+<h2 id="resource-api-contract-教学参数与夹具基线">教学参数与夹具基线</h2>
+<p>以下是教学版设计值，不是对现有系统参数的描述。脚手架制作须实现并验证；若实测后调整，应先更新本表及相关测试，再进入正文扩写，避免各章自行决定。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>教学基线</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最新值刷新</td>
+<td>一轮完成后等待 15 秒再发下一轮；离页停止</td>
+</tr>
+<tr>
+<td>质量时钟</td>
+<td>后端使用可控教学时钟，前端显示结果，不自行改质量</td>
+</tr>
+<tr>
+<td>过期阈值</td>
+<td>合法采样距观察时间超过 60 秒为 stale，等于 60 秒仍 fresh</td>
+</tr>
+<tr>
+<td>未来时间</td>
+<td>超过观察时间 5 秒为 invalid；5 秒以内以时钟容差处理，保留原始采样时间</td>
+</tr>
+<tr>
+<td>缺失与无效</td>
+<td>值或时间缺失为 missing；非预期类型、非有限数值或非法时间为 invalid；不转换为零</td>
+</tr>
+<tr>
+<td>历史</td>
+<td>课堂默认 15 分钟/1 小时，最大跨度 6 小时，每次最多 1000 样本；截断标记必须准确</td>
+</tr>
+<tr>
+<td>第一条贯通</td>
+<td>teaching_space_01，teaching_env_01，teaching_energy_01</td>
+</tr>
+<tr>
+<td>温度巡查</td>
+<td>temperature-patrol 在教学版引用 teaching_env_01；不使用原演示项目设备 ID</td>
+</tr>
+<tr>
+<td>权限夹具</td>
+<td>至少 ADMIN、MANAGER A、MANAGER B、VIEWER 四个身份，三种角色</td>
+</tr>
+</tbody></table>
+</div><p>撤销管理资格的独立实验使用同一 ADMIN 教学身份的专用初始角色集合 <code>[ADMIN, CAMPUS_VIEWER]</code>。撤销 ADMIN 后仍有读取资格，预期读取 200、管理写入 403；实验结束恢复完整初始集合。此配置只服务于隔离教学夹具，不更改原系统角色，也不把“禁用账户”与“撤销角色”混为一项测试。A、B 保持管理人员身份，VIEWER 保持只读身份。</p>
+<p>完整空间与设备清单、每点单位和时间序列由教师资源包生成并冻结。缺失、无效等样例应独立设置，避免同一条样例同时触发多个条件而无法判断预期。</p>
+<h2 id="resource-api-contract-审计范围">审计范围</h2>
+<p>必修审计通过事件 timeline 和责任 timeline 展示 actor、action、time、version 等服务端事实。现有 <code>/campus/audit</code> 主要承载模拟开关操作，不能直接当成新课程所有业务的通用审计接口。若增加独立综合审计页，需另行定义来源及合同，作为进阶范围。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：contracts/教学接口约定.md</p></section>
+<section class="chapter resource-section" data-document="resource-assessment" aria-label="考核与验收"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-assessment">考核与验收</h1>
+<nav class="chapter-nav" aria-label="资料内定位：考核与验收"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-assessment-评价什么">评价什么</a></li><li><a href="#resource-assessment-评分建议">评分建议</a></li><li><a href="#resource-assessment-评分尺度与反馈写法">评分尺度与反馈写法</a></li><li><a href="#resource-assessment-必修验收基线">必修验收基线</a></li><li><a href="#resource-assessment-独立预期与避免同源错误">独立预期与避免同源错误</a></li><li><a href="#resource-assessment-证据等级">证据等级</a></li><li><a href="#resource-assessment-答辩题示例">答辩题示例</a></li><li><a href="#resource-assessment-最终交付清单">最终交付清单</a></li></ul></details></nav><h2 id="resource-assessment-评价什么">评价什么</h2>
+<p>评价学生能否把问题变成可验证的软件，以及是否理解并检查 AI 参与的改动。作品可采用不同 UI；大模型品牌、账号付费档位和是否完成 AIRIOT 接入不影响基础评分的公平性。</p>
+<h2 id="resource-assessment-评分建议">评分建议</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th align="right">分值</th>
+<th>主要评价内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求与设计</td>
+<td align="right">20</td>
+<td>范围和角色清楚；规则可验证；接口、数据和状态一致；决策有依据</td>
+</tr>
+<tr>
+<td>核心功能</td>
+<td align="right">25</td>
+<td>设备、监测、权限、事件、责任和时间线形成可演示业务闭环</td>
+</tr>
+<tr>
+<td>测试与交付</td>
+<td align="right">20</td>
+<td>边界和拒绝场景、真实数据库证据、缺陷回归、他人复现</td>
+</tr>
+<tr>
+<td>个人 AI 协作</td>
+<td align="right">15</td>
+<td>上下文准确；小任务分解；识别错误；核验及接力记录真实</td>
+</tr>
+<tr>
+<td>个人理解与答辩</td>
+<td align="right">20</td>
+<td>能解释代码、预测行为、定位故障并完成小变更</td>
+</tr>
+<tr>
+<td>合计</td>
+<td align="right">100</td>
+<td>前三项可用小组成果，后两项按个人评价</td>
+</tr>
+</tbody></table>
+</div><p>进阶作品在所属维度内体现深度，不另设只有付费或接入真实平台才能获得的分数。做完基础任务并有充分证据，可获得该维度满分。具体分数由任课教师按学校要求确定。</p>
+<h2 id="resource-assessment-评分尺度与反馈写法">评分尺度与反馈写法</h2>
+<p>每个维度按“证据是否充分、能否独立解释”判断，不按代码行数或聊天次数累加。下表提供评分锚点，教师可在维度分值内给分；它不是学校的统一等级或及格规定。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>证据充分时应看到</th>
+<th>部分完成的典型情况</th>
+<th>反馈应指出的下一步</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求与设计 20</td>
+<td>一条需求可追到合同、任务与验收，范围外功能说明清楚</td>
+<td>有图和术语，但找不到对应规则</td>
+<td>指出一条缺失的映射并要求补齐</td>
+</tr>
+<tr>
+<td>核心功能 25</td>
+<td>必修闭环可演示，成功与拒绝行为均符合规则</td>
+<td>成功页面可用，但关键失败路径缺失</td>
+<td>指明未满足的 AC 编号及最小修复</td>
+</tr>
+<tr>
+<td>测试与交付 20</td>
+<td>预期独立于实现；数据库证据和他人复现有记录</td>
+<td>只有截图或单元测试，结论却覆盖整个系统</td>
+<td>缩小结论并补缺少的证据层</td>
+</tr>
+<tr>
+<td>个人 AI 协作 15</td>
+<td>能展示一项采纳/修订/拒绝建议及人工核验依据</td>
+<td>只保存整段回答，不能指出自己如何判断</td>
+<td>选一个小改动，对照规则和实际结果说明</td>
+</tr>
+<tr>
+<td>个人理解与答辩 20</td>
+<td>能追踪数据、预测反例，并在限定范围完成小修改</td>
+<td>能背概念，无法定位对应文件或分支</td>
+<td>从一个输入沿代码解释到输出，再复核修改</td>
+</tr>
+</tbody></table>
+</div><p>例如，历史页截图有一条曲线只能支持“页面可显示曲线”。若缺少 null 样本表、有效零与断点对照，AC04 仍缺证据；教师应写明缺项，不能仅因页面漂亮判满分，也不能把其余已证明的成绩一并抹去。课内每章提交一份任务单，已有日志以路径引用，不重复制作多套报告。正文的练习用于选讲和自查，不全部叠加为必交作业。</p>
+<h2 id="resource-assessment-必修验收基线">必修验收基线</h2>
+<p>以下是学生未来必须执行的检查清单，当前文档包没有产生这些运行结果。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>验收场景</th>
+<th>通过条件</th>
+<th>建议证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC01</td>
+<td>教学数据读取</td>
+<td>数量来自实际结果；显示模拟来源；不依赖 AIRIOT 账号</td>
+<td>API 返回与页面</td>
+</tr>
+<tr>
+<td>AC02</td>
+<td>空间映射保存</td>
+<td>合法关联持久化，刷新保留；非法关联被拒绝</td>
+<td>请求、回读和失败记录</td>
+</tr>
+<tr>
+<td>AC03</td>
+<td>最新值与质量</td>
+<td>有效零、缺失、过期、无效可区分；未知通信状态不当作离线</td>
+<td>固定夹具与页面</td>
+</tr>
+<tr>
+<td>AC04</td>
+<td>历史曲线</td>
+<td>时间范围合法；同单位；不补零插值；空、失败、截断有说明</td>
+<td>样本表与曲线对照</td>
+</tr>
+<tr>
+<td>AC05</td>
+<td>角色授权</td>
+<td>三角色符合矩阵；隐藏按钮后直接写请求仍被后端拒绝</td>
+<td>API 拒绝测试</td>
+</tr>
+<tr>
+<td>AC06</td>
+<td>本人范围</td>
+<td>管理人员不能操作他人事件；失效身份不能继续修改</td>
+<td>身份与对象交叉用例</td>
+</tr>
+<tr>
+<td>AC07</td>
+<td>事件闭环</td>
+<td>分派、开始、记录、恢复、核实、关闭均满足规则</td>
+<td>刷新后的持久化时间线</td>
+</tr>
+<tr>
+<td>AC08</td>
+<td>版本冲突</td>
+<td>分别检验责任变更和事件 NOTE：两请求携带同一当前版本 n 并发提交，恰有一个成功、一个 409 VERSION_CONFLICT；版本只加一、各自时间线只增加一条</td>
+<td>两组真实 MySQL 并发记录；顺序提交旧版本不替代并发</td>
+</tr>
+<tr>
+<td>AC09</td>
+<td>事务回滚</td>
+<td>分别对事件更新与责任变更执行：请求确已更新主行、命中指定时间线故障并因异常回滚；主记录和时间线独立回读均不变</td>
+<td>两组各自的关联标识、更新行数、故障命中、事务失败及MySQL前后回读；各组正常对照；400/403/409提前拒绝不算回滚证据</td>
+</tr>
+<tr>
+<td>AC10</td>
+<td>责任变更</td>
+<td>负责人有效；新事件按新责任人分派；旧事件不被偷偷改派</td>
+<td>两次责任与事件对照</td>
+</tr>
+<tr>
+<td>AC11</td>
+<td>前端可靠性</td>
+<td>请求失败保留输入；不假报成功；刷新停止及加载状态正确</td>
+<td>浏览器操作与网络证据</td>
+</tr>
+<tr>
+<td>AC12</td>
+<td>他人复现</td>
+<td>同学按交付说明在独立环境完成启动与核心流程</td>
+<td>复现者签记与问题单</td>
+</tr>
+</tbody></table>
+</div><p>若关键授权、状态规则或回滚失败，核心功能验收记为待修复，不能用 UI 美观或更多功能抵消。教师根据该项实际完成程度评分；不虚构学校统一的“一票否决”政策。</p>
+<h2 id="resource-assessment-独立预期与避免同源错误">独立预期与避免同源错误</h2>
+<p>测试预期先来自需求规则和教师固定样例，再让 AI 协助生成测试代码。不能让 AI 根据有缺陷的实现推导同样错误的预期；也不能为了让测试全绿而删掉拒绝或冲突用例。</p>
+<p>每组至少呈现一个 AI 建议被修正或被拒绝的实例，说明证据和影响。若确实没有发现错误，可以审查教师准备的缺陷样例，不要求学生伪造一次 AI 失误。</p>
+<h2 id="resource-assessment-证据等级">证据等级</h2>
+<p>文档设计、编译构建、单元测试、真实数据库集成、API 验证、浏览器流程、外部接入是不同层次。报告分别列出执行日期、环境、版本、命令、实际结果和缺口。通过构建不能代替浏览器验收；mock 测试不能代替数据库锁和事务验证；接入状态为 connected 不能代替全部 AIRIOT 业务验收。</p>
+<p>证据只收集教学数据和脱敏日志。每位学生使用自己的教学账号，提交中不包含密码、会话 token、真实 API Key 或个人隐私数据。</p>
+<h2 id="resource-assessment-答辩题示例">答辩题示例</h2>
+<ol>
+<li>页面把空值显示成 0，会对使用者造成什么误解？指出代码中的对应处理。</li>
+<li>如果只把“关闭事件”按钮隐藏，为什么不能证明查看者没有关闭权限？</li>
+<li>两个管理员同时修改责任人，后端怎样判断冲突？前端遇到 409 后应该怎么做？</li>
+<li>来源恢复和事件关闭为什么分开？指出缺少处置记录时的拒绝条件。</li>
+<li>展示一次 AI 的建议、你的判断和实际测试；若换一个模型，哪些证据仍然有效？</li>
+<li>现场增加一项小筛选条件，说明需要更新哪些合同、代码和测试。</li>
+</ol>
+<h2 id="resource-assessment-最终交付清单">最终交付清单</h2>
+<p>源代码与锁文件；无真实秘密的配置样例；运行和停止说明；教学数据版本；需求、架构、接口及决策记录；测试与缺陷报告；AI 代表性协作记录；当前交接和已知限制。压缩包和仓库都可作为交付形式，采用哪种形式不影响验收标准。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：04-考核与验收.md</p></section>
+<section class="chapter resource-section" data-document="resource-class-workload" aria-label="48 学时实施分工"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-class-workload">48 学时实施分工</h1>
+<nav class="chapter-nav" aria-label="资料内定位：48 学时实施分工"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-class-workload-让学生做业务判断让重复配置有统一起点">让学生做业务判断，让重复配置有统一起点</a></li><li><a href="#resource-class-workload-一章只追踪一个任务单">一章只追踪一个任务单</a></li><li><a href="#resource-class-workload-超时先处理什么">超时先处理什么</a></li><li><a href="#resource-class-workload-转正式实验前要补齐的四项记录">转正式实验前要补齐的四项记录</a></li></ul></details></nav><p>本表把图文正文收敛为课堂可执行的任务顺序。每章仍是 1 学时理解与示范、2 学时局部实践、1 学时核验与接力。实际分钟数待学校课时制度确定；当前尚未经过课堂计时验证。教师资源列表示必须事先制作并验证的材料，不表示这些材料已经交付。</p>
+<h2 id="resource-class-workload-让学生做业务判断让重复配置有统一起点">让学生做业务判断，让重复配置有统一起点</h2>
+<p>学生学过的语言可能不是 Java 或 JavaScript。课前用变量、条件、函数、数组四个小题了解基础；进入相关章节时再用正文短例解释 JSON、类型、组件和请求。不能把“学过一门语言”理解为已经掌握整个前后端框架，也不另加一门隐形的课后必修课。</p>
+<p>开课准备阶段完成工具和资源预检。第 04 章处理已核对环境中的局部排障，不承接全班从零安装所有依赖的工作。若预检未完成，教师先处理资源条件，不能以缺少未提供资源扣学生工程实现分。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>教师预制或承接材料</th>
+<th>学生课内主要修改</th>
+<th>本章结束时的最小证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>本章短例、离线缺陷回答</td>
+<td>修订一份台账需求和一次 AI 反馈</td>
+<td>三态判断、采纳/拒绝理由、接力记录</td>
+</tr>
+<tr>
+<td>02</td>
+<td>范围、角色及任务卡样例</td>
+<td>写一个完整故事、反例与相邻小任务</td>
+<td>需求—验收—任务对应；其余故事用模板评审</td>
+</tr>
+<tr>
+<td>03</td>
+<td>全局架构/ER/状态图和读取 JSON</td>
+<td>标注一空间两设备响应，说明读取链路与字段</td>
+<td>一份读合同；能逐层找到设备名和 null</td>
+</tr>
+<tr>
+<td>04</td>
+<td>已验证环境、认证、最小读取桩与页面 TODO</td>
+<td>接入一次设备读取及显示，观察一次失败并恢复</td>
+<td>true/null 设备链路、Network 和局部差异</td>
+</tr>
+<tr>
+<td>05</td>
+<td>控制器/服务/Mapper 空模板、迁移与测试入口</td>
+<td>读取查询、创建校验、本地空间关系校验</td>
+<td>正常写入后回读；非法关联和只读身份被拒绝</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Vue 页面/路由/请求与类型基础</td>
+<td>筛选、三态显示、空/失败分支和详情定位</td>
+<td>UI 自主设计；结果 ID、三态与清除操作正确</td>
+</tr>
+<tr>
+<td>07</td>
+<td>可控时钟、单点样本、图表与请求生命周期骨架</td>
+<td>质量解释、原始数据映射、断点和结果接收判断</td>
+<td>一类曲线对应原始表；零/空、失败和离页可区分</td>
+</tr>
+<tr>
+<td>08</td>
+<td>认证、四身份、角色恢复工具、可控响应延迟</td>
+<td>能力严格布尔、后端授权、旧响应拒收规则</td>
+<td>直接越权请求拒绝；跨身份和同身份竞态记录</td>
+</tr>
+<tr>
+<td>09</td>
+<td>七类动作路由/DTO/事务模板、独立规则夹具</td>
+<td>状态、本人范围、关闭条件、版本冲突分支</td>
+<td>正常闭环账本；可达反例和规则夹具分开记录</td>
+</tr>
+<tr>
+<td>10</td>
+<td>责任表初始行、持久化与时间线模板</td>
+<td>责任人资格、版本检查、未来自动分派判断</td>
+<td>E1 不暗改派、E2 按新负责人分派及历史</td>
+</tr>
+<tr>
+<td>11</td>
+<td>真 MySQL、双请求屏障、指定故障注入模板</td>
+<td>填测试前提/断言，定位并修复一个缺陷</td>
+<td>两类并发、事务回滚因果记录及回归结果</td>
+</tr>
+<tr>
+<td>12</td>
+<td>既有构建入口、交付清单和筛选变更需求</td>
+<td>整理交付、完成有限变更、交叉复现及解释</td>
+<td>同伴复现、变更回归和个人答辩记录</td>
+</tr>
+</tbody></table>
+</div><p>第 03 章的 ER、事件状态、版本与事务用于认识后续对象，不要求此时实现或重画全部设计。第 09、11 章再完成对应实现与证据。第 04 章的独立函数三态练习与页面 true/null 观察分开，完整页面三态在第 06 章验证。这样安排降低首次学习负担，不减少最终业务标准。</p>
+<h2 id="resource-class-workload-一章只追踪一个任务单">一章只追踪一个任务单</h2>
+<p>使用<a href="#resource-class-task" data-link-kind="reader-section">课堂任务单</a>保存本章目标、文件变化、输入、预期与实际。截图、日志和测试输出只引用已有证据路径。每个主要任务遵循“先预测一个输入 → 修改一个局部 → 看实际结果 → 修正或交接”。先走最小成功路径，再验证一个明确的拒绝或异常；后面的用例逐步复用同一基线。</p>
+<p>教师展示骨架时应打开学生要修改的真实文件，指出已有部分、TODO、调用入口和检查入口。拟定文件名必须在资源包发布时映射到真实路径。若找不到入口，应停止让 AI 猜路径，由教师修正资源映射表。</p>
+<p>两人一组时，在模块二轮换实现与审查，模块三各自解释一个判断和一条证据。共享日志不等于共享理解；个人评分仍按自己的判断、修改和答辩。独立完成者采用同一任务和验收标准。</p>
+<h2 id="resource-class-workload-超时先处理什么">超时先处理什么</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>本章处理</th>
+<th>保留的关键要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>环境或依赖未就绪</td>
+<td>登记资源阻塞，使用纸面/独立短例练习；教师修复资源</td>
+<td>不把纸面推演记成实验通过</td>
+</tr>
+<tr>
+<td>重复配置占去实践时间</td>
+<td>提供经过验证的请求、路由、表单或测试骨架，标明来源</td>
+<td>业务规则、学生 TODO 和人工解释仍由学生完成</td>
+</tr>
+<tr>
+<td>UI 美化耗时</td>
+<td>先使用普通表格与文字状态，再做视觉调整</td>
+<td>来源、空值、失败、权限与核心交互</td>
+</tr>
+<tr>
+<td>复杂内容同时出现</td>
+<td>先完成本章任务卡，再读预告和扩展</td>
+<td>后续章节仍按 AC 完成状态、并发和回滚</td>
+</tr>
+<tr>
+<td>临近结束还没通过</td>
+<td>保存当前差异和失败证据，明确下一检查；使用救援检查点时注明</td>
+<td>不拿完整答案覆盖后声称独立完成</td>
+</tr>
+</tbody></table>
+</div><p>课后以整理和自查为主；正文的练习与扩展不全部转成新增必交作业。如果试讲发现必修仍需大量课外编码，应减少重复实现、改进教师模板并重新计时。不能仅修改文档为“4 学时”就宣布负担已验证。</p>
+<h2 id="resource-class-workload-转正式实验前要补齐的四项记录">转正式实验前要补齐的四项记录</h2>
+<ol>
+<li>**入口映射：**每个学生 TODO 对应真实文件、起始检查点、目标检查点和运行入口。</li>
+<li>**输入与答案：**固定数据、故障前提、预测结果与教师实测结果分栏；正文示例不直接填入实际结果。</li>
+<li>**耗时记录：**每个模块实际用时、卡点和教师介入次数；新手复现与作者自测分开。</li>
+<li>**资源恢复：**每组数据和账号怎样恢复到本章起点，恢复只作用于该组；证据保留后再恢复。</li>
+</ol>
+<p>这些记录完成前，当前版本仍是经第二轮审校的教材稿。配套代码、实验验证和教案转换分别推进，不能互相替代。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：appendices/48学时实施分工.md</p></section>
+<section class="chapter resource-section" data-document="resource-class-task" aria-label="课堂任务单"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-class-task">课堂任务单</h1>
+<nav class="chapter-nav" aria-label="资料内定位：课堂任务单"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-class-task-本次只完成什么">本次只完成什么</a></li><li><a href="#resource-class-task-先预测再执行">先预测，再执行</a></li><li><a href="#resource-class-task-ai-建议和我的决定">AI 建议和我的决定</a></li><li><a href="#resource-class-task-结束时交给下一位">结束时交给下一位</a></li></ul></details></nav><p>复制到本组作业目录后填写，一章一份。尖括号是待填内容，不是已经完成的结果；已有证据引用路径即可。</p>
+<h2 id="resource-class-task-本次只完成什么">本次只完成什么</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>学生填写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>章节、姓名/教学代号、日期</td>
+<td>&lt;填写&gt;</td>
+</tr>
+<tr>
+<td>任务与对应需求/验收</td>
+<td>&lt;一个小目标；R/AC 编号或前置设计制品&gt;</td>
+</tr>
+<tr>
+<td>起始材料与资源版本</td>
+<td>&lt;教师检查点、合同版本、已有文件&gt;</td>
+</tr>
+<tr>
+<td>我可以修改的文件与 TODO</td>
+<td>&lt;实际路径与一处业务判断；不是整个项目&gt;</td>
+</tr>
+<tr>
+<td>本轮不做的内容</td>
+<td>&lt;无关模块或下一章任务&gt;</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-class-task-先预测再执行">先预测，再执行</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>用例</th>
+<th>给定身份/对象/输入</th>
+<th>我预测的结果及依据</th>
+<th>实际结果与证据</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正常路径</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;修改前填写&gt;</td>
+<td>&lt;执行后填写&gt;</td>
+<td>未执行</td>
+</tr>
+<tr>
+<td>一个边界或拒绝</td>
+<td>&lt;只改变一个目标条件&gt;</td>
+<td>&lt;修改前填写&gt;</td>
+<td>&lt;执行后填写&gt;</td>
+<td>未执行</td>
+</tr>
+</tbody></table>
+</div><p>判断只填“通过、失败、未执行、资源阻塞”。只有与本次实际执行对应的日志、回读或页面才能写入实际列。并发与回滚按第 11 章要求另附证据，不能用普通成功截图代替。</p>
+<h2 id="resource-class-task-ai-建议和我的决定">AI 建议和我的决定</h2>
+<ul>
+<li>平台、日期、显示型号：&lt;未显示时如实写未显示；离线材料注明来源&gt;</li>
+<li>我发出的目标与最小上下文：&lt;提示文字或本地路径&gt;</li>
+<li>一条具体建议：&lt;原文短摘或定位&gt;</li>
+<li>我的决定：&lt;采纳/修改/拒绝及合同、反例或实际结果依据&gt;</li>
+<li>本次改动：&lt;文件、差异与提交；没有代码改动时写明文档制品&gt;</li>
+</ul>
+<h2 id="resource-class-task-结束时交给下一位">结束时交给下一位</h2>
+<ul>
+<li>已证明：&lt;限定对象和层次&gt;</li>
+<li>尚未证明/卡点：&lt;不要只写“有问题”&gt;</li>
+<li>下一次只检查：&lt;一个动作、所需材料、预期能排除什么&gt;</li>
+<li>同伴复述/个人解释：&lt;能否说清输入如何到达结果；需要补哪一处&gt;</li>
+<li>教师介入或救援检查点：&lt;如实记录；未使用写未使用&gt;</li>
+</ul>
+<p>样例写法：“正常请求已回读两设备，页面保留 true/null；错误路径返回 HTML，页面仍显示成功，因此本章未通过。下一步检查请求封装是否验证响应类型。”这是说明记录方式的构造案例，不是本课程已执行的结果。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：templates/课堂任务单.md</p></section>
+<section class="chapter resource-section" data-document="resource-ai-task" aria-label="AI 任务卡模板"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-ai-task">AI 任务卡模板</h1>
+<nav class="chapter-nav" aria-label="资料内定位：AI 任务卡模板"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-ai-task-基本信息">基本信息</a></li><li><a href="#resource-ai-task-本次只做什么">本次只做什么</a></li><li><a href="#resource-ai-task-验收条件">验收条件</a></li><li><a href="#resource-ai-task-发给网页-ai-的要求">发给网页 AI 的要求</a></li><li><a href="#resource-ai-task-实施后补填">实施后补填</a></li></ul></details></nav><p>复制到学生教学工程的 <code>docs/CURRENT_TASK.md</code>，或作为课程编写的一次任务。尖括号内容需填写；保留“不确定”比编造条件更好。</p>
+<h2 id="resource-ai-task-基本信息">基本信息</h2>
+<ul>
+<li>任务编号：&lt;编号&gt;</li>
+<li>对应章节与需求：&lt;章节、需求ID&gt;</li>
+<li>当前代码或源稿版本：&lt;实际版本标识&gt;</li>
+<li>操作者与审查者：&lt;姓名或教学代号&gt;</li>
+<li>平台、日期、显示型号：&lt;实际值；未显示写未显示&gt;</li>
+</ul>
+<h2 id="resource-ai-task-本次只做什么">本次只做什么</h2>
+<p>目标：&lt;一个可检查的变化&gt;</p>
+<p>为什么需要：&lt;业务问题或学习目标&gt;</p>
+<p>已知规则：&lt;合同片段和必要说明&gt;</p>
+<p>输入文件：&lt;路径、作用、内容或附件编号&gt;</p>
+<p>允许修改：&lt;文件与范围&gt;</p>
+<p>不在本次范围：&lt;无关功能、依赖升级、外部接入等&gt;</p>
+<h2 id="resource-ai-task-验收条件">验收条件</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>输入或前提</th>
+<th>必须观察到的结果</th>
+<th>验证方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正常</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+</tr>
+<tr>
+<td>失败</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+</tr>
+<tr>
+<td>边界</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-ai-task-发给网页-ai-的要求">发给网页 AI 的要求</h2>
+<p>请先复述目标，指出信息缺口，列出修改文件和理由。我核对后，按文件提供最小实现与验证步骤。不要添加未约定接口或依赖；无法读取我的电脑，不要声称运行过。遇到业务规则不明先问，不以猜测降低验收标准。</p>
+<h2 id="resource-ai-task-实施后补填">实施后补填</h2>
+<ul>
+<li>AI 建议：&lt;简要记录&gt;</li>
+<li>我的判断及修改：&lt;采纳、修改或拒绝的理由&gt;</li>
+<li>实际执行目录和命令：&lt;真实值&gt;</li>
+<li>实际结果及证据路径：&lt;真实值&gt;</li>
+<li>未验证内容：&lt;填写&gt;</li>
+<li>下次任务：&lt;填写&gt;</li>
+</ul>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：templates/AI任务卡.md</p></section>
+<section class="chapter resource-section" data-document="resource-ai-handoff" aria-label="AI 接力包模板"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-ai-handoff">AI 接力包模板</h1>
+<nav class="chapter-nav" aria-label="资料内定位：AI 接力包模板"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-ai-handoff-稳定上下文">稳定上下文</a></li><li><a href="#resource-ai-handoff-当前状态">当前状态</a></li><li><a href="#resource-ai-handoff-下一步">下一步</a></li><li><a href="#resource-ai-handoff-交给下一位-ai-的开场语">交给下一位 AI 的开场语</a></li><li><a href="#resource-ai-handoff-接力记录">接力记录</a></li></ul></details></nav><p>本模板可用于学生开发或课程材料编写。不要把两者的完成状态混为一谈。每次会话结束更新本文件，下一会话先读它。</p>
+<h2 id="resource-ai-handoff-稳定上下文">稳定上下文</h2>
+<ul>
+<li>工作类型：&lt;学生项目开发 / 教材编写&gt;</li>
+<li>工作目录：&lt;独立工程或本课程目录&gt;</li>
+<li>当前目标：&lt;一句话&gt;</li>
+<li>已确认条件：&lt;学生基础、48学时、网页AI、UI自由等，或项目规则&gt;</li>
+<li>技术栈与合同版本：&lt;真实值&gt;</li>
+<li>必须先读：&lt;本次相关文档&gt;</li>
+<li>不可改动：&lt;其他工程、原始文件、共享环境等&gt;</li>
+</ul>
+<h2 id="resource-ai-handoff-当前状态">当前状态</h2>
+<p>已实际完成：&lt;列文件和具体变化&gt;</p>
+<p>实际验证：&lt;目录、命令、日期、结果、证据&gt;</p>
+<p>仅提出但未实施：&lt;建议和设计&gt;</p>
+<p>已知问题：&lt;复现方式、影响、临时处理&gt;</p>
+<p>尚缺信息或资源：&lt;确实需要确认的内容&gt;</p>
+<h2 id="resource-ai-handoff-下一步">下一步</h2>
+<p>下一件事：&lt;单个明确任务&gt;</p>
+<p>允许修改文件：&lt;清单&gt;</p>
+<p>完成条件：&lt;可观察的验收&gt;</p>
+<p>涉及合同变更：&lt;否 / 具体影响章节和实现&gt;</p>
+<h2 id="resource-ai-handoff-交给下一位-ai-的开场语">交给下一位 AI 的开场语</h2>
+<div class="code-example prose-example" data-language="text" data-purpose="网页 AI 提示"><div class="code-label" id="resource-ai-handoff-code-1"><span>网页 AI 提示</span><span>文本 · 自动折行</span></div><pre aria-labelledby="resource-ai-handoff-code-1"><code class="language-text">请先阅读这份交接和列出的文件，然后复述已完成、待验证及下一任务。
+不要仅因文件存在就认定其已通过测试。
+若你只能通过网页聊天获取代码，请列出需要我粘贴的文件，
+不要假定你能读取磁盘或执行命令。
+若这是教材编写，只有实操核验后才可把状态从 WRITTEN
+升为 LAB_VERIFIED；不可提前生成“已通过”的实验报告。
+确认理解后只推进“下一件事”，保留不属于本任务的内容。
+</code></pre></div>
+<h2 id="resource-ai-handoff-接力记录">接力记录</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>版本</th>
+<th>本次变化</th>
+<th>实际检查</th>
+<th>未解决项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+<td>&lt;填写&gt;</td>
+</tr>
+</tbody></table>
+</div><p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：templates/AI接力包.md</p></section>
+<section class="chapter resource-section" data-document="resource-traceability" aria-label="需求与测试追踪表"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-traceability">需求与测试追踪表</h1>
+<nav class="chapter-nav" aria-label="资料内定位：需求与测试追踪表"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-traceability-单条用例写法">单条用例写法</a></li></ul></details></nav><p>这是可复制的课程基线。学生可细分编号，但应保留和课程验收的映射。下表为待实现、待验证任务，不代表已经通过。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>需求ID</th>
+<th>需求</th>
+<th>主要章节</th>
+<th>验收编号</th>
+<th>代码/文档位置</th>
+<th>实际结果/证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R01</td>
+<td>按设备和空间浏览教学设备</td>
+<td>05、06</td>
+<td>AC01</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>管理员保存校园楼栋与空间映射</td>
+<td>05</td>
+<td>AC02</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>正确表达最新值、来源、时间与质量</td>
+<td>07</td>
+<td>AC03、AC11</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>查询原始历史并显示限制</td>
+<td>07</td>
+<td>AC04</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>后端强制三角色及本人范围</td>
+<td>08、09</td>
+<td>AC05、AC06</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>合规完成演练事件并持久化时间线</td>
+<td>09、11</td>
+<td>AC07、AC08、AC09</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>责任登记影响未来自动分派且保留历史</td>
+<td>10、11</td>
+<td>AC08、AC09、AC10</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>页面在错误与冲突时保留准确状态</td>
+<td>06—11</td>
+<td>AC11</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>他人能按说明复现与运行核心业务</td>
+<td>12</td>
+<td>AC12</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>学生可解释并核验 AI 参与的改动</td>
+<td>全程、12</td>
+<td>个人AI记录与答辩</td>
+<td>待填写</td>
+<td>待执行</td>
+</tr>
+</tbody></table>
+</div><h2 id="resource-traceability-单条用例写法">单条用例写法</h2>
+<ul>
+<li>用例ID与需求ID：&lt;填写&gt;</li>
+<li>给定：&lt;账号、对象、状态、版本、数据&gt;</li>
+<li>当：&lt;一次清楚动作&gt;</li>
+<li>则：&lt;响应、持久状态、页面各自预期&gt;</li>
+<li>预期依据：&lt;合同或规则位置&gt;</li>
+<li>执行条件：&lt;环境、版本、依赖&gt;</li>
+<li>实际执行与证据：&lt;执行后填写&gt;</li>
+<li>结果：&lt;通过 / 失败 / 未执行 / 环境阻塞&gt;</li>
+</ul>
+<p>新增需求先更新范围与依赖，再填写预期；修复失败不得倒改需求来制造通过。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：templates/需求与测试追踪表.md</p></section>
+<section class="chapter resource-section" data-document="resource-web-ai" aria-label="Qwen 与网页工具说明"><p class="chapter-meta">常用资料 · 学习资料 · 实验未验证</p><h1 id="resource-web-ai">Qwen 与网页工具说明</h1>
+<nav class="chapter-nav" aria-label="资料内定位：Qwen 与网页工具说明"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-web-ai-区分产品模型与工具">区分产品模型与工具</a></li><li><a href="#resource-web-ai-学生如何开始">学生如何开始</a></li><li><a href="#resource-web-ai-一次课堂工具检查">一次课堂工具检查</a></li><li><a href="#resource-web-ai-可选接入路线">可选接入路线</a></li></ul></details></nav><p>核对日期：2026-10-18。本课程用网页对话支持软件工程学习，以 Qwen3 为模型案例；工具和型号可变，项目合同、学生理解和运行证据保持稳定。</p>
+<h2 id="resource-web-ai-区分产品模型与工具">区分产品模型与工具</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th>课程用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>千问/通义网页</td>
+<td>面向用户的聊天产品</td>
+<td>学生实际操作入口</td>
+</tr>
+<tr>
+<td>Qwen3</td>
+<td>阿里 Qwen 团队的通用模型系列</td>
+<td>讲解提示、上下文、生成与核验</td>
+</tr>
+<tr>
+<td>Qwen3-Coder</td>
+<td>面向代码的模型系列</td>
+<td>比较能力的进阶例子</td>
+</tr>
+<tr>
+<td>Qwen Code</td>
+<td>编程工具，能够结合文件与命令工作</td>
+<td>仅选学，不是网页主线的前置条件</td>
+</tr>
+</tbody></table>
+</div><p>型号与系列含义参考 <a href="https://github.com/QwenLM/Qwen3" target="_blank" rel="noopener">Qwen3 官方仓库</a>、<a href="https://github.com/QwenLM/Qwen3-Coder" target="_blank" rel="noopener">Qwen3-Coder 官方仓库</a> 和 <a href="https://qwenlm.github.io/qwen-code-docs/zh/users/quickstart/" target="_blank" rel="noopener">Qwen Code 官方说明</a>。不将“使用千问网页”写成“固定使用某个 Qwen3 型号”。</p>
+<h2 id="resource-web-ai-学生如何开始">学生如何开始</h2>
+<p>使用 <a href="https://www.qianwen.com/" target="_blank" rel="noopener">千问官方网页</a> 或学校选定的其他国内聊天工具，按产品正常流程登录。教师在开课前用学生同等账号条件检查校园网络、代码块复制和常规任务可用性。</p>
+<p>实际模型选择、额度、附件和联网功能以学生账号界面为准。记录平台、日期、界面显示的模型名；没有显示就写“未显示”。课程不承诺永久免费、无限额度或每人可选择 Qwen3-Coder，也不要求学生购买 API。</p>
+<p>网页 AI 可能无法查看本地文件、运行代码或保持长期上下文。主线始终用“复制上下文 → 生成局部改动 → 本地执行 → 回传真实结果”的方式，并按 <a href="../../../03-AI%E5%8D%8F%E4%BD%9C%E4%B8%8E%E6%8E%A5%E5%8A%9B%E8%A7%84%E8%8C%83.md" data-link-kind="course-package">协作规范</a><span class="source-note">需完整资料包</span> 保存接力记录。</p>
+<h2 id="resource-web-ai-一次课堂工具检查">一次课堂工具检查</h2>
+<p>让学生把一段不含个人信息的简单函数和两个输入发给模型，请其预测结果、指出边界并建议测试；学生在本地运行，对照预测。随后再发一个真实错误，要求模型先说明原因，再提出最小修复。这个练习同时检查账号可用性和学生对“回答不等于执行”的理解。</p>
+<p>若遇到限额或网络故障，使用教师预备的离线“模型回答、代码片段、错误日志”继续进行审查与调试，不影响核心目标。学生不能为解决额度问题将同学账号或密钥写进项目。</p>
+<h2 id="resource-web-ai-可选接入路线">可选接入路线</h2>
+<p>后续具备资源时可了解百炼兼容 API、Qwen Code 或本地模型，但需要单独核实访问条件、费用和运行要求。这些路线不应出现在必修实验的隐藏步骤中。<a href="https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope" target="_blank" rel="noopener">百炼官方兼容接口说明</a> 可作为扩展阅读；具体模型标识和端点以当次官方配置为准。</p>
+<p>不用模型排行榜替代课堂验证。比较两个模型时，使用相同上下文、任务与独立验收，报告正确性、修复轮次、遗漏和学生理解成本，不凭一次回答给整个模型系列下结论。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：appendices/Qwen与网页工具说明.md</p></section>
+<section class="chapter resource-section" data-document="resource-teacher-resources" aria-label="教师资源制作清单"><p class="chapter-meta">常用资料 · 教师资源 · 实验未验证</p><h1 id="resource-teacher-resources">教师资源制作清单</h1>
+<nav class="chapter-nav" aria-label="资料内定位：教师资源制作清单"><details><summary>资料内定位<span class="nav-hint">展开后选择本次内容</span></summary><ul><li><a href="#resource-teacher-resources-开课前必需资源">开课前必需资源</a></li><li><a href="#resource-teacher-resources-教师保留与学生获得的内容">教师保留与学生获得的内容</a></li><li><a href="#resource-teacher-resources-待实测的运行约束">待实测的运行约束</a></li><li><a href="#resource-teacher-resources-资源版本记录">资源版本记录</a></li></ul></details></nav><p>以下是从课程设计进入可授课实验的制作任务，当前状态均为待制作或待验证。现有线上平台可供教师理解目标，不能直接充当学生共享开发环境。</p>
+<h2 id="resource-teacher-resources-开课前必需资源">开课前必需资源</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>资源</th>
+<th>制作要求</th>
+<th>验证条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T01</td>
+<td>独立工程骨架</td>
+<td>Vue/TS 与 Java/Spring Boot；固定依赖和版本说明</td>
+<td>干净环境能安装、构建和启动</td>
+</tr>
+<tr>
+<td>T02</td>
+<td>身份基础</td>
+<td>标准认证组件、三类教学账号、无真实凭据</td>
+<td>401、403、禁用与角色变更路径可测</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>数据库环境</td>
+<td>每组隔离、可复现的 MySQL 与迁移、无共享生产连接</td>
+<td>重建、持久化和清理范围明确</td>
+</tr>
+<tr>
+<td>T04</td>
+<td>教学数据源</td>
+<td>显式 TEACHING_MOCK、固定种子、可控时钟</td>
+<td>无 AIRIOT 账号也能读取数据</td>
+</tr>
+<tr>
+<td>T05</td>
+<td>数据与故障夹具</td>
+<td>正常、空、缺失、无效、过期、超时、部分失败</td>
+<td>用固定输入得到可核对输出</td>
+</tr>
+<tr>
+<td>T06</td>
+<td>业务模块模板</td>
+<td>空模块、通用 DTO/请求样式、事务和表单示范</td>
+<td>学生能专注业务判断，不陷入重复配置</td>
+</tr>
+<tr>
+<td>T07</td>
+<td>测试工具</td>
+<td>JUnit/Vitest入口、API请求、并发屏障、回滚注入</td>
+<td>真 MySQL 结果可独立回读</td>
+</tr>
+<tr>
+<td>T08</td>
+<td>阶段检查点</td>
+<td>M1—M5对应代码与文档，教师参考答案单独存放</td>
+<td>每个检查点可复现且变更清楚</td>
+</tr>
+<tr>
+<td>T09</td>
+<td>离线 AI 材料</td>
+<td>示例回答、缺陷代码、错误日志及参考评审</td>
+<td>无模型网络时仍可完成审查任务</td>
+</tr>
+<tr>
+<td>T10</td>
+<td>平台账号预检</td>
+<td>学生同等条件的网页访问与代码复制测试</td>
+<td>不依赖付费/API/附件高级功能</td>
+</tr>
+</tbody></table>
+</div><p>第二轮补充的具体资源要求如下。它们细化 T01—T09，并未将资源状态改为已制作。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>对应资源/章节</th>
+<th>必须冻结的具体内容</th>
+<th>应保存的预检记录</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T01/T06 · 04—12</td>
+<td>每章起始检查点、学生 TODO 实际路径、教师现成部分、运行/检查入口</td>
+<td>与各章“本章任务卡”逐一映射；不存在的路径不得发布</td>
+</tr>
+<tr>
+<td>T04/T05 · 04/06</td>
+<td>首次读取 true/null 两设备；第06章独立 false 夹具，避免把纯函数练习当页面证据</td>
+<td>同一 API 到页面的三态记录，明确何时切换夹具</td>
+</tr>
+<tr>
+<td>T04/T05 · 07</td>
+<td>教学 HistorySample 的可空 value（Java Double / TS number|null）、四样本断点、可控时钟</td>
+<td>原始表与图一致；零保留、null 断开；与原系统类型差异明确</td>
+</tr>
+<tr>
+<td>T06 · 07</td>
+<td>单点图表、请求超时/取消和生命周期基础</td>
+<td>学生只补数据/状态判断；最新值和历史各自失败可控</td>
+</tr>
+<tr>
+<td>T02/T05 · 08</td>
+<td>撤权夹具 ADMIN+CAMPUS_VIEWER 及原角色集合恢复；跨身份/同身份请求可控延迟</td>
+<td>读取200/写入403；旧响应的释放次序与拒收结果；禁用账户另测</td>
+</tr>
+<tr>
+<td>T05/T06 · 09</td>
+<td>正常 API 可达的反例；失序时间等独立规则夹具</td>
+<td>每个夹具只改变目标条件；没有新增任意篡改业务字段的公开入口</td>
+</tr>
+<tr>
+<td>T07 · 11</td>
+<td>责任A/B与事件双NOTE共享并发屏障模板</td>
+<td>两组同版本真实并发；各自一成功一409，版本及时间线只增一</td>
+</tr>
+<tr>
+<td>T07 · 11</td>
+<td>请求关联标识、主行已更新、指定时间线故障命中、事务失败观察点</td>
+<td>前提失败与注入回滚可区分；独立连接回读及正常对照</td>
+</tr>
+<tr>
+<td>T05 · 12</td>
+<td>分页夹具：全部事件可翻页、IN_PROGRESS 不足一页、另一合法状态可翻页</td>
+<td>后续页切换状态与带state刷新均回到skip=0，不误报空列表</td>
+</tr>
+<tr>
+<td>T08 · 全程</td>
+<td>学生基线、救援检查点、教师参考答案分别标记</td>
+<td>说明使用条件与恢复范围，不用成品掩盖学生未完成部分</td>
+</tr>
+</tbody></table>
+</div><p>具体课内分工见<a href="#resource-class-workload" data-link-kind="reader-section">48学时实施分工</a>。这些骨架减少重复配置，不代替学生实现授权、状态与关闭判断、版本冲突处理、数据展示和测试断言。</p>
+<h2 id="resource-teacher-resources-教师保留与学生获得的内容">教师保留与学生获得的内容</h2>
+<p>学生获得起始骨架、合同、模拟数据、空模块、测试模板和逐章任务；教师保留完整参考实现、典型缺陷答案与评分依据。关键业务逻辑不能全部预填，至少给学生保留接口校验、查询与映射、UI 状态、业务授权、关闭门槛、版本处理和责任规则的实际实现工作。</p>
+<p>共用表单、数据库连接、认证底层等重复配置可以提供。第 09 章需要统一动作与事务框架、第 11 章需要可直接使用的并发和故障注入模板，以使 4 学时集中在规则实现与证据解释。若试做仍超时，应进一步缩减页面数量和重复代码，不削弱关键工程验收。</p>
+<h2 id="resource-teacher-resources-待实测的运行约束">待实测的运行约束</h2>
+<ul>
+<li>目标 Windows/macOS 环境、JDK 与 Node 版本是否统一可用。</li>
+<li>学生能否安装依赖，机房是否允许容器，数据库采用本地还是教师隔离环境。</li>
+<li>认证基础是否仍需 Redis，所需服务如何随脚手架启动和停止。</li>
+<li>每组端口、数据库、种子和重置工具是否隔离；清理操作仅作用于本组教学数据。</li>
+<li>依赖下载与网页 AI 限额问题是否有可用的离线材料和镜像安排。</li>
+</ul>
+<p>这些事项须在制作脚手架时确认并实测；当前大纲不假定学校设备已有某个工具，也不把现有 macOS 脚本分发为跨平台方案。</p>
+<h2 id="resource-teacher-resources-资源版本记录">资源版本记录</h2>
+<p>每个资源包记录资源版本、源代码标识、依赖版本、适用章节、运行环境、实际验证日期和已知问题。课程正文和教案引用该版本；资源变更后重跑受影响实验并更新截图及错误说明，保留旧版追踪信息。</p>
+<p class="chapter-footer"><a href="#contents">返回阅读目录</a> · <a href="#resource-contents">返回资料目录</a> · 源稿：appendices/教师资源制作清单.md</p></section><section class="figure-index" id="figure-index"><h2>图表目录</h2><p>图像均为教学示意；PNG 供直接阅读，SVG 保留矢量文字与图形。</p><ol><li><a href="#fig-shared-02-网页AI协作">公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。</a></li></ol></section><footer class="book-footer">V0.3 · 第二轮修订 · 版本状态：ILLUSTRATION_PREPARATION · lab_verified=false。此状态不因图文渲染成功而改变。</footer></main></div><a class="back-to-top" href="#contents">回到目录</a><script>document.querySelectorAll('[data-desktop-open]').forEach(function(el){el.open=window.matchMedia('(min-width:901px)').matches});document.addEventListener('click',function(event){var a=event.target.closest('a[href^="#"]');if(!a)return;var id=decodeURIComponent(a.getAttribute('href').slice(1));var target=document.getElementById(id);if(target){for(var p=target.parentElement;p;p=p.parentElement){if(p.tagName==='DETAILS')p.open=true}if(target.tagName==='DETAILS')target.open=true}});</script></body></html>

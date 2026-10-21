@@ -1,0 +1,46 @@
+{
+  "initial": false,
+  "deviceId": "facility_demo_01",
+  "checks": [
+    {
+      "name": "same expected-state concurrent serializes to success/conflict",
+      "pass": true,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "name": "rollback preserves independent conflict audit",
+      "pass": true,
+      "outcomes": [
+        "CONFIRMED",
+        "CONFLICT"
+      ]
+    },
+    {
+      "name": "real database separate connection sees both committed audits",
+      "pass": true
+    },
+    {
+      "name": "all eight initial states restored after concurrency",
+      "pass": true,
+      "states": {
+        "facility_demo_01": false,
+        "facility_demo_02": false,
+        "facility_demo_03": false,
+        "facility_demo_04": false,
+        "light_demo_01": false,
+        "light_demo_02": false,
+        "light_demo_03": false,
+        "light_demo_04": false
+      }
+    }
+  ],
+  "pass": true,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

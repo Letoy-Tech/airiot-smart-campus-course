@@ -1,0 +1,345 @@
+@vom 1
+@view 1798x1025
+@layers 1 focus=L1
+L1 page
+  RootWebArea "城大智慧校园中间件演示"
+    img
+    heading "城大智慧校园中间件演示"
+      StaticText "城大智慧校园中间件演示"
+    @e1 menuitem "数据管理" [ctx: 城大智慧校园中间件演示]
+    @e2 menuitem "设备监控 [has-submenu]"
+    @e3 menuitem "报警管理 [has-submenu]"
+    @e4 menuitem "数据分析 [has-submenu]"
+    @e5 menuitem "AI仓库" [ctx: 城大智慧校园中间件演示]
+    @e6 menuitem "可视化" [ctx: 城大智慧校园中间件演示]
+    @e7 menuitem "业务流程 [has-submenu]"
+    @e8 menuitem "扩展开发 [has-submenu]"
+    @e9 menuitem "数据接口" [ctx: 城大智慧校园中间件演示]
+    @e10 menuitem "通用功能 [has-submenu]"
+    @e11 menuitem "日志管理 [has-submenu]"
+    @e12 menuitem "权限管理 [has-submenu]"
+    @e13 menuitem "系统设置" [ctx: 城大智慧校园中间件演示]
+    @e14 menuitem "备份管理 [has-submenu]"
+    @e15 menuitem "消息" [ctx: 城大智慧校园中间件演示]
+    @e16 menuitem "帮助中心 [has-submenu]"
+    @e17 menuitem "admin [has-submenu]"
+    @e18 button "城大智慧校园中间件演示"
+    @e19 button "返回"
+    StaticText "创建 角色"
+    form "* 名称 : * 描述 : 用户列表 : 请选择用户 角色权限 : 全选 设备台账 查看 驱动管理 查看 添加 修改 删除 开发调试 设备调试 时间分析 驱动相关 驱动下载 执行指令 驱动查看 驱动接口代理 仿真驱动 驱动仿真重启 报警信息 查看 确认/处理 导出 报警归档信息 查看 添加 修改 删除 一键归档 报警信息清除 查看 添加 编辑 删除 一键清除 报警规则管理 查看 添加 修改 删除 指令状态管理 查看 网络通信异常统计 查看 驱动事件信息 查看 驱动事件归档 查"
+      LabelText "* 名称 :"
+        StaticText "*"
+        StaticText ":"
+        StaticText "名称"
+        image "question-circle"
+      @e20 textbox "智慧校园BE专用服务" [default] ="智慧校园BE专用服务"
+      LabelText "* 描述 :"
+        StaticText "*"
+        StaticText ":"
+        StaticText "描述"
+        image "question-circle"
+      @e21 textbox "MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。" [default] ="MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。"
+      LabelText "用户列表 :"
+        StaticText ":"
+        StaticText "用户列表"
+        image "question-circle"
+      @e22 combobox
+      StaticText "请选择用户"
+      LabelText "角色权限 :"
+        StaticText ":"
+        StaticText "角色权限"
+      @e23 textbox "搜索权限" [empty] placeholder="搜索权限"
+      @e24 button "search"
+      @e25 tab "通用功能" [ctx: 名称]
+      @e26 tab "系统设置" [ctx: 名称]
+      @e27 tab "设备监控" [ctx: 名称]
+        [§ active: 设备监控]
+          全选
+          设备台账
+          查看
+          驱动管理
+          添加
+          修改
+          删除
+          开发调试
+          设备调试
+          时间分析
+          驱动相关
+          驱动下载
+          执行指令
+          驱动查看
+          驱动接口代理
+          仿真驱动
+          驱动仿真重启
+          报警信息
+          确认/处理
+          导出
+          报警归档信息
+          一键归档
+          报警信息清除
+          编辑
+          一键清除
+          报警规则管理
+          指令状态管理
+          网络通信异常统计
+          驱动事件信息
+          驱动事件归档
+          驱动事件清除
+      @e28 tab "权限管理" [ctx: 名称]
+      @e29 tab "表管理"
+      @e30 tab "可视化" [ctx: 名称]
+      @e31 tab "数据分析" [ctx: 名称]
+      @e32 tab "业务流程" [ctx: 名称]
+      @e33 tab "二次开发"
+      @e34 tab "数据接口" [ctx: 名称]
+      @e35 tab "视频权限"
+      @e36 tab "其他"
+      img "ellipsis"
+      tabpanel "设备监控"
+        LabelText "全选"
+          @e37 button "全选" [ctx: 名称]
+          @e38 checkbox "全选" [ctx: 名称] [unchecked] ="on"
+          @e39 button "全选" [ctx: 名称]
+        LabelText "设备台账"
+          @e40 button "设备台账" [ctx: 名称]
+          @e41 checkbox "设备台账" [ctx: 名称] [unchecked] ="on"
+          @e42 button "设备台账" [ctx: 名称]
+        LabelText "查看"
+          @e43 button "查看" [ctx: 名称]
+          @e44 checkbox "查看" [ctx: 名称] [unchecked] ="equipmentAccount.view"
+          @e45 button "查看" [ctx: 名称]
+        LabelText "驱动管理"
+          @e46 button "驱动管理" [ctx: 名称]
+          @e47 checkbox "驱动管理" [ctx: 名称] [unchecked] ="on"
+          @e48 button "驱动管理" [ctx: 名称]
+        LabelText "查看"
+          @e49 button "查看" [ctx: 名称]
+          @e50 checkbox "查看" [ctx: 名称] [unchecked] ="driverInstance.view"
+          @e51 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e52 button "添加" [ctx: 名称]
+          @e53 checkbox "添加" [ctx: 名称] [unchecked] ="driverInstance.add"
+          @e54 button "添加" [ctx: 名称]
+        LabelText "修改"
+          @e55 button "修改" [ctx: 名称]
+          @e56 checkbox "修改" [ctx: 名称] [unchecked] ="driverInstance.edit"
+          @e57 button "修改" [ctx: 名称]
+        LabelText "删除"
+          @e58 button "删除" [ctx: 名称]
+          @e59 checkbox "删除" [ctx: 名称] [unchecked] ="driverInstance.delete"
+          @e60 button "删除" [ctx: 名称]
+        LabelText "开发调试"
+          @e61 button "开发调试" [ctx: 名称]
+          @e62 checkbox "开发调试" [ctx: 名称] [unchecked] ="on"
+          @e63 button "开发调试" [ctx: 名称]
+        LabelText "设备调试"
+          @e64 button "设备调试" [ctx: 名称]
+          @e65 checkbox "设备调试" [ctx: 名称] [unchecked] ="Development.debugdev"
+          @e66 button "设备调试" [ctx: 名称]
+        LabelText "时间分析"
+          @e67 button "时间分析" [ctx: 名称]
+          @e68 checkbox "时间分析" [ctx: 名称] [unchecked] ="Development.debugtime"
+          @e69 button "时间分析" [ctx: 名称]
+        LabelText "驱动相关"
+          @e70 button "驱动相关" [ctx: 名称]
+          @e71 checkbox "驱动相关" [ctx: 名称] [unchecked] ="on"
+          @e72 button "驱动相关" [ctx: 名称]
+        LabelText "驱动下载"
+          @e73 button "驱动下载" [ctx: 名称]
+          @e74 checkbox "驱动下载" [ctx: 名称] [unchecked] ="driver.install"
+          @e75 button "驱动下载" [ctx: 名称]
+        LabelText "执行指令"
+          @e76 button "执行指令" [ctx: 名称]
+          @e77 checkbox "执行指令" [ctx: 名称] [unchecked] ="driver.add"
+          @e78 button "执行指令" [ctx: 名称]
+        LabelText "驱动查看"
+          @e79 button "驱动查看" [ctx: 名称]
+          @e80 checkbox "驱动查看" [ctx: 名称] [unchecked] ="driver.view"
+          @e81 button "驱动查看" [ctx: 名称]
+        LabelText "驱动接口代理"
+          @e82 button "驱动接口代理" [ctx: 名称]
+          @e83 checkbox "驱动接口代理" [ctx: 名称] [unchecked] ="driver.proxy"
+          @e84 button "驱动接口代理" [ctx: 名称]
+        LabelText "仿真驱动"
+          @e85 button "仿真驱动" [ctx: 名称]
+          @e86 checkbox "仿真驱动" [ctx: 名称] [unchecked] ="on"
+          @e87 button "仿真驱动" [ctx: 名称]
+        LabelText "驱动仿真重启"
+          @e88 button "驱动仿真重启" [ctx: 名称]
+          @e89 checkbox "驱动仿真重启" [ctx: 名称] [unchecked] ="reload.view"
+          @e90 button "驱动仿真重启" [ctx: 名称]
+        LabelText "报警信息"
+          @e91 button "报警信息" [ctx: 名称]
+          @e92 checkbox "报警信息" [ctx: 名称] [unchecked] ="on"
+          @e93 button "报警信息" [ctx: 名称]
+        LabelText "查看"
+          @e94 button "查看" [ctx: 名称]
+          @e95 checkbox "查看" [ctx: 名称] [unchecked] ="warning.view"
+          @e96 button "查看" [ctx: 名称]
+        LabelText "确认/处理"
+          @e97 button "确认/处理" [ctx: 名称]
+          @e98 checkbox "确认/处理" [ctx: 名称] [unchecked] ="warning.edit"
+          @e99 button "确认/处理" [ctx: 名称]
+        LabelText "导出"
+          @e100 button "导出" [ctx: 名称]
+          @e101 checkbox "导出" [ctx: 名称] [unchecked] ="warning.export"
+          @e102 button "导出" [ctx: 名称]
+        LabelText "报警归档信息"
+          @e103 button "报警归档信息" [ctx: 名称]
+          @e104 checkbox "报警归档信息" [ctx: 名称] [unchecked] ="on"
+          @e105 button "报警归档信息" [ctx: 名称]
+        LabelText "查看"
+          @e106 button "查看" [ctx: 名称]
+          @e107 checkbox "查看" [ctx: 名称] [unchecked] ="warningarchive.view"
+          @e108 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e109 button "添加" [ctx: 名称]
+          @e110 checkbox "添加" [ctx: 名称] [unchecked] ="warningarchive.add"
+          @e111 button "添加" [ctx: 名称]
+        LabelText "修改"
+          @e112 button "修改" [ctx: 名称]
+          @e113 checkbox "修改" [ctx: 名称] [unchecked] ="warningarchive.edit"
+          @e114 button "修改" [ctx: 名称]
+        LabelText "删除"
+          @e115 button "删除" [ctx: 名称]
+          @e116 checkbox "删除" [ctx: 名称] [unchecked] ="warningarchive.delete"
+          @e117 button "删除" [ctx: 名称]
+        LabelText "一键归档"
+          @e118 button "一键归档" [ctx: 名称]
+          @e119 checkbox "一键归档" [ctx: 名称] [unchecked] ="warningarchive.onearchive"
+          @e120 button "一键归档" [ctx: 名称]
+        LabelText "报警信息清除"
+          @e121 button "报警信息清除" [ctx: 名称]
+          @e122 checkbox "报警信息清除" [ctx: 名称] [unchecked] ="on"
+          @e123 button "报警信息清除" [ctx: 名称]
+        LabelText "查看"
+          @e124 button "查看" [ctx: 名称]
+          @e125 checkbox "查看" [ctx: 名称] [unchecked] ="warningclean.view"
+          @e126 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e127 button "添加" [ctx: 名称]
+          @e128 checkbox "添加" [ctx: 名称] [unchecked] ="warningclean.add"
+          @e129 button "添加" [ctx: 名称]
+        LabelText "编辑"
+          @e130 button "编辑" [ctx: 名称]
+          @e131 checkbox "编辑" [ctx: 名称] [unchecked] ="warningclean.edit"
+          @e132 button "编辑" [ctx: 名称]
+        LabelText "删除"
+          @e133 button "删除" [ctx: 名称]
+          @e134 checkbox "删除" [ctx: 名称] [unchecked] ="warningclean.delete"
+          @e135 button "删除" [ctx: 名称]
+        LabelText "一键清除"
+          @e136 button "一键清除" [ctx: 名称]
+          @e137 checkbox "一键清除" [ctx: 名称] [unchecked] ="warningclean.instant"
+          @e138 button "一键清除" [ctx: 名称]
+        LabelText "报警规则管理"
+          @e139 button "报警规则管理" [ctx: 名称]
+          @e140 checkbox "报警规则管理" [ctx: 名称] [unchecked] ="on"
+          @e141 button "报警规则管理" [ctx: 名称]
+        LabelText "查看"
+          @e142 button "查看" [ctx: 名称]
+          @e143 checkbox "查看" [ctx: 名称] [unchecked] ="rule.view"
+          @e144 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e145 button "添加" [ctx: 名称]
+          @e146 checkbox "添加" [ctx: 名称] [unchecked] ="rule.add"
+          @e147 button "添加" [ctx: 名称]
+        LabelText "修改"
+          @e148 button "修改" [ctx: 名称]
+          @e149 checkbox "修改" [ctx: 名称] [unchecked] ="rule.edit"
+          @e150 button "修改" [ctx: 名称]
+        LabelText "删除"
+          @e151 button "删除" [ctx: 名称]
+          @e152 checkbox "删除" [ctx: 名称] [unchecked] ="rule.delete"
+          @e153 button "删除" [ctx: 名称]
+        LabelText "指令状态管理"
+          @e154 button "指令状态管理" [ctx: 名称]
+          @e155 checkbox "指令状态管理" [ctx: 名称] [unchecked] ="on"
+          @e156 button "指令状态管理" [ctx: 名称]
+        LabelText "查看"
+          @e157 button "查看" [ctx: 名称]
+          @e158 checkbox "查看" [ctx: 名称] [unchecked] ="instruct.view"
+          @e159 button "查看" [ctx: 名称]
+        LabelText "网络通信异常统计"
+          @e160 button "网络通信异常统计" [ctx: 名称]
+          @e161 checkbox "网络通信异常统计" [ctx: 名称] [unchecked] ="on"
+          @e162 button "网络通信异常统计" [ctx: 名称]
+        LabelText "查看"
+          @e163 button "查看" [ctx: 名称]
+          @e164 checkbox "查看" [ctx: 名称] [unchecked] ="check.view"
+          @e165 button "查看" [ctx: 名称]
+        LabelText "驱动事件信息"
+          @e166 button "驱动事件信息" [ctx: 名称]
+          @e167 checkbox "驱动事件信息" [ctx: 名称] [unchecked] ="on"
+          @e168 button "驱动事件信息" [ctx: 名称]
+        LabelText "查看"
+          @e169 button "查看" [ctx: 名称]
+          @e170 checkbox "查看" [ctx: 名称] [unchecked] ="deviceEvent.view"
+          @e171 button "查看" [ctx: 名称]
+        LabelText "驱动事件归档"
+          @e172 button "驱动事件归档" [ctx: 名称]
+          @e173 checkbox "驱动事件归档" [ctx: 名称] [unchecked] ="on"
+          @e174 button "驱动事件归档" [ctx: 名称]
+        LabelText "查看"
+          @e175 button "查看" [ctx: 名称]
+          @e176 checkbox "查看" [ctx: 名称] [unchecked] ="devicecycle.view"
+          @e177 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e178 button "添加" [ctx: 名称]
+          @e179 checkbox "添加" [ctx: 名称] [unchecked] ="devicecycle.add"
+          @e180 button "添加" [ctx: 名称]
+        LabelText "删除"
+          @e181 button "删除" [ctx: 名称]
+          @e182 checkbox "删除" [ctx: 名称] [unchecked] ="devicecycle.delete"
+          @e183 button "删除" [ctx: 名称]
+        LabelText "修改"
+          @e184 button "修改" [ctx: 名称]
+          @e185 checkbox "修改" [ctx: 名称] [unchecked] ="devicecycle.edit"
+          @e186 button "修改" [ctx: 名称]
+        LabelText "一键归档"
+          @e187 button "一键归档" [ctx: 名称]
+          @e188 checkbox "一键归档" [ctx: 名称] [unchecked] ="devicecycle.instant"
+          @e189 button "一键归档" [ctx: 名称]
+        LabelText "驱动事件清除"
+          @e190 button "驱动事件清除" [ctx: 名称]
+          @e191 checkbox "驱动事件清除" [ctx: 名称] [unchecked] ="on"
+          @e192 button "驱动事件清除" [ctx: 名称]
+          @e193 button "驱动事件清除" [ctx: 名称]
+        LabelText "查看"
+          @e194 button "查看" [ctx: 名称]
+          @e195 checkbox "查看" [ctx: 名称] [unchecked] ="deviceclean.view"
+          @e196 button "查看" [ctx: 名称]
+          @e197 button "查看" [ctx: 名称]
+        LabelText "添加"
+          @e198 button "添加" [ctx: 名称]
+          @e199 checkbox "添加" [ctx: 名称] [unchecked] ="deviceclean.add"
+          @e200 button "添加" [ctx: 名称]
+          @e201 button "添加" [ctx: 名称]
+        LabelText "编辑"
+          @e202 button "编辑" [ctx: 名称]
+          @e203 checkbox "编辑" [ctx: 名称] [unchecked] ="deviceclean.edit"
+          @e204 button "编辑" [ctx: 名称]
+          @e205 button "编辑" [ctx: 名称]
+        LabelText "删除"
+          @e206 button "删除" [ctx: 名称]
+          @e207 checkbox "删除" [ctx: 名称] [unchecked] ="deviceclean.delete"
+          @e208 button "删除" [ctx: 名称]
+          @e209 button "删除" [ctx: 名称]
+        LabelText "一键清除"
+          @e210 button "一键清除" [ctx: 名称]
+          @e211 checkbox "一键清除" [ctx: 名称] [unchecked] ="deviceclean.instant"
+          @e212 button "一键清除" [ctx: 名称]
+          @e213 button "一键清除" [ctx: 名称]
+      LabelText "禁用"
+        @e214 button "禁用" [ctx: 描述]
+        @e215 checkbox "禁用" [ctx: 描述] [unchecked]
+        @e216 button "禁用" [ctx: 描述]
+        @e217 button "禁用" [ctx: 描述]
+      image "question-circle"
+      LabelText "黑名单"
+        @e218 button "黑名单" [ctx: 用户列表 请选择用户]
+        @e219 checkbox "黑名单" [ctx: 用户列表 请选择用户] [unchecked] ="false"
+        @e220 button "黑名单" [ctx: 用户列表 请选择用户]
+        @e221 button "黑名单" [ctx: 用户列表 请选择用户]
+      @e222 button "保 存"
+      @e223 button "取 消"

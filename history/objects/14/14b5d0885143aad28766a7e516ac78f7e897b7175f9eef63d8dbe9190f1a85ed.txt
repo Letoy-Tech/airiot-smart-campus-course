@@ -1,0 +1,2 @@
+请用三行说明这次设备读取：页面怎样发请求，后端怎样返回，页面在哪里取items。成功判断看HTTP状态和业务code。先不要写代码，也不要更改已有认证。
+当前第02站，允许只读 CODEBUDDY.md、journey-state.json、frontend/src/api/http.ts、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、docs/接口与数据.md。不要读取.private、lesson-bundles/*/files、reference 或 journey-backups。

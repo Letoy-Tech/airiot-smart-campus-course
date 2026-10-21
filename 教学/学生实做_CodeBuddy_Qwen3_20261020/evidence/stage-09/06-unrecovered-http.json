@@ -1,0 +1,12 @@
+{
+  "scenario": "close-unrecovered",
+  "caseId": "5bd33750-0afd-475d-8c99-c97b42f7429f",
+  "httpStatus": 409,
+  "businessMessage": "STATE_CONFLICT",
+  "expectedStatus": 409,
+  "stateVersionTimelineUnchanged": true,
+  "state": "IN_PROGRESS",
+  "version": 4,
+  "passed": true,
+  "recordedAt": "2026-10-19T18:21:05.528826+00:00"
+}

@@ -1,0 +1,12 @@
+flowchart TD
+    Start[进入页面] --> Loading[首次加载]
+    Loading -->|失败| Error[显示错误与重试]
+    Error -->|重试| Loading
+    Loading -->|成功| Raw{原始列表为空}
+    Raw -->|是| Empty[目录为空]
+    Raw -->|否| Filter{筛选结果为空}
+    Filter -->|是| NoMatch[无匹配 可清除筛选]
+    Filter -->|否| List[显示列表与实际数量]
+    List --> Retry[再次读取]
+    Retry -->|失败| Old[保留旧快照 标明失败和时间]
+    Retry -->|成功| Raw

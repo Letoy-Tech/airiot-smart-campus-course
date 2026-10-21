@@ -1,0 +1,142 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+教学管理员
+管理员 / 只读查看者
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+07
+身份与权限
+08
+事件工作台
+10
+责任登记
+10
+命令审计
+10
+接入状态
+
+第10站 · 责任、审计与接入
+
+换负责人，不改旧事件
+
+责任记录有自己的 version，与事件版本互相独立。改责任人不批量改写已存在的事件处理人； 新事件在创建时才读取当时的责任人。保存必须带 expectedVersion，409 只回读并保留输入，不自动重放。
+
+重新读取
+TEACHING_MOCK
+教学模拟数据 · simulated=true
+远端控制与外部通知关闭
+
+业务记录使用服务端操作时间仅本地 DEMO 事件；与 AIRIOT 原始报警分开。
+
+责任归属规则
+责任版本与事件版本分开计数
+旧事件不追改：A→B 之后，A 名下已存在的事件仍记 A，A 仍可按原权限办理，不会自动改派给 B。
+新事件跟当时责任人：只在创建事件时读取当前责任人；B 无有效处理资格时保持待分派，不回头找 A。
+同时修改：两人带同一 expectedVersion 提交，后者得到 409；须回读最新 version 后人工重判，不覆盖前一次成功结果。
+设备责任清单
+共 16 台 · 显示 16 台
+按设备名称或 ID 过滤
+
+清单由 GET /api/campus/device-owners 读取，按 deviceId 排序；责任人不含名称时只显示 uid。 读取时间 2026/10/20 02:29:04。
+
+teaching_energy_01
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_energy_01
+teaching_energy_02
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_energy_02
+teaching_energy_03
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_energy_03
+teaching_energy_04
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_energy_04
+teaching_env_01
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_env_01
+teaching_env_02
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_env_02
+teaching_env_03
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_env_03
+teaching_env_04
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_env_04
+teaching_facility_01
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_facility_01
+teaching_facility_02
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_facility_02
+teaching_facility_03
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_facility_03
+teaching_facility_04
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_facility_04
+teaching_light_01
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_light_01
+teaching_light_02
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_light_02
+teaching_light_03
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_light_03
+teaching_light_04
+未指定
+责任人：未指定
+责任 version 0 · 更新 未知
+teaching_light_04
+尚未选择设备
+
+在左侧清单点一台设备，读取当前责任人与责任时间线；清单和详情是两次独立读取。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

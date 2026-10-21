@@ -1,0 +1,54 @@
+{
+  "name": "390px新增页面无页面级横向溢出",
+  "status": "PASS",
+  "previousAttempt": "Retest waits for actual page resources; same-document navigation had allowed a premature screenshot.",
+  "startedAt": "2026-10-19T15:38:09.883Z",
+  "pages": [
+    {
+      "hash": "devices",
+      "client": 390,
+      "scroll": 390,
+      "height": 2750
+    },
+    {
+      "hash": "overview",
+      "client": 390,
+      "scroll": 390,
+      "height": 4672
+    },
+    {
+      "hash": "energy",
+      "client": 390,
+      "scroll": 390,
+      "height": 2898
+    },
+    {
+      "hash": "raw-alarms",
+      "client": 390,
+      "scroll": 390,
+      "height": 1577
+    },
+    {
+      "hash": "audit",
+      "client": 390,
+      "scroll": 390,
+      "height": 1261
+    },
+    {
+      "hash": "cases",
+      "client": 390,
+      "scroll": 390,
+      "height": 1783
+    }
+  ],
+  "screenshot": {
+    "file": "09-能源390px视口.png",
+    "sha256": "83e8dd7a2369e466ab57eed6f7e6a886493d678003144bc2d51775d4200051c3",
+    "url": "http://127.0.0.1:5178/?qa=1792424291302#energy",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "finishedAt": "2026-10-19T15:38:13.723Z"
+}

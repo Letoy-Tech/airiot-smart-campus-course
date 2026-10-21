@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests": 74,
+  "passed": 74,
+  "failed": 0,
+  "pending": 0,
+  "typeCheck": true,
+  "build": true,
+  "testStartedEpochMs": 1792424516346,
+  "reportSHA256": "d48cf096c50a4d354e26cae7f035867a644c96348b5ecb0940626c462c976b3a",
+  "warning": "HistoryChart chunk 516.31 kB after minification; build succeeds."
+}

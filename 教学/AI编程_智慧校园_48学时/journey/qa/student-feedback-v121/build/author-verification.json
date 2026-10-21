@@ -1,0 +1,253 @@
+{
+  "status": "PASS_SOURCE_BUILD_CHECKS",
+  "startedAt": "2026-10-19T22:17:18.700Z",
+  "node": "v22.21.1",
+  "platform": "darwin",
+  "isolatedCopy": true,
+  "dependencyInstall": "npm ci from frozen lock; existing npm download cache may be reused",
+  "sourceManifestSha256": "d67dc2cdddd7ef6b3a0de39395db1ecbc2fd574efdccee162e3aefa4ddca8336",
+  "toolTests": {
+    "label": "progress-tool-tests",
+    "command": [
+      "node",
+      "--test",
+      "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/authoring/progress.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationMs": 89,
+    "log": "evidence/progress-tool-tests.txt"
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "label": "stage-01-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 2354,
+      "log": "evidence/stage-01-verify.txt",
+      "sourceFingerprint": "2ca69118101875e5e7991cfbad15c4ff865542a1cc8d7fdb42a92125e370a3b1",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 2,
+      "label": "stage-02-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 2791,
+      "log": "evidence/stage-02-verify.txt",
+      "sourceFingerprint": "1b32f9066428b762c1fad0a6626096ebda5fc1b2622744ac63e22703b663218e",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 3,
+      "label": "stage-03-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 3028,
+      "log": "evidence/stage-03-verify.txt",
+      "sourceFingerprint": "64fce45f591892394939c54f93cd9f517c38f5e1a83d3710b89ee658fc31f116",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 4,
+      "label": "stage-04-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 3074,
+      "log": "evidence/stage-04-verify.txt",
+      "sourceFingerprint": "818e6d8779a9b0f19514dadfe6796fe8b6937a7d3ea6ae6b68b3613c8c7e18b3",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 5,
+      "label": "stage-05-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4395,
+      "log": "evidence/stage-05-verify.txt",
+      "sourceFingerprint": "680f974611af1f06402eda743fb17f3e85791c4eb6f92d26bada8fc4d63dbd45",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 6,
+      "label": "stage-06-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4572,
+      "log": "evidence/stage-06-verify.txt",
+      "sourceFingerprint": "a7ff9428e71eef04f15a2b91e0441e4c823fe59ac421cb305e766ea1b1932ddf",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 7,
+      "label": "stage-07-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4594,
+      "log": "evidence/stage-07-verify.txt",
+      "sourceFingerprint": "4cc041dfa716cc246bc3fcfb6c63457ee1cbc0a84c3204efd5802493cbe6aa7a",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 8,
+      "label": "stage-08-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4802,
+      "log": "evidence/stage-08-verify.txt",
+      "sourceFingerprint": "df009061bec0541f938730ef5506b9b5d9c4ddf268002d262d8af01c4c2d13cb",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 9,
+      "label": "stage-09-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4945,
+      "log": "evidence/stage-09-verify.txt",
+      "sourceFingerprint": "fbc4a65ecbd6ce1f348e1f5e5e7122e94f4ad94038ad94279ad57bb7238428a1",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 10,
+      "label": "stage-10-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 5196,
+      "log": "evidence/stage-10-verify.txt",
+      "sourceFingerprint": "9a03699690ad5b5416c504152c0c9fc57c6ca773a8207eaefc3257376db6fe63",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 11,
+      "label": "stage-11-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 5165,
+      "log": "evidence/stage-11-verify.txt",
+      "sourceFingerprint": "2b718408ee55dba8790a92128f1517692431a9442dde2b1bce43928aeda6b60b",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    },
+    {
+      "stage": 12,
+      "label": "stage-12-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 5195,
+      "log": "evidence/stage-12-verify.txt",
+      "sourceFingerprint": "68446075bbe27398b87796b0b4f0f1681f116746b2fecf64a95ce7d5ace56641",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN",
+      "referenceImportedByAuthorFixture": true
+    }
+  ],
+  "backend": {
+    "label": "backend-package",
+    "command": [
+      "sh",
+      "./mvnw",
+      "package"
+    ],
+    "exitCode": 0,
+    "durationMs": 4136,
+    "log": "evidence/backend-package.txt"
+  },
+  "browser": "NOT_RUN",
+  "database": "NOT_RUN",
+  "windows": "NOT_RUN",
+  "actualWorkDirectory": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/stage-build/app",
+  "install": {
+    "label": "npm-ci",
+    "command": [
+      "npm",
+      "ci",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "exitCode": 0,
+    "durationMs": 878,
+    "log": "evidence/npm-ci.txt"
+  },
+  "backendWithUnfinishedFrontend": {
+    "label": "stage-02-build-backend-before-business",
+    "command": [
+      "node",
+      "tools/course.mjs",
+      "build-backend"
+    ],
+    "exitCode": 0,
+    "durationMs": 5652,
+    "log": "evidence/stage-02-build-backend-before-business.txt"
+  },
+  "finishedAt": "2026-10-19T22:18:20.289Z"
+}

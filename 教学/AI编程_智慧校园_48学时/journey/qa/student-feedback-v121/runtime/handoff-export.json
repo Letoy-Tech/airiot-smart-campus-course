@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "sourceExport": ".runtime/student-feedback-v121/stage-build/app-handoff-20261019T223006956Z",
+  "recipientDirectory": ".runtime/student-feedback-v121/handoff/app",
+  "files": 154,
+  "allFileHashesMatch": true,
+  "forbiddenPaths": [],
+  "onlySourceCopied": true,
+  "parentDocsRead": false,
+  "manifestSHA256": "486202397a931fcbea9260e5788f47b71e1f5ccd4b622aed82fa66d88a0bb1f3"
+}

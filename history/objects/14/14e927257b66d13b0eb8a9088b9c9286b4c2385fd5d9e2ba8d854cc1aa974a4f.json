@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "version": "2.0.0",
+  "course_title": "从空白页面做出智慧校园",
+  "total_class_hours": 48,
+  "minutes_per_class_hour": 45,
+  "steps": 64,
+  "chapters": [
+    {
+      "id": "01",
+      "title": "第 01 课：从空白页面做出概览",
+      "file": "handbook-v2/lessons/01-从空白页面做出概览.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "02",
+      "title": "第 02 课：把设备放进台账",
+      "file": "handbook-v2/lessons/02-把设备放进台账.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "03",
+      "title": "第 03 课：给设备安排位置和负责人",
+      "file": "handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "04",
+      "title": "第 04 课：看懂读数，再做能源页",
+      "file": "handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "05",
+      "title": "第 05 课：把历史和原始报警接到页面",
+      "file": "handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "06",
+      "title": "第 06 课：走完演练事件，并串起整个前端",
+      "file": "handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "07",
+      "title": "第07课：看着页面，做出第一个后端",
+      "file": "handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "08",
+      "title": "第08课：把设备保存到 MySQL，再接回设备页",
+      "file": "handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "09",
+      "title": "第09课：用 Redis 记住短时登录",
+      "file": "handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "10",
+      "title": "第10课：把空间、读数、历史和责任逐页接回后端",
+      "file": "handbook-v2/lessons/10-逐页接回真实后端.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "11",
+      "title": "第11课：让一件演练有始有终，并留下记录",
+      "file": "handbook-v2/lessons/11-让一件演练有始有终.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    },
+    {
+      "id": "12",
+      "title": "第12课：把作品交到新目录，让别人照说明启动",
+      "file": "handbook-v2/lessons/12-把作品交到新目录.md",
+      "class_hours": 4,
+      "student_trial_verified": false
+    }
+  ],
+  "entry": "handbook-v2/index.html"
+}

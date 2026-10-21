@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-20",
+  "environment": "macOS Chrome; original reference then clean-directory handoff",
+  "method": "actual browser UI interactions via cua_repl",
+  "groups": [
+    {
+      "check": "概览16台设备、4个空间、28个点位与1台通信未知",
+      "passed": true
+    },
+    {
+      "check": "检查后端连接显示成功",
+      "passed": true
+    },
+    {
+      "check": "能源页保留合法0 kW",
+      "passed": true
+    },
+    {
+      "check": "历史页区分缺失和0，设备/能源入口携带设备与指标",
+      "passed": true
+    },
+    {
+      "check": "空间修改保存并回读",
+      "passed": true
+    },
+    {
+      "check": "空间跳转设备并带空间筛选",
+      "passed": true
+    },
+    {
+      "check": "刷新保留api模式但要求重新登录",
+      "passed": true
+    },
+    {
+      "check": "停止后端后显示读取错误，旧快照可见但不可操作",
+      "passed": true
+    },
+    {
+      "check": "新目录viewer仅可读关闭后的事件",
+      "passed": true
+    },
+    {
+      "check": "最终补验：质量正常25/较旧2/缺失1/无效0，能源分类跳转4台",
+      "passed": true
+    },
+    {
+      "check": "最终补验：设备清空筛选恢复16台，详情可收起",
+      "passed": true
+    },
+    {
+      "check": "最终补验：d05/d06历史对比含缺失与0，切换voltage清空比较",
+      "passed": true
+    },
+    {
+      "check": "最终补验：报警无匹配0条、清空恢复1条，单页前后翻页禁用",
+      "passed": true
+    },
+    {
+      "check": "最终补验：报警跳d01详情，详情跳owner-d01显示新目录保存的责任",
+      "passed": true
+    }
+  ],
+  "passed_groups": 14,
+  "limits": [
+    "not a new CodeBuddy prompt-by-prompt student trial",
+    "alarm multiple-page navigation not exercised because public sample has one alarm",
+    "reader HTML not visually browser-reviewed",
+    "Windows and Docker Desktop not run"
+  ],
+  "screenshot": "参考工程浏览器实测.png"
+}

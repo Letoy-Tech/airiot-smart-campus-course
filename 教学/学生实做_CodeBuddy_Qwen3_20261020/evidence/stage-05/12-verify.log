@@ -1,0 +1,57 @@
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend[39m
+
+ [32m✓[39m src/tests/course-domain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/tests/http.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/tests/session-races.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/tests/request-scope.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/tests/request-timeout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/tests/journey-start.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/tests/first-device-view.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/tests/catalog-navigation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[32m46 passed[39m[22m[90m (46)[39m
+[2m   Start at [22m 01:55:48
+[2m   Duration [22m 564ms[2m (transform 504ms, setup 0ms, import 932ms, tests 114ms, environment 2.22s)[22m
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 50 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     0.47 kB │ gzip:  0.34 kB
+dist/assets/OverviewView-D5IxcBkb.css               0.71 kB │ gzip:  0.37 kB
+dist/assets/LocationsView-B7ln5TvL.css              0.90 kB │ gzip:  0.33 kB
+dist/assets/DeviceCatalog-BGxUDiHi.css              1.29 kB │ gzip:  0.46 kB
+dist/assets/EnergyView-DXtKEQC_.css                 2.28 kB │ gzip:  0.66 kB
+dist/assets/index-CQLMl6UL.css                     21.87 kB │ gzip:  5.26 kB
+dist/assets/_plugin-vue_export-helper-BRHvU0go.js   0.86 kB │ gzip:  0.68 kB
+dist/assets/full-CQbODd1p.js                        1.94 kB │ gzip:  1.03 kB
+dist/assets/read-models-DDYXKuWs.js                 2.42 kB │ gzip:  1.30 kB
+dist/assets/FirstDeviceRead-Cdh3l0mW.js             5.29 kB │ gzip:  2.57 kB
+dist/assets/EnergyView-xJldFoUp.js                  6.89 kB │ gzip:  3.32 kB
+dist/assets/DeviceCatalog-oXTgpTs3.js              10.73 kB │ gzip:  4.21 kB
+dist/assets/OverviewView-BHTgE3n8.js               11.01 kB │ gzip:  4.56 kB
+dist/assets/LocationsView-7xqlD849.js              15.25 kB │ gzip:  5.37 kB
+dist/assets/index-DrRnPjQe.js                      92.30 kB │ gzip: 37.04 kB
+✓ built in 430ms
+第05站前端检查通过，接受当前学生实现。
+尚未替你验收：0/null/质量有区别；统计对应响应；离页停止刷新
+请把实际操作写到 evidence/stage-05.md，再运行 accept 05 evidence/stage-05.md。人工记录不等于工具证明。

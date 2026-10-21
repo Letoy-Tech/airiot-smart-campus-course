@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-18T16:21:12.269139+00:00",
+  "status": "STATIC_REVIEW_COMPLETE",
+  "windowsExecuted": false,
+  "nodeSyntaxCheck": "Node 22.21.1 --check passed for all three mjs tools",
+  "reviewed": [
+    "../tools/course.mjs",
+    "tools/test-mysql.mjs",
+    "tools/account-admin.mjs",
+    "mvnw.cmd",
+    ".mvn/wrapper/maven-wrapper.properties"
+  ],
+  "findings": [
+    {
+      "area": "JDK and paths",
+      "result": "JAVA_HOME path uses java.exe on Windows; Java process receives JAR as an argument without a shell; path.resolve/join/fileURLToPath used for project-relative paths."
+    },
+    {
+      "area": "Windows batch entry",
+      "result": "course.mjs invokes fixed npm.cmd/mvnw.cmd through shell; test-mysql.mjs explicitly invokes cmd.exe /d /s /c mvnw.cmd. Normal documented arguments contain no shell metacharacters."
+    },
+    {
+      "area": "Maven wrapper",
+      "result": "Windows wrapper quotes JAVA_HOME, wrapper JAR and project directory; wrapper JAR is shipped; properties use HTTPS Maven Central."
+    },
+    {
+      "area": "Credentials",
+      "result": "Credentials passed only in child environment, not shell arguments; existing accounts file retained; POSIX mode is not asserted as Windows ACL protection."
+    },
+    {
+      "area": "Limits",
+      "result": "No definite blocking defect found for documented commands. Actual Windows execution, first dependency download, Chinese/space directories and Ctrl+C child cleanup still need Windows-host verification."
+    }
+  ],
+  "source": "https://nodejs.org/download/release/v22.23.3/docs/api/child_process.html#spawning-bat-and-cmd-files-on-windows"
+}

@@ -1,0 +1,40 @@
+{
+  "scenarios" : [ {
+    "writerConnectionId" : 30,
+    "poolDefaultPreserved" : true,
+    "readMethod" : "campuses",
+    "readerConnectionId" : 26,
+    "readerIsolation" : "REPEATABLE-READ",
+    "writerCommittedBetweenSelects" : true
+  }, {
+    "writerConnectionId" : 31,
+    "poolDefaultPreserved" : true,
+    "readMethod" : "owner",
+    "readerConnectionId" : 26,
+    "readerIsolation" : "REPEATABLE-READ",
+    "writerCommittedBetweenSelects" : true
+  }, {
+    "writerConnectionId" : 32,
+    "poolDefaultPreserved" : true,
+    "readMethod" : "buildings",
+    "readerConnectionId" : 26,
+    "readerIsolation" : "REPEATABLE-READ",
+    "writerCommittedBetweenSelects" : true
+  }, {
+    "writerConnectionId" : 33,
+    "poolDefaultPreserved" : true,
+    "readMethod" : "cases",
+    "readerConnectionId" : 26,
+    "readerIsolation" : "REPEATABLE-READ",
+    "writerCommittedBetweenSelects" : true
+  }, {
+    "writerConnectionId" : 34,
+    "poolDefaultPreserved" : true,
+    "readMethod" : "alarmCase",
+    "readerConnectionId" : 26,
+    "readerIsolation" : "REPEATABLE-READ",
+    "writerCommittedBetweenSelects" : true
+  } ],
+  "poolDefault" : "READ-COMMITTED",
+  "recordedAt" : "2026-10-19T15:33:32.180104Z"
+}

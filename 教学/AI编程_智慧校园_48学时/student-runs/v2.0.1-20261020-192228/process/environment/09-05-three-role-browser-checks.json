@@ -1,0 +1,26 @@
+[
+  {
+    "username": "admin",
+    "role": "ADMIN",
+    "devices": 16,
+    "source": "backend/MySQL",
+    "dutyCurrentRoleVerified": true,
+    "previousDetailsCleared": true
+  },
+  {
+    "username": "manager",
+    "role": "MANAGER",
+    "devices": 16,
+    "source": "backend/MySQL",
+    "dutyCurrentRoleVerified": true,
+    "previousDetailsCleared": true
+  },
+  {
+    "username": "viewer",
+    "role": "VIEWER",
+    "devices": 16,
+    "source": "backend/MySQL",
+    "dutyCurrentRoleVerified": true,
+    "previousDetailsCleared": true
+  }
+]

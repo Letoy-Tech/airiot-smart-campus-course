@@ -1,0 +1,213 @@
+@vom 1
+@view 1265x800
+@layers 1 focus=L1
+L1 page
+  RootWebArea "晨光校园值班台"
+    banner "晨光校园值班台 教学模拟项目 后端连接 尚未检查 演示身份 仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。"
+      heading "晨光校园值班台"
+        StaticText "晨光校园值班台"
+      paragraph "教学模拟项目"
+        StaticText "教学模拟项目"
+      region "后端连接"
+        StaticText "后端连接"
+        @e1 button "检查连接"
+        status "尚未检查"
+          StaticText "尚未检查"
+      LabelText "演示身份"
+        StaticText "演示身份"
+        @e2 combobox "演示身份 [has-submenu]" ="admin"
+      paragraph "仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。"
+        StaticText "仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。"
+    complementary
+      navigation "主导航"
+        @e3 button "概览"
+        @e4 button "设备"
+        @e5 button "空间"
+        @e6 button "能源" [ctx: 晨光校园值班台 教学模拟项目 后端连接 尚未检查 演示身份 仅浏览器演示：身份只保存在内存，刷新后回到管理员；这不是真正登录。]
+        @e7 button "历史"
+        @e8 button "原始报警"
+        @e9 button "演练事件"
+        @e10 button "设备责任"
+        @e11 button "管理"
+    main "设备 上次成功结果：以下列表是 2026/10/21 00:36:18 从本机后端 /api/devices（MySQL）读取的；本次刷新没有成功，也没有改回模拟数据。 搜索 类型 空间 在线情况 设备列表 编号 设备名称 类型 空间 在线情况 操作 d05 电表01 能源 101教室（教学楼A 2层） 在线 d06 电表02 能源 201教室（教学楼 2层） 在线 d07 电表03 能源 101实验室（实验楼 1层） 在线 d08 电表04 能源 201实验室（实验楼 2层"
+      heading "设备"
+        StaticText "设备"
+      paragraph "上次成功结果：以下列表是 2026/10/21 00:36:18 从本机后端 /api/devices（MySQL）读取的；本次刷新没有成功，也没有改回模拟数据。"
+        StaticText "上次成功结果：以下列表是 2026/10/21 00:36:18 从本机后端 /api/devices（MySQL）读取的；本次刷新没有成功，也没有改回模拟数据。"
+      group "设备筛选"
+        LabelText "搜索"
+          StaticText "搜索"
+          @e12 searchbox "搜索" [empty] placeholder="名称或编号"
+        LabelText "类型"
+          StaticText "类型"
+          @e13 combobox "类型 [has-submenu]" ="energy"
+        LabelText "空间"
+          StaticText "空间"
+          @e14 combobox "空间 [has-submenu]"
+        LabelText "在线情况"
+          StaticText "在线情况"
+          @e15 combobox "在线情况 [has-submenu]"
+        @e16 button "清空筛选"
+        @e17 button "重新读取设备"
+      table "设备列表"
+        caption "设备列表"
+          StaticText "设备列表"
+        rowgroup "编号 设备名称 类型 空间 在线情况 操作"
+          row "编号 设备名称 类型 空间 在线情况 操作"
+            columnheader "编号"
+            columnheader "设备名称"
+            columnheader "类型"
+            columnheader "空间"
+            columnheader "在线情况"
+            columnheader "操作"
+        row "d05 电表01 能源 101教室（教学楼A 2层） 在线"
+          cell "d05"
+          cell "电表01"
+          cell "能源"
+          cell "101教室（教学楼A 2层）"
+          cell "在线"
+          cell "查看"
+            @e18 button "查看" [ctx: 能源]
+              [§ active: 查看]
+                正在读取当前负责人、空间与读数（负责人、空间为浏览器演示数据）
+                基本信息（编号、名称、类型、在线情况、模拟标记）来自本机后端 /api/devices（MySQL，最近一次成功读取）。
+                空间名称、当前负责人和备注仍是浏览器演示数据；点位读数与历史仍是公开教学样本，第10课再接后端。
+                读数
+                该设备暂无读数
+                以下读数与历史仍是公开教学样本（TEACHING_MOCK），不是本机 MySQL 数据，第10课才接后端。固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。
+                设备详情
+                收起详情
+                编号
+                d05
+                名称
+                电表01
+                类型
+                能源
+                空间
+                101教室（教学楼A 2层）
+                在线情况
+                在线
+                模拟标记
+                是（教学模拟）
+                当前负责人
+                尚未登记
+                备注
+                查看责任登记
+                查看所在空间
+                设备读数
+                点位
+                数值
+                单位
+                采样时间
+                质量
+                操作
+                0
+                kW
+                2026/10/20 08:00:00
+                220
+                V
+                功率
+                power
+                正常
+        row "d06 电表02 能源 201教室（教学楼 2层） 在线"
+          cell "d06"
+          cell "电表02"
+          cell "能源"
+          cell "201教室（教学楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e19 button "查看" [ctx: 能源]
+        row "d07 电表03 能源 101实验室（实验楼 1层） 在线"
+          cell "d07"
+          cell "电表03"
+          cell "能源"
+          cell "101实验室（实验楼 1层）"
+          cell "在线"
+          cell "查看"
+            @e20 button "查看" [ctx: 能源]
+        row "d08 电表04 能源 201实验室（实验楼 2层） 在线"
+          cell "d08"
+          cell "电表04"
+          cell "能源"
+          cell "201实验室（实验楼 2层）"
+          cell "在线"
+          cell "查看"
+            @e21 button "查看" [ctx: 能源]
+      paragraph "当前显示 4 台 / 全部 16 台"
+        StaticText "当前显示 4 台 / 全部 16 台"
+      heading "设备详情"
+        StaticText "设备详情"
+      @e22 button "收起详情"
+      DescriptionList "编号 d05 名称 电表01 类型 能源 空间 101教室（教学楼A 2层） 在线情况 在线 模拟标记 是（教学模拟） 当前负责人 尚未登记 备注 尚未登记"
+        term "编号"
+          StaticText "编号"
+        definition "d05"
+          StaticText "d05"
+        term "名称"
+          StaticText "名称"
+        definition "电表01"
+          StaticText "电表01"
+        term "类型"
+          StaticText "类型"
+        definition "能源"
+          StaticText "能源"
+        term "空间"
+          StaticText "空间"
+        definition "101教室（教学楼A 2层）"
+          StaticText "101教室（教学楼A 2层）"
+        term "在线情况"
+          StaticText "在线情况"
+        definition "在线"
+          StaticText "在线"
+        term "模拟标记"
+          StaticText "模拟标记"
+        definition "是（教学模拟）"
+          StaticText "是（教学模拟）"
+        term "当前负责人"
+          StaticText "当前负责人"
+        definition "尚未登记"
+          StaticText "尚未登记"
+        term "备注"
+          StaticText "备注"
+        definition "尚未登记"
+          StaticText "尚未登记"
+      paragraph "基本信息（编号、名称、类型、在线情况、模拟标记）来自本机后端 /api/devices（MySQL，最近一次成功读取）。"
+        StaticText "基本信息（编号、名称、类型、在线情况、模拟标记）来自本机后端 /api/devices（MySQL，最近一次成功读取）。"
+      paragraph "空间名称、当前负责人和备注仍是浏览器演示数据；点位读数与历史仍是公开教学样本，第10课再接后端。"
+        StaticText "空间名称、当前负责人和备注仍是浏览器演示数据；点位读数与历史仍是公开教学样本，第10课再接后端。"
+      @e23 button "查看责任登记"
+      @e24 button "查看所在空间"
+      heading "读数"
+        StaticText "读数"
+      table "设备读数"
+        caption "设备读数"
+          StaticText "设备读数"
+        rowgroup "点位 数值 单位 采样时间 质量 操作"
+          row "点位 数值 单位 采样时间 质量 操作"
+            columnheader "点位"
+            columnheader "数值"
+            columnheader "单位"
+            columnheader "采样时间"
+            columnheader "质量"
+            columnheader "操作"
+        row "功率 power 0 kW 2026/10/20 08:00:00 正常"
+          cell "功率 power"
+          cell "0"
+          cell "kW"
+          cell "2026/10/20 08:00:00"
+          cell "正常"
+          cell "查看电表01功率的历史样本"
+            @e25 button "查看电表01功率的历史样本"
+        row "电压 voltage 220 V 2026/10/20 08:00:00 正常"
+          cell "电压 voltage"
+          cell "220"
+          cell "V"
+          cell "2026/10/20 08:00:00"
+          cell "正常"
+          cell "查看电表01电压的历史样本"
+            @e26 button "查看电表01电压的历史样本"
+      paragraph "以下读数与历史仍是公开教学样本（TEACHING_MOCK），不是本机 MySQL 数据，第10课才接后端。固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。"
+        StaticText "以下读数与历史仍是公开教学样本（TEACHING_MOCK），不是本机 MySQL 数据，第10课才接后端。固定日期的教学样本，刷新不会产生新的采样时间。数值按原始字段显示：0 就是 0，null 显示“缺失”；状态点只显示原始数值，不推断故障含义。"
+      paragraph "刷新失败：后端返回 HTTP 503。可点“重试”再读取，或继续查看下面的上次成功结果。"
+        StaticText "刷新失败：后端返回 HTTP 503。可点“重试”再读取，或继续查看下面的上次成功结果。"
+      @e27 button "重试"

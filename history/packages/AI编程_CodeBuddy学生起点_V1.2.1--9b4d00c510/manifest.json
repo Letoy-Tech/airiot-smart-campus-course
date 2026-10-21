@@ -1,0 +1,1573 @@
+{
+  "formatVersion": 1,
+  "package": "AI编程_CodeBuddy学生起点_V1.2.1--9b4d00c510",
+  "sourceArchive": "教学/AI编程_CodeBuddy学生起点_V1.2.1.zip",
+  "sourceArchiveSha256": "9b4d00c510b66d12c880acea342cc195ef7b19090e19c2b1a1cb778afac5bb0b",
+  "sourceHashPurpose": "local historical input identity only; not the hash of any published derivative",
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "entries": [
+    {
+      "path": "campus-ai-lab/README.md",
+      "object": "objects/ce/ceb3400948da791c29cd07e5f69cfa0444c288ff9b7813f98e2dafa540e9dd69.md",
+      "sha256": "ceb3400948da791c29cd07e5f69cfa0444c288ff9b7813f98e2dafa540e9dd69",
+      "bytes": 681,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/STARTER-MANIFEST.json",
+      "object": "objects/36/36c8a554e85ab6fc4371d9afdbf68b970c2221ecbf69c1143c5aa312ff525afd.json",
+      "sha256": "36c8a554e85ab6fc4371d9afdbf68b970c2221ecbf69c1143c5aa312ff525afd",
+      "bytes": 44200,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/.gitignore",
+      "object": "objects/62/62da89bd80bab37b268ee08e2ca872bc243130acad5dc0f8e63c590f3f6cb256.txt",
+      "sha256": "62da89bd80bab37b268ee08e2ca872bc243130acad5dc0f8e63c590f3f6cb256",
+      "bytes": 125,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/.nvmrc",
+      "object": "objects/07/0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42.txt",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/CODEBUDDY.md",
+      "object": "objects/a4/a49f7f578dba2ba50f46b7c8f4359ec00b6c01ea91f22bb22d6dbc78c2e7b31d.md",
+      "sha256": "a49f7f578dba2ba50f46b7c8f4359ec00b6c01ea91f22bb22d6dbc78c2e7b31d",
+      "bytes": 2042,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/README.md",
+      "object": "objects/9a/9afc7655ce9741a84f970c1d99950f564a8f66589ae9bc809c5465eb488dfe0a.md",
+      "sha256": "9afc7655ce9741a84f970c1d99950f564a8f66589ae9bc809c5465eb488dfe0a",
+      "bytes": 4815,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/docs/01-跨平台启动.md",
+      "object": "objects/6c/6caa74e0068aa2156dfc645ace13e6258ff53f6f1c5fd831b969d18a5d43efea.md",
+      "sha256": "6caa74e0068aa2156dfc645ace13e6258ff53f6f1c5fd831b969d18a5d43efea",
+      "bytes": 4030,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/docs/接口与数据.md",
+      "object": "objects/94/945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/docs/项目卡.md",
+      "object": "objects/58/58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/evidence/README.md",
+      "object": "objects/7a/7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/.gitignore",
+      "object": "objects/44/44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403.txt",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/DESIGN.md",
+      "object": "objects/60/602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/PRODUCT.md",
+      "object": "objects/07/07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/index.html",
+      "object": "objects/53/5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/package-lock.json",
+      "object": "objects/4f/4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/package.json",
+      "object": "objects/8a/8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/App.vue",
+      "object": "objects/fa/fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83.vue",
+      "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83",
+      "bytes": 320,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/domain/journey-exercises.ts",
+      "object": "objects/56/5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/main.ts",
+      "object": "objects/af/affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/project-settings.ts",
+      "object": "objects/b8/b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/style.css",
+      "object": "objects/2c/2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/tests/journey-start.test.ts",
+      "object": "objects/8c/8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/src/views/StaticDevices.vue",
+      "object": "objects/ce/cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/tsconfig.json",
+      "object": "objects/a9/a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/frontend/vite.config.ts",
+      "object": "objects/2b/2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/journey-state.json",
+      "object": "objects/49/49a7956aa5c5600185e75b1cc29bee122c14e3e7362acd70575de439cd7acd34.json",
+      "sha256": "49a7956aa5c5600185e75b1cc29bee122c14e3e7362acd70575de439cd7acd34",
+      "bytes": 3488,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/README.md",
+      "object": "objects/87/87698b8ffa60093c593f0777571157a86a63edf86aa3b9471a941bf57cb92171.md",
+      "sha256": "87698b8ffa60093c593f0777571157a86a63edf86aa3b9471a941bf57cb92171",
+      "bytes": 1355,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/.gitignore",
+      "object": "objects/62/62da89bd80bab37b268ee08e2ca872bc243130acad5dc0f8e63c590f3f6cb256.txt",
+      "sha256": "62da89bd80bab37b268ee08e2ca872bc243130acad5dc0f8e63c590f3f6cb256",
+      "bytes": 125,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/.nvmrc",
+      "object": "objects/07/0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42.txt",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42",
+      "bytes": 8,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/CODEBUDDY.md",
+      "object": "objects/a4/a49f7f578dba2ba50f46b7c8f4359ec00b6c01ea91f22bb22d6dbc78c2e7b31d.md",
+      "sha256": "a49f7f578dba2ba50f46b7c8f4359ec00b6c01ea91f22bb22d6dbc78c2e7b31d",
+      "bytes": 2042,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/README.md",
+      "object": "objects/9a/9afc7655ce9741a84f970c1d99950f564a8f66589ae9bc809c5465eb488dfe0a.md",
+      "sha256": "9afc7655ce9741a84f970c1d99950f564a8f66589ae9bc809c5465eb488dfe0a",
+      "bytes": 4815,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/docs/01-跨平台启动.md",
+      "object": "objects/6c/6caa74e0068aa2156dfc645ace13e6258ff53f6f1c5fd831b969d18a5d43efea.md",
+      "sha256": "6caa74e0068aa2156dfc645ace13e6258ff53f6f1c5fd831b969d18a5d43efea",
+      "bytes": 4030,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/docs/接口与数据.md",
+      "object": "objects/94/945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991.md",
+      "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991",
+      "bytes": 165,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/docs/项目卡.md",
+      "object": "objects/58/58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a.md",
+      "sha256": "58e97a613219cb014e31402db6a43dcf21cd8952d736a206dbdb3273fbf37f9a",
+      "bytes": 181,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/evidence/README.md",
+      "object": "objects/7a/7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e.md",
+      "sha256": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+      "bytes": 215,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/.gitignore",
+      "object": "objects/44/44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403.txt",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403",
+      "bytes": 54,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/DESIGN.md",
+      "object": "objects/60/602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c.md",
+      "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c",
+      "bytes": 1129,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/PRODUCT.md",
+      "object": "objects/07/07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300.md",
+      "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300",
+      "bytes": 1340,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/index.html",
+      "object": "objects/53/5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b",
+      "bytes": 362,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/package-lock.json",
+      "object": "objects/4f/4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7",
+      "bytes": 114918,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/package.json",
+      "object": "objects/8a/8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5",
+      "bytes": 730,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/App.vue",
+      "object": "objects/fa/fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83.vue",
+      "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83",
+      "bytes": 320,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/domain/journey-exercises.ts",
+      "object": "objects/56/5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7",
+      "bytes": 245,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/main.ts",
+      "object": "objects/af/affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382",
+      "bytes": 166,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/project-settings.ts",
+      "object": "objects/b8/b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5.ts",
+      "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5",
+      "bytes": 111,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/style.css",
+      "object": "objects/2c/2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9",
+      "bytes": 24135,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/tests/journey-start.test.ts",
+      "object": "objects/8c/8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555",
+      "bytes": 731,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/src/views/StaticDevices.vue",
+      "object": "objects/ce/cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455",
+      "bytes": 939,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/tsconfig.json",
+      "object": "objects/a9/a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999",
+      "bytes": 410,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/frontend/vite.config.ts",
+      "object": "objects/2b/2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0",
+      "bytes": 359,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/package.json",
+      "object": "objects/6c/6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/files/tools/progress.mjs",
+      "object": "objects/08/084c635139fa3cbb3bfbc91df3e5400a694b26f725eb122343391a49d0618165.mjs",
+      "sha256": "084c635139fa3cbb3bfbc91df3e5400a694b26f725eb122343391a49d0618165",
+      "bytes": 15717,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-01/manifest.json",
+      "object": "objects/5b/5b07782eb4abe6a903789060056ceea3191109aaddba42e4742c0df9ebcb50e9.json",
+      "sha256": "5b07782eb4abe6a903789060056ceea3191109aaddba42e4742c0df9ebcb50e9",
+      "bytes": 6191,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/README.md",
+      "object": "objects/44/44f00a34c62f891a68ffd588833b1176ead834f72dde08186c67ea8b7a4a9152.md",
+      "sha256": "44f00a34c62f891a68ffd588833b1176ead834f72dde08186c67ea8b7a4a9152",
+      "bytes": 5902,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/.gitignore",
+      "object": "objects/48/483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a.txt",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a",
+      "bytes": 36,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.properties",
+      "object": "objects/75/75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/README.md",
+      "object": "objects/20/20ba1091d71eb4b7f70aa2843a433c27f963eb81fc69bb2ed62c7de613e04d57.md",
+      "sha256": "20ba1091d71eb4b7f70aa2843a433c27f963eb81fc69bb2ed62c7de613e04d57",
+      "bytes": 14458,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/docs/debug-read-pagination.md",
+      "object": "objects/98/98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127.md",
+      "sha256": "98a55a5ff8812effe107209c6dc9a05cbe50778dbdebb1cc547079967594c127",
+      "bytes": 2844,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/docs/full-api.json",
+      "object": "objects/8e/8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d",
+      "bytes": 16372,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/docs/round10-read-api.json",
+      "object": "objects/64/64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502",
+      "bytes": 4935,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/mvnw",
+      "object": "objects/45/4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f.txt",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/mvnw.cmd",
+      "object": "objects/6d/6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/pom.xml",
+      "object": "objects/3f/3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89",
+      "bytes": 2060,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Access.java",
+      "object": "objects/9b/9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223",
+      "bytes": 939,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "object": "objects/b9/b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9",
+      "bytes": 3143,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "object": "objects/89/89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31",
+      "bytes": 1388,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "object": "objects/b1/b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec",
+      "bytes": 1927,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "object": "objects/e4/e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183",
+      "bytes": 1344,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "object": "objects/55/55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702",
+      "bytes": 666,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "object": "objects/19/1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb",
+      "bytes": 336,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/AuthController.java",
+      "object": "objects/22/2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9",
+      "bytes": 1531,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusController.java",
+      "object": "objects/f8/f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f",
+      "bytes": 2500,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "object": "objects/e2/e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6",
+      "bytes": 6465,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "object": "objects/2d/2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16",
+      "bytes": 1561,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "object": "objects/58/58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477",
+      "bytes": 8189,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "object": "objects/e3/e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1",
+      "bytes": 1224,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "object": "objects/13/13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807",
+      "bytes": 530,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "object": "objects/47/47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a",
+      "bytes": 630,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/CourseModels.java",
+      "object": "objects/27/27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091",
+      "bytes": 2512,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "object": "objects/00/000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535",
+      "bytes": 499,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "object": "objects/26/264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439",
+      "bytes": 1687,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "object": "objects/7d/7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0",
+      "bytes": 8340,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/Inputs.java",
+      "object": "objects/cf/cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d",
+      "bytes": 1684,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "object": "objects/ad/adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3",
+      "bytes": 2343,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/LocationService.java",
+      "object": "objects/be/be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0",
+      "bytes": 3814,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "object": "objects/ed/ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a",
+      "bytes": 11272,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/OperationsService.java",
+      "object": "objects/52/524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62",
+      "bytes": 14334,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "object": "objects/8c/8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+      "bytes": 1144,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "object": "objects/f8/f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000",
+      "bytes": 10464,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "object": "objects/c2/c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49",
+      "bytes": 2105,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "object": "objects/68/6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e",
+      "bytes": 8151,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/resources/application-first-chain.properties",
+      "object": "objects/ce/ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef",
+      "bytes": 317,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/resources/application-teacher-db.properties",
+      "object": "objects/37/37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738",
+      "bytes": 587,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/resources/application.properties",
+      "object": "objects/81/81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad",
+      "bytes": 749,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "object": "objects/c8/c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973",
+      "bytes": 198,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "object": "objects/72/728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184",
+      "bytes": 2501,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "object": "objects/bc/bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258",
+      "bytes": 4739,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "object": "objects/1b/1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e",
+      "bytes": 2147,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "object": "objects/d2/d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c",
+      "bytes": 13732,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "object": "objects/91/9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0",
+      "bytes": 3230,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "object": "objects/06/06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7",
+      "bytes": 1006,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "object": "objects/2a/2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103",
+      "bytes": 2994,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "object": "objects/2a/2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78",
+      "bytes": 3859,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "object": "objects/76/76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd",
+      "bytes": 10777,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "object": "objects/5d/5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2",
+      "bytes": 17905,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "object": "objects/86/86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841",
+      "bytes": 1672,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "object": "objects/c8/c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed",
+      "bytes": 35924,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/src/test/resources/catalog-test.json",
+      "object": "objects/86/86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890",
+      "bytes": 910,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/tools/account-admin.mjs",
+      "object": "objects/2a/2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9",
+      "bytes": 1302,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/tools/test-mysql.mjs",
+      "object": "objects/a7/a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9",
+      "bytes": 1401,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/docs/02-教师数据库交接单.md",
+      "object": "objects/22/226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8.md",
+      "sha256": "226e89ac2e6a8c2a4451cc320876226cd68670b23b42d142649bab7036f700e8",
+      "bytes": 5054,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/README.md",
+      "object": "objects/c3/c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780.md",
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780",
+      "bytes": 8767,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/catalog.json",
+      "object": "objects/bb/bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32",
+      "bytes": 15957,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/command-audit.json",
+      "object": "objects/d6/d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb",
+      "bytes": 2112,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/concurrency-rollback-scenarios.json",
+      "object": "objects/df/df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787",
+      "bytes": 4840,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/history-cases.json",
+      "object": "objects/0b/0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e",
+      "bytes": 585,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/history-series.json",
+      "object": "objects/73/736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6",
+      "bytes": 9190,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/manifest.json",
+      "object": "objects/4c/4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494",
+      "bytes": 4335,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/pagination-scenarios.json",
+      "object": "objects/44/443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2",
+      "bytes": 2268,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/permission-scenarios.json",
+      "object": "objects/99/99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4",
+      "bytes": 3338,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/quality-cases.json",
+      "object": "objects/86/8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278",
+      "bytes": 4210,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/raw-alarms.json",
+      "object": "objects/4b/4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26",
+      "bytes": 2562,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/schema.md",
+      "object": "objects/5b/5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3.md",
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3",
+      "bytes": 4594,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/fixtures/selectors.json",
+      "object": "objects/d6/d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db",
+      "bytes": 1007,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/App.vue",
+      "object": "objects/55/5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156.vue",
+      "sha256": "5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156",
+      "bytes": 4954,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/api/auth.ts",
+      "object": "objects/7e/7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262",
+      "bytes": 2612,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/api/campus.ts",
+      "object": "objects/28/28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+      "bytes": 2661,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/api/http.ts",
+      "object": "objects/e1/e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a",
+      "bytes": 5079,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/domain/course.ts",
+      "object": "objects/89/8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+      "bytes": 4467,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/journey/features.ts",
+      "object": "objects/24/241662ec80f0e85d3e7aa3f9f293b08ce6fcfb2ee176e42ff5dc3cd89d54c2a3.ts",
+      "sha256": "241662ec80f0e85d3e7aa3f9f293b08ce6fcfb2ee176e42ff5dc3cd89d54c2a3",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/journey/registry.ts",
+      "object": "objects/08/08972b81db69fd498a82f08b1ebf031391f741be8ce95e58e809d1aed37730c1.ts",
+      "sha256": "08972b81db69fd498a82f08b1ebf031391f741be8ce95e58e809d1aed37730c1",
+      "bytes": 307,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/stores/campus.ts",
+      "object": "objects/1d/1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140",
+      "bytes": 6256,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/tests/first-device-view.test.ts",
+      "object": "objects/5b/5bee297ba6341df5cb5f9d1a14ace568a5903e965b40e014e6d9fd015cbf58c9.ts",
+      "sha256": "5bee297ba6341df5cb5f9d1a14ace568a5903e965b40e014e6d9fd015cbf58c9",
+      "bytes": 3011,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/tests/http.test.ts",
+      "object": "objects/96/96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70",
+      "bytes": 3149,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/tests/request-timeout.test.ts",
+      "object": "objects/64/64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e",
+      "bytes": 4282,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/tests/session-races.test.ts",
+      "object": "objects/ba/ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849",
+      "bytes": 6420,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/types/campus.ts",
+      "object": "objects/1f/1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0",
+      "bytes": 1067,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/types/full.ts",
+      "object": "objects/c0/c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7",
+      "bytes": 3222,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/views/FirstDeviceRead.vue",
+      "object": "objects/26/2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda",
+      "bytes": 9440,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/frontend/src/views/FullWorkspace.vue",
+      "object": "objects/c8/c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1.vue",
+      "sha256": "c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1",
+      "bytes": 1263,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/tools/course.mjs",
+      "object": "objects/b1/b1073e4167d43eba60c62d5bda5d8264f880201223b1148ecb1e6f952d9431da.mjs",
+      "sha256": "b1073e4167d43eba60c62d5bda5d8264f880201223b1148ecb1e6f952d9431da",
+      "bytes": 8522,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/tools/private-json.mjs",
+      "object": "objects/bc/bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66",
+      "bytes": 804,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/tools/validate-fixtures.mjs",
+      "object": "objects/16/164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786",
+      "bytes": 20580,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/manifest.json",
+      "object": "objects/9d/9da59509c67997a1e84809f86ceeddbba3ac807cf4203c8abdc521df99c0167e.json",
+      "sha256": "9da59509c67997a1e84809f86ceeddbba3ac807cf4203c8abdc521df99c0167e",
+      "bytes": 24838,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/README.md",
+      "object": "objects/34/34c93fd42e0f6f3eb0abb1edc17de0cbe4f2dd9966fe576a9b8cba3796dee61a.md",
+      "sha256": "34c93fd42e0f6f3eb0abb1edc17de0cbe4f2dd9966fe576a9b8cba3796dee61a",
+      "bytes": 1033,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/api/full.ts",
+      "object": "objects/bd/bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36",
+      "bytes": 9450,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/components/ReadStatus.vue",
+      "object": "objects/bb/bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5",
+      "bytes": 464,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/components/SourceBanner.vue",
+      "object": "objects/83/832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3",
+      "bytes": 793,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/composables/useRequestScope.ts",
+      "object": "objects/ae/ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c",
+      "bytes": 2677,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/domain/read-models.ts",
+      "object": "objects/62/623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f",
+      "bytes": 1781,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/journey/features.ts",
+      "object": "objects/f9/f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4.ts",
+      "sha256": "f954dfd99cdbd60371270d26e4afe90c66132d4626273c0eea00ee5b3c079ea4",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/journey/registry.ts",
+      "object": "objects/7f/7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665.ts",
+      "sha256": "7f9dd9ca932cd42fec155ea5f21fc17722743414298dfb2bacd03936aed23665",
+      "bytes": 415,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/tests/catalog-navigation.test.ts",
+      "object": "objects/51/516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893",
+      "bytes": 2917,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/tests/course-domain.test.ts",
+      "object": "objects/07/0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67",
+      "bytes": 3776,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/tests/request-scope.test.ts",
+      "object": "objects/d0/d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a",
+      "bytes": 4200,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/files/frontend/src/views/DeviceCatalog.vue",
+      "object": "objects/5b/5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226",
+      "bytes": 10900,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-03/manifest.json",
+      "object": "objects/9b/9bdd784f6b1efc6f12c795a63bff1a9fef7196e05c7ed9f1ab73ae63baf1e5dd.json",
+      "sha256": "9bdd784f6b1efc6f12c795a63bff1a9fef7196e05c7ed9f1ab73ae63baf1e5dd",
+      "bytes": 4065,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-04/README.md",
+      "object": "objects/33/337b336ec1a81ae6ab541e0924aee5263b7a5cef8eaef8656a3c559ef41eedf8.md",
+      "sha256": "337b336ec1a81ae6ab541e0924aee5263b7a5cef8eaef8656a3c559ef41eedf8",
+      "bytes": 601,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-04/files/frontend/src/journey/features.ts",
+      "object": "objects/b8/b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713.ts",
+      "sha256": "b89fd98eda4f63d2f0e3e5e997a79fcec6b7f9c8b739f56ccee5723a8e530713",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-04/files/frontend/src/journey/registry.ts",
+      "object": "objects/c1/c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3.ts",
+      "sha256": "c106aa234a7f1926e6e21ee326bd8a244cc287f28bb4ffa248ccd60613795fc3",
+      "bytes": 530,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-04/files/frontend/src/views/LocationsView.vue",
+      "object": "objects/a6/a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6",
+      "bytes": 5865,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-04/manifest.json",
+      "object": "objects/4a/4a5c21aeeb29a8560183c93b7bf91937e3bd5b7b6774377a8efb32d3839bc8a9.json",
+      "sha256": "4a5c21aeeb29a8560183c93b7bf91937e3bd5b7b6774377a8efb32d3839bc8a9",
+      "bytes": 1856,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/README.md",
+      "object": "objects/d2/d2cbca0e14e3e03a945b9568bd839e86938db0a3edb93c48a7c635596805c08d.md",
+      "sha256": "d2cbca0e14e3e03a945b9568bd839e86938db0a3edb93c48a7c635596805c08d",
+      "bytes": 773,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/components/CompareHistory.vue",
+      "object": "objects/7b/7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f",
+      "bytes": 7075,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/components/HistoryChart.vue",
+      "object": "objects/d6/d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e",
+      "bytes": 2106,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/journey/features.ts",
+      "object": "objects/1c/1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc.ts",
+      "sha256": "1c13fc1fe93aff1f9dcd7b2b2eabe5b9cda81ef4299c4e320bfe70fba44b52cc",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/journey/registry.ts",
+      "object": "objects/32/32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820.ts",
+      "sha256": "32db8dae99d57eb6297c7011a24793771c3cb8f9c7248768be8fd541ad0eb820",
+      "bytes": 748,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/tests/energy-scope.test.ts",
+      "object": "objects/b2/b2a2b84c5825a611fc3e28862f0efe59c81c086d9b0a4f406eee8e4a1e4b5bd6.ts",
+      "sha256": "b2a2b84c5825a611fc3e28862f0efe59c81c086d9b0a4f406eee8e4a1e4b5bd6",
+      "bytes": 4384,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/views/EnergyView.vue",
+      "object": "objects/56/56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f",
+      "bytes": 3189,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/files/frontend/src/views/OverviewView.vue",
+      "object": "objects/5d/5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9",
+      "bytes": 6280,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-05/manifest.json",
+      "object": "objects/50/509c4cfd8a7a3c003c3d5fbaa117c161ccb803a59461cd162f63333a97f02cfa.json",
+      "sha256": "509c4cfd8a7a3c003c3d5fbaa117c161ccb803a59461cd162f63333a97f02cfa",
+      "bytes": 3176,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/README.md",
+      "object": "objects/f0/f023a6f0cd7269fb2a04d2fe350a882ea91d5e53987f446b3accc2de7329912b.md",
+      "sha256": "f023a6f0cd7269fb2a04d2fe350a882ea91d5e53987f446b3accc2de7329912b",
+      "bytes": 1006,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/api/read-models.ts",
+      "object": "objects/52/5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816",
+      "bytes": 2518,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/composables/useReadPage.ts",
+      "object": "objects/09/098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948",
+      "bytes": 1852,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/journey/features.ts",
+      "object": "objects/2a/2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f.ts",
+      "sha256": "2a02002ec47e653ded54234bc0ea2fd721ed17e5f46d89c337e97aa7a98fa53f",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/journey/registry.ts",
+      "object": "objects/53/53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808.ts",
+      "sha256": "53a540446d594a753f5bcb08bd00d2d4d902e617e5bff65f10060548a92bd808",
+      "bytes": 974,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/tests/comparison.test.ts",
+      "object": "objects/45/452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8",
+      "bytes": 4459,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/tests/monitoring-views.test.ts",
+      "object": "objects/a2/a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c",
+      "bytes": 5750,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/tests/read-api.test.ts",
+      "object": "objects/da/da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850",
+      "bytes": 2987,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/tests/read-models.test.ts",
+      "object": "objects/27/27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93",
+      "bytes": 1778,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/types/read-models.ts",
+      "object": "objects/63/637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+      "bytes": 1074,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/views/HistoryView.vue",
+      "object": "objects/5e/5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44",
+      "bytes": 6666,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/files/frontend/src/views/RawAlarmsView.vue",
+      "object": "objects/54/5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550",
+      "bytes": 3607,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-06/manifest.json",
+      "object": "objects/07/07b803a542d1c738f9a436336f4a2d973cacc7e915a910013310833402a9fad1.json",
+      "sha256": "07b803a542d1c738f9a436336f4a2d973cacc7e915a910013310833402a9fad1",
+      "bytes": 4628,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-07/README.md",
+      "object": "objects/bf/bf989010a07a7f76766b85acd2cbe13b26818ddedb22549191c4ad89ce7fe6c4.md",
+      "sha256": "bf989010a07a7f76766b85acd2cbe13b26818ddedb22549191c4ad89ce7fe6c4",
+      "bytes": 574,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-07/files/frontend/src/journey/features.ts",
+      "object": "objects/b5/b5b82b3328c17768bbebc72852264d86a47fbf36c7315d043a669a64dcad9324.ts",
+      "sha256": "b5b82b3328c17768bbebc72852264d86a47fbf36c7315d043a669a64dcad9324",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-07/files/frontend/src/journey/registry.ts",
+      "object": "objects/a6/a6ca821f9f89176f1d54b9a159d5a17e2e1310104289dce4d0516ee2f497f364.ts",
+      "sha256": "a6ca821f9f89176f1d54b9a159d5a17e2e1310104289dce4d0516ee2f497f364",
+      "bytes": 1083,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-07/files/frontend/src/views/AccessView.vue",
+      "object": "objects/1a/1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e",
+      "bytes": 784,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-07/manifest.json",
+      "object": "objects/f8/f80e5a55330891fdec7f2860474539d83203b0c712bb216f5ad574fbfc4cde0f.json",
+      "sha256": "f80e5a55330891fdec7f2860474539d83203b0c712bb216f5ad574fbfc4cde0f",
+      "bytes": 1826,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/README.md",
+      "object": "objects/96/96dfb8ad15974692b9081ddfaf972168614b4eee06a4ec7ea92048a19b8bd88e.md",
+      "sha256": "96dfb8ad15974692b9081ddfaf972168614b4eee06a4ec7ea92048a19b8bd88e",
+      "bytes": 633,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/files/frontend/src/journey/features.ts",
+      "object": "objects/3f/3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28.ts",
+      "sha256": "3f0957f513f768c5a969e632668ecdf9a72f14890d19a84bb887934475514a28",
+      "bytes": 63,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/files/frontend/src/journey/registry.ts",
+      "object": "objects/e2/e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7.ts",
+      "sha256": "e26260e904f7c095d9fd709671cf7f21227e949ee4d8693ecf3d00265b971be7",
+      "bytes": 1189,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/files/frontend/src/tests/case-trigger-race.test.ts",
+      "object": "objects/fe/feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493",
+      "bytes": 4313,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/files/frontend/src/views/CasesView.vue",
+      "object": "objects/20/20f7663b20b5bd5bdb79b90c31c53b9319b49d61437288a2b1380f27c4786eab.vue",
+      "sha256": "20f7663b20b5bd5bdb79b90c31c53b9319b49d61437288a2b1380f27c4786eab",
+      "bytes": 20741,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-08/manifest.json",
+      "object": "objects/f7/f714374ab5783fa9fdd1c4d7d93ab0d13d66ea8a715366d4e36a909f666b6b3b.json",
+      "sha256": "f714374ab5783fa9fdd1c4d7d93ab0d13d66ea8a715366d4e36a909f666b6b3b",
+      "bytes": 2190,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-09/README.md",
+      "object": "objects/9e/9eb3c648fb86b1abd448620c93164e1628bbb9e66f8a38be307601cb4e7e1299.md",
+      "sha256": "9eb3c648fb86b1abd448620c93164e1628bbb9e66f8a38be307601cb4e7e1299",
+      "bytes": 595,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-09/files/frontend/src/journey/features.ts",
+      "object": "objects/0f/0f153cebb92c95e6da59a6dcdbaaa3d588b65c116983ba410c99df8e4aaffa10.ts",
+      "sha256": "0f153cebb92c95e6da59a6dcdbaaa3d588b65c116983ba410c99df8e4aaffa10",
+      "bytes": 130,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-09/files/frontend/src/tests/closure-wiring.test.ts",
+      "object": "objects/09/0970202bed89cf2fe3303cbcae5688051a7f5362af9c02d58fc6100d384f443c.ts",
+      "sha256": "0970202bed89cf2fe3303cbcae5688051a7f5362af9c02d58fc6100d384f443c",
+      "bytes": 3893,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-09/files/frontend/src/views/CloseChecklist.vue",
+      "object": "objects/18/185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f",
+      "bytes": 566,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-09/manifest.json",
+      "object": "objects/a0/a0b095d4236339927b1f72897b6730192f624a438f4bfbbcda40262c461758fe.json",
+      "sha256": "a0b095d4236339927b1f72897b6730192f624a438f4bfbbcda40262c461758fe",
+      "bytes": 2050,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/README.md",
+      "object": "objects/b9/b945fda40959e9415964a7ba9bc6202189936e8178ce46a7223e0830736b22e0.md",
+      "sha256": "b945fda40959e9415964a7ba9bc6202189936e8178ce46a7223e0830736b22e0",
+      "bytes": 909,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/journey/features.ts",
+      "object": "objects/79/7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951.ts",
+      "sha256": "7929db4571276895c423c8a8120e3ed2f1acf6f5206cc23e41347ea2011f0951",
+      "bytes": 131,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/journey/registry.ts",
+      "object": "objects/b6/b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179",
+      "bytes": 1519,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/tests/journey-navigation.test.ts",
+      "object": "objects/3b/3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91",
+      "bytes": 1144,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/tests/read-pages.test.ts",
+      "object": "objects/72/7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244",
+      "bytes": 4022,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/tests/workflow-views.test.ts",
+      "object": "objects/79/795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09",
+      "bytes": 9323,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/views/AuditView.vue",
+      "object": "objects/ca/caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073",
+      "bytes": 3642,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/views/IntegrationView.vue",
+      "object": "objects/63/6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0",
+      "bytes": 2983,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/files/frontend/src/views/OwnersView.vue",
+      "object": "objects/ca/cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b",
+      "bytes": 8727,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-10/manifest.json",
+      "object": "objects/88/887098767c624ebbdd21849199acf40f0b426d5587037dd98d98baef5e188b5b.json",
+      "sha256": "887098767c624ebbdd21849199acf40f0b426d5587037dd98d98baef5e188b5b",
+      "bytes": 4019,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-11/README.md",
+      "object": "objects/3b/3b1e2a1e1a48fcbecd5cbd4512cc1b751a6d18d95db4c2ede7d1bb558f8b4f0b.md",
+      "sha256": "3b1e2a1e1a48fcbecd5cbd4512cc1b751a6d18d95db4c2ede7d1bb558f8b4f0b",
+      "bytes": 539,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-11/files/docs/调试记录.md",
+      "object": "objects/89/89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073.md",
+      "sha256": "89f8ae6249665e73d0322dd861f64c31f95bda7952ad670174fdaa0796dea073",
+      "bytes": 239,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-11/files/frontend/src/journey/features.ts",
+      "object": "objects/73/735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8.ts",
+      "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8",
+      "bytes": 131,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-11/manifest.json",
+      "object": "objects/4d/4d39f41f4c3c149fef949b0ae4b28c80acfc7fb425c10f145a9130fb4408559a.json",
+      "sha256": "4d39f41f4c3c149fef949b0ae4b28c80acfc7fb425c10f145a9130fb4408559a",
+      "bytes": 1302,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/README.md",
+      "object": "objects/2c/2cf5949f2d9118902139276fedae2519fbb7c1c7084863a35d352c81ba92559b.md",
+      "sha256": "2cf5949f2d9118902139276fedae2519fbb7c1c7084863a35d352c81ba92559b",
+      "bytes": 603,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/files/docs/交付核对.md",
+      "object": "objects/73/7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688.md",
+      "sha256": "7324b7ee66af0f4a2e506779687b0bc01ce9e54bc61a16dbcc6e3a1349ba1688",
+      "bytes": 317,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/files/docs/交付说明.md",
+      "object": "objects/c8/c86e9ab38cce53b31cf1e812ede296e40d61bf60e3396f2e2d72eb2f649530ab.md",
+      "sha256": "c86e9ab38cce53b31cf1e812ede296e40d61bf60e3396f2e2d72eb2f649530ab",
+      "bytes": 194,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/files/frontend/src/journey/features.ts",
+      "object": "objects/02/02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09",
+      "bytes": 131,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/files/tools/hand-in.mjs",
+      "object": "objects/61/61e4983efe83b4b2d04cd76e37d5b0134109f518ed7aeb221f8b9b4e2e7b7d6c.mjs",
+      "sha256": "61e4983efe83b4b2d04cd76e37d5b0134109f518ed7aeb221f8b9b4e2e7b7d6c",
+      "bytes": 3556,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-12/manifest.json",
+      "object": "objects/64/6450dfd005bb0d62f16a57e377ad8b19413d40e4511750d193f1c50fae82c305.json",
+      "sha256": "6450dfd005bb0d62f16a57e377ad8b19413d40e4511750d193f1c50fae82c305",
+      "bytes": 1804,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/package.json",
+      "object": "objects/6c/6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30",
+      "bytes": 651,
+      "executable": false
+    },
+    {
+      "path": "campus-ai-lab/app/tools/progress.mjs",
+      "object": "objects/08/084c635139fa3cbb3bfbc91df3e5400a694b26f725eb122343391a49d0618165.mjs",
+      "sha256": "084c635139fa3cbb3bfbc91df3e5400a694b26f725eb122343391a49d0618165",
+      "bytes": 15717,
+      "executable": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "campus-ai-lab/app/lesson-bundles/stage-02/files/backend/.mvn/wrapper/maven-wrapper.jar",
+      "reason": "generated-dependency-or-installation-binary"
+    }
+  ],
+  "nestedPackages": [],
+  "embeddedImageTransforms": {},
+  "integrityScope": "sha256 describes this sanitized derivative, not the original source ZIP members"
+}

@@ -1,0 +1,92 @@
+# 校园值班台 · 本课程专用本地容器（MySQL 8.4 + Redis 7.4）
+# 在项目根目录使用：
+#   docker compose up -d          启动本课程 mysql / redis
+#   docker compose ps             查看状态（starting / healthy）
+#   docker compose stop           结束本课服务（mysql 数据保留）
+# 约定：只连本机课程容器；不连学校或已有数据库；不使用 down -v，不删卷重做。
+
+name: campus-v2
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: campus-v2-mysql
+    restart: unless-stopped
+    environment:
+      # 口令只从项目根 .env 读取，不写在本文件里
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?缺少 MYSQL_ROOT_PASSWORD，请先确认根目录 .env 已生成}
+      MYSQL_DATABASE: campus_course
+      MYSQL_USER: campus
+      MYSQL_PASSWORD: ${DB_PASSWORD:?缺少 DB_PASSWORD，请先确认根目录 .env 已生成}
+      TZ: Asia/Shanghai
+    ports:
+      # 只监听本机回环地址，不暴露到局域网
+      - "127.0.0.1:23501:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      # 用镜像里的 mysql 客户端以课程账号 campus 连 campus_course 并真正执行一次查询：
+      # 能连上、库已建好、账号可用，才算就绪（不比 healthcheck.sh，该镜像里没有它）。
+      # 口令只通过容器已有的 MYSQL_PASSWORD 传给 MYSQL_PWD，不写进命令行、不输出。
+      test:
+        - CMD-SHELL
+        - >-
+          MYSQL_PWD="$$MYSQL_PASSWORD" mysql --protocol=TCP -h 127.0.0.1 -P 3306
+          -u "$$MYSQL_USER" -D "$$MYSQL_DATABASE" --connect-timeout=3
+          --silent --skip-column-names -e 'SELECT 1'
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      # 首次建库需要初始化数据目录，给足启动窗口；此期间状态是 starting
+      start_period: 60s
+
+  redis:
+    image: redis:7.4
+    container_name: campus-v2-redis
+    restart: unless-stopped
+    environment:
+      # 口令只从项目根 .env 读取；下面命令与检查都用变量名，不把真实值写进本文件
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?缺少 REDIS_PASSWORD，请先确认根目录 .env 已生成}
+      TZ: Asia/Shanghai
+    ports:
+      # 只监听本机回环地址，不暴露到局域网
+      - "127.0.0.1:23502:6379"
+    # 本课程 redis 只保存短时登录凭据，不落盘：
+    #   --save ""        关闭 RDB 快照
+    #   --appendonly no  关闭 AOF 追加日志
+    # 因此 redis 进程重新启动后内存数据为空，登录凭据自然失效；故不挂任何数据卷。
+    # 用 sh -c 让 $$REDIS_PASSWORD 在容器内展开：启动命令字段只保留容器变量占位，本身不含明文口令。
+    # 但 environment 里的 ${REDIS_PASSWORD} 在普通 docker compose config 中会被展开，
+    # 不能保证整个 config 输出无口令；docker inspect 也会显示环境值。
+    # 因此不要输出或分享普通 compose config / docker inspect 结果；
+    # 需要做结构检查时，用不会展开或不会输出环境值的方式（例如只用本地 YAML 解析校验键位）。
+    command:
+      - sh
+      - -c
+      - >-
+        exec redis-server
+        --bind 0.0.0.0
+        --port 6379
+        --protected-mode yes
+        --requirepass "$$REDIS_PASSWORD"
+        --save ""
+        --appendonly no
+    healthcheck:
+      # 用镜像里的 redis-cli 以容器内已有的本机配置连本机 6379 做一次 PING：
+      # 通过 REDISCLI_AUTH 传口令（不写进命令行参数），并加 --no-auth-warning，
+      # 失败时日志只显示变量名，不会打印口令。
+      test:
+        - CMD-SHELL
+        - >-
+          REDISCLI_AUTH="$$REDIS_PASSWORD"
+          redis-cli -h 127.0.0.1 -p 6379 --no-auth-warning ping
+          | grep -q PONG
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 5s
+
+volumes:
+  # 只声明键，不写 name、不写 external：
+  # Compose 会自动命名为 campus-v2_mysql-data，随项目名变化，便于第12课独立交付环境
+  mysql-data:

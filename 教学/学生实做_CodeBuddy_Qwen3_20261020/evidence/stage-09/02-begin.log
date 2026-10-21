@@ -1,0 +1,5 @@
+已准备骨架：第09站。
+  frontend/src/journey/features.ts
+  frontend/src/views/CloseChecklist.vue
+备份：journey-backups/2026-10-19T18-19-07-802Z-stage-09-begin-55dfc7
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

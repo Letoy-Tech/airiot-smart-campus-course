@@ -1,0 +1,146 @@
+{
+  "checkedAt": 1791142543366,
+  "base": "https://demo.example.invalid/campus-demo/",
+  "pass": true,
+  "checks": [
+    {
+      "name": "public SPA root",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public SPA login",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public SPA campus/operations",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public SPA campus/overview",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public SPA campus/device-owners",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public SPA campus/alarm-cases/showcase-deep-link",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "617a1faa340bfe1fbd6f8ed674e67bd1a048ac14f921b26a3ad7135bd8683248"
+    },
+    {
+      "name": "public asset favicon.ico",
+      "pass": true,
+      "contentType": "image/x-icon",
+      "bytes": 4286,
+      "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445"
+    },
+    {
+      "name": "public asset assets/index-DN13BjNm.js",
+      "pass": true,
+      "contentType": "application/javascript",
+      "bytes": 164301,
+      "sha256": "37abfef550eeae4480552e46f3bb67bbe6e30ce8c150a88c814962fff902e867"
+    },
+    {
+      "name": "public asset assets/index-DnuubypI.css",
+      "pass": true,
+      "contentType": "text/css",
+      "bytes": 171153,
+      "sha256": "53a48ee33c3f3e4fb7d913bc0df9035414b8c675bc0ce40f7e493e023c8e3273"
+    },
+    {
+      "name": "anonymous cannot read campus",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "public admin capabilities",
+      "pass": true
+    },
+    {
+      "name": "public manager capabilities",
+      "pass": true
+    },
+    {
+      "name": "public manager_other capabilities",
+      "pass": true
+    },
+    {
+      "name": "public viewer capabilities",
+      "pass": true
+    },
+    {
+      "name": "public AIRIOT simulation readings",
+      "pass": true,
+      "counts": {
+        "expectedSpaces": 4,
+        "expectedDevices": 16,
+        "expectedPoints": 28,
+        "actualSpaces": 4,
+        "actualDevices": 16,
+        "actualPoints": 28
+      },
+      "qualities": [
+        "fresh"
+      ]
+    },
+    {
+      "name": "public responsibility read",
+      "pass": true
+    },
+    {
+      "name": "public persisted DEMO states",
+      "pass": true,
+      "total": 4,
+      "states": [
+        "ASSIGNED",
+        "CLOSED",
+        "IN_PROGRESS"
+      ]
+    },
+    {
+      "name": "public closed event timeline",
+      "pass": true,
+      "actions": [
+        "DEMO_TRIGGER",
+        "ASSIGN",
+        "START",
+        "NOTE",
+        "DEMO_RECOVER",
+        "VERIFY_RECOVERY",
+        "CLOSE"
+      ],
+      "version": 7
+    },
+    {
+      "name": "public machine read only",
+      "pass": true
+    }
+  ],
+  "syntheticLoginRevoked": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "tls": "Default certificate and hostname verification; no -k or host override",
+  "scope": "Public HTTPS from this Mac network; no event seeding or device control",
+  "limits": "Does not prove every school network or authenticated browser behavior.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

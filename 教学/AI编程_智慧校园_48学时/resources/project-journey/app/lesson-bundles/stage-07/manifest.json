@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "stage": 7,
+  "title": "身份与权限验证",
+  "mode": "teacher-db；复用认证底座",
+  "goal": "解释当前身份和严格能力",
+  "contract": "身份来自me，能力只接受Boolean true；后端决定权限",
+  "acceptance": "viewer不能写；身份切换清旧数据；401/403分开",
+  "businessFiles": [
+    "frontend/src/views/AccessView.vue"
+  ],
+  "integrationFiles": [],
+  "documentationFiles": [],
+  "verificationFiles": [],
+  "scaffoldingFiles": [
+    "frontend/src/journey/registry.ts",
+    "frontend/src/journey/features.ts"
+  ],
+  "contextFiles": [
+    "docs/01-跨平台启动.md",
+    "docs/项目卡.md",
+    "docs/接口与数据.md",
+    "frontend/src/views/AccessView.vue",
+    "frontend/src/api/campus.ts",
+    "frontend/src/stores/campus.ts",
+    "frontend/src/api/full.ts",
+    "backend/docs/full-api.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "a6ca821f9f89176f1d54b9a159d5a17e2e1310104289dce4d0516ee2f497f364",
+      "bytes": 1083,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "b5b82b3328c17768bbebc72852264d86a47fbf36c7315d043a669a64dcad9324",
+      "bytes": 63,
+      "role": "assembly"
+    },
+    {
+      "path": "frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e",
+      "bytes": 784,
+      "role": "business",
+      "stub": "<template>\n  <section class=\"workspace full-page\"><h1>身份与权限验证</h1><p role=\"alert\">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>\n</template>\n"
+    }
+  ],
+  "teacherBackend": "Complete readable reference service, not student-written from zero",
+  "pendingReference": []
+}

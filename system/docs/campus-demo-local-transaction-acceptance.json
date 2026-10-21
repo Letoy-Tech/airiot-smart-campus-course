@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-05T01:40:38.469114+08:00",
+  "scope": "Local isolated smart_campus database and one newly generated DEMO case only",
+  "database": {
+    "host": "127.0.0.1",
+    "port": 13316,
+    "schema": "smart_campus",
+    "connectionMode": "configured local Unix socket"
+  },
+  "injection": {
+    "kind": "temporary BEFORE INSERT trigger",
+    "triggerName": "qa_campus_note_rollback_011d642869a346dc8899",
+    "predicate": "one exact case_id AND action=NOTE AND exact BINARY TEST note",
+    "allOtherInsertsUnaffected": true,
+    "removed": true
+  },
+  "checks": [
+    {
+      "name": "client configuration is restricted local file",
+      "pass": true
+    },
+    {
+      "name": "connection uses only the configured isolated local socket",
+      "pass": true
+    },
+    {
+      "name": "actual database identity matches isolated local runtime",
+      "pass": true
+    },
+    {
+      "name": "injection case is an independent local DEMO case",
+      "pass": true
+    },
+    {
+      "name": "case is IN_PROGRESS before fault injection",
+      "pass": true
+    },
+    {
+      "name": "no preexisting trigger will be modified",
+      "pass": true
+    },
+    {
+      "name": "precise temporary trigger installed",
+      "pass": true
+    },
+    {
+      "name": "timeline insert failure rejects API note operation",
+      "pass": true,
+      "httpStatus": 500
+    },
+    {
+      "name": "real MySQL state and timeline fully rolled back",
+      "pass": true,
+      "before": {
+        "version": 2,
+        "state": "IN_PROGRESS",
+        "timelineCount": 2
+      },
+      "after": {
+        "version": 2,
+        "state": "IN_PROGRESS",
+        "timelineCount": 2
+      }
+    },
+    {
+      "name": "API readback also retains exact version and timeline",
+      "pass": true
+    },
+    {
+      "name": "temporary injection removed in finally",
+      "pass": true
+    },
+    {
+      "name": "normal note write and audit recover after injection removal",
+      "pass": true,
+      "before": {
+        "version": 2,
+        "state": "IN_PROGRESS",
+        "timelineCount": 2
+      },
+      "after": {
+        "version": 3,
+        "state": "IN_PROGRESS",
+        "timelineCount": 3
+      }
+    },
+    {
+      "name": "only the QA DEMO case completed through normal workflow",
+      "pass": true,
+      "finalVersion": 6,
+      "finalTimelineCount": 6
+    }
+  ],
+  "pass": true,
+  "boundaries": [
+    "No upstream writes",
+    "No external notification",
+    "No application or migration changes",
+    "Real MySQL transaction test; does not validate physical hardware"
+  ],
+  "caseId": "a1dfcce2-f7f9-4037-bf98-96917933abfe",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

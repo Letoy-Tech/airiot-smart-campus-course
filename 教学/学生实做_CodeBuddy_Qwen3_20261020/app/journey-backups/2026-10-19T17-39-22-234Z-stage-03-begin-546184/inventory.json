@@ -1,0 +1,48 @@
+[
+  {
+    "path": "frontend/src/journey/registry.ts",
+    "existed": true,
+    "sha256": "08972b81db69fd498a82f08b1ebf031391f741be8ce95e58e809d1aed37730c1"
+  },
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "241662ec80f0e85d3e7aa3f9f293b08ce6fcfb2ee176e42ff5dc3cd89d54c2a3"
+  },
+  {
+    "path": "frontend/src/views/DeviceCatalog.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/api/full.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/composables/useRequestScope.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/domain/read-models.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/components/SourceBanner.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/components/ReadStatus.vue",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/catalog-navigation.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/course-domain.test.ts",
+    "existed": false
+  },
+  {
+    "path": "frontend/src/tests/request-scope.test.ts",
+    "existed": false
+  }
+]

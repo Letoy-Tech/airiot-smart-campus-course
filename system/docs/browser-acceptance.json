@@ -1,0 +1,170 @@
+{
+  "checkedAt": 1791107463559,
+  "pass": true,
+  "scope": "Owned Chrome task tab, local real MG→BE→fixed AIRIOT project; 1440 desktop and CDP 390x844 mobile viewport",
+  "realPhoneTest": false,
+  "checks": [
+    {
+      "name": "admin real MG on/off confirmed and restored",
+      "pass": true,
+      "evidence": [
+        {
+          "auditId": "97a52372-7909-40b5-afce-6983ab051273",
+          "deviceId": "facility_demo_01",
+          "before": false,
+          "requested": true,
+          "confirmed": true,
+          "observedAt": 1791106938327
+        },
+        {
+          "auditId": "94dd0497-5c76-45a0-b8d8-9c8f81d67738",
+          "deviceId": "facility_demo_01",
+          "before": true,
+          "requested": false,
+          "confirmed": false,
+          "observedAt": 1791106972189
+        }
+      ]
+    },
+    {
+      "name": "admin evidence no request or operation drop",
+      "pass": true,
+      "evidence": {
+        "file": "browser-admin-network.json",
+        "runId": "d25b2c78ee8aa"
+      }
+    },
+    {
+      "name": "manager real MG on/off confirmed and restored",
+      "pass": true,
+      "evidence": [
+        {
+          "auditId": "b39fc4d1-1364-4b04-a5b8-a606976930f4",
+          "deviceId": "light_demo_02",
+          "before": false,
+          "requested": true,
+          "confirmed": true,
+          "observedAt": 1791107114158
+        },
+        {
+          "auditId": "99a8a62c-04de-4bf7-af35-7e862838a273",
+          "deviceId": "light_demo_02",
+          "before": true,
+          "requested": false,
+          "confirmed": false,
+          "observedAt": 1791107133315
+        }
+      ]
+    },
+    {
+      "name": "manager evidence no request or operation drop",
+      "pass": true,
+      "evidence": {
+        "file": "browser-manager-network.json",
+        "runId": "d3edc147b50b0"
+      }
+    },
+    {
+      "name": "desktop overview 4/16/28 with fresh 28",
+      "pass": true,
+      "evidence": "ui-overview-desktop.png; real /api/campus/overview HTTP200"
+    },
+    {
+      "name": "desktop TEST campus/building/space binding saved and read back",
+      "pass": true,
+      "evidence": {
+        "image": "ui-locations-desktop.png",
+        "campus": "TEST 验收校园",
+        "building": "TEST 验收楼栋",
+        "spaceId": "demo_room_101",
+        "floor": "TEST 1F",
+        "store": "BE local DB only"
+      }
+    },
+    {
+      "name": "facility filter matched 4 real devices with values",
+      "pass": true,
+      "evidence": "Actual device ledger observation: facility_demo_01..04; unknown commTime explicitly shown"
+    },
+    {
+      "name": "raw history 719 samples chart and collapsible table",
+      "pass": true,
+      "evidence": {
+        "image": "ui-history-desktop.png",
+        "networkRequestId": "d25b2c78ee8aa:n107",
+        "deviceId": "facility_demo_01",
+        "tagId": "run_state",
+        "samples": 719
+      }
+    },
+    {
+      "name": "390px manager navigation hides administrator entries",
+      "pass": true,
+      "evidence": "ui-manager-mobile-menu.png"
+    },
+    {
+      "name": "390px menu opens and Escape closes it",
+      "pass": true,
+      "evidence": "Native bsk click + Escape before navigating to light_demo_02"
+    },
+    {
+      "name": "390px no document horizontal overflow after final styles",
+      "pass": true,
+      "evidence": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "tableContainerWidth": 356,
+        "tableScrollWidth": 408,
+        "overflowX": "auto",
+        "image": "ui-overview-mobile-final.png"
+      }
+    },
+    {
+      "name": "viewer no control form, displays readonly state",
+      "pass": true,
+      "evidence": "ui-viewer-detail.txt; ui-viewer-mobile-detail.png"
+    },
+    {
+      "name": "viewer audit route denied by real UI guard",
+      "pass": true,
+      "evidence": {
+        "requested": "/campus/audit",
+        "actual": "/access",
+        "heading": "当前账户无权访问此页面",
+        "BEGETaudit403": "local-api-acceptance.json"
+      }
+    },
+    {
+      "name": "viewer real empty alarm list is labelled as unverified mechanism",
+      "pass": true,
+      "evidence": "ui-viewer-alarms.txt; machine alarm total0"
+    },
+    {
+      "name": "one deliberately blocked readonly refresh retains true prior counts/time",
+      "pass": true,
+      "evidence": "ui-viewer-retained-on-failure.txt; browser-once-failure-network.json; explicit local one-match block, not an upstream outage"
+    },
+    {
+      "name": "uncontrolled real refresh automatically recovers",
+      "pass": true,
+      "evidence": "ui-viewer-recovered.txt; ui-refresh-recovered.png; browser-once-failure-network.json"
+    },
+    {
+      "name": "viewer reads four energy devices with actual V and kW values",
+      "pass": true,
+      "evidence": "ui-viewer-energy.txt"
+    }
+  ],
+  "limits": [
+    "Nonempty alarm field mapping and alarm lifecycle not tested",
+    "No cross-project requests or upstream field/schema write deny experiments",
+    "Selected browser requests and screenshots are bounded evidence; no worker target coverage",
+    "Admin capture contains earlier adapter-query failures and local BE restart interruption; subsequent actual reads and controls succeeded",
+    "Failure-retention experiment locally blocked one GET only; it did not simulate successful business data or alter backend state"
+  ],
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

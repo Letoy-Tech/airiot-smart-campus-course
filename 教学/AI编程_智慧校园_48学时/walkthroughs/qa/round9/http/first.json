@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:51:43.207Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "04 fresh tutorial A/B code plus UI login",
+      "detail": {
+        "devices": 2,
+        "unknownVisible": true
+      },
+      "passed": true
+    }
+  ]
+}

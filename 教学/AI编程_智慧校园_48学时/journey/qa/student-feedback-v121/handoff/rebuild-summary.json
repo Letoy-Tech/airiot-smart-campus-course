@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T22:33:28.999026+00:00",
+  "sameOperatorAuthorReproduction": true,
+  "newDirectoryBuildActuallyExecuted": true,
+  "freshAccounts": true,
+  "freshPhysicalDatabase": true,
+  "secretsCopied": false,
+  "isolatedDatabasePort": 23491,
+  "databaseDataDirectory": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data",
+  "frontendPassed": 79,
+  "frontendTypeCheck": "PASS",
+  "frontendBuild": "PASS",
+  "backendBuild": "PASS",
+  "initialCaseCount": 0,
+  "closedVersion": 7,
+  "closedRecordPersistsAfterReload": true,
+  "historySamples": 4,
+  "nullAndZeroPreserved": true,
+  "browserErrors": [],
+  "services": {
+    "8091": [
+      {
+        "pid": 58166,
+        "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app",
+        "command": "/Users/learner/Library/Java/JavaVirtualMachines/jbr-17.0.12/Contents/Home/bin/java -jar /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/backend/target/campus-ai-course-0.1.0.jar"
+      }
+    ],
+    "5178": [
+      {
+        "pid": 58407,
+        "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/frontend",
+        "command": "node /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/frontend/node_modules/.bin/vite"
+      }
+    ],
+    "23491": [
+      {
+        "pid": 57267,
+        "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data",
+        "command": "/opt/homebrew/opt/mysql@8.4/bin/mysqld --no-defaults --datadir=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data --socket=/tmp/student-codebuddy-f482420fdb72/mysql.sock --pid-file=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/mysqld.pid --log-error=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/mysql.log --bind-address=127.0.0.1 --port=23491 --mysqlx=0 --secure-file-priv=NULL --innodb-buffer-pool-size=128M --max-connections=30 --skip-log-bin"
+      }
+    ]
+  },
+  "limitations": [
+    "未由另一真人接手",
+    "未执行Windows实机",
+    "未进行新的CodeBuddy模型生成会话"
+  ]
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.letoy.main.group.mapper.GroupsInfoMapper">
+
+    <!-- 建议：如果全局开启了 mapUnderscoreToCamelCase，这个 resultMap 也依然保留，最稳妥 -->
+    <resultMap id="GroupsInfoResultMap" type="com.letoy.main.group.entity.GroupsInfo">
+        <id     property="id"               column="id"/>
+        <result property="groupId"         column="group_id"/>
+        <result property="groupName"        column="group_name"/>
+        <result property="groupDescription" column="group_description"/>
+        <result property="parentGroupId"   column="parent_group_id"/>
+        <result property="path"             column="path"/>
+        <result property="level"            column="level"/>
+        <result property="sortOrder"        column="sort_order"/>
+        <result property="status"           column="status"/>
+        <result property="createTime"       column="create_time"/>
+        <result property="updateTime"       column="update_time"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, group_id, group_name, group_description, parent_group_id,
+        path, level, sort_order, status, create_time, update_time
+    </sql>
+
+    <!-- === Insert（外部已算好 path/level）=== -->
+    <insert id="insert" parameterType="com.letoy.main.group.entity.GroupsInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO groups_info
+        (group_id, group_name, group_description, parent_group_id, path, level, sort_order, status, create_time)
+        VALUES
+            (#{groupId}, #{groupName}, #{groupDescription}, #{parentGroupId}, #{path}, #{level},
+             COALESCE(#{sortOrder}, 0), COALESCE(#{status}, 1), NOW());
+    </insert>
+
+    <!-- === InsertChild：自动计算 path/level（根=0，path='/Gxxxx/'）=== -->
+    <insert id="insertChild" parameterType="com.letoy.main.group.entity.GroupsInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO groups_info
+        (group_id, group_name, group_description, parent_group_id, path, level, sort_order, status, create_time)
+        SELECT
+            #{groupId},
+            #{groupName},
+            #{groupDescription},
+            #{parentGroupId},
+            CONCAT(COALESCE(p.path, '/'), #{groupId}, '/'),
+            CASE WHEN p.level IS NULL THEN 0 ELSE p.level + 1 END,
+            COALESCE(#{sortOrder}, 0),
+            COALESCE(#{status}, 1),
+            NOW()
+        FROM (SELECT 1) AS d
+                 LEFT JOIN groups_info p ON p.group_id = #{parentGroupId};
+    </insert>
+
+    <!-- === Update（按 group_id 动态更新）=== -->
+    <update id="updateByGroupId" parameterType="com.letoy.main.group.entity.GroupsInfo">
+        UPDATE groups_info
+        <set>
+            <if test="groupName != null">group_name = #{groupName},</if>
+            <if test="groupDescription != null">group_description = #{groupDescription},</if>
+            <if test="parentGroupId != null">parent_group_id = #{parentGroupId},</if>
+            <if test="path != null">path = #{path},</if>
+            <if test="level != null">level = #{level},</if>
+            <if test="sortOrder != null">sort_order = #{sortOrder},</if>
+            <if test="status != null">status = #{status},</if>
+        </set>
+        WHERE group_id = #{groupId};
+    </update>
+
+    <!-- === Select === -->
+    <select id="selectById" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM groups_info WHERE id = #{id}
+    </select>
+
+    <select id="selectByGroupId" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM groups_info WHERE group_id = #{groupId}
+    </select>
+
+    <select id="selectByGroupIds" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM groups_info
+        WHERE group_id IN
+        <foreach collection="groupIds" item="groupId" open="(" separator="," close=")">
+            #{groupId}
+        </foreach>
+        ORDER BY level ASC, sort_order ASC, id ASC
+    </select>
+
+    <select id="selectChildren" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM groups_info
+        WHERE parent_group_id = #{parentGroupId}
+        ORDER BY sort_order, id
+    </select>
+
+    <!-- 子树（含自身）：用 path LIKE，通过 root 的 path 进行匹配 -->
+    <select id="selectSubtreeByRoot" resultMap="GroupsInfoResultMap">
+        SELECT g.*
+        FROM groups_info g
+                 JOIN (
+            SELECT path FROM groups_info WHERE group_id = #{rootGroupId}
+        ) r ON g.path LIKE CONCAT(r.path, '%')
+        ORDER BY g.path, g.sort_order, g.id
+    </select>
+
+    <!-- === Exists / Delete === -->
+    <select id="existsByGroupId" resultType="int">
+        SELECT COUNT(1) FROM groups_info WHERE group_id = #{groupId}
+    </select>
+
+    <delete id="deleteByGroupId">
+        DELETE FROM groups_info WHERE group_id = #{groupId}
+    </delete>
+
+    <!-- 分頁/條件查詢：名稱模糊 + 父節點可選 -->
+    <select id="selectByCondition" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM groups_info
+        <where>
+            <if test="groupName != null and groupName != ''">
+                AND group_name LIKE CONCAT('%', #{groupName}, '%')
+            </if>
+            <if test="parentGroupId != null and parentGroupId != ''">
+                AND parent_group_id = #{parentGroupId}
+            </if>
+        </where>
+        ORDER BY sort_order ASC, level ASC, create_time DESC
+    </select>
+
+    <select id="getAllGroups" resultMap="GroupsInfoResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM groups_info
+    </select>
+</mapper>

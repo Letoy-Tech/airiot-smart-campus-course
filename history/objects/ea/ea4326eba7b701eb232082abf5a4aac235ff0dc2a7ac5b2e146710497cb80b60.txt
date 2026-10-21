@@ -1,0 +1,63 @@
+$ node tools/progress.mjs verify
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+ RUN  v4.1.12 /private/tmp/demo-workspace
+
+
+ Test Files  16 passed (16)
+      Tests  74 passed (74)
+   Start at  23:35:45
+   Duration  1.08s (transform 2.01s, setup 0ms, import 3.59s, tests 562ms, environment 8.37s)
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 654 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                                0.47 kB │ gzip:   0.34 kB
+dist/assets/index-CQLMl6UL.css                                                21.87 kB │ gzip:   5.26 kB
+dist/assets/FirstDeviceRead-CGbO5NyY.js                                        0.24 kB │ gzip:   0.16 kB
+dist/assets/SourceBanner.vue_vue_type_script_setup_true_lang-7_jPVddX.js       0.77 kB │ gzip:   0.62 kB
+dist/assets/AccessView-B90I3dGe.js                                             0.99 kB │ gzip:   0.69 kB
+dist/assets/read-models-DLSz8FwL.js                                            1.01 kB │ gzip:   0.49 kB
+dist/assets/ReadStatus.vue_vue_type_script_setup_true_lang-BlUoAVEa.js         1.51 kB │ gzip:   0.91 kB
+dist/assets/useReadPage-BjVm2O3L.js                                            2.07 kB │ gzip:   1.09 kB
+dist/assets/IntegrationView-Cyl4mPGo.js                                        2.62 kB │ gzip:   1.53 kB
+dist/assets/EnergyView-8igFe0MN.js                                             3.11 kB │ gzip:   1.70 kB
+dist/assets/AuditView-DRJKuKbX.js                                              4.08 kB │ gzip:   2.10 kB
+dist/assets/full-JIp7BEEE.js                                                   4.14 kB │ gzip:   1.92 kB
+dist/assets/RawAlarmsView-C6O8--EP.js                                          4.18 kB │ gzip:   2.15 kB
+dist/assets/LocationsView-B_Bz9IIx.js                                          4.92 kB │ gzip:   2.04 kB
+dist/assets/OverviewView-DYCKGxBG.js                                           5.47 kB │ gzip:   2.52 kB
+dist/assets/HistoryView-DOWOEYxh.js                                            5.61 kB │ gzip:   2.74 kB
+dist/assets/OwnersView-PHdOvO9Q.js                                             6.15 kB │ gzip:   2.68 kB
+dist/assets/CompareHistory.vue_vue_type_script_setup_true_lang-B2RcOeno.js     6.19 kB │ gzip:   3.05 kB
+dist/assets/FirstDeviceRead.vue_vue_type_script_setup_true_lang-Bp64Bq0I.js    8.76 kB │ gzip:   4.01 kB
+dist/assets/DeviceCatalog-duNRN18r.js                                          9.62 kB │ gzip:   3.79 kB
+dist/assets/CasesView-CfB0UFdo.js                                             15.41 kB │ gzip:   5.84 kB
+dist/assets/index-BqpRzICd.js                                                 95.48 kB │ gzip:  38.35 kB
+dist/assets/HistoryChart-DtNZrNeU.js                                         516.31 kB │ gzip: 176.19 kB
+✓ built in 1.39s
+第11站前端检查通过，接受当前学生实现。
+尚未替你验收：保留修复前后测试；真实DB因果链由实际报告证明
+请把实际操作写到 evidence/stage-11.md，再运行 accept 11 evidence/stage-11.md。人工记录不等于工具证明。
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

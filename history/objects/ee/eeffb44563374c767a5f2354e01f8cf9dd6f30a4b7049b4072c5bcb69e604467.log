@@ -1,0 +1,31 @@
+第01站 静态两设备页面
+模式：静态；不需后端
+目标：看到两台设备，未知不等于离线
+  公共参考  frontend/.gitignore
+  公共参考  frontend/DESIGN.md
+  公共参考  frontend/PRODUCT.md
+  公共参考  frontend/index.html
+  公共参考  frontend/package-lock.json
+  公共参考  frontend/package.json
+  公共参考  frontend/tsconfig.json
+  公共参考  frontend/vite.config.ts
+  公共参考  frontend/src/main.ts
+  公共参考  frontend/src/style.css
+  公共参考  frontend/src/project-settings.ts
+  公共参考  frontend/src/domain/journey-exercises.ts
+  学生业务  frontend/src/views/StaticDevices.vue
+  公共参考  frontend/src/tests/journey-start.test.ts
+  阶段装配  frontend/src/App.vue
+  公共参考  tools/progress.mjs
+  公共参考  .gitignore
+  公共参考  .nvmrc
+  公共参考  package.json
+  公共参考  docs/项目卡.md
+  公共参考  docs/接口与数据.md
+  公共参考  evidence/README.md
+  公共参考  CODEBUDDY.md
+
+本次契约：没有网络请求；只读取本文件两条教学样例
+人工过关：改项目名后页面更新；两台设备与模拟标识清楚
+完整参考：lesson-bundles/stage-01/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

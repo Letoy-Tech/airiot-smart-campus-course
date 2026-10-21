@@ -1,0 +1,136 @@
+$ node --test /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/authoring/progress.test.mjs
+TAP version 13
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-755Z-stage-02-begin-7fc496
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-758Z-stage-02-begin-8eeb8b
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 本站已经准备，保留当前代码。继续编辑与 verify；不重新挖空。
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-762Z-stage-02-begin-bc0e09
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 已导入完整参考：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-763Z-stage-02-apply-813ccb
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-766Z-stage-02-begin-938106
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 未改动任何 app 源码。发现个人修改：
+#   frontend/src/views/Read.vue
+# 已保存双方文件：journey-backups/2026-10-19T22-17-18-767Z-stage-02-conflict-d141d5/before 与 incoming。
+# 手动处理：在 CodeBuddy IDE 比较 before 和 incoming，把需要的代码合并回原文件；不要覆盖整份个人作业。接着用 begin 02 继续时，遇同名自建业务文件仍会保留并拒覆盖；请教师确认导入范围。若选择采用参考，先核对备份，再只将 incoming 中冲突文件复制到原位置，然后重跑 apply 02。
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-772Z-stage-02-begin-c6cc18
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 第02站前端检查通过，接受当前学生实现。
+# 尚未替你验收：人工HTTP读取
+# 请把实际操作写到 evidence/stage-02.md，再运行 accept 02 evidence/stage-02.md。人工记录不等于工具证明。
+# 已导入完整参考：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-775Z-stage-02-apply-f5fda2
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# 已登记本人业务记录；工具未判断内容真假，也不会自动宣布100%完成。
+# 已准备骨架：第02站。
+#   frontend/src/views/Read.vue
+# 备份：journey-backups/2026-10-19T22-17-18-780Z-stage-02-begin-403150
+# 这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
+# Subtest: 路径不能逃逸，也不能写入秘密或依赖目录
+ok 1 - 路径不能逃逸，也不能写入秘密或依赖目录
+  ---
+  duration_ms: 2.586
+  type: 'test'
+  ...
+# Subtest: 符号链接目标不能被导入覆盖
+ok 2 - 符号链接目标不能被导入覆盖
+  ---
+  duration_ms: 1.901833
+  type: 'test'
+  ...
+# Subtest: 上一站未验证时不允许推进
+ok 3 - 上一站未验证时不允许推进
+  ---
+  duration_ms: 1.683625
+  type: 'test'
+  ...
+# Subtest: 验证后改源码必须重验，不能沿用旧PASS
+ok 4 - 验证后改源码必须重验，不能沿用旧PASS
+  ---
+  duration_ms: 1.73725
+  type: 'test'
+  ...
+# Subtest: begin写入明确骨架，并保留第一站个人设置
+ok 5 - begin写入明确骨架，并保留第一站个人设置
+  ---
+  duration_ms: 3.964667
+  type: 'test'
+  ...
+# Subtest: 重复begin不会重置学生已经写的文件
+ok 6 - 重复begin不会重置学生已经写的文件
+  ---
+  duration_ms: 3.398458
+  type: 'test'
+  ...
+# Subtest: apply只能安全替换原样骨架，备份保留
+ok 7 - apply只能安全替换原样骨架，备份保留
+  ---
+  duration_ms: 4.240375
+  type: 'test'
+  ...
+# Subtest: 个人实现与参考冲突时不改源码，保存双方供比较
+ok 8 - 个人实现与参考冲突时不改源码，保存双方供比较
+  ---
+  duration_ms: 4.07725
+  type: 'test'
+  ...
+# Subtest: 参考包被改坏时拒绝，不能用任意源码冒充已冻结参考
+ok 9 - 参考包被改坏时拒绝，不能用任意源码冒充已冻结参考
+  ---
+  duration_ms: 1.521667
+  type: 'test'
+  ...
+# Subtest: verify接受学生实现；运行三项检查而非比较答案hash
+ok 10 - verify接受学生实现；运行三项检查而非比较答案hash
+  ---
+  duration_ms: 3.294417
+  type: 'test'
+  ...
+# Subtest: 检查中发生源码变化不能登记通过
+ok 11 - 检查中发生源码变化不能登记通过
+  ---
+  duration_ms: 2.74825
+  type: 'test'
+  ...
+# Subtest: 人工记录独立登记，秘密路径不允许
+ok 12 - 人工记录独立登记，秘密路径不允许
+  ---
+  duration_ms: 1.712875
+  type: 'test'
+  ...
+# Subtest: 跨站integrationFiles明确列出，但begin保留本人旧页面
+ok 13 - 跨站integrationFiles明确列出，但begin保留本人旧页面
+  ---
+  duration_ms: 2.979708
+  type: 'test'
+  ...
+# Subtest: 跨站目标不能借清单指向私密目录或缺失的旧文件
+ok 14 - 跨站目标不能借清单指向私密目录或缺失的旧文件
+  ---
+  duration_ms: 1.679125
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 68.875417

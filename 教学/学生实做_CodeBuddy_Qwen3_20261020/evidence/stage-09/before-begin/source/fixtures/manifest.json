@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "kind": "FIXTURE_MANIFEST",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "clock": {
+    "epochMs": 1792303200000,
+    "isoUtc": "2026-10-18T06:00:00.000Z",
+    "origin": "人工固定教学时钟，不代表墙钟或真实采样"
+  },
+  "catalogCounts": {
+    "spaces": 4,
+    "devices": 16,
+    "uniquePoints": 28
+  },
+  "firstChain": {
+    "spaceIds": [
+      "teaching_space_01"
+    ],
+    "deviceIds": [
+      "teaching_env_01",
+      "teaching_energy_01"
+    ],
+    "uniquePoints": 4
+  },
+  "tagMappings": [
+    {
+      "category": "environment",
+      "teachingTagId": "temperature",
+      "referenceTagId": "temperature_c",
+      "unit": "°C"
+    },
+    {
+      "category": "environment",
+      "teachingTagId": "humidity",
+      "referenceTagId": "humidity_pct",
+      "unit": "%"
+    },
+    {
+      "category": "energy",
+      "teachingTagId": "voltage",
+      "referenceTagId": "voltage_v",
+      "unit": "V"
+    },
+    {
+      "category": "energy",
+      "teachingTagId": "power",
+      "referenceTagId": "power_kw",
+      "unit": "kW"
+    },
+    {
+      "category": "facility",
+      "teachingTagId": "run_state",
+      "referenceTagId": "run_state",
+      "unit": ""
+    },
+    {
+      "category": "facility",
+      "teachingTagId": "equipment_temperature",
+      "referenceTagId": "equipment_temperature_c",
+      "unit": "°C"
+    },
+    {
+      "category": "lighting",
+      "teachingTagId": "illuminance",
+      "referenceTagId": "illuminance_lux",
+      "unit": "lux"
+    }
+  ],
+  "referenceBasis": [
+    "contracts/教学接口约定.md",
+    "system/docs/api-contract.md",
+    "system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusCatalog.java"
+  ],
+  "referencesAreNotImportedData": true,
+  "labVerified": false,
+  "databaseVerified": false,
+  "pendingProviderDecisions": [
+    "真实AIRIOT适配与真实设备验收",
+    "Windows与真实课堂验收"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 8767,
+      "sha256": "c315d45e48cd2d60978fbe234b7a73a6c13ad75e5c7333e1f7d35e19ad99f780"
+    },
+    {
+      "path": "schema.md",
+      "bytes": 4594,
+      "sha256": "5b10b8bb934a160892d0286ff7af94269d0cf6b4fc43fe193eed859fabdb20c3"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 15957,
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32"
+    },
+    {
+      "path": "selectors.json",
+      "bytes": 1007,
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db"
+    },
+    {
+      "path": "quality-cases.json",
+      "bytes": 4210,
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278"
+    },
+    {
+      "path": "history-cases.json",
+      "bytes": 585,
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e"
+    },
+    {
+      "path": "permission-scenarios.json",
+      "bytes": 3338,
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4"
+    },
+    {
+      "path": "pagination-scenarios.json",
+      "bytes": 2268,
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2"
+    },
+    {
+      "path": "concurrency-rollback-scenarios.json",
+      "bytes": 4840,
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787"
+    },
+    {
+      "path": "history-series.json",
+      "bytes": 9190,
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6"
+    },
+    {
+      "path": "raw-alarms.json",
+      "bytes": 2562,
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26"
+    },
+    {
+      "path": "command-audit.json",
+      "bytes": 2112,
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb"
+    }
+  ],
+  "round10ReadModels": {
+    "rawAlarmSamples": 5,
+    "commandAuditHistoricalSamples": 3,
+    "environmentEnergySeries": 16,
+    "expandedHistorySeries": 15,
+    "expandedSamplesPerSeries": 6,
+    "legacyHistorySamples": 4,
+    "allInventedTeachingData": true,
+    "queriedAt": "server query wall-clock, separate from fixed observedAt and sample time",
+    "normalAlarmsOrder": "occurredAt DESC NULLS LAST, id DESC",
+    "auditOrder": "createdAt DESC, id DESC",
+    "scope": "No real command, no AIRIOT call, no database execution implied"
+  }
+}

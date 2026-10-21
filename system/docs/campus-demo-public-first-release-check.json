@@ -1,0 +1,84 @@
+{
+  "checkedAt": 1791136021057,
+  "base": "https://demo.example.invalid/campus-demo/",
+  "pass": false,
+  "checks": [
+    {
+      "name": "public SPA root",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public SPA login",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public SPA campus/operations",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public SPA campus/overview",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public SPA campus/device-owners",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public SPA campus/alarm-cases/showcase-deep-link",
+      "pass": true,
+      "httpStatus": 200,
+      "indexSHA256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+    },
+    {
+      "name": "public asset favicon.ico",
+      "pass": true,
+      "contentType": "image/x-icon",
+      "bytes": 4286,
+      "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445"
+    },
+    {
+      "name": "public asset assets/index-CB7Isnes.js",
+      "pass": true,
+      "contentType": "application/javascript",
+      "bytes": 158882,
+      "sha256": "8221aae54f4c48988e93eaac894d258fca50902ec2ce1f422a885d53339f702d"
+    },
+    {
+      "name": "public asset assets/index-BGcBug8D.css",
+      "pass": true,
+      "contentType": "text/css",
+      "bytes": 150863,
+      "sha256": "8a43f508f6399770a4612eacff3f0bfd23b7c7a53aab8735b398117867bef2b2"
+    },
+    {
+      "name": "anonymous cannot read campus",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "public admin capabilities",
+      "pass": false
+    }
+  ],
+  "syntheticLoginRevoked": [
+    false
+  ],
+  "tls": "Default certificate and hostname verification; no -k or host override",
+  "scope": "Public HTTPS from this Mac network; no event seeding or device control",
+  "limits": "Does not prove every school network or authenticated browser behavior.",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

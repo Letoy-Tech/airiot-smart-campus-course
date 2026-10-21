@@ -1,0 +1,18 @@
+第11站 调试与测试
+模式：真实数据库另用独立_test库
+目标：修复真实缺陷并读并发回滚证据
+  阶段装配  frontend/src/journey/features.ts
+  公共参考  frontend/src/tests/case-trigger-race.test.ts
+  公共参考  frontend/src/tests/comparison.test.ts
+  公共参考  frontend/src/tests/monitoring-views.test.ts
+  公共参考  frontend/src/tests/read-api.test.ts
+  公共参考  frontend/src/tests/read-models.test.ts
+  公共参考  frontend/src/tests/read-pages.test.ts
+  公共参考  frontend/src/tests/workflow-views.test.ts
+  公共参考  frontend/src/tests/journey-navigation.test.ts
+  公共参考  docs/调试记录.md
+
+本次契约：前端测试不是MySQL回滚证明；400/403/409不是事务回滚成功
+人工过关：保留修复前后测试；真实DB因果链由实际报告证明
+完整参考：lesson-bundles/stage-11/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

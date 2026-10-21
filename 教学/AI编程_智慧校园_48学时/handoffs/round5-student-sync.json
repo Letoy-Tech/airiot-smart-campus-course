@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T18:49:35.528091+00:00",
+  "priorFilesVerifiedUnchanged": 1075,
+  "priorManifestSha256": "ba8f2c40fdbf2b030e20678fc9661694284b117669057eb0194f3f02f6442f8c",
+  "newManifestSha256": "8a0f9f0f7972e7f084c150cf0b1cda61c634163b496333384f6c0c444db89b5c",
+  "chapters": 9,
+  "originalPreservedUnderExcludedRuntime": true,
+  "scope": "Regeneration and integrity only; runtime/expected TODO failure tests recorded separately"
+}

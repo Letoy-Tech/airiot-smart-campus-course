@@ -1,0 +1,898 @@
+--- before/.gitignore
++++ after/.gitignore
+@@ -5,3 +5,4 @@
+ journey-backups/
+ *.log
+ .DS_Store
++lesson-bundles/**/files/
+--- before/CODEBUDDY.md
++++ after/CODEBUDDY.md
+@@ -2,7 +2,7 @@
+ 
+ 你在CodeBuddy独立IDE中协助学生制作同一个校园平台。先读journey-state.json，再读lesson-bundles/stage-NN/manifest.json（NN是当前站），以及docs/项目卡.md和docs/接口与数据.md。不了解当前阶段时先说明缺什么，不猜当前完成状态。
+ 
+-- 主线是学生使用CodeBuddy完成本次明确业务文件；完整参考源码可以读，但不得把参考导入声称为你已原创或测试通过。
++- 本轮为独立学生实做评估，用户禁止读取教师业务答案。仅允许读取lesson-bundles/stage-NN/manifest.json元数据；禁止读取或检索lesson-bundles/**/files/**、journey-backups/**及其他教师参考源码，禁止progress apply。只根据当前实际学生文件和已提供的公共底座/API实现。此条由操作者据本轮用户授权补充，不是学生业务实现。
+ - 每次只修改学生本次要求的目标文件。不要自行begin/apply下一站；开始阶段必须由学生明确操作。
+ - begin只准备当前底座与未完成骨架；verify只检查当前前端类型、单元测试、构建，不能证明真实HTTP、MySQL、Windows或AIRIOT通过。
+ - 不读取、检索、输出或上传.private、账号密码、数据库配置、Cookie、请求头、HAR。此文件是行为约束，不是操作系统权限隔离。需要环境时请教师配置；只引用脱敏错误。
+--- before/docs/接口与数据.md
++++ after/docs/接口与数据.md
+@@ -14,3 +14,7 @@
+ 
+ GET /campus/overview 提供spaces/devices/points/issues/completeness和observedAt；统计由数组计算，台账用spaceId/category/deviceId的hash参数钻取。点值value=null为缺失，数值0保持为0，质量按服务端返回。
+ 
++# 第06站 Ask 结论（操作者摘录）
++
++GET /campus/history 的deviceId/tagId需属于真实模拟目录，from<=to且跨度<=21600000ms。samples保留原time/value，observedAt是模拟采样时钟，queriedAt是查询时刻。GET /campus/alarms 保留原始字段并按total/limit/skip分页，不提供上游关闭写操作。
++
+--- before/docs/项目卡.md
++++ after/docs/项目卡.md
+@@ -32,3 +32,7 @@
+ 
+ 按空间查看设备数，点击空间统计回台账；按quality筛出缺失/陈旧点，保留deviceId/tagId以追溯原设备；能源按unit同单位比较，kW不当kWh，不计算电费或节能率。数据取overview实际响应，未知不补零。
+ 
++# 第06站 Ask 结论（操作者摘录）
++
++历史必须带deviceId、tagId、from、to，毫秒时间范围最多6小时。null在原采样时刻断线，0为有效样本。原始报警只读保留status/level，与本地演练事件并列，不用演练状态替换上游状态。
++
+--- before/frontend/src/views/DeviceCatalog.vue
++++ after/frontend/src/views/DeviceCatalog.vue
+@@ -4,7 +4,7 @@
+ import SourceBanner from '../components/SourceBanner.vue'
+ import { useCompletionPolling } from '../composables/useRequestScope'
+ import { categoryNames, filterDevices, timeText, type DeviceFilter } from '../domain/course'
+-import { catalogHash, readCatalogFilter } from '../domain/read-models'
++import { catalogHash, historyHash, readCatalogFilter } from '../domain/read-models'
+ import { useCampusStore } from '../stores/campus'
+ import type { Device } from '../types/campus'
+ 
+@@ -350,6 +350,7 @@
+             <code>{{ tag.id }}</code>
+             <span>{{ tag.name }}</span>
+             <small>{{ tag.unit || '无单位' }}</small>
++            <a class="history-link" :href="historyHash(selectedDevice.id, tag.id)">查看点位历史</a>
+           </li>
+         </ul>
+       </template>
+@@ -431,6 +432,13 @@
+   color: var(--muted);
+   font-size: 0.7rem;
+ }
++.detail-tags .history-link {
++  margin-top: 3px;
++  color: var(--accent);
++  font-size: 0.72rem;
++  text-decoration: underline;
++  text-underline-offset: 4px;
++}
+ @media (max-width: 740px) {
+   .device-cards {
+     grid-template-columns: 1fr;
+--- before/frontend/src/views/EnergyView.vue
++++ after/frontend/src/views/EnergyView.vue
+@@ -1,5 +1,6 @@
+ <script setup lang="ts">
+ import { computed, ref } from 'vue'
++import CompareHistory from '../components/CompareHistory.vue'
+ import ReadStatus from '../components/ReadStatus.vue'
+ import SourceBanner from '../components/SourceBanner.vue'
+ import { getOverview } from '../api/full'
+@@ -63,6 +64,20 @@
+ const orphanPoints = computed(() =>
+   unitPoints.value.filter((point) => !deviceById.value.has(point.deviceId)),
+ )
++
++/** 对比组件只接收一个 tagId：取当前单位下覆盖设备最多的标签，切换单位即换标签，不跨单位。 */
++const compareTagId = computed(() => {
++  const counts = new Map<string, number>()
++  for (const device of devices.value) {
++    for (const tag of device.tags) {
++      if (tag.unit === unit.value) counts.set(tag.id, (counts.get(tag.id) ?? 0) + 1)
++    }
++  }
++  const ranked = [...counts.entries()].sort(
++    (left, right) => right[1] - left[1] || left[0].localeCompare(right[0]),
++  )
++  return ranked[0]?.[0] ?? ''
++})
+ 
+ function buildGroup(id: string, name: string, deviceList: Device[]): SpaceGroup {
+   const ids = new Set(deviceList.map((device) => device.id))
+@@ -271,6 +286,19 @@
+           单位不换算，kW 与 kWh 不混用。
+         </p>
+       </section>
++
++      <p class="field-help compare-note">
++        下方历史比较只查当前单位对应的点位
++        <code>{{ compareTagId || '无' }}</code>；设备与观察时刻取自本次 overview 响应，
++        各台单独查询，一台失败不影响其他曲线。仅读取，不写入。
++      </p>
++      <CompareHistory
++        :devices="devices"
++        :tag-id="compareTagId"
++        :unit="unit"
++        :observed-at="overview.observedAt"
++        title="能源历史逐台比较"
++      />
+     </template>
+   </section>
+ </template>
+@@ -298,6 +326,9 @@
+ }
+ .energy-toolbar .field-help {
+   margin: 0;
++}
++.compare-note {
++  margin: 0 0 14px;
+ }
+ .space-card {
+   margin: 0;
+--- before/frontend/src/views/HistoryView.vue
++++ after/frontend/src/views/HistoryView.vue
+@@ -1,3 +1,444 @@
++<script setup lang="ts">
++import { computed, onMounted, ref, watch } from 'vue'
++import ReadStatus from '../components/ReadStatus.vue'
++import SourceBanner from '../components/SourceBanner.vue'
++import HistoryChart from '../components/HistoryChart.vue'
++import { getHistory } from '../api/full'
++import { ApiError } from '../api/http'
++import { useCompletionPolling, useRequestScope } from '../composables/useRequestScope'
++import { useCampusStore } from '../stores/campus'
++import { timeText } from '../domain/course'
++import type { HistoryResult } from '../types/full'
++
++const store = useCampusStore()
++const { busy, error, run, cancel } = useRequestScope()
++
++const params = new URLSearchParams(location.hash.split('?')[1] ?? '')
++const deviceId = ref(params.get('deviceId') ?? '')
++const tagId = ref(params.get('tagId') ?? '')
++const windowMinutes = ref(60)
++const scenario = ref<'normal' | 'empty' | 'failure'>('normal')
++const history = ref<HistoryResult | null>(null)
++const attemptedAt = ref<number | null>(null)
++const denied = ref(false)
++
++const selectedDevice = computed(() => store.devices.find((device) => device.id === deviceId.value) ?? null)
++const selectedTag = computed(
++  () => selectedDevice.value?.tags.find((tag) => tag.id === tagId.value) ?? null,
++)
++
++/** 只使用固定教学采样时刻作窗口终点，不拿浏览器当前时间冒充遥测时间。 */
++const range = computed(() => {
++  const to = store.observedAt
++  const span = windowMinutes.value * 60000
++  if (to === null || !Number.isSafeInteger(to) || to < span) return null
++  return { from: to - span, to }
++})
++
++const contextIssue = computed(() => {
++  if (!deviceId.value) return '请选择设备。'
++  if (!tagId.value) return '请选择采样点。'
++  if (store.observedAt === null) return '尚未取得固定教学采样时刻，无法确定查询窗口。请先读取设备目录。'
++  if (!store.devices.length) return ''
++  if (!selectedDevice.value) return `设备 ${deviceId.value} 不在本次设备目录，未发起查询。`
++  if (!selectedDevice.value.tags.some((tag) => tag.id === tagId.value)) {
++    return `采样点 ${tagId.value} 不属于设备 ${deviceId.value}，未发起查询。`
++  }
++  return ''
++})
++const canQuery = computed(() => !contextIssue.value && range.value !== null && !busy.value && !denied.value)
++
++const nullCount = computed(() => history.value?.samples.filter((sample) => sample.value === null).length ?? 0)
++const zeroCount = computed(() => history.value?.samples.filter((sample) => sample.value === 0).length ?? 0)
++
++function applyDefaults() {
++  if (!store.devices.length) return
++  if (!deviceId.value) {
++    deviceId.value = store.devices.find((device) => device.tags.length > 0)?.id ?? store.devices[0]?.id ?? ''
++  }
++  const device = store.devices.find((item) => item.id === deviceId.value)
++  if (!tagId.value && device) tagId.value = device.tags[0]?.id ?? ''
++}
++
++async function query() {
++  const window = range.value
++  if (!canQuery.value || !window) return
++  const requested = {
++    deviceId: deviceId.value,
++    tagId: tagId.value,
++    from: window.from,
++    to: window.to,
++    scenario: scenario.value,
++  }
++  attemptedAt.value = Date.now()
++  await run(
++    async (signal) => {
++      const search = new URLSearchParams({
++        deviceId: requested.deviceId,
++        tagId: requested.tagId,
++        from: String(requested.from),
++        to: String(requested.to),
++      })
++      if (requested.scenario !== 'normal') search.set('scenario', requested.scenario)
++      const data = await getHistory(search, signal)
++      if (
++        data.deviceId !== requested.deviceId ||
++        data.tagId !== requested.tagId ||
++        data.from !== requested.from ||
++        data.to !== requested.to
++      ) {
++        throw new ApiError('响应的设备、点位或时间范围与本次请求不一致，本次结果未采用。')
++      }
++      return data
++    },
++    (data) => {
++      history.value = data
++    },
++    (reason) => {
++      if (reason instanceof ApiError && reason.status === 403) {
++        denied.value = true
++        history.value = null
++      }
++    },
++  )
++}
++
++applyDefaults()
++const poll = useCompletionPolling(query, () => busy.value, 30000)
++
++watch(
++  () => [store.devices, store.observedAt] as const,
++  () => {
++    applyDefaults()
++    if (canQuery.value) void poll.refresh()
++  },
++)
++
++function resetForContextChange() {
++  cancel()
++  error.value = ''
++  history.value = null
++  attemptedAt.value = null
++  if (canQuery.value) void poll.refresh()
++}
++
++function onDeviceChange() {
++  tagId.value = selectedDevice.value?.tags[0]?.id ?? ''
++  resetForContextChange()
++}
++
++function refreshNow() {
++  if (canQuery.value) void poll.refresh()
++}
++
++async function loadCatalog() {
++  if (store.loading) return
++  await store.refreshDevices()
++  applyDefaults()
++  if (canQuery.value) void poll.refresh()
++}
++
++onMounted(() => {
++  if (!store.devices.length && store.user && store.capabilities?.canRead) void loadCatalog()
++})
++</script>
++
+ <template>
+-  <section class="workspace full-page"><h1>历史与原始报警</h1><p role="alert">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>
++  <section class="workspace full-page" data-testid="history-page">
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第06站 · 历史样本</p>
++        <h1>按原采样时间看变化</h1>
++        <p class="muted">
++          读取固定教学时钟窗口内的原始样本；横轴用样本 time，null 处断线，0 仍是有效零值，两者都不插值。
++        </p>
++      </div>
++      <button type="button" class="button primary" :disabled="busy || !canQuery" @click="refreshNow">
++        {{ busy ? '正在读取…' : history ? '重新读取' : '开始读取' }}
++      </button>
++    </header>
++
++    <SourceBanner :time="store.observedAt" />
++    <p class="refresh-note">
++      首次进入立即读取一次，此后每次完成后等 30 秒再读；同一查询不重叠，离页或会话变化即停止。
++      查询窗口以固定教学采样时刻为终点，不使用浏览器当前时间。
++    </p>
++
++    <ReadStatus :busy="busy" :error="error" :has-data="history !== null" />
++    <div v-if="denied" class="notice error" role="alert">
++      <strong>读取权限已变化</strong>
++      <p>历史数据已清除，请重新登录核对当前身份的读取权限。</p>
++    </div>
++
++    <form class="query-bar" @submit.prevent="query">
++      <label
++        >设备<select v-model="deviceId" data-testid="history-device" @change="onDeviceChange">
++          <option value="" disabled>请选择设备</option>
++          <option v-for="device in store.devices" :key="device.id" :value="device.id">
++            {{ device.name }} · {{ device.id }}
++          </option>
++        </select></label
++      >
++      <label
++        >采样点<select v-model="tagId" data-testid="history-tag" @change="resetForContextChange">
++          <option value="" disabled>请选择采样点</option>
++          <option v-for="tag in selectedDevice?.tags ?? []" :key="tag.id" :value="tag.id">
++            {{ tag.name }}（{{ tag.unit ?? '无量纲' }}）
++          </option>
++        </select></label
++      >
++      <label
++        >窗口<select v-model.number="windowMinutes" data-testid="history-window" @change="resetForContextChange">
++          <option :value="15">15 分钟</option>
++          <option :value="60">1 小时</option>
++          <option :value="360">6 小时</option>
++        </select></label
++      >
++      <label
++        >教学读取情境<select v-model="scenario" data-testid="history-scenario" @change="resetForContextChange">
++          <option value="normal">正常样本</option>
++          <option value="empty">成功空结果</option>
++          <option value="failure">读取失败</option>
++        </select></label
++      >
++      <button class="button primary" type="submit" data-testid="history-query" :disabled="!canQuery">
++        {{ busy ? '正在读取…' : '查询历史' }}
++      </button>
++    </form>
++
++    <div v-if="contextIssue" class="notice warning" role="status">
++      <strong>{{ contextIssue }}</strong>
++      <p v-if="!store.devices.length">页面不会用第一台设备或第一个点位冒充当前上下文。</p>
++      <button
++        v-if="!store.devices.length"
++        type="button"
++        class="button subtle"
++        :disabled="store.loading"
++        @click="loadCatalog"
++      >
++        {{ store.loading ? '正在读取设备目录…' : '读取设备目录' }}
++      </button>
++      <p v-if="store.readError" class="muted">{{ store.readError }}</p>
++    </div>
++
++    <div v-if="deviceId || tagId" class="context-grid">
++      <div>
++        <span>设备</span>
++        <strong>{{ selectedDevice?.name ?? '目录中无此设备' }}</strong>
++        <code>{{ deviceId || '未选择' }}</code>
++        <small v-if="selectedDevice?.spaceName">空间：{{ selectedDevice.spaceName }}</small>
++      </div>
++      <div>
++        <span>采样点</span>
++        <strong>{{ selectedTag?.name ?? '目录中无此点位' }}</strong>
++        <code>{{ tagId || '未选择' }}</code>
++        <small>单位：{{ selectedTag?.unit ?? history?.unit ?? '由响应提供' }}</small>
++      </div>
++      <div>
++        <span>查询窗口</span>
++        <strong>{{ windowMinutes }} 分钟 · 固定教学时钟</strong>
++        <small v-if="range">{{ timeText(range.from) }} 至 {{ timeText(range.to) }}</small>
++        <small v-else>等待固定教学采样时刻</small>
++      </div>
++    </div>
++
++    <div v-if="!history && !busy && !error && !contextIssue" class="notice" role="status">
++      <strong>尚未取得历史样本</strong>
++      <p>选择设备、采样点与窗口后点“查询历史”；读取需要已登录会话与读取权限。</p>
++    </div>
++
++    <template v-if="history">
++      <div class="metric-strip">
++        <div>
++          <strong class="numeric">{{ history.samples.length }}</strong>
++          <span>原始样本 · 不补点</span>
++        </div>
++        <div>
++          <strong class="numeric">{{ nullCount }}</strong>
++          <span>null · 折线断开</span>
++        </div>
++        <div>
++          <strong class="numeric">{{ zeroCount }}</strong>
++          <span>有效零值 · 仍画 0</span>
++        </div>
++      </div>
++
++      <p class="history-meta">
++        成功查询：{{ timeText(history.queriedAt ?? attemptedAt) }}
++        <template v-if="history.queriedAt === undefined">（响应未给 queriedAt，显示本地发起时刻）</template>
++        · 固定教学采样时刻：{{ timeText(history.observedAt) }}
++        · 样本范围：{{ timeText(history.from) }} 至 {{ timeText(history.to) }}
++        · 单位：{{ history.unit }}
++      </p>
++      <p v-if="error" class="muted tiny">
++        本次失败发起：{{ timeText(attemptedAt) }}；下方图表与表格仍是上次成功快照，不是本次查询结果。
++      </p>
++      <div v-if="history.truncated" class="notice warning" role="status">
++        <strong>结果已截断</strong>
++        <p>服务端最多返回 1000 个样本；请缩短窗口后重新查询，不把截断结果当成完整区间。</p>
++      </div>
++      <div v-if="history.issues.length" class="notice warning" role="status">
++        <strong>响应附带 {{ history.issues.length }} 条 issues</strong>
++        <ul class="issue-list">
++          <li v-for="issue in history.issues" :key="`${issue.code}-${issue.scope}-${issue.message}`">
++            <code>{{ issue.code }}</code>
++            <span>{{ issue.message }}</span>
++            <small>{{ issue.scope }}</small>
++          </li>
++        </ul>
++      </div>
++
++      <section v-if="history.samples.length > 0" class="panel chart-panel">
++        <div class="section-heading">
++          <h2>原始采样折线</h2>
++          <span>
++            横轴为样本 time，纵轴单位 {{ history.unit }}；null 处断开，0 是有效零值，不插值、不生成未观测样本。
++          </span>
++        </div>
++        <HistoryChart :history="history" />
++        <p class="ledger-footnote">
++          折线只连相邻的已观测数值；缺失区间保留为断口。功率 kW 与电量 kWh 不在此换算或相加。
++        </p>
++      </section>
++
++      <section class="panel">
++        <div class="section-heading">
++          <h2>原始样本表</h2>
++          <span>按响应顺序列出原始 time 与 value；null 不显示为 0，0 不显示为缺失。</span>
++        </div>
++
++        <div v-if="history.samples.length === 0" class="empty-state" role="status">
++          <h3>查询已成功，此范围没有样本</h3>
++          <p>这是成功空结果，不是读取失败；页面不补 0、不插值，也不借用其他点位的数据。</p>
++        </div>
++        <div v-else class="table-scroll">
++          <table class="data-table history-samples">
++            <caption>时间为服务端原始采样 time（北京时间显示）；查询时刻与采样时刻分开显示。</caption>
++            <thead>
++              <tr>
++                <th scope="col">#</th>
++                <th scope="col">采样时间</th>
++                <th scope="col">原始值</th>
++                <th scope="col">解释</th>
++              </tr>
++            </thead>
++            <tbody>
++              <tr
++                v-for="(sample, index) in history.samples"
++                :key="`${sample.time}-${index}`"
++                :class="{ 'is-null': sample.value === null }"
++              >
++                <td class="numeric">{{ index + 1 }}</td>
++                <td class="time-cell">{{ timeText(sample.time) }}</td>
++                <td class="numeric sample-value">
++                  {{ sample.value === null ? 'null' : `${sample.value} ${history.unit}` }}
++                </td>
++                <td>
++                  <span v-if="sample.value === null" class="state-badge warning">缺失，折线在此断开</span>
++                  <span v-else-if="sample.value === 0" class="state-badge">有效零值</span>
++                  <span v-else class="muted">原始样本</span>
++                </td>
++              </tr>
++            </tbody>
++          </table>
++        </div>
++        <p class="ledger-footnote">
++          只读页面：没有确认、恢复或关闭上游报警的按钮；原始报警的 status/level 按原文保留在“原始报警”页查看。
++        </p>
++      </section>
++    </template>
++  </section>
+ </template>
++
++<style scoped>
++.refresh-note {
++  margin: -16px 0 22px;
++  color: var(--muted);
++  font-size: 0.76rem;
++  line-height: 1.7;
++}
++.context-grid {
++  display: grid;
++  grid-template-columns: repeat(3, minmax(0, 1fr));
++  gap: 14px;
++  margin-bottom: 24px;
++}
++.context-grid > div {
++  min-width: 0;
++  padding: 14px 16px;
++  border: 1px solid var(--line);
++  border-radius: 8px;
++  background: var(--paper);
++}
++.context-grid span {
++  display: block;
++  margin-bottom: 6px;
++  color: var(--muted);
++  font-size: 0.7rem;
++  letter-spacing: 0.04em;
++}
++.context-grid strong,
++.context-grid code,
++.context-grid small {
++  display: block;
++  overflow-wrap: anywhere;
++}
++.context-grid strong {
++  font-size: 0.86rem;
++  font-weight: 600;
++}
++.context-grid code {
++  margin-top: 4px;
++  color: var(--muted);
++  font-size: 0.69rem;
++}
++.context-grid small {
++  margin-top: 7px;
++  color: var(--muted);
++  font-size: 0.7rem;
++  line-height: 1.6;
++}
++.history-meta {
++  margin: -6px 0 18px;
++  color: var(--muted);
++  font-size: 0.75rem;
++  line-height: 1.8;
++}
++.history-samples tr.is-null td {
++  background: oklch(98% 0.014 40);
++}
++.history-samples .sample-value {
++  font-weight: 600;
++}
++.issue-list {
++  list-style: none;
++  margin: 8px 0 0;
++  padding: 0;
++}
++.issue-list li {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 4px 10px;
++  align-items: baseline;
++  padding: 5px 0;
++  border-top: 1px solid var(--line);
++  font-size: 0.8rem;
++}
++.issue-list li:first-child {
++  border-top: 0;
++}
++.issue-list small {
++  color: var(--muted);
++  font-size: 0.7rem;
++}
++@media (max-width: 860px) {
++  .context-grid {
++    grid-template-columns: 1fr;
++  }
++}
++@media (max-width: 740px) {
++  .refresh-note {
++    margin-top: -12px;
++  }
++}
++</style>
+--- before/frontend/src/views/RawAlarmsView.vue
++++ after/frontend/src/views/RawAlarmsView.vue
+@@ -1,3 +1,293 @@
++<script setup lang="ts">
++import { computed, watch } from 'vue'
++import ReadStatus from '../components/ReadStatus.vue'
++import SourceBanner from '../components/SourceBanner.vue'
++import { getAlarmPage } from '../api/read-models'
++import { useReadPage } from '../composables/useReadPage'
++import { useCampusStore } from '../stores/campus'
++import { timeText } from '../domain/course'
++import { historyHash } from '../domain/read-models'
++import type { RawAlarm } from '../types/read-models'
++
++const store = useCampusStore()
++const readable = computed(() => store.user !== null && store.capabilities?.canRead === true)
++const {
++  data,
++  limit,
++  scenario,
++  snapshotSkip,
++  snapshotLimit,
++  denied,
++  refresh,
++  filtersChanged,
++  page: goPage,
++  scope,
++} = useReadPage<RawAlarm>(getAlarmPage, () => readable.value)
++const { busy, error } = scope
++
++const total = computed(() => data.value?.total ?? 0)
++const currentPage = computed(() => Math.floor(snapshotSkip.value / snapshotLimit.value) + 1)
++const pageCount = computed(() => Math.max(1, Math.ceil(total.value / snapshotLimit.value)))
++const canPrev = computed(() => snapshotSkip.value > 0 && !busy.value && !denied.value)
++const canNext = computed(
++  () => data.value !== null && snapshotSkip.value + snapshotLimit.value < data.value.total && !busy.value && !denied.value,
++)
++const emptyHeading = computed(() => {
++  if (!data.value) return ''
++  if (data.value.total === 0) return error.value ? '上次成功快照为空' : '查询已成功，当前页没有原始报警'
++  return '当前页没有记录'
++})
++
++function refreshNow() {
++  if (!busy.value && !denied.value) void refresh()
++}
++
++function filtersChangedNow() {
++  if (denied.value) return
++  // 条件变化时取消旧请求，再从第 1 页读取，避免旧条件的结果覆盖新条件。
++  scope.cancel()
++  filtersChanged()
++}
++
++watch(readable, (value) => {
++  if (value) void refresh()
++})
++</script>
++
+ <template>
+-  <section class="workspace full-page"><h1>历史与原始报警</h1><p role="alert">JOURNEY_IMPLEMENTATION_REQUIRED：请按本站契约创建这个业务页面。不要只删提示。</p></section>
++  <section class="workspace full-page" data-testid="raw-alarms-page">
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第06站 · 原始报警</p>
++        <h1>保留上游原文，只读分页</h1>
++        <p class="muted">
++          原始报警与本地演练事件分开；status/level 按原文展示，不映射、不改写，也不改变上游状态。
++        </p>
++      </div>
++      <button type="button" class="button primary" :disabled="busy || denied || !readable" data-testid="raw-refresh" @click="refreshNow">
++        {{ busy ? '正在读取…' : data ? '重新读取' : '开始读取' }}
++      </button>
++    </header>
++
++    <SourceBanner :time="data?.observedAt" />
++    <p class="refresh-note">
++      首次进入立即读取一次，此后每次完成后等 30 秒再读；请求未完成不叠加，离页或会话变化即停止。
++    </p>
++
++    <ReadStatus :busy="busy" :error="error" :has-data="data !== null" />
++    <div v-if="denied" class="notice error" role="alert">
++      <strong>读取权限已变化</strong>
++      <p>报警数据已清除，请重新登录核对当前身份的读取权限。</p>
++    </div>
++    <div v-if="!readable" class="notice warning" role="status">
++      <strong>当前身份没有读取原始报警的权限</strong>
++      <p>请先完成登录并确认身份具备校园读取权限。</p>
++    </div>
++
++    <div class="notice" role="status">
++      <strong>只读来源记录</strong>
++      <p>
++        读取报警不会创建或关闭本地演练事件，也不改变上游状态。本页没有确认、恢复或控制按钮；
++        status、level、occurredAt、recoveredAt 保留服务端原文与空值，不替换成本地演练状态。
++      </p>
++    </div>
++
++    <div class="query-bar">
++      <label
++        >每页<select v-model.number="limit" :disabled="denied" data-testid="raw-limit" @change="filtersChangedNow">
++          <option :value="2">2 条</option>
++          <option :value="5">5 条</option>
++          <option :value="10">10 条</option>
++          <option :value="20">20 条</option>
++        </select></label
++      >
++      <label
++        >教学读取情境<select v-model="scenario" :disabled="denied" data-testid="raw-scenario" @change="filtersChangedNow">
++          <option value="normal">正常样本</option>
++          <option value="empty">成功空结果</option>
++          <option value="failure">读取失败</option>
++        </select></label
++      >
++      <p class="query-hint">
++        limit 取 2/5/10/20，skip 由分页计算；切换每页条数或情境都从第 1 页重新读取。
++      </p>
++    </div>
++
++    <div v-if="!readable" class="empty-state" role="status">
++      <h3>等待读取权限</h3>
++      <p>权限恢复后页面会重新读取，不会用空列表冒充成功结果。</p>
++    </div>
++    <div v-else-if="!data && !busy && !error" class="notice" role="status">
++      <strong>尚未取得原始报警</strong>
++      <p>读取需要已登录会话与读取权限；若长时间没有结果，请核对身份后点右上角读取。</p>
++    </div>
++
++    <template v-if="data">
++      <p class="alarm-meta">
++        成功查询：{{ timeText(data.queriedAt) }} · 固定教学采样时刻：{{ timeText(data.observedAt) }}
++        · 当前快照第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页
++        {{ data.items.length }} 条 · limit={{ snapshotLimit }} · skip={{ snapshotSkip }}
++      </p>
++      <p v-if="error" class="muted tiny">
++        本次读取失败；以下仍是上次成功快照（第 {{ currentPage }} 页，共 {{ data.total }} 条），不是新的空结果。
++      </p>
++
++      <div v-if="data.issues.length" class="notice warning" role="status">
++        <strong>响应附带 {{ data.issues.length }} 条 issues</strong>
++        <ul class="issue-list">
++          <li v-for="issue in data.issues" :key="`${issue.code}-${issue.scope}-${issue.message}`">
++            <code>{{ issue.code }}</code>
++            <span>{{ issue.message }}</span>
++            <small>{{ issue.scope }}</small>
++          </li>
++        </ul>
++      </div>
++
++      <section class="panel">
++        <div class="section-heading">
++          <h2>原始报警记录</h2>
++          <span>按服务端 occurredAt DESC、id DESC 返回；本页不排序、不合并、不改写状态。</span>
++        </div>
++
++        <div v-if="data.items.length === 0" class="empty-state" role="status">
++          <h3>{{ emptyHeading }}</h3>
++          <p v-if="error">本次读取失败，这里显示的是上次成功快照，不是新的空结果。</p>
++          <p v-else-if="data.total === 0">这是成功空结果；不创建本地演练事件，也不补造报警记录。</p>
++          <p v-else>共 {{ data.total }} 条，当前 skip={{ snapshotSkip }}；请返回上一页查看。</p>
++        </div>
++        <div v-else class="table-scroll">
++          <table class="data-table raw-alarm-table">
++            <caption>
++              记录来自 GET /api/campus/alarms；status 与 level 是上游原文，未知值也原样显示。
++            </caption>
++            <thead>
++              <tr>
++                <th scope="col">报警记录</th>
++                <th scope="col">设备与点位</th>
++                <th scope="col">状态 / 等级（原文）</th>
++                <th scope="col">发生 / 恢复</th>
++              </tr>
++            </thead>
++            <tbody>
++              <tr v-for="alarm in data.items" :key="alarm.id">
++                <td class="alarm-record">
++                  <strong>{{ alarm.message }}</strong>
++                  <code>{{ alarm.id }}</code>
++                  <small>{{ alarm.source }} · simulated={{ alarm.simulated }}</small>
++                </td>
++                <td>
++                  <strong>{{ alarm.deviceName ?? '设备未知' }}</strong>
++                  <code>{{ alarm.deviceId ?? '未知（null）' }}</code>
++                  <small>点位 {{ alarm.tagId ?? '采样点未知' }} · 表 {{ alarm.tableId ?? '表未知' }}</small>
++                  <a
++                    v-if="alarm.deviceId && alarm.tagId"
++                    class="button subtle"
++                    :href="historyHash(alarm.deviceId, alarm.tagId)"
++                  >
++                    查看点位历史
++                  </a>
++                  <small v-else>缺少设备或点位，不能钻取历史</small>
++                </td>
++                <td>
++                  <strong class="raw-value">{{ alarm.status }}</strong>
++                  <code class="raw-value">{{ alarm.level }}</code>
++                  <small>原文保留，不映射本地状态</small>
++                </td>
++                <td class="time-cell">
++                  <span>发生：{{ alarm.occurredAt === null ? '未知（null）' : timeText(alarm.occurredAt) }}</span>
++                  <small>恢复：{{ alarm.recoveredAt === null ? '未知（null）' : timeText(alarm.recoveredAt) }}</small>
++                </td>
++              </tr>
++            </tbody>
++          </table>
++        </div>
++
++        <div class="pagination">
++          <span>
++            第 {{ currentPage }} / {{ pageCount }} 页 · 共 {{ data.total }} 条 · 本页 {{ data.items.length }} 条
++          </span>
++          <div class="pagination-actions">
++            <button type="button" class="button subtle" :disabled="!canPrev" data-testid="raw-prev" @click="goPage(-1)">
++              上一页
++            </button>
++            <button type="button" class="button subtle" :disabled="!canNext" data-testid="raw-next" @click="goPage(1)">
++              下一页
++            </button>
++          </div>
++        </div>
++
++        <p class="ledger-footnote">
++          只读：没有确认、恢复、关闭或控制上游报警的按钮；读取失败保留上次成功快照，空结果不显示为错误。
++        </p>
++      </section>
++    </template>
++  </section>
+ </template>
++
++<style scoped>
++.refresh-note {
++  margin: -16px 0 22px;
++  color: var(--muted);
++  font-size: 0.76rem;
++  line-height: 1.7;
++}
++.query-hint {
++  margin: 0;
++  color: var(--muted);
++  font-size: 0.72rem;
++  line-height: 1.7;
++}
++.alarm-meta {
++  margin: -6px 0 18px;
++  color: var(--muted);
++  font-size: 0.75rem;
++  line-height: 1.8;
++}
++.raw-alarm-table td:first-child {
++  min-width: 230px;
++}
++.alarm-record strong {
++  line-height: 1.7;
++}
++.raw-value {
++  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
++  font-size: 0.8rem;
++  overflow-wrap: anywhere;
++}
++.pagination-actions {
++  display: flex;
++  gap: 8px;
++}
++.issue-list {
++  list-style: none;
++  margin: 8px 0 0;
++  padding: 0;
++}
++.issue-list li {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 4px 10px;
++  align-items: baseline;
++  padding: 5px 0;
++  border-top: 1px solid var(--line);
++  font-size: 0.8rem;
++}
++.issue-list li:first-child {
++  border-top: 0;
++}
++.issue-list small {
++  color: var(--muted);
++  font-size: 0.7rem;
++}
++@media (max-width: 740px) {
++  .refresh-note {
++    margin-top: -12px;
++  }
++  .pagination-actions {
++    width: 100%;
++  }
++  .pagination-actions .button {
++    flex: 1;
++  }
++}
++</style>
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -135,7 +135,18 @@
+     "frontend/src/types/read-models.ts": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28",
+     "frontend/src/composables/useReadPage.ts": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 6,
++    "at": "2026-10-19T18:06:59.840Z",
++    "sourceFingerprint": "57b4d5e3e88a648c46cf7e8eb4e625ed9970581fdfd483d1e987f09c8a2fb8fc",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

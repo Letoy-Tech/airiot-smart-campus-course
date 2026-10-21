@@ -1,0 +1,353 @@
+{
+  "state": "uploaded to staging",
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "verifiedRelease": "/srv/campus-demo/releases/REL_20261005-0151-SCHOOL-DEMO",
+  "manifest": {
+    "release": "REL_20261005-0151-SCHOOL-DEMO",
+    "backend": {
+      "file": "backend.jar",
+      "bytes": 101694540,
+      "sha256": "374c26869b6decc13c8dd899c3b5cb6fd139df877142aa817d274a8e81e6862a",
+      "archiveValidation": "passed",
+      "localCandidate": "/Users/learner/system/Letoy WAGF BE/target/letoy-wagf-be-0.0.1.jar",
+      "parts": [
+        {
+          "file": "part-aaaa",
+          "bytes": 33554432,
+          "sha256": "4d19e4a2144a3d747b537a49b219d44bcae6af290751974af3880f46aebdb8a0"
+        },
+        {
+          "file": "part-aaab",
+          "bytes": 33554432,
+          "sha256": "5974222180c3fed5edff6b139b79b334054c23cddaa30ae509138a711cbf08d9"
+        },
+        {
+          "file": "part-aaac",
+          "bytes": 33554432,
+          "sha256": "70fe729317752173615b431c7960996681807cc882cf9c8a1263a4535ef3e3d5"
+        },
+        {
+          "file": "part-aaad",
+          "bytes": 1031244,
+          "sha256": "8a35c7bf61d025894b530532d565b32c6a94368d4ad54feb9f764cb800067396"
+        }
+      ]
+    },
+    "frontend": {
+      "file": "frontend.tar.gz",
+      "bytes": 1990798,
+      "sha256": "447f9ece9e78b302327c72afec5a6bb2454b79cac82fa75727930134ac01e268",
+      "files": [
+        {
+          "path": "assets/Access-B83Xyf3l.js",
+          "bytes": 975,
+          "sha256": "5c08f5b2f53df6ddbc6c2591b81422f1f263bf9202db5220b183736d5abd2286"
+        },
+        {
+          "path": "assets/AdminLayout-CGxvWmKO.js",
+          "bytes": 4777,
+          "sha256": "6c637d86b29c0fcba74ed13780824a7cb72c54dc8a8f71c879379a1e5bdc2dec"
+        },
+        {
+          "path": "assets/AdminLayout-QOdp_ViR.css",
+          "bytes": 1434,
+          "sha256": "05cb700f66784e61b10118f5005de144263dbf62d871f8e72251d5e3eb75b1c3"
+        },
+        {
+          "path": "assets/Alarms-6ePMtHnb.js",
+          "bytes": 2764,
+          "sha256": "f00919a5fef92f161865df61de5fd576537f6f492ee7a9fbdc3c0d9b82aff977"
+        },
+        {
+          "path": "assets/AppButton-D76C1XDG.css",
+          "bytes": 5115,
+          "sha256": "36d0ed52f2a5bdb673ee8ea2a99af7b2a2c68cea46c4292b28a3cd376a7cee6f"
+        },
+        {
+          "path": "assets/AppButton-K0PTSMNg.js",
+          "bytes": 865,
+          "sha256": "8a24e70cdd7e209a8682205c077e5a7aa469aab7e38222be2f7092c1bb0faf6e"
+        },
+        {
+          "path": "assets/AppInput-BmW6mX-4.css",
+          "bytes": 12023,
+          "sha256": "160c7e10e3bd23f9328521c21547a82b858c6c33a634c5546beec1e15c3015c8"
+        },
+        {
+          "path": "assets/AppInput-Cvwn8fRi.js",
+          "bytes": 20841,
+          "sha256": "9f1e93e5df04de2cb42af000f73f42c1f2f312abf843e9704b419f0a1b7553c4"
+        },
+        {
+          "path": "assets/Audit-Cj6cSByw.js",
+          "bytes": 2549,
+          "sha256": "013d0e3d008a260cc0bd2f94b7d8cc1fc9db1bd9f729fb5fdf254fa3e6e10dda"
+        },
+        {
+          "path": "assets/CampusChart-C8tbcLVo.js",
+          "bytes": 590255,
+          "sha256": "6b59ed6a14533db9aeb0d52364da40dc61a3b920e8da8374b98ea828082e28fd"
+        },
+        {
+          "path": "assets/CampusChart-CLILXVp6.css",
+          "bytes": 55,
+          "sha256": "89869b7daa7783ae593f6dd9aae8fd5680aed7cf938f40b981db96710b9bb993"
+        },
+        {
+          "path": "assets/CaseDetail-BPWo0oik.css",
+          "bytes": 6133,
+          "sha256": "d2ccedf065445df30254e86c4f0dcd70b3deafdce56e87e554a7fcc33fe574ae"
+        },
+        {
+          "path": "assets/CaseDetail-DDqpSTC-.js",
+          "bytes": 14888,
+          "sha256": "aaddc27d03bbee22915b49bae4bf19aba8a6fb5585d7829f9b6ac6a11d8cabce"
+        },
+        {
+          "path": "assets/DeviceDetail-DDzod34R.js",
+          "bytes": 5609,
+          "sha256": "436a4de2a96d2d1b77c352473d6d4d3ec2c22cd327f3a64a515954a3611eccff"
+        },
+        {
+          "path": "assets/DeviceDetail-DqTg0upW.css",
+          "bytes": 1309,
+          "sha256": "0af9b6c0ef15e2b54685f1f4a0579c413c6650786b41bf3fd11a614c70cbce39"
+        },
+        {
+          "path": "assets/DeviceOwners-BaveGTHS.css",
+          "bytes": 4034,
+          "sha256": "6de51a335bfe3edee81c90d1c6b136e0ce49a52a496d567da245a23626d0730f"
+        },
+        {
+          "path": "assets/DeviceOwners-NoDPrMpQ.js",
+          "bytes": 10677,
+          "sha256": "7ae9d7d926d453c421ff87b8b73fe18db3b8ccb4d3680b7444f926f18ae21379"
+        },
+        {
+          "path": "assets/Devices-Bw2bbSym.js",
+          "bytes": 15027,
+          "sha256": "fdd0e89f476766f22bbeb5e9a1d37473dcced3a5142076153727edca8da8bdb7"
+        },
+        {
+          "path": "assets/Devices-OBJuyfcG.css",
+          "bytes": 10466,
+          "sha256": "f48e25fc3cb119fffcd5533760752302ea24cf19bd6e61ac1f1feed07f3ed0a1"
+        },
+        {
+          "path": "assets/Energy-CAdyILEK.css",
+          "bytes": 1607,
+          "sha256": "6acc0d20085c9b49a4e60f963fef6765c8cf164ddce3cc32a15ce7fe2da66fd7"
+        },
+        {
+          "path": "assets/Energy-CU9Mgodw.js",
+          "bytes": 8252,
+          "sha256": "852fc4cb3a44ba6b9eb522c21fff47d81437891759b0121d2e54f0117451e765"
+        },
+        {
+          "path": "assets/Index-BvcNxDDH.css",
+          "bytes": 2147,
+          "sha256": "d331ddb0b217020027fc093460b042866a17c899ecd0d4e43b4db819f54d1591"
+        },
+        {
+          "path": "assets/Index-CB9-PGcC.css",
+          "bytes": 4133,
+          "sha256": "c62a0c6378defe7408c118e926f9b30251821a6d74ae635eca2cb5af83b92264"
+        },
+        {
+          "path": "assets/Index-CWvE3lnc.js",
+          "bytes": 9974,
+          "sha256": "ea926aa5b1395c8e8254751ecf836196400d61b53f912dbdc68d71cb4dfed875"
+        },
+        {
+          "path": "assets/Index-CZ2I3Yu6.js",
+          "bytes": 1153,
+          "sha256": "4c60917c4b23a51139499bdc069cf6fe60f332be05509b916de796aaa835e62e"
+        },
+        {
+          "path": "assets/Index-DFKnSf1a.js",
+          "bytes": 4624,
+          "sha256": "3aa09111c3c59db6e5b8df2a5fa498d1b1351908793ccbcb6505a25775b3fd80"
+        },
+        {
+          "path": "assets/Integration-Dp7kPWQF.js",
+          "bytes": 2907,
+          "sha256": "85899abaaac1ce699132bd016d60eba53617dcc4c85d0113172a0cf476f9bca5"
+        },
+        {
+          "path": "assets/List-26TTZB2A.css",
+          "bytes": 6287,
+          "sha256": "ab4a10c686ec7226904b25cf3d182c1fbe4c6a5e524d02eb9d86a37604f0a168"
+        },
+        {
+          "path": "assets/List-354FcfPu.js",
+          "bytes": 11827,
+          "sha256": "63e4ebbbe50b79671189f940d73862eaebbd347b642aeb08b87fe6bb08d100ff"
+        },
+        {
+          "path": "assets/List-CjiLYzCW.css",
+          "bytes": 5015,
+          "sha256": "7742886c3e575865e67ee0fd9d74fb0400d9936c8115c8c95a1eba92abf31027"
+        },
+        {
+          "path": "assets/List-RKSwsDX9.js",
+          "bytes": 12283,
+          "sha256": "7a518387ef929e742605bec4510a3e739d909901132623ad68dc851ce803da67"
+        },
+        {
+          "path": "assets/Locations-9sdsidp-.js",
+          "bytes": 7117,
+          "sha256": "febb51aa338c560a3d699729446bb1391405bead8af76e9667c93ce22972d2e1"
+        },
+        {
+          "path": "assets/Login-DDd1KU7d.js",
+          "bytes": 1848,
+          "sha256": "f7b44f9fa4e079f67320e4303dc972cf135629bfa0ca8f5564a0c2a051913674"
+        },
+        {
+          "path": "assets/MetricTrend-sNpvHDzF.css",
+          "bytes": 1799,
+          "sha256": "4df4bdd2b0a6fb564626453fd5e1fc084351ea529e2b0a900ca7aebc41aa256e"
+        },
+        {
+          "path": "assets/MetricTrend-tOogcDrB.js",
+          "bytes": 7638,
+          "sha256": "a63daab017b803e808420f54aa251278ed84899e81407aebe855b2bd42a82213"
+        },
+        {
+          "path": "assets/Operations-BqywPO-0.js",
+          "bytes": 10838,
+          "sha256": "bb020b4c8ac01486dc6871c22270695902217babd3d54c8a0f3be6daa40b0ad3"
+        },
+        {
+          "path": "assets/Operations-CoTe97q0.css",
+          "bytes": 6950,
+          "sha256": "957404aad8175137090c16bdff2531b886496843cf6135698f009780218ff660"
+        },
+        {
+          "path": "assets/Overview-Bxn_lLxv.js",
+          "bytes": 15256,
+          "sha256": "6a3ed2a4198454c5784515d2b7a10892979de2aca37d79e3d8f0e62905ffae2d"
+        },
+        {
+          "path": "assets/Overview-CUQmukeB.css",
+          "bytes": 7320,
+          "sha256": "3da1b899420115c5cd5508e2855b60187137b7886ef98ed719ea70dd19e29d45"
+        },
+        {
+          "path": "assets/PointValue.vue_vue_type_script_setup_true_lang-BVvReHDA.js",
+          "bytes": 530,
+          "sha256": "787dce18fb11a96e172d526e420f27f828d43cc26e6770a4f30fd8b4551ebbe0"
+        },
+        {
+          "path": "assets/ResourceState.vue_vue_type_script_setup_true_lang-DYxoUWxV.js",
+          "bytes": 2565,
+          "sha256": "a6cfba4d8f0d8074f897c39f42f956ffc1ae3dd3e80c9dcd51deab9307595e03"
+        },
+        {
+          "path": "assets/VDrawer-79LHpMxK.js",
+          "bytes": 1869,
+          "sha256": "84277bd05969e63a2b5c7b2da04a04bb0fd2c90bb68afdb59aab0f10d222ad6c"
+        },
+        {
+          "path": "assets/VDrawer-D2GYd2ME.css",
+          "bytes": 3180,
+          "sha256": "5b6ebb8dec84019126e960eabe99908c0b6ff96202d4bb146ea734f5948a9241"
+        },
+        {
+          "path": "assets/VPagination-B3nTP6qd.js",
+          "bytes": 8250,
+          "sha256": "6cf71bd8465b704d9af3f8355644cb689169e449f764b739483d1cffbb66c142"
+        },
+        {
+          "path": "assets/VPagination-D8P8c4-D.css",
+          "bytes": 11335,
+          "sha256": "402c0d9025dfa7b4924117bf1c0b10ca9d65d63d3e32f7d1edd5752af60c9e01"
+        },
+        {
+          "path": "assets/index-BGcBug8D.css",
+          "bytes": 150863,
+          "sha256": "8a43f508f6399770a4612eacff3f0bfd23b7c7a53aab8735b398117867bef2b2"
+        },
+        {
+          "path": "assets/index-CB7Isnes.js",
+          "bytes": 158882,
+          "sha256": "8221aae54f4c48988e93eaac894d258fca50902ec2ce1f422a885d53339f702d"
+        },
+        {
+          "path": "assets/messageBox-CCApxCpG.css",
+          "bytes": 2902,
+          "sha256": "6f79a8a8e648fe3446b651409d1c130e0fb45d8cefc9c6e7fdda36697367041a"
+        },
+        {
+          "path": "assets/messageBox-Dw8u-V-g.js",
+          "bytes": 2999,
+          "sha256": "ca099070944dc92b05ae5f9a8842c577b8dce0ec743045b3f5a363e972bfc6e3"
+        },
+        {
+          "path": "assets/operations-BKfpUDx4.js",
+          "bytes": 590,
+          "sha256": "a512c73446b64dd08752f68d95e82d6dff396678a6c0d9c1fcf7b3fbd69821a7"
+        },
+        {
+          "path": "assets/remixicon-B25hvfAs.eot",
+          "bytes": 613308,
+          "sha256": "61756b1f7883460ddd7b9b7643f2515a85ed41e732d845c569100ab4d8077154"
+        },
+        {
+          "path": "assets/remixicon-BTtOSOPh.svg",
+          "bytes": 3019610,
+          "sha256": "2e808e0afc9765383d9260ea636a762d9a44aa3ed3f89fe630c8ced6d7a2f5a7"
+        },
+        {
+          "path": "assets/remixicon-CZw4FkzQ.woff2",
+          "bytes": 189216,
+          "sha256": "e92dc38bfb1d15dbb9d9ca9e645754f68e7c5b224e33c45a17048bd0cf2407a6"
+        },
+        {
+          "path": "assets/remixicon-S6an_USy.woff",
+          "bytes": 260480,
+          "sha256": "387aa3c3a5b5733d89f81d1e40cfea0656d83c5dfe35286e397ed6492a0c179d"
+        },
+        {
+          "path": "assets/remixicon-sqouR8Ox.ttf",
+          "bytes": 613136,
+          "sha256": "cdff268662c834fbe023a8d34f77e2842c50025b093bc827c9b71adefc81b256"
+        },
+        {
+          "path": "assets/responsive-paY-rOkU.js",
+          "bytes": 333,
+          "sha256": "bfb99899d978c2a53da5b543840c4004ca793f946eb944bfbb31452bacddbd40"
+        },
+        {
+          "path": "assets/scrollLock-FFn-E6QU.js",
+          "bytes": 254,
+          "sha256": "18494db09cfa2f52f2529dc29a498d4e6ddd8331999260a6ac12f44861b54826"
+        },
+        {
+          "path": "favicon.ico",
+          "bytes": 4286,
+          "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445"
+        },
+        {
+          "path": "index.html",
+          "bytes": 1033,
+          "sha256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b"
+        }
+      ],
+      "localCandidate": "/Users/learner/system/Letoy WAGF MG/dist"
+    },
+    "credentialLiteralScan": "passed",
+    "transfer": {
+      "mode": "multipart",
+      "partSize": "32MiB",
+      "concurrency": 4,
+      "partCount": 4
+    }
+  },
+  "localTransferEvidence": "/Users/learner/system/.runtime/campus-demo/REL_20261005-0151-SCHOOL-DEMO-6d20c27b/manifest.json",
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

@@ -1,0 +1,7 @@
+当前第09站：先核实恢复，再关闭。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/CloseChecklist.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/CloseChecklist.vue。
+读取CasesView、AlarmDetail类型、closeBlockers和后端OperationsService.requireClosable/update。实现CloseChecklist.vue：接收detail:AlarmDetail，列出closeBlockers(detail)缺少的条件；无缺项仍提醒结论、后端权限与版本检查。只做这个组件，不在前端直接改事件状态，不重写整个Java服务。然后带我按本页步骤实际走关闭和拒绝分支。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+澄清：只按已有后端实际规则，人工action=NOTE才算NOTE，DEMO_RECOVER/VERIFY_RECOVERY不算；不修改既有权限与版本校验顺序，不新造canClose能力。组件只读列条件，不发请求、不改变状态。严格只改CloseChecklist.vue；不改/增删测试、装配、后端、工具、依赖，不读取.private、lesson-bundles/**/files、journey-backups。已有单测命令npm run test:unit -- --run，报告简洁。

@@ -1,0 +1,3462 @@
+{
+  "version": 1,
+  "saved_at": 1792530088723.0,
+  "run": {
+    "id": "df528248af9d5",
+    "session_id": "qvuv",
+    "tab_id": 1075951426,
+    "name": "student-v201-12-04-viewer-readonly",
+    "url": "http://127.0.0.1:5188/",
+    "started_at": 1792530082043.0,
+    "stopped_at": 1792530088711.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 11,
+    "operations": 9,
+    "errors": 2,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 129,
+    "active_rules": 0,
+    "saved_at": 1792530088714.0,
+    "storage": {
+      "bytes": 88391,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 11
+    },
+    "environment": {
+      "extension_version": "0.3.3",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [
+    {
+      "id": "df528248af9d5:n1",
+      "run_id": "df528248af9d5",
+      "sequence": 118,
+      "started_at": 1792530082271.0,
+      "finished_at": 1792530082293.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 25.94,
+      "transfer_bytes": 12829.0,
+      "decoded_bytes": 12644.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:603",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:22 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": 11.286,
+        "connectStart": 11.101,
+        "dnsEnd": 11.101,
+        "dnsStart": 11.094,
+        "proxyEnd": 10.919,
+        "proxyStart": 10.916,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 21.037,
+        "receiveHeadersStart": 21.019,
+        "requestTime": 829765.973132,
+        "sendEnd": 11.394,
+        "sendStart": 11.339,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"交接教学楼\",\"floor\":\"3层\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12476,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n2",
+      "run_id": "df528248af9d5",
+      "sequence": 119,
+      "started_at": 1792530083084.0,
+      "finished_at": 1792530083094.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/spaces",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 11.47,
+      "transfer_bytes": 489.0,
+      "decoded_bytes": 313.0,
+      "from_service_worker": false,
+      "initiator": "requestSpacesApi http://127.0.0.1:5188/data-service.js:929",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:23 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 1.478,
+        "proxyStart": 1.477,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.211,
+        "receiveHeadersStart": 8.192,
+        "requestTime": 829766.786799,
+        "sendEnd": 1.611,
+        "sendStart": 1.523,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"交接教学楼\",\"floor\":\"3层\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}]}",
+        "chars": 263,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n3",
+      "run_id": "df528248af9d5",
+      "sequence": 120,
+      "started_at": 1792530083085.0,
+      "finished_at": 1792530083095.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/devices",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 13.37,
+      "transfer_bytes": 1811.0,
+      "decoded_bytes": 1635.0,
+      "from_service_worker": false,
+      "initiator": "getDevicesFromServer http://127.0.0.1:5188/data-service.js:306",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:23 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": 2.753,
+        "connectStart": 2.477,
+        "dnsEnd": 2.477,
+        "dnsStart": 2.471,
+        "proxyEnd": 2.46,
+        "proxyStart": 2.459,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 9.795,
+        "receiveHeadersStart": 9.781,
+        "requestTime": 829766.787227,
+        "sendEnd": 2.871,
+        "sendStart": 2.806,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}]}",
+        "chars": 1563,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n4",
+      "run_id": "df528248af9d5",
+      "sequence": 121,
+      "started_at": 1792530083468.0,
+      "finished_at": 1792530083482.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 16.24,
+      "transfer_bytes": 12829.0,
+      "decoded_bytes": 12644.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:603",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:23 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.554,
+        "proxyStart": 2.553,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 10.5,
+        "receiveHeadersStart": 10.476,
+        "requestTime": 829767.170111,
+        "sendEnd": 2.671,
+        "sendStart": 2.6,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"交接教学楼\",\"floor\":\"3层\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12476,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n5",
+      "run_id": "df528248af9d5",
+      "sequence": 122,
+      "started_at": 1792530083910.0,
+      "finished_at": 1792530083924.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 16.37,
+      "transfer_bytes": 12829.0,
+      "decoded_bytes": 12644.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:603",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:23 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.351,
+        "proxyStart": 2.349,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 12.573,
+        "receiveHeadersStart": 12.556,
+        "requestTime": 829767.612219,
+        "sendEnd": 2.575,
+        "sendStart": 2.421,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"交接教学楼\",\"floor\":\"3层\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12476,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n6",
+      "run_id": "df528248af9d5",
+      "sequence": 123,
+      "started_at": 1792530084319.0,
+      "finished_at": 1792530084330.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/overview",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 13.56,
+      "transfer_bytes": 12829.0,
+      "decoded_bytes": 12644.0,
+      "from_service_worker": false,
+      "initiator": "getOverviewFromServer http://127.0.0.1:5188/data-service.js:603",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:24 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 1.245,
+        "proxyStart": 1.243,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 10.353,
+        "receiveHeadersStart": 10.336,
+        "requestTime": 829768.020701,
+        "sendEnd": 1.441,
+        "sendStart": 1.296,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":{\"spaces\":[{\"id\":\"s1\",\"name\":\"101教室\",\"building\":\"交接教学楼\",\"floor\":\"3层\"},{\"id\":\"s2\",\"name\":\"201教室\",\"building\":\"教学楼\",\"floor\":\"2\"},{\"id\":\"s3\",\"name\":\"101实验室\",\"building\":\"实验楼\",\"floor\":\"1\"},{\"id\":\"s4\",\"name\":\"201实验室\",\"building\":\"实验楼\",\"floor\":\"2\"}],\"devices\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}],\"points\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"value\":61.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"value\":24.0,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"value\":61.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"value\":24.2,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"value\":61.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"value\":null,\"unit\":\"°C\",\"time\":null,\"quality\":\"missing\"},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"value\":61.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"value\":24.6,\"unit\":\"°C\",\"time\":1792454400000,\"quality\":\"stale\"},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"value\":0.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"value\":220.0,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"value\":1.6,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"value\":220.2,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"value\":1.8,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"value\":220.4,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"value\":2.0,\"unit\":\"kW\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"value\":220.6,\"unit\":\"V\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"value\":75.0,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"value\":75.2,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"value\":75.4,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"value\":75.6,\"unit\":\"%\",\"time\":1792454400000,\"quality\":\"fresh\"},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"value\":1.0,\"unit\":\"\",\"time\":1792454400000,\"quality\":\"fresh\"}],\"history\":[{\"deviceId\":\"d01\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.0},{\"time\":1792453200000,\"value\":61.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.0},{\"time\":1792454400000,\"value\":61.0}]},{\"deviceId\":\"d01\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.0},{\"time\":1792453200000,\"value\":24.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.0},{\"time\":1792454400000,\"value\":24.0}]},{\"deviceId\":\"d02\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.2},{\"time\":1792453200000,\"value\":61.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.2},{\"time\":1792454400000,\"value\":61.2}]},{\"deviceId\":\"d02\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.2},{\"time\":1792453200000,\"value\":24.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.2},{\"time\":1792454400000,\"value\":24.2}]},{\"deviceId\":\"d03\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.4},{\"time\":1792453200000,\"value\":61.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.4},{\"time\":1792454400000,\"value\":61.4}]},{\"deviceId\":\"d03\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.4},{\"time\":1792453200000,\"value\":24.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.4},{\"time\":1792454400000,\"value\":24.4}]},{\"deviceId\":\"d04\",\"tagId\":\"humidity\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":61.6},{\"time\":1792453200000,\"value\":61.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":61.6},{\"time\":1792454400000,\"value\":61.6}]},{\"deviceId\":\"d04\",\"tagId\":\"temperature\",\"unit\":\"°C\",\"samples\":[{\"time\":1792452900000,\"value\":24.6},{\"time\":1792453200000,\"value\":24.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":24.6},{\"time\":1792454400000,\"value\":24.6}]},{\"deviceId\":\"d05\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":0.0},{\"time\":1792453200000,\"value\":0.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":0.0},{\"time\":1792454400000,\"value\":0.0}]},{\"deviceId\":\"d05\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.0},{\"time\":1792453200000,\"value\":220.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.0},{\"time\":1792454400000,\"value\":220.0}]},{\"deviceId\":\"d06\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.6},{\"time\":1792453200000,\"value\":1.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.6},{\"time\":1792454400000,\"value\":1.6}]},{\"deviceId\":\"d06\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.2},{\"time\":1792453200000,\"value\":220.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.2},{\"time\":1792454400000,\"value\":220.2}]},{\"deviceId\":\"d07\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":1.8},{\"time\":1792453200000,\"value\":1.8},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.8},{\"time\":1792454400000,\"value\":1.8}]},{\"deviceId\":\"d07\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.4},{\"time\":1792453200000,\"value\":220.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.4},{\"time\":1792454400000,\"value\":220.4}]},{\"deviceId\":\"d08\",\"tagId\":\"power\",\"unit\":\"kW\",\"samples\":[{\"time\":1792452900000,\"value\":2.0},{\"time\":1792453200000,\"value\":2.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":2.0},{\"time\":1792454400000,\"value\":2.0}]},{\"deviceId\":\"d08\",\"tagId\":\"voltage\",\"unit\":\"V\",\"samples\":[{\"time\":1792452900000,\"value\":220.6},{\"time\":1792453200000,\"value\":220.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":220.6},{\"time\":1792454400000,\"value\":220.6}]},{\"deviceId\":\"d09\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d10\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d11\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d12\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d13\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.0},{\"time\":1792453200000,\"value\":75.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.0},{\"time\":1792454400000,\"value\":75.0}]},{\"deviceId\":\"d13\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d14\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.2},{\"time\":1792453200000,\"value\":75.2},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.2},{\"time\":1792454400000,\"value\":75.2}]},{\"deviceId\":\"d14\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d15\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.4},{\"time\":1792453200000,\"value\":75.4},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.4},{\"time\":1792454400000,\"value\":75.4}]},{\"deviceId\":\"d15\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]},{\"deviceId\":\"d16\",\"tagId\":\"brightness\",\"unit\":\"%\",\"samples\":[{\"time\":1792452900000,\"value\":75.6},{\"time\":1792453200000,\"value\":75.6},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":75.6},{\"time\":1792454400000,\"value\":75.6}]},{\"deviceId\":\"d16\",\"tagId\":\"status\",\"unit\":\"\",\"samples\":[{\"time\":1792452900000,\"value\":1.0},{\"time\":1792453200000,\"value\":1.0},{\"time\":1792453500000,\"value\":null},{\"time\":1792453800000,\"value\":0.0},{\"time\":1792454100000,\"value\":1.0},{\"time\":1792454400000,\"value\":1.0}]}],\"alarms\":[{\"id\":\"a01\",\"deviceId\":\"d01\",\"message\":\"教学样本：温度提醒；不表示真实校园故障\",\"status\":\"SAMPLE_ACTIVE\",\"level\":\"NOTICE\",\"time\":1792454400000,\"simulated\":true}]}}",
+        "chars": 12476,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n7",
+      "run_id": "df528248af9d5",
+      "sequence": 124,
+      "started_at": 1792530084717.0,
+      "finished_at": 1792530084730.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/devices",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 13.93,
+      "transfer_bytes": 1811.0,
+      "decoded_bytes": 1635.0,
+      "from_service_worker": false,
+      "initiator": "getDevicesFromServer http://127.0.0.1:5188/data-service.js:306",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:24 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 1.256,
+        "proxyStart": 1.255,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.831,
+        "receiveHeadersStart": 8.811,
+        "requestTime": 829768.419587,
+        "sendEnd": 1.354,
+        "sendStart": 1.296,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}]}",
+        "chars": 1563,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n8",
+      "run_id": "df528248af9d5",
+      "sequence": 125,
+      "started_at": 1792530084717.0,
+      "finished_at": 1792530084731.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/owners",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 14.06,
+      "transfer_bytes": 298.0,
+      "decoded_bytes": 123.0,
+      "from_service_worker": false,
+      "initiator": "requestOwnersApi http://127.0.0.1:5188/data-service.js:1126",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:24 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.325,
+        "proxyStart": 2.324,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.945,
+        "receiveHeadersStart": 8.931,
+        "requestTime": 829768.419988,
+        "sendEnd": 2.428,
+        "sendStart": 2.371,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"deviceId\":\"d01\",\"username\":\"manager\",\"note\":\"新目录接手巡查责任\",\"version\":1}]}",
+        "chars": 105,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n9",
+      "run_id": "df528248af9d5",
+      "sequence": 126,
+      "started_at": 1792530085168.0,
+      "finished_at": 1792530085177.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/devices",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 11.62,
+      "transfer_bytes": 1811.0,
+      "decoded_bytes": 1635.0,
+      "from_service_worker": false,
+      "initiator": "getDevicesFromServer http://127.0.0.1:5188/data-service.js:306",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:25 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.291,
+        "proxyStart": 2.289,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.805,
+        "receiveHeadersStart": 8.788,
+        "requestTime": 829768.870205,
+        "sendEnd": 2.428,
+        "sendStart": 2.367,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"id\":\"d01\",\"name\":\"温湿度01\",\"category\":\"environment\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d02\",\"name\":\"温湿度02\",\"category\":\"environment\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d03\",\"name\":\"温湿度03\",\"category\":\"environment\",\"spaceId\":\"s3\",\"online\":null,\"simulated\":true},{\"id\":\"d04\",\"name\":\"温湿度04\",\"category\":\"environment\",\"spaceId\":\"s4\",\"online\":false,\"simulated\":true},{\"id\":\"d05\",\"name\":\"电表01\",\"category\":\"energy\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d06\",\"name\":\"电表02\",\"category\":\"energy\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d07\",\"name\":\"电表03\",\"category\":\"energy\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d08\",\"name\":\"电表04\",\"category\":\"energy\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d09\",\"name\":\"设施01\",\"category\":\"facility\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d10\",\"name\":\"设施02\",\"category\":\"facility\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d11\",\"name\":\"设施03\",\"category\":\"facility\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d12\",\"name\":\"设施04\",\"category\":\"facility\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true},{\"id\":\"d13\",\"name\":\"灯光01\",\"category\":\"lighting\",\"spaceId\":\"s1\",\"online\":true,\"simulated\":true},{\"id\":\"d14\",\"name\":\"灯光02\",\"category\":\"lighting\",\"spaceId\":\"s2\",\"online\":true,\"simulated\":true},{\"id\":\"d15\",\"name\":\"灯光03\",\"category\":\"lighting\",\"spaceId\":\"s3\",\"online\":true,\"simulated\":true},{\"id\":\"d16\",\"name\":\"灯光04\",\"category\":\"lighting\",\"spaceId\":\"s4\",\"online\":true,\"simulated\":true}]}",
+        "chars": 1563,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n10",
+      "run_id": "df528248af9d5",
+      "sequence": 127,
+      "started_at": 1792530085168.0,
+      "finished_at": 1792530085178.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/cases",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 12.5,
+      "transfer_bytes": 1308.0,
+      "decoded_bytes": 1132.0,
+      "from_service_worker": false,
+      "initiator": "requestCasesApi http://127.0.0.1:5188/data-service.js:1424",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 21:01:25 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.363,
+        "proxyStart": 2.362,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 9.52,
+        "receiveHeadersStart": 9.513,
+        "requestTime": 829768.870571,
+        "sendEnd": 2.493,
+        "sendStart": 2.432,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"id\":\"case-a4b66d456baa\",\"deviceId\":\"d01\",\"message\":\"新目录接手温度巡查演练\",\"state\":\"CLOSED\",\"assignee\":\"manager\",\"sourceState\":\"RECOVERED\",\"verified\":true,\"note\":\"新目录实际检查温度样本，记录本次教学巡查\",\"conclusion\":\"新目录演练已核查完成，处置记录与恢复核实一致\",\"version\":6,\"timeline\":[{\"time\":1792529935479,\"action\":\"create\",\"actor\":\"admin\",\"note\":\"创建教学模拟演练事件，按已登记责任人分派给 manager\"},{\"time\":1792529959598,\"action\":\"start\",\"actor\":\"manager\",\"note\":\"开始处理\"},{\"time\":1792529968087,\"action\":\"note\",\"actor\":\"manager\",\"note\":\"新目录实际检查温度样本，记录本次教学巡查\"},{\"time\":1792529987878,\"action\":\"recover\",\"actor\":\"admin\",\"note\":\"本地演练来源标记为已恢复（教学模拟，不声称真实设备恢复）\"},{\"time\":1792530011502,\"action\":\"verify\",\"actor\":\"manager\",\"note\":\"已核实本地演练来源恢复（教学模拟）\"},{\"time\":1792530011954,\"action\":\"close\",\"actor\":\"manager\",\"note\":\"新目录演练已核查完成，处置记录与恢复核实一致\"}]}]}",
+        "chars": 802,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:n11",
+      "run_id": "df528248af9d5",
+      "sequence": 128,
+      "started_at": 1792530085594.0,
+      "finished_at": 1792530085603.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/audit",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "F84F3A73E7BE794C26C5786F37F02008",
+      "status": 403,
+      "mime_type": "application/json",
+      "duration_ms": 12.08,
+      "transfer_bytes": 247.0,
+      "decoded_bytes": 70.0,
+      "from_service_worker": false,
+      "initiator": "requestAdminReadApi http://127.0.0.1:5188/data-service.js:1747",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-length": "70",
+        "content-type": "application/json;charset=UTF-8",
+        "date": "Tue, 20 Oct 2026 21:01:25 GMT",
+        "keep-alive": "timeout=60"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 2.314,
+        "proxyStart": 2.311,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 7.022,
+        "receiveHeadersStart": 7.005,
+        "requestTime": 829769.296054,
+        "sendEnd": 2.426,
+        "sendStart": 2.364,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":403,\"message\":\"已登录但无权执行该操作\",\"data\":null}",
+        "chars": 48,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "df528248af9d5:a1",
+      "run_id": "df528248af9d5",
+      "sequence": 15,
+      "method": "tool.click",
+      "target": "概览",
+      "source": "agent",
+      "started_at": 1792530082235.0,
+      "finished_at": 1792530082367.0,
+      "window_end": 1792530082629.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530082226.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530082629.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 05:01:22（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530082629.0,
+      "request_ids": [
+        "df528248af9d5:n1"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a2",
+      "run_id": "df528248af9d5",
+      "sequence": 19,
+      "method": "tool.click",
+      "target": "设备",
+      "source": "agent",
+      "started_at": 1792530082639.0,
+      "finished_at": 1792530082777.0,
+      "window_end": 1792530083043.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530082629.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n概览\n当前为教学模拟概览：展示设备、空间、点位数量与读数分布，不是实际校园设备。\n设备总数\n16\n空间总数\n4\n点位总数\n28\n今天先做什么\n先查看设备，再了解读数，发现问题后登记演练事件\n各空间设备数量\n按设备所在空间统计，单位：台；点击空间可只看该空间的设备。\n101教室\n4 台\n201教室\n4 台\n101实验室\n4 台\n201实验室\n4 台\n各类型设备数量\n环境、能源、设施、照明四类，单位：台；点击能源可只看能源设备。\n环境\n4 台\n能源\n4 台\n设施\n4 台\n照明\n4 台\n点位质量分布\n按点位数量统计，不是设备数量，单位：项。\n正常\n25 项\n较旧\n2 项\n缺失\n1 项\n无效\n0 项\n需留意的读数\n只列出质量不是“正常”的点位；质量是数据状态标签，不代表设备故障。\n需留意的读数\n设备名称\n点位\n质量\n原采样时间\n操作\n温湿度03\nd03\n温度\ntemperature\n缺失\n无采样时间\n查看设备\n温湿度04\nd04\n湿度\nhumidity\n较旧\n2026/10/20 08:00:00\n查看设备\n温湿度04\nd04\n温度\ntemperature\n较旧\n2026/10/20 08:00:00\n查看设备\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，仅本机教学模拟，不做设备控制）｜设备 16 台 · 空间 4 个 · 点位 28 个｜读取时间 2026/10/21 05:01:22（读取时间不是采样时间，原采样时间见下表）\n刷新读数",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530083043.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n设备列表来自本机后端 /api/devices（MySQL），空间名称来自 /api/spaces。本次读取时间 2026/10/21 05:00:49；这只是本页读取时间，不是设备采样时间。打开详情时点位读数从 /api/overview 读取，负责人从 /api/owners 读取；两者同样来自本机 MySQL。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（交接教学楼 3层）\n在线\n查看\nd02\n温湿度02\n环境\n201教室（教学楼 2层）\n在线\n查看\nd03\n温湿度03\n环境\n101实验室（实验楼 1层）\n未知\n查看\nd04\n温湿度04\n环境\n201实验室（实验楼 2层）\n离线\n查看\nd05\n电表01\n能源\n101教室（交接教学楼 3层）\n在线\n查看\nd06\n电表02\n能源\n201教室（教学楼 2层）\n在线\n查看\nd07\n电表03\n能源\n101实验室（实验楼 1层）\n在线\n查看\nd08\n电表04\n能源\n201实验室（实验楼 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（交接教学楼 3层）\n在线\n查看\nd10\n设施02\n设施\n201教室（教学楼 2层）\n在线\n查看\nd11\n设施03\n设施\n101实验室（实验楼 1层）\n在线\n查看\nd12",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530083043.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a3",
+      "run_id": "df528248af9d5",
+      "sequence": 36,
+      "method": "tool.click",
+      "target": "空间",
+      "source": "agent",
+      "started_at": 1792530083055.0,
+      "finished_at": 1792530083184.0,
+      "window_end": 1792530083424.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530083043.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备\n设备列表来自本机后端 /api/devices（MySQL），空间名称来自 /api/spaces。本次读取时间 2026/10/21 05:00:49；这只是本页读取时间，不是设备采样时间。打开详情时点位读数从 /api/overview 读取，负责人从 /api/owners 读取；两者同样来自本机 MySQL。\n搜索\n类型\n空间\n在线情况\n清空筛选\n重新读取设备\n设备列表\n编号\n设备名称\n类型\n空间\n在线情况\n操作\nd01\n温湿度01\n环境\n101教室（交接教学楼 3层）\n在线\n查看\nd02\n温湿度02\n环境\n201教室（教学楼 2层）\n在线\n查看\nd03\n温湿度03\n环境\n101实验室（实验楼 1层）\n未知\n查看\nd04\n温湿度04\n环境\n201实验室（实验楼 2层）\n离线\n查看\nd05\n电表01\n能源\n101教室（交接教学楼 3层）\n在线\n查看\nd06\n电表02\n能源\n201教室（教学楼 2层）\n在线\n查看\nd07\n电表03\n能源\n101实验室（实验楼 1层）\n在线\n查看\nd08\n电表04\n能源\n201实验室（实验楼 2层）\n在线\n查看\nd09\n设施01\n设施\n101教室（交接教学楼 3层）\n在线\n查看\nd10\n设施02\n设施\n201教室（教学楼 2层）\n在线\n查看\nd11\n设施03\n设施\n101实验室（实验楼 1层）\n在线\n查看\nd12",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530083424.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n空间\n101教室\n楼栋\n交接教学楼\n楼层\n3层\n设备 4 台\n查看设备\n201教室\n楼栋\n教学楼\n楼层\n2\n设备 4 台\n查看设备\n101实验室\n楼栋\n实验楼\n楼层\n1\n设备 4 台\n查看设备\n201实验室\n楼栋\n实验楼\n楼层\n2\n设备 4 台\n查看设备\n空间位置来自本机后端 /api/spaces（MySQL）。当前账号 viewer（VIEWER）只能查看；修改仅 ADMIN 可用，后端会拒绝其他角色（403）。",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530083424.0,
+      "request_ids": [
+        "df528248af9d5:n2",
+        "df528248af9d5:n3"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a4",
+      "run_id": "df528248af9d5",
+      "sequence": 47,
+      "method": "tool.click",
+      "target": "能源",
+      "source": "agent",
+      "started_at": 1792530083432.0,
+      "finished_at": 1792530083568.0,
+      "window_end": 1792530083860.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530083424.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n空间\n101教室\n楼栋\n交接教学楼\n楼层\n3层\n设备 4 台\n查看设备\n201教室\n楼栋\n教学楼\n楼层\n2\n设备 4 台\n查看设备\n101实验室\n楼栋\n实验楼\n楼层\n1\n设备 4 台\n查看设备\n201实验室\n楼栋\n实验楼\n楼层\n2\n设备 4 台\n查看设备\n空间位置来自本机后端 /api/spaces（MySQL）。当前账号 viewer（VIEWER）只能查看；修改仅 ADMIN 可用，后端会拒绝其他角色（403）。",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530083860.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 05:01:23（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（交接教学楼 3层）\n101教室（交接教学楼 3层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530083860.0,
+      "request_ids": [
+        "df528248af9d5:n4"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a5",
+      "run_id": "df528248af9d5",
+      "sequence": 57,
+      "method": "tool.click",
+      "target": "历史",
+      "source": "agent",
+      "started_at": 1792530083872.0,
+      "finished_at": 1792530084007.0,
+      "window_end": 1792530084270.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530083860.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n能源\n读数项\n功率 kW\n功率反映当前样本的用电强弱，本页没有累计用电量和电费。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview，需登录）；只列出类型为 energy 的设备，读数项只有功率 kW 与电压 V，不混入温度、湿度；本次读取时间 2026/10/21 05:01:23（读取时间不是采样时间，原采样时间见表格）；质量标签只表示数据状态，不代表设备故障。\n刷新读数\n101教室（交接教学楼 3层）\n101教室（交接教学楼 3层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表01\nd05\n0\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n201教室（教学楼 2层）\n201教室（教学楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表02\nd06\n1.6\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n101实验室（实验楼 1层）\n101实验室（实验楼 1层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表03\nd07\n1.8\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n201实验室（实验楼 2层）\n201实验室（实验楼 2层）的功率读数\n设备名称\n功率\n单位\n质量\n原采样时间\n操作\n电表04\nd08\n2\nkW\n正常\n2026/10/20 08:00:00\n查看设备\n查看当前指标历史\n比较历史\n勾选 1 至 4 台能源设备，用当前读数项比较历史样本；缺失处断开，0 保留。\nd05 电表01\nd06 电表02\nd07 电表03\nd08 电表04\n比较历史",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530084270.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n历史\n先选设备，再选该设备的点位；样本只按原始时间和原始数值显示，不补点、不计算。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview → history，需登录）｜本次读取时间 2026/10/21 05:01:23（读取时间不是采样时间，表中“原时间”为样本自带时间）\n设备\n点位\n请选择设备和点位，再查看历史样本\n范围",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530084270.0,
+      "request_ids": [
+        "df528248af9d5:n5"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a6",
+      "run_id": "df528248af9d5",
+      "sequence": 68,
+      "method": "tool.click",
+      "target": "原始报警",
+      "source": "agent",
+      "started_at": 1792530084278.0,
+      "finished_at": 1792530084417.0,
+      "window_end": 1792530084673.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530084270.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n历史\n先选设备，再选该设备的点位；样本只按原始时间和原始数值显示，不补点、不计算。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview → history，需登录）｜本次读取时间 2026/10/21 05:01:23（读取时间不是采样时间，表中“原时间”为样本自带时间）\n设备\n点位\n请选择设备和点位，再查看历史样本\n范围",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530084673.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n原始报警\n只读展示原始报警：保留原始 status 与 level，只附中文解释；本页不能分派、恢复、核实或关闭。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview → alarms，需登录）｜本次读取时间 2026/10/21 05:01:24；表中“原始时间”为报警自带时间\n搜索\n原始报警列表\n报警编号\n设备\n消息\n状态\n级别\n原始时间\n来源\n操作\na01\n温湿度01\nd01\n教学样本：温度提醒；不表示真实校园故障\nSAMPLE_ACTIVE\n教学样本·活动\nNOTICE\n提示\n2026/10/20 08:00:00\n教学模拟\n查看设备\n共 1 条\n上一页\n第 1 / 1 页\n下一页",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530084673.0,
+      "request_ids": [
+        "df528248af9d5:n6"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a7",
+      "run_id": "df528248af9d5",
+      "sequence": 85,
+      "method": "tool.click",
+      "target": "设备责任",
+      "source": "agent",
+      "started_at": 1792530084683.0,
+      "finished_at": 1792530084817.0,
+      "window_end": 1792530085116.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530084673.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n原始报警\n只读展示原始报警：保留原始 status 与 level，只附中文解释；本页不能分派、恢复、核实或关闭。\n数据来源：本机后端保存的教学模拟数据（GET /api/overview → alarms，需登录）｜本次读取时间 2026/10/21 05:01:24；表中“原始时间”为报警自带时间\n搜索\n原始报警列表\n报警编号\n设备\n消息\n状态\n级别\n原始时间\n来源\n操作\na01\n温湿度01\nd01\n教学样本：温度提醒；不表示真实校园故障\nSAMPLE_ACTIVE\n教学样本·活动\nNOTICE\n提示\n2026/10/20 08:00:00\n教学模拟\n查看设备\n共 1 条\n上一页\n第 1 / 1 页\n下一页",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530085116.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530085116.0,
+      "request_ids": [
+        "df528248af9d5:n7",
+        "df528248af9d5:n8"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a8",
+      "run_id": "df528248af9d5",
+      "sequence": 103,
+      "method": "tool.click",
+      "target": "演练事件",
+      "source": "agent",
+      "started_at": 1792530085128.0,
+      "finished_at": 1792530085270.0,
+      "window_end": 1792530085545.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530085116.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530085545.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n演练事件\n教学模拟演练：本页只登记教学练习，不会操作实际设备，不发送外部通知。\n当前登录账号：viewer（VIEWER），创建演练仅管理员可用\n重新读取事件\n演练事件列表\n编号\n设备\n内容\n状态\n处理人\n版本\n操作\ncase-a4b66d456baa\nd01 温湿度01\n新目录接手温度巡查演练\n已关闭\nCLOSED\nmanager\n6\n查看\n共 1 条演练事件，最新创建的在最前",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792530085545.0,
+      "request_ids": [
+        "df528248af9d5:n9",
+        "df528248af9d5:n10"
+      ],
+      "console_ids": [],
+      "truncated": false
+    },
+    {
+      "id": "df528248af9d5:a9",
+      "run_id": "df528248af9d5",
+      "sequence": 129,
+      "method": "tool.click",
+      "target": "管理",
+      "source": "agent",
+      "started_at": 1792530085555.0,
+      "finished_at": 1792530085694.0,
+      "window_end": 1792530087194.0,
+      "state": "completed",
+      "before": {
+        "at": 1792530085545.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n演练事件\n教学模拟演练：本页只登记教学练习，不会操作实际设备，不发送外部通知。\n当前登录账号：viewer（VIEWER），创建演练仅管理员可用\n重新读取事件\n演练事件列表\n编号\n设备\n内容\n状态\n处理人\n版本\n操作\ncase-a4b66d456baa\nd01 温湿度01\n新目录接手温度巡查演练\n已关闭\nCLOSED\nmanager\n6\n查看\n共 1 条演练事件，最新创建的在最前",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792530086396.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+            "name": "space-building-s1",
+            "label": "楼栋",
+            "value": "交接教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+            "name": "space-floor-s1",
+            "label": "楼层",
+            "value": "3层",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+            "name": "space-building-s2",
+            "label": "楼栋",
+            "value": "教学楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+            "name": "space-floor-s2",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+            "name": "space-building-s3",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+            "name": "space-floor-s3",
+            "label": "楼层",
+            "value": "1",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+            "name": "space-building-s4",
+            "label": "楼栋",
+            "value": "实验楼",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+            "name": "space-floor-s4",
+            "label": "楼层",
+            "value": "2",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observations": [
+        {
+          "at": 1792530086396.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理",
+          "truncated": true,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "viewer",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-building-s1",
+              "name": "space-building-s1",
+              "label": "楼栋",
+              "value": "交接教学楼",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s1|id:space-floor-s1",
+              "name": "space-floor-s1",
+              "label": "楼层",
+              "value": "3层",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-building-s2",
+              "name": "space-building-s2",
+              "label": "楼栋",
+              "value": "教学楼",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s2|id:space-floor-s2",
+              "name": "space-floor-s2",
+              "label": "楼层",
+              "value": "2",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-building-s3",
+              "name": "space-building-s3",
+              "label": "楼栋",
+              "value": "实验楼",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s3|id:space-floor-s3",
+              "name": "space-floor-s3",
+              "label": "楼层",
+              "value": "1",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-building-s4",
+              "name": "space-building-s4",
+              "label": "楼栋",
+              "value": "实验楼",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|space-editor-s4|id:space-floor-s4",
+              "name": "space-floor-s4",
+              "label": "楼层",
+              "value": "2",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+              "value": "d01",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "reload"
+        }
+      ],
+      "observation_end": 1792530100694.0,
+      "request_ids": [
+        "df528248af9d5:n11"
+      ],
+      "console_ids": [
+        "df528248af9d5:c1",
+        "df528248af9d5:c2"
+      ],
+      "truncated": false
+    }
+  ],
+  "console": [
+    {
+      "id": "df528248af9d5:c1",
+      "at": 1792530085603.0,
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "count": 1,
+      "last_at": 1792530085603.0,
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/api/audit"
+    },
+    {
+      "id": "df528248af9d5:c2",
+      "at": 1792530085603.0,
+      "level": "error",
+      "text": "审计读取失败 AdminReadApiError: 已登录但无权执行该操作\n    at adminReadError (http://127.0.0.1:5188/data-service.js:1663:17)\n    at requestAdminReadApi (http://127.0.0.1:5188/data-service.js:1780:13)\n    at async getAuditFromServer (http://127.0.0.1:5188/data-service.js:1814:16)\n    at async loadAdminAudit (http://127.0.0.1:5188/app.js:2372:21)",
+      "count": 1,
+      "last_at": 1792530085603.0,
+      "stack": "loadAdminAudit http://127.0.0.1:5188/app.js:2407:15",
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/app.js"
+    }
+  ],
+  "pages": [
+    {
+      "at": 1792530082071.0,
+      "state": "available",
+      "url": "http://127.0.0.1:5188/",
+      "title": "晨光校园值班台",
+      "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+      "truncated": false,
+      "fields": [
+        {
+          "key": "http://127.0.0.1:5188/||id:data-mode",
+          "name": "data-mode",
+          "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+          "value": "backend",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:demo-identity",
+          "name": "demo-identity",
+          "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:username",
+          "name": "username",
+          "label": "用户名",
+          "value": "viewer",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:password",
+          "name": "password",
+          "label": "密码",
+          "state": "redacted"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+          "name": "case-device",
+          "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+          "value": "d01",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+          "name": "case-message",
+          "label": "这次练习要处理什么",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-manager",
+          "name": "case-manager",
+          "label": "处理人 managermanager（处理人）",
+          "value": "manager",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-assign-note",
+          "name": "case-assign-note",
+          "label": "分派说明",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-note",
+          "name": "case-note",
+          "label": "处置记录",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-close-note",
+          "name": "case-close-note",
+          "label": "关闭结论",
+          "value": "",
+          "state": "available"
+        }
+      ],
+      "fields_partial": true
+    }
+  ],
+  "rules": [],
+  "replays": [],
+  "performance": [
+    {
+      "id": "df528248af9d5:p1",
+      "document_key": "1792529921513.1:0",
+      "sequence": 116,
+      "time_origin": 1792529921513.1,
+      "started_at": 1792530082071.2002,
+      "observed_at": 1792530088711.0,
+      "url": "http://127.0.0.1:5188/",
+      "navigation": "reload",
+      "state": "completed",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1792530082071.2002,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.04221249389648437,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 36.29999995231629,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 52.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 60.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 48.39999997615814,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 3.0999999046325684,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown"
+      ]
+    }
+  ]
+}

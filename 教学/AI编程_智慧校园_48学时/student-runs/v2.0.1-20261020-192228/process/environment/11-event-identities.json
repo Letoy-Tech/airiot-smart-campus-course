@@ -1,0 +1,44 @@
+{
+  "auto": {
+    "id": "case-325d4eefe557",
+    "deviceId": "d01",
+    "message": "本课温度巡查演练",
+    "state": "ASSIGNED",
+    "assignee": "manager",
+    "sourceState": "ACTIVE",
+    "verified": false,
+    "note": "",
+    "conclusion": "",
+    "version": 1,
+    "timeline": [
+      {
+        "time": 1792523318717,
+        "action": "create",
+        "actor": "admin",
+        "note": "创建教学模拟演练事件，按已登记责任人分派给 manager"
+      }
+    ]
+  },
+  "manual": {
+    "id": "case-34586bbc372f",
+    "deviceId": "d02",
+    "message": "本课人工分派演练",
+    "state": "NEW",
+    "assignee": null,
+    "sourceState": "ACTIVE",
+    "verified": false,
+    "note": "",
+    "conclusion": "",
+    "version": 1,
+    "timeline": [
+      {
+        "time": 1792523328343,
+        "action": "create",
+        "actor": "admin",
+        "note": "创建教学模拟演练事件，等待管理员分派"
+      }
+    ]
+  },
+  "createdBy": "actual-admin-browser",
+  "evidence": "commands/11-01-create-cases-browser-debug.json"
+}

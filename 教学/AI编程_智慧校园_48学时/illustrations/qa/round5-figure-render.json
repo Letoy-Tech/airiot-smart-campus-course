@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18T18:48:47.696Z",
+  "purpose": "教学配图渲染；不证明业务代码或实验通过",
+  "browser": "151.0.7922.34",
+  "dependencies": {
+    "playwright": "1.62.1",
+    "mermaid": "11.17.2"
+  },
+  "scale": 2,
+  "figures": [
+    {
+      "id": "图 12-03",
+      "title": "代码回退与数据恢复的不同条件",
+      "alt": "变更失败后先保存证据并判断是否改变数据结构或数据；代码问题在兼容性确认后恢复旧代码并回归，数据恢复则需要受审查的备份与隔离恢复流程，不能直接清库覆盖。",
+      "caption": "图 12-03　代码回退与数据恢复的不同条件。教学示意，非运行证据。",
+      "source": "figure-sources/ch12-03-code-data-recovery.mmd",
+      "sourceSha256": "47e61c8a5f915d097c921dbc83835e19ab5963f3c576e02d8495b5dfe97b8800",
+      "renderSource": "figure-sources/layouts/ch12-03-code-data-recovery.svg",
+      "renderSourceSha256": "cc938d0095d02b0f30aa5d18ab42636cc2a28b840326702c818d4639d687f90b",
+      "metadata": "figure-sources/ch12-03-code-data-recovery.figure.json",
+      "svg": "illustrations/ch12-03-code-data-recovery.svg",
+      "png": "illustrations/ch12-03-code-data-recovery.png",
+      "svgSha256": "14550a85839515db9bc666cfc0746352a4ce3b0831f01cbdd7ec2a00b3edd721",
+      "pngSha256": "e36bd50f52e420bb2aaebe4aec03415881771b951927478a1ef44f850c41772f",
+      "width": 1280,
+      "height": 1160,
+      "rasterWidth": 2560,
+      "rasterHeight": 2320,
+      "textCount": 24,
+      "minimumEffectiveFontSize": 17,
+      "smallText": [],
+      "outOfCanvasText": [],
+      "visualReview": "PENDING_HUMAN_OR_IMAGE_VIEW",
+      "labVerified": false
+    }
+  ]
+}

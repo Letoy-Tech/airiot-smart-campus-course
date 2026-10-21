@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "generatedAt": "2026-10-18T15:28:30.725186+00:00",
+  "chapters": 12,
+  "classHours": 48,
+  "figures": 40,
+  "embeddedResources": 13,
+  "localLinks": 658,
+  "originalProjectLinks": 31,
+  "readerSourceHashesMatch": true,
+  "v03ArchiveUnchanged": true,
+  "v03StandaloneUnchanged": true,
+  "credentialScan": "No current generated local password in candidates; private paths excluded",
+  "labVerified": false
+}

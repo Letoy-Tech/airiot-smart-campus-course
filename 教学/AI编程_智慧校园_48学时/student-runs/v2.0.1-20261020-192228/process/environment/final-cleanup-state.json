@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-21T05:32:04.173774",
+  "steps": 64,
+  "courseAndReaderPorts": {
+    "5188": "not listening",
+    "8098": "not listening",
+    "23501": "not listening",
+    "23502": "not listening",
+    "5198": "not listening"
+  },
+  "courseContainers": [
+    "campus-v2-redis exited",
+    "campus-v2-mysql exited",
+    "campus-v2-handoff-redis-1 exited",
+    "campus-v2-handoff-mysql-1 exited"
+  ],
+  "ownedBrowserSessionsClosed": true,
+  "sharedDockerDesktopAndBrowserDaemonLeftRunning": true
+}

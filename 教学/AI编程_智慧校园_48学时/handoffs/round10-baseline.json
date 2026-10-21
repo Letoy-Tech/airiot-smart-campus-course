@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-19T15:04:29.000018+00:00",
+  "scope": "Read-only audit before progress-based rewrite; original V1.1.1 package preserved",
+  "files": [
+    {
+      "file": "walkthroughs/00-第一次用AI做项目.md",
+      "characters": 8285,
+      "proseCharacters": 7706,
+      "sha256": "23d9245a26184a05b47a6149fb4b9ade62540edafc1c7c66cbefe70f67976170"
+    },
+    {
+      "file": "walkthroughs/01-从想法到项目任务书.md",
+      "characters": 6962,
+      "proseCharacters": 2550,
+      "sha256": "8cfec9dfbb7d78a814583ab4712343ec78a14cf6c88f8d567ed998cd086a82e8"
+    },
+    {
+      "file": "walkthroughs/02-从项目任务书到需求规格.md",
+      "characters": 11061,
+      "proseCharacters": 3851,
+      "sha256": "f4b4ce5782252efc96b2cd7b1cf9cd11051a8ba9fda84288e32fbef0d7fa2724"
+    },
+    {
+      "file": "walkthroughs/03-从需求规格到系统设计.md",
+      "characters": 17827,
+      "proseCharacters": 4712,
+      "sha256": "b3882c5568f7b4ffc94e198e6fb5d166ba85f2ad2ab9cf4e164fa6e44c075e5e"
+    },
+    {
+      "file": "walkthroughs/04-安装工具与第一次改代码.md",
+      "characters": 13833,
+      "proseCharacters": 9187,
+      "sha256": "e4f3c70aa87721afd913a17d790c21142622975217a50b5e24780369f27940fc"
+    },
+    {
+      "file": "walkthroughs/05-后端空间与设备接口.md",
+      "characters": 10459,
+      "proseCharacters": 6217,
+      "sha256": "d1d1476f3da6ca2ff66afb1aa8e063eefead161f2d5a9c11bb87525b42dfcf6d"
+    },
+    {
+      "file": "walkthroughs/06-设备台账与自主UI.md",
+      "characters": 8121,
+      "proseCharacters": 4820,
+      "sha256": "4151f57b29a062d244c95bca1402a2c5d0e59d1d8e30c4ce64e22558a5ec26b5"
+    },
+    {
+      "file": "walkthroughs/07-监测历史与数据质量.md",
+      "characters": 9565,
+      "proseCharacters": 6139,
+      "sha256": "635b41f903b0853797a0a4c5c052ac552206e13e26e8c45d92ba273f36274e01"
+    },
+    {
+      "file": "walkthroughs/08-登录权限与失败排查.md",
+      "characters": 7174,
+      "proseCharacters": 4589,
+      "sha256": "b1da9222201207478921fef9da859674bf52745cdb88ee34c8dfd8ad1339f2a0"
+    },
+    {
+      "file": "walkthroughs/09-演练事件与关闭规则.md",
+      "characters": 9161,
+      "proseCharacters": 5098,
+      "sha256": "3d53ca83efcfb6f817a8a90d667c771e3714914ddfc5c8a916c7f0e748ec9b16"
+    },
+    {
+      "file": "walkthroughs/10-设备责任与时间线.md",
+      "characters": 8835,
+      "proseCharacters": 5409,
+      "sha256": "2e9d987e9d38befc1acfad6e68201dae460a292ea69ee79c018ae46317b1bf16"
+    },
+    {
+      "file": "walkthroughs/11-调试测试与证据.md",
+      "characters": 13352,
+      "proseCharacters": 8987,
+      "sha256": "d3128ce84db8655ecc0303ad407e350bf6e9b4a89f2e720331a378c49e1f4b69"
+    },
+    {
+      "file": "walkthroughs/12-构建交付与接力.md",
+      "characters": 16955,
+      "proseCharacters": 10681,
+      "sha256": "28cb060eb6d64d199c97870218b0f0a707025f924aa2f7879a5e29a3b83e0cd9"
+    }
+  ]
+}

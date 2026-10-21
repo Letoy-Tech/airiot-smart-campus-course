@@ -1,0 +1,135 @@
+PASS: 9 fixture validation groups; catalog 4 spaces / 16 devices / 28 unique points.
+PASS: first-chain 1 / 2 / 4; 15 single-variable quality cases + 3 combined cases; 4 history samples; 14 damaged-catalog rejection checks.
+SCOPE: standalone files and scenario specifications only. No HTTP/provider/database/browser checks; lab_verified=false.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.campus.course:campus-ai-course >-----------------
+[INFO] Building Campus AI Course First Chain 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ campus-ai-course ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ campus-ai-course ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 11 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.2:test (default-test) @ campus-ai-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.campus.course.SourceSelectionTest
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.459 s -- in edu.campus.course.SourceSelectionTest
+[INFO] Running edu.campus.course.HistoryFixtureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s -- in edu.campus.course.HistoryFixtureTest
+[INFO] Running edu.campus.course.QualityPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in edu.campus.course.QualityPolicyTest
+[INFO] Running edu.campus.course.CatalogReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in edu.campus.course.CatalogReaderTest
+[INFO] Running edu.campus.course.FirstChainTest
+03:00:21.868 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.campus.course.FirstChainTest]: FirstChainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:00:21.926 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.FirstChainTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T03:00:22.079+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Starting FirstChainTest using Java 17.0.12 with PID 18543 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend)
+2026-10-20T03:00:22.080+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : The following 1 profile is active: "first-chain"
+2026-10-20T03:00:22.677+08:00  INFO 18543 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T03:00:22.904+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T03:00:22.904+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T03:00:22.904+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-20T03:00:22.915+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Started FirstChainTest in 0.952 seconds (process running for 1.92)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.006 s -- in edu.campus.course.FirstChainTest
+[INFO] Running edu.campus.course.ReadFixtureValidationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in edu.campus.course.ReadFixtureValidationTest
+[INFO] Running edu.campus.course.CloseRulesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in edu.campus.course.CloseRulesTest
+[INFO] Running edu.campus.course.LocalAccountDirectoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 s -- in edu.campus.course.LocalAccountDirectoryTest
+[INFO] Running edu.campus.course.ReadOnlyModelsTest
+2026-10-20T03:00:24.211+08:00  INFO 18543 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.ReadOnlyModelsTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-20T03:00:24.223+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Starting ReadOnlyModelsTest using Java 17.0.12 with PID 18543 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend)
+2026-10-20T03:00:24.223+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : The following 1 profile is active: "teacher-db"
+2026-10-20T03:00:24.360+08:00  INFO 18543 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-20T03:00:24.395+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-20T03:00:24.395+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-20T03:00:24.395+08:00  INFO 18543 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-20T03:00:24.398+08:00  INFO 18543 --- [campus-course-backend] [           main] edu.campus.course.ReadOnlyModelsTest     : Started ReadOnlyModelsTest in 0.185 seconds (process running for 3.403)
+2026-10-20T03:00:24.451+08:00  WARN 18543 --- [campus-course-backend] [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.283 s -- in edu.campus.course.ReadOnlyModelsTest
+[INFO] Running edu.campus.course.TeacherDbTest
+[WARNING] Tests run: 11, Failures: 0, Errors: 0, Skipped: 11, Time elapsed: 0 s -- in edu.campus.course.TeacherDbTest
+[INFO] Running edu.campus.course.SnapshotConsistencyTest
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0 s -- in edu.campus.course.SnapshotConsistencyTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 50, Failures: 0, Errors: 0, Skipped: 16
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.254 s
+[INFO] Finished at: 2026-10-20T03:00:24+08:00
+[INFO] ------------------------------------------------------------------------
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/frontend[39m
+
+ [32m✓[39m src/tests/read-models.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/tests/read-api.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/tests/course-domain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/tests/http.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/tests/request-timeout.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/tests/journey-start.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/tests/session-races.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/tests/journey-navigation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/tests/request-scope.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/tests/comparison.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/tests/first-device-view.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/tests/catalog-navigation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m src/tests/read-pages.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/tests/case-trigger-race.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m src/tests/workflow-views.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 105[2mms[22m[39m
+ [32m✓[39m src/tests/monitoring-views.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m16 passed[39m[22m[90m (16)[39m
+[2m      Tests [22m [1m[32m74 passed[39m[22m[90m (74)[39m
+[2m   Start at [22m 03:00:26
+[2m   Duration [22m 1.20s[2m (transform 1.65s, setup 0ms, import 4.03s, tests 501ms, environment 6.94s)[22m
+

@@ -1,0 +1,2 @@
+请列出历史查询需要的deviceId、tagId、from、to；说明null和0画图的差别。再写一句话区分原始报警与本地演练事件，不替换原始status/level。
+按本项目当前契约简洁回答即可（不超过12行），只做Ask澄清，不改文件，不读取.private、lesson-bundles/*/files、journey-backups或教师答案。

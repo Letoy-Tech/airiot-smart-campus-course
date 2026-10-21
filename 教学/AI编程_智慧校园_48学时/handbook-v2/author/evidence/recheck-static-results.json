@@ -1,0 +1,147 @@
+{
+  "version": "2.0.1",
+  "lessons": [
+    {
+      "lesson": "01-从空白页面做出概览.md",
+      "steps": 5,
+      "minutes": [
+        40,
+        35,
+        25,
+        45,
+        35
+      ]
+    },
+    {
+      "lesson": "02-把设备放进台账.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        35,
+        40,
+        45,
+        30
+      ]
+    },
+    {
+      "lesson": "03-给设备安排位置和负责人.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        35,
+        35,
+        45,
+        35
+      ]
+    },
+    {
+      "lesson": "04-看懂读数再做能源页.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        40,
+        40,
+        35,
+        35
+      ]
+    },
+    {
+      "lesson": "05-把历史和原始报警接到页面.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        45,
+        30,
+        40,
+        35
+      ]
+    },
+    {
+      "lesson": "06-走完演练事件并串起整个前端.md",
+      "steps": 6,
+      "minutes": [
+        20,
+        25,
+        40,
+        45,
+        20,
+        30
+      ]
+    },
+    {
+      "lesson": "07-看着页面做第一个后端.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        30,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "lesson": "08-把设备保存到MySQL.md",
+      "steps": 6,
+      "minutes": [
+        25,
+        30,
+        35,
+        30,
+        40,
+        20
+      ]
+    },
+    {
+      "lesson": "09-用Redis记住短时登录.md",
+      "steps": 6,
+      "minutes": [
+        25,
+        30,
+        40,
+        35,
+        30,
+        20
+      ]
+    },
+    {
+      "lesson": "10-逐页接回真实后端.md",
+      "steps": 5,
+      "minutes": [
+        35,
+        40,
+        35,
+        35,
+        35
+      ]
+    },
+    {
+      "lesson": "11-让一件演练有始有终.md",
+      "steps": 6,
+      "minutes": [
+        30,
+        35,
+        30,
+        30,
+        30,
+        25
+      ]
+    },
+    {
+      "lesson": "12-把作品交到新目录.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        35,
+        50,
+        40,
+        25
+      ]
+    }
+  ],
+  "steps": 64,
+  "starter_empty": true,
+  "fixtures_and_contract_bodies_identical": true,
+  "reader_static_checked": true,
+  "reader_visual_review": false,
+  "reader_unique_ids": 99
+}

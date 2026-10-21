@@ -1,0 +1,14 @@
+{
+  "observedAt": "2026-10-19T17:33:14.850930+00:00",
+  "userCompletedBothLogins": true,
+  "userConfirmedCodeBuddyLoginTerms": true,
+  "userAllowedDeepSeekAlternative": true,
+  "successfulModelCallsObserved": true,
+  "bailianInitialZeroRowObservation": "Loading state, not reliable evidence of no keys. A later complete browser view showed existing keys for other business uses. No full key was opened or reused.",
+  "selectedRoute": "CodeBuddy built-in Deepseek-V4.1-Flash; not Alibaba Qwen",
+  "studentStage": 2,
+  "stage01": "BROWSER_CHECKED_AND_RECORDED",
+  "stage02": "REPAIRING_REAL_REFRESH_FAILURE_UI",
+  "newCloudCredentials": false,
+  "purchases": false
+}

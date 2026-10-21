@@ -1,0 +1,672 @@
+{
+  "version": 1,
+  "saved_at": 1792522002004.0,
+  "run": {
+    "id": "d1667396ba307",
+    "session_id": "qvuv",
+    "tab_id": 1075951458,
+    "name": "student-v201-10-05-stale-tab-conflict",
+    "url": "http://127.0.0.1:5188/",
+    "started_at": 1792521941595.0,
+    "stopped_at": 1792522001994.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 2,
+    "operations": 1,
+    "errors": 1,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 28,
+    "active_rules": 0,
+    "saved_at": 1792522001996.0,
+    "storage": {
+      "bytes": 4475,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 2
+    },
+    "environment": {
+      "extension_version": "0.3.3",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [
+    {
+      "id": "d1667396ba307:n1",
+      "run_id": "d1667396ba307",
+      "sequence": 26,
+      "started_at": 1792521941681.0,
+      "finished_at": 1792521941692.0,
+      "method": "PUT",
+      "url": "http://127.0.0.1:5188/api/owners/d01",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "A9B2640B2F88B75C1F6AFA82E7AAB67F",
+      "loader_id": "6879FCA85A947ECC80475B97F84EC0A8",
+      "status": 409,
+      "mime_type": "application/json",
+      "duration_ms": 10.48,
+      "transfer_bytes": 284.0,
+      "decoded_bytes": 103.0,
+      "from_service_worker": false,
+      "initiator": "requestOwnersApi http://127.0.0.1:5188/data-service.js:1547",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "content-length": "94",
+        "content-type": "application/json",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "origin": "http://127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 18:45:41 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": 0.558,
+        "connectStart": 0.31,
+        "dnsEnd": 0.31,
+        "dnsStart": 0.304,
+        "proxyEnd": 0.25,
+        "proxyStart": 0.248,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 9.773,
+        "receiveHeadersStart": 9.754,
+        "requestTime": 821625.392867,
+        "sendEnd": 0.69,
+        "sendStart": 0.636,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "available",
+        "text": "{\"username\":\"manager\",\"note\":\"第二标签旧版本说明，不应覆盖\",\"expectedVersion\":1}",
+        "chars": 66,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":409,\"message\":\"负责人记录已被其他人更新，请重新读取后再决定\",\"data\":null}",
+        "chars": 59,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "d1667396ba307:n2",
+      "run_id": "d1667396ba307",
+      "sequence": 27,
+      "started_at": 1792521941692.0,
+      "finished_at": 1792521941697.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/owners",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "A9B2640B2F88B75C1F6AFA82E7AAB67F",
+      "loader_id": "6879FCA85A947ECC80475B97F84EC0A8",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 4.15,
+      "transfer_bytes": 322.0,
+      "decoded_bytes": 147.0,
+      "from_service_worker": false,
+      "initiator": "requestOwnersApi http://127.0.0.1:5188/data-service.js:1547",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Tue, 20 Oct 2026 18:45:41 GMT",
+        "keep-alive": "timeout=60",
+        "transfer-encoding": "chunked"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": 0.196,
+        "proxyStart": 0.194,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 3.4,
+        "receiveHeadersStart": 3.386,
+        "requestTime": 821625.403862,
+        "sendEnd": 0.279,
+        "sendStart": 0.233,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":0,\"message\":\"ok\",\"data\":[{\"deviceId\":\"d01\",\"username\":\"manager\",\"note\":\"负责本课演练巡查（第一标签已确认）\",\"version\":2}]}",
+        "chars": 113,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "d1667396ba307:a1",
+      "run_id": "d1667396ba307",
+      "sequence": 25,
+      "method": "tool.click",
+      "target": "保存",
+      "source": "agent",
+      "started_at": 1792521941649.0,
+      "finished_at": 1792521941785.0,
+      "window_end": 1792521943285.0,
+      "state": "completed",
+      "before": {
+        "at": 1792521941638.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备责任\n当前账号 admin（ADMIN）可以登记设备责任。\n设备责任列表\n编号\n设备名称\n当前负责人\n备注\n操作\nd01\n温湿度01\nmanager\n版本 1\n负责本课演练巡查\n登记\nd02\n温湿度02\n尚未登记\n—\n登记\nd03\n温湿度03\n尚未登记\n—\n登记\nd04\n温湿度04\n尚未登记\n—\n登记\nd05\n电表01\n尚未登记\n—\n登记\nd06\n电表02\n尚未登记\n—\n登记\nd07\n电表03\n尚未登记\n—\n登记\nd08\n电表04\n尚未登记\n—\n登记\nd09\n设施01\n尚未登记\n—\n登记\nd10\n设施02\n尚未登记\n—\n登记\nd11\n设施03\n尚未登记\n—\n登记\nd12\n设施04\n尚未登记\n—\n登记\nd13\n灯光01\n尚未登记\n—\n登记\nd14\n灯光02\n尚未登记\n—\n登记\nd15\n灯光03\n尚未登记",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "navigate"
+      },
+      "after": {
+        "at": 1792521942490.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备责任\n当前账号 admin（ADMIN）可以登记设备责任。\n设备责任列表\n编号\n设备名称\n当前负责人\n备注\n操作\nd01\n温湿度01\nmanager\n版本 2\n负责本课演练巡查（第一标签已确认）\n登记\nd02\n温湿度02\n尚未登记\n—\n登记\nd03\n温湿度03\n尚未登记\n—\n登记\nd04\n温湿度04\n尚未登记\n—\n登记\nd05\n电表01\n尚未登记\n—\n登记\nd06\n电表02\n尚未登记\n—\n登记\nd07\n电表03\n尚未登记\n—\n登记\nd08\n电表04\n尚未登记\n—\n登记\nd09\n设施01\n尚未登记\n—\n登记\nd10\n设施02\n尚未登记\n—\n登记\nd11\n设施03\n尚未登记\n—\n登记\nd12\n设施04\n尚未登记\n—\n登记\nd13\n灯光01\n尚未登记\n—\n登记\nd14\n灯光02\n尚未登记\n—\n登记\nd15\n灯光03\n尚未登记",
+        "truncated": true,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "navigate"
+      },
+      "observations": [
+        {
+          "at": 1792521942490.0,
+          "state": "available",
+          "url": "http://127.0.0.1:5188/",
+          "title": "晨光校园值班台",
+          "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备责任\n当前账号 admin（ADMIN）可以登记设备责任。\n设备责任列表\n编号\n设备名称\n当前负责人\n备注\n操作\nd01\n温湿度01\nmanager\n版本 2\n负责本课演练巡查（第一标签已确认）\n登记\nd02\n温湿度02\n尚未登记\n—\n登记\nd03\n温湿度03\n尚未登记\n—\n登记\nd04\n温湿度04\n尚未登记\n—\n登记\nd05\n电表01\n尚未登记\n—\n登记\nd06\n电表02\n尚未登记\n—\n登记\nd07\n电表03\n尚未登记\n—\n登记\nd08\n电表04\n尚未登记\n—\n登记\nd09\n设施01\n尚未登记\n—\n登记\nd10\n设施02\n尚未登记\n—\n登记\nd11\n设施03\n尚未登记\n—\n登记\nd12\n设施04\n尚未登记\n—\n登记\nd13\n灯光01\n尚未登记\n—\n登记\nd14\n灯光02\n尚未登记\n—\n登记\nd15\n灯光03\n尚未登记",
+          "truncated": true,
+          "fields": [
+            {
+              "key": "http://127.0.0.1:5188/||id:data-mode",
+              "name": "data-mode",
+              "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+              "value": "backend",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:demo-identity",
+              "name": "demo-identity",
+              "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:username",
+              "name": "username",
+              "label": "用户名",
+              "value": "admin",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|login-form|name:password",
+              "name": "password",
+              "label": "密码",
+              "state": "redacted"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+              "name": "case-device",
+              "label": "设备",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+              "name": "case-message",
+              "label": "这次练习要处理什么",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-manager",
+              "name": "case-manager",
+              "label": "处理人 managermanager（处理人）",
+              "value": "manager",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-assign-note",
+              "name": "case-assign-note",
+              "label": "分派说明",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-note",
+              "name": "case-note",
+              "label": "处置记录",
+              "value": "",
+              "state": "available"
+            },
+            {
+              "key": "http://127.0.0.1:5188/||id:case-close-note",
+              "name": "case-close-note",
+              "label": "关闭结论",
+              "value": "",
+              "state": "available"
+            }
+          ],
+          "fields_partial": true,
+          "navigation": "navigate"
+        }
+      ],
+      "observation_end": 1792521956785.0,
+      "request_ids": [
+        "d1667396ba307:n1",
+        "d1667396ba307:n2"
+      ],
+      "console_ids": [
+        "d1667396ba307:c1"
+      ],
+      "truncated": false
+    }
+  ],
+  "console": [
+    {
+      "id": "d1667396ba307:c1",
+      "at": 1792521941691.0,
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 409 (Conflict)",
+      "count": 1,
+      "last_at": 1792521941691.0,
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/api/owners/d01"
+    }
+  ],
+  "pages": [
+    {
+      "at": 1792521941618.0,
+      "state": "available",
+      "url": "http://127.0.0.1:5188/",
+      "title": "晨光校园值班台",
+      "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：admin（ADMIN）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n设备责任\n当前账号 admin（ADMIN）可以登记设备责任。\n设备责任列表\n编号\n设备名称\n当前负责人\n备注\n操作\nd01\n温湿度01\nmanager\n版本 1\n负责本课演练巡查\n登记\nd02\n温湿度02\n尚未登记\n—\n登记\nd03\n温湿度03\n尚未登记\n—\n登记\nd04\n温湿度04\n尚未登记\n—\n登记\nd05\n电表01\n尚未登记\n—\n登记\nd06\n电表02\n尚未登记\n—\n登记\nd07\n电表03\n尚未登记\n—\n登记\nd08\n电表04\n尚未登记\n—\n登记\nd09\n设施01\n尚未登记\n—\n登记\nd10\n设施02\n尚未登记\n—\n登记\nd11\n设施03\n尚未登记\n—\n登记\nd12\n设施04\n尚未登记\n—\n登记\nd13\n灯光01\n尚未登记\n—\n登记\nd14\n灯光02\n尚未登记\n—\n登记\nd15\n灯光03\n尚未登记",
+      "truncated": true,
+      "fields": [
+        {
+          "key": "http://127.0.0.1:5188/||id:data-mode",
+          "name": "data-mode",
+          "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+          "value": "backend",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:demo-identity",
+          "name": "demo-identity",
+          "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:username",
+          "name": "username",
+          "label": "用户名",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:password",
+          "name": "password",
+          "label": "密码",
+          "state": "redacted"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+          "name": "case-device",
+          "label": "设备",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+          "name": "case-message",
+          "label": "这次练习要处理什么",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-manager",
+          "name": "case-manager",
+          "label": "处理人 managermanager（处理人）",
+          "value": "manager",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-assign-note",
+          "name": "case-assign-note",
+          "label": "分派说明",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-note",
+          "name": "case-note",
+          "label": "处置记录",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-close-note",
+          "name": "case-close-note",
+          "label": "关闭结论",
+          "value": "",
+          "state": "available"
+        }
+      ],
+      "fields_partial": true
+    }
+  ],
+  "rules": [],
+  "replays": [],
+  "performance": [
+    {
+      "id": "d1667396ba307:p1",
+      "document_key": "1792521865900.6:0",
+      "sequence": 24,
+      "time_origin": 1792521865900.6,
+      "started_at": 1792521941617.7002,
+      "observed_at": 1792522001994.0,
+      "url": "http://127.0.0.1:5188/",
+      "navigation": "navigate",
+      "state": "completed",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1792521941617.7002,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 55.800000071525574,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 68.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 84.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 117.89999997615814,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 3.0,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown"
+      ]
+    }
+  ]
+}

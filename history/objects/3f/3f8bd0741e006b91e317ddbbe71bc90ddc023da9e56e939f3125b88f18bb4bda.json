@@ -1,0 +1,11 @@
+{
+  "readVersion": 2,
+  "winnerVersion": 3,
+  "inputRetained": true,
+  "staleInput": "第二窗口基于旧v2另行决定A，服务器应409并保留这段输入",
+  "twoPhysicalWindows": true,
+  "createdVia": "Chrome File > Open new window",
+  "mainTab": "1075951337",
+  "conflictTab": "1075951346",
+  "observedAt": "2026-10-19T18:31:35.261Z"
+}

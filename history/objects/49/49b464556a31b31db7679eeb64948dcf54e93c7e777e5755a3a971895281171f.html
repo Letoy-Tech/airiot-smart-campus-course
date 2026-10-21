@@ -1,0 +1,1198 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI编程 · 完整教学资源</title><style>
+:root{--ink:#163343;--muted:#526a76;--line:#d4e3e3;--accent:#14665b;--paper:#f5f8f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}a{color:#145e70;text-underline-offset:4px}button,input,select{font:inherit}header{max-width:1200px;margin:auto;padding:48px 28px 24px}header h1{font-size:clamp(32px,5vw,52px);line-height:1.25;margin:12px 0 18px;letter-spacing:-1px}.eyebrow,.tag{font-size:13px;letter-spacing:1px;color:var(--accent);font-weight:700}.lead{max-width:800px;color:var(--muted);font-size:18px}nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}nav a{border:1px solid var(--line);background:white;padding:8px 13px;border-radius:6px;text-decoration:none}nav a:hover{border-color:var(--accent)}main{max-width:1200px;margin:auto;padding:0 28px 64px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 34px}.card,.document,.preview{background:white;border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}.card b{display:block;font-size:31px;line-height:1.3}.card span{display:block;color:var(--muted);margin-top:7px}.document{margin:25px 0;scroll-margin-top:18px}.document h1{font-size:29px;line-height:1.45}.document h2{font-size:23px;margin-top:30px}.document h3{font-size:19px}.document p,.document li{max-width:100%;overflow-wrap:anywhere}.document blockquote{border-left:3px solid var(--accent);padding-left:16px;color:var(--muted)}.document pre{overflow:auto;padding:17px;background:#112c38;color:#eaf3f0;border-radius:8px;font:14px/1.75 ui-monospace,monospace}.document code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}th{text-align:left;background:#edf4f2}th,td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}td code{white-space:normal}.table-scroll{overflow:auto;max-width:100%}.table-scroll:focus{outline:2px solid var(--accent)}.table-scroll table{min-width:650px}.filters{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}.filters label{display:flex;gap:8px;align-items:center}.filters select{padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:white}.badge{display:inline-block;border-radius:5px;background:#e9f6f0;color:#1b604f;padding:2px 8px;font-size:12px}.unknown{color:#8a6224}.muted{color:var(--muted)}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}.flow div{padding:15px;border-top:4px solid var(--accent);background:#edf5f2;border-radius:4px}.flow b{display:block}.flow small{color:var(--muted)}figure{margin:18px 0}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}figcaption{font-size:14px;color:var(--muted);margin-top:10px}.notice{padding:15px 18px;border-left:4px solid #b77d27;background:#fff6e7;border-radius:0 5px 5px 0}.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.quality-grid>div{padding:16px;background:#f5f8f6;border:1px solid var(--line);border-radius:6px}.quality-grid b{display:block}.quality-grid code{font-size:13px}.footer{font-size:14px;color:var(--muted);padding:16px 0}details{margin:18px 0}summary{cursor:pointer;font-weight:600}@media(max-width:700px){header{padding:28px 18px 16px}main{padding:0 18px 36px}.cards,.quality-grid{grid-template-columns:1fr}.cards{gap:9px}.card{padding:18px}.card b{font-size:25px}.document,.preview{padding:19px}.document h1{font-size:25px}.flow{grid-template-columns:repeat(2,1fr)}.filters{display:block}.filters label{margin:10px 0}nav a{font-size:14px}table{font-size:13px}th,td{padding:10px}.lead{font-size:16px}}
+</style></head><body><header><div class="eyebrow">48 学时 / AI 编程 / V1.1.1 完整教学包</div><h1>从需求到交付，<br>完成一套教学平台。</h1><p class="lead">为学生自带Windows/macOS电脑、教师提供数据库的课堂准备。先用固定教学数据完成登录与设备读取，再逐章扩展业务。学生使用通义等网页AI工具，无需模型API。</p><nav><a href="../walkthroughs/index.html">手把手主线（先看这里）</a><a href="../reading/index.html">原教材参考</a><a href="../lesson-plans/index.html">12次课教案</a><a href="student-project/README.md">连续学生工程</a><a href="student-chapters/README.md">旧分章练习</a><a href="teacher-guide/README.md">教师参考</a><a href="#preview">运行截图</a><a href="#catalog">查看固定数据</a><a href="#start">启动操作</a><a href="#task">第04章任务</a><a href="#offline">离线AI练习</a><a href="#next">章节资源表</a><a href="#db">教师数据库</a><a href="#task-05">第05章任务</a><a href="#task-06">第06章任务</a><a href="#task-07">第07章任务</a><a href="#task-08">第08章任务</a><a href="#task-09">第09章任务</a><a href="#task-10">第10章任务</a><a href="#task-11">第11章任务</a><a href="#task-12">第12章任务</a></nav></header><main>
+<p class="notice">新手按手把手主线操作：只复制一次 student-project 到自己的 app，随后持续修改同一个工程。本页保留的旧分章操作单供教师参考，其中换章节副本的安排不适用于新主线。</p>
+<div class="cards"><div class="card"><b>12 章完整教程</b><span>需求 → 设计 → 实现 → 测试 → 交付</span></div><div class="card"><b>9 个分章起点</b><span>第04—12章局部实现与断言任务，教师基础预置</span></div><div class="card"><b>6 张离线 AI 练习</b><span>先预测，再审查构造回复，最后记录证据</span></div></div>
+<section class="preview" id="preview"><span class="tag">作者本机实测截图</span><h2>同一条记录，在页面与响应中核对</h2><div class="flow" aria-label="读取链路"><div><b>01 浏览器</b><small>本地登录与设备页</small></div><div><b>02 开发代理</b><small>保留 /api 前缀</small></div><div><b>03 后端</b><small>认证、授权、响应</small></div><div><b>04 夹具文件</b><small>固定目录与独立MySQL</small></div></div><figure><img src="campus-ai-course/evidence/full-browser/desktop-devices.png" alt="作者本机实际运行的设备台账，显示教学模拟来源、固定时钟与16台设备的三态标签"><figcaption>图 R01 · 实际本地浏览器截图，数据为教学模拟；采用独立课程MySQL与模拟采样，不代表真实硬件或Windows实机验收。</figcaption></figure><p class="notice">参考工程已补齐完整必修业务，作者本机各项验证见本包报告。学校正式数据库、Windows实机、学生独立复现与课堂耗时仍须课前试跑；AIRIOT选做组件没有真实连接证据。</p></section>
+<section id="catalog" class="document"><span class="tag">不启动服务也可探索</span><h1>冻结数据：4 空间 · 16 设备 · 28 点</h1><p>下表直接来自本包catalog.json，属于浏览器内的<strong>夹具查看器</strong>；它不请求后端，不能当首次贯通证据。第04章后端仅选一空间两设备，第05—12章teacher-db模式使用全部目录。</p><div class="filters"><label>空间<select id="space"><option value="all">全部空间</option><option value="teaching_space_01">教学空间01（模拟）</option><option value="teaching_space_02">教学空间02（模拟）</option><option value="teaching_space_03">教学空间03（模拟）</option><option value="teaching_space_04">教学空间04（模拟）</option></select></label><label>通信状态<select id="online"><option value="all">全部状态</option><option value="true">在线</option><option value="false">离线</option><option value="null">未知</option></select></label><strong id="count" aria-live="polite"></strong></div><div class="table-scroll" tabindex="0"><table><thead><tr><th>设备 / ID</th><th>空间</th><th>通信状态</th><th>采集点与单位</th></tr></thead><tbody id="devices"></tbody></table></div><h2>质量边界：先预测，再展开</h2><p>以固定观察时刻2026-10-18 14:00（北京时间）计算，不能用电脑当前时间重算这些样例。</p><div class="quality-grid"><div><b>valid-zero</b><code>value=0</code><br><code>Δt=-1000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>零是有效测量，不是缺失</p></details></div><div><b>age-60000ms</b><code>value=24.5</code><br><code>Δt=-60000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>恰好60秒仍新鲜</p></details></div><div><b>age-60001ms</b><code>value=24.5</code><br><code>Δt=-60001ms</code><details><summary>预期质量</summary><span class="badge">stale</span><p>超过60秒才过期</p></details></div><div><b>future-5000ms</b><code>value=24.5</code><br><code>Δt=5000ms</code><details><summary>预期质量</summary><span class="badge">fresh</span><p>恰好5秒仍在容差内</p></details></div><div><b>future-5001ms</b><code>value=24.5</code><br><code>Δt=5001ms</code><details><summary>预期质量</summary><span class="badge">invalid</span><p>超过5秒为无效</p></details></div><div><b>missing-value</b><code>value=null</code><br><code>Δt=-1000ms</code><details><summary>预期质量</summary><span class="badge">missing</span><p>只有值缺失</p></details></div></div><h2>历史中的零和缺失</h2><p>4条原始样本，3个有效数值；null保留断点，0保留为有效测量。不制造没有采样的时刻。下列均为UTC时间。</p><div class="table-scroll" tabindex="0"><table><thead><tr><th>原始时刻（UTC）</th><th>功率 kW</th><th>处理原则</th></tr></thead><tbody><tr><td>2026-10-18T05:46:00.000Z</td><td>1.2</td><td>有限数值</td></tr><tr><td>2026-10-18T05:50:00.000Z</td><td><span class="unknown">null · 断点</span></td><td>保留采样时刻，不补零</td></tr><tr><td>2026-10-18T05:55:00.000Z</td><td>0</td><td>有效零，必须保留</td></tr><tr><td>2026-10-18T05:59:00.000Z</td><td>1.8</td><td>有限数值</td></tr></tbody></table></div><p><a href="campus-ai-course/fixtures/README.md">字段与夹具说明</a> · <a href="campus-ai-course/fixtures/manifest.json">冻结清单</a> · <a href="campus-ai-course/evidence/verification-v1.0.1.json">实际验证记录</a></p></section>
+<section class="document"><h2>从数据质量到业务闭环</h2><p>下列为作者本机实际浏览器截图，采样是教学模拟，事件和责任记录写入独立课程MySQL。</p><figure><img loading="lazy" src="campus-ai-course/evidence/full-browser/desktop-history.png" alt="历史样本中的有效零与null断点"><figcaption>历史样本中的有效零与null断点。截图不代替学生自己的验收记录。</figcaption></figure><figure><img loading="lazy" src="campus-ai-course/evidence/full-browser/desktop-cases.png" alt="本地演练事件的状态、版本与时间线"><figcaption>本地演练事件的状态、版本与时间线。截图不代替学生自己的验收记录。</figcaption></figure><figure><img loading="lazy" src="campus-ai-course/evidence/full-browser/desktop-owners.png" alt="设备责任与历史变更"><figcaption>设备责任与历史变更。截图不代替学生自己的验收记录。</figcaption></figure></section>
+<section id="start" class="document"><span class="tag">可操作材料</span><h1 id="start--windowsmacos-共用启动路径">Windows/macOS 共用启动路径</h1>
+<p>教师先在参考工程试跑；学生使用已提供的对应章节起点。以下命令均从当前拷贝的工程根目录执行：教师用<code>campus-ai-course/</code>，第04章学生用自己的<code>student-chapters/ch04/</code>拷贝，不要切回教师参考目录，路径带空格时用双引号。Windows用PowerShell，macOS用终端。不要在原平台<code>system/</code>执行本页命令。</p>
+<h2 id="start--一次性准备">一次性准备</h2>
+<p>安装Node22和JDK17；本资源验证基线为Node22.21.1。需要Git。Maven由项目wrapper下载固定版本，不必额外安装全局Maven。第一次安装依赖需要网络；完整离线机房须由教师另行准备并验证依赖缓存，本资料包不捆绑JDK、Node或node_modules。</p>
+<pre><code class="language-text">node --version
+java -version
+git --version
+node tools/course.mjs doctor
+</code></pre>
+<p>doctor检查Node22、JDK17、文件和8091/5178两个端口；不检查教师数据库，也不证明全部实验可运行。运行前必须设置<code>JAVA_HOME</code>到JDK17根目录，让doctor与Maven Wrapper使用同一JDK；不要设成bin目录。Windows PowerShell示例：<code>$env:JAVA_HOME = &quot;C:\你的JDK17根目录&quot;</code>；macOS示例：<code>export JAVA_HOME=&quot;/你的JDK17根目录&quot;</code>。替换为自己的已安装路径，两个启动终端都应设置。示例只修改当前终端环境。</p>
+<p>若在Windows PowerShell中<code>npm</code>脚本受策略限制，使用<code>npm.cmd</code>。本项目的<code>node tools/course.mjs ...</code>内部会选择对应平台入口，无需修改全局脚本执行策略。</p>
+<p>第04章从工程根目录安装前端依赖并构建（第05—12章先按对应操作单补任务，再构建；C07未完成会导致后端测试失败）：</p>
+<pre><code class="language-text">npm --prefix frontend ci
+node tools/course.mjs init
+node tools/course.mjs build
+</code></pre>
+<p>Windows可将第一行替换为<code>npm.cmd --prefix frontend ci</code>。<code>init</code>为admin、manager-a、manager-b、viewer生成不同随机密码，仅写入<code>.private/accounts.json</code>；用本机编辑器查看。重复执行保留原密码，不打印密码。不要将该文件粘贴给网页AI。</p>
+<p>教师参考工程可以接着运行<code>node tools/course.mjs check</code>；第04章学生起点未填TODO时，相关任务测试失败是预期（数量以本版输出为准）。先按第04章操作单补全，再执行check；不要靠关闭测试得到通过。</p>
+<h2 id="start--学生副本的-git-基线每个新章节一次">学生副本的 Git 基线（每个新章节一次）</h2>
+<p>ch04—ch12 是独立副本，发放时不含 <code>.git</code>。先将当章目录复制到自己的个人练习位置，再在该副本根目录操作；不要在教师参考工程、教材总目录或原平台中初始化。已有 <code>.git</code> 的本人作业不重建仓库，也不覆盖既有提交。</p>
+<p>尚未修改本章任务时，先用编辑器核对 <code>.gitignore</code>：应排除 <code>.private/</code>、<code>.runtime/</code>、<code>node_modules/</code>、<code>target/</code>、<code>dist/</code>、真实 <code>.env</code>；检查目录和无秘密样例，不把密码、Cookie或真实数据放入源码。执行 <code>git rev-parse --show-toplevel</code>：若输出当前副本，沿用已有仓库；若输出上层其他目录，先换到独立个人位置；若提示不是仓库，这是新副本的预期状态，再执行：</p>
+<pre><code class="language-text">git init
+git config --local user.name &quot;课程代号S01&quot;
+git config --local user.email &quot;S01@example.invalid&quot;
+git status --short
+git add -- .gitignore .nvmrc package.json README.md checkpoint.json frontend backend fixtures tools docs evidence/README.md
+git diff --cached --stat
+git diff --cached --name-only
+</code></pre>
+<p>将S01换成本人教学代号。逐项确认暂存文件均来自本次教师发放副本且无秘密；不确定的文件不提交。确认后执行：</p>
+<pre><code class="language-text">git commit -m &quot;chore: record supplied chapter checkpoint&quot;
+git log -1 --oneline
+git status --short
+</code></pre>
+<p>把这次提交标为“教师提供的未完成任务起点”，不能标为本人实现。随后才补当章TODO，以 <code>git diff</code> 检查局部差异，按实际文件名暂存并提交。若已经修改过任务，先保留现状并如实标注，不把修改后的文件冒充原始起点。其他章节的完整功能仍为教师预置；合入长期主项目是课后选做，不是课内逐章覆盖目录。</p>
+<h2 id="start--开两个终端">开两个终端</h2>
+<p>终端A，从工程根目录启动后端：</p>
+<pre><code class="language-text">node tools/course.mjs backend
+</code></pre>
+<p>终端B，从同一工程根目录启动前端：</p>
+<pre><code class="language-text">node tools/course.mjs frontend
+</code></pre>
+<p>浏览器打开<code>http://127.0.0.1:5178/#first-read</code>，用本地账号文件中的用户名和密码登录。全程使用127.0.0.1，避免在localhost与127.0.0.1之间混用会话。后端仅监听127.0.0.1:8091，前端代理<code>/api</code>；浏览器不直连数据库。</p>
+<p>预期：页面明确写教学模拟和固定教学时钟；两设备分别在线、未知。首次链路不会出现“离线”设备；第06章使用full夹具完成页面三态检查。</p>
+<h2 id="start--修改与停止">修改与停止</h2>
+<p>前端源码保存后由Vite刷新。后端源码修改后先停止终端A中的进程，再重新build与启动，不能拿旧JAR验证新代码。两个终端分别按Ctrl+C结束各自进程。脚本发现端口被占用会退出，不自动杀进程或修改端口。</p>
+<p>第一次下载较慢并不等于代码失败。先记录失败命令和最后一段不含密码的错误，再交给网页AI分析；禁止让模型通过关闭认证、禁用CSRF或更换真实平台地址“解决”问题。</p>
+<h2 id="start--故障定位表">故障定位表</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先看哪里</th>
+<th>处理和证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>doctor提示Node/JDK不符</td>
+<td>node/java版本和JAVA_HOME</td>
+<td>调整本机工具路径后再预检</td>
+</tr>
+<tr>
+<td>wrapper或npm下载失败</td>
+<td>网络、代理、教师依赖缓存</td>
+<td>记录包名与下载错误，不随意升级依赖</td>
+</tr>
+<tr>
+<td>登录失败</td>
+<td>自己的accounts.json、当前后端启动目录</td>
+<td>核对账号，不反复猜密码</td>
+</tr>
+<tr>
+<td>403且提示CSRF</td>
+<td>Network中csrf、login、下一次csrf的顺序</td>
+<td>保留保护并排查token/session，不关闭CSRF</td>
+</tr>
+<tr>
+<td>页面报无法读取</td>
+<td>后端终端、浏览器Network的HTTP与业务code</td>
+<td>首次失败显示错误；已有数据时应标记旧快照</td>
+</tr>
+<tr>
+<td>Java进程启动但页面404</td>
+<td>前端地址是否5178、是否已启动Vite</td>
+<td>本轮JAR不捆绑前端静态页面</td>
+</tr>
+<tr>
+<td>端口已占用</td>
+<td>本机已有进程及其所属项目</td>
+<td>核实后手动停止自己的进程，不能随意结束其他项目</td>
+</tr>
+</tbody></table>
+</div><p>Windows命令已按平台设计，但仅当Windows实机完成以上流程并留下记录后，才能把该环境标为通过。macOS本次实际结果与浏览器证据另见evidence。</p>
+<h2 id="start--第05章之后切换完整工程">第05章之后切换完整工程</h2>
+<p>教师按<a href="#db">数据库交接单</a>提供课程库并执行迁移后，终端A改用 <code>node tools/course.mjs backend-db</code>；终端B仍用 <code>frontend</code>。浏览器打开 <code>http://127.0.0.1:5178/#devices</code>，验证4空间16设备；监测页有28点。后端不会自动迁移，也不连接AIRIOT。第04章首次贯通入口保持 <code>#first-read</code>；<code>backend</code>与<code>backend-db</code>占用同一8091端口，不能同时启动。</p>
+</section><section id="task" class="document"><span class="tag">可操作材料</span><h1 id="task--第04章--两处修改验证一次完整读取">第04章 · 两处修改，验证一次完整读取</h1>
+<p>本单对应正文的4学时（1+2+1），建议每学时45分钟。教师先在参考工程完成安装和预检，再发放已生成的ch04起点；学生课内修改两个任务块。安装依赖与账号初始化安排课前，不把所有环境下载算进模块二。</p>
+<h2 id="task--起点和停点">起点和停点</h2>
+<p>起点：<code>resources/student-chapters/ch04/</code>拷贝已含前后端、登录基础、固定夹具与两处待填任务。第一条链路使用一空间、两设备，数据来自后端读文件，而非浏览器硬编码数组。学生电脑不连接数据库。</p>
+<p>本章固定入口：<code>http://127.0.0.1:5178/#first-read</code>，或顶栏“首次贯通”。使用 <code>backend</code> 的 first-chain 模式，不能使用第05章的 backend-db 模式后仍期望只有两台设备。</p>
+<p>停点：登录成功；两设备显示“在线/未知”；屏蔽设备GET后显示失败并保留已有快照；取消屏蔽后重新读取；提交一份脱敏证据与局部Git提交。第06章才验收完整页面三态和自主筛选。</p>
+<h2 id="task--模块一预测与基线1学时">模块一：预测与基线（1学时）</h2>
+<ol>
+<li>按启动说明检查工具、目录和两个端口，保存自己的版本输出。不要抄教师验证记录。</li>
+<li>阅读<code>fixtures/selectors.json</code>与<code>fixtures/catalog.json</code>，预测<code>teaching_env_01</code>和<code>teaching_energy_01</code>的online值及显示文字。</li>
+<li>在本人的ch04副本按<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线步骤</a>建立起点提交；先核对<code>.gitignore</code>和无秘密文件，已有本人仓库不重建。把该提交标为教师提供、A/B尚未完成，后续差异才属于本章修改。</li>
+<li>浏览器登录后应看到TODO-A待完成信息。此时认证与接口可能已正常，缺的是学生解包任务；先看Network，再判断错误层次。</li>
+</ol>
+<h2 id="task--模块二完成两个任务2学时">模块二：完成两个任务（2学时）</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>文件与标记</th>
+<th>教师已经提供</th>
+<th>你要完成</th>
+<th>验收反例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontend/src/api/campus.ts</code> / STUDENT_TODO_A</td>
+<td>HTTP、JSON对象与成功响应字段校验</td>
+<td>业务code非零时报错；成功返回同一批items/observedAt</td>
+<td>code非零不能返回正常空数组</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/FirstDeviceRead.vue</code> / STUDENT_TODO_B</td>
+<td>页面、会话、刷新、失败保留旧快照</td>
+<td>严格区分true/false/null的onlineLabel</td>
+<td>null不能显示离线；字符串不是合法输入</td>
+</tr>
+</tbody></table>
+</div><p>本轮把成功/失败/迟到响应处理收进教师框架，学生重点解释它为何保留旧快照，并验证行为；不要求在第04章从零实现竞态控制。教师参考页面附有筛选供后续演示，第04章不把筛选改写计入必交任务。</p>
+<p>网页AI提示：</p>
+<pre><code class="language-text">我正在做第04章，前后端和登录框架已提供。你不能访问我的本机。
+只改我粘贴的一个STUDENT_TODO块，不重写框架或安装新依赖。
+请先说明输入、输出和一个失败反例，再给最小修改。
+合同：online只能true/false/null；业务code必须为0才可读取data。
+当前文件和类型：[粘贴相应函数与必要类型，不粘贴账号文件]
+执行结果：[我实际运行的结果；尚未执行则明确说明]
+</code></pre>
+<p>一次只处理一个块。A填好后若标签仍显示“待完成TODO-B”，这是B尚未完成，不修改后端数据去掩盖。两块完成后从工程根目录运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+node tools/course.mjs build
+</code></pre>
+<p>在已启动前后端的页面重新读取。Network应看到<code>/api/campus/devices</code>，响应包含<code>code:0</code>、<code>data.items</code>和<code>data.observedAt</code>。<strong>本资源的Vite保留/api前缀，后端入口同样包含/api；不再移除前缀。</strong> 不把教材早期示意的rewrite直接复制过来。</p>
+<p>保持已成功读取的页面不刷新。在Chromium开发者工具中打开命令菜单（Windows Ctrl+Shift+P；macOS Command+Shift+P），搜索Show Network request blocking，打开请求屏蔽面板并启用；新增匹配<code>*127.0.0.1:5178/api/campus/devices*</code>的屏蔽规则。只屏蔽设备GET，不屏蔽登录/空间。点击页面“重新读取”，应出现网络失败并保留旧记录和最后成功时间。取消规则后再次点击，确认恢复。浏览器界面名称以教师预检为准；不要改源码、刷新页面或重启服务来替代这个同会话失败实验。</p>
+<h2 id="task--模块三证据与交接1学时">模块三：证据与交接（1学时）</h2>
+<p>一份课堂任务单记录下列结果，不另写重复长报告：</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>检查</th>
+<th>预期</th>
+<th>学生实际结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>设备请求</td>
+<td>API返回两设备，true/null，固定观察时间</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>三态函数</td>
+<td>true在线、false离线、null未知</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>失败路径</td>
+<td>显示错误，保留成功快照，不伪造新时间</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>恢复路径</td>
+<td>取消屏蔽后可重新读取</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>Git差异</td>
+<td>只保留本次任务，不含密码；已关闭请求屏蔽</td>
+<td>待填写</td>
+</tr>
+</tbody></table>
+</div><p>页面只显示true/null，函数测false不等于页面完整三态通过。不要截Cookie、CSRF token或密码；截图只保留响应数据和必要页面区域。将操作系统、资源版本、命令和失败现象交给下一位同学，后续第05章再落实数据库与持久化。</p>
+<h2 id="task--教师取证与学生取证的区别">教师取证与学生取证的区别</h2>
+<p>本章evidence说明作者的指定macOS首次链路验证；完整工程的MySQL验证见独立报告。Windows实机、学生独立操作与课堂时间没有被作者本机结果覆盖。未填任务时前端任务测试失败是预期；参考版本全通过也不代表学生版本已完成。</p>
+</section><section id="offline" class="document"><span class="tag">可操作材料</span><h1 id="offline--网页-ai-不可用时的六张练习卡">网页 AI 不可用时的六张练习卡</h1>
+<p>这些回复均由课程编写者构造，用来练习审查；<strong>不是通义或 Qwen 的真实输出，也不代表任何模型的测评结果</strong>。正常课堂先让学生自行提问；遇到网页不可用、网络中断或输出差异过大，再取相应卡片。每张卡替代所在章节的一次原有练习，不额外占用必修学时。</p>
+<p>先读任务和合同，独立写预期，再审查“待评回复”。提交：问题位置、一个能揭示问题的反例、最小修改建议、实际检查结果。答案留在教师参考，不提前给学生。</p>
+<h2 id="offline--o01--第01章ai-说完成了怎样判断">O01 · 第01章：AI 说完成了，怎样判断</h2>
+<p><strong>任务</strong>：编写设备在线标签函数。输入只能是 <code>true / false / null</code>，分别显示“在线 / 离线 / 未知”。请网页 AI 先给例子，再给实现。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">function onlineLabel(online) {
+  return online ? &#39;在线&#39; : &#39;离线&#39;;
+}
+// 已覆盖三种状态，可以直接上线。
+</code></pre>
+<p><strong>你的检查</strong>：列出三行输入与预期；指出哪个输入能推翻结论。“可以直接上线”的依据是否存在？不要把代码语法合法当成需求满足。</p>
+<p><strong>交付</strong>：三行测试表、一条修订后的任务提示和 AI 使用记录。若未访问网页，模型栏填“离线构造材料”，不要填 Qwen3。</p>
+<h2 id="offline--o02--第02章需求能否验收">O02 · 第02章：需求能否验收</h2>
+<p><strong>任务</strong>：把“方便老师管理设备”改写为一条可验收的用户故事。第一版只要求按设备名称关键词筛选；在线状态组合筛选是第06章任务。</p>
+<p><strong>待评回复</strong>：系统应采用先进技术，界面美观，检索快速，支持各种设备，让所有教师高效管理校园。该需求优先级最高，预计一天完成。</p>
+<p><strong>你的检查</strong>：它有没有规定使用者、数据范围、关键词为空、匹配和无匹配的结果？“一天”依据什么？重写一条故事和三个观察结果，暂不发明性能指标或教学日历。</p>
+<p><strong>交付</strong>：故事、三个 Given/When/Then、依赖于设备接口的一项任务；不把“各种设备”展开成新的必修功能。</p>
+<h2 id="offline--o03--第0304章http-成功不等于业务成功">O03 · 第03—04章：HTTP 成功不等于业务成功</h2>
+<p><strong>已知输入</strong>：网络层已经确认 HTTP 200、JSON 对象和字段基本形状。业务层收到：</p>
+<pre><code class="language-json">{&quot;code&quot;:40001,&quot;message&quot;:&quot;读取失败&quot;,&quot;data&quot;:null}
+</code></pre>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">function unwrap(payload) {
+  return payload.data || { items: [], observedAt: 0 };
+}
+</code></pre>
+<p><strong>你的检查</strong>：界面会把失败显示成什么？使用 <code>code:0</code> 且 <code>data.items:[]</code> 的正常空列表做对照；再设计一个非零 code 但带旧数据的反例。网络层、业务层分别承担哪项检查？</p>
+<p><strong>交付</strong>：正常、失败各一条预期与实际记录；失败不能伪装成“没有设备”。</p>
+<h2 id="offline--o04--第07章缺失值和有效零">O04 · 第07章：缺失值和有效零</h2>
+<p><strong>合同</strong>：有采样时间而数值缺失，用 <code>null</code> 保留断点；不制造未采样的时刻，不丢弃有效零。</p>
+<pre><code class="language-json">[{&quot;time&quot;:1000,&quot;value&quot;:0},{&quot;time&quot;:2000,&quot;value&quot;:null},{&quot;time&quot;:3000,&quot;value&quot;:1.2},{&quot;time&quot;:4000,&quot;value&quot;:0.8}]
+</code></pre>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-javascript">const samples = raw.filter(item =&gt; item.value).map(item =&gt; [item.time, item.value]);
+</code></pre>
+<p><strong>你的检查</strong>：原始样本数、有效数值数、零值数各是多少？返回的序列丢了什么？图表是否还能解释缺失？先在纸上算，再用语言控制台验证。</p>
+<p><strong>交付</strong>：4个原始时刻的转换表，禁止只凭一条平滑曲线宣告正确。</p>
+<h2 id="offline--o05--第08章按钮隐藏后的接口">O05 · 第08章：按钮隐藏后的接口</h2>
+<p><strong>合同</strong>：只有管理员可以修改设备责任；管理人员只能处理分派给本人的事件。后端作最终判断。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-text">Vue 里把 canAdmin 为 false 的按钮隐藏。
+所有登录者都能调用 PUT /campus/device-owners/{deviceId}，
+因为不显示按钮就不会发请求。
+</code></pre>
+<p><strong>你的检查</strong>：写出同一合法请求由管理员和查看者分别调用的预期；先由查看者用初始版本提交并确认拒绝、数据不变，再由管理员用相同版本提交；或每例独立重置到相同初始状态。除身份外不改变请求体和版本，不能在管理员已写入后拿旧版本当权限反例。怎样同时证明拒绝状态与数据无副作用？本卡是测试设计，不授权向原平台发送写请求。</p>
+<p><strong>交付</strong>：两行角色对照、主记录和时间线的前后检查项。待独立教学写接口实现后再执行。</p>
+<h2 id="offline--o06--第0911章冲突后自动重试">O06 · 第09—11章：冲突后自动重试</h2>
+<p><strong>合同</strong>：两个用户都读取版本 3；A 的合法写入提交为版本 4。B 携带旧版本 3 应得到 409，保留输入、回读记录，由人确认下一步。</p>
+<p><strong>待评回复</strong>：</p>
+<pre><code class="language-text">遇到409就读取最新版本，把旧请求的expectedVersion换成新版本，
+一直重试到成功。用户不需要知道发生过冲突。
+</code></pre>
+<p><strong>你的检查</strong>：哪个人的判断被绕过？B 是否已经看过 A 的变更？设计一个“B保留输入但不自动提交”的界面过程。说明为什么先返回400并不能证明事务回滚。</p>
+<p><strong>交付</strong>：一次并发时间线草图和一次回读确认过程；数据库测试完成前只标“预期”，不能标“已通过”。</p>
+</section><section id="next" class="document"><span class="tag">可操作材料</span><h1 id="next--资源与章节映射">资源与章节映射</h1>
+<p>本轮完整教学参考位于<code>resources/campus-ai-course/</code>；逐章学生副本位于<code>resources/student-chapters/ch04/</code>至<code>ch12/</code>。每份都是独立完整框架，仅挖当章任务；其他章节功能是教师预置，不能宣称学生从空白逐步写出了全部代码。01—03先完成个人文档。旧<code>student-workspace</code>保留第三轮历史，不作为本轮新章起点。</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>章</th>
+<th>起始材料</th>
+<th>学生核心产出</th>
+<th>当前修改入口（相对对应源码目录）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>离线O01与正文短例</td>
+<td>个人需求、AI判断与接力</td>
+<td>不改工程</td>
+</tr>
+<tr>
+<td>02</td>
+<td>离线O02、角色/范围基线</td>
+<td>R01三情境、一张任务卡及依赖</td>
+<td>不改工程</td>
+</tr>
+<tr>
+<td>03</td>
+<td>固定JSON、架构图、full-api.json</td>
+<td>只读合同与字段路径</td>
+<td>不改工程</td>
+</tr>
+<tr>
+<td>04</td>
+<td>ch04、first-chain、两设备</td>
+<td>A业务解包＋B通信标签</td>
+<td>api/campus.ts；views/FirstDeviceRead.vue</td>
+</tr>
+<tr>
+<td>05</td>
+<td>ch05、full目录和组库</td>
+<td>C05两侧引用存在性</td>
+<td>LocationService.validateBinding</td>
+</tr>
+<tr>
+<td>06</td>
+<td>ch06、台账/资源状态</td>
+<td>C06组合筛选，自主UI</td>
+<td>domain/course.ts#filterDevices</td>
+</tr>
+<tr>
+<td>07</td>
+<td>ch07、时钟/历史/图表/轮询</td>
+<td>C07质量优先级</td>
+<td>QualityPolicy.classify</td>
+</tr>
+<tr>
+<td>08</td>
+<td>ch08、认证/当前角色/双竞态</td>
+<td>C08严格Boolean true</td>
+<td>domain/course.ts#strictCapability</td>
+</tr>
+<tr>
+<td>09</td>
+<td>ch09、事件动作与事务/表单</td>
+<td>C09关闭记录门槛</td>
+<td>OperationsService.requireClosable</td>
+</tr>
+<tr>
+<td>10</td>
+<td>ch10、责任种子/候选人/历史</td>
+<td>C10锁内版本比较</td>
+<td>OperationsService.checkOwnerVersion</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ch11、真MySQL测试设施</td>
+<td>C11四组独立断言与证据</td>
+<td>docs/ch11-assertions.md</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ch12、筛选/分页/URL基础</td>
+<td>C12状态变化skip归零与交付</td>
+<td>domain/course.ts#changeCaseState</td>
+</tr>
+</tbody></table>
+</div><p>Java文件在<code>backend/src/main/java/edu/campus/course/</code>，前端文件在<code>frontend/src/</code>。每章05—12操作单列完整路径、具体步骤、AI提示和人工检查；第04章使用<code>#first-read</code>，后续分别进入设备、位置、监测、历史、事件与责任页面。浏览器固定5178、后端8091，代理保留/api。</p>
+<h2 id="next--资源和验证范围">资源和验证范围</h2>
+<ul>
+<li><code>backend/docs/full-api.json</code>：完整HTTP形状及质量优先级、历史闭区间/排序/上限、分页排序等实现约定；与共享教学合同一起读。</li>
+<li><code>fixtures/</code>：4空间/16设备/28点、固定时钟、first-chain选择与原始异常场景；JSON规格校验不是MySQL执行证明。</li>
+<li><code>tools/course.mjs</code>：跨平台doctor/init/build/check/backend/frontend/backend-db/migrate。先补当章任务再check；初始失败有教学意义，C11是文档任务不设故意失败代码。</li>
+<li><code>backend/tools/test-mysql.mjs</code>：教师显式授权测试schema后进行真实数据库验证；普通check不自动接测试库。</li>
+<li><code>backend/tools/account-admin.mjs</code>：教师明确授权后操作本组教学身份，用于撤权/禁用及恢复，不开放HTTP调试入口。</li>
+<li>课程<code>resources/teacher-guide/</code>：01—12答案、评分/故障/替代、无答案C11模板及M1—M5验收救援表。完整参考与教师报告不充当个人成果。</li>
+</ul>
+<h2 id="next--开课前仍需落实">开课前仍需落实</h2>
+<p>资源已经制作，不等于全班完成实验。教师仍需在实际Windows/macOS学生机预检安装、JAVA_HOME、端口、依赖下载和网页AI可用性，为15组分配独立MySQL schema并核对权限/迁移。每人记录本人预测、差异、实际执行和未完成项。现有本机工程验证、学生课堂试教、物理Windows和真实AIRIOT分别登记；AIRIOT为0必修学时。</p>
+<p>课程总48学时，建议12次×4学时、45分钟/学时、30人两人一组；每章1＋2＋1。章节正文为解释和查阅，操作单是课内路径；课后题不全部转为额外必交编码。</p>
+</section><section id="db" class="document"><span class="tag">可操作材料</span><h1 id="db--教师数据库交接单">教师数据库交接单</h1>
+<p>第04章使用 <code>first-chain</code>，不需要数据库。第05—12章使用 <code>teacher-db</code>；教师先为每组准备独立 MySQL 数据库，学生不必安装 MySQL。课程开发验收另用本机专属 MySQL 8.4.10，它不代表学校数据库已经连通。</p>
+<h2 id="db--课前填写">课前填写</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>教师填写与核验</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>课程班级与小组编号</td>
+<td>每组单独命名，例如 <code>campus_course_class01_g01</code></td>
+</tr>
+<tr>
+<td>MySQL 版本</td>
+<td>建议沿用已验证的 8.4 系列，具体补丁由教师冻结；其他版本先跑本课程数据库测试</td>
+</tr>
+<tr>
+<td>服务器、端口和网络</td>
+<td>填写学生可达的地址；确认校园网/VPN要求</td>
+</tr>
+<tr>
+<td>数据库名、账号</td>
+<td>一组一库一账号；不共享业务平台数据库或管理员账号</td>
+</tr>
+<tr>
+<td>TLS 和证书</td>
+<td>远程数据库使用 <code>sslMode=VERIFY_IDENTITY</code>，按学校证书配置 JDK 信任库；不要为解决报错关闭校验</td>
+</tr>
+<tr>
+<td>分组隔离</td>
+<td>账号只能访问自己的 schema；用另组库名请求应失败</td>
+</tr>
+<tr>
+<td>迁移权限</td>
+<td>教师迁移账号拥有建表权限；常规学生运行账号仅该库 SELECT/INSERT/UPDATE/DELETE</td>
+</tr>
+<tr>
+<td>备份和恢复</td>
+<td>记录课前备份位置、恢复负责人、课后保留期限；恢复先到新的独立库验证</td>
+</tr>
+<tr>
+<td>访问验证</td>
+<td>macOS 与 Windows 各至少一台：网络、JDK、连接、迁移、启动、登录、读写</td>
+</tr>
+</tbody></table>
+</div><p>建议30人两人一组，共15个课程库。无法分配15库时由教师排课调整；不要把一组的并发实验混入另一组的数据。</p>
+<h2 id="db--本机私密配置">本机私密配置</h2>
+<p>在当前教学工程下创建 <code>.private/database.json</code>。真实密码只放这里，不放源码、截图、Git、浏览器 <code>VITE_*</code> 或网页AI对话。示例中的大写占位符必须由教师替换：</p>
+<pre><code class="language-json">{
+  &quot;url&quot;: &quot;jdbc:mysql://DB_HOST:3306/COURSE_SCHEMA?sslMode=VERIFY_IDENTITY&amp;serverTimezone=UTC&quot;,
+  &quot;username&quot;: &quot;GROUP_USER&quot;,
+  &quot;password&quot;: &quot;TEACHER_PROVIDED_PASSWORD&quot;,
+  &quot;allowAccountAdministration&quot;: false
+}
+</code></pre>
+<p>配置保存于本机用户目录，限制其他用户读取；macOS/Linux可执行 <code>chmod 600 .private/database.json</code>。Windows通过文件属性的安全选项只允许当前学生账户和必要的管理员访问。不要在课堂群里公开共享密码。</p>
+<h2 id="db--教师准备顺序">教师准备顺序</h2>
+<ol>
+<li>用数据库管理工具在课程专用实例新建该组schema和账号。权限只限该schema；SQL模板见 <code>resources/teacher-guide/数据库开班模板.sql</code>，模板不含真实密码。</li>
+<li>按第04章启动说明完成依赖安装、本地账号初始化与构建。</li>
+<li>核对 <code>.private/database.json</code> 的目标确为本组空库或已备份课程库，然后由教师执行 <code>node tools/course.mjs migrate</code>。Flyway只应用新迁移，不执行clean；已应用文件不可改写。</li>
+<li>将配置切换为日常运行账号，执行 <code>node tools/course.mjs backend-db</code>。另一个终端执行 <code>node tools/course.mjs frontend</code>。</li>
+<li>登录管理员，核对全量目录4空间、16设备、28点。新建教学校园和楼栋、关联空间，再读取结果；换VIEWER验证读取允许、写入403。保存自己的证据。</li>
+<li>第11章数据库测试使用<strong>另外的测试库</strong>。把其配置保存为 <code>.private/test-database.json</code>，库名须以 <code>campus_course_</code> 开头、以 <code>_test</code> 结尾，例如 <code>campus_course_class01_g01_test</code>；测试配置还须由教师明确添加 <code>&quot;allowTestReset&quot;: true</code>，表示允许清理该测试库中的课程数据，再按后端测试说明运行。不要向日常教学库或原平台库运行测试清理逻辑。</li>
+</ol>
+<p><code>backend-db</code>默认不迁移；<code>migrate</code>是明确的独立操作。普通学生不需要使用作者本机的 <code>tools/local-db.py</code>，该脚本只用于本教材编写环境的隔离验证，不属于Windows/macOS学生安装要求。</p>
+<h2 id="db--故障定位">故障定位</h2>
+<ul>
+<li>连接超时：先核对地址、校园网/VPN和端口；不要把密码贴给AI。</li>
+<li>认证拒绝：核对账号、允许来源与本组库权限；不要改为root登录。</li>
+<li>TLS失败：核对域名、证书与JDK信任库，由教师修复；不在远程连接关闭TLS。</li>
+<li>Flyway校验失败：保留报错和已应用历史，比较源文件；不要删除历史表或修改已执行迁移。</li>
+<li>应用读得出但写不入：检查运行账号仅本组库的写权限，以及该操作的角色；权限403与SQL权限失败分开排查。</li>
+</ul>
+<h2 id="db--尚需课堂环境完成的确认">尚需课堂环境完成的确认</h2>
+<p>学校地址/证书/账号由教师发放；本包不包含它们。Windows实机、学校网络和实际课堂耗时必须由教师课前试跑记录，不能用作者macOS本机结果代替。</p>
+<p>参数依据：<a href="https://dev.mysql.com/doc/connector-j/en/connector-j-reference-using-ssl.html">Connector/J TLS与主机身份校验</a>、<a href="https://dev.mysql.com/doc/refman/8.4/en/grant.html">MySQL 8.4 数据库级授权</a>（核对日期2026-10-18）。</p>
+<p>角色撤销实验使用教师CLI时，课程库名须以 <code>campus_course_</code> 开头，并由教师把私密配置的 <code>allowAccountAdministration</code> 设为 <code>true</code>。工具只管理4个固定教学身份。普通学生配置保持false；不要公开角色修改接口。</p>
+</section><section id="task-05" class="document"><span class="tag">可操作材料</span><h1 id="task-05--第05章--空间关系保存操作单">第05章 · 空间关系保存操作单</h1>
+<p>4学时，模块按1＋2＋1；建议45＋90＋45分钟。每章只补<code>C05</code>一个业务块，其他实现由教师提供；UI允许自主调整。</p>
+<h2 id="task-05--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch05/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#locations</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-05--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>backend/src/main/java/edu/campus/course/LocationService.java</code></td>
+<td>创建校园/楼栋、事务、参数校验和读取</td>
+<td><code>STUDENT_TODO_C05</code>：空间绑定的来源空间与楼栋存在性检查</td>
+</tr>
+<tr>
+<td><code>backend/src/main/java/edu/campus/course/CampusMapper.java</code></td>
+<td>参数化SQL与映射</td>
+<td>只读追踪，不拼接用户输入</td>
+</tr>
+<tr>
+<td><code>backend/src/main/resources/db/migration/</code></td>
+<td>新库结构与迁移历史</td>
+<td>阅读，不修改已应用迁移</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/LocationsView.vue</code>、<code>frontend/src/api/full.ts</code></td>
+<td>表单、CSRF、统一响应和回读</td>
+<td>使用并核对Network，不重写认证</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-05--模块一预测关联与证据1学时">模块一：预测关联与证据（1学时）</h3>
+<ol>
+<li>打开<code>fixtures/catalog.json</code>，找到<code>teaching_space_01</code>。预测：来源空间存在，但初始campusId/buildingId/floor为空；创建本地位置不会改变源文件。</li>
+<li>阅读<a href="campus-ai-course/backend/docs/full-api.json">完整接口合同</a>的locations三种写请求。画出校园→楼栋→空间绑定，指出名称与稳定ID各自用途。</li>
+<li>在任务单先写三条预期：合法绑定成功；格式合法但不存在的楼栋ID返回404；VIEWER写同一合法请求返回403。每个用例只改一个变量。</li>
+</ol>
+<h3 id="task-05--模块二补一块并完成关系链2学时">模块二：补一块并完成关系链（2学时）</h3>
+<ol start="4">
+<li>在LocationService中搜索<code>STUDENT_TODO_C05</code>，只补该块：先确认来源spaceId，再确认本地buildingId。不存在时使用既有业务异常返回404，禁止创建影子空间/楼栋；通用字段400、授权和SQL由教师代码提供。</li>
+<li>ADMIN登录位置页面，建立名称含组号的校园，例如“G01教学园区”；保存响应id为C。再创建“G01实验楼”，campusId必须选择C。请求示例是<code>{&quot;name&quot;:&quot;G01教学园区&quot;}</code>与<code>{&quot;campusId&quot;:&quot;实际返回C&quot;,&quot;name&quot;:&quot;G01实验楼&quot;}</code>，占位文字必须换为实际ID。</li>
+<li>选择<code>teaching_space_01</code>，绑定刚创建的楼栋B和楼层“1”。PUT路径为<code>/api/campus/locations/spaces/teaching_space_01</code>，body为<code>{&quot;buildingId&quot;:&quot;实际返回B&quot;,&quot;floor&quot;:&quot;1&quot;}</code>；不要添加expectedVersion、actor或时间。</li>
+<li>写成功后GET locations/spaces回读，核对绑定和合并字段。故意将B替换为格式合法的不存在ID，只预期404，随后回读确认原绑定未改变。空名称400另用独立请求验证，不与不存在ID混用。</li>
+<li>停止并重新启动自己的完整后端，重新登录后回读相同C/B/空间关系，证明不只保存在浏览器。不要重复POST同名校园来“确认”；重试应优先回读已取得的ID。</li>
+</ol>
+<h3 id="task-05--模块三核验与接力1学时">模块三：核验与接力（1学时）</h3>
+<ol start="9">
+<li>换VIEWER身份先直接提交一条合法空间写请求，检查403及前后绑定相同；不截图Cookie/CSRF值。再以ADMIN正常对照，避免把旧版本、空字段等混成权限案例。</li>
+<li>运行check并保存本组实际结果。交接C/B/spaceId、正常与拒绝请求、重启回读及唯一代码差异。达到一条关系链和两个单变量拒绝就停，删除/导入/批量纳管不在本章。</li>
+</ol>
+<h2 id="task-05--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">请只审查我粘贴的LocationService中C05块。已有输入类型、授权、Mapper和事务，不重写它们。按教学合同，格式合法但来源空间或本地楼栋不存在应404；非法字段是400。先给合法绑定和不存在楼栋两个预期，再给最小修改。你不能访问本机或宣布测试通过。
+当前代码：[只粘贴任务函数、类型与必要合同]
+人工预测：[先填写]
+实际命令与结果：[未执行则写未执行]
+</code></pre>
+<p>模型看不到你的本机。每次只接受局部差异，自己执行命令并对照预期；网络不可用时采用离线卡，不虚构模型回答。</p>
+<h2 id="task-05--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC01/AC02正常关系</td>
+<td>实际返回ID、GET合并字段与重启后回读一致</td>
+</tr>
+<tr>
+<td>引用拒绝</td>
+<td>不存在引用404，原绑定和已有校园/楼栋不变</td>
+</tr>
+<tr>
+<td>AC05角色边界</td>
+<td>VIEWER合法写403，ADMIN同条件成功</td>
+</tr>
+<tr>
+<td>学生贡献</td>
+<td>只改C05并解释Mapper参数绑定和回读作用</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：返回501先看是否误启first-chain；数据库连接错误查本组交接单，不换成原系统地址；写后GET超时先回读，不能盲目再次创建。</p>
+<h2 id="task-05--本地直接请求小工具拒绝实验">本地直接请求小工具（拒绝实验）</h2>
+<p>当页面下拉框不允许输入非法ID，或VIEWER隐藏写入口时，在本组页面打开开发者工具Console，逐段输入下列函数。它仅访问当前5178教学页面，使用当前登录身份，CSRF只在函数内部传递，不打印。先阅读再执行，不上传Console/Network中的凭据。</p>
+<pre><code class="language-js">async function courseWrite(path, method, body) {
+  if (location.origin !== &#39;http://127.0.0.1:5178&#39; || !path.startsWith(&#39;/api/campus/&#39;)) {
+    throw new Error(&#39;只用于本地教学页面&#39;);
+  }
+  const tokenResponse = await fetch(&#39;/api/auth/csrf&#39;, { credentials: &#39;same-origin&#39; });
+  const csrf = await tokenResponse.json();
+  if (!tokenResponse.ok || csrf.code !== 0) throw new Error(&#39;请先核对教学会话&#39;);
+  const response = await fetch(path, {
+    method, credentials: &#39;same-origin&#39;,
+    headers: { &#39;Content-Type&#39;: &#39;application/json&#39;, [csrf.data.headerName]: csrf.data.token },
+    body: JSON.stringify(body)
+  });
+  const result = await response.json();
+  return { status: response.status, code: result.code, message: result.message, data: result.data };
+}
+</code></pre>
+<p>例一：VIEWER会话执行<code>await courseWrite(&#39;/api/campus/locations/campuses&#39;,&#39;POST&#39;,{name:&#39;本组权限对照校园&#39;})</code>，预期403/ACCESS_DENIED；ADMIN正常对照改用不重复的组内名称。例二：ADMIN执行<code>await courseWrite(&#39;/api/campus/locations/spaces/not-a-teaching-space&#39;,&#39;PUT&#39;,{buildingId:&#39;替换为实际已有楼栋ID&#39;,floor:null})</code>，预期404；先换真实buildingId，才能隔离非法空间这个条件。非法楼栋对照则使用真实spaceId与不存在buildingId。证据只记脱敏请求体、响应和独立回读，不保存CSRF/Cookie。</p>
+</section><section id="task-06" class="document"><span class="tag">可操作材料</span><h1 id="task-06--第06章--台账筛选与自主ui操作单">第06章 · 台账筛选与自主UI操作单</h1>
+<p>4学时，模块按1＋2＋1；建议45＋90＋45分钟。每章只补<code>C06</code>一个业务块，其他实现由教师提供；UI允许自主调整。</p>
+<h2 id="task-06--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch06/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#devices</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-06--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontend/src/domain/course.ts</code></td>
+<td>函数签名与合法设备类型</td>
+<td><code>STUDENT_TODO_C06</code>：filterDevices组合筛选</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/DeviceCatalog.vue</code></td>
+<td>原始列表、详情和三态容器</td>
+<td>保留数据语义，可自行改布局与样式</td>
+</tr>
+<tr>
+<td><code>frontend/src/api/full.ts</code>、<code>frontend/src/composables/useRequestScope.ts</code></td>
+<td>请求、响应形状和迟到门控</td>
+<td>只读调用关系</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-06--模块一从输入手算结果1学时">模块一：从输入手算结果（1学时）</h3>
+<ol>
+<li>ADMIN或VIEWER登录<code>#devices</code>，确认完整响应4空间16设备；实际数量来自items，不从标题或预期表填入。</li>
+<li>找<code>teaching_env_01</code>、<code>teaching_energy_01</code>和<code>teaching_facility_04</code>，先写true/在线、null/未知、false/离线三行预测。</li>
+<li>在纸上设计一个主视图。选择表格或卡片即可，必须保留模拟来源、设备ID、通信三态、加载/空/失败提示；不要求复刻教师配色。</li>
+</ol>
+<h3 id="task-06--模块二一个筛选块与页面核对2学时">模块二：一个筛选块与页面核对（2学时）</h3>
+<ol start="4">
+<li>在course.ts找C06，阅读filterDevices真实参数类型。空筛选表示不过滤；名称关键词去首尾空白后匹配；类别、空间、通信条件与名称使用AND组合。保留输入数组，返回派生数组，不用splice破坏原数据。</li>
+<li>先只按<code>teaching_space_01</code>筛选，应为该空间4设备；再选environment，应只剩<code>teaching_env_01</code>；再输入不会匹配的名称，应为空，页面显示没有匹配设备。清除全部筛选应恢复当前响应16条。</li>
+<li>单独选择unknown只应匹配online=null，offline只匹配严格false；不能把null当false，也不能将字符串“false”当合法设备输入。多条件组合按实际函数签名执行，不让AI自行增加后端参数。</li>
+<li>打开一个设备详情，确认定位使用id而非列表下标。切换筛选后仍能解释详情来源；直接进入或刷新所需详情状态按当前页面实现核对，不新增未定义后端详情接口。</li>
+<li>允许修改自己的UI样式，但不更改模拟标识、单位或错误语义。以键盘访问输入、选择器、清除与详情，390px宽度检查主任务，不把浏览器仿真称作真实手机验收。</li>
+</ol>
+<h3 id="task-06--模块三反例与人工检查1学时">模块三：反例与人工检查（1学时）</h3>
+<ol start="9">
+<li>用“名称符合但空间不符”的记录反驳OR筛选。观察筛选后数量与原始列表总数分别来自哪里。</li>
+<li>保持成功页面，屏蔽设备读取请求再刷新数据，应明确保留旧快照；清除屏蔽恢复。首次失败与成功空数组分别用教师测试用例核对，不能硬编码空数组制造通过。完成check，交接UI选择、筛选输入和结果ID。</li>
+</ol>
+<h2 id="task-06--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补course.ts的C06 filterDevices块；我会粘贴真实类型。条件为空时不过滤，多条件AND，online必须严格true/false/null，不能修改输入数组。请先用空间01+environment手算预期ID，再给最小代码和一个能揭示OR错误的反例。UI我自行设计，不新增依赖。
+当前代码：[只粘贴任务函数、类型与必要合同]
+人工预测：[先填写]
+实际命令与结果：[未执行则写未执行]
+</code></pre>
+<p>模型看不到你的本机。每次只接受局部差异，自己执行命令并对照预期；网络不可用时采用离线卡，不虚构模型回答。</p>
+<h2 id="task-06--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC01/AC03三态</td>
+<td>full实际响应与在线/未知/离线设备逐项对应</td>
+</tr>
+<tr>
+<td>组合与清除</td>
+<td>空间01→4条，加environment→1条，清除→当前总数</td>
+</tr>
+<tr>
+<td>AC11可靠性</td>
+<td>首次失败、筛选空、成功空和旧快照不同；键盘/窄屏可操作</td>
+</tr>
+<tr>
+<td>学生贡献</td>
+<td>C06局部差异和自主UI理由，而非代码行数</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：只看两设备先核对teacher-db模式；清除后数据少查是否破坏原数组；详情错位查key和id，不用下标作为身份。</p>
+</section><section id="task-07" class="document"><span class="tag">可操作材料</span><h1 id="task-07--第07章--质量历史与刷新操作单">第07章 · 质量历史与刷新操作单</h1>
+<p>4学时，模块按1＋2＋1；建议45＋90＋45分钟。每章只补<code>C07</code>一个业务块，其他实现由教师提供；UI允许自主调整。</p>
+<h2 id="task-07--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch07/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#overview</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-07--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>backend/src/main/java/edu/campus/course/QualityPolicy.java</code></td>
+<td>调用入口、可控观察时钟和类型材料</td>
+<td><code>STUDENT_TODO_C07</code>：质量判定</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/OverviewView.vue</code>、<code>HistoryView.vue</code></td>
+<td>最新值、单点历史、ECharts与原始表</td>
+<td>观察映射并核对null断点，不重写图表库</td>
+</tr>
+<tr>
+<td><code>frontend/src/composables/useRequestScope.ts</code>、<code>frontend/src/api/full.ts</code></td>
+<td>取消、请求门控与合同解包</td>
+<td>沿调用解释停止和迟到结果</td>
+</tr>
+<tr>
+<td><code>fixtures/quality-cases.json</code>、<code>history-cases.json</code></td>
+<td>独立原始案例与合法历史样本</td>
+<td>先预测，不能拿expected字段冒充运行结果</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-07--模块一先算边界1学时">模块一：先算边界（1学时）</h3>
+<ol>
+<li>固定O=<code>1792303200000</code>，分别预测O−60000、O−60001、O+5000、O+5001的质量；本机时间不参与判断。</li>
+<li>区分数值0、值null、时间null、数字字符串和非有限Number。JSON没有NaN/Infinity数字，非法原始案例不能直接当合法Point响应。</li>
+<li>读取full-api.json的当前冻结规则：先拒绝非空非法类型/时间，再缺失，再未来超过5秒，再过期超过60秒，最后fresh。独立夹具以单变量为主；组合错误按该实现合同核对，不自行发明优先级。</li>
+</ol>
+<h3 id="task-07--模块二补质量并对照历史2学时">模块二：补质量并对照历史（2学时）</h3>
+<ol start="4">
+<li>在QualityPolicy找C07，仅补质量分支；不得把null或非法字符串转换成0，不用前端时间修正后端质量。运行夹具检查与后端相关测试，逐条写预测/实际。</li>
+<li>在<code>#overview</code>确认source、simulated、实际4/16/28与每点单位。找到teaching_energy_02/power的有效零、teaching_env_04/humidity的缺失、teaching_facility_04/equipment_temperature的过期，分别核对value/time/quality；通信online和质量是不同维度。</li>
+<li>进入<code>#history</code>，选择<code>teaching_energy_01</code>的power，先用O前15分钟到O查询。Network参数from/to是epoch毫秒，单位kW。对照原始表与曲线：null保留断点，0可见，不能插造未采样时刻或将kW写成kWh。</li>
+<li>UI只给合法分钟选项；直接请求在已登录本地页面的新标签打开<code>/api/campus/history?deviceId=teaching_energy_01&amp;tagId=power&amp;from=1792303200000&amp;to=1792303199999</code>检查from&gt;to，再用from=1792281599999、to=1792303200000检查跨度大于21600000，预期400。也可用Console的fetch读取同一路径并在Network核对状态。空窗口和失败请求分开核对；截断时依据响应truncated提示，不能仅因曲线短就声称截断。历史最多1000条、先过滤后截断、时间升序及闭区间依据full-api.json。当前power四样本不会自然截断；归一化边界由QualityPolicyTest.historyPreservesNullRejectsInvalidAndTruncatesAfterFiltering验证，页面截断提示若未做可控响应实验就另记未实测，不能把四样本图当作截断证据。</li>
+<li>观察最新读取一轮完成后再等待15秒，不能让慢请求叠加。保持页面屏蔽overview/latest或history相应GET，检查旧快照提示；离开监测页后Network不应继续新增该轮询，已发请求的迟到结果不得覆盖当前页。不要修改电脑时钟或等待随机竞态。</li>
+</ol>
+<h3 id="task-07--模块三反证与接力1学时">模块三：反证与接力（1学时）</h3>
+<ol start="9">
+<li>用原始四样本解释“删除null但保留0”为什么仍错误。历史来源、窗口、观察时刻、单位和表格应与同一响应一致。</li>
+<li>保存一组边界、一个零/null对照、一次失败/恢复和离页观察；运行check。选择一类点的曲线即可，更多图表是选做，不增加能源费用推算。</li>
+</ol>
+<h2 id="task-07--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补QualityPolicy的C07，保留真实签名和已有异常类型。观察时间固定O；类型非法优先于missing，未来&gt;5000无效，年龄&gt;60000过期，等于边界仍fresh。请先给4个边界和0/null预测，再给最小实现。不要改前端时间、补零或输出虚构测试日志。
+当前代码：[只粘贴任务函数、类型与必要合同]
+人工预测：[先填写]
+实际命令与结果：[未执行则写未执行]
+</code></pre>
+<p>模型看不到你的本机。每次只接受局部差异，自己执行命令并对照预期；网络不可用时采用离线卡，不虚构模型回答。</p>
+<h2 id="task-07--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC03质量</td>
+<td>固定时钟、边界等号、零/null/非法类型各自正确</td>
+</tr>
+<tr>
+<td>AC04历史</td>
+<td>同一响应的原始表与曲线，null断点、有效零、单位和窗口</td>
+</tr>
+<tr>
+<td>AC11刷新</td>
+<td>不重叠、失败不假更新、离页停止、旧结果拒收</td>
+</tr>
+<tr>
+<td>学生贡献</td>
+<td>C07分支和解释；图表/请求模板注明教师提供</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：全部stale查是否误用墙钟；曲线缺零查truthy过滤；缺失跨线查connectNulls与原始null；不断轮询查页销毁与作用域清理。</p>
+</section><section id="task-08" class="document"><span class="tag">可操作材料</span><h1 id="task-08--第08章--权限撤销与竞态操作单">第08章 · 权限撤销与竞态操作单</h1>
+<p>4学时，模块按1＋2＋1；建议45＋90＋45分钟。每章只补<code>C08</code>一个业务块，其他实现由教师提供；UI允许自主调整。</p>
+<h2 id="task-08--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch08/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#locations</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-08--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontend/src/domain/course.ts</code></td>
+<td>能力调用位置与类型入口</td>
+<td><code>STUDENT_TODO_C08</code>：strictCapability仅接受Boolean true</td>
+</tr>
+<tr>
+<td><code>backend/src/main/java/edu/campus/course/Access.java</code>、<code>DbAccountDirectory.java</code></td>
+<td>当前账户/角色与后端最终授权</td>
+<td>阅读，不新造密码或公开改角色API</td>
+</tr>
+<tr>
+<td><code>frontend/src/composables/useRequestScope.ts</code>、<code>frontend/src/stores/campus.ts</code></td>
+<td>epoch/requestSeq、取消与清理</td>
+<td>在测试中核对各分支，不重写调度框架</td>
+</tr>
+<tr>
+<td><code>frontend/src/tests/request-scope.test.ts</code>、<code>workflow-views.test.ts</code></td>
+<td>可控响应顺序</td>
+<td>先预测跨身份/同身份结果，再运行</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-08--模块一角色与对象分开1学时">模块一：角色与对象分开（1学时）</h3>
+<ol>
+<li>画四身份三角色：ADMIN、MANAGER A、MANAGER B、VIEWER；A/B不是两个角色。读取均可，空间与责任等管理写仅ADMIN。</li>
+<li>先预测<code>true</code>、<code>false</code>、<code>null</code>、<code>&quot;true&quot;</code>、<code>&quot;false&quot;</code>、1的能力结果。只有第一项授予入口；字符串非空不能当Boolean true。</li>
+<li>说明“能处理事件”还要核对当前assignee；本章以空间管理验证角色，第09章再用真实事件验证本人范围。</li>
+</ol>
+<h3 id="task-08--模块二补严格映射执行拒绝2学时">模块二：补严格映射，执行拒绝（2学时）</h3>
+<ol start="4">
+<li>在course.ts找C08，保留输入类型，只写严格判断。前端入口受能力影响，后端仍对每次请求判断当前角色，不能以隐藏按钮代替授权。</li>
+<li>先以VIEWER读取devices和locations，预期200；在该身份自身合法会话中提交格式正确的校园创建请求，预期403。再ADMIN提交正常对照。不要把缺少CSRF的403误当角色授权证据；使用<a href="#task-05--本地直接请求小工具拒绝实验">第05章本地请求小工具</a>，先在VIEWER会话发合法校园创建，再换ADMIN正常对照；工具仅输出业务响应，不能输出会话凭据。</li>
+<li>教师确认仅本组schema并在私密database.json显式开启<code>allowAccountAdministration:true</code>，先记录原角色集合。在工程根执行<code>node backend/tools/account-admin.mjs admin --roles CAMPUS_VIEWER</code>，沿原ADMIN会话验证读取200、管理写403；随后执行<code>node backend/tools/account-admin.mjs admin --roles ADMIN,CAMPUS_VIEWER</code>恢复本课程初始集合。若课前改过集合，恢复实际原值。账户禁用另测：<code>node backend/tools/account-admin.mjs manager-a --enabled false</code>，结束用同命令<code>true</code>恢复；不能用禁用代替撤权。工具不操作学校账号，不开放HTTP改角色入口。</li>
+<li>阅读并运行可控竞态测试：截留旧管理员响应→切到VIEWER→先接收VIEWER→释放旧响应，管理能力不得回来；同一身份两请求先发者后返回，最后界面保留后发请求。成功、失败、finally均须核对epoch与序号，取消只是辅助手段。</li>
+<li>日志只保留逻辑身份、请求次序、状态码和业务数据，不复制Cookie、CSRF值或密码。测试工具的可控门闩不是公开业务接口；浏览器若无故障入口，就使用自动化测试证据，不假称手工点过。</li>
+</ol>
+<h3 id="task-08--模块三证据层级与接力1学时">模块三：证据层级与接力（1学时）</h3>
+<ol start="9">
+<li>分开记录按钮可见、直接请求403、数据前后不变三种证据；字段校验失败与权限失败分开。</li>
+<li>完成check并把当前角色路径、C08差异、两类竞态结果及本人范围待执行表交给第09章。先完成角色与过时响应两项，不扩展通用账户后台。</li>
+</ol>
+<h2 id="task-08--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补course.ts的C08 strictCapability。输入来自JSON，只有严格Boolean true授权。请预测true/false/null/&quot;true&quot;/&quot;false&quot;/1，再给最小代码。说明这只能影响前端入口，后端Access仍须用当前角色与当前对象授权。不要建议隐藏按钮就取消后端检查。
+当前代码：[只粘贴任务函数、类型与必要合同]
+人工预测：[先填写]
+实际命令与结果：[未执行则写未执行]
+</code></pre>
+<p>模型看不到你的本机。每次只接受局部差异，自己执行命令并对照预期；网络不可用时采用离线卡，不虚构模型回答。</p>
+<h2 id="task-08--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC05授权</td>
+<td>VIEWER合法请求403、ADMIN同条件成功；CSRF前提明确</td>
+</tr>
+<tr>
+<td>AC05当前资格</td>
+<td>专用撤权夹具保留读取资格，恢复步骤与结果单列</td>
+</tr>
+<tr>
+<td>AC11竞态</td>
+<td>跨身份和同身份次序可控，旧成功/失败/finally不写回</td>
+</tr>
+<tr>
+<td>学生贡献</td>
+<td>C08严格比较与每人一个反例；安全底层标注教师预置</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：所有写都403先分清CSRF与角色；切换后旧数据出现查epoch/序号；仅截图按钮不能判数据未写。实际撤权须采用隔离测试入口，不开公开调试后门。</p>
+</section><section id="task-09" class="document"><span class="tag">可操作材料</span><h1 id="task-09--第09章--演练闭环与关闭规则操作单">第09章 · 演练闭环与关闭规则操作单</h1>
+<p>4学时，1＋2＋1，建议45＋90＋45分钟。当前任务为<code>C09</code>；其余基础由教师预置，两人中途换手，个人解释分别记录。</p>
+<h2 id="task-09--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch09/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#cases</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-09--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>backend/src/main/java/edu/campus/course/OperationsService.java</code></td>
+<td>七动作、事务、行锁、版本、来源记录、时间线</td>
+<td><code>STUDENT_TODO_C09</code>：关闭门槛，不能省略任一前提</td>
+</tr>
+<tr>
+<td><code>backend/src/main/java/edu/campus/course/CampusMapper.java</code></td>
+<td>SELECT FOR UPDATE、更新及时间线SQL</td>
+<td>沿一次动作解释，不另造七套Mapper</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/CasesView.vue</code>、<code>frontend/src/api/full.ts</code></td>
+<td>事件表单、响应回读、409保留输入</td>
+<td>使用并核对持久状态</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-09--模块一先写状态账本1学时">模块一：先写状态账本（1学时）</h3>
+<ol>
+<li>在纸上分两列：业务NEW/ASSIGNED/IN_PROGRESS/CLOSED，来源ACTIVE/RECOVERED/UNKNOWN。恢复来源不自动关闭业务；HTTP成功也不等于核实PASS。</li>
+<li>打开full-api.json，标出触发空body、动作expectedVersion、close结论，以及谁可操作。从handlers取得实际uid，不把显示名或“manager-a”字符串猜成UID。</li>
+<li>预测一个缺处置记录的关闭请求，预期409且事件/时间线不变。其他关闭条件保持合法，避免一次同时违反三条规则。</li>
+</ol>
+<h3 id="task-09--模块二补关闭块完成一次闭环2学时">模块二：补关闭块，完成一次闭环（2学时）</h3>
+<ol start="4">
+<li>在OperationsService找C09；公共授权、版本检查及事务框架不改。本块补IN_PROGRESS、已有NOTE、DEMO/LOCAL_DEMO、RECOVERED/DEMO_RECOVERED、恢复时间不早于发生时间、PASS及核实时间不早于恢复时间，使用既有STATE_CONFLICT拒绝；非空disposition已由调用入口校验，不属于该方法参数。不要把客户端传来的恢复结论当服务端核实。</li>
+<li>ADMIN在<code>#cases</code>触发temperature-patrol，POST <code>/api/campus/demo-alarm-scenarios/temperature-patrol/trigger</code>，body为<code>{}</code>。记返回id和当前version；事件必须标DEMO/LOCAL_DEMO与simulated。它不更改设备读数或原始报警。</li>
+<li>未配置责任人时新事件NEW、v1；ADMIN分派给A，body包含assigneeUid、note和当前expectedVersion。若已有有效owner自动分派，先记录实际ASSIGNED，不伪写NEW。后续每一步使用刚回读版本，而非照抄教材数字。</li>
+<li>A开始处理→写一条NOTE。ADMIN恢复来源；A再调用verify-recovery；确认sourceCheckOutcome=PASS、恢复/核实时间有序，然后填写非空disposition关闭。示例动作body分别为<code>{&quot;note&quot;:&quot;已完成模拟巡查&quot;,&quot;expectedVersion&quot;:3}</code>、<code>{&quot;expectedVersion&quot;:4}</code>、<code>{&quot;disposition&quot;:&quot;演练结束，未操作真实设备&quot;,&quot;expectedVersion&quot;:6}</code>，其中数字仅适用于对应实际当前版本，必须替换。</li>
+<li>每次动作后GET详情，核对state/sourceState/version与新增时间线；最后刷新页面确认CLOSED仍保存。再写已关闭对象应409且不增加历史。普通无owner示例可形成v1→v7账本；正文扩展账本另含一次恢复前核验UNKNOWN，所以多一个版本。两种路径都以实际返回为准，不混抄数字。</li>
+</ol>
+<h3 id="task-09--模块三拒绝与冲突反馈1学时">模块三：拒绝与冲突反馈（1学时）</h3>
+<ol start="9">
+<li>用另一个ASSIGNED给A的事件做本人范围：B在自己的会话使用第05章courseWrite向<code>/api/campus/alarm-cases/实际id/start</code>发送POST，body为<code>{note:&quot;本人范围对照&quot;,expectedVersion:实际当前版本}</code>，预期403且记录不变；A同条件正常对照。VIEWER拒绝另测。</li>
+<li>两页面先读相同版本；A完成一条合法NOTE后，另一页仍带旧版本提交，应409、保留输入、回读详情，并等待人重新决定。这个顺序案例只证明旧版本拒绝，不替代第11章真实并发。</li>
+<li>检查已恢复且版本匹配的未关闭事件重复recover：版本与时间线不增加；换旧版本仍409。完成check并交接事件id、账本、一个单变量拒绝及409界面。</li>
+</ol>
+<h2 id="task-09--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补OperationsService的C09关闭门槛，保留公共授权/expectedVersion/事务代码。按合同逐项列出前提，再用只缺NOTE的反例验证。不得信任客户端恢复结论，不自动重试409，不把source恢复当业务关闭。粘贴真实函数后只给块内最小修改。
+当前代码或断言：[脱敏材料]
+人工预测：[先写]
+实际结果：[未执行则保留未执行]
+</code></pre>
+<h2 id="task-09--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC07闭环</td>
+<td>刷新后的详情、双状态、版本和逐动作时间线</td>
+</tr>
+<tr>
+<td>关闭拒绝</td>
+<td>单变量缺条件返回409，主行和时间线不变</td>
+</tr>
+<tr>
+<td>AC05/06范围</td>
+<td>B/VIEWER合法字段请求被拒，A或ADMIN正常对照</td>
+</tr>
+<tr>
+<td>AC11冲突</td>
+<td>输入保留、最新详情可见，不自动重放旧决定</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：核实UNKNOWN先看来源是否恢复；ASSIGNED不能直接NOTE；403先核对当前assignee；409先回读而非替换版本自动提交。本章不执行真实设备恢复。</p>
+</section><section id="task-10" class="document"><span class="tag">可操作材料</span><h1 id="task-10--第10章--责任变更与时间线操作单">第10章 · 责任变更与时间线操作单</h1>
+<p>4学时，1＋2＋1，建议45＋90＋45分钟。当前任务为<code>C10</code>；其余基础由教师预置，两人中途换手，个人解释分别记录。</p>
+<h2 id="task-10--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch10/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#owners</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-10--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>backend/src/main/java/edu/campus/course/OperationsService.java</code></td>
+<td>候选资格、责任行锁、更新与历史、创建事件时自动分派</td>
+<td><code>STUDENT_TODO_C10</code>：锁内比较责任expectedVersion</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/OwnersView.vue</code>、<code>CasesView.vue</code></td>
+<td>责任表单、候选人、时间线及事件回读</td>
+<td>使用与解释，不重写账户后台</td>
+</tr>
+<tr>
+<td><code>backend/src/main/java/edu/campus/course/CampusMapper.java</code></td>
+<td>责任主行与历史SQL</td>
+<td>说明为何不更新旧事件assignee</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-10--模块一分清两种负责人1学时">模块一：分清两种负责人（1学时）</h3>
+<ol>
+<li>当前设备owner是未来事件的分派规则；已存在事件assignee是该事件保存的负责人。画出两条关联，标出“责任PUT不得更新旧事件”。</li>
+<li>读取<code>teaching_env_01</code>责任详情；新组未登记时version=0、ownerUid/ownerName/updatedAt为null，时间线为空。已有历史则记实际版本，不删库追求0。</li>
+<li>从handlers取得A/B两个有效候选uid。同名也不能用姓名作外键；候选列表是快照，服务端保存时仍检查当前资格。</li>
+</ol>
+<h3 id="task-10--模块二补版本检查验证e1e22学时">模块二：补版本检查，验证E1/E2（2学时）</h3>
+<ol start="4">
+<li>在OperationsService的C10块使用锁定后的当前责任版本比较请求expectedVersion；不相等抛既有VERSION_CONFLICT。不得先在事务外比较，不得自动改请求版本继续保存。整数/类型校验及事务由教师提供。</li>
+<li>ADMIN登记A：PUT <code>/api/campus/device-owners/teaching_env_01</code>，body为ownerUid、note、expectedVersion。初次可传0，成功后为1；再次操作始终取当前实际值，不硬编码。</li>
+<li>ADMIN触发温度巡查得到E1，核对自动ASSIGNED给A。切换到A，用刚回读的事件版本执行start并写非空说明；确认E1进入IN_PROGRESS，再保存assignee/state/version/timeline作为责任变更前基线。未执行start不能用NOTE验证正常对照。</li>
+<li>仅修改设备责任为B并回读责任历史；再次GET E1，上述字段必须保持不变。再触发E2，它应自动分派给当前有效B。设备责任变更不能偷偷重开或改派E1。</li>
+<li>用两页面同读当前责任版本。第一页合法改动后，第二页提交旧版本，预期409；保留第二页意图，回读最新责任和时间线，不自动重放。并发屏障与真实回滚留第11章。</li>
+</ol>
+<h3 id="task-10--模块三追溯和拒绝1学时">模块三：追溯和拒绝（1学时）</h3>
+<ol start="9">
+<li>先保存责任变更前后的E1不变对照，再验证本人范围：回读E1当前版本并确认IN_PROGRESS。B使用自己的会话向<code>/api/campus/alarm-cases/实际E1.id/notes</code>发POST，body为<code>{note:&quot;本组本人范围对照&quot;,expectedVersion:实际当前版本}</code>，预期403且E1/时间线不变；随后A用同一请求体和版本正常提交，应成功、版本与时间线各加一。可用第05章courseWrite；两个普通标签可能共用Cookie，先退出再登录或使用独立浏览器上下文。此后E1变化来自A的NOTE，不是责任变更。再从两类时间线回答谁、何时、为何及版本，actor/time由后端产生。</li>
+<li>VIEWER对合法责任请求预期403；无资格候选由教师隔离测试验证拒绝，旧下拉项不能放行。资格失效时新事件不自动分派无效人员，按真实响应记录NEW与说明。</li>
+<li>完成check和E1/E2回读对照。停在一台设备、两次责任变化、两条事件，不加清空责任、批量改派或综合审计平台。</li>
+</ol>
+<h2 id="task-10--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补OperationsService的C10。请求expectedVersion已做严格整数校验，当前责任行已在事务中加锁。请实现不匹配返回VERSION_CONFLICT，并解释为何不能自动换版本重放。禁止更新任何旧事件的assignee；先给v0正常与旧版本两个预期，再给局部代码。
+当前代码或断言：[脱敏材料]
+人工预测：[先写]
+实际结果：[未执行则保留未执行]
+</code></pre>
+<h2 id="task-10--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC10责任</td>
+<td>当前责任与完整历史对应，初始0与后续递增明确</td>
+</tr>
+<tr>
+<td>旧事不改</td>
+<td>单独责任PUT前后E1 assignee/state/version/timeline相同</td>
+</tr>
+<tr>
+<td>未来分派</td>
+<td>E2按当前有效B分派；失效资格不被静默使用</td>
+</tr>
+<tr>
+<td>AC05/11边界</td>
+<td>合法越权拒绝、旧版本409、输入保留</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：E1跟着owner变化查是否读取时动态替换assignee；历史只有当前姓名查uid/previousOwnerUid；首次请求409先看本组是否已有登记，不能清库。</p>
+<h2 id="task-10--教师资格失效夹具">教师资格失效夹具</h2>
+<p>仅教师在本组schema、私密配置显式<code>allowAccountAdministration:true</code>后执行：<code>node backend/tools/account-admin.mjs manager-b --enabled false</code>。以ADMIN触发后观察新事件不自动指派给失效B；结束执行<code>node backend/tools/account-admin.mjs manager-b --enabled true</code>恢复并核对handlers。先记录原enabled状态，若原状态不是true则恢复原值。不要把停用B解释为删除责任历史，不作用于原平台账号。</p>
+</section><section id="task-11" class="document"><span class="tag">可操作材料</span><h1 id="task-11--第11章--并发回滚与证据操作单">第11章 · 并发回滚与证据操作单</h1>
+<p>4学时，1＋2＋1，建议45＋90＋45分钟。当前任务为<code>C11</code>；其余基础由教师预置，两人中途换手，个人解释分别记录。</p>
+<h2 id="task-11--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch11/</code> 独立目录，保留上一章作品，不覆盖历史。本章起点保留独立断言模板，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。先阅读模块一并填写预测，按模块二补本章代码块；然后执行<code>node tools/course.mjs build</code>。build会运行Java普通测试，C07起点质量测试失败是未完成任务的信号，不能删测试。C11无代码块，可直接build。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#cases</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。C11是文档任务，没有预设失败的代码块；填好预测后运行普通相邻检查：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-11--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>docs/ch11-assertions.md</code>（本章学生起点）</td>
+<td>无答案的断言模板</td>
+<td>写独立预期、证据字段、因果解释与一次缺陷修订</td>
+</tr>
+<tr>
+<td><code>backend/src/test/java/edu/campus/course/TeacherDbTest.java</code></td>
+<td>真MySQL、屏障、两对象并发与时间线失败注入</td>
+<td>阅读对应断言，不重写线程框架</td>
+</tr>
+<tr>
+<td><code>backend/tools/test-mysql.mjs</code></td>
+<td>从授权私密配置加载隔离测试库</td>
+<td>教师执行；不复制密码到终端或文档</td>
+</tr>
+<tr>
+<td><code>fixtures/concurrency-rollback-scenarios.json</code></td>
+<td>场景设计，不是执行证据</td>
+<td>与实际测试前提对照</td>
+</tr>
+</tbody></table>
+</div><h3 id="task-11--模块一先写四组独立预期1学时">模块一：先写四组独立预期（1学时）</h3>
+<ol>
+<li>打开本章断言模板，先不看教师答案。分别填写：事件NOTE竞争、责任更新竞争、事件时间线失败、责任时间线失败。四组不能合并成一句“事务通过”。</li>
+<li>并发前提是两个请求读同一当前版本n，字段/身份/状态均合法，再用屏障同步发出；预期成功/409各一、主行n+1、对应时间线只增一。预先构造旧版本的顺序请求不能替代。</li>
+<li>回滚前提是主行确已UPDATE且命中指定时间线错误。预期事务失败，清理前从独立连接回读主行与历史都等于基线；400/403/409提前拒绝不算回滚。</li>
+</ol>
+<h3 id="task-11--模块二运行隔离测试核对因果2学时">模块二：运行隔离测试，核对因果（2学时）</h3>
+<ol start="4">
+<li>教师核对专用测试schema和授权，配置在<code>.private/test-database.json</code>，包含url/username/password，并由教师显式设置<code>allowTestReset:true</code>；schema必须符合<code>campus_course_*_test</code>。不得指向学生日常业务库或生产。测试会准备和清理自己的隔离数据；先保留前章成果。</li>
+<li>教师在工程根目录执行<code>node backend/tools/test-mysql.mjs test</code>，Windows/macOS命令相同；或进入backend后执行<code>node tools/test-mysql.mjs test</code>。这是教师数据库检查工具，学生无需安装Python；教师可共享脱敏原始报告供小组独立核对。</li>
+<li>在TeacherDbTest和实际报告中逐项找两线程/请求开始、同步屏障、各自响应或结果、提交后的版本与历史。不要只抄测试总数。若超时而非409，先查最终事务结果，不能判通过。</li>
+<li>对两类失败注入分别找更新命中、故障位置、异常导致事务失败、独立回读及正常对照。检查不是测试框架最后清库造成“无数据”，不是同一未提交连接自读，也不是mock模拟锁。</li>
+<li>每组从真实失败或教师故意缺陷中选一处，先写复现与预测，做最小修订，再重跑相邻检查。没有真实缺陷可审查<code>expectedVersion自动+1重试</code>或<code>主行与时间线分事务</code>的纸面缺陷，但纸面不记为数据库修复通过。</li>
+</ol>
+<h3 id="task-11--模块三交叉审证据1学时">模块三：交叉审证据（1学时）</h3>
+<ol start="9">
+<li>交换断言稿：同伴仅凭报告能否找到四组各自依据？缺少的项标未执行/失败/环境阻塞，不改成PASS。教师预置代码与个人解释分别计。</li>
+<li>执行普通check用于相邻回归，与MySQL报告分层保存。完成一份缺陷单、四组证据索引和一个个人解释。完整报告进入第12章交付，不额外写长篇重复总结。</li>
+</ol>
+<h2 id="task-11--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">我先按合同写四组预期，请你只检查遗漏，不能从实现反推正确答案。两对象同版本竞争应一成功一409；回滚需主行已更新、指定时间线故障、事务失败、清理前独立回读不变和正常对照。指出我现有证据能证明什么、还缺什么；未执行项不得补写日志或PASS。
+当前代码或断言：[脱敏材料]
+人工预测：[先写]
+实际结果：[未执行则保留未执行]
+</code></pre>
+<h2 id="task-11--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC08两对象</td>
+<td>同版本、真实重叠、一成功一409、各自版本/历史只增一</td>
+</tr>
+<tr>
+<td>AC09两对象</td>
+<td>主行更新→指定故障→回滚→独立回读不变，含正常对照</td>
+</tr>
+<tr>
+<td>学生贡献</td>
+<td>自己的断言稿、证据引用、一次差异解释或修订</td>
+</tr>
+<tr>
+<td>边界</td>
+<td>普通单测、mock、JSON规格不冒充MySQL；教师演示不冒充个人运行</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：测试跳过先查隔离库条件；结果只有总数无法解释因果时补原始输出；两请求均成功先核对是否同版本、同对象和真正重叠。没有授权数据库时保留未执行，不改用共享生产库。</p>
+</section><section id="task-12" class="document"><span class="tag">可操作材料</span><h1 id="task-12--第12章--交付变更与答辩操作单">第12章 · 交付变更与答辩操作单</h1>
+<p>4学时，1＋2＋1，建议45＋90＋45分钟。当前任务为<code>C12</code>；其余基础由教师预置，两人中途换手，个人解释分别记录。</p>
+<h2 id="task-12--进入本章与共同命令">进入本章与共同命令</h2>
+<p>使用教师发放的 <code>student-chapters/ch12/</code> 独立目录，保留上一章作品，不覆盖历史。每章起点只留当前任务块，其他章实现由教师预置；不得把预置代码写成本人从零实现。课前按<a href="#start">启动说明</a>核对Node22.21.1、JDK17、JAVA_HOME与锁文件；第05章起采用教师分组MySQL，按<a href="#db">数据库交接单</a>落实本组配置和迁移，密码不进入网页AI或Git。</p>
+<p>以下命令在当前章节工程根目录执行，Windows/macOS相同。前端依赖尚未安装时先运行<code>npm --prefix frontend ci</code>（PowerShell可用<code>npm.cmd</code>）。</p>
+<pre><code class="language-text">node tools/course.mjs doctor
+node tools/course.mjs init
+</code></pre>
+<p>未补块前需要的页面/响应观察使用教师投影或脱敏样例，个人实际记录在补块后重做。在模块一先预测、补C12并做针对性回归；模块二再执行<code>node tools/course.mjs check</code>和<code>node tools/course.mjs build</code>，不要先要求未补C12的起点通过。build含Java普通测试，前端单元检查由check执行。教师显式执行本组授权迁移后，在两个终端分别启动<code>node tools/course.mjs backend-db</code>与<code>node tools/course.mjs frontend</code>；浏览器进入<code>http://127.0.0.1:5178/#cases</code>。后端first-chain入口只供第04章，不能用它的501或两设备结果验收本章完整业务。不要重复启动占用8091/5178的进程。</p>
+<p>每份新副本先按启动说明建立一次<a href="#start--学生副本的-git-基线每个新章节一次">学生Git基线</a>，不重新初始化已有本人仓库。每份新副本均须执行<code>node tools/course.mjs init</code>初始化本机账号（与Git初始化不同）；登录使用该副本本机生成的密码，组数据库仍保存角色/启用状态。不要混用上章密码或为修登录删除旧库身份。修改Java后停止本组后端、重新build并启动；修改前端通常由Vite更新，但失败快照实验保持页面不刷新、不靠热更新造故障。未补本章任务时，对应检查失败属于起点；填好后运行：</p>
+<pre><code class="language-text">node tools/course.mjs check
+</code></pre>
+<p><code>check</code>包含的普通测试不自动等于MySQL集成通过；数据库实际检查另按第11章执行。真实结果填写本章任务单，文中“预期”不当作已发生的记录。</p>
+<h2 id="task-12--实际文件与修改范围">实际文件与修改范围</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>教师预置</th>
+<th>学生本章修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>frontend/src/domain/course.ts</code></td>
+<td>事件筛选类型及分页调用</td>
+<td><code>STUDENT_TODO_C12</code>：changeCaseState改变状态时skip归零</td>
+</tr>
+<tr>
+<td><code>frontend/src/views/CasesView.vue</code>、<code>FullWorkspace.vue</code></td>
+<td>state与hash、请求竞态、分页</td>
+<td>沿真实调用说明刷新和切换</td>
+</tr>
+<tr>
+<td><code>README.md</code>、<code>docs/</code>、<code>evidence/</code></td>
+<td>运行和证据结构</td>
+<td>补本组交付说明、版本和限制</td>
+</tr>
+</tbody></table>
+</div><h2 id="task-12--教师课前准备可执行的分页演示数据">教师课前准备：可执行的分页演示数据</h2>
+<p>这是<strong>待教师实际执行并记录</strong>的课堂准备说明，本次修订没有向数据库写入。使用单独的空白分页演示库，不共用第09—11章学生历史库。按<a href="#db">数据库交接单</a>另配授权 schema、迁移和本机配置，再以完整模式启动；不得通过清空旧库凑数据。不是空库时，请教师另供独立库。以下由教师在参考工程或已经补好 C12 的副本操作，不要求学生在未补块时准备数据。</p>
+<ol>
+<li>登录 <code>admin</code>，在 <code>#cases</code> 的 Network 查看 <code>GET /api/campus/alarm-cases?limit=10&amp;skip=0</code>：必须业务成功且 <code>data.total=0</code>。在责任页面/读取 <code>GET /api/campus/device-owners/teaching_env_01</code>，确认 <code>ownerUid=null</code>，否则新事件可能自动分派；不要靠修改既有责任或清库补救，改用独立初始库。</li>
+<li>读取 <code>GET /api/campus/alarm-cases/handlers</code>，确认实际候选含 <code>uid=&quot;manager-a&quot;</code>（显示名“管理人员 A”）且当前有处理资格。这里用实际教学账号，不把场景规格中的逻辑键 <code>teaching_manager_a</code> 发给接口。没有该候选则先由教师修复本演示库账户状态。</li>
+<li>在事件页选择“温度巡查”，逐次点击“触发本地演练”14次；每次等成功并回读后再点下一次。实际写接口是 <code>POST /api/campus/demo-alarm-scenarios/temperature-patrol/trigger</code>，请求体 <code>{}</code>。记下14个不同的返回ID，逐条确认 <code>state=NEW</code>，最终总数14。一次请求失败或结果不确定时先回读，不自动重发造成多条。</li>
+<li>在这14条中任选两条，分别打开详情、读取当前版本、选择“管理人员 A”、填写非空分派说明并分派。对应 <code>POST /api/campus/alarm-cases/{实际id}/assign</code>，字段为 <code>assigneeUid:&quot;manager-a&quot;</code>、非空 <code>note</code>、该条刚读取的 <code>expectedVersion</code>。成功后独立回读为 <code>ASSIGNED</code>；不要点击“开始处理”，其他12条保持 NEW。Cookie/CSRF由既有页面处理，记录中不保存令牌。</li>
+<li>再读列表验证：不带state时 <code>total=14</code>；<code>state=NEW</code> 时12；<code>state=ASSIGNED</code> 时2；<code>state=IN_PROGRESS</code> 时0。每次均为 <code>limit=10&amp;skip=0</code>。保留教师准备日期、库代号、14个ID和脱敏回读，实验期间暂停他人写入；预期数量不写死到前端。</li>
+</ol>
+<p>页面每页10条。后端先筛选再计数/分页，排序为 <code>createdAt DESC, id DESC</code>；创建时刻相同时由ID决定稳定次序，不假定触发顺序等于列表顺序。<code>fixtures/pagination-scenarios.json</code> 的4条/limit=2是独立API边界规格，未自动建库、未执行，不能当作本页面已经具备的夹具。课前数据不齐时记录阻塞，使用教师观察记录完成预测；个人浏览器验证仍待补做。</p>
+<h3 id="task-12--模块一记录起点补-c12-与针对性回归1学时">模块一：记录起点、补 C12 与针对性回归（1学时）</h3>
+<ol>
+<li>前10分钟检查本人Git起点和文件清单，记录基线A：其他章节功能由教师预置，本章C12未完成。写出“当前页skip&gt;0再换状态”的预期，保留起点的预期失败。</li>
+<li>接着20分钟只补 <code>course.ts</code> 的C12 <code>changeCaseState</code>，复用已有合法状态校验，令state变化时skip=0；不重写事件接口，不改数据库。运行 <code>npm --prefix frontend run test:unit -- --run src/tests/course-domain.test.ts src/tests/workflow-views.test.ts</code>，核对相关断言。</li>
+<li>最后15分钟核对针对性单元/组件结果，并对教师分页演示逐项预测：①“全部”第二页切到 ASSIGNED，请求skip=0并显示2条；②切到 IN_PROGRESS，成功空结果；③切到 NEW 的第二页后刷新，保留NEW但首个请求skip=0；④未知state回到默认值、不发送非法状态。教师投影只记观察；本人的实际浏览器请求在模块二完整构建启动后重做，不把旧skip导致的空页当没有事件。形成含C12修改和针对性测试结果的基线B，浏览器未执行项单列。</li>
+</ol>
+<h3 id="task-12--模块二交付基线-b交叉复现与第一轮展示2学时">模块二：交付基线 B、交叉复现与第一轮展示（2学时）</h3>
+<ol start="4">
+<li>前15分钟补README的版本、Node/JDK、数据库交接、初始化/迁移/启动/停止和测试入口；在B上运行check与build、保存结果并打包。只放无秘密源码、锁文件和配置说明，<code>.private</code>、Cookie、密码、真实学校数据不打包。构建成功不等于数据库和浏览器业务验收。</li>
+<li>接着30分钟由同伴在独立目录或另一台已预检机器按README复现B：锁定依赖、本副本init、教师分配的独立schema和迁移、完整启动、角色读取、一条事件或责任关键路径及一个对应拒绝。在已由教师准备分页数据的独立演示库重做步骤3的实际请求，C12重验筛选/刷新/分页，其他章节引用已有真实证据，不在30分钟内重做整套平台验收。教师课前备好依赖与隔离库；未完成项记补做，不冒充通过。</li>
+<li>最后45分钟前9组各5分钟展示及个人问答，其他组按验收表观察。每组两人都要解释一个判断，不只由一人演示。</li>
+</ol>
+<h3 id="task-12--模块三其余答辩与个人交付1学时">模块三：其余答辩与个人交付（1学时）</h3>
+<ol start="7">
+<li>前30分钟后6组各5分钟展示；最后15分钟每人回答退出题：输入怎样进入代码、为何拒绝一个反例、一次AI建议取舍、仍未覆盖的证据。伙伴不能代答。</li>
+<li>交付源码与锁文件、迁移、无秘密配置说明、版本、需求/合同决策、分层测试与缺陷、AI代表记录、HANDOFF。不把node_modules/target/dist的偶然副本作为源码；若另交构建产物须标版本、哈希与用途。</li>
+<li>Windows物理设备、课堂时间或真实AIRIOT未测即保留未测；作者参考代码验证与本人课堂验收分别记录。公网部署、设备控制、通知均非必修。起点A有已知缺口，不是已通过的回退版本；救援参考须标明教师提供，不能删除或覆盖数据库来恢复代码。</li>
+</ol>
+<h2 id="task-12--网页ai任务提示">网页AI任务提示</h2>
+<pre><code class="language-text">只补course.ts的C12 changeCaseState。复用实际筛选类型，state变化必须skip=0；刷新保留合法state但从首屏读取。先给“旧页skip&gt;0切到不足一页状态”的反例，再给最小修改和受影响测试清单。不要新增字段/数据库迁移，不自动重放409，不编造复现结果。
+当前代码或断言：[脱敏材料]
+人工预测：[先写]
+实际结果：[未执行则保留未执行]
+</code></pre>
+<h2 id="task-12--验收与停点">验收与停点</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>验收</th>
+<th>可见依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AC11变更</td>
+<td>筛选/刷新skip归零、合法state恢复、竞态和失败语义</td>
+</tr>
+<tr>
+<td>AC12复现</td>
+<td>接手者、独立目录/库、实际命令与核心结果，缺口单列</td>
+</tr>
+<tr>
+<td>交付完整</td>
+<td>锁文件/迁移/无秘密配置/版本/证据/HANDOFF可定位</td>
+</tr>
+<tr>
+<td>个人答辩</td>
+<td>独立解释一个分支、一个失败与一次AI判断</td>
+</tr>
+</tbody></table>
+</div><p>常见故障：作者电脑能跑但新目录失败先查漏锁文件/迁移/配置来源；错误空页查skip；旧代码回退不等于旧数据恢复，不能用覆盖数据库“修复”交付。</p>
+</section><section class="document"><h2>教师保留的资料</h2><p><a href="campus-ai-course/README.md">参考工程入口</a> · <a href="offline-ai/教师参考.md">离线练习参考</a> · <a href="../11-完整教程与教案验收.md">完整包检查记录</a></p><p>分发学生包时使用student-chapters中对应章节的独立起点；不要把本地账号、作者测试凭据或教师通过记录当作学生成果。</p></section><p class="footer">课程源稿仍为Markdown。此页由tools/build-resources.mjs生成；既有40幅课程图保留在整书，新增运行截图与交互夹具用于资源讲解。</p></main><script>
+const catalog={"schemaVersion":1,"source":"TEACHING_MOCK","simulated":true,"observedAt":1792303200000,"spaces":[{"id":"teaching_space_01","name":"教学空间01（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_02","name":"教学空间02（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_03","name":"教学空间03（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null},{"id":"teaching_space_04","name":"教学空间04（模拟）","type":"classroom","campusId":null,"buildingId":null,"floor":null}],"devices":[{"id":"teaching_env_01","tableId":"teaching_environment","name":"环境传感器01（模拟）","category":"environment","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_01","tableId":"teaching_energy","name":"电能监测器01（模拟）","category":"energy","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":null,"communicationTime":null,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_01","tableId":"teaching_facility","name":"设施监测器01（模拟）","category":"facility","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_01","tableId":"teaching_lighting","name":"照明监测器01（模拟）","category":"lighting","spaceId":"teaching_space_01","spaceName":"教学空间01（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_02","tableId":"teaching_environment","name":"环境传感器02（模拟）","category":"environment","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_02","tableId":"teaching_energy","name":"电能监测器02（模拟）","category":"energy","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_02","tableId":"teaching_facility","name":"设施监测器02（模拟）","category":"facility","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_02","tableId":"teaching_lighting","name":"照明监测器02（模拟）","category":"lighting","spaceId":"teaching_space_02","spaceName":"教学空间02（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_03","tableId":"teaching_environment","name":"环境传感器03（模拟）","category":"environment","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_03","tableId":"teaching_energy","name":"电能监测器03（模拟）","category":"energy","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_03","tableId":"teaching_facility","name":"设施监测器03（模拟）","category":"facility","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_03","tableId":"teaching_lighting","name":"照明监测器03（模拟）","category":"lighting","spaceId":"teaching_space_03","spaceName":"教学空间03（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]},{"id":"teaching_env_04","tableId":"teaching_environment","name":"环境传感器04（模拟）","category":"environment","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"temperature","name":"温度","unit":"°C"},{"id":"humidity","name":"湿度","unit":"%"}]},{"id":"teaching_energy_04","tableId":"teaching_energy","name":"电能监测器04（模拟）","category":"energy","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":null,"tags":[{"id":"voltage","name":"电压","unit":"V"},{"id":"power","name":"功率","unit":"kW"}]},{"id":"teaching_facility_04","tableId":"teaching_facility","name":"设施监测器04（模拟）","category":"facility","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":false,"communicationTime":1792303110000,"simulated":true,"switchOn":false,"tags":[{"id":"run_state","name":"运行状态","unit":""},{"id":"equipment_temperature","name":"设备温度","unit":"°C"}]},{"id":"teaching_light_04","tableId":"teaching_lighting","name":"照明监测器04（模拟）","category":"lighting","spaceId":"teaching_space_04","spaceName":"教学空间04（模拟）","online":true,"communicationTime":1792303199000,"simulated":true,"switchOn":false,"tags":[{"id":"illuminance","name":"照度","unit":"lux"}]}],"points":[{"deviceId":"teaching_env_01","tableId":"teaching_environment","tagId":"temperature","value":24,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_01","tableId":"teaching_environment","tagId":"humidity","value":51,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_01","tableId":"teaching_energy","tagId":"voltage","value":221,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_01","tableId":"teaching_energy","tagId":"power","value":1.1,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_01","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_01","tableId":"teaching_facility","tagId":"equipment_temperature","value":31,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_01","tableId":"teaching_lighting","tagId":"illuminance","value":320,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_02","tableId":"teaching_environment","tagId":"temperature","value":24.5,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_02","tableId":"teaching_environment","tagId":"humidity","value":52,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_02","tableId":"teaching_energy","tagId":"voltage","value":222,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_02","tableId":"teaching_energy","tagId":"power","value":0,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_02","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_02","tableId":"teaching_facility","tagId":"equipment_temperature","value":32,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_02","tableId":"teaching_lighting","tagId":"illuminance","value":340,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_03","tableId":"teaching_environment","tagId":"temperature","value":25,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_03","tableId":"teaching_environment","tagId":"humidity","value":53,"time":1792303199000,"quality":"fresh","unit":"%"},{"deviceId":"teaching_energy_03","tableId":"teaching_energy","tagId":"voltage","value":223,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_03","tableId":"teaching_energy","tagId":"power","value":1.3,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_03","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_03","tableId":"teaching_facility","tagId":"equipment_temperature","value":33,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_light_03","tableId":"teaching_lighting","tagId":"illuminance","value":360,"time":1792303199000,"quality":"fresh","unit":"lux"},{"deviceId":"teaching_env_04","tableId":"teaching_environment","tagId":"temperature","value":25.5,"time":1792303199000,"quality":"fresh","unit":"°C"},{"deviceId":"teaching_env_04","tableId":"teaching_environment","tagId":"humidity","value":null,"time":1792303199000,"quality":"missing","unit":"%"},{"deviceId":"teaching_energy_04","tableId":"teaching_energy","tagId":"voltage","value":224,"time":1792303199000,"quality":"fresh","unit":"V"},{"deviceId":"teaching_energy_04","tableId":"teaching_energy","tagId":"power","value":1.4,"time":1792303199000,"quality":"fresh","unit":"kW"},{"deviceId":"teaching_facility_04","tableId":"teaching_facility","tagId":"run_state","value":0,"time":1792303199000,"quality":"fresh","unit":""},{"deviceId":"teaching_facility_04","tableId":"teaching_facility","tagId":"equipment_temperature","value":34,"time":1792303139999,"quality":"stale","unit":"°C"},{"deviceId":"teaching_light_04","tableId":"teaching_lighting","tagId":"illuminance","value":0,"time":1792303199000,"quality":"fresh","unit":"lux"}]};
+const space=document.getElementById('space'),online=document.getElementById('online'),body=document.getElementById('devices');
+function render(){body.replaceChildren();const selected=catalog.devices.filter(d=>(space.value==='all'||d.spaceId===space.value)&&(online.value==='all'||String(d.online)===online.value));document.getElementById('count').textContent=selected.length+' / 16 台';for(const d of selected){const row=document.createElement('tr');const values=[d.name+' / '+d.id,catalog.spaces.find(s=>s.id===d.spaceId)?.name||'未映射',d.online===true?'在线':d.online===false?'离线':'未知',d.tags.map(t=>t.id+' '+(t.unit||'无量纲')).join(' · ')];for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td)}body.append(row)}}space.addEventListener('change',render);online.addEventListener('change',render);render();
+</script></body></html>

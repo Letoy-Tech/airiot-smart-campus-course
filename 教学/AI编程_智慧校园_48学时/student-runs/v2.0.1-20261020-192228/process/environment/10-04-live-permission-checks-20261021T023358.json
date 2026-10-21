@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T02:33:58.292595+08:00",
+  "success": true,
+  "kind": "operator-live-HTTP-verification",
+  "checks": [
+    {
+      "check": "anonymous read",
+      "status": 401
+    },
+    {
+      "check": "spoofed body role cannot grant write",
+      "username": "viewer",
+      "sessionRole": "VIEWER",
+      "status": 403
+    },
+    {
+      "check": "space unchanged after rejection",
+      "username": "viewer",
+      "building": "教学楼 A",
+      "floor": "1层"
+    },
+    {
+      "check": "spoofed body role cannot grant write",
+      "username": "manager",
+      "sessionRole": "MANAGER",
+      "status": 403
+    },
+    {
+      "check": "space unchanged after rejection",
+      "username": "manager",
+      "building": "教学楼 A",
+      "floor": "1层"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+当前第07站：换一个人登录，权限也要换。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/AccessView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。
+本次只修改：frontend/src/views/AccessView.vue。
+读取当前store、capabilities类型和domain/course.ts中的strictCapability。实现AccessView.vue，显示当前用户名、角色、服务端返回的每项能力及中文允许/不据此授权；只有Boolean true允许。不要把roles数组当布尔权限。不改认证。再对照strictCapability测试true/false/null/undefined/字符串true，已有正确实现保留。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+只改AccessView.vue。strictCapability已有正确实现必须保留，不改或增删测试（含临时测试）、认证、装配、后端、工具或依赖。单测用npm run test:unit -- --run。不读取.private、lesson-bundles/**/files、journey-backups。只用安全公开身份字段，不能渲染csrf、Cookie、密码或整个store对象。沿用现有样式，完成报告简洁。

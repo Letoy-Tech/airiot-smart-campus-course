@@ -1,0 +1,368 @@
+{
+  "reviewedAt": "2026-10-18T16:23:54.796435+00:00",
+  "reviewer": "course_source_audit",
+  "scope": "Final 37-page large-figure lesson plan, pages 20–37 inclusive",
+  "status": "PASS",
+  "pagesActuallyViewed": 18,
+  "method": "Each page opened with view_image; no page sampling or OCR-only signoff. Checked body text, all lesson tables, six full-page teaching diagrams, arrows/labels, captions, margins, footers and pagination.",
+  "summary": {
+    "blockingLayoutIssues": 0,
+    "minorTextIssues": 0,
+    "coreDiagramsReviewed": [
+      22,
+      25,
+      28,
+      31,
+      34,
+      37
+    ],
+    "activityTablesReviewed": [
+      21,
+      24,
+      27,
+      30,
+      33,
+      36
+    ],
+    "finding": "No overflow, clipping, unreadable core text, or orphan page/heading found. Deliberate lower-page whitespace follows the three-page lesson structure."
+  },
+  "issues": [],
+  "pages": [
+    {
+      "page": 20,
+      "image": "render-final/page-20.png",
+      "sha256": "a921b3376fa5b4a48c5ac108a109cc911f8f93fa54afb5f753f0451f48ca4dff",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第07课目标/准备/重点/AI任务；段落完整，标题与页码清楚。",
+      "issueIds": []
+    },
+    {
+      "page": 21,
+      "image": "render-final/page-21.png",
+      "sha256": "8bf2f4c2327d2b78fccf034f9b8458ccd0ae3513570a0c2db04286aa8d56ff26",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "四学时表格全部完整；形成性评价、课后巩固与反思同页，无跨页残段。",
+      "issueIds": []
+    },
+    {
+      "page": 22,
+      "image": "render-final/page-22.png",
+      "sha256": "d2d6833d54a2168488dc86956af7aa4f1d97977713e4445abbde3bbe7e55a3ed",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "质量表格图：0/null、60000/60001、5000/5001和字符串值清楚，表头/注释未裁切。",
+      "issueIds": []
+    },
+    {
+      "page": 23,
+      "image": "render-final/page-23.png",
+      "sha256": "b44103bdc4d323f608b1dc48a85da7d5f041af7db86b7c76c47af67011efba88",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第08课正文可读；最长目标段落和AI提示换行正常。",
+      "issueIds": []
+    },
+    {
+      "page": 24,
+      "image": "render-final/page-24.png",
+      "sha256": "62f8e579f845192cc07ca527a9cd3efdd8c01f66dbcf5a670c7af890238dedb1",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "四学时表格及角色撤销/延迟请求文字清楚；表格未越界。",
+      "issueIds": []
+    },
+    {
+      "page": 25,
+      "image": "render-final/page-25.png",
+      "sha256": "02eb868e6fdb366d27861fa80bf078c1b20f4e0234514948b46f52da8813cc66",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "角色/对象范围流程图：三角色、菱形判断、是/否、403及业务门槛清楚，箭头无文字遮挡。",
+      "issueIds": []
+    },
+    {
+      "page": 26,
+      "image": "render-final/page-26.png",
+      "sha256": "992953e131240aa365fe2324db65e9e8ba2ffb97d604c6d0012192480d791b91",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第09课正文完整，无溢出；AI提示正常换行。",
+      "issueIds": []
+    },
+    {
+      "page": 27,
+      "image": "render-final/page-27.png",
+      "sha256": "85a04bc3d5541671fcb77d3b5e8fc460d1cfbdb5b205bd262ad3f59cc148b94b",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "状态名称与四学时表格清楚；交付与反思均完整。",
+      "issueIds": []
+    },
+    {
+      "page": 28,
+      "image": "render-final/page-28.png",
+      "sha256": "6356d31d9461dc0cefd5d1efcfd6c80f685c691a5a7b5dfc91fbcaf9b49f090c",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "事件状态图完整；NEW/ASSIGNED/IN_PROGRESS/CLOSED、来源状态和回转箭头可读，无裁切。",
+      "issueIds": []
+    },
+    {
+      "page": 29,
+      "image": "render-final/page-29.png",
+      "sha256": "e17684510c12ee8f2b73c6f8a7669a8644f6f160afe59da39794a6dc552278c4",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第10课正文、导入问题和AI任务清楚完整。复看同一渲染图，并对照 lesson-source.json 与 prepare-lessons.py，确认“旧事件应该自动交给新人吗？”正确，无重复字。",
+      "issueIds": []
+    },
+    {
+      "page": 30,
+      "image": "render-final/page-30.png",
+      "sha256": "b6dab679d0ae9d9b55064b28fb45dbbaa525cdf92ec69a82d1dd9c6871f75198",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "四学时表格、E1/E2与A/B及403反例可读，无溢出。",
+      "issueIds": []
+    },
+    {
+      "page": 31,
+      "image": "render-final/page-31.png",
+      "sha256": "12bf42af605e7bc8d8ae1bd19b330acf23cc6a81ad3ab8f7a51f0379bc8bba28",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "责任/事件关系大图：左右主记录与时间线框、deviceId关联及底部规则均清楚。",
+      "issueIds": []
+    },
+    {
+      "page": 32,
+      "image": "render-final/page-32.png",
+      "sha256": "aa92c94763679bc5ef38d7aecb13582ac119acdbf1a98d4122d6ee0f200bdd95",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第11课正文与安全边界完整；长课前准备段正常换行。",
+      "issueIds": []
+    },
+    {
+      "page": 33,
+      "image": "render-final/page-33.png",
+      "sha256": "fb1a309bb2e439c5049aa97697efc797753e9709747afa537f17498fd7896483",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "并发/回滚活动表格及正常对照、fault说明可读；页底内容完整。",
+      "issueIds": []
+    },
+    {
+      "page": 34,
+      "image": "render-final/page-34.png",
+      "sha256": "0747afc6170808d3aa0a82eb9268ca115888e07570ce93722e2e658578adc07a",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "证据类型图：六个说明框和底部限制清楚；小注释仍可辨，无重叠。",
+      "issueIds": []
+    },
+    {
+      "page": 35,
+      "image": "render-final/page-35.png",
+      "sha256": "d79b411a7404ebaeda5c6025d4df3a82d1cc87e72c11ab7cc7e23444d9df31d0",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "第12课正文完整；目录名与分页规则未越出正文区域。",
+      "issueIds": []
+    },
+    {
+      "page": 36,
+      "image": "render-final/page-36.png",
+      "sha256": "23d1ee6b7322792fff557a4a99e979a5f3fdacfd9e349a48dae036df9692aa66",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "答辩时间表及各段完整；15组安排文字清楚，无表格断行丢字。",
+      "issueIds": []
+    },
+    {
+      "page": 37,
+      "image": "render-final/page-37.png",
+      "sha256": "6fc8cb8968c170646a32a40a1712199796e191a46607d6a8ad08e00b43704567",
+      "pixelDimensions": [
+        1414,
+        2000
+      ],
+      "method": "view_image: full rendered page actually inspected",
+      "result": "PASS",
+      "textReadable": true,
+      "tableOrDiagramReadable": true,
+      "overflow": false,
+      "clipping": false,
+      "orphanPageOrHeading": false,
+      "notes": "交付流程大图：01–07顺序与连接箭头清楚，底部提示和页码完整，无孤页。",
+      "issueIds": []
+    }
+  ],
+  "boundaries": [
+    "Reviewed the provided PNG render at its displayed resolution; physical printing/projector output was not tested.",
+    "No lesson source, PDF or running service modified. Only this review JSON written."
+  ],
+  "reviewCorrections": [
+    {
+      "page": 29,
+      "initialObservation": "Suspected duplicated 该 character",
+      "resolution": "RETRACTED_VISUAL_MISREAD",
+      "verification": "Reopened page-29.png with view_image and checked the exact source sentence in lesson-source.json and tools/prepare-lessons.py. Both render and source show 应该自动 correctly. No document change required."
+    }
+  ]
+}

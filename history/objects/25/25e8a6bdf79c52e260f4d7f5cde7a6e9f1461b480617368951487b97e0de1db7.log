@@ -1,0 +1,6 @@
+已准备骨架：第08站。
+  frontend/src/journey/registry.ts
+  frontend/src/journey/features.ts
+  frontend/src/views/CasesView.vue
+备份：journey-backups/2026-10-19T18-11-40-057Z-stage-08-begin-cb63b7
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

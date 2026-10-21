@@ -1,0 +1,135 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.campus.course:campus-ai-course >-----------------
+[INFO] Building Campus AI Course First Chain 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.0:clean (default-clean) @ campus-ai-course ---
+[INFO] Deleting /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ campus-ai-course ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 26 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ campus-ai-course ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ campus-ai-course ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 9 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.2:test (default-test) @ campus-ai-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.campus.course.SourceSelectionTest
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.433 s -- in edu.campus.course.SourceSelectionTest
+[INFO] Running edu.campus.course.HistoryFixtureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 s -- in edu.campus.course.HistoryFixtureTest
+[INFO] Running edu.campus.course.QualityPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in edu.campus.course.QualityPolicyTest
+[INFO] Running edu.campus.course.CatalogReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in edu.campus.course.CatalogReaderTest
+[INFO] Running edu.campus.course.FirstChainTest
+02:48:33.324 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.campus.course.FirstChainTest]: FirstChainTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:48:33.381 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.FirstChainTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-19T02:48:33.521+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Starting FirstChainTest using Java 17.0.6 with PID 94653 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend)
+2026-10-19T02:48:33.522+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : The following 1 profile is active: "first-chain"
+2026-10-19T02:48:34.108+08:00  INFO 94653 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-19T02:48:34.321+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-19T02:48:34.321+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-19T02:48:34.321+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-19T02:48:34.334+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.FirstChainTest         : Started FirstChainTest in 0.914 seconds (process running for 1.789)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.958 s -- in edu.campus.course.FirstChainTest
+[INFO] Running edu.campus.course.CloseRulesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in edu.campus.course.CloseRulesTest
+[INFO] Running edu.campus.course.LocalAccountDirectoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.316 s -- in edu.campus.course.LocalAccountDirectoryTest
+[INFO] Running edu.campus.course.TeacherDbTest
+2026-10-19T02:48:35.580+08:00  INFO 94653 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.TeacherDbTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-19T02:48:35.590+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.TeacherDbTest          : Starting TeacherDbTest using Java 17.0.6 with PID 94653 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend)
+2026-10-19T02:48:35.590+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.TeacherDbTest          : The following 1 profile is active: "teacher-db"
+2026-10-19T02:48:35.790+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-19T02:48:35.862+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736a8aea
+2026-10-19T02:48:35.864+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-19T02:48:35.877+08:00  INFO 94653 --- [campus-course-backend] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:13328/campus_course_test?sslMode=DISABLED&allowPublicKeyRetrieval=true&serverTimezone=UTC (MySQL 8.4)
+2026-10-19T02:48:35.897+08:00  WARN 94653 --- [campus-course-backend] [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-19T02:48:35.913+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2026-10-19T02:48:35.918+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `campus_course_test`: 2
+2026-10-19T02:48:35.919+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbMigrate      : Schema `campus_course_test` is up to date. No migration necessary.
+2026-10-19T02:48:36.264+08:00  INFO 94653 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-19T02:48:36.347+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-19T02:48:36.347+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-19T02:48:36.348+08:00  INFO 94653 --- [campus-course-backend] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-19T02:48:36.351+08:00  INFO 94653 --- [campus-course-backend] [           main] edu.campus.course.TeacherDbTest          : Started TeacherDbTest in 0.77 seconds (process running for 3.806)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.521 s -- in edu.campus.course.TeacherDbTest
+[INFO] Running edu.campus.course.SnapshotConsistencyTest
+2026-10-19T02:48:38.101+08:00  INFO 94653 --- [campus-course-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.campus.course.CourseApplication for test class edu.campus.course.SnapshotConsistencyTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-10-19T02:48:38.111+08:00  INFO 94653 --- [campus-course-backend] [           main] e.campus.course.SnapshotConsistencyTest  : Starting SnapshotConsistencyTest using Java 17.0.6 with PID 94653 (started by learner in /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend)
+2026-10-19T02:48:38.111+08:00  INFO 94653 --- [campus-course-backend] [           main] e.campus.course.SnapshotConsistencyTest  : The following 1 profile is active: "teacher-db"
+2026-10-19T02:48:38.194+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-19T02:48:38.198+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e668743
+2026-10-19T02:48:38.198+08:00  INFO 94653 --- [campus-course-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-19T02:48:38.199+08:00  INFO 94653 --- [campus-course-backend] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:13328/campus_course_test?sslMode=DISABLED&allowPublicKeyRetrieval=true&serverTimezone=UTC (MySQL 8.4)
+2026-10-19T02:48:38.202+08:00  WARN 94653 --- [campus-course-backend] [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-19T02:48:38.205+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-19T02:48:38.208+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `campus_course_test`: 2
+2026-10-19T02:48:38.208+08:00  INFO 94653 --- [campus-course-backend] [           main] o.f.core.internal.command.DbMigrate      : Schema `campus_course_test` is up to date. No migration necessary.
+2026-10-19T02:48:38.452+08:00  INFO 94653 --- [campus-course-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-19T02:48:38.495+08:00  INFO 94653 --- [campus-course-backend] [           main] e.campus.course.SnapshotConsistencyTest  : Started SnapshotConsistencyTest in 0.393 seconds (process running for 5.95)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.459 s -- in edu.campus.course.SnapshotConsistencyTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 39, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ campus-ai-course ---
+[INFO] Building jar: /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/target/campus-ai-course-0.1.0.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.4.2:repackage (repackage) @ campus-ai-course ---
+[INFO] Replacing main artifact /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/target/campus-ai-course-0.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/target/campus-ai-course-0.1.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.661 s
+[INFO] Finished at: 2026-10-19T02:48:38+08:00
+[INFO] ------------------------------------------------------------------------

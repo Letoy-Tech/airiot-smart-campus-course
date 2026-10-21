@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-21T02:18:57.607837",
+  "spaceRoutes": [],
+  "controllers": [
+    "edu/campus/v2/web/DeviceController.java",
+    "edu/campus/v2/web/HealthController.java",
+    "edu/campus/v2/web/AuthController.java",
+    "edu/campus/v2/web/OverviewController.java"
+  ],
+  "appliedMigrationsUnchanged": true
+}

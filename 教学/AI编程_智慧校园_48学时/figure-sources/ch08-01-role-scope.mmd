@@ -1,0 +1,12 @@
+flowchart TB
+    Roles["当前有效角色<br/>三角色均可读取 canControl=false"]
+    Roles --> A[ADMIN]
+    Roles --> M[CAMPUS_MANAGER]
+    Roles --> V[CAMPUS_VIEWER]
+    A --> Manage["管理空间与责任<br/>分派及演练管理"]
+    A -->|处置请求| Rules["事件业务检查<br/>状态 版本等"]
+    M -->|处置请求| Own{本人已分派事件}
+    Own -->|是| Rules
+    Own -->|否| Deny[403 拒绝处置]
+    V -->|处置请求| Deny
+    Rules --> Eligible[条件满足才允许动作]

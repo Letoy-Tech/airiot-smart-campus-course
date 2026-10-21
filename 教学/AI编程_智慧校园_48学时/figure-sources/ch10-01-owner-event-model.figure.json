@@ -1,0 +1,10 @@
+{
+  "id": "图 10-01",
+  "title": "当前责任、责任历史与事件的关系",
+  "alt": "设备关联一条当前责任记录，责任记录对应多条责任变更历史；事件创建时读取责任作为分派依据，之后保存独立负责人，事件再对应自己的动作时间线。",
+  "caption": "图 10-01　当前责任、责任历史与事件的关系。教学示意，非运行证据。",
+  "evidenceKind": "TEACHING_SCHEMATIC",
+  "labVerified": false,
+  "renderSource": "figure-sources/layouts/ch10-01-owner-event-model.svg",
+  "layoutNote": "固定 SVG 版式；原 Mermaid 保留逻辑关系，实际图面以本 SVG 为准。"
+}

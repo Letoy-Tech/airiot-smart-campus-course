@@ -1,0 +1,14 @@
+$ node tools/progress.mjs begin 11
+已准备骨架：第11站。
+  frontend/src/journey/features.ts
+  frontend/src/tests/case-trigger-race.test.ts
+  frontend/src/tests/comparison.test.ts
+  frontend/src/tests/monitoring-views.test.ts
+  frontend/src/tests/read-api.test.ts
+  frontend/src/tests/read-models.test.ts
+  frontend/src/tests/read-pages.test.ts
+  frontend/src/tests/workflow-views.test.ts
+  frontend/src/tests/journey-navigation.test.ts
+  docs/调试记录.md
+备份：journey-backups/2026-10-19T15-35-44-057Z-stage-11-begin-01ef86
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

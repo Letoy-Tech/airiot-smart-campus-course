@@ -1,0 +1,666 @@
+{
+  "createdAt": "2026-10-19T16:36:55.465645+00:00",
+  "tutorial": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/journey/index.html",
+  "tutorialSha256": "884124d6cf35f0fb71d0c503d5c7a53597d9766abf8a4aa82e60aec7c30b62a5",
+  "referenceCodeExcluded": true,
+  "progressApplyExcluded": true,
+  "preparationSnippets": [
+    {
+      "kind": "sh",
+      "text": "node --version\njava -version\nnode -p \"process.cwd()\""
+    },
+    {
+      "kind": "sh",
+      "text": "export JAVA_HOME=\"$(/usr/libexec/java_home -v 17)\""
+    },
+    {
+      "kind": "sh",
+      "text": "$courseJdk = Get-ChildItem \"C:\\Program Files\\Eclipse Adoptium\" -Directory | Where-Object Name -Like \"jdk-17*\" | Select-Object -First 1\nif (-not $courseJdk) { throw \"请教师确认JDK17安装位置\" }\n$env:JAVA_HOME = $courseJdk.FullName"
+    },
+    {
+      "kind": "sh",
+      "text": "npm --prefix frontend ci"
+    },
+    {
+      "kind": "sh",
+      "text": "npm --prefix frontend run dev"
+    },
+    {
+      "kind": "sh",
+      "text": "node tools/course.mjs init\nnode tools/course.mjs build\nnode tools/course.mjs backend"
+    },
+    {
+      "kind": "sh",
+      "text": "node tools/course.mjs backend-db"
+    }
+  ],
+  "stations": [
+    {
+      "id": "01",
+      "title": "先做出两台设备",
+      "source": "journey/01-先做出两台设备.md",
+      "targetFiles": [
+        "frontend/src/views/StaticDevices.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/StaticDevices.vue",
+        "frontend/src/project-settings.ts"
+      ],
+      "checklist": [
+        "把页面标题改成“我的校园值班台”，保存后浏览器标题区域同步变化。",
+        "两台设备分别显示“在线”和“未知”。未知不能写成离线。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请把“值班老师先查设备，再看读数，有问题就分派处理”写成不超过120字的项目卡。只写使用者、要完成的事、完成的判断。范围：校园业务、模拟设备、真实AIRIOT选做、页面外观可自定。不要写项目背景和行业趋势。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 01\nnode tools/progress.mjs begin 01"
+        },
+        {
+          "kind": "sh",
+          "text": "npm --prefix frontend ci\nnpm --prefix frontend run dev"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第01站：先做出两台设备。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/StaticDevices.vue、frontend/src/project-settings.ts。\n本次只修改：frontend/src/views/StaticDevices.vue。\n只做一个Vue3+TypeScript设备页。显示平台名称和两台教学模拟设备：一台online=true，一台online=null。用严格比较显示在线/离线/未知。不要请求后端，不加路由或依赖。直接修改本次目标文件，完成后列出修改位置和实际运行结果。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第01站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：浏览器里出现自己的平台名、两台设备，一台在线，一台未知。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 01 evidence/stage-01.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "02",
+      "title": "让页面从后端拿设备",
+      "source": "journey/02-让页面从后端拿设备.md",
+      "targetFiles": [
+        "frontend/src/views/FirstDeviceRead.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/FirstDeviceRead.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts"
+      ],
+      "checklist": [
+        "登录后有两台设备；响应的业务code为0。",
+        "停掉本工程后端，再刷新页面，出现错误，不能显示“读取成功”。重新启动后可重试。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请用三行说明这次设备读取：页面怎样发请求，后端怎样返回，页面在哪里取items。成功判断看HTTP状态和业务code。先不要写代码，也不要更改已有认证。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 02\nnode tools/progress.mjs begin 02"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/course.mjs init\nnode tools/course.mjs build\nnode tools/course.mjs backend"
+        },
+        {
+          "kind": "sh",
+          "text": "npm --prefix frontend run dev"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第02站：让页面从后端拿设备。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/FirstDeviceRead.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts。\n本次只修改：frontend/src/views/FirstDeviceRead.vue。\n使用给定store/API写首次读取页。保留教学模拟标识、采样时刻、加载和失败提示；online只接受true/false/null。调用已有认证后的请求，不自己写密码、token或模拟成功。直接修改当前Vue文件，导入名以项目实际接口为准。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第02站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：登录后仍看到两台设备，但这次数据由 Java 接口返回。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 02 evidence/stage-02.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "03",
+      "title": "从16台设备中找到一台",
+      "source": "journey/03-从16台设备中找到一台.md",
+      "targetFiles": [
+        "frontend/src/views/DeviceCatalog.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/DeviceCatalog.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts"
+      ],
+      "checklist": [
+        "设备数依次16 → 4 → 1 → 0；清空恢复16。",
+        "卡片和表格显示同一组设备；点详情，设备ID、空间和三态一致。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "给台账写四条验收条件：名称或ID、空间、类型、在线三态可以组合筛选；清空后恢复全部。只写“做什么→看到什么”，每条一行。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 03\nnode tools/progress.mjs begin 03"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/course.mjs backend-db"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第03站：从16台设备中找到一台。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/DeviceCatalog.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts。\n本次只修改：frontend/src/views/DeviceCatalog.vue。\n使用给定store、DeviceFilter和filterDevices完成台账。支持名称/ID、空间、类型、online三态组合筛选，清空恢复；统计跟随筛选；卡片/表格切换；点击设备按稳定ID打开详情。读取失败保留旧快照并提示，15秒不重叠刷新，离页停止。只修改本次文件，不新增依赖。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第03站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：切换到本组数据库环境，看到4个空间、16台设备，并能筛选、看详情。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 03 evidence/stage-03.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "04",
+      "title": "把设备放到正确的楼里",
+      "source": "journey/04-把设备放到正确的楼里.md",
+      "targetFiles": [
+        "frontend/src/views/LocationsView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/LocationsView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "保存后独立回读仍看到教学楼A/1层。",
+        "viewer能看，不能写；错误引用被服务端拒绝，已有关系不变。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请画出校园、楼栋、来源空间的关系。只列id、name、campusId、buildingId、spaceId、floor，并说明创建顺序。不存在的楼栋不能绑定，查看者不能保存。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 04\nnode tools/progress.mjs begin 04"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第04站：把设备放到正确的楼里。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/LocationsView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/LocationsView.vue。\n用给定locations接口写三个小表单：创建校园、在校园下创建楼栋、把来源空间绑定到楼栋。下拉框使用真实ID；提交成功后重新读取；失败保留输入。canAdmin必须严格等于true才有保存入口，后端仍作最终权限检查。直接修改本次Vue文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第04站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：管理员建校园、建楼栋，再把来源空间绑定到楼栋；刷新后仍在。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 04 evidence/stage-04.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "05",
+      "title": "一眼找到异常的空间",
+      "source": "journey/05-一眼找到异常的空间.md",
+      "targetFiles": [
+        "frontend/src/views/OverviewView.vue",
+        "frontend/src/views/EnergyView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/OverviewView.vue",
+        "frontend/src/views/EnergyView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "缺失显示“缺失”，0仍是0；异常能追到设备。",
+        "能源单位切换后数值与单位一起变化，不出现电费或节能率。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请为概览写三个问题：哪个空间有设备、哪些点值缺失或陈旧、怎样找到原设备。能源只允许同单位比较，kW不能当kWh。每个问题配一个页面操作。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 05\nnode tools/progress.mjs begin 05"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第05站：一眼找到异常的空间。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OverviewView.vue、frontend/src/views/EnergyView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/OverviewView.vue。\n按本次目标文件实现校园概览或能源页。概览包含覆盖数、空间/类型统计、质量矩阵和台账钻取；能源包含kW/V切换、各空间最新值与质量、设备入口。使用提供的API和组件，不混单位，不把null变0。15秒不重叠刷新，离页停止。一次只改当前目标文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第05站：一眼找到异常的空间。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OverviewView.vue、frontend/src/views/EnergyView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/EnergyView.vue。\n按本次目标文件实现校园概览或能源页。概览包含覆盖数、空间/类型统计、质量矩阵和台账钻取；能源包含kW/V切换、各空间最新值与质量、设备入口。使用提供的API和组件，不混单位，不把null变0。15秒不重叠刷新，离页停止。一次只改当前目标文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第05站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：概览按空间/类型看数据，能源页只比较kW或V；点统计能回到对应设备。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 05 evidence/stage-05.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "06",
+      "title": "看变化，再看原始报警",
+      "source": "journey/06-看变化，再看原始报警.md",
+      "targetFiles": [
+        "frontend/src/views/HistoryView.vue",
+        "frontend/src/views/RawAlarmsView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/HistoryView.vue",
+        "frontend/src/views/RawAlarmsView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "teaching_energy_01的power样例保留1.2、null、0、1.8；null断开，0不消失。",
+        "一台失败不清空其他成功曲线；报警保留原始状态/等级，无“关闭报警”按钮。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请列出历史查询需要的deviceId、tagId、from、to；说明null和0画图的差别。再写一句话区分原始报警与本地演练事件，不替换原始status/level。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 06\nnode tools/progress.mjs begin 06"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第06站：看变化，再看原始报警。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/HistoryView.vue、frontend/src/views/RawAlarmsView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/HistoryView.vue。\n按目标文件制作历史页或原始报警页。历史使用原采样时间和值，null断线，不插值；保留设备/点位上下文及查询时刻。报警保留status/level/occurredAt/recoveredAt，支持total/limit/skip和30秒不重叠刷新；空结果、读取失败分开。只读，无确认/恢复/关闭上游按钮。直接修改本次Vue文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第06站：看变化，再看原始报警。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/HistoryView.vue、frontend/src/views/RawAlarmsView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/RawAlarmsView.vue。\n按目标文件制作历史页或原始报警页。历史使用原采样时间和值，null断线，不插值；保留设备/点位上下文及查询时刻。报警保留status/level/occurredAt/recoveredAt，支持total/limit/skip和30秒不重叠刷新；空结果、读取失败分开。只读，无确认/恢复/关闭上游按钮。直接修改本次Vue文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第06站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：从设备点值进入历史；同单位多设备比较；原始报警单独分页只读。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 06 evidence/stage-06.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "07",
+      "title": "换一个人登录，权限也要换",
+      "source": "journey/07-换一个人登录，权限也要换.md",
+      "targetFiles": [
+        "frontend/src/views/AccessView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/AccessView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "只有Boolean true开启能力；字符串“true”不能开启。",
+        "viewer没有写入口，直接写请求也为403；换回管理员后正常。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请做一个三行权限表：admin、manager-a、viewer。列读取、维护位置、处理本人事件、查看接入状态。未知权限一律不能当true。只写表，不修改登录系统。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 07\nnode tools/progress.mjs begin 07"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第07站：换一个人登录，权限也要换。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/AccessView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/AccessView.vue。\n读取当前store、capabilities类型和domain/course.ts中的strictCapability。实现AccessView.vue，显示当前用户名、角色、服务端返回的每项能力及中文允许/不据此授权；只有Boolean true允许。不要把roles数组当布尔权限。不改认证。再对照strictCapability测试true/false/null/undefined/字符串true，已有正确实现保留。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第07站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：管理员、管理人员、查看者看到正确入口；直接请求也不能越权。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 07 evidence/stage-07.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "08",
+      "title": "让一件事有人接手",
+      "source": "journey/08-让一件事有人接手.md",
+      "targetFiles": [
+        "frontend/src/views/CasesView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/CasesView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "刷新后状态仍为处理中，时间线有分派、开始、NOTE。",
+        "manager-b不能处理A的事件；viewer只能看。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请画NEW→ASSIGNED→IN_PROGRESS→CLOSED四个状态；本课先做到IN_PROGRESS。列出触发、分派、开始、NOTE分别由谁执行、成功后state和version如何变化。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 08\nnode tools/progress.mjs begin 08"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第08站：让一件事有人接手。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/CasesView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/CasesView.vue。\n使用给定事件API与类型写工作台：列表、详情、状态/处理人筛选、分页、三种本地模拟场景、分派、开始和NOTE。写请求带expectedVersion。409只回读最新记录并保留输入，不自动重放。来源标为LOCAL_DEMO，不改原始报警。关闭区域由本阶段装配开关暂不显示。只修改本次目标文件；先列计划，等我确认后再改。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第08站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：管理员触发模拟事件，分派给A；A开始处理并留下记录。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 08 evidence/stage-08.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "09",
+      "title": "先核实恢复，再关闭",
+      "source": "journey/09-先核实恢复，再关闭.md",
+      "targetFiles": [
+        "frontend/src/views/CloseChecklist.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/CloseChecklist.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "来源恢复后，事件仍是处理中；核实及结论完成后才变已关闭。",
+        "关闭后不能继续改；缺NOTE或核实的另一条事件不能关闭。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请为关闭写检查表：处理中、有NOTE、来源已恢复、恢复时刻合法、恢复后独立核实PASS、有结论、版本相同、操作者有权限。每缺一项应拒绝，不能只禁用前端按钮。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 09\nnode tools/progress.mjs begin 09"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第09站：先核实恢复，再关闭。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/CloseChecklist.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/CloseChecklist.vue。\n读取CasesView、AlarmDetail类型、closeBlockers和后端OperationsService.requireClosable/update。实现CloseChecklist.vue：接收detail:AlarmDetail，列出closeBlockers(detail)缺少的条件；无缺项仍提醒结论、后端权限与版本检查。只做这个组件，不在前端直接改事件状态，不重写整个Java服务。然后带我按本页步骤实际走关闭和拒绝分支。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第09站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：恢复模拟来源，再由服务端核实，填写结论后关闭。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 09 evidence/stage-09.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "10",
+      "title": "换负责人，不改旧事件",
+      "source": "journey/10-换负责人，不改旧事件.md",
+      "targetFiles": [
+        "frontend/src/views/OwnersView.vue",
+        "frontend/src/views/AuditView.vue",
+        "frontend/src/views/IntegrationView.vue"
+      ],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/views/OwnersView.vue",
+        "frontend/src/views/AuditView.vue",
+        "frontend/src/views/IntegrationView.vue",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "旧事件仍归A，新事件归B；第二个旧版本请求409，没有自动改写。",
+        "AIRIOT未配置就显示未接入；审计明确是历史教学样本，控制保持关闭。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "请写两个例子：设备负责人从A改为B后，旧事件应归谁、新事件应归谁；两人同时改同一责任记录，旧version应怎样处理。每个例子不超过三行。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 10\nnode tools/progress.mjs begin 10"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第10站：换负责人，不改旧事件。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OwnersView.vue、frontend/src/views/AuditView.vue、frontend/src/views/IntegrationView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/OwnersView.vue。\n按目标文件分别做责任登记、接入状态或只读命令审计。责任保存带expectedVersion，409回读且保留输入；接入把配置、连通、能力分开；审计保留来源和simulated标识、分页，仅管理员可读。不要伪造真实AIRIOT成功，不增加控制或外部通知按钮。每次只改本次目标文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第10站：换负责人，不改旧事件。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OwnersView.vue、frontend/src/views/AuditView.vue、frontend/src/views/IntegrationView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/AuditView.vue。\n按目标文件分别做责任登记、接入状态或只读命令审计。责任保存带expectedVersion，409回读且保留输入；接入把配置、连通、能力分开；审计保留来源和simulated标识、分页，仅管理员可读。不要伪造真实AIRIOT成功，不增加控制或外部通知按钮。每次只改本次目标文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "当前第10站：换负责人，不改旧事件。\n请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/OwnersView.vue、frontend/src/views/AuditView.vue、frontend/src/views/IntegrationView.vue、frontend/src/api/campus.ts、frontend/src/stores/campus.ts、frontend/src/api/full.ts、backend/docs/full-api.json。\n本次只修改：frontend/src/views/IntegrationView.vue。\n按目标文件分别做责任登记、接入状态或只读命令审计。责任保存带expectedVersion，409回读且保留输入；接入把配置、连通、能力分开；审计保留来源和simulated标识、分页，仅管理员可读。不要伪造真实AIRIOT成功，不增加控制或外部通知按钮。每次只改本次目标文件。\n先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。\n完成后列改动和实际检查；业务验收留给我亲手操作。"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第10站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：设备责任变更可追溯；新事件采用新负责人，旧事件保持原分派。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 10 evidence/stage-10.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "11",
+      "title": "故意弄错一次，再修好",
+      "source": "journey/11-故意弄错一次，再修好.md",
+      "targetFiles": [],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "故意写错时测试确实失败；修复后同一测试恢复。",
+        "事件和责任各做一次两窗口409；教师独立测试库的事务回滚检查单独记录，不把跳过当通过。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "我会提供：当前目录、执行命令、第一条错误、相关函数和预期结果。请先判断错误发生在哪一层，再给一个验证动作；等我反馈才给最小修复。不要升级依赖、删除测试或声称你已经运行。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 11\nnode tools/progress.mjs begin 11"
+        },
+        {
+          "kind": "prompt",
+          "text": "只根据我贴出的错误和代码定位。HTTP200不代表业务code成功；请找出当前条件为什么会把code=0拒绝。只返回最小修改和应重跑的命令。\n先读取CODEBUDDY.md和本页列出的实际接口。只处理当前这一站，不执行迁移、部署或下一站任务。\n改完告诉我改了哪些文件，哪些检查真的运行过；未运行就直说。"
+        },
+        {
+          "kind": "sh",
+          "text": "npm --prefix frontend run test:unit -- --run src/tests/http.test.ts"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/course.mjs check\nnode tools/course.mjs build"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第11站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：留下一个失败、定位、修复、回归的完整记录。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 11 evidence/stage-11.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    },
+    {
+      "id": "12",
+      "title": "交给另一个人运行",
+      "source": "journey/12-交给另一个人运行.md",
+      "targetFiles": [],
+      "contextFiles": [
+        "docs/项目卡.md",
+        "docs/接口与数据.md",
+        "frontend/src/api/campus.ts",
+        "frontend/src/stores/campus.ts",
+        "frontend/src/api/full.ts",
+        "backend/docs/full-api.json"
+      ],
+      "checklist": [
+        "新目录可启动，能查同一模拟设备、读历史、完成一件本地事件。",
+        "README步骤与实际一致；源码包无密码，真实AIRIOT状态明确。所有必修验收项都有实际结果，才签“课程完成”。"
+      ],
+      "htmlSnippets": [
+        {
+          "kind": "prompt",
+          "text": "我会贴实际验收结果。请生成一页交付说明：工具版本、安装、数据库准备、启动、主流程、已知未验证项。只写已有证据；模拟数据、选做AIRIOT和未测Windows要如实写，不编测试通过率。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs plan 12\nnode tools/progress.mjs begin 12"
+        },
+        {
+          "kind": "prompt",
+          "text": "请检查交付说明是否能让第一次接手的人运行。逐条指出缺的路径、命令或前提，不重写长篇背景。未验证项必须保留。\n先读取CODEBUDDY.md和本页列出的实际接口。只处理当前这一站，不执行迁移、部署或下一站任务。\n改完告诉我改了哪些文件，哪些检查真的运行过；未运行就直说。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/course.mjs check\nnode tools/course.mjs build\nnode tools/hand-in.mjs"
+        },
+        {
+          "kind": "prompt",
+          "text": "我在智慧校园项目第12站。接下来贴失败操作或命令、第一条错误，不含密码；相关文件已用@引用。\n预期是：另一人在新目录启动，完成查设备→看历史→处置事件；交付不含密码。\n请先定位一个问题，给一个排查动作。等我反馈，不重写整个工程。"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs verify"
+        },
+        {
+          "kind": "sh",
+          "text": "node tools/progress.mjs accept 12 evidence/stage-12.md"
+        }
+      ],
+      "status": "NOT_STARTED",
+      "modelCalls": 0
+    }
+  ]
+}

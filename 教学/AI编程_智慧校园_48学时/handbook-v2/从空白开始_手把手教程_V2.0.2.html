@@ -1,0 +1,1948 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>从空白页面做出智慧校园 · 手把手教程 V2.0.2</title><style>
+:root{font:17px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#29382f;background:#fafbf7}*{box-sizing:border-box}body{margin:0}header{padding:22px 30px;border-bottom:1px solid #d9dfd3;display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff}header strong{font-size:22px}header small{display:block;color:#5b6a5e}.book{display:grid;grid-template-columns:275px minmax(0,1fr);max-width:1500px;margin:auto}nav{padding:26px 18px;position:sticky;top:0;max-height:100vh;overflow:auto;border-right:1px solid #d9dfd3}nav a{display:block;color:#354d3e;text-decoration:none;padding:8px 10px;font-size:14px;line-height:1.6;border-radius:4px}nav a[aria-current=page]{background:#185c40;color:#fff}main{padding:42px 54px;min-width:0}article{max-width:880px;margin:auto}[hidden]{display:none!important}h1{font-size:31px;line-height:1.45;letter-spacing:-.6px;margin:8px 0 24px}h2{font-size:24px;line-height:1.5;border-top:1px solid #d5dfd2;margin:52px 0 22px;padding-top:26px;scroll-margin-top:16px}h3{font-size:19px}p{margin:14px 0}a{color:#126244;text-underline-offset:3px}strong{font-weight:650}pre{background:#edf2e9;border:1px solid #d4dfce;border-radius:6px;padding:20px;overflow:auto;position:relative;line-height:1.65;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:.91em}p code,li code,td code{background:#edf2e9;padding:2px 4px;border-radius:3px}pre code{font-size:inherit}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto}th,td{border:1px solid #d6ded1;padding:11px 13px;min-width:105px;text-align:left;vertical-align:top}th{background:#eef2e8}li{margin:8px 0}.eyebrow{color:#4d6755;font-size:13px;letter-spacing:.5px}.step-links{display:flex;flex-direction:column;border-left:3px solid #adc4aa;padding:6px 20px;margin:22px 0;font-size:14px}.step-links a{text-decoration:none;margin:3px 0}.bottom-nav{display:flex;justify-content:space-between;border-top:1px solid #d5dfd2;padding-top:28px;margin-top:42px}button{font:inherit;font-size:13px;padding:7px 12px;border:1px solid #7f9a80;color:#234d34;background:#fff;border-radius:4px;cursor:pointer}.copy{display:block;margin:0 0 10px}.copy-note{font-size:13px;color:#556750}.notice{position:fixed;bottom:20px;right:20px;background:#244632;color:white;padding:10px 20px;border-radius:4px}.notice:empty{display:none}img{max-width:100%}:focus-visible{outline:3px solid #a66a17;outline-offset:3px}@media(max-width:900px){.book{grid-template-columns:1fr}nav{position:static;max-height:250px;border-bottom:1px solid #d9dfd3;border-right:0;display:grid;grid-template-columns:1fr 1fr}main{padding:28px 20px}h1{font-size:26px}header{align-items:flex-start}header strong{font-size:19px}}@media print{header,nav,.step-links,.copy,.bottom-nav,.notice{display:none!important}.book{display:block}main{padding:0}article[hidden]{display:block!important}article{max-width:none;page-break-before:always}pre{white-space:pre-wrap;break-inside:avoid}h2{break-after:avoid}}
+</style></head><body><header><div><strong>从空白页面做出智慧校园</strong><small>48学时 · 12次课 · 64个小步骤 · CodeBuddy独立IDE</small></div><button onclick="window.print()">打印 / 保存为PDF</button></header><div class="book"><nav aria-label="课程目录"><a href="#chapter-0" aria-current="page">开课前：把工具和空白工程准备好</a><a href="#chapter-1" >第 01 课：从空白页面做出概览</a><a href="#chapter-2" >第 02 课：把设备放进台账</a><a href="#chapter-3" >第 03 课：给设备安排位置和负责人</a><a href="#chapter-4" >第 04 课：看懂读数，再做能源页</a><a href="#chapter-5" >第 05 课：把历史和原始报警接到页面</a><a href="#chapter-6" >第 06 课：走完演练事件，并串起整个前端</a><a href="#chapter-7" >第07课：看着页面，做出第一个后端</a><a href="#chapter-8" >第08课：把设备保存到 MySQL，再接回设备页</a><a href="#chapter-9" >第09课：用 Redis 记住短时登录</a><a href="#chapter-10" >第10课：把空间、读数、历史和责任逐页接回后端</a><a href="#chapter-11" >第11课：让一件演练有始有终，并留下记录</a><a href="#chapter-12" >第12课：把作品交到新目录，让别人照说明启动</a><a href="#chapter-13" >教师安排：用同一份工程上完48学时</a><a href="#chapter-14" >V2教师验证记录</a><p class="copy-note">每次只发送当前步骤。完成实际检查后，再继续下一步。</p></nav><main><article id="chapter-0" data-chapter ><p class="eyebrow">开课准备 · V2.0.2</p><h1>开课前：把工具和空白工程准备好</h1><div class="step-links"><a href="#chapter-0-step-1">1. 安装并打开 CodeBuddy 独立 IDE</a><a href="#chapter-0-step-2">2. 安装 Node 22，确认终端找得到</a><a href="#chapter-0-step-3">3. 解压空白起点，只打开这一层</a><a href="#chapter-0-step-4">4. 学会这一套动作，后面每一步都一样</a><a href="#chapter-0-step-5">5. 分清“AI完成”和“程序在运行”</a><a href="#chapter-0-step-6">6. 第07课前：安装 Java 17</a><a href="#chapter-0-step-7">7. 第08课前：安装并启动 Docker Desktop</a><a href="#chapter-0-step-8">开始第一课</a></div>
+<p>这门课共12次，每次4学时。你将一直修改同一个 <code>campus-lab</code> 文件夹：先从空白网页做出能操作的管理台，再让页面连接你自己生成的后端、MySQL和Redis，最后把作品交给同学重新运行。</p>
+<p>第一次上课只需要 CodeBuddy 和 Node。Java、Docker 可以在课前一起安装，第07、08课才使用。建议教师提前一周检查全班电脑；第一次下载工具和依赖不挤进课堂180分钟。每课的提示词用于生成当前这一步，不一次发送整章。</p>
+<h2 id="chapter-0-step-1">1. 安装并打开 CodeBuddy 独立 IDE</h2>
+<p>打开<a href="https://www.codebuddy.cn/docs/ide/Getting-Started/Installation">官方安装说明</a>，下载与你系统和处理器对应的安装包。macOS 安装到“应用程序”；Windows 运行安装程序。启动 CodeBuddy，按登录页完成你自己的登录。扫码或验证码在软件中完成，不发给同学或AI。</p>
+<p>本教材使用独立 IDE。打开工程后，在 AI 对话区选择 <strong>Craft（Agent）</strong>，它可以修改工程文件；Ask 主要用来提问。入口和文字可能随版本改变，找不到时先让老师对照<a href="https://www.codebuddy.cn/docs/ide/User-guide/Overview">官方 IDE 使用说明</a>。</p>
+<p>模型列表中选择本账号可用、支持编程的模型即可；若已能用 DeepSeek，就继续使用。课程不要求先接百炼、自带 Qwen Key 或购买额外服务。<strong>CodeBuddy登录、模型额度和百炼API账户是不同的准备事项</strong>；登录其中一个不代表另一个已配置好。模型报额度不足或不可用时，先处理账号/模型选择，不能把它当作代码错误反复重写工程。</p>
+<h2 id="chapter-0-step-2">2. 安装 Node 22，确认终端找得到</h2>
+<p>从 <a href="https://nodejs.org/en/download">Node.js 官方下载页面</a>在页面顶部版本下拉框选择 <strong>22.x</strong>，再选本机系统和处理器，下载对应的安装包，按安装向导完成。课程统一22，避免同班同学因版本不同得到不同现象。安装后关闭再打开 CodeBuddy，让新终端读到更新后的环境。</p>
+<p>在 CodeBuddy 顶部菜单选择“终端 → 新建终端”。终端是输入命令的地方，与AI对话框分开。在底部终端输入一行并按回车：</p>
+<pre><code class="language-sh">node --version
+</code></pre>
+<p>看到 <code>v22.</code> 开头就通过。若提示找不到命令，先重开 CodeBuddy 再试；仍失败，请老师检查安装位置和 PATH。不要把“node --version”发给 AI 后把它的回答当成自己的检查结果。</p>
+<h2 id="chapter-0-step-3">3. 解压空白起点，只打开这一层</h2>
+<p>解压随课提供的 <strong>学生空白起点 V2.0.1.zip</strong>。解压后应有一个名为 <code>campus-lab</code> 的文件夹，把它放到自己方便找到的位置，例如 Windows 的 <code>C:\course\campus-lab</code>，或 macOS 的个人目录下 <code>course/campus-lab</code>。</p>
+<p>在 CodeBuddy 选择“文件 → 打开文件夹”，选中 <strong>campus-lab</strong>。左侧文件树应能看到：</p>
+<pre><code class="language-text">campus-lab/
+  frontend/
+    index.html                 ← 现在完全空白，第一课才开始写
+  materials/
+    mock-campus.json           ← 课堂练习数据
+    约定卡.md                  ← 给AI看的统一文件与数据约定
+    maven-wrapper/             ← 第07课才用的Maven启动工具
+  README.md
+</code></pre>
+<p>如果打开后左边只有一个 <code>campus-lab</code> 子文件夹，说明多打开了一层；重新打开内层。如果看到完整后端业务、完整网页或教师验证记录，说明拿错了包，请换“学生空白起点”。</p>
+<p>点击 <code>frontend/index.html</code>。编辑区没有内容是正常的。不用先复制教师参考成品，第01课会带你写出第一个标题。</p>
+<h2 id="chapter-0-step-4">4. 学会这一套动作，后面每一步都一样</h2>
+<ol>
+<li>在教材找到当前步骤的“发给 CodeBuddy”代码框，复制整段到 <strong>AI 对话框</strong>。带【方括号】的补救提示词，只在失败时使用，并换成你实际看到的现象。</li>
+<li>等这一轮回复结束。期间不要再发下一步。遇到文件改动确认，查看路径是当前 <code>campus-lab</code> 的本步文件后保留改动；若软件已直接写入文件，不再找一个不存在的“应用”按钮。</li>
+<li>在编辑器里确认目标文件出现，使用“文件 → 全部保存”。AI说完成后，仍需你自己运行或点击。</li>
+<li>教材写“在终端运行”时，把命令粘贴到 <strong>底部终端</strong>；写“打开地址”时，把地址粘贴到 <strong>浏览器地址栏</strong>。提示词、终端命令和网址各有位置。</li>
+<li>对照“应该看见”亲自操作。通过才进入下一步；失败就只发当前步骤的修复提示，修完后重做同一个检查。</li>
+</ol>
+<p>AI写的文件可能与你同学不完全一样。课程以按钮和数据的行为为准。它如果突然重新生成整套工程，先检查是否发了过大的提示词，让它保留已经做好的文件，只处理当前小步。</p>
+<h2 id="chapter-0-step-5">5. 分清“AI完成”和“程序在运行”</h2>
+<table>
+<thead>
+<tr>
+<th>你看哪里</th>
+<th>什么状态</th>
+<th>现在做什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI对话区</td>
+<td>这一轮仍在生成或改文件</td>
+<td>等这一轮结束，不发送下一步</td>
+</tr>
+<tr>
+<td>AI对话区</td>
+<td>已回复完成</td>
+<td>保存文件，亲自检查本步结果</td>
+</tr>
+<tr>
+<td>A-页面终端</td>
+<td>显示5188地址，光标没有回到提示符</td>
+<td>页面服务正在运行，保持它开着</td>
+</tr>
+<tr>
+<td>B-后端终端</td>
+<td>显示后端启动日志，光标没有回到提示符</td>
+<td>后端正在运行，保持它开着</td>
+</tr>
+<tr>
+<td>C-工具终端</td>
+<td>某条检查完成，回到提示符</td>
+<td>可以输入下一条工具命令</td>
+</tr>
+</tbody></table>
+<p>对话很长时，CodeBuddy可能显示“Chat history summarized”（对话已摘要）。摘要后的回复有时只完成本步的一部分，例如只报告两个测试，却没有接好原页面。仍按本步的接口、页面和亲自操作逐项核对；发现遗漏就把当前步骤和具体缺项反馈给它，要求继续完成。不要把局部测试、任务清单勾选或一句“完成”当作整步通过，也不要为此重新解压工程、覆盖配置或删除数据库。</p>
+<p>给终端命名时，在终端列表的标签上点右键，选择“重命名”，输入 <code>A-页面</code>。如果版本没有重命名入口，可以用终端旁的标签编号记录A/B/C，不影响命令。新建窗口用终端栏的“+”。</p>
+<p>确认当前位置：macOS输入 <code>pwd</code>，Windows PowerShell输入 <code>Get-Location</code>。若不在工程根，在终端输入 <code>cd</code>，空格后加带引号的完整目录，例如Windows <code>cd &quot;C:\course\campus-lab&quot;</code>；macOS可输入 <code>cd </code> 后把Finder中的campus-lab文件夹拖进终端，再按回车。目录最后一层应是campus-lab。教材写“工作目录为backend”时再进入backend，不要每次都重复cd backend。</p>
+<p>第一课只用 A。第七课才新建 B，第八课才需要 C。<strong>不要在正在跑服务的终端粘贴下一条普通命令。</strong> 教材明确写“重启 A/B”时，才在对应终端按 Ctrl+C，等提示符回来后再运行启动命令。Windows 询问是否终止批处理时，确认结束自己的这个进程。</p>
+<h2 id="chapter-0-step-6">6. 第07课前：安装 Java 17</h2>
+<p>从 <a href="https://adoptium.net/temurin/releases/?version=17">Eclipse Temurin 官方页面</a>选择17、JDK和本机架构。安装后重开 CodeBuddy。新终端输入 <code>java -version</code>，应显示17；若电脑原来已有Java21，不卸载原版本，第07课会教你只让当前终端使用17。</p>
+<p>macOS 可先执行 <code>/usr/libexec/java_home -V</code> 查看已安装的JDK。Windows 在安装器中启用 JAVA_HOME/PATH 选项；如果同时有多个17版本，让老师记录本次使用的那个安装目录。不要让AI猜一个不存在的目录。</p>
+<h2 id="chapter-0-step-7">7. 第08课前：安装并启动 Docker Desktop</h2>
+<p>根据<a href="https://docs.docker.com/compose/install/">Docker官方安装入口</a>安装本机对应的 Docker Desktop，它包含本课使用的 Compose。Windows 按<a href="https://docs.docker.com/desktop/setup/install/windows-install/">官方 Windows 安装要求</a>完成 WSL 2 等前提，遇到需要系统管理员权限或重启时先完成安装，再回来上课；不要在课上不断重复失败的启动命令。</p>
+<p>打开 Docker Desktop，等界面显示引擎在运行。CodeBuddy 的新终端逐行运行：</p>
+<pre><code class="language-sh">docker version
+docker compose version
+</code></pre>
+<p>第一条应同时显示 Client 和 Server；只有 Client 不够。第二条应显示 Compose 版本。这里还不启动数据库，第08课才让AI在本工程生成配置并启动本课程容器。教室网络可能影响镜像下载，教师应提前在教室实际检查下载能力。</p>
+<h2 id="chapter-0-step-8">开始第一课</h2>
+<p>此时只要 CodeBuddy 能打开空白 <code>index.html</code>、当前模型能正常回复、Node显示22，就可以打开<a href="#chapter-1">第01课</a>。Java和Docker的检查分别在第07、08课之前完成。</p>
+<div class="bottom-nav"><span></span><a href="#chapter-1">下一部分 →</a></div></article>
+<article id="chapter-1" data-chapter hidden><p class="eyebrow">第 01 课 · 4学时 · V2.0.2</p><h1>第 01 课：从空白页面做出概览</h1><div class="step-links"><a href="#chapter-1-step-1">第 1 步：让空白文件变成第一张页面</a><a href="#chapter-1-step-2">第 2 步：给管理台搭出外框</a><a href="#chapter-1-step-3">第 3 步：在概览中放三张卡片</a><a href="#chapter-1-step-4">第 4 步：把外观和操作分开，让菜单能切换</a><a href="#chapter-1-step-5">第 5 步：亲手改一次，留下第一课作品</a></div>
+<p>本课 4 学时，共 180 分钟。我们先做一个看得见、点得动的校园管理台。今天结束时，页面有自己的名称、左侧菜单和概览卡片。数据将在下一课加入。</p>
+<p>五步建议用时依次为 40、35、25、45、35 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>课前先完成“开始前的准备”。你的电脑里应有 <code>campus-lab</code> 文件夹，里面有公开练习资料 <code>materials</code>，以及一个空的 <code>frontend/index.html</code>。用 CodeBuddy 的“打开文件夹”打开 <strong>campus-lab 整个文件夹</strong>。不要只打开那一个 HTML 文件。</p>
+<p>今天会用到三个地方：CodeBuddy 对话框用来发提示词；CodeBuddy 终端用来运行页面；浏览器用来看结果。下面每一步只发一段提示词。等这一步完成、自己看过结果，再发下一段。</p>
+<p>**先记住两个不同的“完成”：**AI 写完文件并回复本步结果，就可以检查页面；终端里的页面服务会一直运行，不需要等它退出。后面看到页面正常后，让终端继续开着。只有教程明确写“重启终端 A”时，才在终端 A 按 <code>Ctrl+C</code>。</p>
+<h2 id="chapter-1-step-1">第 1 步：让空白文件变成第一张页面</h2>
+<p>**现在在哪：**CodeBuddy 左边的文件区。展开 <code>frontend</code>，点开空的 <code>index.html</code>。如果文件不存在，右键 <code>frontend</code> 新建文件，名字完整写成 <code>index.html</code>。</p>
+<p>切到可以修改项目文件的 <strong>Craft</strong> 模式，把下面一整段发到 CodeBuddy：</p>
+<pre><code class="language-prompt">我们从零制作一个大学生练习用的智慧校园管理台。当前打开的是 campus-lab 根目录。先读 materials/约定卡.md，只完成本步。
+
+1. 在现有空文件 frontend/index.html 中写一个完整 HTML 页面，页面语言为中文，浏览器标签名和页面大标题都叫“我的校园值班台”。标题下面显示“第一张页面已经打开”和“教学模拟项目”。先不要加入业务数据。
+2. 创建 tools/serve.mjs，使用 Node 22 自带模块，不安装依赖。监听 127.0.0.1:5188，只提供 frontend 目录中的文件；不允许读取隐藏文件、项目根目录、backend 或目录外文件。正确设置 HTML、CSS、JavaScript 的类型。/api/* 转发到 127.0.0.1:8098，保留 /api 路径；后端未启动时返回清楚的服务不可用提示。
+3. 保存文件，可以运行会自行退出的语法检查，但不要启动常驻服务。
+
+完成后列出实际保存的文件，并告诉我下一步在终端输入什么。不要继续做其他页面。
+</code></pre>
+<p>**等到什么：**等 CodeBuddy 的修改结束，并回复保存了 <code>frontend/index.html</code>、<code>tools/serve.mjs</code>。在左边分别点开这两个文件，确认它们已有内容。若它只在对话中给出了代码而没有保存，回复“请把本步代码实际写入刚才指定的文件并保存”，先完成保存。</p>
+<p><strong>自己运行：</strong></p>
+<ol>
+<li><p>在 CodeBuddy 打开一个终端，把它命名为 <strong>A-页面</strong>。</p>
+</li>
+<li><p>看终端当前目录，末尾应是 <code>campus-lab</code>。如果不是，先切到这个文件夹。</p>
+</li>
+<li><p>输入并回车：</p>
+<pre><code class="language-sh">node tools/serve.mjs
+</code></pre>
+</li>
+<li><p>等终端显示本地地址，在浏览器地址栏输入 <code>http://127.0.0.1:5188</code>。</p>
+</li>
+</ol>
+<p>**应该看到：**页面上有“我的校园值班台”“第一张页面已经打开”和“教学模拟项目”。终端 A 还在运行，这是正常现象。</p>
+<p>**如果没看到：**先核对浏览器地址和终端所在目录。然后单独把这一段发给 CodeBuddy，在它后面补上终端第一条错误；没有错误就写“终端没有错误，浏览器显示……”。不要粘贴密码。</p>
+<pre><code class="language-prompt">我在第01课第1步。预期打开本地地址后看到“我的校园值班台”，现在没有看到。我会附上实际现象和第一条错误。请只检查本步的 index.html 和 serve.mjs，修复这个问题并保存，不继续添加功能，也不要替我启动服务。若修改了 serve.mjs，明确提醒我只重启终端 A。
+</code></pre>
+<p>如果修改了 <code>serve.mjs</code>，到终端 A 按一次 <code>Ctrl+C</code>，再运行刚才那条命令。如果只修改了 HTML，在浏览器刷新即可。看到标题后，进入第 2 步。</p>
+<h2 id="chapter-1-step-2">第 2 步：给管理台搭出外框</h2>
+<p>**现在在哪：**保持浏览器和终端 A 打开，回到 CodeBuddy 对话框。这一步只安排页面位置。</p>
+<pre><code class="language-prompt">继续修改当前项目，只完成第01课第2步。
+
+把 frontend/index.html 分成左侧菜单、顶部标题、右侧内容三块。保留“我的校园值班台”和“教学模拟项目”。
+左侧从上到下放九个菜单：概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。页面内部名称依次为 dashboard、devices、spaces、energy、history、alarms、cases、owners、admin。
+右侧先显示“概览”，下面写“我们将在下一课放入校园设备”。菜单暂时可以还不能切换。
+先把本步所需的少量样式写在 index.html 中。文字清楚、按钮容易点，窄屏不让主内容挤到屏幕外。不引入框架、图标库、远程字体或新依赖。
+保存文件，不启动常驻服务；告诉我改了哪一处。
+</code></pre>
+<p>**等到什么：**等 AI 回复本步完成，点开 <code>index.html</code> 看是否已保存。浏览器刷新一次。</p>
+<p>**自己点看：**从上到下读出九个菜单，找到顶部平台名和右侧“概览”。把浏览器窗口缩窄，再放宽。</p>
+<p>**应该看到：**九个菜单都能读清，主内容没有被侧栏盖住。这一步还没有要求菜单切页，所以现在点击无变化不算错误。</p>
+<p>**如果排版挤在一起：**只发下面的修复提示，并说明是宽窗口还是窄窗口：</p>
+<pre><code class="language-prompt">第01课第2步的外框排版有问题：我将说明哪个区域挡住了哪个区域。请只修复现有 index.html 的布局，保留九个菜单和所有文字，不添加新功能。保存后告诉我应刷新检查哪一处。
+</code></pre>
+<p>排版能正常阅读后，进入第 3 步。</p>
+<h2 id="chapter-1-step-3">第 3 步：在概览中放三张卡片</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们让首页像一个管理台，但还不假装已经读到了设备。</p>
+<pre><code class="language-prompt">继续修改当前 index.html，只完成第01课第3步。
+在概览页面增加三张卡片：“设备总数”“空间总数”“点位总数”。卡片数值区域目前统一写“尚未载入”，不要写0或随便编一个数字。
+卡片下加一块“今天先做什么”，用一句话写“先查看设备，再了解读数，发现问题后登记演练事件”。
+页面持续显示“教学模拟项目”。让三张卡片在宽屏并排，窄屏自然换行。不加入图表、不请求后端、不安装依赖。
+保存文件，不启动服务，不做下一步。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。打开文件看看三张卡片的标题，再回浏览器刷新。</p>
+<p>**自己点看：**读出三个标题；缩窄窗口，观察卡片是否往下排列。</p>
+<p>**应该看到：**三张卡片都写“尚未载入”。这里的“点位”可以理解为设备的一项读数，例如温度计的温度、湿度。下一课我们会让卡片显示真正从练习数据数出来的结果。</p>
+<p>**如果出现编造的数字：**单独发送：</p>
+<pre><code class="language-prompt">第01课第3步尚未加入练习数据，但卡片出现了数字。请把设备、空间、点位三张卡片都恢复为“尚未载入”，保留卡片外观。不要用0代表尚未读取，也不要提前读取数据。
+</code></pre>
+<p>卡片正确后，进入第 4 步。</p>
+<h2 id="chapter-1-step-4">第 4 步：把外观和操作分开，让菜单能切换</h2>
+<p>**现在在哪：**CodeBuddy 对话框。这一步会多出两个文件。<code>styles.css</code> 管外观；<code>app.js</code> 管点击后发生什么。</p>
+<pre><code class="language-prompt">继续当前项目，只完成第01课第4步。
+1. 将 index.html 中的样式原样移到 frontend/styles.css，让 HTML 引用它。拆分后外观应保持不变。
+2. 创建 frontend/app.js，由 index.html 以 type=&quot;module&quot; 引入。九个菜单点击后切换对应内容区域，并突出当前菜单。可以使用 #dashboard、#devices 等地址片段保存当前位置，刷新后仍能回到该菜单。
+3. 概览保留现有三张卡片。其他八个菜单各显示自己的中文标题和“这个页面会在后续课程完成”，不要伪装成已经有业务功能。
+4. 点击菜单不打开新的网页，不刷新整个浏览器页面。对显示在页面中的文本使用安全的文字写入方式。
+保存三个文件，不安装框架，不启动服务。完成后告诉我在哪里引用 CSS 和 JavaScript。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。左侧应能看见 <code>index.html</code>、<code>styles.css</code>、<code>app.js</code> 三个文件。打开 HTML，找到它引用另外两个文件的地方；不要求现在背下写法。</p>
+<p>**自己点看：**刷新浏览器，依次点击“设备”“历史”“概览”。停在“历史”时，再按浏览器刷新。</p>
+<p>**应该看到：**每次只显示当前页面；“历史”有自己的标题，刷新后还在“历史”；回到概览，三张卡片仍在。</p>
+<p>**如果点击没有变化：**先确认 <code>app.js</code> 已保存，再单独发：</p>
+<pre><code class="language-prompt">第01课第4步菜单不能正常切换。我将说明点击哪个菜单、页面实际显示什么。请检查 index.html 对 app.js 的引用、菜单对应名称和点击处理，只修复切换问题。不要重写外观，也不要删除现有菜单。保存后告诉我重复哪三个点击检查。
+</code></pre>
+<p>菜单切换正确后，进入第 5 步。</p>
+<h2 id="chapter-1-step-5">第 5 步：亲手改一次，留下第一课作品</h2>
+<p>**现在在哪：**CodeBuddy 文件区。先自己打开 <code>frontend/index.html</code>，找到“我的校园值班台”，把平台名称改成你的小组名称，例如“晨光校园值班台”，保存。如果平台名由 <code>app.js</code> 统一设置，就在那个文件改。浏览器刷新后，确认改动出现。</p>
+<p>然后发送：</p>
+<pre><code class="language-prompt">第01课进入收尾。请只检查当前前端文件，不增加业务功能：
+学生刚亲手修改了平台名称。请先读取当前文件中的名称，以学生当前选择为准，只检查浏览器标签名与页面大标题是否一致；不要恢复第1步的默认名称“我的校园值班台”。若两处不同而无法确定学生选择，先询问，不自行替学生改名。
+平台名称是否一致，九个菜单是否齐全，CSS和JS是否正确引用，首页是否仍保留三张“尚未载入”卡片。
+如果发现本课遗漏，做最小修复并保存。不要启动常驻服务，不要继续读取校园数据。
+最后用三句话告诉我：HTML负责什么、CSS负责什么、JavaScript负责什么。只报告实际做过的检查。
+</code></pre>
+<p>**等到什么：**等 AI 回复检查结果。它说通过以后，你仍然要自己在浏览器检查一次。</p>
+<p>**自己点看：**从“概览”点到“管理”，再回“概览”；将窗口缩窄，确认名称、菜单和卡片仍能看清。</p>
+<p>**应该看到：**自己的平台名、九个能切换的菜单、三张等待数据的卡片。今天没有后端，也没有数据库，这个结果就符合本课目标。</p>
+<p>**如果改名后页面不变：**单独发：</p>
+<pre><code class="language-prompt">第01课第5步我已经保存了平台名称，但浏览器刷新后仍显示旧名称。请查出页面实际使用名称的位置，统一成本项目现在的名称。只修复名称，不重建工程。告诉我需要刷新还是只需重新保存文件。
+</code></pre>
+<p>完成后，在 CodeBuddy 左侧 <code>campus-lab</code> 根目录上点右键，选“新建文件夹”，输入 <code>notes</code>；再在 <code>notes</code> 上点右键新建文件，输入 <code>01-我的第一张页面.md</code>。写三行：我改了哪个名称；我实际点过哪些菜单；还有什么没成功，然后保存。后面几课的记录继续放在这个文件夹。保存一张自己的浏览器截图，截图留在自己的作业资料中。</p>
+<p>**接下来：**继续上课就让终端 A 保持运行，进入第 02 课。如果今天到此结束，在终端 A 按 <code>Ctrl+C</code> 停止页面服务；下次仍在 <code>campus-lab</code> 根目录运行 <code>node tools/serve.mjs</code>。不要删文件，也不要重新建一个项目。</p>
+<div class="bottom-nav"><a href="#chapter-0">← 上一部分</a><a href="#chapter-2">下一部分 →</a></div></article>
+<article id="chapter-2" data-chapter hidden><p class="eyebrow">第 02 课 · 4学时 · V2.0.2</p><h1>第 02 课：把设备放进台账</h1><div class="step-links"><a href="#chapter-2-step-1">第 1 步：把练习数据放进自己的前端</a><a href="#chapter-2-step-2">第 2 步：先让 16 台设备全部出现</a><a href="#chapter-2-step-3">第 3 步：加搜索和筛选，找到想看的设备</a><a href="#chapter-2-step-4">第 4 步：点“查看”，看到同一台设备的读数</a><a href="#chapter-2-step-5">第 5 步：把真实模拟数量接回概览</a></div>
+<p>本课 4 学时，共 180 分钟。继续使用第 01 课的 <code>campus-lab</code>，完成一张能搜索、能筛选、能查看详情的设备表。概览中的三张卡片也会得到数值。</p>
+<p>五步建议用时依次为 30、35、40、45、30 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>开始前，打开 CodeBuddy 中原来的 <code>campus-lab</code>。如果浏览器已经能打开页面，不要重复启动服务；如果打不开且终端 A 已结束，在根目录的 <strong>A-页面</strong> 终端运行 <code>node tools/serve.mjs</code>，再打开 <code>http://127.0.0.1:5188</code>。本课始终让终端 A 继续运行。</p>
+<p>练习资料 <code>materials/mock-campus.json</code> 已经准备好。它只有公开的模拟数据，没有真实校园连接和密码。今天要把这份资料用到页面里，不需要启动 Java 或数据库。</p>
+<h2 id="chapter-2-step-1">第 1 步：把练习数据放进自己的前端</h2>
+<p>**现在在哪：**CodeBuddy 文件区，先点开 <code>materials/mock-campus.json</code>。不用逐字看完，找到 <code>spaces</code>、<code>devices</code>、<code>points</code> 三处：它们分别是空间、设备、设备读数。</p>
+<p>在 Craft 对话框发送：</p>
+<pre><code class="language-prompt">继续 campus-lab，只完成第02课第1步。先读 materials/约定卡.md 和 materials/mock-campus.json。
+创建 frontend/mock-data.js，将公开 JSON 完整转换成可导入的 JavaScript 数据，导出名为 mockCampus。不要编造、删减或修改练习数据。
+创建 frontend/data-service.js，导出异步方法 getOverview()、getDevices()、getSpaces()。getOverview返回包含spaces、devices、points、history、alarms的完整练习数据；另两个方法分别返回devices、spaces。每次返回独立副本，页面不要直接改原始mockCampus。
+app.js以后统一从data-service取业务数据，不直接导入mock-data。保留现有外观和菜单。在概览底部增加一句“数据方式：浏览器演示（教学模拟）”，读取成功后显示练习数据的设备、空间、点位数量；暂不改上面的三张卡片。
+不要请求后端，不把materials整个目录开放到浏览器，不安装依赖。保存文件，不启动服务，不继续下一步。
+</code></pre>
+<p>**等到什么：**等 AI 保存并回复完成。左边应新增 <code>mock-data.js</code>、<code>data-service.js</code>。确认文件位于 <code>frontend</code>，然后刷新浏览器。</p>
+<p>**自己点看：**打开“概览”，读底部那一句。</p>
+<p><strong>应该看到：</strong>“浏览器演示（教学模拟）”，以及 <strong>16 台设备、4 个空间、28 个点位</strong>。这三个数量是从练习数据数出来的；上方卡片暂时仍是“尚未载入”。</p>
+<p>**如果数量不对或页面空白：**只发下面这段，并补充实际显示的数量：</p>
+<pre><code class="language-prompt">第02课第1步预期从公开练习JSON读到16台设备、4个空间、28个点位，实际结果不一致。我将补上看到的内容。请核对JSON转换、模块导入和返回的数据，修复本步问题。不要把16、4、28硬写成显示结果，不修改练习JSON，也不要引入后端。
+</code></pre>
+<p>三个数量正确后，进入第 2 步。</p>
+<h2 id="chapter-2-step-2">第 2 步：先让 16 台设备全部出现</h2>
+<p>**现在在哪：**CodeBuddy 对话框。只处理“设备”菜单中的内容。</p>
+<pre><code class="language-prompt">继续现有项目，只完成第02课第2步。用data-service.js的getDevices和getSpaces，在“设备”页面显示设备表。
+每行有编号、设备名称、类型、空间、在线情况和“查看”按钮。编号使用原始d01到d16，空间通过spaceId对应实际空间名称。
+表格下方显示根据当前返回数组计算的设备总数，不把16写死。
+类型显示为中文：environment环境、energy能源、facility设施、lighting照明。
+online严格为true显示“在线”，严格为false显示“离线”，null显示“未知”。不要把未知当离线。
+读取时显示“正在读取设备”；读取失败显示错误和重试按钮；没有设备时显示“没有设备”。这三种情况分开。
+保留九个菜单和已有概览。保存文件，不启动服务；本步“查看”按钮可以先不打开详情。
+</code></pre>
+<p>**等到什么：**等 AI 修改保存完成。浏览器刷新，点击“设备”。</p>
+<p>**自己点看：**看表格底部是否写出当前数量，向下滚动到最后一行。</p>
+<p>**应该看到：**16 行设备，编号覆盖 <code>d01</code> 到 <code>d16</code>；每行有空间名称和中文类型；未知状态写“未知”。“查看”按钮暂时未接上详情，在本步是允许的。</p>
+<p>**如果少了设备或未知变成离线：**单独发送：</p>
+<pre><code class="language-prompt">第02课第2步设备表有问题，我将补上少了哪一行或哪一行状态不对。请从getDevices返回值到表格逐项核对，只修复本步的列表显示。保留原始设备ID；online=null必须是未知，不能替换成false。不要重写其他页面。
+</code></pre>
+<p>列表正确后，进入第 3 步。</p>
+<h2 id="chapter-2-step-3">第 3 步：加搜索和筛选，找到想看的设备</h2>
+<p>**现在在哪：**CodeBuddy 对话框。继续修改刚才的设备页，不要另建一张设备页。</p>
+<pre><code class="language-prompt">只完成第02课第3步，在现有设备表上方增加：
+名称或编号搜索框、类型下拉框、空间下拉框、在线情况下拉框，以及“清空筛选”按钮。
+多个条件一起起作用。搜索前去掉首尾空格；类型和空间使用稳定ID，不用行号。在线筛选有全部、在线、离线、未知。
+显示“当前显示X台 / 全部16台”，全部数量也必须根据数据计算，不能写死。
+无匹配时显示“没有符合条件的设备”，保留筛选条件和清空按钮。清空后显示全部设备。
+不要改动数据，不加入分页或新依赖。保留第2步的加载和失败提示。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 回复完成，刷新浏览器，打开设备页。</p>
+<p><strong>自己点看：</strong></p>
+<ol>
+<li>类型选择“能源”，应剩下 4 台。</li>
+<li>在搜索框输入表格里某台能源设备的完整编号，应只剩那一台。</li>
+<li>把搜索内容改为 <code>找不到的设备</code>，应没有匹配。</li>
+<li>点“清空筛选”，应恢复全部 16 台。</li>
+</ol>
+<p>**应该看到：**表格和“当前显示”数量一起变化。空结果不会把整个页面清空，清空按钮还在。</p>
+<p>**如果多个条件互相覆盖：**单独发送：</p>
+<pre><code class="language-prompt">第02课第3步筛选没有同时生效。我将描述先选什么、再输入什么、实际剩下几台。请只修复设备页的组合筛选和清空按钮，保留加载、错误与空结果提示。不要删除已有筛选项，也不要改练习数据。
+</code></pre>
+<p>四个动作都成功后，进入第 4 步。</p>
+<h2 id="chapter-2-step-4">第 4 步：点“查看”，看到同一台设备的读数</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们把第 2 步留下的“查看”按钮接上。</p>
+<pre><code class="language-prompt">只完成第02课第4步。继续现有设备页，让每行“查看”按钮打开该台设备的详情区域。按设备原始id查找，不能默认打开第一台。
+详情显示编号、名称、类型、空间、在线情况。使用getOverview中的points，筛出deviceId等于本设备id的读数，列出tagId、value、unit、采样时间time、quality。
+value为null显示“缺失”，数字0显示“0”；time为null显示“无采样时间”。quality显示中文：fresh正常、stale较旧、missing缺失、invalid无效。保留原字段含义，不把较旧数据写成刚采集。
+添加“收起详情”按钮，收起后设备表的筛选条件仍在。本课先不加历史按钮。
+保留前面全部功能，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器。</p>
+<p>**自己点看：**先选“能源”，打开其中第二行的“查看”。核对详情编号是否等于刚才点击的那行；再收起详情。</p>
+<p>**应该看到：**你点哪台就显示哪台；能源设备显示功率 <code>power</code> 和电压 <code>voltage</code> 两项；收起后能源筛选仍然保留。再选一台环境设备，应能看到温度和湿度。</p>
+<p>**如果总是打开第一台：**单独发送：</p>
+<pre><code class="language-prompt">第02课第4步详情与点击的行不一致。我将给出点击行的设备ID和详情显示的ID。请只修复“查看”按钮传递设备ID和详情查找过程，不用数组位置猜设备。保留筛选条件和null、0的区别。
+</code></pre>
+<p>详情能对应正确设备后，进入第 5 步。</p>
+<h2 id="chapter-2-step-5">第 5 步：把真实模拟数量接回概览</h2>
+<p>**现在在哪：**CodeBuddy 对话框。回到第 01 课留下的三张卡片，使用我们刚刚接好的数据。</p>
+<pre><code class="language-prompt">只完成第02课第5步。把概览上“设备总数”“空间总数”“点位总数”三张卡片改为从getOverview实际返回的数组长度计算。
+读取期间写“正在读取”，读取失败明确显示错误，不用0代替读取失败。
+点击“设备总数”卡片进入现有设备页面并清空筛选。不要新建第二张设备表。保留页面上的“浏览器演示（教学模拟）”说明。
+检查设备页的搜索、筛选、查看详情还可使用。保存文件，不启动服务，不继续开发其他页面。
+</code></pre>
+<p>**等到什么：**等 AI 保存并回复完成。浏览器刷新。</p>
+<p>**自己点看：**先去设备页筛选能源设备，再回概览。读出三张卡片的数值，点击“设备总数”。</p>
+<p>**应该看到：**卡片显示 <strong>16、4、28</strong>；点击设备卡片后，回到已有的设备表并显示全部 16 台。前一课的卡片和这一课的表格已经连在一起。</p>
+<p>**如果进入设备页还只有 4 台：**单独发送：</p>
+<pre><code class="language-prompt">第02课第5步点击概览的设备总数后，设备页还保留旧筛选。请只修复这个入口：进入同一设备页前清空筛选并显示全部设备。不要复制一个新页面，不改变从设备详情返回时保留筛选的行为。
+</code></pre>
+<p>完成后，在 <code>notes/02-设备台账.md</code> 写下：你检查过的一个设备编号；它的一个点位及单位；筛选无匹配时页面显示什么。保存一张“能源筛选后 4 台设备”的截图。</p>
+<p>**接下来：**让终端 A 继续运行，进入第 03 课。我们会补全设备所在的空间，并给设备登记负责人。</p>
+<div class="bottom-nav"><a href="#chapter-1">← 上一部分</a><a href="#chapter-3">下一部分 →</a></div></article>
+<article id="chapter-3" data-chapter hidden><p class="eyebrow">第 03 课 · 4学时 · V2.0.2</p><h1>第 03 课：给设备安排位置和负责人</h1><div class="step-links"><a href="#chapter-3-step-1">第 1 步：把四个空间做成看得懂的页面</a><a href="#chapter-3-step-2">第 2 步：修改一个空间的楼栋和楼层</a><a href="#chapter-3-step-3">第 3 步：让刷新后的浏览器记得位置</a><a href="#chapter-3-step-4">第 4 步：给一台设备登记负责人</a><a href="#chapter-3-step-5">第 5 步：从设备详情找到负责人，再回到空间</a></div>
+<p>本课 4 学时，共 180 分钟。我们要回答两个简单问题：这台设备在哪栋楼、哪一层？出现问题时由谁处理？</p>
+<p>五步建议用时依次为 30、35、35、45、35 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>继续打开原来的 <code>campus-lab</code>，让终端 <strong>A-页面</strong> 运行。浏览器地址仍是 <code>http://127.0.0.1:5188</code>。本课只在自己的浏览器中保存练习内容，还没有数据库。换一台电脑或换一个浏览器，不会自动带上这些记录。</p>
+<p><strong>重新开课：</strong> 打开原 <code>campus-lab</code>。若 A 已结束，在项目根的 A-页面运行 <code>node tools/serve.mjs</code>，再用上次的同一个浏览器打开 <code>http://127.0.0.1:5188</code>。若页面已能打开，就沿用原 A，不重复启动。本课不启动 Java、MySQL 或 Redis。</p>
+<h2 id="chapter-3-step-1">第 1 步：把四个空间做成看得懂的页面</h2>
+<p>**现在在哪：**CodeBuddy 对话框。发送：</p>
+<pre><code class="language-prompt">继续当前项目，只完成第03课第1步。读取materials/约定卡.md，使用data-service.js的getSpaces和getDevices完善现有“空间”页面。
+按原始s1到s4显示四个空间，每个空间展示名称、楼栋building、楼层floor，以及属于它的设备数量。设备按spaceId归属，数量必须计算。
+每个空间有“查看设备”按钮，点击后进入现有设备页，并只筛选此spaceId；清空其他旧筛选，保留空间这一项。不要另外复制设备表。
+显示“浏览器演示：本课修改只保存在当前浏览器”。先不增加编辑功能。
+保留前两课功能，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，点击“空间”。</p>
+<p>**自己点看：**找到四个空间；选择其中一个，记住名称，点“查看设备”。</p>
+<p>**应该看到：**进入原来的设备页，空间筛选框显示刚才选中的空间；设备各行的空间名称一致。点“清空筛选”后恢复 16 台。</p>
+<p>**如果显示了其他空间的设备：**单独发送：</p>
+<pre><code class="language-prompt">第03课第1步从空间点“查看设备”后筛选不对。我将补上所点空间和实际设备列表。请只检查spaceId的传递与设备页筛选，不用空间名称或数组行号猜ID，不新建第二套设备页面。
+</code></pre>
+<p>空间到设备的入口正确后，进入第 2 步。</p>
+<h2 id="chapter-3-step-2">第 2 步：修改一个空间的楼栋和楼层</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们先让表单能保存，再在下一步检查刷新后是否保留。</p>
+<pre><code class="language-prompt">只完成第03课第2步。在现有空间页面给每个空间增加“编辑位置”按钮。
+打开表单后显示该空间名称，只允许修改building和floor，不修改空间ID、不修改设备ID、不移动设备归属。表单有“保存”和“取消”。
+在data-service.js中增加异步saveSpace(id,{building,floor})。两个值去掉首尾空格后必须非空；失败时保留输入并显示清楚的提示。成功后返回更新的空间，页面重新读取getSpaces再展示结果。
+将修改先保留在data-service的当前运行数据里，不改mock-data.js原始练习数据。页面标明“浏览器演示”。
+保存文件，不启动服务，不做负责人功能。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。浏览器刷新，打开空间页，选择第一张空间卡的“编辑位置”。</p>
+<p>**自己点看：**把楼栋改成 <code>教学楼A</code>、楼层改成 <code>2层</code>，点“保存”。再打开编辑，把楼层内容清空，尝试保存。</p>
+<p>**应该看到：**第一次保存后卡片显示新位置；第二次不允许保存，并明确提醒楼层不能为空，表单仍在，原来已经成功保存的位置没有被清空。</p>
+<p>**如果空内容也保存成功：**单独发送：</p>
+<pre><code class="language-prompt">第03课第2步空间位置表单允许保存空内容。请同时检查页面和saveSpace：building、floor去空格后不能为空；失败保留本次输入，不覆盖上次成功的位置。只修复这个问题。
+</code></pre>
+<p>把表单恢复为有效楼层并保存，进入第 3 步。</p>
+<h2 id="chapter-3-step-3">第 3 步：让刷新后的浏览器记得位置</h2>
+<p>**现在在哪：**CodeBuddy 对话框。本步用到的 <code>localStorage</code> 可以理解为浏览器里的一小块保存位置。它不是 MySQL 数据库。</p>
+<pre><code class="language-prompt">只完成第03课第3步。在data-service.js中给空间演示增加浏览器保存功能。
+统一使用localStorage键campus-v2-demo，以一个对象保存演示spaces、owners、cases。现在已有空间修改写入spaces；owners和cases暂时保留为空或保留已有内容，不相互覆盖。
+启动时先读取原始mockCampus，再合并已保存的空间位置；getSpaces、getOverview返回同一份当前空间数据的副本。saveSpace成功才保存。JSON损坏或浏览器禁止保存时，显示可理解的错误，不默默清空其他演示记录。
+让空间页和设备表的空间信息一起更新；保留“当前浏览器演示，尚未写入数据库”说明。不要新增“清空全部”按钮。
+保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。刷新浏览器后，重新编辑刚才那个空间，保存 <code>教学楼A / 2层</code>。</p>
+<p>**自己点看：**按浏览器刷新，回到空间页；再点“查看设备”并打开一台设备详情。</p>
+<p>**应该看到：**空间卡片仍显示新位置；关联页面展示的是同一空间。把浏览器标签页关闭后重新打开同一地址，位置也仍在。这个结果只证明当前浏览器保存成功。</p>
+<p>**如果刷新后恢复旧位置：**单独发送：</p>
+<pre><code class="language-prompt">第03课第3步保存位置成功，但刷新后又变回原值。请检查campus-v2-demo的写入、读取和合并顺序，只修复空间演示保存。不要删除浏览器已有记录，不改原始mock-data，也不要加数据库。
+</code></pre>
+<p>位置能保留后，进入第 4 步。</p>
+<h2 id="chapter-3-step-4">第 4 步：给一台设备登记负责人</h2>
+<p>**现在在哪：**CodeBuddy 对话框。接下来进入第 01 课已经建好的“设备责任”菜单。</p>
+<pre><code class="language-prompt">只完成第03课第4步。完善“设备责任”页面，显示设备编号、名称、当前负责人、备注和“登记”按钮。
+增加异步getOwners()和saveOwner(deviceId,{username,note,expectedVersion})。负责人本课固定可选manager，页面写“处理人 manager（课堂角色）”，不要编造真实人员账号。
+没有登记时写“尚未登记”，版本视为0。首次保存后version为1，后续保存+1；提交时使用刚读取的版本。如果版本不一致，提示重新读取后再决定，不自动重试。
+备注去掉首尾空格后不能为空。保存在campus-v2-demo对象的owners部分，保留已有spaces、cases。
+保存成功后重新读取负责人列表再显示；页面持续标明浏览器演示。不要把这里写成真实权限控制。
+保留其他页面，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，点击“设备责任”。</p>
+<p>**自己点看：**找到 <code>d01</code>，点“登记”，选择处理人 <code>manager</code>，备注填写 <code>日常巡查联系这位处理人</code>，保存。刷新后再次查看 <code>d01</code>。</p>
+<p><strong>应该看到：</strong><code>d01</code> 有负责人和刚才的备注，版本为 1；其他设备仍可显示“尚未登记”；第 3 步修改的空间位置仍在。版本只是这一条记录改过多少次的标记，现在先会看即可。</p>
+<p>**如果保存责任后空间修改消失：**单独发送：</p>
+<pre><code class="language-prompt">第03课第4步登记负责人后，前面保存的空间位置消失了。请修复campus-v2-demo对象的局部更新：写owners时保留spaces和cases，写spaces时也保留其他部分。不要通过清空本地记录解决问题。
+</code></pre>
+<p>负责人能保存、空间没有丢失后，进入第 5 步。</p>
+<h2 id="chapter-3-step-5">第 5 步：从设备详情找到负责人，再回到空间</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们把本课新增的页面接回前两课的入口。</p>
+<pre><code class="language-prompt">只完成第03课第5步。继续已有设备详情，展示本设备当前负责人和备注，未登记时明确写“尚未登记”。
+添加“查看责任登记”入口，打开现有设备责任页面并定位本设备；添加“查看所在空间”入口，打开现有空间页面并定位其spaceId。
+空间和责任修改后，回到设备详情应重新读取当前内容，不显示旧副本。保留原有设备筛选、在线状态、读数和收起详情。
+不用复制新页面，不添加数据库或登录。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，浏览器刷新。</p>
+<p>**自己点看：**设备页搜索 <code>d01</code>，打开详情，查看负责人；点“查看责任登记”，核对仍是 <code>d01</code>；回设备详情，点“查看所在空间”，核对空间 ID 一致。</p>
+<p>**应该看到：**这三个入口说的是同一台设备、同一个空间、同一条负责人记录。页面没有把设备的显示顺序当成编号。</p>
+<p>**如果跳到了别的设备或空间：**单独发送：</p>
+<pre><code class="language-prompt">第03课第5步跨页面跳转定位错了。我将给出出发时的设备ID、目标页面实际ID。请只修复稳定ID的传递和目标页定位，保留原页面，不新建副本，也不按数组序号定位。
+</code></pre>
+<p>完成后，在 <code>notes/03-位置和责任.md</code> 记录：你修改的空间；你登记责任的设备；刷新后两项是否还在。保存一张 <code>d01</code> 详情中显示负责人信息的截图。</p>
+<p>**接下来：**终端 A 继续运行，进入第 04 课。我们会让“概览”和“能源”读懂已经显示在设备详情中的读数。</p>
+<div class="bottom-nav"><a href="#chapter-2">← 上一部分</a><a href="#chapter-4">下一部分 →</a></div></article>
+<article id="chapter-4" data-chapter hidden><p class="eyebrow">第 04 课 · 4学时 · V2.0.2</p><h1>第 04 课：看懂读数，再做能源页</h1><div class="step-links"><a href="#chapter-4-step-1">第 1 步：先把设备详情中的读数讲清楚</a><a href="#chapter-4-step-2">第 2 步：在概览中指出哪些读数需要留意</a><a href="#chapter-4-step-3">第 3 步：能源页先只显示功率</a><a href="#chapter-4-step-4">第 4 步：加电压切换，数值和单位一起换</a><a href="#chapter-4-step-5">第 5 步：把概览、能源和设备台账连起来</a></div>
+<p>本课 4 学时，共 180 分钟。我们会把设备详情里的读数放到概览和能源页面，让使用者能先发现值得查看的地方，再找到具体设备。</p>
+<p>五步建议用时依次为 30、40、40、35、35 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>继续原来的 <code>campus-lab</code>，保留终端 <strong>A-页面</strong>。本课练习数据的采样日期固定在 <strong>2026 年 10 月 20 日</strong>。刷新页面是重新显示这些样本，不代表设备刚刚采集了新数据。</p>
+<p>今天只记住三个区别：<strong>0 是一个读数；缺失是没有读数；较旧是有读数但不能当作现在的情况。</strong></p>
+<p><strong>重新开课：</strong> 打开原 <code>campus-lab</code>。若 A 已结束，在项目根的 A-页面运行 <code>node tools/serve.mjs</code>，再用上次的同一个浏览器打开 <code>http://127.0.0.1:5188</code>。若页面已能打开，就沿用原 A，不重复启动。本课不启动 Java、MySQL 或 Redis。</p>
+<h2 id="chapter-4-step-1">第 1 步：先把设备详情中的读数讲清楚</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们先整理已有详情，不另建一份数据。</p>
+<pre><code class="language-prompt">继续当前项目，只完成第04课第1步。读materials/约定卡.md和公开练习JSON，检查现有设备详情的points展示。
+每项读数清楚显示点位名、数值、单位、采样时间和质量。把temperature/humidity/power/voltage/status/brightness分别显示为温度/湿度/功率/电压/状态/亮度，同时保留原tagId方便后续查找。
+严格保留0，null显示“缺失”；time=null显示“无采样时间”。quality依原始字段展示正常、较旧、缺失、无效，不能按本机今天的日期偷偷重写练习标签。
+状态点若为0或1，先显示原始数值，不自行猜0一定表示故障。单位为空时不加一个编造的单位。
+页面注明“固定日期的教学样本，刷新不会产生新的采样时间”。保留原设备筛选与详情入口，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器。</p>
+<p><strong>自己点看：</strong></p>
+<ol>
+<li>在设备页搜索 <code>d05</code>，打开详情，找到功率。</li>
+<li>搜索 <code>d03</code>，打开详情，找到温度。</li>
+<li>搜索 <code>d04</code>，查看在线状态与读数质量。</li>
+</ol>
+<p><strong>应该看到：</strong><code>d05</code> 的功率是 <strong>0 kW</strong>；<code>d03</code> 的温度显示 <strong>缺失</strong>，在线情况为 <strong>未知</strong>；<code>d04</code> 是离线设备，练习中的陈旧读数标为 <strong>较旧</strong>。这些情况各有自己的文字。</p>
+<p>**如果 0 消失了或缺失变成 0：**单独发送：</p>
+<pre><code class="language-prompt">第04课第1步的0与缺失显示错了。我将给出设备ID、点位和实际显示。请只修复数值判断：number类型的0必须保留，null显示缺失，不使用“value或0”这样的替代。不改练习数据，也不要重写其他页面。
+</code></pre>
+<p>三个样本正确后，进入第 2 步。</p>
+<h2 id="chapter-4-step-2">第 2 步：在概览中指出哪些读数需要留意</h2>
+<p>**现在在哪：**CodeBuddy 对话框。概览已经有三张数量卡片，这一步在它们下面加信息。</p>
+<pre><code class="language-prompt">只完成第04课第2步。继续现有概览，从getOverview返回的数据计算：
+1. 四个空间分别有多少台设备；四种设备类型分别有多少台设备。
+2. points中正常、较旧、缺失、无效各有多少项；这四类是点位数量，不是设备数量。
+3. 列出所有非fresh点位，包含设备名称、点位、质量、原采样时间和“查看设备”按钮。没有问题项时明确显示“当前样本没有需留意的读数”。
+按钮必须打开现有设备详情并定位实际deviceId。不要复制一个详情页面，不把质量标签直接写成故障结论。
+保留三张卡片和教学模拟说明。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。刷新浏览器，点击“概览”。</p>
+<p>**自己点看：**找到四种质量的数量，确认加起来是 28；在需留意的列表找到 <code>d03</code> 的温度，点“查看设备”。</p>
+<p>**应该看到：**概览中的问题项可以带你到同一台设备的详情；详情里的点位、质量和采样时间与概览一致。概览让你知道哪里要看，详情让你看具体内容。</p>
+<p>**如果数量相加不是 28：**单独发送：</p>
+<pre><code class="language-prompt">第04课第2步正常、较旧、缺失、无效四类点位数量相加不是28。请核对getOverview的points逐项计数，不按设备数计数，也不要把28写死。保留原始质量字段，只修复统计和对应列表。
+</code></pre>
+<p>统计和入口正确后，进入第 3 步。</p>
+<h2 id="chapter-4-step-3">第 3 步：能源页先只显示功率</h2>
+<p>**现在在哪：**CodeBuddy 对话框。先完成一种读数，再做切换。</p>
+<pre><code class="language-prompt">只完成第04课第3步，完善现有“能源”页面。
+从getOverview中先选category严格等于energy的设备，再为它们找tagId=power且unit=kW的点位。按空间列出这四台能源设备的名称、功率、质量和原采样时间。
+0正常显示；null显示缺失。缺少对应点位时显示“没有功率样本”，不要取其他设备或其他点位填补。
+标题写“功率 kW”，下方用一句话说明“功率反映当前样本的用电强弱，本页没有累计用电量和电费”。
+不把环境、设施、照明设备混入能源，不换算kWh、不编造费用或节能率。
+每行保留“查看设备”按钮，打开已有设备详情。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，浏览器刷新，点击“能源”。</p>
+<p>**自己点看：**数一数能源设备，应是 <code>d05</code> 至 <code>d08</code> 四台；找到 <code>d05</code> 的功率。</p>
+<p>**应该看到：**本页只有四台能源设备；功率单位统一为 <strong>kW</strong>，<code>d05</code> 仍显示 <strong>0</strong>。没有温度、湿度、亮度和电费卡片。</p>
+<p>**如果出现了温度或不止四台：**单独发送：</p>
+<pre><code class="language-prompt">第04课第3步能源页混入了其他设备或点位。我将说明多出来的内容。请先严格筛选category===energy，再找power/kW，保留0与null区别。不要只根据点位名称或页面顺序选数据，不改原始练习JSON。
+</code></pre>
+<p>四台功率显示正确后，进入第 4 步。</p>
+<h2 id="chapter-4-step-4">第 4 步：加电压切换，数值和单位一起换</h2>
+<p>**现在在哪：**CodeBuddy 对话框。继续刚才的能源页。</p>
+<pre><code class="language-prompt">只完成第04课第4步。在能源页增加一个选择框，仅有“功率 kW”和“电压 V”，默认功率。
+选功率用power/kW，选电压用voltage/V。设备范围始终是category===energy的四台。切换时同时更新标题、数值、单位、质量和采样时间，不能留下上一种读数的数值。
+保留缺失和0的区别。找不到对应点位显示“没有这项样本”，不拿其他点位替代。
+保留现有查看设备入口，不加入总电费、累计电量或自动单位换算。
+保存文件，不启动服务，不提前做历史曲线。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。刷新浏览器，打开能源页。</p>
+<p>**自己点看：**先选功率，记住 <code>d05</code> 显示的值；改成电压，核对同一台的单位为 V；再切回功率。</p>
+<p>**应该看到：**四台设备不变，但读数与单位一起变化。切回功率后，<code>d05</code> 的 <strong>0 kW</strong> 仍然存在。电压页面不会出现 kW 的旧标题。</p>
+<p>**如果只换单位没换数值：**单独发送：</p>
+<pre><code class="language-prompt">第04课第4步切换到电压后仍显示功率的数值。请只修复选项到tagId、unit、读数集合的对应，切换后重新选择当前点位，不能把旧值换个单位继续显示。保留四台能源设备和查看入口。
+</code></pre>
+<p>来回切换正确后，进入第 5 步。</p>
+<h2 id="chapter-4-step-5">第 5 步：把概览、能源和设备台账连起来</h2>
+<p>**现在在哪：**CodeBuddy 对话框。本步只完成入口衔接，不增加新页面。</p>
+<pre><code class="language-prompt">只完成第04课第5步。检查并补齐现有页面之间的入口：
+概览点一个空间，进入现有设备页并只保留该空间筛选；
+概览点“能源”类型，进入现有设备页并只保留energy类型筛选；
+能源页点任一设备的“查看设备”，打开对应ID的现有详情，不默认第一台。
+进入新筛选前清掉无关旧条件；从详情收起时仍保留本次筛选。所有页面继续从data-service读取同一份数据。
+不重建页面、不复制表格。保存文件，不启动服务，并列出需要我亲自点的三个入口。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器。</p>
+<p>**自己点看：**先在设备页搜索 <code>d01</code>；回到概览点“能源”类型，确认现在能看到四台能源设备；再打开能源页，点 <code>d07</code> 的“查看设备”。</p>
+<p>**应该看到：**旧的 <code>d01</code> 搜索条件不会挡住能源列表；详情确实是 <code>d07</code>；回到能源，切换功率和电压仍正常。</p>
+<p>**如果入口被旧筛选挡住：**单独发送：</p>
+<pre><code class="language-prompt">第04课第5步从概览进入设备页后被旧筛选挡住了。请只修复这个跨页入口，在设置本次空间或类型条件前清空无关条件。保留用户在同一设备页内部查看和收起详情时的筛选。
+</code></pre>
+<p>完成后，在 <code>notes/04-读数和能源.md</code> 写下三句话：0 与缺失有什么不同；采样时间与刷新页面时间有什么不同；本页为什么不能算电费。保存 <code>d05</code> 的 0 kW 和 <code>d03</code> 的缺失温度两张截图。</p>
+<p>**接下来：**终端 A 继续运行，进入第 05 课。我们把“这一刻的样本”扩展为“一段时间内的变化”，并接上只读的原始报警页。</p>
+<div class="bottom-nav"><a href="#chapter-3">← 上一部分</a><a href="#chapter-5">下一部分 →</a></div></article>
+<article id="chapter-5" data-chapter hidden><p class="eyebrow">第 05 课 · 4学时 · V2.0.2</p><h1>第 05 课：把历史和原始报警接到页面</h1><div class="step-links"><a href="#chapter-5-step-1">第 1 步：先从详情打开正确的历史表</a><a href="#chapter-5-step-2">第 2 步：把历史表画成曲线</a><a href="#chapter-5-step-3">第 3 步：选择查看哪一段时间</a><a href="#chapter-5-step-4">第 4 步：回到能源页，比较同一种读数</a><a href="#chapter-5-step-5">第 5 步：完成只能查看的原始报警页</a></div>
+<p>本课 4 学时，共 180 分钟。我们给设备详情加一个“查看历史”入口，让它真的打开对应设备、对应点位的曲线；然后完成原始报警页。</p>
+<p>五步建议用时依次为 30、45、30、40、35 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>继续原来的 <code>campus-lab</code>，让终端 <strong>A-页面</strong> 保持运行。数据仍来自同一份公开练习资料，不需要后端。</p>
+<p>先记住：**原始报警页展示收到的报警内容；演练事件页记录我们自己练习处理的事项。**本课先做前者，下节课再做后者。</p>
+<p><strong>重新开课：</strong> 打开原 <code>campus-lab</code>。若 A 已结束，在项目根的 A-页面运行 <code>node tools/serve.mjs</code>，再用上次的同一个浏览器打开 <code>http://127.0.0.1:5188</code>。若页面已能打开，就沿用原 A，不重复启动。本课不启动 Java、MySQL 或 Redis。</p>
+<h2 id="chapter-5-step-1">第 1 步：先从详情打开正确的历史表</h2>
+<p>**现在在哪：**CodeBuddy 对话框。先把入口接通，再画图。</p>
+<pre><code class="language-prompt">继续当前项目，只完成第05课第1步。读取materials/约定卡.md，在已有设备详情中为每个实际点位增加“查看历史”按钮。
+点击后进入现有历史菜单，使用 #history?deviceId=实际ID&amp;tagId=实际点位 的地址片段保存选择。
+历史页通过getOverview返回的history，按deviceId和tagId共同找数据。先显示设备编号、设备名称、点位、单位及样本表；样本表列出原time和value，null显示缺失、0保留。
+没有匹配历史时显示“这个点位没有历史样本”，不要默认拿第一台或第一条历史代替。直接点击历史菜单而未选设备时，显示设备和点位选择框。
+保留详情、筛选和所有旧页面。保存文件，不启动服务，不画图。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，浏览器刷新。</p>
+<p>**自己点看：**打开设备 <code>d05</code> 的详情，找到功率，点“查看历史”。</p>
+<p>**应该看到：**历史页明确写出 <code>d05</code>、功率 <code>power</code> 和 kW；表格里的时间来自样本。浏览器地址中的设备和点位也是刚才选中的内容。</p>
+<p>**如果打开了别的点位：**单独发送：</p>
+<pre><code class="language-prompt">第05课第1步从d05功率进入历史后，显示的设备或点位不对。请检查按钮传入的deviceId、tagId、地址片段解析和历史查找，只修复这条入口。必须同时按两个字段查找，不默认第一条，不修改样本。
+</code></pre>
+<p>入口正确后，进入第 2 步。</p>
+<h2 id="chapter-5-step-2">第 2 步：把历史表画成曲线</h2>
+<p>**现在在哪：**CodeBuddy 对话框。表格已经正确，曲线必须与它使用同一批数据。</p>
+<pre><code class="language-prompt">只完成第05课第2步。在现有历史页样本表上方增加简单曲线，使用浏览器自带SVG或Canvas，不安装图表库。
+曲线与表格使用同一个history.samples数组，按原time排序；横轴是采样时间，纵轴是值和原单位。
+横轴首末时间刻度须完整显示，按两端位置设置对齐并预留边距，不能被SVG或容器裁剪；窄屏下仍能辨认。
+数值0是有效点，必须画出来；value=null处断开，不画成0，不跨过缺失点把两侧连起来，不补造样本。
+每个有效点能查到时间和值。没有有效样本时显示文字，单个有效点也要能看见；全部有效值都是0时也能正常绘制，不因坐标范围为0而消失。
+保留下方完整样本表作为对照，显示“固定教学样本”。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成。刷新浏览器，再进入 <code>d05</code> 的功率历史。</p>
+<p>**自己点看：**先读表格中的样本，再看图；找到数值 0 和缺失的那一行。</p>
+<p>**应该看到：**0 在图上有点；缺失位置断开；图与表的设备、点位、单位一致。图没有把缺失画成一段突然掉到 0 的线。</p>
+<p>**如果缺失处仍被连过去：**单独发送：</p>
+<pre><code class="language-prompt">第05课第2步的历史曲线跨过了缺失样本。我将说明对应时间。请把连续有效样本分段绘制，遇到null断开，保留真实0。只修复绘图，不删表格、不填补数据、不改原始历史样本。
+</code></pre>
+<p>图表能互相对照后，进入第 3 步。</p>
+<h2 id="chapter-5-step-3">第 3 步：选择查看哪一段时间</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们的练习时间固定，不能把“最近 15 分钟”误认为今天的真实时间。</p>
+<pre><code class="language-prompt">只完成第05课第3步。在历史页增加“全部样本”“样本末时刻前15分钟”“样本末时刻前1小时”三个范围选项。
+历史页始终显示设备和点位选择框，包括从详情链接进入时；选项与地址中的deviceId、tagId一致，切换后同步更新地址，方便直接从功率改选电压。
+以当前所选历史的最大time作为样本末时刻，显示这个实际时刻。根据该范围过滤样本，图和表共用筛选后的数组。范围内没有数据时显示“这个范围没有样本”，不是读取失败。
+切设备或点位时重新计算末时刻，更新标题和单位，不能沿用上一台设备的曲线。刷新浏览器后保留地址中的deviceId与tagId；范围默认全部样本即可。
+新增的范围状态和选项常量，要在页面构造和首次读取之前定义、初始化，不能在首次使用时仍未定义。语法检查通过不等于刷新后的页面能运行，请保留由我亲自刷新验证的步骤。
+保留缺失断线和0，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器。</p>
+<p>**自己点看：**在 <code>d05</code> 功率历史中来回切换三个范围；然后改选同一设备的电压。</p>
+<p>**应该看到：**每次图和表都使用同一时间范围；页面写出的末时刻属于固定样本日期；换成电压后标题和单位变为 V，功率的旧曲线消失。</p>
+<p>**如果刷新后页面一直停在“正在读取”：**先查看浏览器控制台的第一条错误，只复制错误文字，不复制口令或私密配置。单独发送：</p>
+<pre><code class="language-prompt">第05课第3步保存后，刷新页面一直停在正在读取。实际地址片段是【片段】，浏览器控制台第一条错误是【错误】。
+请先修复这条使页面无法初始化的运行错误，检查新增范围状态和选项是否在首次使用前定义并初始化。保留原样本、原页面和地址中的设备/点位选择，不启动服务。修好后让我重新执行本步全部点击，不把语法检查当成浏览器验证。
+</code></pre>
+<p>**如果换点位后还残留旧曲线：**单独发送：</p>
+<pre><code class="language-prompt">第05课第3步换设备或点位后仍有上一次的曲线。请只修复历史页的选择更新：先确定当前deviceId/tagId，再计算本次时间范围并替换图和表。不能把旧数组与新数组拼接。保留地址中的选择。
+</code></pre>
+<p>范围和点位切换正确后，进入第 4 步。</p>
+<h2 id="chapter-5-step-4">第 4 步：回到能源页，比较同一种读数</h2>
+<p>**现在在哪：**CodeBuddy 对话框。这一步既要写比较区域，也要把它放进已经完成的能源页。</p>
+<pre><code class="language-prompt">只完成第05课第4步。继续原有能源页，在功率/电压选择框下面加入“比较历史”区域，实际显示在页面中，不能只生成一个未使用的函数。
+列出四台category===energy设备的复选框，允许选1至4台，点击“比较历史”后读取getOverview中的对应历史并展示。
+当前选功率就只比较power/kW，选电压只比较voltage/V。每台曲线有名称和样本时间；缺失仍断线，0保留。
+一台没有历史时，在那台旁边写“没有历史样本”，保留其他有样本设备的结果。不能拿另一台数据替代。切功率/电压后清掉旧比较和设备勾选，提示“请重新选择设备，再比较”，防止旧曲线换个单位继续显示。
+保留本页四台最新读数和查看设备入口。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，点击“能源”。</p>
+<p>**自己点看：**选择功率，勾选 <code>d05</code> 和 <code>d06</code>，点“比较历史”；再切到电压，确认旧结果和勾选已经清空，重新勾选 <code>d05</code>、<code>d06</code>，再点“比较历史”。</p>
+<p>**应该看到：**功率比较中两台都用 kW；切电压时旧比较先清除，重新比较后都用 V。设备名单只有四台能源设备，没有环境设备。</p>
+<p>再看两张图最左与最右的采样时间，确认文字完整。若末端时间被裁掉，单独发送：</p>
+<pre><code class="language-prompt">第05课第4步的比较功能能用，但图表两端时间刻度显示不完整。实际窗口大小是【大小】，被裁掉的文字是【文字】。
+请只修复共用绘图的首末刻度对齐和留白，同时检查历史页与能源比较图。保留比较入口、单位切换后清空、缺失断线、0和原样本，不重建页面，不启动服务。修好后让我重复比较与截图检查。
+</code></pre>
+<p>**如果比较区域根本没出现：**单独发送：</p>
+<pre><code class="language-prompt">第05课第4步AI说写好了比较功能，但能源页面没有入口。请检查这个区域是否真正接入现有energy页面，补齐渲染和按钮调用。保留已有最新读数、单位切换和设备详情入口，不另建能源页。
+</code></pre>
+<p>比较区域能实际使用后，进入第 5 步。</p>
+<h2 id="chapter-5-step-5">第 5 步：完成只能查看的原始报警页</h2>
+<p>**现在在哪：**CodeBuddy 对话框。使用已存在的“原始报警”菜单。</p>
+<pre><code class="language-prompt">只完成第05课第5步。使用getOverview中的alarms完善现有原始报警页。
+每条显示报警编号、设备名称及ID、message、原始status、原始level、原始time和“教学模拟”。status和level可附中文解释，但原始值也要保留，不能擅自替换成演练事件的状态。
+增加文本搜索和每页5条的上一页/下一页，显示当前页与总数。搜索后回第一页；无匹配显示“没有符合条件的原始报警”。读取失败与没有匹配分开。
+每条有“查看设备”入口，打开相应设备详情。本页没有分派、恢复、核实、关闭按钮，不修改alarms数据。
+保留历史和能源比较功能，保存文件，不启动服务，不进入演练事件开发。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，点击“原始报警”。</p>
+<p>**自己点看：**对照公开 JSON 中任意一条报警，检查编号、状态、等级和时间；搜索 <code>不存在的报警</code>，再清空；点一条报警的“查看设备”。</p>
+<p>**应该看到：**原始字段保留；没有匹配时有明确文字；清空搜索后恢复列表；设备入口定位正确；页面没有“关闭原始报警”的操作。</p>
+<p>**如果报警页出现处理按钮：**单独发送：</p>
+<pre><code class="language-prompt">第05课第5步的原始报警页出现了分派或关闭等处理动作。请只移除这个只读页面上的写操作，保留搜索、翻页和查看设备。不要删除原始报警样本，不要把它们转成演练事件。
+</code></pre>
+<p>完成后，在 <code>notes/05-历史和报警.md</code> 写下：从哪台设备的哪个点位进入历史；0 和缺失如何显示；原始报警页可以做什么、不能做什么。保存一张设备与点位清楚可见的历史截图。</p>
+<p>**接下来：**让终端 A 继续运行，进入第 06 课。我们将单独创建演练事件，按步骤练习“发现、分派、处理、核实、关闭”。</p>
+<div class="bottom-nav"><a href="#chapter-4">← 上一部分</a><a href="#chapter-6">下一部分 →</a></div></article>
+<article id="chapter-6" data-chapter hidden><p class="eyebrow">第 06 课 · 4学时 · V2.0.2</p><h1>第 06 课：走完演练事件，并串起整个前端</h1><div class="step-links"><a href="#chapter-6-step-1">第 1 步：先做三个课堂身份和管理页说明</a><a href="#chapter-6-step-2">第 2 步：创建一条独立的演练事件</a><a href="#chapter-6-step-3">第 3 步：分派、开始处理、写下做过的事</a><a href="#chapter-6-step-4">第 4 步：先恢复、再核实，最后关闭</a><a href="#chapter-6-step-5">第 5 步：在管理页看操作记录，再试一次不允许的操作</a><a href="#chapter-6-step-6">第 6 步：亲自走遍九个菜单，为后端准备清单</a></div>
+<p>本课 4 学时，共 180 分钟。我们把前面做好的页面连成一个完整练习：查看设备、登记负责人、创建演练、安排处理、写记录、确认恢复、核实后关闭。</p>
+<p>六步建议用时依次为 20、25、40、45、20、30 分钟，共 180 分钟。这是备课建议，并非课堂实测；教师可按实际卡点调整。</p>
+<p>继续原来的 <code>campus-lab</code>，保留终端 <strong>A-页面</strong>。本课所有事件和身份切换仍是浏览器演示。第 09 课才有真正的登录，第 11 课才由后端检查事件操作。</p>
+<p>本课示例使用 <strong>尚未登记负责人的 d02</strong>。第 03 课只要求登记 <code>d01</code>，所以通常 <code>d02</code> 还没有负责人。如果你自己已经登记了 <code>d02</code>，可选另一台尚未登记的设备，并把下文的编号换成它；不要删除已有责任记录。已登记负责人的设备会自动分派，我们也会检查这种情况。</p>
+<p><strong>重新开课：</strong> 打开原 <code>campus-lab</code>。若 A 已结束，在项目根的 A-页面运行 <code>node tools/serve.mjs</code>，再用上次的同一个浏览器打开 <code>http://127.0.0.1:5188</code>。若页面已能打开，就沿用原 A，不重复启动。本课不启动 Java、MySQL 或 Redis。</p>
+<h2 id="chapter-6-step-1">第 1 步：先做三个课堂身份和管理页说明</h2>
+<p>**现在在哪：**CodeBuddy 对话框。先让学生能看见“正在以谁的身份操作”。</p>
+<pre><code class="language-prompt">继续当前项目，只完成第06课第1步。读取materials/约定卡.md，在页面顶部增加“演示身份”选择框：
+管理员admin，对应ADMIN；处理人manager，对应MANAGER；查看者viewer，对应VIEWER。默认管理员。当前身份保存在内存，刷新回到管理员，并清楚说明这只是浏览器演示，不是真正登录。
+管理页列出三种角色的用途：管理员登记位置、责任、创建分派及恢复演练来源；处理人处置已分派给自己的事件；查看者只查看。
+增加异步getIntegration()，演示返回source=TEACHING_MOCK、simulated=true、controlEnabled=false、notificationsEnabled=false。管理页显示“教学模拟数据”“实际设备控制未启用”“外部通知未启用”。
+切换身份后重新显示当前页面，先按角色显示或隐藏已有空间编辑与责任登记按钮，但明确前端演示不等于后端权限保护。
+保留旧功能，保存文件，不启动服务，不增加密码框。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，浏览器刷新，点“管理”。</p>
+<p>**自己点看：**先选查看者，再打开空间页和设备责任页；然后切回管理员。</p>
+<p>**应该看到：**顶部始终显示当前演示身份；查看者能读页面但不能登记位置和责任；管理员可以操作。管理页明确写着模拟数据、设备控制和外部通知未启用。</p>
+<p>**如果切身份后按钮没有变化：**单独发送：</p>
+<pre><code class="language-prompt">第06课第1步切换演示身份后，空间或设备责任页按钮没有更新。我将说明当前身份和还可见的按钮。请只修复身份切换后的页面重读与按钮显示，保留数据，不把身份写死在各页面里，也不要加真实登录。
+</code></pre>
+<p>身份和页面能对应后，进入第 2 步。</p>
+<h2 id="chapter-6-step-2">第 2 步：创建一条独立的演练事件</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们在“演练事件”菜单里新建记录，不改原始报警。</p>
+<pre><code class="language-prompt">只完成第06课第2步，完善现有演练事件页。
+管理员可选择设备并填写“这次练习要处理什么”，点击“创建演练”。页面明确写“不会操作实际设备，不发送外部通知”。
+增加异步getCases()与createCase({deviceId,message})。新事件包含id、deviceId、message、state、assignee、sourceState、verified、note、conclusion、version、timeline，创建version=1、sourceState=ACTIVE、verified=false，记录初始时间线。
+若该设备已有责任人，自动填入assignee且state=ASSIGNED；没有责任人则assignee为空、state=NEW。message去空格后不能为空。
+保存到campus-v2-demo的cases，保留spaces和owners。创建成功后重新getCases读取列表并打开刚创建的事件详情，显示设备、状态、处理人和版本。
+详情同时显示实际sourceState与verified：ACTIVE为“来源未恢复”、RECOVERED为“来源已恢复”，verified=false为“未核实”；未知值如实保留，不能用页面默认文字假装已经读取。
+状态中文为NEW待分派、ASSIGNED已分派、IN_PROGRESS处理中、CLOSED已关闭。本步先不加后续处理按钮。
+保存文件，不启动服务，不修改原始alarms。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，确认身份为管理员，打开“演练事件”。</p>
+<p>**自己点看：**选择未登记责任人的 <code>d02</code>，说明填写 <code>练习检查教室温湿度读数</code>，点“创建演练”，记下新事件编号。</p>
+<p>**应该看到：**新事件为“待分派”、版本 1、来源未恢复；详情中的设备是 <code>d02</code>。刷新后同一条记录还在。原始报警页的报警数量和内容没有因此改变。</p>
+<p>如果你选择的是已经登记负责人的设备，应看到“已分派”和该负责人，版本仍为 1。这是自动分派成功，不需要再分派一次。</p>
+<p>**如果详情没有来源与核实状态：**先记下当前事件编号，单独发送：</p>
+<pre><code class="language-prompt">第06课第2步已创建【事件编号】，设备、待分派状态和版本可见，但详情没有来源状态或核实状态。
+请只补齐现有详情的sourceState与verified展示，读取同一条已保存记录，ACTIVE显示来源未恢复，verified=false显示未核实，未知值如实保留。不要重建事件、清空数据、增加后续处理动作或启动服务。修好后让我重新查看同一编号。
+</code></pre>
+<p>**如果创建的事件出现在原始报警里：**单独发送：</p>
+<pre><code class="language-prompt">第06课第2步创建演练后改动了原始报警。请分开演练cases和只读alarms：创建只写campus-v2-demo中的cases，原始报警继续使用练习原始集合。保留已创建的演练记录，不通过清空全部数据修复。
+</code></pre>
+<p>独立事件能保留后，进入第 3 步。</p>
+<h2 id="chapter-6-step-3">第 3 步：分派、开始处理、写下做过的事</h2>
+<p>**现在在哪：**CodeBuddy 对话框。这一步把三个按钮接到刚才那条事件上。</p>
+<pre><code class="language-prompt">只完成第06课第3步。增加异步caseAction(id,{action,expectedVersion,note?,username?})，在演示数据层集中处理事件动作。
+本步实现assign、start、note：管理员填写非空分派说明，把NEW事件分派给manager后变ASSIGNED；manager只能开始已分派给自己的事件，变IN_PROGRESS；处理中可写非空处置记录note。已自动分派的事件直接开始，不重复分派。
+在现有事件详情实际增加：管理员使用的manager选择框、分派说明输入框和“分派”按钮；有权处理本事件的人使用的“开始处理”按钮、处置记录输入框和“保存记录”按钮。三个按钮分别调用caseAction的assign、start、note，不只创建方法而漏掉页面入口。
+每次动作提交页面刚读取的version作为expectedVersion；匹配才修改，成功version+1并写timeline。版本不匹配显示“记录已变化，请重新读取后再决定”，保留输入，不自动重试。关闭事件不可写。
+每次成功动作都将新的事件内容、version、timeline保存到localStorage的campus-v2-demo对象内的cases，保留spaces、owners及其他已有分区。保存失败要提示错误，不能宣布成功；被拒绝的动作不写入，也不增加版本。
+保存成功后页面重新调用getCases，找到同一id再更新详情；不要只在按钮旁显示成功而保留旧详情。
+动作权限在演示数据层也检查，但继续注明这仍是浏览器练习；实际权限以后由后端实现。保留其他页面，保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器。打开第 2 步记下的同一事件。</p>
+<p><strong>自己点看：</strong></p>
+<ol>
+<li>管理员填写分派说明 <code>请检查这台设备的教学样本</code>，把待分派事件分派给 <code>manager</code>。若它已自动分派，略过此动作。</li>
+<li>顶部切换为处理人，重新打开同一事件，点“开始处理”。</li>
+<li>在处置记录中填写 <code>已查看当前样本和历史，继续进行恢复演练</code>，点“保存记录”。</li>
+</ol>
+<p>**应该看到：**未自动分派的示例依次经历：待分派版本 1 → 已分派版本 2 → 处理中版本 3 → 仍为处理中版本 4。本步新增分派、开始、记录三条时间线，连同创建共四条；处置记录保存下来。刷新页面后重新打开同一事件，应仍为处理中、版本 4，记录仍在。刷新会把演示身份切回管理员，这是本课约定。若创建时已自动分派，略过分派，本步结束版本为 3，时间线连同创建共三条。</p>
+<p>**如果点了按钮状态却没变：**单独发送：</p>
+<pre><code class="language-prompt">第06课第3步按钮后详情没有更新。我将说明当前事件ID、身份、点击动作和页面状态。请检查caseAction是否保存成功，以及成功后getCases是否按同一ID回读。保留输入和版本检查，不直接在页面强行改成成功状态。
+</code></pre>
+<p>事件进入处理中且有处置记录后，进入第 4 步。</p>
+<h2 id="chapter-6-step-4">第 4 步：先恢复、再核实，最后关闭</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们要让页面清楚地区分“演练来源恢复”和“这件事已经处理完”。</p>
+<pre><code class="language-prompt">只完成第06课第4步。继续caseAction与现有事件详情，加入recover、verify、close。
+recover只允许管理员：把sourceState改为RECOVERED，清除旧verified，事件仍IN_PROGRESS，不自动关闭。
+verify由有权处理本事件的人执行：重新读取当前演示事件，确认来源已恢复且事件在处理中，才设置verified=true；这只是独立的演示核实，不是实际设备检测。
+close把输入的note作为关闭结论conclusion。关闭前同时检查：state=IN_PROGRESS，有非空处置记录note，sourceState=RECOVERED，verified=true，关闭结论非空，以及操作者和expectedVersion正确。缺条件要列出具体缺什么，不得跳过。成功才改CLOSED。
+每次成功version+1、写timeline，并把事件及时间线保存到campus-v2-demo的cases，保留spaces、owners及其他已有分区；保存成功后页面再getCases回读同一事件。失败保留输入，不写入、不增加版本；保存失败不能宣布成功。关闭后所有写动作都拒绝。
+界面分别有“模拟来源恢复”“核实恢复”“关闭事件”按钮和关闭结论输入框，不把三个动作合成一个按钮。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，重新打开刚才那条事件。</p>
+<p><strong>自己点看：</strong></p>
+<ol>
+<li>刷新后默认是管理员，先在顶部“演示身份”选择处理人，再尝试关闭。应显示还缺“来源恢复”和“核实”等条件。</li>
+<li>切管理员，打开同一事件，点“模拟来源恢复”。观察事件状态。</li>
+<li>切处理人，重新打开同一事件，点“核实恢复”。再次观察事件状态。</li>
+<li>在关闭结论里填 <code>演练来源已恢复，已核实，本次练习结束</code>，点“关闭事件”。</li>
+<li>刷新浏览器，重新找到同一事件。</li>
+</ol>
+<p>**应该看到：**恢复后仍是“处理中”；核实后仍是“处理中”；填写结论并关闭后才变“已关闭”。未自动分派的示例经过这三次成功操作，版本依次为 5、6、7；前面的失败关闭不会增加版本。刷新后仍为已关闭，时间线保留全部成功动作。</p>
+<p>**如果一恢复就自动关闭：**单独发送：</p>
+<pre><code class="language-prompt">第06课第4步模拟来源恢复后事件直接关闭了。请拆开recover、verify、close：恢复只改sourceState，核实只记录核实结果，只有close通过全部条件才改CLOSED。保留已有时间线，不改写记录伪装成从未发生；说明该错误记录的状态，并让我用新建演练重新走正确流程。
+</code></pre>
+<p>同一事件能按顺序完成并刷新保留后，进入第 5 步。</p>
+<h2 id="chapter-6-step-5">第 5 步：在管理页看操作记录，再试一次不允许的操作</h2>
+<p>**现在在哪：**CodeBuddy 对话框。我们补齐管理页的最后一块内容。</p>
+<pre><code class="language-prompt">只完成第06课第5步。增加异步getAudit()并完善管理页的“演示操作记录”：
+成功的空间修改、责任登记、创建事件createCase和后续caseAction动作都记录操作者、动作、目标ID、时间；不要遗漏创建事件。旧记录没有就不补造。记录保存在同一个campus-v2-demo对象的audit部分，每次业务修改和对应审计在同一次保存中写入，保留spaces、owners、cases及其他分区；保存失败不能宣布业务操作成功。
+管理页只让管理员查看演示操作记录，并持续写“浏览器演示，正式审计将在后端实现”。
+检查查看者不能创建或处理事件；manager不能创建、分派或恢复来源，只能处理已分派给自己的事件；已关闭事件不能继续添加记录或再次关闭。既检查界面按钮，也检查演示caseAction的拒绝。
+不要删除已存在的数据，不增加真实登录。保存文件，不启动服务。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，刷新浏览器，以管理员打开管理页。</p>
+<p><strong>自己点看：</strong></p>
+<ol>
+<li>进入已关闭的那条事件，确认没有可以继续处理的按钮。</li>
+<li>切查看者，打开事件页，确认能查看但不能创建或修改。</li>
+<li>切管理员，创建一条新的演练事件，随后到管理页查看操作记录。</li>
+</ol>
+<p>**应该看到：**新操作能查到是谁、何时、对哪条记录做了什么；查看者只能查看。刚加入操作记录功能前的旧操作可能没有记录，页面不能伪造补齐。</p>
+<p>**如果新建演练成功，管理页却仍没有操作记录：**单独发送：</p>
+<pre><code class="language-prompt">第06课第5步创建演练成功，但管理页没有对应的创建记录。请检查createCase是否与cases在同一次保存中写入audit，补齐创建动作的显示；保存失败不能宣布创建成功。保留已有事件和其他分区，不追补伪造旧审计。修好后让我新建另一条演练，再到管理页核对它的ID、操作者、动作和时间。
+</code></pre>
+<p>**如果查看者仍能创建事件：**单独发送：</p>
+<pre><code class="language-prompt">第06课第5步查看者还能创建或修改演练事件。请只修复当前演示角色到按钮、createCase和caseAction的判断，同时保留已有记录。修好后说明我应切换哪两个角色重复检查。不要把前端修复称为已经完成后端权限。
+</code></pre>
+<p>三个检查完成后，进入第 6 步。</p>
+<h2 id="chapter-6-step-6">第 6 步：亲自走遍九个菜单，为后端准备清单</h2>
+<p>**现在在哪：**CodeBuddy 对话框。这一步只整理当前前端，不开始生成 Java。</p>
+<pre><code class="language-prompt">只完成第06课第6步。检查当前九个菜单的入口是否接到了实际页面，保持所有业务读写通过data-service.js：
+概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理。
+仅修复遗漏的菜单调用、跨页ID传递或保存后的重新读取，不重写已经完成的页面。
+若概览仍有“我们将在下一课放入校园设备”等早期占位文案，只把该句改成当前教学模拟数据的真实说明，不重做页面。
+创建notes/06-前端需要的数据.md，按上述九个菜单各写一行：页面显示什么、目前从哪里读、会保存什么、以后哪些事情需要后端检查。如实写当前数据来自公开模拟JSON或浏览器保存，不能写成已接数据库。
+不创建backend，不安装MySQL或Redis，不启动服务。完成后列出我需要亲自点击的检查，不代替我报告浏览器通过。
+</code></pre>
+<p>**等到什么：**等 AI 保存完成，打开新清单，看看九个菜单是否各有一行。随后浏览器刷新。</p>
+<p>**自己点看：**按下面顺序完成一次完整检查。每行做完才勾选，不只看 AI 的回复。</p>
+<table>
+<thead>
+<tr>
+<th>菜单</th>
+<th>亲手检查什么</th>
+<th>本次应看到什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>概览</td>
+<td>查看三张数量卡，点能源类型</td>
+<td>16 台、4 空间、28 点位；进入原设备表</td>
+</tr>
+<tr>
+<td>设备</td>
+<td>找 d03，再找 d05</td>
+<td>d03 在线未知、温度缺失；d05 功率为 0</td>
+</tr>
+<tr>
+<td>空间</td>
+<td>查看本组修改的位置，再进设备</td>
+<td>位置保存；设备属于同一空间</td>
+</tr>
+<tr>
+<td>能源</td>
+<td>切功率、电压，做一次历史比较</td>
+<td>只有四台能源设备；单位和数据一起变</td>
+</tr>
+<tr>
+<td>历史</td>
+<td>从 d05 功率进入</td>
+<td>同一设备和点位；0 保留，缺失断线</td>
+</tr>
+<tr>
+<td>原始报警</td>
+<td>搜索再清空，查看设备</td>
+<td>原状态、等级保留；没有处理按钮</td>
+</tr>
+<tr>
+<td>演练事件</td>
+<td>打开已关闭事件，再刷新</td>
+<td>关闭结果、记录和时间线保留</td>
+</tr>
+<tr>
+<td>设备责任</td>
+<td>查第 03 课的 d01</td>
+<td>manager 和备注保留</td>
+</tr>
+<tr>
+<td>管理</td>
+<td>管理员查看说明和操作记录</td>
+<td>模拟标识清楚；真实设备控制与通知未启用</td>
+</tr>
+</tbody></table>
+<p>**应该看到：**九个菜单都有本课以前实际完成的内容，入口能互相连接；刷新后，空间、责任和演练记录仍在。管理页明确说明当前仍是浏览器演示。</p>
+<p>**如果某一行没通过：**只选一行发下面的修复提示，别一次把整张表丢给 AI 重做：</p>
+<pre><code class="language-prompt">第06课第6步有一项没有通过。我将写出菜单名、点击步骤、预期结果和实际结果。请先读取相关现有文件，只修复这条链路并保存，保留其他八个菜单和已有浏览器记录。不生成后端，不重写整个项目。完成后让我重复同一组点击。
+</code></pre>
+<p>在 <code>notes/06-前端需要的数据.md</code> 后面补上自己的实际结果：哪些通过、哪一项仍未通过、是否借助 AI 修复过。保存一张九个菜单都能辨认的页面截图，以及一张已关闭演练的详情截图。</p>
+<p>**接下来：**前端这一轮完成，进入第 07 课。我们将对着这九个已经做出的页面，一项项分析需要后端提供哪些数据，再从一个最小 Java 接口开始。仍然使用同一个 <code>campus-lab</code>，不换项目，也不直接导入一套完整后端答案。</p>
+<div class="bottom-nav"><a href="#chapter-5">← 上一部分</a><a href="#chapter-7">下一部分 →</a></div></article>
+<article id="chapter-7" data-chapter hidden><p class="eyebrow">第 07 课 · 4学时 · V2.0.2</p><h1>第07课：看着页面，做出第一个后端</h1><div class="step-links"><a href="#chapter-7-step-1">第1步：对着九个菜单，说清楚要保存什么</a><a href="#chapter-7-step-2">第2步：准备后端终端，确认它用的是 Java 17</a><a href="#chapter-7-step-3">第3步：让 AI 只做一个“启动成功”接口</a><a href="#chapter-7-step-4">第4步：启动 B，再从网页地址读它的回答</a><a href="#chapter-7-step-5">第5步：在网页上看见后端在线，再亲手验证断开</a></div>
+<p>前六课已经有了一套能点击的网页。这节课让电脑上再运行一个 Java 程序，让网页可以向它提问。我们先让它回答“我已经启动”，下一课再让它读取设备。</p>
+<p>本课4学时，共180分钟。五步建议用时：30、30、40、40、40分钟。</p>
+<p>你继续打开自己的 <code>campus-lab</code>，不要新建另一套前端。今天还不需要 MySQL 和 Redis。屏幕上的设备仍来自练习文件，演练仍是浏览器演示。</p>
+<p><strong>重新开课，先恢复页面：</strong> 如果上次已关闭 CodeBuddy，重新用“打开文件夹”选择原来的 <code>campus-lab</code>。新建 A-页面终端，用 macOS 的 <code>pwd</code> 或 Windows PowerShell 的 <code>Get-Location</code> 确认当前位置是项目根，在这个窗口运行：</p>
+<pre><code class="language-text">node tools/serve.mjs
+</code></pre>
+<p>看到 <code>http://127.0.0.1:5188</code> 后，在浏览器打开这个地址，再开始第1步。如果原来的 A 仍在运行且页面可打开，就继续使用它，不再启动第二个。B 在第2步才新建；本课不开数据库，也不用寻找还未生成的 <code>.env</code>。</p>
+<h2 id="chapter-7-step-1">第1步：对着九个菜单，说清楚要保存什么</h2>
+<p><strong>现在在哪：</strong> 按上面的恢复动作打开原工程后，终端 A-页面正在运行 <code>node tools/serve.mjs</code>；浏览器打开 <code>http://127.0.0.1:5188</code>。依次点击九个菜单，特别看看“演练事件”刷新前后有什么变化。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请阅读当前 frontend、materials/约定卡.md和第06课的notes/06-前端需要的数据.md，
+在已有整理上补齐我们已经做出的网页。
+这一步只新建 docs/页面需要的数据.md，不修改页面，不生成后端。
+按概览、设备、空间、能源、历史、原始报警、演练事件、设备责任、管理九个菜单写一张表：
+1. 学生在页面上能看见或填写什么；
+2. 现在从 mock-campus.json、内存还是 localStorage 取得；
+3. 将来需要后端读取，还是需要保存修改；
+4. 对应约定卡中的哪个接口。
+再用生活中的例子解释：MySQL像长期保存记录的档案柜；
+Redis在本课程只保存有过期时间的登录凭条。
+不要把缓存、会话、数据库三个词当同一件事；不要声称已连接数据库。
+最后列出本课只做 GET /api/health，其他接口留待后续课。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 等它回复结束，打开新文件。请同伴指着“设备责任”说出“显示什么、修改什么、谁来保存”。看不懂的一行，当场让 AI 改成你能复述的话。</p>
+<p><strong>亲自操作：</strong> 打开第06课已经关闭的本地演练事件，核对它的处置记录和时间线，再刷新，确认仍能读到。回到表格找到该记录的存放位置。关闭的事件不能继续修改，本步只查看，不运行新的终端命令。</p>
+<p><strong>应该看见：</strong> 表格承认目前的演示数据来源。MySQL 一栏有设备、空间、读数、历史、报警、账号、责任、事件和审计；Redis 一栏只有短时登录。原始报警只查看，不能被当作本地事件关闭。</p>
+<p><strong>没对上时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">请只修订 docs/页面需要的数据.md。
+我实际操作的页面是【菜单名】，操作后看到【结果】。
+请重新对照当前代码写明它现在从哪里取数，不把计划中的后端写成已完成。
+</code></pre>
+<p><strong>下一步：</strong> 你能说清“目前存在浏览器里的数据”和“以后要放进 MySQL 的记录”后，再检查 Java。</p>
+<h2 id="chapter-7-step-2">第2步：准备后端终端，确认它用的是 Java 17</h2>
+<p><strong>现在在哪：</strong> 新建一个终端，命名为 <strong>B-后端</strong>。当前目录应为 <code>campus-lab</code>。A 继续运行，不在 A 中输入新命令。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">这一步只检查后端准备条件，不创建业务代码。
+请检查当前工程有没有 materials/maven-wrapper，并告诉我里面哪些文件要复制到 backend。
+在 docs/后端启动笔记.md 写明：Java使用17；JAVA_HOME指向JDK根目录；
+PATH中的java也必须是17；A窗口跑页面，B窗口跑后端。
+同时核对Node主版本应为22。若当前不是22，只读确认本机已经安装的Node22位置，写出仅切换当前终端PATH的命令；不改全局默认，不把A终端的环境当作新B终端已经生效。
+不要修改系统环境变量，不安装软件，不替我启动常驻服务。
+如果缺少Java17，明确告诉我缺了什么，先不要继续生成后端。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 等回复结束。它说“检查完毕”只代表回答完了，接下来还要由你执行下面的命令。</p>
+<p><strong>亲自操作：</strong> 新开的 B 不会自动继承 A 或 C 中临时调整的环境。如果笔记给出了本机已确认安装的 Node 22 临时切换命令，先在 B 执行它；设置 Java 不会同时切换 Node。随后按自己的系统执行下面一组检查。</p>
+<p>macOS，工作目录为 <code>campus-lab</code>：</p>
+<pre><code class="language-sh">export JAVA_HOME=&quot;$(/usr/libexec/java_home -v 17)&quot;
+export PATH=&quot;$JAVA_HOME/bin:$PATH&quot;
+java -version
+node --version
+pwd
+</code></pre>
+<p>Windows PowerShell，工作目录为 <code>campus-lab</code>；以下按课前安装的 Temurin 17 查找：</p>
+<pre><code class="language-powershell">$courseJdks = @(Get-ChildItem &quot;C:\Program Files\Eclipse Adoptium&quot; -Directory | Where-Object Name -Like &quot;jdk-17*&quot;)
+if ($courseJdks.Count -ne 1) { throw &quot;请老师确认本机JDK17目录后再继续&quot; }
+$env:JAVA_HOME = $courseJdks[0].FullName
+$env:Path = &quot;$env:JAVA_HOME\bin;$env:Path&quot;
+java -version
+node --version
+Get-Location
+</code></pre>
+<p><strong>应该看见：</strong> Java 主版本是 <code>17</code>，Node 主版本是 <code>22</code>，当前目录最后一层是 <code>campus-lab</code>。若显示两个 JDK 安装目录，先请老师确认用哪个，不随意取第一个。以后新开后端终端，要在新窗口重新设置这两项环境变量。</p>
+<p><strong>如果 Java 已是 17，但 Node 不是 22：</strong> 不继续生成后端，单独发送：</p>
+<pre><code class="language-text">第07课第2步，Java17已通过，但新B终端的node --version显示【实际版本】。
+请只读确认本机已安装的Node22位置，给出仅让当前终端使用它的命令，补进启动笔记。
+不要改全局默认，不安装软件，不继续创建后端；若本机没有Node22，明确报告缺项。
+</code></pre>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我还停在Java环境检查。操作系统是【Windows或macOS】；
+java -version显示【版本】，当前目录最后一层是【目录名】。
+请只帮助我让当前终端使用已安装的Java17，不改全局设置，不继续创建后端。
+</code></pre>
+<p><strong>下一步：</strong> Java 17 和目录都确认后，生成最小后端。</p>
+<h2 id="chapter-7-step-3">第3步：让 AI 只做一个“启动成功”接口</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 仍打开 <code>campus-lab</code>。B 还没有后端进程。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在当前工程新建 backend，完成最小Java后端。
+使用Java17、Spring Boot3.4.2、Maven，包名edu.campus.v2。
+把 materials/maven-wrapper 中的Maven启动工具复制到backend，保留隐藏的.mvn目录。
+只加入Spring Web和测试依赖，不加入MySQL、Redis，不复制任何完整教师业务代码。
+服务只监听127.0.0.1:8098。
+实现 GET /api/health，返回：
+{&quot;code&quot;:0,&quot;message&quot;:&quot;ok&quot;,&quot;data&quot;:{&quot;status&quot;:&quot;UP&quot;}}
+增加一个不需要数据库的接口测试，检查status确实为UP。
+把启动类、控制器和application.properties的作用各用一句话写到docs/后端启动笔记.md。
+你可以运行会结束的测试；不要替我启动spring-boot:run。
+不要修改frontend，不实现其他接口。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 等它回复完成，查看 <code>backend</code>。至少应有 <code>pom.xml</code>、<code>mvnw</code>、<code>mvnw.cmd</code>、<code>.mvn</code>、<code>src/main</code>、<code>src/test</code>。确认本步没有突然多出设备、登录、事件等完整业务。</p>
+<p><strong>亲自操作：</strong> B 先进入后端目录，再运行测试。</p>
+<p>macOS，起始目录为 <code>campus-lab</code>：</p>
+<pre><code class="language-sh">cd backend
+sh ./mvnw test
+</code></pre>
+<p>Windows PowerShell，起始目录为 <code>campus-lab</code>：</p>
+<pre><code class="language-powershell">Set-Location backend
+.\mvnw.cmd test
+</code></pre>
+<p><strong>应该看见：</strong> 首次可能下载依赖，下载完成后显示 <code>BUILD SUCCESS</code>；测试统计里至少有刚生成的健康接口测试。只有“没有测试可运行”不算这个检查完成。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在backend运行Maven测试失败。第一段错误是【复制相关错误，去掉本机隐私】。
+请只修复本课的最小健康接口和对应测试，不加入数据库、不删除测试、不跳过测试。
+修好后告诉我重新运行哪条已有命令，不启动常驻服务。
+</code></pre>
+<p><strong>下一步：</strong> 测试通过后，让后端真正运行起来。</p>
+<h2 id="chapter-7-step-4">第4步：启动 B，再从网页地址读它的回答</h2>
+<p><strong>现在在哪：</strong> B 的工作目录是 <code>campus-lab/backend</code>。A 保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请核对tools/serve.mjs与刚完成的后端是否符合约定：
+页面服务在127.0.0.1:5188；/api请求转发到127.0.0.1:8098，保留/api路径。
+它只能公开frontend，不能公开项目根、backend或.env。
+如果已经正确，不改文件；如果有遗漏，只修复这个转发。
+不要启动页面或后端服务。告诉我本次是否修改了serve.mjs。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 若它修改了 <code>serve.mjs</code>，仅在 A 按一次 Ctrl+C，然后在 A、<code>campus-lab</code> 根目录重新运行 <code>node tools/serve.mjs</code>。没有修改就保持 A 原样运行。</p>
+<p><strong>亲自操作：</strong> 在 B 启动后端。</p>
+<p>macOS，工作目录为 <code>campus-lab/backend</code>：</p>
+<pre><code class="language-sh">sh ./mvnw spring-boot:run
+</code></pre>
+<p>Windows PowerShell，工作目录为 <code>campus-lab/backend</code>：</p>
+<pre><code class="language-powershell">.\mvnw.cmd spring-boot:run
+</code></pre>
+<p>看到启动日志后，在浏览器新标签打开 <code>http://127.0.0.1:5188/api/health</code>。</p>
+<p><strong>应该看见：</strong> 浏览器显示 <code>code</code> 为 <code>0</code>、<code>status</code> 为 <code>UP</code>。B 没有回到输入提示符是正常的：这个程序正在等网页请求，保持窗口开着。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我已在B启动最小后端，浏览器访问5188端口的/api/health时看到【现象】。
+B最后几行不含隐私的日志是【日志】。
+请检查8098监听、/api路径与页面转发，只修复本步链路。
+如果端口被占用，先报告，不结束未知进程。
+</code></pre>
+<p><strong>下一步：</strong> 看到真实 <code>UP</code> 后，给网页加一个让普通人看得懂的连接状态。</p>
+<h2 id="chapter-7-step-5">第5步：在网页上看见后端在线，再亲手验证断开</h2>
+<p><strong>现在在哪：</strong> 回到原来的校园网页标签。A、B 都保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在现有网页顶部增加一个小区域“后端连接”，带“检查连接”按钮。
+在frontend/data-service.js增加checkHealth()，向同源/api/health发请求。
+点击后先显示“正在检查”；code为0且data.status为UP才显示“后端已连接”；
+请求失败则显示“暂时连不上后端”，不要显示成成功。
+5秒没有响应就结束等待并提示重试。
+保留现有九个菜单和全部浏览器演示功能；不把设备数据切到后端。
+不要启动服务。只说明修改的文件和我要点击的按钮。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 等回复结束，保存后刷新校园网页。HTML、CSS、JS 修改无需重启 B。</p>
+<p><strong>亲自操作：</strong></p>
+<ol>
+<li>点击“检查连接”，看到“后端已连接”。</li>
+<li>只在 B 按 Ctrl+C，回到网页再次点击“检查连接”，看到连接失败提示。</li>
+<li>在 B、<code>backend</code> 目录重新执行本课第4步对应系统的启动命令。</li>
+<li>等启动日志出现，再点“检查连接”，应恢复成功。</li>
+</ol>
+<p><strong>应该看见：</strong> 页面能区分后端真的运行和停止。设备仍标为浏览器演示；后端在线还不代表已经有数据库。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">后端停止后，网页的连接提示仍是【实际显示】。
+请只修复checkHealth和连接状态：每次点击都实际请求、清除上次结果、
+失败明确提示、允许再次检查。不要修改设备模拟数据或其他页面。
+</code></pre>
+<p><strong>下一步：</strong> 在 <code>docs/后端启动笔记.md</code> 写下你实际看到的三次结果。下课可分别在 A、B 按 Ctrl+C；下一课从已有工程继续，为设备增加长期保存的位置。</p>
+<div class="bottom-nav"><a href="#chapter-6">← 上一部分</a><a href="#chapter-8">下一部分 →</a></div></article>
+<article id="chapter-8" data-chapter hidden><p class="eyebrow">第 08 课 · 4学时 · V2.0.2</p><h1>第08课：把设备保存到 MySQL，再接回设备页</h1><div class="step-links"><a href="#chapter-8-step-1">第1步：生成自己的本机配置</a><a href="#chapter-8-step-2">第2步：让课程 MySQL 运行起来</a><a href="#chapter-8-step-3">第3步：让 Java 认识数据库，并建立设备表</a><a href="#chapter-8-step-4">第4步：让设备接口读出十六台设备</a><a href="#chapter-8-step-5">第5步：只把设备页接到新接口</a><a href="#chapter-8-step-6">第6步：确认数据保存了，失败也说清楚了</a></div>
+<p>今天先在自己的电脑准备一个课程专用数据库，再让“设备台账”真正读到它。其他页面暂时继续用浏览器演示，页面会清楚标明数据来源。</p>
+<p>本课4学时，共180分钟。六步建议用时：25、30、35、30、40、20分钟。</p>
+<p>课前应已装好 Docker Desktop，打开后等它显示引擎正在运行。它负责帮我们运行课程数据库；现在不用掌握容器的全部知识。继续使用同一个 <code>campus-lab</code>。</p>
+<p><strong>重新开课，先准备三个窗口：</strong></p>
+<ol>
+<li>用 CodeBuddy 打开原 <code>campus-lab</code>。若 A 已停止，新建 A-页面，在项目根运行 <code>node tools/serve.mjs</code>，浏览器打开 <code>http://127.0.0.1:5188</code>；原 A 仍在运行就沿用，不重复启动。</li>
+<li>准备 B-后端。若自己的旧后端还在运行，先在它原来的 B 按 Ctrl+C。新建 B 时，按<a href="#chapter-7-step-2">第07课第2步</a>在<strong>这个新窗口</strong>设置 <code>JAVA_HOME</code> 和 <code>PATH</code>，亲自执行 <code>java -version</code>，确认是17。不能沿用上一个已关闭窗口的环境。</li>
+<li>B 从项目根进入后端：macOS 执行 <code>cd backend</code>，Windows PowerShell 执行 <code>Set-Location backend</code>；已经在 <code>backend</code> 就不再进入一次。B 此时保持停止，第3步才运行修改后的后端。</li>
+<li>新建 C-工具，确认在 <code>campus-lab</code> 根目录。首次做到本课时还没有 <code>.env</code> 和 <code>compose.yaml</code>，先按第1、2步生成，不提前执行 Compose。若是继续上次未完成的本课，保留已有 <code>.env</code>，从未完成的小步继续，不重新生成密码。</li>
+</ol>
+<h2 id="chapter-8-step-1">第1步：生成自己的本机配置</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开 <code>campus-lab</code>。A 正在跑页面；B 已确认 Java 17并停止在 <code>backend</code> 目录；C-工具的工作目录是 <code>campus-lab</code>。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请按materials/约定卡.md为课程准备本地配置工具，但这一步不生成业务代码。
+新建tools/setup-env.mjs，使用Node自带crypto随机生成足够长的口令，
+在项目根生成.env：DB_PASSWORD、MYSQL_ROOT_PASSWORD、REDIS_PASSWORD、DEMO_PASSWORD。
+已有.env时拒绝覆盖，不打印口令。新建.env.example，只放说明和占位文字。
+重复运行的提示与示例都说明保留现有配置、继续练习，不建议为了重做练习删除.env或重新生成口令。
+把.env、.private、.runtime、backend/target、node_modules和日志加入.gitignore。
+不要读取已有私密配置，不要把口令写入前端、README或回复。
+不要替我运行生成工具，我会亲自运行。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 打开脚本看看它是否使用随机生成，检查 <code>.env.example</code> 里没有真实口令。此时没有 <code>.env</code> 是正常的，还没有执行生成。</p>
+<p><strong>亲自操作：</strong> C、<code>campus-lab</code> 根目录，两种系统相同：</p>
+<pre><code class="language-text">node tools/setup-env.mjs
+</code></pre>
+<p><strong>应该看见：</strong> 工具提示本地配置已生成，但不显示口令。左侧文件树出现 <code>.env</code>。如果提示文件已存在，保留它，直接继续，不能为重做练习删除配置。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">配置工具运行后出现【不含口令的错误】。
+请只修复setup-env.mjs，不读取或覆盖已有.env，不输出其中的值。
+我需要它在缺文件时生成，在已有文件时明确保留。
+</code></pre>
+<p><strong>下一步：</strong> 本机 <code>.env</code> 就绪后，再生成运行 MySQL 的说明。</p>
+<h2 id="chapter-8-step-2">第2步：让课程 MySQL 运行起来</h2>
+<p><strong>现在在哪：</strong> C 仍在 <code>campus-lab</code> 根目录。不要关闭 Docker Desktop。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请新建根目录compose.yaml，项目名campus-v2。
+服务不设置固定container_name，容器名称由Compose按项目名生成，以便第12课隔离新目录。
+本步定义MySQL8.4服务mysql：只映射127.0.0.1:23501到容器3306，
+数据库campus_course、用户campus，口令从.env读取DB_PASSWORD和MYSQL_ROOT_PASSWORD。
+使用本课程专属命名卷保存MySQL数据，增加能判断数据库就绪的healthcheck：使用mysql:8.4镜像实际提供的mysql客户端，以campus账号连接campus_course执行SELECT 1；口令在容器内从环境变量读取，并按Compose要求转义变量，不输出口令。不使用该镜像没有的healthcheck.sh。
+顶层volumes只声明课程卷的键，不设置显式name，也不设置external，
+让Compose自动在卷名前加项目名，方便第12课建立独立交付环境。
+不连学校或已有数据库，不打印展开后的配置。
+Redis留到下一课加入，本步不要提前启动它。
+请告诉我docker compose ps中怎样分辨starting与healthy。
+不要替我启动服务，不使用down -v。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看见 <code>compose.yaml</code> 新增后再运行。配置文件只引用变量名，不应写出真实口令。</p>
+<p><strong>亲自操作：</strong> C、<code>campus-lab</code> 根目录，两种系统相同：</p>
+<pre><code class="language-text">docker version
+docker compose up -d mysql
+docker compose ps
+</code></pre>
+<p>首次需要下载 MySQL 镜像。第一次 <code>ps</code> 若显示 <code>starting</code>，过一会再执行同一条 <code>docker compose ps</code>。看到 <code>healthy</code> 再继续。</p>
+<p><strong>应该看见：</strong> 只有本课程 MySQL 使用本机 <code>23501</code> 端口。<code>up -d</code> 会返回输入提示符，MySQL 在 Docker 中继续运行；这与 B 里持续显示日志的 Java 程序不同。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在项目根运行docker compose up -d mysql后出现【不含口令的错误】，
+docker compose ps显示【状态】。
+请先区分Docker没启动、镜像下载失败、端口占用、数据库尚未就绪。
+只修改本课程配置；不结束未知进程，不删除卷，不输出.env。
+</code></pre>
+<p><strong>下一步：</strong> MySQL 显示 <code>healthy</code> 后，才让 Java 连进去。</p>
+<h2 id="chapter-8-step-3">第3步：让 Java 认识数据库，并建立设备表</h2>
+<p><strong>现在在哪：</strong> B 已停止，工作目录为 <code>campus-lab/backend</code>。C 中的 MySQL 保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请给现有最小后端加入JdbcTemplate、MySQL驱动和Flyway所需依赖，
+沿用Java17、Spring Boot3.4.2。
+application.properties从optional:file:../.env[.properties]导入本机配置，
+连接127.0.0.1:23501/campus_course，用户名campus，使用DB_PASSWORD占位，
+不得读取或复制.env的真实内容。
+optional只表示文件导入可选，不代表当前数据源和Flyway可缺少配置；
+注释需说明第08课仍要保留本机.env并先启动健康MySQL。
+新增V1建表迁移，先建spaces和devices，字段严格按materials/约定卡.md；
+从公开materials/mock-campus.json生成4个空间与16台设备的初始化SQL。
+online未知必须是SQL NULL，模拟标记保留，device的spaceId须能找到空间。
+迁移只在第一次使用这个数据库时建立和填充，不在每次启动时删除重建。
+本步保留health接口，不实现其他页面接口。不要启动常驻服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 查看新的迁移文件，找到 <code>d01</code>、<code>d16</code> 与四个空间。看不懂全部 SQL 没关系，先确认这些是自己的练习数据。</p>
+<p><strong>亲自操作：</strong> 在 B 运行测试；完成后启动后端。</p>
+<p>macOS，工作目录为 <code>campus-lab/backend</code>：</p>
+<pre><code class="language-sh">sh ./mvnw test
+sh ./mvnw spring-boot:run
+</code></pre>
+<p>Windows PowerShell，工作目录为 <code>campus-lab/backend</code>：</p>
+<pre><code class="language-powershell">.\mvnw.cmd test
+.\mvnw.cmd spring-boot:run
+</code></pre>
+<p>前一条失败时先修好，不执行后一条。在浏览器访问 <code>http://127.0.0.1:5188/api/health</code>；若 A 没有启动，在 A、项目根运行 <code>node tools/serve.mjs</code>。</p>
+<p><strong>应该看见：</strong> B 启动日志显示迁移完成，健康接口仍返回 <code>UP</code>。这表示 Java 已连到数据库并建立表，设备页还没切换数据来源。</p>
+<p>本轮 macOS 学生实跑中，Spring Boot 3.4.2 管理的 Flyway 对 MySQL 8.4 提示“高于已测试最高 8.1”的警告；本机 V1 迁移与重启校验通过。保留这条兼容性提示及实际结果，不把本课成功写成生产支持保证，也不为消除警告直接升级整套框架。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">MySQL已healthy，但后端启动出现【不含口令的第一段错误】。
+请检查.env相对backend的导入路径、23501端口、数据库名与Flyway配置。
+不要硬编码口令，不删除数据库，不让启动失败自动退回模拟成功。
+如果V1已执行，后续修正用新的迁移文件，不篡改已执行的V1。
+</code></pre>
+<p><strong>下一步：</strong> 健康接口成功后，增加第一条数据库查询。</p>
+<h2 id="chapter-8-step-4">第4步：让设备接口读出十六台设备</h2>
+<p><strong>现在在哪：</strong> 先在 B 按 Ctrl+C 停自己的后端。A、MySQL 保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在现有后端实现GET /api/devices。
+本课暂时允许未登录读取，下一课再加登录。
+使用JdbcTemplate从MySQL的devices表查询，按id排序；
+返回{code:0,message:&quot;ok&quot;,data:[设备数组]}，字段按约定卡。
+online为NULL时返回JSON null，不能变成false；simulated保持true。
+控制器接收请求，服务组织结果，查询代码单独放置，用简短注释说明各自作用。
+增加测试检查true、false和null都能保持原意。
+不要从mock-campus.json临时返回数据，不实现其他接口，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看 AI 列出的修改文件，再做一次“测试→启动”。新 Java 代码只有重新启动 B 后才生效。</p>
+<p><strong>亲自操作：</strong> B、<code>campus-lab/backend</code>：</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>先测试，结束后再启动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>macOS</td>
+<td><code>sh ./mvnw test</code>，成功后 <code>sh ./mvnw spring-boot:run</code></td>
+</tr>
+<tr>
+<td>Windows PowerShell</td>
+<td><code>.\mvnw.cmd test</code>，成功后 <code>.\mvnw.cmd spring-boot:run</code></td>
+</tr>
+</tbody></table>
+<p>在浏览器新标签打开 <code>http://127.0.0.1:5188/api/devices</code>。</p>
+<p><strong>应该看见：</strong> <code>data</code> 中有16台设备，包含 <code>d01</code> 到 <code>d16</code>，四类各4台。数据来自 SQL 查询，不是为了凑16而写死响应。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">/api/devices实际返回【去掉无关信息的结果】。
+请只检查V1初始化与devices查询：应有16台，ID不重复，未知online保持null。
+不要在前端补出缺失设备，也不要删除数据库重新来过。
+</code></pre>
+<p><strong>下一步：</strong> 接口可读后，再改已有设备页；不要同时重写整个网页。</p>
+<h2 id="chapter-8-step-5">第5步：只把设备页接到新接口</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开 <code>frontend/data-service.js</code> 和设备页相关代码。A、B、MySQL 都保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请只把现有设备台账和详情中的设备基本信息改为读取同源GET /api/devices：
+ID、名称、类别、spaceId、online、simulated来自MySQL。
+在data-service.js实现请求与响应检查；其他页面的浏览器演示暂时保留。
+设备详情里的点位读数、历史、责任信息本课还未有对应接口，
+继续使用原公开样本或浏览器演示，并在这些区域分别标明来源，第10课再接后端。
+保留设备页原有筛选、详情和历史入口，不新做另一套页面。
+读取期间显示“正在读取”；成功显示“数据来自本机后端/MySQL”；
+首次失败显示可重试的错误；成功后再失败时保留旧列表并明确标“上次成功结果”，
+不能假装刷新成功、不能自动回退为模拟数据。
+成功刷新后清除旧错误，显示本次读取时间；该时间不能冒充设备采样时间。
+不要启动服务，告诉我具体点击哪里检查。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 回复结束后保存并刷新校园网页。前端文件变了，不必重启 B。</p>
+<p><strong>亲自操作：</strong> 点击“设备”，用筛选选择能源设备，再打开其中一台详情，记下设备 ID。点击设备页的刷新按钮。</p>
+<p><strong>应该看见：</strong> 总数16、能源4台、详情仍对应刚点击的设备。设备基本信息明确写着本机后端；同一详情中的点位读数、历史、责任仍分别标为教学样本或浏览器演示。空间编辑、演练等尚未接通的页面也继续显示“浏览器演示”，不能因为一个页面部分接通就把整页都写成 MySQL 来源。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">设备接口返回正常，但设备页操作【具体按钮】后出现【现象】。
+请只修复data-service与现有设备页面之间的连接，保留原有筛选和详情。
+不要修改数据库，也不要换回mock数据掩盖问题。
+</code></pre>
+<p><strong>下一步：</strong> 设备页成功后，用一次短暂停机确认它确实在请求后端。</p>
+<h2 id="chapter-8-step-6">第6步：确认数据保存了，失败也说清楚了</h2>
+<p><strong>现在在哪：</strong> 浏览器停在已经成功读取的设备页，不关闭标签。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在docs/页面需要的数据.md更新实际进度：
+设备台账和详情中的设备基本信息已接到MySQL；
+详情中的点位读数、历史、责任仍为教学样本或浏览器演示，直到第10课才接通。
+其他页面也按当前代码注明来源。
+再在docs/后端启动笔记.md追加本课的人工检查表，结果先留“待我填写”：
+成功读取、后端停止后在页内重新读取、后端恢复后刷新、MySQL重启后再次读取。
+另列“后端停止后整页刷新”的首次读取失败：旧列表只在内存，
+此时应显示错误和重试，不能要求它保留刷新前列表，也不能回退为模拟列表。
+MySQL重启检查写清：先停B，重启数据库等healthy，再启动B并读取。
+不要替我编写通过结论，不修改业务代码或启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看到四类检查及单列的“整页刷新后首次失败”，结果仍待填写，再亲手操作。</p>
+<p><strong>亲自操作：</strong></p>
+<ol>
+<li>在 B 按 Ctrl+C；设备页点击刷新，应保留旧结果并提示失败。</li>
+<li>B 仍在 <code>backend</code>，执行本课第4步的启动命令；等启动完再刷新，应恢复正常。</li>
+<li>再停止 B。C 在项目根运行 <code>docker compose restart mysql</code>，随后执行 <code>docker compose ps</code>，等 <code>healthy</code>。</li>
+<li>在 B 重新启动后端，设备页再次读取，确认仍是16台。</li>
+<li>再停止 B，整页刷新并进入设备页，确认首次读取只显示错误和重试、没有模拟列表。把上述实际结果填入笔记。</li>
+</ol>
+<p><strong>应该看见：</strong> MySQL 重启后仍是原来的16台设备，数据没有因进程停止而消失。失败提示与成功提示能相互切换。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我执行到人工检查第【序号】项，实际看到【结果】。
+请检查课程MySQL命名卷、启动迁移或设备页失败状态中与该现象有关的一处。
+不要删除卷，不用重新导入一份临时数据冒充持久保存。
+</code></pre>
+<p><strong>下一步：</strong> 下一课增加登录，Redis 才开始发挥作用。下课停止自己的 A、B；C 在项目根运行 <code>docker compose stop</code>，数据卷保留。</p>
+<div class="bottom-nav"><a href="#chapter-7">← 上一部分</a><a href="#chapter-9">下一部分 →</a></div></article>
+<article id="chapter-9" data-chapter hidden><p class="eyebrow">第 09 课 · 4学时 · V2.0.2</p><h1>第09课：用 Redis 记住短时登录</h1><div class="step-links"><a href="#chapter-9-step-1">第1步：启动只属于本课程的 Redis</a><a href="#chapter-9-step-2">第2步：建立三个有不同职责的账号</a><a href="#chapter-9-step-3">第3步：让后端签发和检查登录凭条</a><a href="#chapter-9-step-4">第4步：保留原页面，加上真正的登录与退出</a><a href="#chapter-9-step-5">第5步：用三个账号核对“谁能做什么”</a><a href="#chapter-9-step-6">第6步：重启 Redis，观察登录失效而设备仍在</a></div>
+<p>设备已经存在 MySQL 里。今天再加一件事：后端要知道“现在是谁在访问”。登录成功后，Redis 暂时保存登录凭条；设备和业务记录仍保存在 MySQL。</p>
+<p>本课4学时，共180分钟。六步建议用时：25、30、40、35、30、20分钟。</p>
+<p>继续使用原 <code>campus-lab</code>，保留第08课的 <code>.env</code>，不用再运行 <code>setup-env.mjs</code>。打开 Docker Desktop，等引擎运行，再按下面顺序恢复。</p>
+<ol>
+<li><strong>C-工具，项目根：</strong> 执行 <code>docker compose up -d mysql</code>，再执行 <code>docker compose ps</code>，等 MySQL 显示 <code>healthy</code>。Redis 还要在本课第1步生成配置，现在不要求它已存在。</li>
+<li><strong>A-页面，项目根：</strong> 若上次已停止，执行 <code>node tools/serve.mjs</code>，浏览器打开 <code>http://127.0.0.1:5188</code>；已有 A 在运行就继续用它。</li>
+<li><strong>B-后端：</strong> 若旧后端仍在运行，先在原 B 按 Ctrl+C。新 B 先按<a href="#chapter-7-step-2">第07课第2步</a>设置本窗口的 Java 17 与已安装的 Node 22，分别运行 <code>java -version</code>、<code>node --version</code>。从项目根进入 <code>backend</code>：macOS 用 <code>cd backend</code>，Windows PowerShell 用 <code>Set-Location backend</code>；已经在该目录就不重复进入。暂时不启动 B，先完成本课修改。</li>
+</ol>
+<h2 id="chapter-9-step-1">第1步：启动只属于本课程的 Redis</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开项目根的 <code>compose.yaml</code>。C 的目录是 <code>campus-lab</code>，B 已停止。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在现有compose.yaml加入Redis7.4服务redis。
+不设置固定container_name，容器名称由Compose按项目名生成。
+项目名仍是campus-v2，只映射127.0.0.1:23502到容器6379；
+密码引用.env里的REDIS_PASSWORD，不读取或输出真实值。
+Redis在本课程只保存短时登录，明确关闭RDB与AOF持久化，
+这样课程redis进程重新启动后登录凭条会消失。
+增加使用本机配置检查可用性的healthcheck，检查日志不能打印口令。
+不要声称变量占位会让普通compose config或docker inspect整体输出无口令；
+环境变量仍可能被展开，结构检查不能输出配置值，也不能展示或分享含口令的结果。
+保留原MySQL服务与命名卷不变。不要替我启动服务，不运行down -v。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看到新增 <code>redis</code> 服务，确认原 MySQL 配置没有被删除。</p>
+<p><strong>亲自操作：</strong> C、<code>campus-lab</code> 根目录，两种系统相同：</p>
+<pre><code class="language-text">docker compose up -d redis
+docker compose ps
+</code></pre>
+<p><strong>应该看见：</strong> MySQL、Redis 都运行，Redis 最终显示 <code>healthy</code>，本机端口分别是 <code>23501</code>、<code>23502</code>。Redis 还没有登录记录，因为登录接口尚未完成。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">课程Redis启动后docker compose ps显示【状态】，
+不含口令的错误是【错误】。
+请只检查Redis服务、23502端口和健康检查，不输出.env，不修改MySQL数据卷。
+</code></pre>
+<p><strong>下一步：</strong> 两个服务都健康后，先在 MySQL 建立三个练习账号。</p>
+<h2 id="chapter-9-step-2">第2步：建立三个有不同职责的账号</h2>
+<p><strong>现在在哪：</strong> B 保持停止，CodeBuddy 打开 <code>backend</code>。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请给现有后端增加spring-security-crypto，用BCrypt保存密码摘要。
+新增V2迁移建立users表，不改已执行的V1。
+在本地课程启动时，若账号尚不存在，创建admin、manager、viewer，
+角色依次为ADMIN、MANAGER、VIEWER，初始密码从DEMO_PASSWORD配置读取。
+三个账号共用这份本地练习初始密码，只适用于本机课程。
+只保存BCrypt摘要，不在SQL、日志、接口、回复中输出明文或摘要。
+账号已存在时不重置密码；缺少配置要说明缺项，不能使用写死的默认密码。
+先做账号建立和密码校验的测试，不做前端登录，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 查看新增 <code>V2</code> 文件与账号初始化代码。它们应使用配置名，而不是出现你的真实口令。</p>
+<p><strong>亲自操作：</strong> B、<code>campus-lab/backend</code>，先测试，成功后启动。</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>先测试</th>
+<th>再启动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>macOS</td>
+<td><code>sh ./mvnw test</code></td>
+<td><code>sh ./mvnw spring-boot:run</code></td>
+</tr>
+<tr>
+<td>Windows PowerShell</td>
+<td><code>.\mvnw.cmd test</code></td>
+<td><code>.\mvnw.cmd spring-boot:run</code></td>
+</tr>
+</tbody></table>
+<p>浏览器检查 <code>http://127.0.0.1:5188/api/health</code>；A 未启动时，在 A、项目根运行 <code>node tools/serve.mjs</code>。</p>
+<p><strong>应该看见：</strong> 后端正常启动，测试包含正确密码能通过、错误密码不能通过。日志可以说账号准备完成，但不会出现密码。本步还没有登录按钮可用。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">账号准备这一步失败，相关错误是【已去掉私密内容的错误】。
+请只修复V2、配置读取或BCrypt校验，不重建数据库，不重置已有用户，
+不要让我把.env或密码贴给你。
+</code></pre>
+<p><strong>下一步：</strong> 停止 B 后生成登录接口，让账号真正获得短时登录凭条。</p>
+<h2 id="chapter-9-step-3">第3步：让后端签发和检查登录凭条</h2>
+<p><strong>现在在哪：</strong> 在 B 按 Ctrl+C。MySQL 和 Redis 继续运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请按materials/约定卡.md加入Spring Data Redis并完成登录接口。
+Redis连接127.0.0.1:23502，密码使用REDIS_PASSWORD占位。
+POST /api/login接收username/password，校验MySQL账号后，
+使用数据库查到的规范username建立会话和返回用户，不把输入大小写当成另一个身份；
+用安全随机数生成登录token，在Redis以campus:v2:session:前缀保存会话，
+过期时间1800秒，返回token及user:{username,role}，不返回密码摘要。
+GET /api/me读取Authorization: Bearer token并返回当前用户；
+POST /api/logout删除当前会话。
+除/api/health和/api/login外，/api下的请求都必须检查会话。
+未登录或过期返回401；已登录但无权操作返回403；
+Redis不可用返回清楚的503，不放行，也不伪造登录成功。
+不要在请求日志打印密码、Authorization或token。
+增加登录失败、缺令牌、失效令牌和退出后不能继续访问的测试；
+若数据库忽略账号大小写，验证MANAGER登录后响应和会话都使用数据库中的manager身份。
+不要修改前端，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 阅读 AI 的接口说明，确认这次保护了上一课公开的设备接口。</p>
+<p><strong>亲自操作：</strong> B、<code>backend</code> 目录再次执行本课第2步对应系统的“测试→启动”。启动成功后，在浏览器新标签直接打开 <code>http://127.0.0.1:5188/api/devices</code>。</p>
+<p><strong>应该看见：</strong> 直接打开地址会收到“请先登录”或同义错误，浏览器网络面板中状态是 <code>401</code>。这是本步的正确结果。健康地址仍可读取；前端设备页要等下一步接上登录才恢复。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">加入登录检查后，直接访问/api/devices的实际结果是【结果】。
+请只检查保护范围与会话校验：health/login公开，其余/api需要有效Redis会话。
+不要把设备接口重新设为公开来消除错误。
+</code></pre>
+<p><strong>下一步：</strong> 后端已经会认人，再把网页上的“角色演示”改成真实登录。</p>
+<h2 id="chapter-9-step-4">第4步：保留原页面，加上真正的登录与退出</h2>
+<p><strong>现在在哪：</strong> A、B、两个容器都在运行。CodeBuddy 打开 <code>frontend</code>。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请给现有页面增加登录表单：用户名、密码、登录按钮和可读错误。
+页面顶部提供“数据方式”：浏览器演示、连接后端。
+首次由学生选择“连接后端”，随后显示登录表单。
+可以在localStorage保存这一个模式偏好，刷新后仍停在连接后端；
+不能把模式偏好当作身份，也不能保存密码、token或用户角色来冒充登录。
+登录调用POST /api/login，密码只用于本次请求；成功后清空密码输入框。
+token只保存在data-service.js的内存变量，不能写localStorage/sessionStorage/URL；
+后续真实API请求带Authorization: Bearer token。
+登录成功后调用/api/me显示账号与角色，再重新读取设备。
+增加退出按钮，调用/api/logout，随后清除内存token和已登录用户的页面数据。
+刷新页面后需要重新登录，这是本课约定，不自动从浏览器恢复token。
+“连接后端”模式移除能假装已登录的演示角色切换；
+选择“浏览器演示”时仍须明确标注演示身份，不能与真实登录混用。
+未接后端的功能仍标“浏览器演示”。
+401回到登录并清除旧内容，403显示无权访问；不把失败写成成功。
+保留九个菜单，不重做布局，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 保存后刷新校园网页，在顶部“数据方式”选择 <strong>“连接后端”</strong>。这时应看见登录表单。以后整页刷新会保留“连接后端”的选择，但登录凭条已清空，所以仍要重新登录。</p>
+<p><strong>亲自操作：</strong></p>
+<ol>
+<li>确认顶部数据方式是“连接后端”。在 CodeBuddy <strong>本机编辑器</strong>打开自己的 <code>.env</code>，找到 <code>DEMO_PASSWORD</code>，只在本机查看。</li>
+<li>浏览器输入用户名 <code>admin</code>，手动填入该密码并登录。不要把 <code>.env</code> 或密码发给 AI。</li>
+<li>点击“设备”，确认16台设备重新出现。</li>
+<li>点击退出，应回到登录。再登录一次，然后刷新整个网页，应再次要求登录。</li>
+</ol>
+<p><strong>应该看见：</strong> 登录区显示真实账号 <code>admin</code>、角色 <code>ADMIN</code>；设备页显示后端来源。刷新要求重登是设计好的流程，不是丢失了 MySQL 数据。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在登录页操作【登录/退出/刷新】后看到【现象】。
+请检查同源/api请求、内存token、/api/me和401清理，
+不要让我发送密码，不把token改存到localStorage，也不要绕过后端认证。
+</code></pre>
+<p><strong>下一步：</strong> 用同一个登录表单切换三个账号，看看职责说明是否正确。</p>
+<h2 id="chapter-9-step-5">第5步：用三个账号核对“谁能做什么”</h2>
+<p><strong>现在在哪：</strong> 浏览器保持运行。本步只核对登录身份与已完成的设备读取。空间、责任、事件的真实写入将在后面两课完成。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在管理菜单中增加一张易懂的职责表，并明确哪些动作尚待后续课接通：
+ADMIN可登记空间/责任、建立演练、分派、模拟恢复，并可处理事件；
+MANAGER只处理已经分派给自己的事件；
+VIEWER只看资料。
+职责说明使用/api/me实际返回的角色，不能相信浏览器自己传来的角色名。
+本课三个账号都能读取设备；尚未实现的真实写入显示“下一课接通”或“浏览器演示”，
+不显示成已经通过后端权限检查。不要新增其他业务接口，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 刷新后重新登录。不要因为前端隐藏了按钮，就在记录里写“后端权限全部通过”。</p>
+<p><strong>亲自操作：</strong> 依次用 <code>admin</code>、<code>manager</code>、<code>viewer</code> 登录；每次先退出上一个账号。三个账号均使用本机课程初始密码。进入“管理”看职责，再进入“设备”看列表。</p>
+<p><strong>应该看见：</strong> 三次身份分别是 <code>ADMIN</code>、<code>MANAGER</code>、<code>VIEWER</code>，三个账号都能读设备。旧用户的用户名、错误或详情不会残留到下一个账号的页面。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">切换账号后，页面还残留【上一账号的内容】。
+请只修复退出和重新登录时的状态清理，身份以/api/me为准，
+不通过修改后台角色或放宽权限来解决。
+</code></pre>
+<p><strong>下一步：</strong> 重启 Redis 一次，看见“短时登录”和“长期资料”的区别。</p>
+<h2 id="chapter-9-step-6">第6步：重启 Redis，观察登录失效而设备仍在</h2>
+<p><strong>现在在哪：</strong> 先以 <code>admin</code> 登录并打开设备页，保留当前网页，不刷新。C 在 <code>campus-lab</code> 根目录。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在docs/后端启动笔记.md增加一条“Redis重启实验”，结果留给我填写。
+写明本课程Redis已关闭持久化，所以重启会清除短时会话；
+MySQL使用独立命名卷，设备记录不随Redis重启而删除。
+核对前端收到401会清除已登录内容、显示重新登录，而不是自动换回演示角色。
+若代码已经正确，不修改业务；不要替我重启服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看到待填写实验后，亲自重启。</p>
+<p><strong>亲自操作：</strong> C、项目根，两种系统相同：</p>
+<pre><code class="language-text">docker compose restart redis
+docker compose ps
+</code></pre>
+<p>等 Redis 恢复 <code>healthy</code>，回到原网页点击设备页刷新。应要求重新登录。重新登录后再查看设备。</p>
+<p><strong>应该看见：</strong> 原登录凭条失效，重新登录后16台设备依然存在。不是所有 Redis 配置重启都会清空数据；这里是我们明确关闭持久化的课程配置。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">Redis重启并healthy后，设备刷新显示【实际结果】。
+请检查本课程Redis是否确实关闭持久化、请求是否实际检查会话，
+以及401后页面是否清理。不要清空MySQL，不打印token。
+</code></pre>
+<p><strong>下一步：</strong> 填下实际结果。下课停 A、B，并在 C、项目根运行 <code>docker compose stop</code>。下一课把其余读数接到后端，再保存空间与责任修改。</p>
+<div class="bottom-nav"><a href="#chapter-8">← 上一部分</a><a href="#chapter-10">下一部分 →</a></div></article>
+<article id="chapter-10" data-chapter hidden><p class="eyebrow">第 10 课 · 4学时 · V2.0.2</p><h1>第10课：把空间、读数、历史和责任逐页接回后端</h1><div class="step-links"><a href="#chapter-10-step-1">第1步：把公开练习读数放进数据库</a><a href="#chapter-10-step-2">第2步：接通概览和能源，保留每个数值的含义</a><a href="#chapter-10-step-3">第3步：让历史入口带对设备，让原始报警保持只读</a><a href="#chapter-10-step-4">第4步：让空间修改真正保存，刷新还能看见</a><a href="#chapter-10-step-5">第5步：把设备责任交给管理人员，并处理旧版本</a></div>
+<p>这节课沿用前六课已经做好的页面。先让后台准备页面要用的数据，再逐页替换取数方法。每接好一页，就亲手点一遍。</p>
+<p>本课4学时，共180分钟。五步建议用时：35、40、35、35、35分钟。</p>
+<p><strong>重新开课：</strong> 用 CodeBuddy 打开原 <code>campus-lab</code>，保留已有 <code>.env</code>，不重新生成密码。先打开 Docker Desktop并等引擎运行。C 在项目根执行 <code>docker compose up -d</code>，用 <code>docker compose ps</code> 等 MySQL、Redis 都 <code>healthy</code>。A 若已停止，在项目根执行 <code>node tools/serve.mjs</code>；若仍运行就沿用，不重复启动。</p>
+<p>有旧后端在运行时，先在原 B 按 Ctrl+C。新 B 按<a href="#chapter-7-step-2">第07课第2步</a>设置本窗口的 Java 17 与已安装的 Node 22，分别执行 <code>java -version</code>、<code>node --version</code> 确认。B 从根目录进入 <code>backend</code>：macOS 用 <code>cd backend</code>，Windows PowerShell 用 <code>Set-Location backend</code>；已经在 <code>backend</code> 不重复进入。B 先保持停止，第1步改完后再启动。</p>
+<p>本课每次修改 Java 后，都在 B、<code>campus-lab/backend</code> 使用同一组命令：macOS 先 <code>sh ./mvnw test</code>，成功再 <code>sh ./mvnw spring-boot:run</code>；Windows PowerShell 先 <code>.\mvnw.cmd test</code>，成功再 <code>.\mvnw.cmd spring-boot:run</code>。后端运行后才回网页登录。只改前端时保存、刷新、重新登录即可。</p>
+<h2 id="chapter-10-step-1">第1步：把公开练习读数放进数据库</h2>
+<p><strong>现在在哪：</strong> B 停止，CodeBuddy 打开 <code>materials/mock-campus.json</code> 与已有后端。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请按materials/约定卡.md增加V3迁移，建立points、history、alarms、owners所需表。
+把公开mock-campus.json中的28个点、历史样本与原始报警放进MySQL；
+owners初始为空。保留已存在的空间、设备和账号，不改V1/V2，不删表。
+实现需登录的GET /api/overview，data为{spaces,devices,points,history,alarms}；
+从数据库读取，字段与前端已有模拟数据约定一致。
+历史按时间排序，null保留为空缺，0保留为有效读数，unit与点位一致。
+不生成不存在的实时数据，不使用电脑当前时间冒充采样时间。
+给null、0与单位保持添加针对性测试。不要修改前端，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 找到新增 <code>V3</code>，确认数据来自公开练习文件；旧迁移和账号未被覆盖。</p>
+<p><strong>亲自操作：</strong> 在 B 按本课开头对应系统执行“测试→启动”。校园网页用 <code>admin</code> 登录，然后检查“后端连接”仍成功。</p>
+<p><strong>应该看见：</strong> 后端能启动，迁移完成。前端尚未替换的菜单仍是浏览器演示；本步只是准备了它们需要的真实接口。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">新增V3后，测试或启动出现【不含私密信息的错误】。
+请只检查本次新增表、公开数据导入和overview读取；
+不要修改已执行的迁移，不删除旧数据，不把null改为0绕过失败。
+</code></pre>
+<p><strong>下一步：</strong> 后端启动正常后，先接概览、能源两页。</p>
+<h2 id="chapter-10-step-2">第2步：接通概览和能源，保留每个数值的含义</h2>
+<p><strong>现在在哪：</strong> A、B、数据库都在运行。CodeBuddy 打开 <code>frontend/data-service.js</code>，同时查看概览与能源页面代码。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在“连接后端”模式把现有概览和能源页接到需登录的GET /api/overview，沿用内存token。
+学生主动选择“浏览器演示”时，保留原getOverview()练习数据与已有两页，清楚标为演示；
+不要把“后端失败不自动回退mock”误解成取消学生主动选择的演示模式。
+两种模式切换时先清理旧来源的快照，不能串用。
+只替换数据来源，保留原有菜单、卡片、筛选与点击跳到设备详情的动作。
+概览使用接口实际数量；能源只取category=energy的设备，
+可选点仅power与voltage，单位分别kW和V，不能混入环境temperature/humidity。
+null显示“暂无读数”，0显示0；陈旧和异常质量继续给出提示。
+页面标明“本机后端保存的教学模拟数据”和原采样时间。
+刷新失败保留旧成功快照并标出失败，不自动回退mock。
+失败提示应在刷新按钮旁或来源说明区直接可见，写清失败与上次成功读取时间；
+不要只把错误放在四张空间表后面，让学生点刷新后首屏仍像成功。成功重试后清除旧错误。
+不计算kWh、电费或节能率，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 保存后刷新网页并重新登录。前端刷新需要重登是第09课的内存令牌设计。</p>
+<p><strong>亲自操作：</strong></p>
+<p>先主动选择“浏览器演示”，确认概览仍有16台/4空间/28点、能源仍有4台，并且明确写着演示来源；随后选择“连接后端”并登录，再做下面检查。主动选择演示与后端失败后的自动回退，是两种不同操作。</p>
+<ol>
+<li>打开概览，核对4个空间、16台设备。</li>
+<li>点击一张卡片，进入对应筛选的设备列表；点击设备确认详情一致。</li>
+<li>打开能源，选择功率，再切换电压。分别检查单位与选项。</li>
+<li>找到练习数据中的零值与缺测值，确认显示不同。</li>
+<li>成功读取后，在 B 按 Ctrl+C。概览、能源分别点“刷新读数”：旧数据保留，刷新按钮附近直接出现失败与上次成功结果说明，模式仍是后端。再启动 B 并点重试，确认旧错误清除、读取时间更新。</li>
+</ol>
+<p><strong>应该看见：</strong> 能源页只有4台能源设备；功率不是电量。切到电压后不能仍保留标着 kW 的旧图或旧数值。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在数据方式【浏览器演示/连接后端】的【概览/能源】操作【按钮或指标】后看到【现象】。
+请只修对应模式分支、能源类别过滤、点位选择或单位同步；
+主动演示应保留已有功能，后端失败仍留在backend并明确失败，不自动切回mock。
+不要删掉其他类别练习数据，也不要把错误值直接隐藏成0。
+</code></pre>
+<p><strong>下一步：</strong> 概览和能源正确后，再接历史与原始报警。</p>
+<h2 id="chapter-10-step-3">第3步：让历史入口带对设备，让原始报警保持只读</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开历史、原始报警和设备详情相关前端代码，B 保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在“连接后端”模式把现有历史页与原始报警页接到GET /api/overview里的history和alarms。
+设备详情点位读数也同时接到该接口的points，按当前deviceId读取，不能只改来源文字。
+“浏览器演示”模式仍读既有公开练习数据；两种来源分开标明，后端失败不自动回退。
+详情点位与历史已接MySQL后，删除“第10课才接后端”的旧说明；
+空间名称、责任尚待本课第4/5步，仍分别如实标为浏览器演示。
+保留现有图表和列表。设备详情的“查看历史”必须把当前deviceId与tagId带到历史页；
+在能源页每台设备旁新增“查看当前指标历史”按钮，
+按钮带当前能源deviceId与当前选择的tagId；功率切成电压后，入口也跟着切换。
+切换设备/指标时清除不匹配的旧曲线，只显示新选择对应的单位和采样时间。
+历史中的null画断点，0画真实零；没有样本时说“这段时间暂无样本”。
+原始报警只读，不增加关闭、恢复、删除按钮，不把报警混进本地演练事件；
+每条报警保留或增加“查看设备”入口，带该报警deviceId进入已有设备详情。
+所有API失败明确提示，不能静默回退浏览器模拟。
+不要启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 保存、刷新并重新登录，然后用原来的菜单检查。</p>
+<p><strong>亲自操作：</strong> 先确认后端模式的设备详情点位明确来自 MySQL，d05 功率为0，d03 温度仍缺失且无采样时间；不是只改文字、仍读浏览器样本。再从设备详情点“查看历史”，记住设备 ID 和指标；在历史页核对同一 ID 与单位。再在能源页选择电压，点击一台设备旁的“查看当前指标历史”，核对同一设备与单位 V。最后打开原始报警，点击一条报警的“查看设备”，核对它打开的是该报警对应的设备详情。</p>
+<p><strong>应该看见：</strong> 页面之间传递的是同一台设备；缺测没有被连成假读数；原始报警只有查看操作，来源仍为教学模拟。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我从【设备详情/能源】的【设备ID和指标】进入历史，
+页面却显示【实际设备或指标】。
+请只修复入口传参、当前选择和旧图清理，不新建另一套历史页，不改原始数据。
+</code></pre>
+<p><strong>下一步：</strong> 读取路径通了，再保存第一个真实页面修改。</p>
+<h2 id="chapter-10-step-4">第4步：让空间修改真正保存，刷新还能看见</h2>
+<p><strong>现在在哪：</strong> 先在 B 按 Ctrl+C。A 与容器保持运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请直接修改工程文件实现GET /api/spaces和PUT /api/spaces/{id}，
+不要只做审阅、列建议或反问做哪一个接口；本步只做空间，不转去责任或事件。
+读取允许三个已登录角色；修改仅ADMIN，接收building和floor，
+检查空间存在、字段非空与长度合理，使用参数绑定SQL。
+在后端判断角色，不能相信请求中的role或前端按钮状态。
+把已有空间页面接到这些接口，移除这部分localStorage写入；
+保存成功后独立GET回读，再更新页面与概览中的空间信息。
+其他角色能看但不能提交；403清理当前无权编辑的内容并说明原因。
+新增后端测试证明VIEWER不能修改，ADMIN可以合法修改。
+不要修改责任和事件功能，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 查看空间页面仍是原来的页面；操作范围只扩大到后端保存。</p>
+<p><strong>亲自操作：</strong> B 按本课开头的“测试→启动”。浏览器刷新后用 <code>admin</code> 登录，选空间 <code>s1</code>，把楼栋改为“教学楼 A”、楼层改为“1层”，点保存。刷新整个网页，重新登录，再查看 <code>s1</code>。退出后以 <code>viewer</code> 登录，查看同一个空间。</p>
+<p><strong>应该看见：</strong> 重新登录后仍能读到刚保存的空间信息。viewer 只能看。后端测试中直接用只读角色发修改请求会被拒绝；仅看到按钮隐藏还不能证明这一点。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">空间保存后，我刷新并重新登录，实际显示【结果】。
+请检查PUT是否真正写入MySQL，以及成功后是否独立GET回读；
+不要继续写localStorage，不要仅修改页面文字制造保存成功。
+</code></pre>
+<p><strong>下一步：</strong> 空间真实保存后，登记责任人，为下一课自动分派事件作准备。</p>
+<h2 id="chapter-10-step-5">第5步：把设备责任交给管理人员，并处理旧版本</h2>
+<p><strong>现在在哪：</strong> 停止 B，CodeBuddy 打开已有“设备责任”页面。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请实现GET /api/owners和仅ADMIN可用的PUT /api/owners/{deviceId}。
+提交username:&quot;manager&quot;、非空note、expectedVersion。
+expectedVersion必须是JSON非负整数；小数、数字字符串、布尔、null、
+缺省和超出支持范围均返回400，不得先转换为整数再比较版本。
+没有记录时当前version为0；成功写入后version加1；
+若提交版本落后，返回409，不覆盖新记录。
+把现有责任页接到接口。点保存前使用最近读到的version；
+成功后独立GET回读；409时读取新记录并提示学生重新决定，不能自动重发。
+责任列表允许已登录用户查看。记录保存在MySQL，不再保存在localStorage。
+同步设备列表和详情的责任来源说明与相关注释，明确连接后端时从/api/owners读取本机MySQL。
+测试无权修改、合法修改、旧版本冲突。不要启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看完修改文件，再运行 B 的“测试→启动”。</p>
+<p><strong>亲自操作：</strong> 浏览器重新登录 <code>admin</code>，为 <code>d01</code> 登记责任人 <code>manager</code>，填写“负责本课演练巡查”并保存。记下显示的版本，再刷新、重新登录，核对责任仍在。</p>
+<p>接着新开第二个校园网页标签，在两个标签都登录 <code>admin</code> 并打开 <code>d01</code> 的责任编辑。先在第一个标签改说明并保存；第二个标签保持旧版本，改一段不同说明再保存。</p>
+<p><strong>应该看见：</strong> 第二次旧版本提交收到“记录已更新，请重新查看”的提示，而不是覆盖第一标签的新说明。重新查看后由你决定是否再保存。两个标签分别登录，因为令牌只在各自页面内存中。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">两个标签编辑同一责任记录时，第二个旧版本提交得到【结果】。
+请只修复后端版本比较与前端409处理，
+不要自动重试旧决定，不关闭版本检查，不把测试改成接受覆盖。
+</code></pre>
+<p><strong>下一步：</strong> 在数据进度表标明：设备、空间、概览、能源、历史、原始报警、责任已接后端；事件、审计留待下一课。下课停 A、B，在 C、项目根执行 <code>docker compose stop</code>。</p>
+<div class="bottom-nav"><a href="#chapter-9">← 上一部分</a><a href="#chapter-11">下一部分 →</a></div></article>
+<article id="chapter-11" data-chapter hidden><p class="eyebrow">第 11 课 · 4学时 · V2.0.2</p><h1>第11课：让一件演练有始有终，并留下记录</h1><div class="step-links"><a href="#chapter-11-step-1">第1步：建立第一件真正保存的演练事件</a><a href="#chapter-11-step-2">第2步：分派给 manager，再换人开始处理</a><a href="#chapter-11-step-3">第3步：先恢复，再核实，最后写结论关闭</a><a href="#chapter-11-step-4">第4步：接通审计和接入状态</a><a href="#chapter-11-step-5">第5步：断开后端，检查失败提示；用测试检查拒绝</a><a href="#chapter-11-step-6">第6步：完整走一遍，留下自己的说明</a></div>
+<p>前六课的演练事件只在浏览器里走流程。今天把同一套按钮接到后端：建立、分派、开始、记事、恢复、核实、关闭。换账号或重开网页后，仍能看到同一件事发生过什么。</p>
+<p>本课4学时，共180分钟。六步建议用时：30、35、30、30、30、25分钟。</p>
+<p><strong>重新开课：</strong> 打开原 <code>campus-lab</code>，沿用原 <code>.env</code>；打开 Docker Desktop并等引擎运行。C 在项目根运行 <code>docker compose up -d</code>，用 <code>docker compose ps</code> 等 MySQL、Redis 均 <code>healthy</code>。A 若已停止，在项目根运行 <code>node tools/serve.mjs</code>；仍在运行则沿用，不启动第二份。</p>
+<p>若旧后端还在运行，先在原 B 按 Ctrl+C。新 B 按<a href="#chapter-7-step-2">第07课第2步</a>设置本窗口的 Java 17 与已安装的 Node 22，分别执行 <code>java -version</code>、<code>node --version</code>。B 从项目根进入 <code>backend</code>：macOS 用 <code>cd backend</code>，Windows PowerShell 用 <code>Set-Location backend</code>；若已在该目录不重复进入。编辑 Java 前保持 B 停止，第1步完成后再测试和启动。</p>
+<p>每次 Java 修改后，B 中先测试再启动：macOS 用 <code>sh ./mvnw test</code>、成功后 <code>sh ./mvnw spring-boot:run</code>；Windows PowerShell 用 <code>.\mvnw.cmd test</code>、成功后 <code>.\mvnw.cmd spring-boot:run</code>。已经运行的 B 先按 Ctrl+C，再执行这两条。A 与两个容器保持运行。</p>
+<h2 id="chapter-11-step-1">第1步：建立第一件真正保存的演练事件</h2>
+<p><strong>现在在哪：</strong> B 已停止。CodeBuddy 打开已有后端和演练事件页面。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请按materials/约定卡.md新增V4迁移，建立cases、事件时间线与audit所需表；
+保留V1到V3和已有数据。
+实现GET /api/cases，返回事件及各自timeline；三个登录角色可以读取。
+实现仅ADMIN可用的POST /api/cases，接收deviceId和message。
+服务端生成ID、时间、version=1、sourceState=ACTIVE、verified=false；
+若已有责任人为manager，自动分派并设ASSIGNED，否则为NEW。
+事件、创建时间线和case.create审计在同一事务存入MySQL，
+审计的操作人取自后端会话，不由客户端伪造处理人或创建时间。
+把现有事件列表和“建立演练”按钮接到接口，成功后独立GET回读；
+这部分不再写campus-v2-demo，保留“教学模拟演练”标记。
+不读取或修改原始报警，不控制设备，不发送通知。
+本步只做创建和列表，不提前实现后续动作，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看见新迁移和原事件页面的修改。之前浏览器里演示的事件不会自动成为数据库记录，不要把两份列表合并。</p>
+<p><strong>亲自操作：</strong> B 执行“测试→启动”。网页刷新后以 <code>admin</code> 登录，先为 <code>d01</code> 建立一件事件，消息填“本课温度巡查演练”。再为尚未登记责任人的 <code>d02</code> 建立一件事件，消息填“本课人工分派演练”。</p>
+<p><strong>应该看见：</strong> 按上一课的操作，<code>d01</code> 会自动分派给 <code>manager</code>；<code>d02</code> 是待分派。若你之前给 <code>d02</code> 也登记了责任人，就换一台尚未登记的设备。每件事件有独立 ID、版本1和创建记录。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我为【设备ID】建立演练后看到【实际状态和负责人】。
+请检查后端读取的责任记录、初始状态与GET回读，
+不要在前端写死负责人，也不要把旧localStorage事件当作数据库结果。
+</code></pre>
+<p><strong>下一步：</strong> 选择刚建立的“人工分派演练”，接通分派、开始和记事。</p>
+<h2 id="chapter-11-step-2">第2步：分派给 manager，再换人开始处理</h2>
+<p><strong>现在在哪：</strong> 在 B 按 Ctrl+C。CodeBuddy 打开现有事件页面，保留刚建立的数据库事件。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请实现POST /api/cases/{id}/actions中的assign、start、note。
+每次请求必须带expectedVersion，服务端比较当前版本，成功后加1，
+落后则409；主记录、时间线和审计在同一个数据库事务中保存。
+assign仅ADMIN，username只允许有效manager，说明非空，状态为ASSIGNED；
+start由ADMIN或本事件的manager执行，要求ASSIGNED，变为IN_PROGRESS；
+note由ADMIN或本事件的manager执行，要求IN_PROGRESS、说明非空，状态保持。
+VIEWER不能修改，其他身份不能替未分派给自己的事件处理。
+把原页面的分派、开始、记录按钮逐个接到接口；
+每次成功独立GET /api/cases回读，409只刷新并解释，不自动重发。
+加入角色拒绝、错误状态和版本冲突测试，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 在改动中找这三个动作，不要让 AI 一次改造整个项目。</p>
+<p><strong>亲自操作：</strong> B 执行“测试→启动”。浏览器刷新，以 <code>admin</code> 登录，打开刚才待分派的事件，选择 <code>manager</code>，写“请进行现场巡查”，点击分派。退出并以 <code>manager</code> 登录，打开同一事件，点“开始处理”，写“已检查练习点位，继续观察”并保存处置记录。</p>
+<p><strong>应该看见：</strong> 状态从待分派变成已分派，再变成处理中。时间线按顺序列出建立、分派、开始和处置记录；每成功一次版本增加1，负责人仍是 <code>manager</code>。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我以【账号】对事件执行【动作】，实际出现【现象】。
+请只检查本动作的角色、当前状态、expectedVersion和独立回读，
+不要自动重复提交，不去掉权限或版本检查。
+</code></pre>
+<p><strong>下一步：</strong> 事件进入处理中且已有处置记录后，接通恢复、核实、关闭。</p>
+<h2 id="chapter-11-step-3">第3步：先恢复，再核实，最后写结论关闭</h2>
+<p><strong>现在在哪：</strong> 在 B 按 Ctrl+C。事件数据留在数据库，不会因停止 Java 而消失。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请继续实现同一个actions接口里的recover、verify、close。
+recover仅ADMIN，表示本地演练来源已恢复，设sourceState=RECOVERED，
+不能直接关闭事件，也不声称真实设备已恢复。
+verify由ADMIN或本事件的manager执行，服务端重新检查已恢复事实后设verified=true。
+close要求IN_PROGRESS、有非空处置记录、RECOVERED、verified=true，
+并要求本次note为非空关闭结论，将其存入conclusion，再设CLOSED。
+三个动作均检查expectedVersion、成功加1，主记录/时间线/审计一起保存。
+关闭后拒绝任何后续修改。不得接受客户端直接提交verified=true来跳过核实。
+把现有恢复、核实、关闭三个按钮分别接好，说明缺哪一项条件；
+每次成功独立GET回读，不只修改页面文字。
+测试每一项关闭条件缺失时都会被后端拒绝。不要启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看页面说明是否明确区分“演练来源恢复”“人已核实”“事件关闭”。</p>
+<p><strong>亲自操作：</strong> B 执行“测试→启动”。以 <code>manager</code> 登录打开刚才的事件，先看关闭区域，未恢复时应说明还缺什么。退出后以 <code>admin</code> 登录同一事件，点击“模拟恢复”（生成界面也可能写“标记来源已恢复”）。再次退出，以 <code>manager</code> 登录，点击“核实恢复”（或“核实来源恢复”），输入关闭结论“本次教学演练已核查完成”，最后点击关闭。</p>
+<p><strong>应该看见：</strong> 模拟恢复后仍是处理中；核实后仍需填写结论；最后才是已关闭。刷新整个网页，重新登录，仍能看到同一个已关闭事件、完整时间线与结论。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我完成【恢复/核实/关闭】后，实际显示【状态、来源状态、核实结果】。
+请只修复三个按钮到各自动作的连接与关闭条件；
+不要把恢复等同关闭，不让前端直接伪造核实通过。
+</code></pre>
+<p><strong>下一步：</strong> 事件闭环完成后，让管理员看见谁改过什么。</p>
+<h2 id="chapter-11-step-4">第4步：接通审计和接入状态</h2>
+<p><strong>现在在哪：</strong> 停止 B。CodeBuddy 打开“管理”菜单相关代码。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请实现仅ADMIN可读的GET /api/audit，返回已实际发生的本课程业务修改记录。
+空间修改、责任修改、事件创建/动作都应在成功事务中写审计；
+记录谁、何时、对哪个对象做了哪个动作，不记录密码、token或完整请求头。
+失败操作不能伪装成成功审计。
+实现需登录的GET /api/integration，返回：
+{source:&quot;TEACHING_MOCK&quot;,simulated:true,controlEnabled:false,notificationsEnabled:false}
+把原管理菜单的审计和接入说明接到接口，不伪造AIRIOT已连接；
+MANAGER/VIEWER访问审计时返回403，页面清除旧审计并显示无权查看。
+增加后端角色测试；完成后逐项说明两个接口、管理页接线与角色测试，
+不能只回报局部测试结果。不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 看见管理页保留了角色说明，并增加实际读取的审计。</p>
+<p><strong>亲自操作：</strong> B 执行“测试→启动”。用 <code>admin</code> 登录，打开审计，找到刚完成事件的创建、处理与关闭记录。再保存一次空间说明，回来重新读取审计。查看接入状态，最后退出并用 <code>viewer</code> 登录管理页。</p>
+<p><strong>应该看见：</strong> 新发生的空间修改多了一条审计；新加审计功能之前发生的历史操作若当时未记录，不需要补造。viewer 看不到管理员刚读出的旧审计。接入仍是教学模拟，控制和通知都关闭。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在管理页以【账号】操作【查看审计/切换身份】后看到【现象】。
+请只修复审计读取权限、旧内容清理或真实业务写入记录；
+不要编造历史操作，不输出密码或会话令牌。
+</code></pre>
+<p><strong>下一步：</strong> 用一次故意失败，确认页面不会把旧内容冒充本次成功。</p>
+<h2 id="chapter-11-step-5">第5步：断开后端，检查失败提示；用测试检查拒绝</h2>
+<p><strong>现在在哪：</strong> 用 <code>admin</code> 登录，先成功读取一次事件列表。保持当前标签，不刷新整个网页。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请检查事件、责任、历史、审计这些已经接通的页面如何处理失败。
+统一做到：第一次失败有错误与重试；已有成功数据时标出“上次成功结果”；
+401清理身份与受保护内容；403清理无权查看的内容；409回读后由学生重新决定；
+切换设备/账号后，较早请求返回不能覆盖新选择。
+事件列表应有明确的“重新读取事件”按钮；如果尚未提供，请在本步补上，复用现有加载与失败重试逻辑。
+只修复实际缺失的部分。增加针对已经发现问题的测试，不删除或弱化原测试。
+请告诉我本次修了哪一处；没有问题就说明无需改动。不要启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 若它修改 Java，按本课固定流程重启 B 并重新登录；只改前端则保存后刷新、重新登录。</p>
+<p><strong>亲自操作：</strong> 事件列表成功出现后，在 B 按 Ctrl+C，再点事件列表的“重新读取事件”按钮。看清提示，再在 B、<code>backend</code> 重新运行对应系统启动命令，等启动完成后重试。最后停止 B，运行一次 <code>sh ./mvnw test</code>（macOS）或 <code>.\mvnw.cmd test</code>（Windows）。</p>
+<p><strong>应该看见：</strong> 停机时旧列表可留下，但明确标成旧结果；恢复后错误消失。测试中包含只读角色写入被拒、旧版本被拒、缺关闭条件被拒。测试结果写实际数量，不把本段“应该看见”抄成已通过。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">后端停止时，我点击【页面和按钮】后看到【现象】。
+请只修复这一处失败处理，并给出能复现它的测试；
+不通过删除错误提示、自动切换模拟数据或忽略测试来处理。
+</code></pre>
+<p><strong>下一步：</strong> 修好后重新启动 B，最后把九个菜单串起来走一次。</p>
+<h2 id="chapter-11-step-6">第6步：完整走一遍，留下自己的说明</h2>
+<p><strong>现在在哪：</strong> B 已重新启动，浏览器重新登录 <code>admin</code>。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请更新docs/页面需要的数据.md，逐项对照九个菜单的当前实现，
+标出现在实际调用的接口、MySQL保存的内容、Redis只保存的登录。
+检查还有没有业务页面在失败时静默回退mock或继续写campus-v2-demo；
+若有，只移除已经接通后端功能的旧分支，保留公开练习数据供初始化使用。
+在docs/本组实做记录.md加入一份简短待填写清单：
+设备到历史、空间保存、责任保存、完整事件闭环、只读账号、审计、失败恢复。
+不要填通过结论，不复制教师结果，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 如修改了 Java，再按本课流程测试、启动；如只改文档和前端，保存后刷新并重新登录。</p>
+<p><strong>亲自操作：</strong> 同伴操作鼠标，你口述：概览→设备→详情→历史；空间保存→刷新回读；责任→事件自动分派；打开已关闭事件→时间线；管理→审计。然后交换分工，以 viewer 再查看一遍。每项在记录里填“我看见什么”，发现问题写具体按钮和现象。</p>
+<p><strong>应该看见：</strong> 九个菜单还是前六课逐步搭出的同一套界面；真实写入通过后端保存，登录通过 Redis 判断。页面仍明确写“教学模拟”，没有真实校园接入或设备控制。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">全流程检查中，【起始菜单→按钮→目标页面】这一条没接上，
+实际现象是【结果】。请只修复这条连接，保留其余页面，
+告诉我修复后应从哪个按钮重新检查，不替我编写通过记录。
+</code></pre>
+<p><strong>下一步：</strong> 本课结束后停 A、B，C 在项目根运行 <code>docker compose stop</code>。下一课把项目交给一个全新目录，检查离开原来的运行环境后还能否启动。</p>
+<div class="bottom-nav"><a href="#chapter-10">← 上一部分</a><a href="#chapter-12">下一部分 →</a></div></article>
+<article id="chapter-12" data-chapter hidden><p class="eyebrow">第 12 课 · 4学时 · V2.0.2</p><h1>第12课：把作品交到新目录，让别人照说明启动</h1><div class="step-links"><a href="#chapter-12-step-1">第1步：把启动说明写成别人照着就能做的顺序</a><a href="#chapter-12-step-2">第2步：导出源码，亲自看清楚带走了什么</a><a href="#chapter-12-step-3">第3步：在新目录生成新配置，用独立数据库重新启动</a><a href="#chapter-12-step-4">第4步：照清单重做，确认交付的是能继续使用的作品</a><a href="#chapter-12-step-5">第5步：交出作品，亲口说明它是怎样做出来的</a></div>
+<p>今天完成最后一件事：把你的源码放到一个没有旧配置的新目录，照说明重新启动，再走一遍主要操作。亲手做完，才知道说明有没有漏步骤。</p>
+<p>本课4学时，共180分钟。五步建议用时：30、35、50、40、25分钟。</p>
+<p>本课仍是本机教学交付，不安排公网发布。建议两人交换“读说明”和“操作电脑”的角色。同一台电脑的新目录重做，与另一台 Windows 或 macOS 电脑真正接手，是不同的结果，记录时写清楚。</p>
+<p><strong>重新开课：</strong> 用 CodeBuddy 打开原 <code>campus-lab</code>，新建 C-工具，确认当前位置是原工程根目录。前两步整理说明、导出源码，不需要重启 A、B 或数据库；保留原 <code>.env</code>，不要在原工程重新生成口令。到第3步再检查并停止仍在运行的旧服务，然后只启动新目录的独立环境。新目录的 Java 设置、配置生成和启动命令都在第3步给出。</p>
+<h2 id="chapter-12-step-1">第1步：把启动说明写成别人照着就能做的顺序</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开原来的 <code>campus-lab</code>。先完成第11课记录，确定你要交的是哪一份项目。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请根据当前工程实际文件改写根README，面向第一次拿到项目的同学。
+按顺序写：需要Node22、Java17、Docker Desktop；
+确认打开campus-lab根目录；生成.env；启动本课程MySQL/Redis并等healthy；
+B在backend启动Java；A在根目录启动页面；本机查看DEMO_PASSWORD并登录；
+查看设备/历史，修改空间/责任，完成一件演练；最后停止自己的服务。
+Windows PowerShell与macOS命令分别写，写清每条命令的工作目录。
+说明前端5188、后端8098、MySQL23501、Redis23502，只在本机使用；
+刷新页面会重新登录，MySQL记录保留，Redis只保存短时会话。
+增加“同机新目录”一节：先停旧服务，再用项目名campus-v2-handoff隔离新容器和新卷，
+该节每条compose命令都带-p campus-v2-handoff。
+新目录仅复制第2步最新公开源码导出，目标目录必须不存在；原目录的.env、源码和运行产物全部保留。
+检查Compose顶层卷没有显式name或external，卷名应自动带项目名前缀；mysql/redis服务不设置固定container_name，容器名称也随项目名隔离。
+已有.env必须重用，不覆盖；相同Compose项目名会重用已有卷，不能配一套新密码硬连旧卷。
+写明教学模拟、实际已测和未测内容；不要读取或写入口令，不编造通过结果。
+把notes中已有的前六课公开文字笔记按课次合并到docs/本组实做记录.md的“前端实做”小节，
+保留原笔记和docs中已写的后端记录；缺失的实际结果标“未记录”，不补写通过。
+只处理我确认可交付的文字，不复制个人截图、聊天记录或账号资料。
+本步只改文档，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 请同伴从第一行读到登录步骤。遇到“进入后端目录”却没有写目录名、“启动服务”却没说哪个窗口，就把这一处补清楚。</p>
+<p><strong>亲自操作：</strong> 在 CodeBuddy 左侧文件树逐个找到 README 提到的文件：配置生成工具、Compose 文件、后端 Maven 启动文件、页面服务工具、公开练习材料。缺文件时先补齐，不立即导出。再打开 <code>docs/本组实做记录.md</code>，对照 <code>notes</code> 的原笔记，确认前六课已有的实际结果也带进来了；没有做过或没有记录的仍如实保留。</p>
+<p><strong>应该看见：</strong> 说明从安装前提开始，能回答“在哪个窗口、哪个目录、输入什么、什么时候等、什么时候继续”。正文没有把“AI 已生成代码”写成“服务已经在运行”。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">同伴读README到【原句】时不知道下一步怎样操作。
+请只把这一段改成：当前窗口、目录、完整命令、预期结果、失败后该做什么。
+按现有工程写，不添加未实现的命令或编造已通过记录。
+</code></pre>
+<p><strong>下一步：</strong> 说明可以照着执行后，导出一份不含本机配置的源码。</p>
+<h2 id="chapter-12-step-2">第2步：导出源码，亲自看清楚带走了什么</h2>
+<p><strong>现在在哪：</strong> C-工具的工作目录是原 <code>campus-lab</code>。A、B 暂时可以继续运行。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请生成tools/export-source.mjs，使用Node自带功能，不增加打包依赖。
+接受--out参数，只允许输出到本项目.runtime下；输出目录已存在就拒绝覆盖。
+按白名单复制frontend、backend/src、backend/pom.xml、Maven wrapper和.mvn、
+公开tools、公开materials、compose.yaml、根.env.example、.gitignore、README.md、docs。
+所有层级排除.env及.env.*变体（仅保留根.env.example）、.private、.runtime、
+.codebuddy、node_modules、target、日志、个人截图和凭据。
+检查源路径和输出路径的每一级父目录（含项目根及其更高祖先），拒绝符号链接；只检查路径元数据，不读取上级目录内容。
+不读取上级目录，不带完整教师参考。
+工具可以在本机读取.env的值仅作泄漏检查，不显示这些值；
+如果待导出的文本包含本机口令就停止并仅报告文件名。
+文件过大、识别为二进制或读取失败时，不能跳过泄漏检查后继续复制。
+输出一份文件清单和每个文件的SHA256，便于接手人确认复制完整。
+不要替我运行导出，不把导出成功写成新目录运行成功。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 查看导出工具，确认白名单只包含本项目公开源码与文档。自己的个人资料若放进 <code>docs</code>，先移到不导出的个人目录。</p>
+<p><strong>亲自操作：</strong> C、原 <code>campus-lab</code> 根目录，两种系统相同：</p>
+<pre><code class="language-text">node tools/export-source.mjs --out .runtime/hand-in-v1/campus-lab
+</code></pre>
+<p>用文件管理器打开 <code>.runtime/hand-in-v1/campus-lab</code>，显示隐藏文件，检查有 <code>.env.example</code> 和 <code>backend/.mvn</code>，但没有 <code>.env</code>、<code>target</code>、<code>node_modules</code>。</p>
+<p><strong>应该看见：</strong> 导出目录中有可读源码、启动工具、公开材料和文件清单。看不到你的本机密码，也没有一次旧运行产生的数据库文件。若需要重新导出修订版，把输出改成 <code>.runtime/hand-in-v2/campus-lab</code>，不覆盖第一次结果。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">源码导出在【阶段】失败，固定错误是【不含口令的提示】。
+请只修复白名单、路径处理或泄漏检查；不要扩大到整个项目或上级目录，
+不要忽略检查继续导出，也不要显示匹配到的口令。
+</code></pre>
+<p><strong>下一步：</strong> 导出检查完成后，停止旧服务，再去新目录。</p>
+<h2 id="chapter-12-step-3">第3步：在新目录生成新配置，用独立数据库重新启动</h2>
+<p><strong>现在在哪：</strong> 如果原来的 A、B 仍在运行，在各自原窗口按 Ctrl+C；上次下课已停的窗口无需再操作。C 仍在原 <code>campus-lab</code> 根目录。打开 Docker Desktop并等引擎运行，接下来查看、停止旧课程容器并启动新环境。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请核对README与Compose的同机新目录步骤是否与当前工程一致，不替我执行。
+旧项目用默认campus-v2停止；新项目所有Docker Compose命令使用-p campus-v2-handoff。
+两个项目不能同时占用5188、8098、23501、23502。
+新目录必须来自本次源码导出，不复制原.env，不连接原来的MySQL卷；
+新.env只生成一次。相同交付目录再次检查时保留该.env与原项目名。
+确认Compose的命名卷没有显式name和external；新卷名应以campus-v2-handoff_开头。
+确认mysql/redis不设置固定container_name；已有固定名时仅移除该字段并同步README，其余配置保持原样。
+不使用down -v、不删除任何数据库卷、不结束未知进程。
+仅修上述命名隔离与README缺项，列出修改文件；不读取.env，不执行Compose或服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 若 README 有修订，按第2步导出到新的输出目录；接下来使用最新导出。没有修订就使用 <code>hand-in-v1</code>。</p>
+<p><strong>亲自操作，先停旧容器：</strong> C、<strong>原</strong> <code>campus-lab</code> 根目录：</p>
+<pre><code class="language-text">docker compose stop
+docker compose ps
+</code></pre>
+<p>在文件管理器里，先在原项目旁边新建一个确实不存在的空目录 <strong><code>campus-lab-handoff</code></strong>；若该名字已存在就停下核对，不覆盖或合并。再打开最新公开导出的 <code>campus-lab</code>，显示隐藏文件，复制里面全部内容（含 <code>.env.example</code>、<code>.gitignore</code> 和 <code>backend/.mvn</code>）到这个新空目录。</p>
+<p>在 CodeBuddy 另开窗口，打开 <code>campus-lab-handoff</code>。为它新建 A-页面、B-后端、C-工具三个终端。新窗口不会继承旧终端的临时 PATH：三个终端先各自运行 <code>node --version</code>，确认是 22；不符时按第07课已记录的本机安装路径，只在当前终端前置已安装的 Node 22，不改全局默认。B 还需要下面的 Java 17 设置。以下 C 的工作目录都是<strong>新目录根</strong>：</p>
+<pre><code class="language-text">node tools/setup-env.mjs
+docker compose -p campus-v2-handoff up -d
+docker compose -p campus-v2-handoff ps
+docker volume ls --filter label=com.docker.compose.project=campus-v2-handoff
+</code></pre>
+<p>等两个服务 <code>healthy</code>。最后一条命令只查看卷名：本次 MySQL 卷应以 <code>campus-v2-handoff_</code> 开头。若显示旧项目卷名，先在新 C、项目根运行 <code>docker compose -p campus-v2-handoff stop</code>，再修正 Compose 的卷声明，不继续使用旧卷。再在新 B 设置 Java 17：</p>
+<p>macOS，新 B 从 <code>campus-lab-handoff</code> 根目录开始：</p>
+<pre><code class="language-sh">export JAVA_HOME=&quot;$(/usr/libexec/java_home -v 17)&quot;
+export PATH=&quot;$JAVA_HOME/bin:$PATH&quot;
+java -version
+cd backend
+sh ./mvnw test
+sh ./mvnw spring-boot:run
+</code></pre>
+<p>Windows PowerShell，新 B 从 <code>campus-lab-handoff</code> 根目录开始：</p>
+<pre><code class="language-powershell">$courseJdks = @(Get-ChildItem &quot;C:\Program Files\Eclipse Adoptium&quot; -Directory | Where-Object Name -Like &quot;jdk-17*&quot;)
+if ($courseJdks.Count -ne 1) { throw &quot;请老师确认本机JDK17目录后再继续&quot; }
+$env:JAVA_HOME = $courseJdks[0].FullName
+$env:Path = &quot;$env:JAVA_HOME\bin;$env:Path&quot;
+java -version
+Set-Location backend
+.\mvnw.cmd test
+.\mvnw.cmd spring-boot:run
+</code></pre>
+<p>测试失败先修，不继续启动。新 A、<code>campus-lab-handoff</code> 根目录，两种系统相同：</p>
+<pre><code class="language-text">node tools/serve.mjs
+</code></pre>
+<p>浏览器打开 <code>http://127.0.0.1:5188</code>，在“数据方式”选择 <strong>“连接后端”</strong>，手动使用<strong>新目录</strong> <code>.env</code> 中的 <code>DEMO_PASSWORD</code> 登录 <code>admin</code>。即使浏览器记住了上次模式，本步也亲眼确认一次。</p>
+<p><strong>应该看见：</strong> 初始16台设备已准备好，旧项目的个人事件、空间改动不会冒出来。这些是同一份源码重新建立的独立课程数据；登录用的是新配置。使用相同地址不代表仍在访问旧服务，所以要先停原 A、B 与原容器。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">我在新目录执行到【命令或登录】时出现【不含私密信息的错误】。
+已停止旧项目A/B和默认Compose；新Compose项目名为campus-v2-handoff。
+请检查新目录漏文件、端口、环境导入或项目名，不复制原.env、不删卷，
+不要把连接旧服务当作新目录成功。
+</code></pre>
+<p><strong>下一步：</strong> 新目录确实启动后，用它完成一件新事件。</p>
+<h2 id="chapter-12-step-4">第4步：照清单重做，确认交付的是能继续使用的作品</h2>
+<p><strong>现在在哪：</strong> CodeBuddy 打开新 <code>campus-lab-handoff</code>。不要切回原工程代修后忘记导出。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请在新目录docs/本组实做记录.md增加“新目录接手”小节，结果暂留待填写。
+列出我将亲自做的六件事：
+登录后查看设备并进入同一设备历史；
+保存一个空间修改，刷新重新登录后回读；
+为d01登记manager责任；
+为d01建立新的演练，确认自动分派；
+依次开始、记事、管理员模拟恢复、核实、写结论关闭；
+管理员看审计，viewer只能读，最后刷新再查已关闭事件。
+分别记录操作者、系统、新目录或另一台电脑、实际现象与未完成项。
+不要使用旧项目的测试结论或事件截图填这份记录，不启动服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 让同伴读清单，你操作；走到一半交换。第一次交付请使用一个新建事件，不只看数据库初始化时的设备列表。</p>
+<p><strong>亲自操作：</strong> 按六项顺序操作。更换账号前点击退出；刷新后用新目录口令重新登录。记录新事件 ID、最后状态与看到的时间线，但不记录登录 token 或密码。</p>
+<p><strong>应该看见：</strong> 新目录能保存修改、分派与处理事件，关闭后再登录仍能看见。若只有设备可见而写入失败，交付仍需修复。另一位同学仅口述检查过，不能写成他已经在自己的电脑启动。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">新目录接手第【序号】项在【具体按钮】失败，现象是【结果】。
+请只修复这条实际路径，并告诉我需要重新检查哪几步。
+若改动了源码，请列出修改文件，我需要把同样修复同步回原工程再重新导出；
+不要改已记录结果为通过，不用原项目旧记录代替新事件。
+</code></pre>
+<p><strong>下一步：</strong> 把新目录中刚填写的 <code>docs/本组实做记录.md</code> 同步回原工程；若已有原课记录，将“新目录接手”小节合并进去，保留旧记录。修复发生在新目录时，也同步确认过的源码与 README 修正。下一步的交付说明写好后再一并导出，不复制新目录的 <code>.env</code>、数据库或运行产物。</p>
+<h2 id="chapter-12-step-5">第5步：交出作品，亲口说明它是怎样做出来的</h2>
+<p><strong>现在在哪：</strong> 仍在 <code>campus-lab-handoff</code> 窗口，接手操作已完成，实际结果已填写。本步先完成交付说明，再把两份文档同步回原工程，最后导出。</p>
+<p><strong>发给 CodeBuddy：</strong></p>
+<pre><code class="language-text">请根据我已经填写的实际记录，整理docs/交付说明.md。
+用学生能讲清楚的语言写：作品有哪些页面；从空页面到前端、再到后端的过程；
+MySQL保存哪些记录，Redis保存什么；我修过的一个真实问题；
+如何安装、启动、停止；哪些地方尚未验证。
+把自己操作、AI生成、参考借用如实区分，不编造独立完成。
+最后给五个口头练习问题，不替我填写答案：
+页面为什么先用模拟数据？设备刷新经过哪些程序？
+为什么刷新页面要重新登录而设备记录还在？
+为什么事件恢复后不能直接关闭？为什么新目录要用独立Compose项目名？
+不读取口令，不启动或停止任何服务。
+</code></pre>
+<p><strong>等 AI 完成并保存：</strong> 读一遍说明，把“已通过”逐项对照你的记录；未操作的项目写“未验证”。将新目录里的 <code>docs/交付说明.md</code> 和 <code>docs/本组实做记录.md</code> 都同步回原工程，确认原工程已经包含本次接手结果，再从原工程导出最终版本。最后打开最终导出里的这两份文档，确认不是同步前的旧内容。</p>
+<p><strong>亲自操作：</strong> 确认两份文档已同步，切回<strong>原 CodeBuddy 窗口、原 C、原工程根目录 <code>campus-lab</code></strong>，运行：</p>
+<pre><code class="language-text">node tools/export-source.mjs --out .runtime/hand-in-final/campus-lab
+</code></pre>
+<p>打开原工程 <code>.runtime/hand-in-final/campus-lab/docs/</code>，检查两份文档包含刚才的接手结果。如果这个导出目录已经存在，用一个未使用的输出名，例如 <code>.runtime/hand-in-final-2/campus-lab</code>，不要覆盖旧交付。</p>
+<p>同伴任选两个问题，你指着实际页面或文件回答。最后回到新窗口，停止新 A、新 B。新 C、<code>campus-lab-handoff</code> 根目录运行：</p>
+<pre><code class="language-text">docker compose -p campus-v2-handoff stop
+docker compose -p campus-v2-handoff ps
+</code></pre>
+<p>如以后需要查看本交付环境日志，仍在新目录使用 <code>docker compose -p campus-v2-handoff logs</code>；不要把带私密信息的整段日志发给 AI。再次开启它时保留新目录 <code>.env</code>，使用 <code>docker compose -p campus-v2-handoff up -d</code>。以后要做另一份全新数据库实验，先停现有服务，给那一份另选未使用的项目名，并在它自己的 README 中一致记录。</p>
+<p><strong>应该看见：</strong> 源码、可照做的 README、交付说明和实际操作记录都在最终导出里；本机配置与口令留在自己的电脑。课程容器已停止，命名卷保留，不使用 <code>down -v</code> 删除成果。</p>
+<p><strong>失败时，只发这段修复提示：</strong></p>
+<pre><code class="language-text">交付说明中的【原句】与我的实际操作【真实情况】不一致。
+请只修正文档，保留未验证项，不把计划、作者参考或旧版本结果写成本组完成。
+</code></pre>
+<p><strong>下一步：</strong> 把最终源码目录与说明交给老师。你已经走完“看见一个页面→增加功能→分析数据→生成后端→保存与登录→逐页联调→新目录交付”的完整过程。</p>
+<div class="bottom-nav"><a href="#chapter-11">← 上一部分</a><a href="#chapter-13">下一部分 →</a></div></article>
+<article id="chapter-13" data-chapter hidden><p class="eyebrow">教师资料 · V2.0.2</p><h1>教师安排：用同一份工程上完48学时</h1><div class="step-links"><a href="#chapter-13-step-1">先让学生看到作品，再解释它背后的数据</a><a href="#chapter-13-step-2">带着做一小步的节奏</a><a href="#chapter-13-step-3">每课如何收作业</a><a href="#chapter-13-step-4">教师课前核对</a><a href="#chapter-13-step-5">参考工程和教材的关系</a></div>
+<p>学生应学过一门编程语言，但不要求有项目经验。共12次课，每次4学时，每学时45分钟；每课正文已经把180分钟分到具体小步。软件安装、账户登录、首次大体积下载安排在课前检查，避免把第一课变成全班排队修电脑。</p>
+<h2 id="chapter-13-step-1">先让学生看到作品，再解释它背后的数据</h2>
+<p>前六课使用HTML、CSS和JavaScript。第一课看见空白页变成管理台；第二课把统一样本放进设备台账；之后每次增加一个可见功能，并接回原来的菜单和详情。第六课结束时学生应能把九个菜单连起来讲清楚。</p>
+<p>第七课对着这些页面列数据清单，并只生成一个最小Java接口。第八课接设备，第九课接登录，第十课逐页接数据，第十一课做事件写入和权限。第十二课专门留给新目录接手。后端由学生按提示词逐步生成，教师完整参考只用于对照和定位卡点。</p>
+<table>
+<thead>
+<tr>
+<th>次数</th>
+<th>这次下课时学生应能亲手展示</th>
+<th>课间衔接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>空白index变成有侧栏、标题和占位卡片的页面</td>
+<td>继续这份工程，不另开新项目</td>
+</tr>
+<tr>
+<td>02</td>
+<td>16设备筛选、详情和概览统计同源</td>
+<td>设备id继续贯穿位置/历史/事件</td>
+</tr>
+<tr>
+<td>03</td>
+<td>改位置、登记责任，原设备详情能查到</td>
+<td>保留本地演示记录</td>
+</tr>
+<tr>
+<td>04</td>
+<td>分清0、缺失、过期；能源只比较同单位</td>
+<td>给历史入口准备deviceId/tagId</td>
+</tr>
+<tr>
+<td>05</td>
+<td>历史断点与零值、只读报警、跨页跳转</td>
+<td>不把报警当作演练事件关闭</td>
+</tr>
+<tr>
+<td>06</td>
+<td>三角色演示、事件完整闭环、九菜单串联</td>
+<td>明确此时仍是浏览器演示</td>
+</tr>
+<tr>
+<td>07</td>
+<td>页面需求表、Java17、最小health、连接检查</td>
+<td>暂不装业务成品或数据库依赖</td>
+</tr>
+<tr>
+<td>08</td>
+<td>MySQL里的设备出现在原设备页</td>
+<td>基本信息已接通，其余分区仍模拟</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Redis会话、登录/退出、刷新重新登录、权限</td>
+<td>令牌只在内存，模式偏好可保存</td>
+</tr>
+<tr>
+<td>10</td>
+<td>空间、责任、读数、历史、报警逐项接通</td>
+<td>写后读回；失败不伪造成功</td>
+</tr>
+<tr>
+<td>11</td>
+<td>事件/审计保存在MySQL，旧版本被拒绝</td>
+<td>独立模拟恢复、核实、关闭</td>
+</tr>
+<tr>
+<td>12</td>
+<td>同学用新目录启动并完成操作，资料随源码交付</td>
+<td>新卷/新配置配套，停止但不删成果</td>
+</tr>
+</tbody></table>
+<h2 id="chapter-13-step-2">带着做一小步的节奏</h2>
+<p>教师先用自己的空白起点演示当前步的操作位置，再让学生发送同一段提示词。等各组AI回复结束，请学生指给你看文件是否已经保存。随后由学生运行或点击，不由老师代替按掉所有检查。</p>
+<p>请反复使用三个具体问题：“现在你在哪个窗口？”“这一条应该粘贴到哪里？”“你实际看到了什么？”不要把“AI说成功”当作学生已完成。每步失败时只使用该步的修复提示，保留其他已完成文件。</p>
+<p>如果全班在同一小步卡住，暂缓进入下一步，先讲一个真实错误怎么定位。不要为了赶课把成品覆盖到学生目录。可让学生查看教师参考的同一个方法，解释差别，再自己修正。</p>
+<h2 id="chapter-13-step-3">每课如何收作业</h2>
+<p>每组保留本课的一张关键结果截图、一个本人做出的改动、一条错误及解决记录。第07课数据清单是口头解释的依据；第12课接手同学填写实做结果。读完教材、生成完文件、运行成功、业务正确分别看，不能只看截图数量。</p>
+<p>建议评价：页面与跨页操作25分；数据保存和接口25分；角色与事件闭环20分；新目录接手20分；能用自己的话解释和记录问题10分。关键检查是学生能指出“哪个数据从哪里来、在哪个操作被保存”。</p>
+<h2 id="chapter-13-step-4">教师课前核对</h2>
+<p>确认所有学生拿到V2空白起点，而非V1教师底座包。Node22先过；Java17在第07课前过；Docker Client/Server、Compose及镜像下载在第08课前过。模型使用学校/学生已可用的编程模型，课堂不强制绑定百炼密钥，不把云服务开通作为页面编程的前置作业。</p>
+<p>Windows、Docker Desktop和教室网络需要教师在实际教室电脑预演。本次作者验证记录写了哪些机器和服务实际跑过，不能据此填写全班已通过。也不要将旧Word/PDF或旧journey当成V2同一条教学路线；它们保留为历史参考。</p>
+<h2 id="chapter-13-step-5">参考工程和教材的关系</h2>
+<p><code>resources/from-zero-v2/student-start</code> 是学生起点，首页0字节，无业务后端。
+<code>resources/from-zero-v2/teacher-reference</code> 是教师对照成品，含运行说明与测试。
+<code>handbook-v2/lessons</code> 是12课正文；<code>00-先准备再开始.md</code> 是环境与操作说明。
+<code>author/共享约定.md</code> 用来核对编写一致性，不是要求学生先背的技术规范。</p>
+<p>参考成品采用同一接口和行为，内部Java包名或文件拆法可以与学生生成结果不同。课堂验收围绕可见行为、数据来源、角色及保存结果，不要求学生逐字复刻参考源码。</p>
+<div class="bottom-nav"><a href="#chapter-12">← 上一部分</a><a href="#chapter-14">下一部分 →</a></div></article>
+<article id="chapter-14" data-chapter hidden><p class="eyebrow">教师资料 · V2.0.2</p><h1>V2教师验证记录</h1><div class="step-links"><a href="#chapter-14-step-1">V2.0.2 校订依据：V2.0.1 从空白起点的实际试跑</a><a href="#chapter-14-step-2">本次到底改了什么</a><a href="#chapter-14-step-3">V2.0.1 再检查与修正</a><a href="#chapter-14-step-4">V2.0.0 初验记录（保留历史）</a><a href="#chapter-14-step-5">本轮审查发现并修正的断点</a><a href="#chapter-14-step-6">V2.0.1 作者复查时尚未验证（历史）</a><a href="#chapter-14-step-7">证据与维护</a></div>
+<!-- STUDENT_TRIAL_START -->
+<h2 id="chapter-14-step-1">V2.0.2 校订依据：V2.0.1 从空白起点的实际试跑</h2>
+<p>当前实际验收 <strong>64/64 步</strong>。全部步骤已完成，实际失败与补救均保留。</p>
+<p>使用冻结的 V2.0.1 提示词逐步生成，实际模型为 Deepseek-V4.1-Flash 300K。业务源码仅由 CodeBuddy Craft 生成；Codex 负责操作、学生终端执行、真实浏览器检查、证据及教材校订。未用教师成品替代学生工程，也不构成 Qwen3 或真人学生独立验收。</p>
+<p>本机实际环境为 macOS、Node 22.21.1、Java 17.0.12、Docker Desktop、MySQL 8.4 与 Redis 7.4。全新目录 Compose 交接已按第12课完成实际验收。源码生成、测试、真实页面操作和新目录交接分别记录。</p>
+<p>本版 V2.0.2 依据观察到的名称回退、运行时变量遗漏、图表刻度裁剪、跨步提示缺口、镜像健康检查、来源说明、失败提示、空间/责任接入、版本输入、源码导出泄漏与路径边界、Compose容器命名隔离及交接文档等问题修订；<strong>V2.0.2 修订后的提示词尚未另从空白完整重跑</strong>。Windows、另一台电脑、真人学生或同伴独立操作、课堂用时、真实校园/AIRIOT与设备控制均未验证。</p>
+<p><a download="student-trial-v2.0.1.json" href="data:application/json;base64,ewogICJ1cGRhdGVkIjogIjIwMjYtMTAtMjFUMDU6MjE6MjcuNzA5MjMzKzA4OjAwIiwKICAidHJpYWxTb3VyY2VWZXJzaW9uIjogIjIuMC4xIiwKICAicmV2aXNlZFRleHRWZXJzaW9uIjogIjIuMC4yIiwKICAicGFzc2VkIjogNjQsCiAgInRvdGFsIjogNjQsCiAgImNvbXBsZXRlV2l0aFJlY29yZGVkUmVtZWRpZXMiOiB0cnVlLAogICJ2Ml8wXzJfaW5kZXBlbmRlbnRfcmV0cmlhbCI6IGZhbHNlLAogICJhY3R1YWxNb2RlbHMiOiBbCiAgICAiRGVlcHNlZWstVjQuMS1GbGFzaCAzMDBLIgogIF0sCiAgIm9wZXJhdG9yIjogIkNvZGV4IG9wZXJhdGluZyBDb2RlQnVkZHkgQ3JhZnQgYW5kIGFjdHVhbCBsb2NhbCB0ZXJtaW5hbHMvYnJvd3NlciIsCiAgImJ1c2luZXNzU291cmNlQXV0aG9yaW5nIjogIkNvZGVCdWRkeSBDcmFmdCBvbmx5OyBibGFuayBzdGFydGVyLCBubyB0ZWFjaGVyIGltcGxlbWVudGF0aW9uIHN1YnN0aXR1dGlvbiIsCiAgImZyZXNoQ29tcG9zZUhhbmRvZmZWZXJpZmllZCI6IHRydWUsCiAgIm5vdFZlcmlmaWVkIjogWwogICAgIldpbmRvd3MiLAogICAgImFub3RoZXIgcGh5c2ljYWwgY29tcHV0ZXIiLAogICAgImluZGVwZW5kZW50IGh1bWFuIHN0dWRlbnQiLAogICAgImNsYXNzcm9vbSB0aW1pbmciLAogICAgInJlYWwgY2FtcHVzIG9yIEFJUklPVCIsCiAgICAicmVhbCBkZXZpY2UgY29udHJvbCIsCiAgICAiZXh0ZXJuYWwgbm90aWZpY2F0aW9ucyIsCiAgICAiaHVtYW4gb3JhbCBhbnN3ZXJzIgogIF0sCiAgInN0ZXBzIjogWwogICAgewogICAgICAiaWQiOiAiMDEtMDEiLAogICAgICAidGl0bGUiOiAi56ysIDEg5q2l77ya6K6p56m655m95paH5Lu25Y+Y5oiQ56ys5LiA5byg6aG16Z2iIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJPcmlnaW5hbCBwcm9tcHQgc3VjY2VlZGVkOyBicm93c2VyIHZlcmlmaWVkIHNlcGFyYXRlbHkgZnJvbSBBSSBnZW5lcmF0aW9uIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjAxLTAyIiwKICAgICAgInRpdGxlIjogIuesrCAyIOatpe+8mue7meeuoeeQhuWPsOaQreWHuuWkluahhiIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiT3JpZ2luYWwgcHJvbXB0IHBhc3NlZDsgbm8gY29ycmVjdGl2ZSBwcm9tcHQgbmVlZGVkIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjAxLTAzIiwKICAgICAgInRpdGxlIjogIuesrCAzIOatpe+8muWcqOamguiniOS4reaUvuS4ieW8oOWNoeeJhyIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiT3JpZ2luYWwgcHJvbXB0IHBhc3NlZCIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwMS0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNCDmraXvvJrmiorlpJbop4Llkozmk43kvZzliIblvIDvvIzorqnoj5zljZXog73liIfmjaIiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIk9yaWdpbmFsIHByb21wdCBwYXNzZWQiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDEtMDUiLAogICAgICAidGl0bGUiOiAi56ysIDUg5q2l77ya5Lqy5omL5pS55LiA5qyh77yM55WZ5LiL56ys5LiA6K++5L2c5ZOBIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICJQYXNzZWQgYWZ0ZXIxIGFjdHVhbCByZW1lZHk7IG9yaWdpbmFsIHJlZ3Jlc3Npb24gcmV0YWluZWQgaW4gaXNzdWUgYW5kIEFYIGxvZ3MiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDItMDEiLAogICAgICAidGl0bGUiOiAi56ysIDEg5q2l77ya5oqK57uD5Lmg5pWw5o2u5pS+6L+b6Ieq5bex55qE5YmN56uvIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJTdHVkZW50IHZpc2libGUgY2hlY2sgcGFzc2VkOyBBSSBpbnRlcm5hbCBlcnJvciBwcmVzZXJ2ZWQgaW4gQVg7IG5vIGV4dHJhIHN0dWRlbnQgcmVtZWRpYWwgcHJvbXB0IgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjAyLTAyIiwKICAgICAgInRpdGxlIjogIuesrCAyIOatpe+8muWFiOiuqSAxNiDlj7Dorr7lpIflhajpg6jlh7rnjrAiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIk9yaWdpbmFsIHN0ZXAgcGFzc2VkIHJlYWwgYnJvd3NlciBjaGVjazsgQUkgRE9NIHN0dWIgY2hlY2tzIHJldGFpbmVkIHNlcGFyYXRlbHkiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDItMDMiLAogICAgICAidGl0bGUiOiAi56ysIDMg5q2l77ya5Yqg5pCc57Si5ZKM562b6YCJ77yM5om+5Yiw5oOz55yL55qE6K6+5aSHIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJPcmlnaW5hbCBwcm9tcHQgcGFzc2VkIGFsbDQgcmVxdWlyZWQgYWN0dWFsIGludGVyYWN0aW9ucyIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwMi0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNCDmraXvvJrngrnigJzmn6XnnIvigJ3vvIznnIvliLDlkIzkuIDlj7Dorr7lpIfnmoTor7vmlbAiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIk9yaWdpbmFsIHByb21wdCBwYXNzZWQgc3R1ZGVudCByZXF1aXJlZCBjaGVja3M7IGFkZGl0aW9uYWwgYWN0dWFsIG1pc3NpbmctdmFsdWUgY2hlY2sgcGFzc2VkIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjAyLTA1IiwKICAgICAgInRpdGxlIjogIuesrCA1IOatpe+8muaKiuecn+WunuaooeaLn+aVsOmHj+aOpeWbnuamguiniCIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiT3JpZ2luYWwgcHJvbXB0IHBhc3NlZDtjaGFwdGVyMiBjb21wbGV0ZWQ1c3RlcHMiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDMtMDEiLAogICAgICAidGl0bGUiOiAi56ysIDEg5q2l77ya5oqK5Zub5Liq56m66Ze05YGa5oiQ55yL5b6X5oeC55qE6aG16Z2iIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJPcmlnaW5hbCBwcm9tcHQgcGFzc2VkOyBzYW1lIGV4aXN0aW5nIGRldmljZSB0YWJsZSByZXVzZWQiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDMtMDIiLAogICAgICAidGl0bGUiOiAi56ysIDIg5q2l77ya5L+u5pS55LiA5Liq56m66Ze055qE5qW85qCL5ZKM5qW85bGCIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJPcmlnaW5hbCBzdHVkZW50IHByb21wdCBwYXNzZWQgYWN0dWFsIHJlcXVpcmVkIGludGVyYWN0aW9ucyIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwMy0wMyIsCiAgICAgICJ0aXRsZSI6ICLnrKwgMyDmraXvvJrorqnliLfmlrDlkI7nmoTmtY/op4jlmajorrDlvpfkvY3nva4iLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIkFjdHVhbCBzYXZlL3JlZnJlc2ggcmV0YWluZWTmlZnlrabmpbxBLzLlsYI7IGRldmljZSBsaXN0L2RldGFpbCBhZ3JlZWQ7IG9yaWdpbmFsIHRhYjEwNzU5NTE0MDMgYWN0dWFsbHkgY2xvc2VkIGFuZCBuZXd0YWIxMDc1OTUxNDA4IHJlb3BlbmVkIHNhbWUgb3JpZ2luOyBzYXZlZCBsb2NhdGlvbiByZXRhaW5lZC4gQnJvd3NlciBzdG9yYWdlIG9ubHksIG5vIGRhdGFiYXNlLiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwMy0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNCDmraXvvJrnu5nkuIDlj7Dorr7lpIfnmbvorrDotJ/otKPkuroiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogImQwMSBzYXZlZG1hbmFnZXIv5pel5bi45beh5p+l6IGU57O76L+Z5L2N5aSE55CG5Lq6O3JlZnJlc2ggcmV0YWluZWQgbm90ZTtyZW9wZW5lZCBmb3JtIHZlcnNpb24xO290aGVyZGV2aWNlc+WwmuacqueZu+iusDtzcGFjZeaVmeWtpualvEEvMuWxgiBwcmVzZXJ2ZWQuIEJyb3dzZXIgZGVtbyBvbmx5LiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwMy0wNSIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNSDmraXvvJrku47orr7lpIfor6bmg4Xmib7liLDotJ/otKPkurrvvIzlho3lm57liLDnqbrpl7QiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogImQwMSBkZXRhaWzihpJleGlzdGluZ293bmVycm93IGhpZ2hsaWdodGVkIGQwMTt1cGRhdGVkbm90ZS92ZXJzaW9uMiB0aGVuIHJldHVybmluZ2RldGFpbCByZWFkIG5ld25vdGU7c3BhY2VlbnRyeSBoaWdobGlnaHRlZCBzMS8xMDHmlZnlrqQgd2l0aOaVmeWtpualvEEy5bGCLiBPcmlnaW5hbCB2aXN1YWwgdGFyZ2V0IHZlcmlmaWVkIGJ5IHNjcmVlbnNob3QgYW5kIERPTTsgbm8gZHVwbGljYXRlIHBhZ2VzLiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNC0wMSIsCiAgICAgICJ0aXRsZSI6ICLnrKwgMSDmraXvvJrlhYjmiororr7lpIfor6bmg4XkuK3nmoTor7vmlbDorrLmuIXmpZoiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIkFjdHVhbCBkMDVwb3dlcjBrVyBwcmVzZXJ2ZWQ7ZDAzdGVtcGVyYXR1cmXnvLrlpLEvdGltZee8uuWksS9vbmxpbmXmnKrnn6U7ZDA0b2ZmbGluZSBhbmTovoPml6c7Zml4ZWQgc2FtcGxlIGRhdGUgd2FybmluZyBzaG93bi4gT3JpZ2luYWwgcXVhbGl0eSB0YWdzIHJldGFpbmVkLiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNC0wMiIsCiAgICAgICJ0aXRsZSI6ICLnrKwgMiDmraXvvJrlnKjmpoLop4jkuK3mjIflh7rlk6rkupvor7vmlbDpnIDopoHnlZnmhI8iLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIkFjdHVhbCBxdWFsaXR5IGNvdW50czI1LzIvMS8wIHN1bTI4cG9pbnRzOzRzcGFjZXMgYW5kNGNhdGVnb3JpZXMgZWFjaDRkZXZpY2VzO25vbmZyZXNoM3Jvd3M7ZDAzdGVtcGVyYXR1cmUgZW50cnkgb3BlbmVkIGV4aXN0aW5nZDAzIGRldGFpbCB3aXRoIHNhbWUgbWlzc2luZy90aW1lL3F1YWxpdHkuIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA0LTAzIiwKICAgICAgInRpdGxlIjogIuesrCAzIOatpe+8muiDvea6kOmhteWFiOWPquaYvuekuuWKn+eOhyIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAi5a6e6ZmF6IO95rqQ6aG15LuFZDA14oCTZDA45Zub5Y+w77yM5oyJ56m66Ze05YiG57uE77yb5YC8MC8xLjYvMS44LzLjgIFrV+agh+mimOOAgeWOn+mHh+agt+aXtumXtOWSjOi0qOmHj+ato+ehru+8jOayoeacieeOr+Wig+iuvuWkh+aIluiZmuaehOi0ueeUqOWNoeeJh+OAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNC0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNCDmraXvvJrliqDnlLXljovliIfmjaLvvIzmlbDlgLzlkozljZXkvY3kuIDotbfmjaIiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuecn+Wunua1j+iniOWZqOWKn+eOh+KGkueUteWOi+KGkuWKn+eOh++8jOWbm+WPsOWni+e7iOebuOWQjO+8m+eUteWOi+S4ujIyMC8yMjAuMi8yMjAuNC8yMjAuNiBW77yM5qCH6aKYL+WIl+WNleS9jS/lgLwv6LSo6YePL+WOn+aXtumXtOWQjOatpe+8m+WIh+WbnmQwNeS7jTAga1fjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDQtMDUiLAogICAgICAidGl0bGUiOiAi56ysIDUg5q2l77ya5oqK5qaC6KeI44CB6IO95rqQ5ZKM6K6+5aSH5Y+w6LSm6L+e6LW35p2lIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICLlrp7pmYXlhYjmkJxkMDHlho3ku47mpoLop4jngrnog73mupDvvIzmkJzntKLooqvmuIXnqbrkuJTlj6rkvZlkMDXigJNkMDjvvJvmlLbotbdkMDfor6bmg4Xkv53nlZllbmVyZ3nnrZvpgInvvJvmpoLop4gyMDHmlZnlrqTlhaXlj6Pku4VzMueahGQwMi9kMDYvZDEwL2QxNO+8m+iDvea6kGQwN+WFpeWPo+ivpuaDhUlE5q2j56Gu77yM6L+U5Zue5Yqf546HL+eUteWOi+S7jeWPr+WIh+aNouOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNS0wMSIsCiAgICAgICJ0aXRsZSI6ICLnrKwgMSDmraXvvJrlhYjku47or6bmg4XmiZPlvIDmraPnoa7nmoTljoblj7LooagiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuS7jmQwNeivpuaDheWKn+eOh+aMiemSrui/m+WFpeecn+WunuWOhuWPsumhte+8jOWcsOWdgOS4uiNoaXN0b3J5P2RldmljZUlkPWQwNSZ0YWdJZD1wb3dlcu+8m+iuvuWkhy/ngrnkvY0v5Y2V5L2N5LiA6Ie077yM5YWt6KGM5Y6f5pe26Ze05qC35pys77yMMDc6NDXnvLrlpLHkuJTlhbbkvZnnnJ/lrp4w5L+d55WZ44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA1LTAyIiwKICAgICAgInRpdGxlIjogIuesrCAyIOatpe+8muaKiuWOhuWPsuihqOeUu+aIkOabsue6vyIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAi55yf5a6e5oiq5Zu+5LiORE9N5qC45a+577yaZDA15Yqf546HNeS4qjDngrnlnYflj6/op4HvvIxTVkfkuKTmrrXmipjnur/liIbliKsyLzPngrnvvIwwNzo0NSBudWxs5peg54K55LiU5LiN6Leo5o6l77yb5a6M5pW05YWt6KGM6KGo5L+d55WZ5bm25qCH5piO5Zu65a6a5pWZ5a2m5qC35pys44CC5oiq5Zu+5bey5Lq65bel5p+l55yL44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA1LTAzIiwKICAgICAgInRpdGxlIjogIuesrCAzIOatpe+8mumAieaLqeafpeeci+WTquS4gOauteaXtumXtCIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAi5Y6f5bCd6K+V55yf5a6e5Yi35paw5ZugaGlzdG9yeVJhbmdl5pyq5a6a5LmJ5aSx6LSl77yb6KGl5pWR5ZCO6YeN5rWL6YCa6L+H44CCZDA1L3Bvd2Vy5YWo6YOoNuihjO+8jDE15YiG6ZKfNOihjC8z5pyJ5pWI54K55ZCrbnVsbOaWree6v++8jDHlsI/ml7Y26KGM77yb5YiHdm9sdGFnZeagh+mimC/ljZXkvY0v54K55YC85ZCM5q2l77yM5Zyw5Z2A5LiO5Yi35paw6YCJ5oup5L+d55WZ44CB6IyD5Zu05Zue5YWo6YOo44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA1LTA0IiwKICAgICAgInRpdGxlIjogIuesrCA0IOatpe+8muWbnuWIsOiDvea6kOmhte+8jOavlOi+g+WQjOS4gOenjeivu+aVsCIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAiZDA1L2QwNuWKn+eOh+avlOi+g+S4juWIh+eUteWOi+a4heepui/ph43mlrDpgInmi6nmr5TovoPpgJrov4fvvJvpppblsJ3or5XmiKrlm77mnKvliLvluqboo4HliarvvIznu49Db2RlQnVkZHnooaXmlZHlkI7moYzpnaLlkowzOTDnqoTlsY/miKrlm77pppbmnKvml7bpl7TlrozmlbTvvIww5LiObnVsbOaWree6v+S7jeato+ehruOAguaIquWbvuW3suafpeeci++8jOWPpuS/neWtmOWFseS6q+WOhuWPsuWbvuWbnuW9kuOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNS0wNSIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNSDmraXvvJrlrozmiJDlj6rog73mn6XnnIvnmoTljp/lp4vmiqXorabpobUiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIumHjeW7uuWQjENocm9tZeWunuS+i+S4k+eUqOS8muivneWQjuWunua1i++8mmEwMeWOn+Wtl+autVNBTVBMRV9BQ1RJVkUvTk9USUNFL+WOn+aXtumXtOWdh+S/neeVme+8m+aXoOWMuemFjeaPkOekuuOAgea4heepuuaBouWkjeOAgeWNlemhtee/u+mhteemgeeUqOato+ehru+8m+S7heafpeeci+iuvuWkh+WFpeWPo++8jOWumuS9jWQwMeW5tuS/neeVmeatpOWJjW1hbmFnZXLotKPku7vorrDlvZXvvIzml6DlpITnkIbmjInpkq7jgILlpJrpobXmoLfmnKznmoTnnJ/lrp7mtY/op4jlmajnv7vpobXmnKrpqozor4HvvIzlvZPliY3lhazlvIDmoLfmnKzku4Ux5p2h44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA2LTAxIiwKICAgICAgInRpdGxlIjogIuesrCAxIOatpe+8muWFiOWBmuS4ieS4quivvuWggui6q+S7veWSjOeuoeeQhumhteivtOaYjiIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAi55yf5a6e5rWP6KeI5Zmo566h55CG5ZGYL+afpeeci+iAheWIh+aNoumAmui/h++8muafpeeci+iAheepuumXtOe8lui+keOAgei0o+S7u+eZu+iusOWFpeWPo+makOiXj+S9huWPr+ivu+WPlu+8m+euoeeQhuWRmOWFpeWPo+aBouWkje+8m+euoeeQhumhteaooeaLn+agh+ivhuOAgeaOp+WIti/pgJrnn6XlhbPpl63kuI7liY3nq6/mnYPpmZDor7TmmI7mmI7noa7vvJvliLfmlrDouqvku73lm55hZG1pbu+8jOS9jee9ruS4jm1hbmFnZXLorrDlvZXku43kv53nlZnjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDYtMDIiLAogICAgICAidGl0bGUiOiAi56ysIDIg5q2l77ya5Yib5bu65LiA5p2h54us56uL55qE5ryU57uD5LqL5Lu2IiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICLnnJ/lrp7liJvlu7pkMDIvY2FzZS0x77yM5b6F5YiG5rS+djHvvIzliLfmlrDkv53nlZnkuJRhMDHljp/lp4vmiqXorabkuI3lj5jjgILljp/mj5DnpLror43mvI/liJfmnaXmupAv5qC45a6e5bGV56S677yM6KGl5pWR5ZCO5ZCM5LiAY2FzZS0x5pi+56S6QUNUSVZF5pyq5oGi5aSN44CBdmVyaWZpZWQ9ZmFsc2XmnKrmoLjlrp7vvJvmnKrmlrDlop7kuovku7bjgIHniYjmnKzku40x44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA2LTAzIiwKICAgICAgInRpdGxlIjogIuesrCAzIOatpe+8muWIhua0vuOAgeW8gOWni+WkhOeQhuOAgeWGmeS4i+WBmui/h+eahOS6iyIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAi5a6e6ZmF5L6d5qyh5YiG5rS+44CBbWFuYWdlcuW8gOWni+OAgeS/neWtmOWkhOe9ruiusOW9le+8m2Nhc2UtMeS4uklOX1BST0dSRVNTL3ZlcnNpb24077yM5Zub5p2h5pe26Ze057q/77yb5Yi35paw5Zue5YiwYWRtaW7lkI7lkIzkuIDkuovku7blkozorrDlvZXku43lnKjjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDYtMDQiLAogICAgICAidGl0bGUiOiAi56ysIDQg5q2l77ya5YWI5oGi5aSN44CB5YaN5qC45a6e77yM5pyA5ZCO5YWz6ZetIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICLlrp7pmYXmj5DliY3lhbPpl63mmL7npLrnvLrlsJHmnaXmupDmgaLlpI3lj4rmoLjlrp7kuJTku412NO+8m+euoeeQhuWRmHJlY292ZXLlkI5JTl9QUk9HUkVTUy92Ne+8jG1hbmFnZXLmoLjlrp7lkI7ku41JTl9QUk9HUkVTUy92Nu+8m+Whq+e7k+iuuuWFs+mXreS4ukNMT1NFRC92N++8m+WIt+aWsDfmnaHmiJDlip/ml7bpl7Tnur/kv53nlZnvvIzml6DlhpnmjInpkq7jgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDYtMDUiLAogICAgICAidGl0bGUiOiAi56ysIDUg5q2l77ya5Zyo566h55CG6aG155yL5pON5L2c6K6w5b2V77yM5YaN6K+V5LiA5qyh5LiN5YWB6K6455qE5pON5L2cIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICLljp/lsJ3or5XliJvlu7pjYXNlLTLmnKrlhpnlrqHorqHlpLHotKXvvJvnsr7noa7ooaXmlZHlkI7mlrDlu7pjYXNlLTPvvIznrqHnkIbpobXlj6rmlrDlop5hZG1pbi/liJvlu7rmvJTnu4MvY2FzZS0zL+ecn+WunuaXtumXtOS4gOadoe+8jOWIt+aWsOS/neeVme+8jOaXp2Nhc2UtMS8y5pyq5Lyq6YCg5a6h6K6h44CC5bey5YWz6Zet5peg5YaZ5oyJ6ZKu77ybdmlld2Vy5Y+q6K+777yMbWFuYWdlcuWvueacquWIhua0vuS6i+S7tuaXoOWKqOS9nOWFpeWPo+OAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNi0wNiIsCiAgICAgICJ0aXRsZSI6ICLnrKwgNiDmraXvvJrkurLoh6rotbDpgY3kuZ3kuKroj5zljZXvvIzkuLrlkI7nq6/lh4blpIfmuIXljZUiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIuS5neS4quiPnOWNleWunumZheefqemYtemAmui/h++8m+amguiniOWNoOS9jeaWh+ahiOeyvuehruihpeaVkeWQjuWkjea1izE2LzQvMjjkuI7lm5vlj7Dog73mupDnrZvpgInpgJrov4fvvJvnqbrpl7Qv6LSj5Lu7L+WFs+mXrWNhc2UtMSB2N+S4g+aXtumXtOe6v+aMgeS5heWMlu+8jOWOn+Wni+aKpeitpuS/neaMgeWOn+WAvOWPquivu++8jOiDvea6kOWKn+eOhy/nlLXljovmr5TovoPkuI7ljoblj7LnvLrlpLHmlq3nur/pgJrov4fjgII56KGM5pWw5o2u5riF5Y2V5Y+K5pys5Lq657uT5p6c5ZyoSURF5L+d5a2Y77yM5oiq5Zu+5bey5p+l55yL44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA3LTAxIiwKICAgICAgInRpdGxlIjogIuesrDHmraXvvJrlr7nnnYDkuZ3kuKroj5zljZXvvIzor7TmuIXmpZropoHkv53lrZjku4DkuYgiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIuW3suivu+S5neiPnOWNleaVsOaNruihqO+8m+iuvuWkh+i0o+S7u+W9k+WJjeS7jmxvY2FsU3RvcmFnZSBvd25lcnPor7vlj5Yv5L+u5pS577yM5bCG55SxTXlTUUzkuI7lkI7nq6/mnYPpmZDkv53lrZjvvJtNeVNRTOmVv+acn+S4muWKoeS4jlJlZGlz55+t5pyf55m75b2V5YiG5byA44CC5pys6K++5LuFaGVhbHRo44CC5a6e6ZmF5Lmd6I+c5Y2V5YaN54K55Ye744CB5YWz6ZetY2FzZS0x5Yi35paw5LuNdjfkuJTlpITnva7orrDlvZXlkozkuIPmnaHml7bpl7Tnur/kv53nlZnvvJvmnKrnlJ/miJBiYWNrZW5k44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA3LTAyIiwKICAgICAgInRpdGxlIjogIuesrDLmraXvvJrlh4blpIflkI7nq6/nu4jnq6/vvIznoa7orqTlroPnlKjnmoTmmK8gSmF2YSAxNyIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAi5paw5bu6SURF57uI56uvMyBCLeWQjuerr++8m+WOn21hY09T5ZG95LukSmF2YTE3LjAuMTLpgJrov4fkvYZOb2RlMjbkuI3nrKbvvIzooaXmlZHlkI7lvZPliY1C5L2/55SoTm9kZTIyLjIxLjHjgIFKYXZhMTcuMC4xMu+8jEpBVkFfSE9NReS4ukpCUjE3IEpES+agueOAgWN3ZCBjYW1wdXMtbGFi44CCQemhtemdoue7p+e7rei/kOihjO+8jEPlt6Xlhbfni6znq4vvvJvmnKrmlLnlhajlsYDvvIzmnKrliJvlu7piYWNrZW5k44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA3LTAzIiwKICAgICAgInRpdGxlIjogIuesrDPmraXvvJrorqkgQUkg5Y+q5YGa5LiA5Liq4oCc5ZCv5Yqo5oiQ5Yqf4oCd5o6l5Y+jIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJDb2RlQnVkZHnku4XnlJ/miJBKYXZhMTcvU3ByaW5nQm9vdDMuNC4y5pyA5bCPV2Vi5ZCO56uv77yM5L+d55WZ6ZqQ6JePLm12buW3peWFt++8m2Zyb250ZW5k5pyq5pS55Y+Y77yM5pegTXlTUUwvUmVkaXPkvp3otZbmiJblhbbku5bkuJrliqHmjqXlj6PjgILmnKzkurrlnKhC5omn6KGMY2QgYmFja2VuZOOAgXNoIC4vbXZudyB0ZXN077yaSGVhbHRoQ29udHJvbGxlclRlc3Tlrp7pmYUx6aG577yMMOWksei0pS8w6ZSZ6K+vLzDot7Pov4fvvIxCVUlMRCBTVUNDRVNT44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA3LTA0IiwKICAgICAgInRpdGxlIjogIuesrDTmraXvvJrlkK/liqggQu+8jOWGjeS7jue9kemhteWcsOWdgOivu+Wug+eahOWbnuetlCIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAic2VydmUubWpz5ZOI5biM5pyq5Y+Y77yMQeacqumHjeWQr++8mzgwOTjlkK/liqjliY3nqbrpl7LvvIzmnKzkurrlnKhC6L+Q6KGMc3ByaW5nLWJvb3Q6cnVu77yMVG9tY2F0L0phdmEgUElEMTA5NzXlj6rnm5HlkKwxMjcuMC4wLjE6ODA5OO+8m+aWsG93bmVk5rWP6KeI5Zmo5qCH562+MTA3NTk1MTQ0NuWunumZhee7jzUxODgvYXBpL2hlYWx0aOaYvuekumNvZGUwL21lc3NhZ2Vvay9kYXRhLnN0YXR1c1VQ44CCQ2hyb21l546w5pyJSlNPTuafpeeci+aJqeWxleiHquWKqOagvOW8j+WMluaYvuekuuOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwNy0wNSIsCiAgICAgICJ0aXRsZSI6ICLnrKw15q2l77ya5Zyo572R6aG15LiK55yL6KeB5ZCO56uv5Zyo57q/77yM5YaN5Lqy5omL6aqM6K+B5pat5byAIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICLnnJ/lrp7mtY/op4jlmajkuInmrKHngrnlh7vvvJpC6L+Q6KGM5pi+56S65bey6L+e5o6l77yM5Y6f55SfSURF5LuFQ3RybCtD5YGc5q2iQuWQjuWGjeasoeeCueWHu+aYvuekukhUVFA1MDPlpLHotKXvvIzlkIzkuIBC6YeN5ZCv5ZCO5YaN5qyh54K55Ye75oGi5aSN5bey6L+e5o6l77yb6K6+5aSH5LuN5pWZ5a2m5qih5ouf77yM5YGc5q2iQuaXtmQwNeWKn+eOhzDkuI4xNuWPsOWPr+ivu+OAguWQr+WKqOeslOiusOW3suWcqElEReWGmeWFpeacrOS6uuS4ieasoee7k+aenO+8mzXnp5LotoXml7bku6PnoIHlt7LmoLjlr7nvvIzmnKrlsIbmnKrmqKHmi5/plb/lu7bov5/lo7Dnp7DkuLrnnJ/lrp7lrp7pqozjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDgtMDEiLAogICAgICAidGl0bGUiOiAi56ysMeatpe+8mueUn+aIkOiHquW3seeahOacrOacuumFjee9riIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAi5pys5Lq6Q+e7iOerr05vZGUyMui/kOihjOeUn+aIkOW3peWFt++8jOWunumZheWIm+W7ujTkuKrkuI3lkIzlj6Pku6TlrZfmrrXvvIg0MC80MC80MC8yMOS9je+8ieOAgW1vZGU2MDDkuJTkuI3mmL7npLrlgLzvvJvlho3mrKHov5DooYzmi5Lnu53opobnm5bvvIznjrDmnIkuZW52IG9wYXF1ZeavlOWvueacquWPmOOAgueyvuehruihpeaVkee7n+S4gOmHjeWkjei/kOihjOW4ruWKqeaWh+ahiOWQjuWGjeWunumZhei/kOihjO+8jOaPkOekuuS/neeVmeW5tuayv+eUqO+8jOmFjee9ruS7jeacquWPmOOAguiEmuacrGNyeXB0b+maj+acui93eOaOkuS7li8uZW52LmV4YW1wbGXljaDkvY3kuI7lv73nlaXop4TliJnlt7LmoLjlr7nvvJvmnKror7vlj5bml6DlhbPnp4Hlr4bphY3nva7jgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDgtMDIiLAogICAgICAidGl0bGUiOiAi56ysMuatpe+8muiuqeivvueoiyBNeVNRTCDov5DooYzotbfmnaUiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIuacrOS6ukPlkK/liqhNeVNRTOWOn+WwneivleWboGhlYWx0aGNoZWNrLnNo5LiN5a2Y5Zyo5aSx6LSl77yb5oyJ5pys5q2l6KGl5pWR5LuF5L+u5pS5aGVhbHRoY2hlY2vlkI7ph43mlrB1cO+8jOWunumZhXBz5LiOaW5zcGVjdOWdh+S4umhlYWx0aHnvvIznq6/lj6MxMjcuMC4wLjE6MjM1MDHvvIzku4VteXNxbOacjeWKoeOAguS4k+WxnuWRveWQjeWNt2NhbXB1cy12Ml9teXNxbC1kYXRh55qETmFtZS9DcmVhdGVkQXTliY3lkI7kuIDoh7TvvIzml6DliKDljbfjgIHml6AuZW526KaG55uW5oiW6YeN5paw5Yid5aeL5YyW77yb5YGl5bq35qOA5p+l5bey55SoY2FtcHVz6LSm5Y+35a6e6ZmF5omn6KGMU1FM44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA4LTAzIiwKICAgICAgInRpdGxlIjogIuesrDPmraXvvJrorqkgSmF2YSDorqTor4bmlbDmja7lupPvvIzlubblu7rnq4vorr7lpIfooagiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuacrOS6ukLkvb/nlKhKYXZhMTfov5DooYxNYXZlbu+8mjHpobnlgaXlurfmjqXlj6PmtYvor5XvvIww5aSx6LSlLzDplJnor68vMOi3s+i/h++8jEJVSUxEIFNVQ0NFU1PvvJvlho3lkK/liqjlkI7nq6/vvIxGbHl3YXnnnJ/lrp7pppbmrKHlupTnlKhWMeaIkOWKn++8jFRvbWNhdCBQSUQ1MTkyM+WQr+WKqOOAgua1j+iniOWZqDUxODgvYXBpL2hlYWx0aOWunumZhVVQ77ybQ+WPquivu1NRTOaguOWvuXNwYWNlczTjgIFkZXZpY2VzMTbjgIFkMDMgb25saW5lPU5VTEzjgIFkMDQgb25saW5lPTDjgIFzaW11bGF0ZWTlnYcx77yMRmx5d2F5IHZlcnNpb24xL3N1Y2Nlc3Mx44CC5bCa5pyq5a6e546w6K6+5aSHQVBJ77yM6aG16Z2i5LuN5ryU56S644CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA4LTA0IiwKICAgICAgInRpdGxlIjogIuesrDTmraXvvJrorqnorr7lpIfmjqXlj6Por7vlh7rljYHlha3lj7Dorr7lpIciLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuacrOS6ukLlrp7pmYVNYXZlbjXpobnmtYvor5Uw5aSx6LSlLzDplJnor68vMOi3s+i/h++8jOWQr+WKqFBJRDU1OTM577ybRmx5d2F55qCh6aqMVjHkuJRObyBtaWdyYXRpb24gbmVjZXNzYXJ544CC5pawb3duZWTmtY/op4jlmahBUEnmoIfnrb4xMDc1OTUxNDU15a6e6ZmF5pi+56S6U1FM5p+l6K+iMTblj7DvvIzlkITnsbs05Y+w77yMZDAxIHRydWUvZDAzIG51bGwvZDA0IGZhbHNlL3NpbXVsYXRlZCB0cnVl77yb54us56uLVUnlrZfmrrXmoKHpqozpgJrov4fvvIzml6Btb2Nr5ZON5bqU5YWc5bqV44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA4LTA1IiwKICAgICAgInRpdGxlIjogIuesrDXmraXvvJrlj6rmiororr7lpIfpobXmjqXliLDmlrDmjqXlj6MiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuWunumZhea1j+iniOWZqO+8mjE25Y+w77yM6IO95rqQ562b6YCJNOWPsO+8m+aJk+W8gGQwNeWQjumHjeaWsOivu+WPluS7jeS4umQwNe+8jOivu+WPluaXtumXtOabtOaWsO+8m+WfuuacrOS/oeaBr+agh015U1FM77yM56m66Ze05ZCN56ewL+i0o+S7u+agh+a1j+iniOWZqOa8lOekuu+8jOeCueS9jS/ljoblj7LmoIflhazlvIDmlZnlrabmoLfmnKzvvJtkMDPmnKrnn6XjgIFkMDTnprvnur/vvIznqbrpl7Tlkozkuovku7bku43kuLrmtY/op4jlmajmvJTnpLrjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMDgtMDYiLAogICAgICAidGl0bGUiOiAi56ysNuatpe+8muehruiupOaVsOaNruS/neWtmOS6hu+8jOWksei0peS5n+ivtOa4healmuS6hiIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAi5a6e6ZmF5rWP6KeI5Zmo5Y+KSURF77yaQuWBnOatouWQjuWIt+aWsOaYvuekujUwM+S4juS4iuasoeaIkOWKn+e7k+aenO+8jOiDvea6kDQvMTblj4pkMDXor6bmg4Xkv53nlZnvvJtC5oGi5aSN6YeN6K+V5riF6ZSZ5bm25pu05paw5pe26Ze077yb5YWI5YGcQumHjeWQr015U1FM562JaGVhbHRoeeWQjuWGjei1t0Lku40xNuWPsO+8jFYx5qCh6aqM5peg6YeN5aSN6L+B56e777yM5Y6f5Y235Yib5bu65pe26Ze05LiN5Y+Y77yb6aaW5qyh6K+75Y+W5aSx6LSl5peg5qih5ouf5YiX6KGo77yb5pys5Lq66YCa6L+HSURF5aGr5a6M5qOA5p+l6KGo44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA5LTAxIiwKICAgICAgInRpdGxlIjogIuesrDHmraXvvJrlkK/liqjlj6rlsZ7kuo7mnKzor77nqIvnmoQgUmVkaXMiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIlJlZGlzNy405bey5a6e6ZmF5ZCv5Yqo5bm2aGVhbHRoee+8m+iupOivgeOAgeWFs+mXrVJEQi9BT0blkoznqbrkvJror53lupPlrp7mtYvpgJrov4fjgILlt7LnuqDmraNjb21wb3NlIGNvbmZpZ+i+k+WHuuaXoOWPo+S7pOeahOi/h+W6puivtOaYjuOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwOS0wMiIsCiAgICAgICJ0aXRsZSI6ICLnrKwy5q2l77ya5bu656uL5LiJ5Liq5pyJ5LiN5ZCM6IGM6LSj55qE6LSm5Y+3IiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJC57uI56uvSmF2YTE35a6e6ZmFMTjpobnmtYvor5Xlhajpg6jpgJrov4fvvJtWMui/geenu+WSjOi0puWPt+WIneWni+WMluWujOaIkO+8jFNRTOWFg+aVsOaNruehruiupGFkbWluL0FETUlO44CBbWFuYWdlci9NQU5BR0VS44CBdmlld2VyL1ZJRVdFUuWQr+eUqOS4lOaRmOimgemVv+W6pjYw77yI5pyq6L6T5Ye65pGY6KaB77yJ77ybVjEvVjLlnYdzdWNjZXNz44CC5a6e6ZmF5rWP6KeI5ZmoaGVhbHRo5Li6Y29kZTAvc3RhdHVzVVDjgILpmo/lkI7lj6rlgZzmraLmnKzor77nqItC44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA5LTAzIiwKICAgICAgInRpdGxlIjogIuesrDPmraXvvJrorqnlkI7nq6/nrb7lj5Hlkozmo4Dmn6XnmbvlvZXlh63mnaEiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIkLnu4jnq69KYXZhMTflrp7pmYU0Numhuea1i+ivleWFqOmAmui/h++8m+a1j+iniOWZqOebtOW8gOiuvuWkh+aOpeWPo+WunumZhUhUVFA0MDHjgILnnJ/lrp7mnKzmnLpNeVNRTC9SZWRpc+eahDE26aG5SFRUUOajgOafpemAmui/h++8mue8ui/lpLHmlYjlh63mnaHlj4rplJnor6/lr4bnoIHmi5Lnu53jgIFNQU5BR0VS55m75b2V5ZON5bqU5LiObWXpg73kuLrop4TojINtYW5hZ2VyL01BTkFHRVLjgIHluKblh63mnaHor7vlj5YxNuWPsOOAgemAgOWHuuWQjuWOn+WHreadoeaXoOazleWGjeivu21lL2RldmljZXPjgII0MDPlvZPliY3ku4XmtYvor5XmjqfliLblmajljZXlhYPpqozor4HvvIznnJ/lrp7kuJrliqHlhpnmnYPpmZDlvoXnrKwxMC8xMeivvuOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwOS0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKw05q2l77ya5L+d55WZ5Y6f6aG16Z2i77yM5Yqg5LiK55yf5q2j55qE55m75b2V5LiO6YCA5Ye6IiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICLlrp7pmYXmtY/op4jlmajpgInmi6liYWNrZW5k5ZCO5peg5ryU56S66Lqr5Lu95YiH5o2i77ybYWRtaW4vQURNSU7nnJ/lrp7nmbvlvZXor7vlj5YxNuWPsO+8jOaJk+W8gGQwNeWQjumAgOWHuua4heaOieWIl+ihqOivpuaDheS4lOWvhueggeS4uuepuu+8jFJlZGlz5Lya6K+d5pWw5a6e5rWL5LuOMSjliakxNzcy56eSKeWIsDDjgILlho3nmbvlvZXlkI7mlbTpobXliLfmlrDkv53nlZliYWNrZW5k5YGP5aW95L2G6KaB5rGC6YeN55m744CB5peg5pen6K6+5aSH5YaF5a6544CC5rqQ56CB5qOA5p+l5Yet5p2h5Y+q5ZyoZGF0YS1zZXJ2aWNl5YaF5a2Y77yM5oyB5LmF5YyW5LuF5ryU56S66LWE5paZ5LiO5qih5byP5YGP5aW944CC55m75b2V5pyf6Ze05pyq6YeH6ZuG6LCD6K+V6L296I2377yM5a+G56CB5pON5L2c5LiN6K6w5YC844CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjA5LTA1IiwKICAgICAgInRpdGxlIjogIuesrDXmraXvvJrnlKjkuInkuKrotKblj7fmoLjlr7nigJzosIHog73lgZrku4DkuYjigJ0iLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAxLAogICAgICAicmVzdWx0IjogIuecn+Wunua1j+iniOWZqOS+neasoWFkbWluL21hbmFnZXIvdmlld2Vy55m75b2V77yML2FwaS9tZeinkuiJsuWIhuWIq0FETUlOL01BTkFHRVIvVklFV0VS77yM566h55CG6IGM6LSj6KGo5LuF6auY5Lqu5b2T5YmN6KeS6Imy5LiU5piO56Gu55yf5a6e5YaZ5YWl5LiL5LiA6K++5o6l6YCa77yb5LiJ5Liq6LSm5Y+36YO96K+75Y+WMTblj7BNeVNRTOiuvuWkh+OAguavj+asoemAgOWHuua4hemZpOeZu+W9leWktOOAgeiuvuWkh+WSjGQwNeivpuaDheWPiuWvhuegge+8m+S4i+S4qui0puWPt+acquW4puWFpeaXp+ivpuaDheOAguacquS7pemakOiXj+aMiemSruWuo+ensOecn+WunuWGmeadg+mZkOmAmui/h+OAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIwOS0wNiIsCiAgICAgICJ0aXRsZSI6ICLnrKw25q2l77ya6YeN5ZCvIFJlZGlz77yM6KeC5a+f55m75b2V5aSx5pWI6ICM6K6+5aSH5LuN5ZyoIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICLnnJ/lrp7mtY/op4jlmajkv53mjIFhZG1pbuiuvuWkh+mhte+8jEPph43lkK9SZWRpc+W5tuetiWhlYWx0aHnvvIxEQlNJWkXkuLow77yb54K55Ye76YeN5paw6K+75Y+W6K6+5aSH5a6e6ZmFSFRUUDQwMeOAgeaXp+eZu+W9leS4juihqOagvOivpuaDhea4heepuu+8jOS7jeS4umJhY2tlbmTkuJTml6DmvJTnpLrouqvku73vvJvlgZzmraLmjZXojrflkI7lkIzkuIBhZG1pbumHjeaWsOeZu+W9leS7jTE25Y+w44CBZDAz5pyq55+lL2QwNOemu+e6v++8jOivu+WPluaXtumXtOabtOaWsOOAgk15U1FM5Y6f5Y235Yib5bu65pe26Ze05LiN5Y+Y44CC5pys5Lq657uPSURF5aGrN+ihjOWunumqjOe7k+aenO+8m+ivvuacq0EvQuWPiuS4pOS4quivvueoi+WuueWZqOWdh+WBnOatou+8jOaVsOaNruWNt+S/neeVmeOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMC0wMSIsCiAgICAgICJ0aXRsZSI6ICLnrKwx5q2l77ya5oqK5YWs5byA57uD5Lmg6K+75pWw5pS+6L+b5pWw5o2u5bqTIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJCIEphdmExN+WunumZhTU26aG55rWL6K+V5YWo6YCa6L+H77ybVjPnnJ/lrp7ov4Hnp7vlrozmiJDvvIxTUUzmoLjlr7lzcGFjZXM0L2RldmljZXMxNi91c2VyczMvcG9pbnRzMjgvaGlzdG9yeTE2OC9hbGFybXMxL293bmVyczDlj4pWMS8yLzNzdWNjZXNz44CC55yf5a6eb3ZlcnZpZXfpnIDnmbvlvZXvvIzkupTnu4TmlbDmja7pgJDlrZfmrrUv57G75Z6LL+aVsOWAvOWvueeFp+WFrOW8gGZpeHR1cmXlhajpg6jkuIDoh7TvvIxudWxsLzAv5Y2V5L2NL+mHh+agt+aXtumXtOWPiuWOhuWPsuaOkuW6j+S/neeVmeOAgua1j+iniOWZqGFkbWlu6YeN5paw55m75b2V44CB5ZCO56uv5bey6L+e5o6l77yb5qaC6KeI5YmN56uv5LuN5aaC5a6e5qCH5rWP6KeI5Zmo5ryU56S677yM5bCa5pyq5pu/5o2i44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjEwLTAyIiwKICAgICAgInRpdGxlIjogIuesrDLmraXvvJrmjqXpgJrmpoLop4jlkozog73mupDvvIzkv53nlZnmr4/kuKrmlbDlgLznmoTlkKvkuYkiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAzLAogICAgICAicmVzdWx0IjogIuWunumZhea1j+iniOWZqO+8muS4u+WKqGRlbW/mgaLlpI0xNi80LzI45ZKMNOiDvea6kO+8jOWIh2JhY2tlbmTmuIXmvJTnpLrlubbopoHmsYLnmbvlvZXvvJvnnJ/lrp7lkI7nq6/mpoLop4gxNi80LzI477yM56m66Ze05Y2h54mH562b6YCJczHkuJRkMDXor6bmg4XkuIDoh7TvvJvog73mupDku4VkMDUtMDjvvIzlip/njocwLzEuNi8xLjgvMiBrV+WIh+WIsDIyMC8yMjAuMi8yMjAuNC8yMjAuNiBW77yM5pena1fmm7Lnur/muIXpmaTjgIJkMDUgVuWOhuWPsuWunumZhTXmnInmlYjmoLfmnKzjgIEy5oqY57q/5q61KG51bGzmlq3ngrnkuI4w5pyJ5pWIKeOAguWBnELlkI7kuKTpobU1MDPlnYfkv53nlZnml6flv6vnhafkuJRiYWNrZW5k5LiN5Y+Y77yb6IO95rqQ6ZSZ6K+v56e76Iez5Yi35paw5oyJ6ZKu5peB5bm25a6e6ZmF5oiq5Zu+56Gu6K6k6aaW5bGP5Y+v6KeB77ybQuaBouWkjemHjeivlea4hemUmeW5tuabtOaWsOivu+WPluaXtumXtOOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMC0wMyIsCiAgICAgICJ0aXRsZSI6ICLnrKwz5q2l77ya6K6p5Y6G5Y+y5YWl5Y+j5bim5a+56K6+5aSH77yM6K6p5Y6f5aeL5oql6K2m5L+d5oyB5Y+q6K+7IiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICLlrp7pmYXmtY/op4jlmagz5p2h5YWl5Y+j5Z2H6YCa6L+H77yaZDA16K+m5oOF4oaScG93ZXIva1fljoblj7LjgIHog73mupBkMDbnlLXljovihpJ2b2x0YWdlL1bljoblj7LvvIjlrp7pmYUy5q6144CBMisz5pyJ5pWI54K5L251bGzmlq3ngrkw5pyJ5pWI77yJ44CB5oql6K2mYTAx5Y+q6K+74oaSZDAx6K+m5oOF44CC6KGl6b2Q6K+m5oOF54K55L2N55yf5a6eL2FwaS9vdmVydmlld+ivu+WPlu+8jGQwNeS4ujBrV+OAgWQwM+e8uuWkseS4lOaXoOmHh+agt+aXtumXtO+8m+epuumXtC/otKPku7vku43mmI7noa7mvJTnpLrjgILlgZxC5YaN5byA6K+m5oOF5b6X5YiwNTAz5LiU5peg5qih5ouf54K55L2N6aG25pu/77ybQuaBouWkjeWQjuaUtui1t+mHjeW8gOa4hemUme+8jDPmnaHlhaXlj6Pph43mtYvpgJrov4fjgILmiqXorabku4Xmn6XnnIvlj4rnpoHnlKjliIbpobXmjInpkq7vvIzmnKrlgZrlpJrpobXnnJ/lrp7moLfmnKzjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTAtMDQiLAogICAgICAidGl0bGUiOiAi56ysNOatpe+8muiuqeepuumXtOS/ruaUueecn+ato+S/neWtmO+8jOWIt+aWsOi/mOiDveeci+ingSIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAiQuWunui3kTYz5rWL6K+V6YCa6L+H77ybYWRtaW7kv53lrZhzMeaVmeWtpualvCBBLzHlsYLvvIzmipPljIVQVVQyMDDlkI7ni6znq4tHRVQyMDDlm57or7vvvIzmlbTpobXliLfmlrDph43mlrDnmbvlvZXku43kuIDoh7TvvIzorr7lpIfor6bmg4XlkIzmraXjgIJ2aWV3ZXLku4Xog73mn6XnnIvvvJtD55yf5a6eSFRUUDXmo4Dmn6XpgJrov4fvvJp2aWV3ZXIvbWFuYWdlcuS8qumAoGJvZHkucm9sZeS7jTQwM+S4lOiusOW9leS4jeWPmO+8jOWMv+WQjUdFVDQwMeOAglYxL1YyL1Yz5ZOI5biM5pyq5Y+Y44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjEwLTA1IiwKICAgICAgInRpdGxlIjogIuesrDXmraXvvJrmiororr7lpIfotKPku7vkuqTnu5nnrqHnkIbkurrlkZjvvIzlubblpITnkIbml6fniYjmnKwiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIkLlhYg2OeOAgeihpeaVkeWQjjc26aG55rWL6K+V6YCa6L+H77ybZDAx6aaW5qyhMOKGkjHvvIzmlbTpobXliLfmlrDph43mlrDnmbvlvZXkv53nlZnvvJvkuKTmoIfnrb7pg73or7sx77yM56ys5LiA5L+d5a2YMu+8jOesrOS6jOS7hVBVVDQwOStHRVQyMDDlm57or7sy44CB5peg6Ieq5Yqo6YeN5Y+R5LiU5LiN6KaG55uW44CC5Lil5qC854mI5pys6KGl5pWR5ZCO55yf5a6eSFRUUDEw6aG55qOA5p+l6YCa6L+H77yM5ZCI5rOV6aG16Z2i5L+d5a2YMuKGkjPjgIHni6znq4tHRVTlm57or7vlj4rph43mlrDnmbvlvZXmjIHkuYXljJbvvJt2aWV3ZXLlj6ror7vjgILorr7lpIfor6bmg4XlkIzmraVNeVNRTOepuumXtC/otKPku7vjgILlt7LlnKhJREXloavlhpnnrKwxMOivvui/m+W6pu+8jEEvQuWPiuS4k+WxnkNvbXBvc2XlnYflgZzmraLvvIzljbfkv53nlZnjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTEtMDEiLAogICAgICAidGl0bGUiOiAi56ysMeatpe+8muW7uueri+esrOS4gOS7tuecn+ato+S/neWtmOeahOa8lOe7g+S6i+S7tiIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiQjg15rWL6K+V6YCa6L+H77ybVjTlrp7pmYXov4Hnp7vmiJDlip/lubblhrvnu5Plk4jluIzjgILliJ3lp4vmlbDmja7lupPkuovku7Yw77yM5pyq5re35penTFPvvJthZG1pbumhtemdouWIm+W7umQwMSBjYXNlLTMyNWQ0ZWVmZTU1N+iHquWKqEFTU0lHTkVEL21hbmFnZXIvdjHvvIxkMDIgY2FzZS0zNDU4NmJiYzM3MmbkuLpORVcv5pyq5YiG5rS+L3Yx77yb5Lik5qyh5Z2HUE9TVDIwMOWQjueLrOeri0dFVDIwMO+8jEFDVElWRS92ZXJpZmllZD1mYWxzZeWPiuWQhOS4gOadoWFkbWlu5Yib5bu65pe26Ze057q/44CCQyBTUUznoa7orqTkuKTku7bkuovku7blj4rkuKTmnaHml7bpl7Tnur/okL3lupPvvIzorr7lpIcxNuOAgeaKpeitpjHjgIFWMeKAk1Y05oiQ5Yqf77ybYXVkaXTmnKzmraXku4Xlu7rooagw5p2h77yM5LiN5Lyq6YCg5Y6G5Y+y44CC5oiq5Zu+5bey5a6e6ZmF5p+l55yL44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjExLTAyIiwKICAgICAgInRpdGxlIjogIuesrDLmraXvvJrliIbmtL7nu5kgbWFuYWdlcu+8jOWGjeaNouS6uuW8gOWni+WkhOeQhiIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiQjExNemhuea1i+ivlemAmui/h++8m1Yx4oCTVjTlk4jluIzmnKrlj5jjgIJhZG1pbuS4umNhc2UtMzQ1ODZiYmMzNzJm5YiG5rS+bWFuYWdlcuW5tuWGmeivt+i/m+ihjOeOsOWcuuW3oeafpe+8jHYx4oaSMu+8m+mAgOWHuuS7pW1hbmFnZXLnmbvlvZXlkIzkuIDkuovku7bvvIzlvIDlp4t2MuKGkjPvvIzorrDkuovlt7Lmo4Dmn6Xnu4PkuaDngrnkvY3vvIznu6fnu63op4Llr592M+KGkjTkuJTnirbmgIFJTl9QUk9HUkVTU+OAguS4ieasoeWdh1BPU1TlkI7ni6znq4tHRVTlm57or7vvvIzml7bpl7Tnur9jcmVhdGUvYXNzaWduL3N0YXJ0L25vdGXvvIzmk43kvZzogIVhZG1pbi9hZG1pbi9tYW5hZ2VyL21hbmFnZXLvvJtD55u05o6lU1FM56Gu6K6k5Li76K6w5b2VdjTjgIHml7bpl7Tnur805p2h5Y+K5a+55bqU5LiJ5p2h5a6e6ZmF5a6h6K6h77yM5Lit5paH5a6M5pW077yM5Y6f6Ieq5Yqo5YiG5rS+5LqL5Lu25LuNdjHjgILmiKrlm77lt7Lmn6XnnIvjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTEtMDMiLAogICAgICAidGl0bGUiOiAi56ysM+atpe+8muWFiOaBouWkje+8jOWGjeaguOWunu+8jOacgOWQjuWGmee7k+iuuuWFs+mXrSIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDEsCiAgICAgICJyZXN1bHQiOiAiQjE0MOmhuea1i+ivlemAmui/h++8jFYx4oCTVjTlk4jluIzmnKrlj5jjgIJtYW5hZ2Vy5ZyodjTlrp7pmYXnnIvop4HnvLrmnaXmupDmgaLlpI0v5qC45a6e77ybYWRtaW7mgaLlpI12NOKGkjXku41JTl9QUk9HUkVTUy9SRUNPVkVSRUQvZmFsc2XvvJttYW5hZ2Vy5qC45a6edjXihpI25LuNSU5fUFJPR1JFU1PkuJTnu5PorrrnqbrvvJvloavlhpnmnKzmrKHmlZnlrabmvJTnu4Plt7LmoLjmn6XlrozmiJDlhbPpl612NuKGkjfvvIxDTE9TRUQvUkVDT1ZFUkVEL3RydWXvvIzlpITnva7orrDlvZXkv53nlZnvvIzkuIPmnaF0aW1lbGluZeOAguavj+asoVBPU1TlkI7ni6znq4tHRVTvvJvlhbPpl63lkI7ml6Dlj6/lhpnmjInpkq7jgILmlbTpobXliLfmlrDph43mlrDnmbvlvZXlkIzkuIBtYW5hZ2Vy5LiO5ZCM5LiASUTku412Ny/nu5Porrov5a6M5pW05pe26Ze057q/44CCQyBTUUznoa7orqTkuLvorrDlvZXjgIE35p2h5pe26Ze057q/44CBNuadoeWvueW6lOWKqOS9nOWuoeiuoeOAguW3suaJk+W8gOajgOafpeWFs+mXreS4jumHjeaWsOeZu+W9leaIquWbvu+8jOacq+adoeWujOaVtOWPr+ivu+OAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMS0wNCIsCiAgICAgICJ0aXRsZSI6ICLnrKw05q2l77ya5o6l6YCa5a6h6K6h5ZKM5o6l5YWl54q25oCBIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICLljp/lsJ3or5XlnKhDb2RlQnVkZHnmkZjopoHlkI7lj6rlrozmiJDlkI7nq6/pg6jliIbvvIzkv53nlZnlpLHotKXmupDnoIEvQVjvvJvlrp7pmYXooaXmlZHlkI5CMTUz6aG55rWL6K+V6YCa6L+H77yMVjHigJNWNOS4jeWPmOOAgmFkbWlu55yf5a6e566h55CG6aG16K+75Y+W5Y6fNuadoeWKqOS9nOWuoeiuoe+8m+epuumXtFBVVC9HRVTlkI5zcGFjZS51cGRhdGXlop7kuLo377yM6LSj5Lu75ZCI5rOV5L+d5a2YdjPihpI05ZCOb3duZXIuc2F2ZeWinuS4ujjvvIzmlrDlu7pjYXNlLWNkYjcxNTJlY2VjZuWQjmNhc2UuY3JlYXRl5aKe5Li6Oe+8jOacqui/veihpeaXpzLmrKHliJvlu7rjgIJpbnRlZ3JhdGlvbuWbm+Wtl+auteS4ulRFQUNISU5HX01PQ0svdHJ1ZS9mYWxzZS9mYWxzZeOAguWIh3ZpZXdlcuecn+WunkdFVGF1ZGl0NDAz77yM5pen6KGo5LiO5LqL5Lu2SUTmuIXpmaTogIxpbnRlZ3JhdGlvbuWPr+inge+8m0PnnJ/lrp5IVFRQOOajgOafpemAmui/h++8muWMv+WQjeS4pOaOpeWPozQwMeOAgWFkbWlu5a6h6K6hMjAw44CBbWFuYWdlci92aWV3ZXLlrqHorqE0MDPvvIzkuInop5LoibJpbnRlZ3JhdGlvbjIwMOS4lOW4g+WwlOS4peagvOato+ehruOAgmFkbWluL3ZpZXdlcuaIquWbvuW3suaJk+W8gOOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMS0wNSIsCiAgICAgICJ0aXRsZSI6ICLnrKw15q2l77ya5pat5byA5ZCO56uv77yM5qOA5p+l5aSx6LSl5o+Q56S677yb55So5rWL6K+V5qOA5p+l5ouS57udIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICJDb2RlQnVkZHnkuKTmrKHlrp7njrDvvIzooaXmmL7lvI/kuovku7bph43or7vlhaXlj6PjgILlrp7pmYXlgZxC6YeN6K+7NTAz5LiUM+adoeS4iuasoeaIkOWKn+e7k+aenOS/neeVme+8m+aBouWkjemHjeivlUdFVDIwMOOAgemUmeivr+a4hemZpO+8jOS4u+S6i+S7tkNMT1NFRCB2N+acquWPmOOAgjIw6aG55a6e6ZmFSFRUUOaLkue7neajgOafpemAkOasoeWbnuivu2Nhc2VzL3NwYWNlcy9vd25lcnMvYXVkaXTlnYfml6DmlLnlhpnvvJtC5a6e6ZmFTWF2ZW4xNTPmtYvor5Uw5aSx6LSl77yMQyBOb2RlMjLlrojljasz5rWL6K+VMOWksei0peOAguWbm+S7veW3suW6lOeUqOi/geenu+WTiOW4jOS/neaMgeOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMS0wNiIsCiAgICAgICJ0aXRsZSI6ICLnrKw25q2l77ya5a6M5pW06LWw5LiA6YGN77yM55WZ5LiL6Ieq5bex55qE6K+05piOIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMSwKICAgICAgInJlc3VsdCI6ICJDb2RlQnVkZHnmm7TmlrDkuZ3oj5zljZXmjqXlj6Por7TmmI7vvIzmuIXnkIblt7LmjqXlkI7nq6/nmoTml6dsb2NhbFN0b3JhZ2XmvJTnu4Mv5a6h6K6h6K+75YaZ77yb5a6e6ZmF6YeN6L29566h55CG5ZGY5Lmd6I+c5Y2V44CBZDA15Yqf546H5Yiw5ZCM54K55L2N5Y6G5Y+y44CBczHnqbrpl7Tkv53lrZjlubbph43nmbvlvZXlm57or7vjgIFkMDHotKPku7s04oaSNeS/neWtmOWbnuivu+OAgeaWsGNhc2UtN2FkOGYzNzBhODk46Ieq5YqoQVNTSUdORUQgbWFuYWdlciB2Me+8m+aXp+mXreeOr2Nhc2UtMzQ1ODZiYmMzNzJm5LuNQ0xPU0VEIHY3L+aXtumXtOe6vzfjgILlrqHorqExMuadoeWvueW6lOaWsOWinjPmrKHmiJDlip/lhpnlhaXjgIJ2aWV3ZXLkuZ3oj5zljZXlj6ror7vjgIHlrqHorqE0MDPkuJTml6flrqHorqHmuIXnkIbjgILlrp7pmYXorrDlvZXlt7LlnKhJREXloavlhpnlubbkv53nlZnnrKwxMOivvuWOn+aute+8m+ecn+S6uuWQjOS8tOacqua1i+OAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMi0wMSIsCiAgICAgICJ0aXRsZSI6ICLnrKwx5q2l77ya5oqK5ZCv5Yqo6K+05piO5YaZ5oiQ5Yir5Lq654Wn552A5bCx6IO95YGa55qE6aG65bqPIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMiwKICAgICAgInJlc3VsdCI6ICLljp9SRUFETUXlrp7pmYXlrqHor7vlj5HnjrDmlbTmoJHlpI3liLblkI7liKDpmaRlbnYvdGFyZ2V05Y+K56e76Zmk5pen5a655Zmo5bu66K6u77yM56ys5LqM5qyhQ29kZUJ1ZGR55LuF5paH5qGj5L+u5aSN5Li65pyA5paw5YWs5byA5a+85Ye644CB5YWo5paw55uu5b2V44CB5pen5a655Zmo5Y+qc3RvcOS/neeVmeOAgeWbuuWumuWuueWZqOWQjeWGsueqgeW+heWunumZhemqjOivgeOAgklERemAkOS4quaJk+W8gHNldHVwLWVuduOAgWNvbXBvc2XjgIFtdm5344CBc2VydmXjgIHlhazlvIDmoLfmnKzvvJvmoLjlr7lub3Rlc+WSjOWQiOW5tuiusOW9le+8jOWJjeWFreivvuaMieivvuasoeW4puWFpe+8jOesrDEwLzEx5a6e6ZmF6K6w5b2V5L+d55WZ44CCV2luZG93cy/mlrDnm67lvZXlsJrmnKrmiafooYzlpoLlrp7moIforrDjgIIiCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMTItMDIiLAogICAgICAidGl0bGUiOiAi56ysMuatpe+8muWvvOWHuua6kOegge+8jOS6suiHqueci+a4healmuW4pui1sOS6huS7gOS5iCIsCiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJzdWJtaXNzaW9ucyI6IDIsCiAgICAgICJyZXN1bHQiOiAiQ+WunumZheaJp+ihjGhhbmQtaW4tdjHlhazlvIDlr7zlh7oxNDDmlofku7bvvJs46aG55Ymv5pys6L6555WM5rWL6K+V5Y+R546w5aSn5paH5Lu25rOE5ryP5LiO6aG555uu56WW5YWI56ym5Y+36ZO+5o6l5ryP5oum44CC5LuFQ29kZUJ1ZGR55L+u5bel5YW35ZCO5Y+m5a+85Ye6aGFuZC1pbi12Mu+8jDE0MOaWh+S7tuWFqOWtl+iKguWPo+S7pOavlOWvueaXoOWRveS4reOAgVNIQTI1NumAkOS4quWMuemFje+8m+WQjDjpobnlhajpg6jpgJrov4fjgILorr/ovr7mmL7npLrpmpDol4/mlofku7bvvIznoa7orqTmoLkuZW52LmV4YW1wbGXkuI5iYWNrZW5kLy5tdm4vbXZudy9tdm53LmNtZOS/neeVme+8jOaXoC5lbnYvdGFyZ2V0L25vZGVfbW9kdWxlc+OAguaXp+WvvOWHuuWSjOWksei0peivgeaNruS/neeVme+8jOS4jeetieWQjOaWsOebruW9lei/kOihjOOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMi0wMyIsCiAgICAgICJ0aXRsZSI6ICLnrKwz5q2l77ya5Zyo5paw55uu5b2V55Sf5oiQ5paw6YWN572u77yM55So54us56uL5pWw5o2u5bqT6YeN5paw5ZCv5YqoIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogMywKICAgICAgInJlc3VsdCI6ICLorr/ovr7ku45oYW5kLWluLXYz5aSN5Yi2MTQw5paH5Lu25Yiw5YWo5paw56m6aGFuZG9mZuOAgeWFqOWTiOW4jOS4gOiHtO+8jOaWsC5lbnbnlJ/miJDkuIDmrKHkuJTlm5vpobnlgLzkuI7ljp/kuI3lkIzjgILpppbmrKEtcOaWsOmhueebrnVw5a6e6ZmF5Zu65a6a5a655Zmo5ZCNQ29uZmxpY3TvvJtDb2RlQnVkZHnku4Xnp7vpmaTkuKTlm7rlrprlkI3lubbkv67ms6jph4ovUkVBRE1F77yM5L+d55WZ5pen5a655ZmoL+WPjGVudi/lj4zljbflkI7lkIzpobnnm67ph43or5VoZWFsdGh544CC5paw5Y2354us56uL44CB5pen5Y235L+d55WZ77yb5pawQjE1M+a1i+ivleOAgUVtcHR5U2NoZW1h5bqU55SoVjHigJNWNO+8jOaWsEHnnJ/lrp5oYW5kb2Zm6Lev5b6E77yb5paw5Y+j5Luk55m75b2VMTborr7lpIc056m66Ze0M+eUqOaIt+OAgei0o+S7uy/kuovku7Yv5a6h6K6hMO+8jOaXoOaXp+S4quS6uuaUueWKqOOAguS/ruWkjeW3suWcqOWOn0lEReWQjOatpeS4pOaWh+S7tuW5tuWvvOWHunY077yMMTQw5paH5Lu25LiO6L+Q6KGM5Ymv5pys6YCQ5Liq55u45ZCM44CCIgogICAgfSwKICAgIHsKICAgICAgImlkIjogIjEyLTA0IiwKICAgICAgInRpdGxlIjogIuesrDTmraXvvJrnhafmuIXljZXph43lgZrvvIznoa7orqTkuqTku5jnmoTmmK/og73nu6fnu63kvb/nlKjnmoTkvZzlk4EiLAogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAic3VibWlzc2lvbnMiOiAyLAogICAgICAicmVzdWx0IjogIuaWsOebruW9lea4heWNleeUsUNvZGVCdWRkeeeVmeepuu+8m+WunumZheWPkeeOsOiuvuWkh+mhtei0n+i0o+S6uuadpea6kOaXp+aWh+ahiO+8jOS7hUNvZGVCdWRkeeS/ruS4ieWkhOaWh+Wtly/ms6jph4rlkI7ph43ovb3pqozor4HjgILmlrDlupNkMDHmuKnluqbliLDlkIzngrnkvY3ljoblj7LvvIxzMeS6pOaOpeaVmeWtpualvC8z5bGC5L+d5a2Y5ZCO5Yi35paw6YeN55m75LuN5LiA6Ie077ybZDAxbWFuYWdlcui0o+S7uzDihpIx77yb5pawY2FzZS1hNGI2NmQ0NTZiYWHoh6rliqhBU1NJR05FRHYx77yMbWFuYWdlcuW8gOWni3YyL+iusOS6i3Yz44CBYWRtaW7mgaLlpI12NOOAgW1hbmFnZXLmoLjlrp52NS/lhbPpl612Nu+8jHRpbWVsaW5lNu+8jOWuoeiuoTjjgIJ2aWV3ZXLkuZ3oj5zljZXlj6ror7sv5a6h6K6hNDAz77yM54us56uL5paw546v5aKDSFRUUOS8qumAoOinkuiJsuWGmTQwM+S4lOWbm+mhueW/q+eFp+S4jeWPmO+8m+aVtOmhtemHjeeZu+S7jUNMT1NFRHY2L1JFQ09WRVJFRC92ZXJpZmllZD10cnVlL+e7k+iuuuOAgkMgU1FM5LiA6Ie044CC5a6e6ZmF5YWt6aG56K6w5b2V5ZyoSURF5aGr5YaZ5bm25LiO56Gu6K6k5rqQ56CB5ZCM5q2l5Zue5Y6f5bel56iL77yb5ZCM5py65paw55uu5b2V77yM5LiN5YaS5YWF5Y+m5LiA55S16ISRL+ecn+S6uuWQjOS8tOOAgiIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIxMi0wNSIsCiAgICAgICJ0aXRsZSI6ICLnrKw15q2l77ya5Lqk5Ye65L2c5ZOB77yM5Lqy5Y+j6K+05piO5a6D5piv5oCO5qC35YGa5Ye65p2l55qEIiwKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInN1Ym1pc3Npb25zIjogNCwKICAgICAgInJlc3VsdCI6ICJDb2RlQnVkZHnmjInlrp7pmYXorrDlvZXnlJ/miJDkuqTku5jor7TmmI7jgIHkupTpgZPlj6PlpLTpopjml6DnrZTmoYjvvJvnu4/lrp7pmYXlrqHor7vkv67mraPpmLbmrrXkv53lrZjmlrnlvI8v6L+B56e76aG65bqP44CB5bel5YW35p2l5rqQ44CB5pen5Y236K+B5o2u6L6555WM44CB5a+85Ye65Y6G5Y+y44CBbm90ZXPkuqTku5jlhaXlj6PlkozmlLblsL7nirbmgIHvvJvku4XlkIzmraXnoa7orqTmlofku7bkuI7lrp7pmYXorrDlvZXlm57ljp9JREXjgILljp9D5YWI5oyJ5pWZ5p2Q5a+85Ye6aGFuZC1pbi1maW5hbDE0MeaWh+S7tuW5tuWunumZheW8gOS4pOivtOaYjuaguOWvue+8m+maj+WQjuaWsEEvQuato+W4uOmAgOWHuuOAgeaWsEPmmL7lvI8tcCBzdG9w77yM5Lik5paw5Lik5pen5a655ZmoRXhpdGVkKDAp44CB5Y+M5Y235Y+MZW525L+d55WZ44CC5pS25bC+5paH5a2X5pu05paw5ZCO5Y+m5ZCNaGFuZC1pbi1maW5hbC0y77yMMTQx5paH5Lu2U0hB6YCQ6aG55LiO5Y6fL+aWsOa6kOeggeWFqOebuOWQjO+8jOS4pOivtOaYjuWQq+aWsOmXreeOr+S4lOWGjeasoeaJk+W8gO+8m+Wbm+ivvueoi+err+WPo+aXoOebkeWQrOOAguWOn+WvvOWHuuS4juWksei0peivgeaNruWFqOmDqOS/neeVmeOAguecn+S6uuWPo+ivlS/ni6znq4vlrabnlJ8v5Y+m5LiA5py65Zmo5pyq6aqM6K+B44CCIgogICAgfQogIF0KfQo=">逐步实际结果</a>随包保留。以下 V2.0.1 与 V2.0.0 段落为对应日期的作者参考工程历史记录，不替代本节学生路线试跑。</p>
+<!-- STUDENT_TRIAL_END -->
+
+
+<p>日期：2026-10-20。本文记录本次重写和作者实际验证，不是学生CodeBuddy实做记录。</p>
+<h2 id="chapter-14-step-2">本次到底改了什么</h2>
+<p>12课改为64个连续小步骤。每步都具备操作位置、完整提示词、等AI完成并保存、亲自操作、预期结果、独立修复提示和下一步。前六课从0字节的HTML生成完整模拟前端，后六课自己生成后端并逐项接通，教师成品不再是学生起点。</p>
+<p>环境准备单独说明CodeBuddy的AI对话区、编辑器、终端、浏览器四个位置；区分AI完成与A/B常驻服务。Node22先装，Java17第07课使用，Docker第08课使用；登录可用模型即可，不强制百炼密钥。</p>
+<p>跨课采用同一个工程、同一个数据访问文件和稳定设备ID。中途只有设备基本信息已接MySQL时，读数、历史和责任仍明确标为浏览器演示。完整后端完成后逐项回读数据，不把页面隐藏按钮当作后端权限。</p>
+<p>交付使用源码白名单、口令值扫描、两份实做文档回同步和新目录启动。同机handoff显式使用独立Compose项目名，避免新.env误连旧数据卷。</p>
+<h2 id="chapter-14-step-3">V2.0.1 再检查与修正</h2>
+<p>本轮按“学生隔天重新打开IDE、只复制当前步骤提示词、完成后刷新、最后交给同伴”的顺序重新检查。修复了以下问题：</p>
+<ul>
+<li>第01、02课补创建笔记目录与显示设备数量，防止检查要求超出提示词产物。</li>
+<li>第05课明确跨页进入历史后仍可选设备/点位；切功率/电压后重新勾选设备再比较。</li>
+<li>第06课补分派、开始、处置记录的表单与按钮接线；每次成功动作都保存到浏览器，失败保留原数据；改正时间线条数及刷新后的角色切换。</li>
+<li>第07–12课补重新开课时的窗口、目录、Java17与已有容器恢复动作，不提前运行尚未生成的工具。</li>
+<li>第12课把前六课已有公开文字笔记合并进docs，再随源码交付。学生未做、未记录的内容不补写通过。</li>
+<li>参考后端按数据库里的规范用户名建立会话；MANAGER登录后能处理分派给manager的事件。第09课提示词同步这一规则。</li>
+<li>导出拒绝源路径、输出路径及父目录的符号链接；排除所有层级的.env与.env.*，仅保留根.env.example。已用虚构配置做边界测试，没有使用学生凭据。</li>
+<li>阅读版保留跨章节链接指向的具体步骤；12课均补齐建议用时，每课180分钟，尚非课堂计时实测。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>本轮验证</th>
+<th>实际结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Java17测试与打包</td>
+<td>14项通过；新增用户名大小写身份回归</td>
+</tr>
+<tr>
+<td>原生独立MySQL/Redis与HTTP</td>
+<td>73项通过，含大写用户名登录/处理本人事件、权限、版本冲突与服务重启</td>
+</tr>
+<tr>
+<td>前六课模拟行为</td>
+<td>18项通过</td>
+</tr>
+<tr>
+<td>导出边界</td>
+<td>9组通过，含父目录链接、配置变体、禁止覆盖、泄漏提示不打印值</td>
+</tr>
+<tr>
+<td>本轮39文件源码导出</td>
+<td>无.env与原target，独立目录重新构建，14项测试通过</td>
+</tr>
+<tr>
+<td>正文与阅读版</td>
+<td>12课64步结构、180分钟建议分配、跨章具体步骤及独立HTML资源检查</td>
+</tr>
+</tbody></table>
+<p>本轮未新增浏览器操作检查，未重做完整新数据库接手闭环；下表的浏览器与新数据库接手结果属于V2.0.0初验。本轮做了新的源码导出构建和参考工程HTTP复测，不能把这些结果写成学生已通过全部64个AI生成步骤。</p>
+<p><a download="recheck-results.json" href="data:application/json;base64,ewogICJ2ZXJzaW9uIjogIjIuMC4xIiwKICAiZGF0ZSI6ICIyMDI2LTEwLTIwIiwKICAiYmFja2VuZCI6IFsKICAgIHsKICAgICAgIm5hbWUiOiAiY24uY2FtcHVzLmNvdXJzZS5BdXRoU2VydmljZVRlc3QiLAogICAgICAidGVzdHMiOiAiNCIsCiAgICAgICJmYWlsdXJlcyI6ICIwIiwKICAgICAgImVycm9ycyI6ICIwIiwKICAgICAgInNraXBwZWQiOiAiMCIKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogImNuLmNhbXB1cy5jb3Vyc2UuQ2FzZVJ1bGVzVGVzdCIsCiAgICAgICJ0ZXN0cyI6ICI5IiwKICAgICAgImZhaWx1cmVzIjogIjAiLAogICAgICAiZXJyb3JzIjogIjAiLAogICAgICAic2tpcHBlZCI6ICIwIgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiY24uY2FtcHVzLmNvdXJzZS5JbnB1dFZhbGlkYXRpb25UZXN0IiwKICAgICAgInRlc3RzIjogIjEiLAogICAgICAiZmFpbHVyZXMiOiAiMCIsCiAgICAgICJlcnJvcnMiOiAiMCIsCiAgICAgICJza2lwcGVkIjogIjAiCiAgICB9CiAgXSwKICAiY2xlYW5fZXhwb3J0X2JhY2tlbmQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImNuLmNhbXB1cy5jb3Vyc2UuQXV0aFNlcnZpY2VUZXN0IiwKICAgICAgInRlc3RzIjogIjQiLAogICAgICAiZmFpbHVyZXMiOiAiMCIsCiAgICAgICJlcnJvcnMiOiAiMCIsCiAgICAgICJza2lwcGVkIjogIjAiCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJjbi5jYW1wdXMuY291cnNlLkNhc2VSdWxlc1Rlc3QiLAogICAgICAidGVzdHMiOiAiOSIsCiAgICAgICJmYWlsdXJlcyI6ICIwIiwKICAgICAgImVycm9ycyI6ICIwIiwKICAgICAgInNraXBwZWQiOiAiMCIKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogImNuLmNhbXB1cy5jb3Vyc2UuSW5wdXRWYWxpZGF0aW9uVGVzdCIsCiAgICAgICJ0ZXN0cyI6ICIxIiwKICAgICAgImZhaWx1cmVzIjogIjAiLAogICAgICAiZXJyb3JzIjogIjAiLAogICAgICAic2tpcHBlZCI6ICIwIgogICAgfQogIF0sCiAgImFwaV9jaGVja3MiOiA3MywKICAibW9ja19jaGVja3MiOiAxOCwKICAiZXhwb3J0X2d1YXJkX2NoZWNrcyI6IDksCiAgInNvdXJjZV9maWxlcyI6IDM5LAogICJyZWFkZXJfdmlzdWFsX3JldmlldyI6IGZhbHNlLAogICJzdHVkZW50X2NvZGVidWRkeV9mdWxsX3J1biI6IGZhbHNlLAogICJ3aW5kb3dzX3Rlc3RlZCI6IGZhbHNlLAogICJkb2NrZXJfdGVzdGVkIjogZmFsc2UKfQo=">本轮验证汇总</a>、<a download="recheck-api-results.json" href="data:application/json;base64,ewogICJwYXNzZWQiOiA3MywKICAiY2hlY2tzIjogWwogICAgIkdFVCAvaGVhbHRoIC0+IDIwMCIsCiAgICAiR0VUIC9kZXZpY2VzIC0+IDQwMSIsCiAgICAiUE9TVCAvbG9naW4gLT4gNDAxIiwKICAgICJQT1NUIC9sb2dpbiAtPiAyMDAiLAogICAgIlBPU1QgL2xvZ2luIC0+IDIwMCIsCiAgICAiUE9TVCAvbG9naW4gLT4gMjAwIiwKICAgICJHRVQgL21lIC0+IDIwMCIsCiAgICAiR0VUIC9tZSAtPiAyMDAiLAogICAgIkdFVCAvbWUgLT4gMjAwIiwKICAgICJtZSByb2xlcyIsCiAgICAiR0VUIC9vdmVydmlldyAtPiAyMDAiLAogICAgImZpeHR1cmUgY291bnRzIiwKICAgICJudWxsIHN0YXlzIG51bGwiLAogICAgInplcm8gc3RheXMgemVybyIsCiAgICAiR0VUIC9kZXZpY2VzIC0+IDIwMCIsCiAgICAiR0VUIC9zcGFjZXMgLT4gMjAwIiwKICAgICJHRVQgL2F1ZGl0IC0+IDQwMyIsCiAgICAiUFVUIC9zcGFjZXMvczEgLT4gNDAzIiwKICAgICJQVVQgL3NwYWNlcy9zMSAtPiA0MDAiLAogICAgIlBVVCAvc3BhY2VzL3MxIC0+IDIwMCIsCiAgICAiUFVUIC9vd25lcnMvZDAxIC0+IDQwMCIsCiAgICAiR0VUIC9vd25lcnMgLT4gMjAwIiwKICAgICJQVVQgL293bmVycy9kMDEgLT4gMjAwIiwKICAgICJQVVQgL293bmVycy9kMDEgLT4gNDA5IiwKICAgICJQVVQgL293bmVycy9kMDIgLT4gNDAzIiwKICAgICJQT1NUIC9jYXNlcyAtPiAyMDAiLAogICAgImV4aXN0aW5nIG93bmVyIGF1dG8gYXNzaWduZWQiLAogICAgIlBPU1QgL2xvZ2luIC0+IDIwMCIsCiAgICAidXBwZXJjYXNlIGxvZ2luIHJldHVybnMgY2Fub25pY2FsIHVzZXJuYW1lIiwKICAgICJHRVQgL21lIC0+IDIwMCIsCiAgICAidXBwZXJjYXNlIHNlc3Npb24gY2Fub25pY2FsIGlkZW50aXR5IiwKICAgICJQT1NUIC9jYXNlcy9iYmQ1Nzc2Zi03NzkwLTQ5YzMtODA1Yy0yODQ4MTg4ZjZlYjgvYWN0aW9ucyAtPiAyMDAiLAogICAgInVwcGVyY2FzZSBsb2dpbiBoYW5kbGVzIG93biBhc3NpZ25lZCBjYXNlIiwKICAgICJQT1NUIC9sb2dvdXQgLT4gMjAwIiwKICAgICJQT1NUIC9jYXNlcyAtPiA0MDMiLAogICAgIlBPU1QgL2Nhc2VzIC0+IDIwMCIsCiAgICAidW5vd25lZCBjYXNlIE5FVyIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gNDAzIiwKICAgICJQT1NUIC9jYXNlcy8yNjAwZWRlOS0yZDI0LTQ0YjgtOWRhYS1kNzZkOTAyODE0ZWYvYWN0aW9ucyAtPiA0MDAiLAogICAgIkdFVCAvY2FzZXMgLT4gMjAwIiwKICAgICJyZWplY3RlZCBhc3NpZ24gZGlkIG5vdCBtdXRhdGUiLAogICAgIlBPU1QgL2Nhc2VzLzI2MDBlZGU5LTJkMjQtNDRiOC05ZGFhLWQ3NmQ5MDI4MTRlZi9hY3Rpb25zIC0+IDIwMCIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gNDAzIiwKICAgICJQT1NUIC9jYXNlcy8yNjAwZWRlOS0yZDI0LTQ0YjgtOWRhYS1kNzZkOTAyODE0ZWYvYWN0aW9ucyAtPiAyMDAiLAogICAgIlBPU1QgL2Nhc2VzLzI2MDBlZGU5LTJkMjQtNDRiOC05ZGFhLWQ3NmQ5MDI4MTRlZi9hY3Rpb25zIC0+IDQwOSIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gMjAwIiwKICAgICJQT1NUIC9jYXNlcy8yNjAwZWRlOS0yZDI0LTQ0YjgtOWRhYS1kNzZkOTAyODE0ZWYvYWN0aW9ucyAtPiA0MDMiLAogICAgIlBPU1QgL2Nhc2VzLzI2MDBlZGU5LTJkMjQtNDRiOC05ZGFhLWQ3NmQ5MDI4MTRlZi9hY3Rpb25zIC0+IDIwMCIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gNDA5IiwKICAgICJQT1NUIC9jYXNlcy8yNjAwZWRlOS0yZDI0LTQ0YjgtOWRhYS1kNzZkOTAyODE0ZWYvYWN0aW9ucyAtPiAyMDAiLAogICAgIlBPU1QgL2Nhc2VzLzI2MDBlZGU5LTJkMjQtNDRiOC05ZGFhLWQ3NmQ5MDI4MTRlZi9hY3Rpb25zIC0+IDQwOSIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gMjAwIiwKICAgICJjYXNlIGNsb3NlZCB3aXRoIDcgdGltZWxpbmUgZW50cmllcyIsCiAgICAiUE9TVCAvY2FzZXMvMjYwMGVkZTktMmQyNC00NGI4LTlkYWEtZDc2ZDkwMjgxNGVmL2FjdGlvbnMgLT4gNDA5IiwKICAgICJHRVQgL2F1ZGl0IC0+IDIwMCIsCiAgICAiYXVkaXQgZGV0YWlsIHBvcHVsYXRlZCIsCiAgICAiR0VUIC9pbnRlZ3JhdGlvbiAtPiAyMDAiLAogICAgInJlYWQtb25seSBpbnRlZ3JhdGlvbiIsCiAgICAiUmVkaXMgcmVhbCBUVEwgMS4uMTgwMCIsCiAgICAiUE9TVCAvbG9nb3V0IC0+IDIwMCIsCiAgICAiR0VUIC9tZSAtPiA0MDEiLAogICAgIkdFVCAvbWUgLT4gNDAxIiwKICAgICJQT1NUIC9sb2dpbiAtPiAyMDAiLAogICAgIkdFVCAvY2FzZXMgLT4gMjAwIiwKICAgICJNeVNRTCBjYXNlcyBzdXJ2aXZlIFJlZGlzIHJlc3RhcnQiLAogICAgIkdFVCAvY2FzZXMgLT4gMjAwIiwKICAgICJNeVNRTCBjYXNlcyBzdXJ2aXZlIHNlcnZlciByZXN0YXJ0IiwKICAgICJHRVQgL3NwYWNlcyAtPiAyMDAiLAogICAgInNwYWNlIHBlcnNpc3RzIGFmdGVyIHJlc3RhcnQiLAogICAgInN0YXRpYyBzZXJ2ZXIgcmVmdXNlcyAvLmVudiIsCiAgICAic3RhdGljIHNlcnZlciByZWZ1c2VzIC9iYWNrZW5kL3BvbS54bWwiLAogICAgInN0YXRpYyBzZXJ2ZXIgcmVmdXNlcyAvbWF0ZXJpYWxzL21vY2stY2FtcHVzLmpzb24iLAogICAgInN0YXRpYyBzZXJ2ZXIgcmVmdXNlcyAvJTJlJTJlLy5lbnYiCiAgXSwKICAibXlzcWwiOiAiOC40LjEwIG5hdGl2ZSBpc29sYXRlZCIsCiAgInJlZGlzIjogIjcuMi42IG5hdGl2ZSBpc29sYXRlZCIsCiAgImRvY2tlcl90ZXN0ZWQiOiBmYWxzZSwKICAiY2FzZUlkIjogIjI2MDBlZGU5LTJkMjQtNDRiOC05ZGFhLWQ3NmQ5MDI4MTRlZiIKfQ==">本轮接口结果</a>、<a download="recheck-export-results.json" href="data:application/json;base64,ewogICJkYXRlIjogIjIwMjYtMTAtMjBUMTA6NDI6MjQuMjk3WiIsCiAgInBhc3NlZCI6IDksCiAgInJlc3VsdHMiOiBbCiAgICB7CiAgICAgICJjaGVjayI6ICJub3JtYWwgZXhwb3J0IGluY2x1ZGVzIGRvY3MgYW5kIHJvb3QgdGVtcGxhdGU7IGV4Y2x1ZGVzIHJvb3QvbmVzdGVkIGVudiB2YXJpYW50czsgbWFuaWZlc3QgaGFzaGVzIG1hdGNoIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJleGlzdGluZyBvdXRwdXQgcmVqZWN0ZWQiLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIm91dHNpZGUgb3V0cHV0IHJlamVjdGVkIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJzb3VyY2UgZmlsZSBzeW1saW5rIHJlamVjdGVkIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJhbGxvd2xpc3RlZCBzb3VyY2UgYW5jZXN0b3Igc3ltbGluayByZWplY3RlZCIsCiAgICAgICJwYXNzZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiY2hlY2siOiAib3V0cHV0IGFuY2VzdG9yIHN5bWxpbmsgcmVqZWN0ZWQgd2l0aG91dCB3cml0aW5nIGRlc3RpbmF0aW9uIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJydW50aW1lIGRpcmVjdG9yeSBzeW1saW5rIHJlamVjdGVkIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJmYWtlIGNyZWRlbnRpYWwgbGVha2FnZSBkZXRlY3RlZCB3aXRob3V0IHByaW50aW5nIHZhbHVlIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICJwcml2YXRlIGNvbmZpZyBzeW1saW5rIHJlamVjdGVkIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0KICBdLAogICJzY29wZSI6ICJpc29sYXRlZCBzeW50aGV0aWMgZml4dHVyZXM7IG5vIHJlYWwgY3JlZGVudGlhbHMgb3Igc2VydmljZXMiCn0K">导出边界结果</a>、<a download="recheck-static-results.json" href="data:application/json;base64,ewogICJ2ZXJzaW9uIjogIjIuMC4xIiwKICAibGVzc29ucyI6IFsKICAgIHsKICAgICAgImxlc3NvbiI6ICIwMS3ku47nqbrnmb3pobXpnaLlgZrlh7rmpoLop4gubWQiLAogICAgICAic3RlcHMiOiA1LAogICAgICAibWludXRlcyI6IFsKICAgICAgICA0MCwKICAgICAgICAzNSwKICAgICAgICAyNSwKICAgICAgICA0NSwKICAgICAgICAzNQogICAgICBdCiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjAyLeaKiuiuvuWkh+aUvui/m+WPsOi0pi5tZCIsCiAgICAgICJzdGVwcyI6IDUsCiAgICAgICJtaW51dGVzIjogWwogICAgICAgIDMwLAogICAgICAgIDM1LAogICAgICAgIDQwLAogICAgICAgIDQ1LAogICAgICAgIDMwCiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMDMt57uZ6K6+5aSH5a6J5o6S5L2N572u5ZKM6LSf6LSj5Lq6Lm1kIiwKICAgICAgInN0ZXBzIjogNSwKICAgICAgIm1pbnV0ZXMiOiBbCiAgICAgICAgMzAsCiAgICAgICAgMzUsCiAgICAgICAgMzUsCiAgICAgICAgNDUsCiAgICAgICAgMzUKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwNC3nnIvmh4Lor7vmlbDlho3lgZrog73mupDpobUubWQiLAogICAgICAic3RlcHMiOiA1LAogICAgICAibWludXRlcyI6IFsKICAgICAgICAzMCwKICAgICAgICA0MCwKICAgICAgICA0MCwKICAgICAgICAzNSwKICAgICAgICAzNQogICAgICBdCiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjA1LeaKiuWOhuWPsuWSjOWOn+Wni+aKpeitpuaOpeWIsOmhtemdoi5tZCIsCiAgICAgICJzdGVwcyI6IDUsCiAgICAgICJtaW51dGVzIjogWwogICAgICAgIDMwLAogICAgICAgIDQ1LAogICAgICAgIDMwLAogICAgICAgIDQwLAogICAgICAgIDM1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMDYt6LWw5a6M5ryU57uD5LqL5Lu25bm25Liy6LW35pW05Liq5YmN56uvLm1kIiwKICAgICAgInN0ZXBzIjogNiwKICAgICAgIm1pbnV0ZXMiOiBbCiAgICAgICAgMjAsCiAgICAgICAgMjUsCiAgICAgICAgNDAsCiAgICAgICAgNDUsCiAgICAgICAgMjAsCiAgICAgICAgMzAKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwNy3nnIvnnYDpobXpnaLlgZrnrKzkuIDkuKrlkI7nq68ubWQiLAogICAgICAic3RlcHMiOiA1LAogICAgICAibWludXRlcyI6IFsKICAgICAgICAzMCwKICAgICAgICAzMCwKICAgICAgICA0MCwKICAgICAgICA0MCwKICAgICAgICA0MAogICAgICBdCiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjA4LeaKiuiuvuWkh+S/neWtmOWIsE15U1FMLm1kIiwKICAgICAgInN0ZXBzIjogNiwKICAgICAgIm1pbnV0ZXMiOiBbCiAgICAgICAgMjUsCiAgICAgICAgMzAsCiAgICAgICAgMzUsCiAgICAgICAgMzAsCiAgICAgICAgNDAsCiAgICAgICAgMjAKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwOS3nlKhSZWRpc+iusOS9j+efreaXtueZu+W9lS5tZCIsCiAgICAgICJzdGVwcyI6IDYsCiAgICAgICJtaW51dGVzIjogWwogICAgICAgIDI1LAogICAgICAgIDMwLAogICAgICAgIDQwLAogICAgICAgIDM1LAogICAgICAgIDMwLAogICAgICAgIDIwCiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMTAt6YCQ6aG15o6l5Zue55yf5a6e5ZCO56uvLm1kIiwKICAgICAgInN0ZXBzIjogNSwKICAgICAgIm1pbnV0ZXMiOiBbCiAgICAgICAgMzUsCiAgICAgICAgNDAsCiAgICAgICAgMzUsCiAgICAgICAgMzUsCiAgICAgICAgMzUKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIxMS3orqnkuIDku7bmvJTnu4PmnInlp4vmnInnu4gubWQiLAogICAgICAic3RlcHMiOiA2LAogICAgICAibWludXRlcyI6IFsKICAgICAgICAzMCwKICAgICAgICAzNSwKICAgICAgICAzMCwKICAgICAgICAzMCwKICAgICAgICAzMCwKICAgICAgICAyNQogICAgICBdCiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjEyLeaKiuS9nOWTgeS6pOWIsOaWsOebruW9lS5tZCIsCiAgICAgICJzdGVwcyI6IDUsCiAgICAgICJtaW51dGVzIjogWwogICAgICAgIDMwLAogICAgICAgIDM1LAogICAgICAgIDUwLAogICAgICAgIDQwLAogICAgICAgIDI1CiAgICAgIF0KICAgIH0KICBdLAogICJzdGVwcyI6IDY0LAogICJzdGFydGVyX2VtcHR5IjogdHJ1ZSwKICAiZml4dHVyZXNfYW5kX2NvbnRyYWN0X2JvZGllc19pZGVudGljYWwiOiB0cnVlLAogICJyZWFkZXJfc3RhdGljX2NoZWNrZWQiOiB0cnVlLAogICJyZWFkZXJfdmlzdWFsX3JldmlldyI6IGZhbHNlLAogICJyZWFkZXJfdW5pcXVlX2lkcyI6IDk5Cn0K">正文与链接复查</a>随包保留。</p>
+<p>安装入口也再次核对：<a href="https://www.codebuddy.cn/docs/ide/Getting-Started/Installation">CodeBuddy安装</a>、<a href="https://www.codebuddy.cn/docs/ide/User-guide/Overview">Ask/Craft使用说明</a>、<a href="https://nodejs.org/en/download">Node版本选择</a>、<a href="https://adoptium.net/temurin/releases/?version=17">Java17</a>、<a href="https://docs.docker.com/compose/install/">Compose安装</a>、<a href="https://docs.docker.com/desktop/setup/install/windows-install/">Windows Docker前提</a>。页面可读取不等于这些环境已在学生电脑安装成功。</p>
+<h2 id="chapter-14-step-4">V2.0.0 初验记录（保留历史）</h2>
+<table>
+<thead>
+<tr>
+<th>验证</th>
+<th>结果</th>
+<th>证明范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>前六课模拟数据行为</td>
+<td>18项通过</td>
+<td>内存localStorage中的空间责任、自动/手动分派、角色限制、版本冲突、完整闭环；不启动后端</td>
+</tr>
+<tr>
+<td>参考后端Java17构建</td>
+<td>13项测试，0失败、0错误、0跳过</td>
+<td>事件规则、会话、输入边界和可打包性</td>
+</tr>
+<tr>
+<td>真实HTTP与持久化检查</td>
+<td>66项通过</td>
+<td>登录、401/403、三角色、16/4/28样本、null与0、空间/责任保存、旧版本409、事件闭环、审计、登出、Redis TTL与重启、MySQL重启、静态服务拒绝公开私密路径</td>
+</tr>
+<tr>
+<td>导出源码新目录</td>
+<td>39个源码文件独立构建，10项接手检查通过</td>
+<td>无原target/.env，生成新口令；新MySQL库和独立Redis；重新导入样本，责任登记、自动分派、事件关闭和审计成功</td>
+</tr>
+<tr>
+<td>浏览器操作</td>
+<td>9组实际检查</td>
+<td>概览样本数；健康检查；能源0值；历史缺失/0及跳转；空间保存回读；空间跳设备筛选；刷新重新登录；断后端显示错误并保留不可操作旧快照；新目录viewer只读事件</td>
+</tr>
+<tr>
+<td>最终前端补验</td>
+<td>5组实际检查</td>
+<td>质量统计和类型跳转；设备筛选清空与收起详情；两台电表历史对比及切换量纲清空；报警无匹配/清空与单页分页禁用；报警到设备、设备到责任记录的稳定ID跳转</td>
+</tr>
+<tr>
+<td>教材交叉审查</td>
+<td>12课、64步</td>
+<td>每步闭环、路径/端口、样本一致、角色/状态、卷隔离及交付记录同步</td>
+</tr>
+</tbody></table>
+<p>实际运行环境：macOS、Node22.21.1、Java17.0.12、独立原生MySQL8.4.10、独立原生Redis7.2.6。服务只绑定回环地址，未访问/修改原智慧校园应用、学校数据库、CityU或AIRIOT。</p>
+<p>新目录验证为作者临时配置的新MySQL schema与独立Redis端口；这证明源码可独立运行，不等于教材Compose路径已在Docker Desktop执行。参考Compose目标为MySQL8.4、Redis7.4，配置已人工核对，未在本机实际运行。</p>
+<h2 id="chapter-14-step-5">本轮审查发现并修正的断点</h2>
+<ul>
+<li>第06课有责任人的设备创建事件会自动分派，不能一律声称NEW；未登记设备走手动分派路线。</li>
+<li>第07课不能要求修改上节课已经关闭的事件，改为查看并刷新核对。</li>
+<li>第08课不能把仍用模拟数据的详情读数写成“已存MySQL”。</li>
+<li>第09课首次要明确选择“连接后端”；刷新保留模式偏好但清令牌。</li>
+<li>第10课补能源到当前指标历史、报警到设备的入口；空间和责任回到原设备详情。</li>
+<li>服务读取失败保留旧快照并标记不可操作；增加5秒等待上限，禁止显示假零值。</li>
+<li>审计页面字段对齐后端target/detail；责任与分派的空白说明由后端拒绝。</li>
+<li>源码导出包含docs，拒绝覆盖已有输出，排除IDE缓存并检查本机配置值泄漏。</li>
+<li>同机新目录的Compose命令统一带campus-v2-handoff，卷不使用全局固定name；两份接手文档同步回原工程后才最终导出。</li>
+<li>最后一步明确回到原窗口、原C、原工程运行最终导出命令；输出目录存在时换新名字，保留旧交付。</li>
+</ul>
+<h2 id="chapter-14-step-6">V2.0.1 作者复查时尚未验证（历史）</h2>
+<p>未进行一次新的“学生从空白起点、全程由CodeBuddy逐提示词生成”的完整实做；此前V1的学生记录不能当作V2的证明。Windows、Docker Desktop、教室网络、全班180分钟教学节奏、真实校园/AIRIOT接入均未实测。</p>
+<p>阅读版完成结构、代码块、章节锚点和链接静态检查，未完成逐页浏览器视觉验收。参考应用的浏览器实测与教材阅读版是不同对象。</p>
+<h2 id="chapter-14-step-7">证据与维护</h2>
+<p><a download="backend-tests.json" href="data:application/json;base64,ewogICJqYXZhIjogIjE3LjAuMTIiLAogICJwYXNzZWQiOiAxMywKICAic3VpdGVzIjogWwogICAgewogICAgICAibmFtZSI6ICJjbi5jYW1wdXMuY291cnNlLkF1dGhTZXJ2aWNlVGVzdCIsCiAgICAgICJ0ZXN0cyI6ICIzIiwKICAgICAgImZhaWx1cmVzIjogIjAiLAogICAgICAiZXJyb3JzIjogIjAiLAogICAgICAic2tpcHBlZCI6ICIwIgogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiY24uY2FtcHVzLmNvdXJzZS5DYXNlUnVsZXNUZXN0IiwKICAgICAgInRlc3RzIjogIjkiLAogICAgICAiZmFpbHVyZXMiOiAiMCIsCiAgICAgICJlcnJvcnMiOiAiMCIsCiAgICAgICJza2lwcGVkIjogIjAiCiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJjbi5jYW1wdXMuY291cnNlLklucHV0VmFsaWRhdGlvblRlc3QiLAogICAgICAidGVzdHMiOiAiMSIsCiAgICAgICJmYWlsdXJlcyI6ICIwIiwKICAgICAgImVycm9ycyI6ICIwIiwKICAgICAgInNraXBwZWQiOiAiMCIKICAgIH0KICBdCn0=">后端测试明细</a>、<a download="mock-results.json" href="data:application/json;base64,ewogICJwYXNzZWQiOiAxOCwKICAic2NvcGUiOiAiYnJvd3Nlci1vbmx5IGRhdGEgc2VydmljZTsgTm9kZTIyIGluLW1lbW9yeSBsb2NhbFN0b3JhZ2U7IG5vIHJlYWwgc3R1ZGVudCBDb2RlQnVkZHkgZ2VuZXJhdGlvbiIKfQ==">前端模拟行为检查</a>、<a download="static-results.json" href="data:application/json;base64,ewogICJsZXNzb25zIjogMTIsCiAgInN0ZXBzIjogNjQsCiAgImFsbF9zdGVwX3N0cnVjdHVyZXNfY2hlY2tlZCI6IHRydWUsCiAgInN0YXJ0ZXJfaW5kZXhfYnl0ZXMiOiAwLAogICJzdGFydGVyX2hhc19idXNpbmVzc19iYWNrZW5kIjogZmFsc2UsCiAgImZpeHR1cmVzX2lkZW50aWNhbCI6IHRydWUsCiAgInJlYWRlcl91bmlxdWVfaWRzIjogOTgsCiAgInJlbGF0aXZlX2xpbmtzX2NoZWNrZWQiOiB0cnVlLAogICJsZXNzb25zX2RldGFpbCI6IFsKICAgIHsKICAgICAgImxlc3NvbiI6ICIwMS3ku47nqbrnmb3pobXpnaLlgZrlh7rmpoLop4gubWQiLAogICAgICAic3RlcHMiOiA1CiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjAyLeaKiuiuvuWkh+aUvui/m+WPsOi0pi5tZCIsCiAgICAgICJzdGVwcyI6IDUKICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMDMt57uZ6K6+5aSH5a6J5o6S5L2N572u5ZKM6LSf6LSj5Lq6Lm1kIiwKICAgICAgInN0ZXBzIjogNQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwNC3nnIvmh4Lor7vmlbDlho3lgZrog73mupDpobUubWQiLAogICAgICAic3RlcHMiOiA1CiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjA1LeaKiuWOhuWPsuWSjOWOn+Wni+aKpeitpuaOpeWIsOmhtemdoi5tZCIsCiAgICAgICJzdGVwcyI6IDUKICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMDYt6LWw5a6M5ryU57uD5LqL5Lu25bm25Liy6LW35pW05Liq5YmN56uvLm1kIiwKICAgICAgInN0ZXBzIjogNgogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwNy3nnIvnnYDpobXpnaLlgZrnrKzkuIDkuKrlkI7nq68ubWQiLAogICAgICAic3RlcHMiOiA1CiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjA4LeaKiuiuvuWkh+S/neWtmOWIsE15U1FMLm1kIiwKICAgICAgInN0ZXBzIjogNgogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIwOS3nlKhSZWRpc+iusOS9j+efreaXtueZu+W9lS5tZCIsCiAgICAgICJzdGVwcyI6IDYKICAgIH0sCiAgICB7CiAgICAgICJsZXNzb24iOiAiMTAt6YCQ6aG15o6l5Zue55yf5a6e5ZCO56uvLm1kIiwKICAgICAgInN0ZXBzIjogNQogICAgfSwKICAgIHsKICAgICAgImxlc3NvbiI6ICIxMS3orqnkuIDku7bmvJTnu4PmnInlp4vmnInnu4gubWQiLAogICAgICAic3RlcHMiOiA2CiAgICB9LAogICAgewogICAgICAibGVzc29uIjogIjEyLeaKiuS9nOWTgeS6pOWIsOaWsOebruW9lS5tZCIsCiAgICAgICJzdGVwcyI6IDUKICAgIH0KICBdLAogICJyZWFkZXJfdmlzdWFsX3JldmlldyI6IGZhbHNlCn0=">正文与资源静态检查</a>、<a download="api-results.json" href="data:application/json;base64,ewogICJwYXNzZWQiOiA2NiwKICAiY2hlY2tzIjogWwogICAgIkdFVCAvaGVhbHRoIC0+IDIwMCIsCiAgICAiR0VUIC9kZXZpY2VzIC0+IDQwMSIsCiAgICAiUE9TVCAvbG9naW4gLT4gNDAxIiwKICAgICJQT1NUIC9sb2dpbiAtPiAyMDAiLAogICAgIlBPU1QgL2xvZ2luIC0+IDIwMCIsCiAgICAiUE9TVCAvbG9naW4gLT4gMjAwIiwKICAgICJHRVQgL21lIC0+IDIwMCIsCiAgICAiR0VUIC9tZSAtPiAyMDAiLAogICAgIkdFVCAvbWUgLT4gMjAwIiwKICAgICJtZSByb2xlcyIsCiAgICAiR0VUIC9vdmVydmlldyAtPiAyMDAiLAogICAgImZpeHR1cmUgY291bnRzIiwKICAgICJudWxsIHN0YXlzIG51bGwiLAogICAgInplcm8gc3RheXMgemVybyIsCiAgICAiR0VUIC9kZXZpY2VzIC0+IDIwMCIsCiAgICAiR0VUIC9zcGFjZXMgLT4gMjAwIiwKICAgICJHRVQgL2F1ZGl0IC0+IDQwMyIsCiAgICAiUFVUIC9zcGFjZXMvczEgLT4gNDAzIiwKICAgICJQVVQgL3NwYWNlcy9zMSAtPiA0MDAiLAogICAgIlBVVCAvc3BhY2VzL3MxIC0+IDIwMCIsCiAgICAiUFVUIC9vd25lcnMvZDAxIC0+IDQwMCIsCiAgICAiR0VUIC9vd25lcnMgLT4gMjAwIiwKICAgICJQVVQgL293bmVycy9kMDEgLT4gMjAwIiwKICAgICJQVVQgL293bmVycy9kMDEgLT4gNDA5IiwKICAgICJQVVQgL293bmVycy9kMDIgLT4gNDAzIiwKICAgICJQT1NUIC9jYXNlcyAtPiAyMDAiLAogICAgImV4aXN0aW5nIG93bmVyIGF1dG8gYXNzaWduZWQiLAogICAgIlBPU1QgL2Nhc2VzIC0+IDQwMyIsCiAgICAiUE9TVCAvY2FzZXMgLT4gMjAwIiwKICAgICJ1bm93bmVkIGNhc2UgTkVXIiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiA0MDMiLAogICAgIlBPU1QgL2Nhc2VzLzAwMzhiOTI2LTYwNTgtNDc0OC05Y2U0LTM3NTZjNDhhNmQxMC9hY3Rpb25zIC0+IDQwMCIsCiAgICAiR0VUIC9jYXNlcyAtPiAyMDAiLAogICAgInJlamVjdGVkIGFzc2lnbiBkaWQgbm90IG11dGF0ZSIsCiAgICAiUE9TVCAvY2FzZXMvMDAzOGI5MjYtNjA1OC00NzQ4LTljZTQtMzc1NmM0OGE2ZDEwL2FjdGlvbnMgLT4gMjAwIiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiA0MDMiLAogICAgIlBPU1QgL2Nhc2VzLzAwMzhiOTI2LTYwNTgtNDc0OC05Y2U0LTM3NTZjNDhhNmQxMC9hY3Rpb25zIC0+IDIwMCIsCiAgICAiUE9TVCAvY2FzZXMvMDAzOGI5MjYtNjA1OC00NzQ4LTljZTQtMzc1NmM0OGE2ZDEwL2FjdGlvbnMgLT4gNDA5IiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiAyMDAiLAogICAgIlBPU1QgL2Nhc2VzLzAwMzhiOTI2LTYwNTgtNDc0OC05Y2U0LTM3NTZjNDhhNmQxMC9hY3Rpb25zIC0+IDQwMyIsCiAgICAiUE9TVCAvY2FzZXMvMDAzOGI5MjYtNjA1OC00NzQ4LTljZTQtMzc1NmM0OGE2ZDEwL2FjdGlvbnMgLT4gMjAwIiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiA0MDkiLAogICAgIlBPU1QgL2Nhc2VzLzAwMzhiOTI2LTYwNTgtNDc0OC05Y2U0LTM3NTZjNDhhNmQxMC9hY3Rpb25zIC0+IDIwMCIsCiAgICAiUE9TVCAvY2FzZXMvMDAzOGI5MjYtNjA1OC00NzQ4LTljZTQtMzc1NmM0OGE2ZDEwL2FjdGlvbnMgLT4gNDA5IiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiAyMDAiLAogICAgImNhc2UgY2xvc2VkIHdpdGggNyB0aW1lbGluZSBlbnRyaWVzIiwKICAgICJQT1NUIC9jYXNlcy8wMDM4YjkyNi02MDU4LTQ3NDgtOWNlNC0zNzU2YzQ4YTZkMTAvYWN0aW9ucyAtPiA0MDkiLAogICAgIkdFVCAvYXVkaXQgLT4gMjAwIiwKICAgICJhdWRpdCBkZXRhaWwgcG9wdWxhdGVkIiwKICAgICJHRVQgL2ludGVncmF0aW9uIC0+IDIwMCIsCiAgICAicmVhZC1vbmx5IGludGVncmF0aW9uIiwKICAgICJSZWRpcyByZWFsIFRUTCAxLi4xODAwIiwKICAgICJQT1NUIC9sb2dvdXQgLT4gMjAwIiwKICAgICJHRVQgL21lIC0+IDQwMSIsCiAgICAiR0VUIC9tZSAtPiA0MDEiLAogICAgIlBPU1QgL2xvZ2luIC0+IDIwMCIsCiAgICAiR0VUIC9jYXNlcyAtPiAyMDAiLAogICAgIk15U1FMIGNhc2VzIHN1cnZpdmUgUmVkaXMgcmVzdGFydCIsCiAgICAiR0VUIC9jYXNlcyAtPiAyMDAiLAogICAgIk15U1FMIGNhc2VzIHN1cnZpdmUgc2VydmVyIHJlc3RhcnQiLAogICAgIkdFVCAvc3BhY2VzIC0+IDIwMCIsCiAgICAic3BhY2UgcGVyc2lzdHMgYWZ0ZXIgcmVzdGFydCIsCiAgICAic3RhdGljIHNlcnZlciByZWZ1c2VzIC8uZW52IiwKICAgICJzdGF0aWMgc2VydmVyIHJlZnVzZXMgL2JhY2tlbmQvcG9tLnhtbCIsCiAgICAic3RhdGljIHNlcnZlciByZWZ1c2VzIC9tYXRlcmlhbHMvbW9jay1jYW1wdXMuanNvbiIsCiAgICAic3RhdGljIHNlcnZlciByZWZ1c2VzIC8lMmUlMmUvLmVudiIKICBdLAogICJteXNxbCI6ICI4LjQuMTAgbmF0aXZlIGlzb2xhdGVkIiwKICAicmVkaXMiOiAiNy4yLjYgbmF0aXZlIGlzb2xhdGVkIiwKICAiZG9ja2VyX3Rlc3RlZCI6IGZhbHNlLAogICJjYXNlSWQiOiAiMDAzOGI5MjYtNjA1OC00NzQ4LTljZTQtMzc1NmM0OGE2ZDEwIgp9">真实接口检查明细</a>、<a download="handoff-results.json" href="data:application/json;base64,ewogICJwYXNzZWQiOiAxMCwKICAiY2hlY2tzIjogWwogICAgIk5ldyBnZW5lcmF0ZWQgbG9jYWwgcGFzc3dvcmQgd29ya3MiLAogICAgIkZyZXNoIHNjaGVtYSBoYXMgbm8gcHJldmlvdXMgY2FzZXMgb3Igb3duZXJzIiwKICAgICIxNiBzZWVkIGRldmljZXMgaW1wb3J0ZWQgaW4gZnJlc2ggc2NoZW1hIiwKICAgICJOZXcgZGlyZWN0b3J5IHNhdmVzIG93bmVyIiwKICAgICJOZXcgZGlyZWN0b3J5IGF1dG8gYXNzaWducyBjYXNlIiwKICAgICJOZXcgZGlyZWN0b3J5IGNvbXBsZXRlIGV2ZW50IGxpZmVjeWNsZSIsCiAgICAiTmV3IGRpcmVjdG9yeSB3cml0ZXMgYXVkaXQiLAogICAgIk5ldyBkaXJlY3RvcnkgbG9nb3V0IiwKICAgICIxMyB0ZXN0cyBwYXNzZWQgYWZ0ZXIgY2xlYW4tc291cmNlIGJ1aWxkIiwKICAgICIzOSBleHBvcnRlZCBzb3VyY2UgZmlsZXMgaW5kZXBlbmRlbnRseSBidWlsdCIKICBdLAogICJtZXRob2QiOiAiY2xlYW4gc291cmNlLCBuZXcgbmF0aXZlIE15U1FMIHNjaGVtYSBhbmQgc2VwYXJhdGUgUmVkaXM7IG5vdCBhIERvY2tlciBydW4iCn0=">新目录检查明细</a>、<a download="browser-results.json" href="data:application/json;base64,ewogICJkYXRlIjogIjIwMjYtMTAtMjAiLAogICJlbnZpcm9ubWVudCI6ICJtYWNPUyBDaHJvbWU7IG9yaWdpbmFsIHJlZmVyZW5jZSB0aGVuIGNsZWFuLWRpcmVjdG9yeSBoYW5kb2ZmIiwKICAibWV0aG9kIjogImFjdHVhbCBicm93c2VyIFVJIGludGVyYWN0aW9ucyB2aWEgY3VhX3JlcGwiLAogICJncm91cHMiOiBbCiAgICB7CiAgICAgICJjaGVjayI6ICLmpoLop4gxNuWPsOiuvuWkh+OAgTTkuKrnqbrpl7TjgIEyOOS4queCueS9jeS4jjHlj7DpgJrkv6HmnKrnn6UiLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIuajgOafpeWQjuerr+i/nuaOpeaYvuekuuaIkOWKnyIsCiAgICAgICJwYXNzZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiY2hlY2siOiAi6IO95rqQ6aG15L+d55WZ5ZCI5rOVMCBrVyIsCiAgICAgICJwYXNzZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiY2hlY2siOiAi5Y6G5Y+y6aG15Yy65YiG57y65aSx5ZKMMO+8jOiuvuWkhy/og73mupDlhaXlj6PmkLrluKborr7lpIfkuI7mjIfmoIciLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIuepuumXtOS/ruaUueS/neWtmOW5tuWbnuivuyIsCiAgICAgICJwYXNzZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiY2hlY2siOiAi56m66Ze06Lez6L2s6K6+5aSH5bm25bim56m66Ze0562b6YCJIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICLliLfmlrDkv53nlZlhcGnmqKHlvI/kvYbopoHmsYLph43mlrDnmbvlvZUiLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIuWBnOatouWQjuerr+WQjuaYvuekuuivu+WPlumUmeivr++8jOaXp+W/q+eFp+WPr+ingeS9huS4jeWPr+aTjeS9nCIsCiAgICAgICJwYXNzZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiY2hlY2siOiAi5paw55uu5b2Vdmlld2Vy5LuF5Y+v6K+75YWz6Zet5ZCO55qE5LqL5Lu2IiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICLmnIDnu4jooaXpqozvvJrotKjph4/mraPluLgyNS/ovoPml6cyL+e8uuWksTEv5peg5pWIMO+8jOiDvea6kOWIhuexu+i3s+i9rDTlj7AiLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIuacgOe7iOihpemqjO+8muiuvuWkh+a4heepuuetm+mAieaBouWkjTE25Y+w77yM6K+m5oOF5Y+v5pS26LW3IiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICLmnIDnu4jooaXpqozvvJpkMDUvZDA25Y6G5Y+y5a+55q+U5ZCr57y65aSx5LiOMO+8jOWIh+aNonZvbHRhZ2XmuIXnqbrmr5TovoMiLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgImNoZWNrIjogIuacgOe7iOihpemqjO+8muaKpeitpuaXoOWMuemFjTDmnaHjgIHmuIXnqbrmgaLlpI0x5p2h77yM5Y2V6aG15YmN5ZCO57+76aG156aB55SoIiwKICAgICAgInBhc3NlZCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJjaGVjayI6ICLmnIDnu4jooaXpqozvvJrmiqXorabot7NkMDHor6bmg4XvvIzor6bmg4Xot7Nvd25lci1kMDHmmL7npLrmlrDnm67lvZXkv53lrZjnmoTotKPku7siLAogICAgICAicGFzc2VkIjogdHJ1ZQogICAgfQogIF0sCiAgInBhc3NlZF9ncm91cHMiOiAxNCwKICAibGltaXRzIjogWwogICAgIm5vdCBhIG5ldyBDb2RlQnVkZHkgcHJvbXB0LWJ5LXByb21wdCBzdHVkZW50IHRyaWFsIiwKICAgICJhbGFybSBtdWx0aXBsZS1wYWdlIG5hdmlnYXRpb24gbm90IGV4ZXJjaXNlZCBiZWNhdXNlIHB1YmxpYyBzYW1wbGUgaGFzIG9uZSBhbGFybSIsCiAgICAicmVhZGVyIEhUTUwgbm90IHZpc3VhbGx5IGJyb3dzZXItcmV2aWV3ZWQiLAogICAgIldpbmRvd3MgYW5kIERvY2tlciBEZXNrdG9wIG5vdCBydW4iCiAgXSwKICAic2NyZWVuc2hvdCI6ICLlj4LogIPlt6XnqIvmtY/op4jlmajlrp7mtYsucG5nIgp9Cg==">浏览器检查记录</a>作为脱敏历史记录保留；它们保留原验收时间，不代表公开副本已经在新环境验收。参考工程浏览器原始截图仅在本地保留，未纳入本次公开仓库，不以替代图片补充证据。学生实际记录使用工程docs模板，填入自己的结果。</p>
+<p>阅读版从handbook-v2 Markdown生成。作者重建命令为 <code>node tools/v2/build-reader.mjs</code>，依赖marked17.0.5；先在tools/v2安装依赖。旧tools构建脚本与旧Word/PDF是V1来源，不用于覆盖V2入口。</p>
+<div class="bottom-nav"><a href="#chapter-13">← 上一部分</a></div></article></main></div><div id="notice" class="notice" role="status" aria-live="polite"></div><script>
+const articles=[...document.querySelectorAll('[data-chapter]')];function show(){const id=location.hash.slice(1)||'chapter-0';const target=document.getElementById(id)||articles[0];const current=target.matches('[data-chapter]')?target:target.closest('[data-chapter]');if(!current)return;for(const a of articles)a.hidden=a!==current;for(const a of document.querySelectorAll('nav a')){if(a.hash==='#'+current.id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')}if(target===current)window.scrollTo(0,0);else target.scrollIntoView();}window.addEventListener('hashchange',show);show();for(const pre of document.querySelectorAll('pre')){const button=document.createElement('button');button.className='copy';button.textContent='复制本段内容';pre.prepend(button);button.addEventListener('click',async()=>{const code=pre.querySelector('code'),notice=document.getElementById('notice');try{await navigator.clipboard.writeText(code.textContent);notice.textContent='已复制。请按正文说明粘贴到对应位置。'}catch{const range=document.createRange();range.selectNodeContents(code);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);notice.textContent='已选中本段，请按 Ctrl+C（Mac：⌘C）复制。'}setTimeout(()=>notice.textContent='',4000)})}
+</script></body></html>

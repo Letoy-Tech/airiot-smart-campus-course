@@ -1,0 +1,237 @@
+{
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "11-design-example-files",
+      "count": 11,
+      "mode": "Saved complete example documents as rehearsal fixtures, not claimed AI responses"
+    },
+    {
+      "name": "04-doctor",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-install",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-init",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-git-init",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-git-name",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-git-email",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-git-add",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-git-commit",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-A",
+      "guide": "04-安装工具与第一次改代码.md",
+      "codeSha256": "e65b96dd58499b507c68cf60f2c9e50c5e9e87d06b1c2e7b0fe63794cf89e891",
+      "file": "frontend/src/api/campus.ts"
+    },
+    {
+      "name": "apply-guide-B",
+      "guide": "04-安装工具与第一次改代码.md",
+      "codeSha256": "66426ce0efb1a71c34335f02478d3ee3fa84860a6d0566b9acdd1bd53edd75fb",
+      "file": "frontend/src/views/FirstDeviceRead.vue"
+    },
+    {
+      "name": "04-tests",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-types",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "04-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "05-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C05",
+      "guide": "05-后端空间与设备接口.md",
+      "codeSha256": "54fc4ba6d83a30fcc93b518e2e2876cc59ef40494f3f35c22e29e357d9758233",
+      "file": "backend/src/main/java/edu/campus/course/LocationService.java"
+    },
+    {
+      "name": "05-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "05-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "06-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C06",
+      "guide": "06-设备台账与自主UI.md",
+      "codeSha256": "13e0bc34ccd681588946a6ef6d9f57388f2fcc32a588d030afc7fb482a3abee8",
+      "file": "frontend/src/domain/course.ts"
+    },
+    {
+      "name": "06-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "07-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C07",
+      "guide": "07-监测历史与数据质量.md",
+      "codeSha256": "7aa1f3f50ef609874104938a2bbe701c334bab98235eb04e5ebe7d6ac857fd96",
+      "file": "backend/src/main/java/edu/campus/course/QualityPolicy.java"
+    },
+    {
+      "name": "07-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "07-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "08-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C08",
+      "guide": "08-登录权限与失败排查.md",
+      "codeSha256": "6136a7baac26d8f2356b15e9df02bad0b2a42b0681daeeb275809832aae19db3",
+      "file": "frontend/src/domain/course.ts"
+    },
+    {
+      "name": "08-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "09-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C09",
+      "guide": "09-演练事件与关闭规则.md",
+      "codeSha256": "710f75e6ae53264a48521a0f1e621ce27ca4cce1527052796b5abd8b483cd5c5",
+      "file": "backend/src/main/java/edu/campus/course/OperationsService.java"
+    },
+    {
+      "name": "09-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "09-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "10-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "apply-guide-C10",
+      "guide": "10-设备责任与时间线.md",
+      "codeSha256": "114007ccf2fe0c7e133a2709f917120044420935a3b7f4bbc67aa2469afe6441",
+      "file": "backend/src/main/java/edu/campus/course/OperationsService.java"
+    },
+    {
+      "name": "10-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "10-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "12-prepare",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "12-before-test",
+      "exit": 1,
+      "expected": "nonzero"
+    },
+    {
+      "name": "apply-guide-C12",
+      "guide": "12-构建交付与接力.md",
+      "codeSha256": "f976896676cb91ef828e203e5347e2585b2114fcf0221bf15996835567442ddd",
+      "file": "frontend/src/domain/course.ts"
+    },
+    {
+      "name": "12-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "12-final-check",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "12-final-build",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "11-design-example-files",
+      "count": 11,
+      "mode": "Saved complete example documents as rehearsal fixtures, not claimed AI responses"
+    }
+  ],
+  "source": "Fresh V1.1.0 ZIP student-project; solutions extracted from tutorial code blocks, not teacher reference source.",
+  "aiMode": "Tutorial examples, no live model session",
+  "installers": "Existing author Node/JDK used; not fresh Windows/macOS installer execution"
+}

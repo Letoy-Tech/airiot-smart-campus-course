@@ -1,0 +1,12 @@
+{"at": "2026-10-21T02:42:47.222852", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:42:47.364681", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:43:48.845912", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:43:48.990593", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:44:26.224291", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:44:26.365766", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:53:44.018603", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:53:44.168588", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:54:31.015328", "action": "private-password-fill", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:54:31.156480", "action": "login-submit", "username": "admin", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:55:18.605205", "action": "private-password-fill", "username": "viewer", "exit": 0, "valuesLogged": false}
+{"at": "2026-10-21T02:55:18.745504", "action": "login-submit", "username": "viewer", "exit": 0, "valuesLogged": false}

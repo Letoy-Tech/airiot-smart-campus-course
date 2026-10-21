@@ -1,0 +1,60 @@
+Tree
+Chart
+JSON Editor
+{
+"code": 0,
+"message": "ok",
+"data": {
+"items": [
+{
+"id": "teaching_env_01",
+"tableId": "teaching_environment",
+"name": "环境传感器01（模拟）",
+"category": "environment",
+"spaceId": "teaching_space_01",
+"spaceName": "教学空间01（模拟）",
+"online": true,
+"communicationTime": 1792303199000,
+"simulated": true,
+"switchOn": null,
+"tags": [
+{
+"id": "temperature",
+"name": "温度",
+"unit": "°C"
+},
+{
+"id": "humidity",
+"name": "湿度",
+"unit": "%"
+}
+]
+},
+{
+"id": "teaching_energy_01",
+"tableId": "teaching_energy",
+"name": "电能监测器01（模拟）",
+"category": "energy",
+"spaceId": "teaching_space_01",
+"spaceName": "教学空间01（模拟）",
+"online": null,
+"communicationTime": null,
+"simulated": true,
+"switchOn": null,
+"tags": [
+{
+"id": "voltage",
+"name": "电压",
+"unit": "V"
+},
+{
+"id": "power",
+"name": "功率",
+"unit": "kW"
+}
+]
+}
+],
+"observedAt": 1792303200000
+}
+}

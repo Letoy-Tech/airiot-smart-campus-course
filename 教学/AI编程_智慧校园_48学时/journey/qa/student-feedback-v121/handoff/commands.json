@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-19T22:30:47.174471+00:00",
+  "scope": "作者同操作人新目录；只复制154个导出文件，未复制私密/依赖/产物",
+  "actualWorkDirectory": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app",
+  "commands": [
+    {
+      "label": "npm-ci",
+      "command": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "frontend",
+      "exitCode": 0
+    },
+    {
+      "label": "doctor",
+      "command": [
+        "node",
+        "tools/course.mjs",
+        "doctor"
+      ],
+      "cwd": ".",
+      "exitCode": 0
+    },
+    {
+      "label": "init",
+      "command": [
+        "node",
+        "tools/course.mjs",
+        "init"
+      ],
+      "cwd": ".",
+      "exitCode": 0
+    },
+    {
+      "label": "check",
+      "command": [
+        "node",
+        "tools/course.mjs",
+        "check"
+      ],
+      "cwd": ".",
+      "exitCode": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "node",
+        "tools/course.mjs",
+        "build"
+      ],
+      "cwd": ".",
+      "exitCode": 0
+    }
+  ]
+}

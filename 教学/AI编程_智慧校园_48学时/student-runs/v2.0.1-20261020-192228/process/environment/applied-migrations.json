@@ -1,0 +1,34 @@
+[
+  {
+    "version": "1",
+    "path": "backend/src/main/resources/db/migration/V1__init_spaces_devices.sql",
+    "sha256": "81d93f33426fe1e336a7550aff0370afc26c0e2fd5d290c93e921cd9f96d721d",
+    "actualAppliedEvidence": "commands/08-03-database-start-ready.ax.txt",
+    "recordedAt": "2026-10-21T00:11:36.657410+08:00",
+    "frozenCopy": "immutable-migrations/V1__init_spaces_devices.sql"
+  },
+  {
+    "version": "2",
+    "path": "backend/src/main/resources/db/migration/V2__create_users.sql",
+    "sha256": "6e919308584dade6a99c4793d100793e1d41ae807f7cbb42e7088dc99daa634b",
+    "actualAppliedEvidence": "commands/09-02-B-ready.ax.txt",
+    "recordedAt": "2026-10-21T00:53:21.090150",
+    "frozenCopy": "immutable-migrations/V2__create_users.sql"
+  },
+  {
+    "version": "3",
+    "path": "backend/src/main/resources/db/migration/V3__create_points_history_alarms_owners.sql",
+    "sha256": "e0b38c1a8e678328eff8f3959b574623678ab53b0d1febbbbfe644963a88daeb",
+    "actualAppliedEvidence": "commands/10-01-B-ready.ax.txt",
+    "recordedAt": "2026-10-21T01:27:36.338727",
+    "frozenCopy": "immutable-migrations/V3__create_points_history_alarms_owners.sql"
+  },
+  {
+    "version": "4",
+    "path": "backend/src/main/resources/db/migration/V4__create_cases_timeline_audit.sql",
+    "sha256": "dc20b0e2c0faf54a158a0670587fcfe4d02bc0b2a457310a527a9c0a013dd412",
+    "actualAppliedEvidence": "commands/11-01-B-ready.ax.txt",
+    "recordedAt": "2026-10-21T03:08:29.420653+08:00",
+    "frozenCopy": "immutable-migrations/V4__create_cases_timeline_audit.sql"
+  }
+]

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.letoy.main.role.mapper.UserRoleMapper">
+
+    <delete id="deleteByUid">
+        DELETE FROM sys_user_role
+        WHERE uid = #{uid}
+    </delete>
+
+    <delete id="deleteByRoleCode">
+        DELETE FROM sys_user_role
+        WHERE role_code = #{roleCode}
+    </delete>
+
+    <select id="countByRoleCode" resultType="int">
+        SELECT COUNT(1)
+        FROM sys_user_role
+        WHERE role_code = #{roleCode}
+    </select>
+
+    <insert id="batchInsert">
+        INSERT INTO sys_user_role (uid, role_code, create_time)
+        VALUES
+        <foreach collection="roleCodes" item="roleCode" separator=",">
+            (#{uid}, #{roleCode}, NOW())
+        </foreach>
+    </insert>
+
+    <select id="selectRoleCodesByUid" resultType="string">
+        SELECT role_code
+        FROM sys_user_role
+        WHERE uid = #{uid}
+        ORDER BY role_code ASC
+    </select>
+
+    <select id="selectRolesByUid" resultMap="com.letoy.main.role.mapper.RoleInfoMapper.RoleInfoMap">
+        SELECT r.id, r.role_code, r.role_name, r.description, r.sort_order, r.status, r.create_time, r.update_time
+        FROM sys_role r
+        INNER JOIN sys_user_role ur ON ur.role_code = r.role_code
+        WHERE ur.uid = #{uid}
+        ORDER BY r.sort_order ASC, r.id ASC
+    </select>
+</mapper>

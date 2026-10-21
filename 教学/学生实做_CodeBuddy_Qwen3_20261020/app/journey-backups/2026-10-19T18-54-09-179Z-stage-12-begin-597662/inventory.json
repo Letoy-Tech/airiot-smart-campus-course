@@ -1,0 +1,15 @@
+[
+  {
+    "path": "frontend/src/journey/features.ts",
+    "existed": true,
+    "sha256": "735c07e11ce4c15a652ca140ab8207948a1fad8cddf6d5e76c9a2e9c5dc590e8"
+  },
+  {
+    "path": "tools/hand-in.mjs",
+    "existed": false
+  },
+  {
+    "path": "docs/交付核对.md",
+    "existed": false
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-10-19T22:35:05.062Z",
+  "version": "1.2.1",
+  "sha256": "bb5d17bb02c0a1298fbce409381d69ca42f597604aaf124c71860d529733afd7",
+  "sources": [
+    {
+      "path": "course-index.json",
+      "sha256": "245ce446e4d8999b31e3295b739078ccbf50b4dc306b5062d1f77c55600cf148"
+    },
+    {
+      "path": "journey/lessons.json",
+      "sha256": "700b168deb9676c697de27ba6175ae9fc33595364f53478bdc41d1f6405ee4eb"
+    },
+    {
+      "path": "tools/build-journey.mjs",
+      "sha256": "cd4c15b8e8c977eeefd38a949020720ffaa5f03070e0b16855b378133ccda399"
+    },
+    {
+      "path": "journey/00-怎么开始.md",
+      "sha256": "79bea66610ad13d301a82cc5170d701e93f5586c1567ab63236598ba563e3736"
+    },
+    {
+      "path": "journey/01-先做出两台设备.md",
+      "sha256": "06ad87f99350633579ead2b6f260a1e2992ee99837c72665e15245e9233edff1"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-01/manifest.json",
+      "sha256": "5b07782eb4abe6a903789060056ceea3191109aaddba42e4742c0df9ebcb50e9"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455"
+    },
+    {
+      "path": "journey/02-让页面从后端拿设备.md",
+      "sha256": "ecaa0d72c1e09ae7e938686a8691d8fff43e051c9b85bd6d16c24b41085806ed"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-02/manifest.json",
+      "sha256": "9da59509c67997a1e84809f86ceeddbba3ac807cf4203c8abdc521df99c0167e"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda"
+    },
+    {
+      "path": "journey/03-从16台设备中找到一台.md",
+      "sha256": "0b29618dbd516af174cb9578dba5e8c5b247e7acf4afe2a003b2f8500a916c56"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-03/manifest.json",
+      "sha256": "9bdd784f6b1efc6f12c795a63bff1a9fef7196e05c7ed9f1ab73ae63baf1e5dd"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226"
+    },
+    {
+      "path": "journey/qa/round10/01-设备卡片.png",
+      "sha256": "83c268e58c94f56dfa63c7cc0cec668fb26cf4d25f8f256980350aff90f265b6"
+    },
+    {
+      "path": "journey/04-把设备放到正确的楼里.md",
+      "sha256": "0c8bbfc145acde5f02469417c36c4e652b7304bd5920e3f71227a85a1bcd9559"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-04/manifest.json",
+      "sha256": "4a5c21aeeb29a8560183c93b7bf91937e3bd5b7b6774377a8efb32d3839bc8a9"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6"
+    },
+    {
+      "path": "journey/05-一眼找到异常的空间.md",
+      "sha256": "4fe963a2cf73081844dc7557c8d32e76bb1b740c8734e791534706064f241d10"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-05/manifest.json",
+      "sha256": "509c4cfd8a7a3c003c3d5fbaa117c161ccb803a59461cd162f63333a97f02cfa"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f"
+    },
+    {
+      "path": "journey/qa/round10/04-能源部分失败保留快照.png",
+      "sha256": "4ee1ee94e9c973f77394399d89e838974e29870461b857970f79a5250f1e0b40"
+    },
+    {
+      "path": "journey/06-看变化，再看原始报警.md",
+      "sha256": "8a5a9fcbde4fdb0f22ebed8636679390256f1910f01860075c862e662b6d8411"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-06/manifest.json",
+      "sha256": "07b803a542d1c738f9a436336f4a2d973cacc7e915a910013310833402a9fad1"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550"
+    },
+    {
+      "path": "journey/qa/round10/06-原始报警失败保留快照.png",
+      "sha256": "312921b3c5865e8c5fa267b55b011f800586481aceab3819ba52899ec4fcaabb"
+    },
+    {
+      "path": "journey/07-换一个人登录，权限也要换.md",
+      "sha256": "87fe4be84466a84518a4143f0cb4aeff539283046ea6f7d01904f60b74ae3b72"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-07/manifest.json",
+      "sha256": "f80e5a55330891fdec7f2860474539d83203b0c712bb216f5ad574fbfc4cde0f"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e"
+    },
+    {
+      "path": "journey/08-让一件事有人接手.md",
+      "sha256": "319a9ffa73cd0ba58103bc64e25e27d655e1feb07b7f3e57d1223b734e86d527"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-08/manifest.json",
+      "sha256": "f714374ab5783fa9fdd1c4d7d93ab0d13d66ea8a715366d4e36a909f666b6b3b"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/CasesView.vue",
+      "sha256": "20f7663b20b5bd5bdb79b90c31c53b9319b49d61437288a2b1380f27c4786eab"
+    },
+    {
+      "path": "journey/qa/round10/08-事件处理人和状态筛选.png",
+      "sha256": "271b265041ded6ad5bcda6a889c172fd4f9b22f5f19b5966b94b51a8a8b5a236"
+    },
+    {
+      "path": "journey/09-先核实恢复，再关闭.md",
+      "sha256": "85092c27b3dcb43dcddd7f046e70f627b2ea145a874725bb95a62a59f9079f9a"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-09/manifest.json",
+      "sha256": "a0b095d4236339927b1f72897b6730192f624a438f4bfbbcda40262c461758fe"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/CloseChecklist.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f"
+    },
+    {
+      "path": "journey/10-换负责人，不改旧事件.md",
+      "sha256": "86b22266af4b5f67ff8f45f863c1c15878260e1cc7a4e7afd5cc5ebb0e6e52bb"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-10/manifest.json",
+      "sha256": "887098767c624ebbdd21849199acf40f0b426d5587037dd98d98baef5e188b5b"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073"
+    },
+    {
+      "path": "resources/project-journey/reference/frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0"
+    },
+    {
+      "path": "journey/qa/round10/07-命令审计历史样本.png",
+      "sha256": "b8867e8cd67999ea0b402795a75627b6b083cdb99e09253c71674ad0f9c10ae8"
+    },
+    {
+      "path": "journey/11-故意弄错一次，再修好.md",
+      "sha256": "f6a4eb7fb7eedba5541a94b4eff198eacad33a22b77601fbfa89badc71f10564"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-11/manifest.json",
+      "sha256": "4d39f41f4c3c149fef949b0ae4b28c80acfc7fb425c10f145a9130fb4408559a"
+    },
+    {
+      "path": "journey/12-交给另一个人运行.md",
+      "sha256": "f719b9c7eef7501a049012b0abf7d1ae139f793d2fe5623c8d472d773cf50161"
+    },
+    {
+      "path": "resources/project-journey/app/lesson-bundles/stage-12/manifest.json",
+      "sha256": "6450dfd005bb0d62f16a57e377ad8b19413d40e4511750d193f1c50fae82c305"
+    },
+    {
+      "path": "journey/功能验收.md",
+      "sha256": "4ae4eed898a21bddda503b18c86b662b6d02cba566792824e5a6026c93e9aa67"
+    },
+    {
+      "path": "journey/教师安排.md",
+      "sha256": "73b1d848690a53fad9f0cf7c00059df770c7620eee74264531b59cc824caaff9"
+    },
+    {
+      "path": "tools/journey.css",
+      "sha256": "441132d719363c28eb271bf2a029a1af289b0ae38683fc52af9e85c4b7247afa"
+    },
+    {
+      "path": "tools/journey.js",
+      "sha256": "b0ad4d7b14ea37f94a347ca559f0ca2869f7a49846e69bd128f863affadec099"
+    }
+  ],
+  "stations": 12,
+  "copyBlocks": 127,
+  "offlineBrowserVerified": false,
+  "codeBuddySessionExecuted": false
+}

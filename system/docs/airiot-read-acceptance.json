@@ -1,0 +1,1243 @@
+{
+  "projectId": "000000000000000000000001",
+  "method": "actual compiled AiriotClient Java source runner; fixed negative HTTP reads",
+  "startedAt": 1791106850968,
+  "clientClassSha256": "9ed2b477e5caed9e9d9cfe0a6fe5debbff5e9a784c22a1e5458d3ee086ac0793",
+  "writesPerformed": false,
+  "crossProjectRequests": false,
+  "dedicated": {
+    "authentication": {
+      "isSuperFalse": true,
+      "connected": true,
+      "configured": true
+    },
+    "tables": {
+      "campus_space": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "demo_room_101",
+            "demo_room_102",
+            "demo_room_103",
+            "demo_room_104"
+          ],
+          "simulatedTrue": 0,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "demo_room_101",
+            "name": "演示教室一零一",
+            "location_code": null,
+            "online": null,
+            "is_simulated": null,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_environment": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "env_demo_01",
+            "env_demo_02",
+            "env_demo_03",
+            "env_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "env_demo_01",
+            "name": "模拟教室环境设备一号",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_energy": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "energy_demo_01",
+            "energy_demo_02",
+            "energy_demo_03",
+            "energy_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "energy_demo_01",
+            "name": "模拟教室用电设备",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_facility": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "facility_demo_01",
+            "facility_demo_02",
+            "facility_demo_03",
+            "facility_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "facility_demo_01",
+            "name": "模拟教室空调运行设备",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": false
+          }
+        }
+      },
+      "campus_lighting": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "light_demo_01",
+            "light_demo_02",
+            "light_demo_03",
+            "light_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "light_demo_01",
+            "name": "模拟教室照明一号",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": false
+          }
+        }
+      }
+    },
+    "latestRound1": {
+      "status": "PASS",
+      "data": {
+        "count": 28,
+        "sampleTimes": {
+          "campus_energy/energy_demo_01/power_kw": 1791106852001,
+          "campus_energy/energy_demo_01/voltage_v": 1791106852001,
+          "campus_energy/energy_demo_02/power_kw": 1791106852001,
+          "campus_energy/energy_demo_02/voltage_v": 1791106852001,
+          "campus_energy/energy_demo_03/power_kw": 1791106852001,
+          "campus_energy/energy_demo_03/voltage_v": 1791106852001,
+          "campus_energy/energy_demo_04/power_kw": 1791106852001,
+          "campus_energy/energy_demo_04/voltage_v": 1791106852001,
+          "campus_environment/env_demo_01/humidity_pct": 1791106852001,
+          "campus_environment/env_demo_01/temperature_c": 1791106852001,
+          "campus_environment/env_demo_02/humidity_pct": 1791106852001,
+          "campus_environment/env_demo_02/temperature_c": 1791106852001,
+          "campus_environment/env_demo_03/humidity_pct": 1791106852001,
+          "campus_environment/env_demo_03/temperature_c": 1791106852001,
+          "campus_environment/env_demo_04/humidity_pct": 1791106852001,
+          "campus_environment/env_demo_04/temperature_c": 1791106852001,
+          "campus_facility/facility_demo_01/equipment_temperature_c": 1791106852001,
+          "campus_facility/facility_demo_01/run_state": 1791106852001,
+          "campus_facility/facility_demo_02/equipment_temperature_c": 1791106852001,
+          "campus_facility/facility_demo_02/run_state": 1791106852001,
+          "campus_facility/facility_demo_03/equipment_temperature_c": 1791106852001,
+          "campus_facility/facility_demo_03/run_state": 1791106852001,
+          "campus_facility/facility_demo_04/equipment_temperature_c": 1791106852001,
+          "campus_facility/facility_demo_04/run_state": 1791106852001,
+          "campus_lighting/light_demo_01/illuminance_lux": 1791106852001,
+          "campus_lighting/light_demo_02/illuminance_lux": 1791106852001,
+          "campus_lighting/light_demo_03/illuminance_lux": 1791106852001,
+          "campus_lighting/light_demo_04/illuminance_lux": 1791106852001
+        },
+        "numericValues": 28,
+        "validTimes": 28,
+        "uniqueTargets": 28
+      }
+    },
+    "historyRange": {
+      "from": 1791103252319,
+      "to": 1791106852319
+    },
+    "histories": {
+      "campus_environment/env_demo_01/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "temperature_c"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_01/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "humidity_pct"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_02/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "temperature_c"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_02/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "humidity_pct"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_03/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "temperature_c"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_03/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "humidity_pct"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_04/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "temperature_c"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_environment/env_demo_04/humidity_pct": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "humidity_pct"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_energy/energy_demo_01/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "voltage_v"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_01/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "power_kw"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_02/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "voltage_v"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_02/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "power_kw"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_03/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "voltage_v"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_03/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "power_kw"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_04/voltage_v": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "voltage_v"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_energy/energy_demo_04/power_kw": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "power_kw"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_facility/facility_demo_01/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "run_state"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852001
+        }
+      },
+      "campus_facility/facility_demo_01/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_facility/facility_demo_02/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "run_state"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852001
+        }
+      },
+      "campus_facility/facility_demo_02/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_facility/facility_demo_03/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "run_state"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852001
+        }
+      },
+      "campus_facility/facility_demo_03/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_facility/facility_demo_04/run_state": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "run_state"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852001
+        }
+      },
+      "campus_facility/facility_demo_04/equipment_temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "equipment_temperature_c"
+              ],
+              "rows": 360
+            }
+          ],
+          "samples": 360,
+          "numericSamples": 360,
+          "validTimes": 360,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106847001
+        }
+      },
+      "campus_lighting/light_demo_01/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_lighting/light_demo_02/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_lighting/light_demo_03/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      },
+      "campus_lighting/light_demo_04/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ],
+              "rows": 720
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103257001,
+          "lastTime": 1791106852000
+        }
+      }
+    },
+    "alarms": {
+      "status": "PASS",
+      "data": {
+        "rootType": "OBJECT",
+        "itemsType": "ARRAY",
+        "count": 0,
+        "total": 0,
+        "firstItemKeys": []
+      }
+    },
+    "latestRoundSeparationMs": 16010,
+    "latestRound2": {
+      "status": "PASS",
+      "data": {
+        "count": 28,
+        "sampleTimes": {
+          "campus_energy/energy_demo_01/power_kw": 1791106867002,
+          "campus_energy/energy_demo_01/voltage_v": 1791106867002,
+          "campus_energy/energy_demo_02/power_kw": 1791106867002,
+          "campus_energy/energy_demo_02/voltage_v": 1791106867002,
+          "campus_energy/energy_demo_03/power_kw": 1791106867002,
+          "campus_energy/energy_demo_03/voltage_v": 1791106867002,
+          "campus_energy/energy_demo_04/power_kw": 1791106867002,
+          "campus_energy/energy_demo_04/voltage_v": 1791106867002,
+          "campus_environment/env_demo_01/humidity_pct": 1791106867002,
+          "campus_environment/env_demo_01/temperature_c": 1791106867002,
+          "campus_environment/env_demo_02/humidity_pct": 1791106867002,
+          "campus_environment/env_demo_02/temperature_c": 1791106867002,
+          "campus_environment/env_demo_03/humidity_pct": 1791106867002,
+          "campus_environment/env_demo_03/temperature_c": 1791106867002,
+          "campus_environment/env_demo_04/humidity_pct": 1791106867002,
+          "campus_environment/env_demo_04/temperature_c": 1791106867002,
+          "campus_facility/facility_demo_01/equipment_temperature_c": 1791106867002,
+          "campus_facility/facility_demo_01/run_state": 1791106867002,
+          "campus_facility/facility_demo_02/equipment_temperature_c": 1791106867002,
+          "campus_facility/facility_demo_02/run_state": 1791106867002,
+          "campus_facility/facility_demo_03/equipment_temperature_c": 1791106867002,
+          "campus_facility/facility_demo_03/run_state": 1791106867002,
+          "campus_facility/facility_demo_04/equipment_temperature_c": 1791106867002,
+          "campus_facility/facility_demo_04/run_state": 1791106867002,
+          "campus_lighting/light_demo_01/illuminance_lux": 1791106867002,
+          "campus_lighting/light_demo_02/illuminance_lux": 1791106867002,
+          "campus_lighting/light_demo_03/illuminance_lux": 1791106867002,
+          "campus_lighting/light_demo_04/illuminance_lux": 1791106867002
+        },
+        "numericValues": 28,
+        "validTimes": 28,
+        "uniqueTargets": 28,
+        "advancedTargets": 28,
+        "notAdvancedTargets": 0
+      }
+    },
+    "writesPerformed": false,
+    "negativeReads": {
+      "schemaRead": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "expected": "read allowed",
+        "denied": false
+      },
+      "roleRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "expected": "read denied",
+        "denied": true
+      }
+    }
+  },
+  "legacyReadOnly": {
+    "authentication": {
+      "isSuperFalse": true,
+      "connected": true,
+      "configured": true
+    },
+    "tables": {
+      "campus_space": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "demo_room_101",
+            "demo_room_102",
+            "demo_room_103",
+            "demo_room_104"
+          ],
+          "simulatedTrue": 0,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "demo_room_101",
+            "name": "演示教室一零一",
+            "location_code": null,
+            "online": null,
+            "is_simulated": null,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_environment": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "env_demo_01",
+            "env_demo_02",
+            "env_demo_03",
+            "env_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "env_demo_01",
+            "name": "模拟教室环境设备一号",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_energy": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "energy_demo_01",
+            "energy_demo_02",
+            "energy_demo_03",
+            "energy_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "energy_demo_01",
+            "name": "模拟教室用电设备",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": null
+          }
+        }
+      },
+      "campus_facility": {
+        "status": "PASS",
+        "data": {
+          "count": 4,
+          "ids": [
+            "facility_demo_01",
+            "facility_demo_02",
+            "facility_demo_03",
+            "facility_demo_04"
+          ],
+          "simulatedTrue": 4,
+          "firstRecordKeys": [
+            "_department",
+            "_departmentInfo",
+            "_deptTableAndField",
+            "_isDevice",
+            "_label",
+            "_parent",
+            "_table",
+            "_title",
+            "commTime",
+            "connectTime",
+            "data_source",
+            "deletePermission",
+            "editPermission",
+            "id",
+            "is_simulated",
+            "location_code",
+            "location_label",
+            "name",
+            "online",
+            "simulated_switch_on",
+            "space_type",
+            "type"
+          ],
+          "safeFirstRecord": {
+            "id": "facility_demo_01",
+            "name": "模拟教室空调运行设备",
+            "location_code": "demo_room_101",
+            "online": true,
+            "is_simulated": true,
+            "simulated_switch_on": false
+          }
+        }
+      },
+      "campus_lighting": {
+        "status": "FAIL",
+        "code": "AIRIOT_PERMISSION_DENIED",
+        "beStatus": 502
+      }
+    },
+    "historyRange": {
+      "from": 1791103270404,
+      "to": 1791106870404
+    },
+    "histories": {
+      "campus_environment/env_demo_01/temperature_c": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "temperature_c"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103272001,
+          "lastTime": 1791106867001
+        }
+      },
+      "campus_lighting/light_demo_04/illuminance_lux": {
+        "status": "PASS",
+        "data": {
+          "rootType": "OBJECT",
+          "results": 1,
+          "series": 1,
+          "structures": [
+            {
+              "rows": 720,
+              "columns": [
+                "time",
+                "illuminance_lux"
+              ]
+            }
+          ],
+          "samples": 720,
+          "numericSamples": 720,
+          "validTimes": 720,
+          "firstTime": 1791103272001,
+          "lastTime": 1791106867001
+        }
+      }
+    },
+    "alarms": {
+      "status": "FAIL",
+      "code": "AIRIOT_PERMISSION_DENIED",
+      "beStatus": 502
+    },
+    "writesPerformed": false,
+    "negativeReads": {
+      "schemaRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "expected": "read denied",
+        "denied": true
+      },
+      "roleRead": {
+        "status": "PASS",
+        "httpStatus": 403,
+        "expected": "read denied",
+        "denied": true
+      }
+    }
+  },
+  "finishedAt": 1791106871520,
+  "permissionBoundaries": {
+    "dedicatedSchemaRead": "Allowed table.view read-only per confirmed role scope; no schema write tested",
+    "roleRead": "Expected denied for both identities",
+    "legacyReadOnly": "Lighting record denial does not prove lighting historical query denial; independently tested"
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

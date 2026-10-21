@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="智慧校园 AI 编程课程图文初稿，教学示意与运行证据明确分开。"><title>公共图与阅读版样张</title><style>:root{color-scheme:light;--ink:#17334b;--muted:#526b7c;--blue:#245b81;--teal:#397769;--line:#d7e1e8;--paper:#fff;--wash:#f5f8fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:var(--wash);font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:17px;line-height:1.9}a{color:var(--blue);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:var(--teal)}a:focus-visible,summary:focus-visible{outline:3px solid #b58429;outline-offset:4px}button,input{font:inherit}p,li{overflow-wrap:anywhere}p{margin:1em 0}strong{font-weight:650}code{font-family:"SFMono-Regular",Consolas,monospace;font-size:.85em;background:#edf3f7;padding:.1em .3em;border-radius:4px;overflow-wrap:anywhere}pre{margin:1.3em 0;padding:20px 24px;background:#f1f5f8;border:1px solid var(--line);border-left:4px solid #7699b1;overflow-x:auto;line-height:1.65;font-size:15px}pre code{padding:0;background:none;white-space:pre;overflow-wrap:normal;font-size:1em}h1,h2,h3,h4{line-height:1.5;color:var(--ink);text-wrap:balance;scroll-margin-top:24px}h1{font-size:2rem;margin:.2em 0 .8em}h2{font-size:1.5rem;margin:2.2em 0 .8em;padding-bottom:.35em;border-bottom:1px solid var(--line)}h3{font-size:1.15rem;margin:1.8em 0 .6em}h4{font-size:1rem}ul,ol{padding-left:1.5em}li{margin:.3em 0}hr{border:0;border-top:1px solid var(--line);margin:2em 0}blockquote{margin:1.4em 0;padding:1px 22px;border-left:4px solid #789c92;background:#edf7f4}blockquote p{margin:.8em 0}
+.book-shell{display:grid;grid-template-columns:240px minmax(0,1000px);gap:32px;max-width:1344px;margin:0 auto;padding:40px 28px 100px}.book-nav{position:sticky;top:24px;align-self:start;max-height:calc(100vh - 48px);overflow-y:auto;font-size:14px;line-height:1.7}.book-nav summary{font-size:16px;font-weight:650;cursor:pointer;padding:8px 0}.book-nav ol{padding-left:1.4em}.book-nav li{margin:.6em 0}.book-nav a{text-decoration:none}.book-nav .nav-meta{color:var(--muted);font-size:13px}.book-main{min-width:0}.book-cover,.chapter,.figure-index{background:var(--paper);padding:42px 46px;border:1px solid var(--line);border-radius:6px;margin-bottom:28px}.book-cover{border-top:6px solid var(--teal)}.book-cover h1{font-size:2.45rem}.eyebrow{font-size:13px;font-weight:650;letter-spacing:.08em;color:var(--teal);margin:0 0 12px}.deck{font-size:20px;color:var(--muted);line-height:1.8}.status-note{padding:16px 20px;border-left:4px solid #b58429;background:#fff5df;font-size:15px;line-height:1.8;margin:24px 0 0}.status-note p{margin:0}.chapter-meta{font-size:13px;color:var(--muted);margin:0 0 24px}.chapter-footer{margin:32px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px}.book-footer{font-size:13px;color:var(--muted);padding:0 4px}.source-note{font-size:12px;margin-left:5px;color:#7a5b23}.raw-html{color:#85463e}
+.table-scroll{overflow-x:auto;margin:1.4em 0;border:1px solid var(--line);border-radius:4px;max-width:100%}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75}th,td{padding:11px 15px;vertical-align:top;border-bottom:1px solid var(--line);text-align:left}th{background:#edf3f7;font-weight:650}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#fafcfd}td code{font-size:12px}figure{margin:1.8em 0;padding:16px;background:#fff;border:1px solid var(--line);border-radius:5px;break-inside:avoid}figure .figure-open{display:block;line-height:0}figure img{display:block;width:100%;height:auto;margin:0;max-width:100%;background:white}figcaption{margin:14px 6px 4px;line-height:1.8;font-size:14px;color:var(--muted)}.figure-tools{display:flex;gap:16px;flex-wrap:wrap;margin:8px 6px 0;font-size:12px}.figure-badge{font-size:12px;background:#edf7f4;color:#366757;padding:0 7px;border-radius:3px;margin-right:8px;display:inline-block}.figure-index ol{font-size:15px}.figure-index li{margin:1em 0}.skip-link{position:absolute;left:10px;top:-100px;background:white;padding:12px;z-index:10}.skip-link:focus{top:10px}.back-to-top{position:fixed;right:18px;bottom:18px;padding:8px 14px;border:1px solid var(--line);border-radius:24px;background:#fff;font-size:13px;text-decoration:none;box-shadow:0 2px 10px #17334b0d}
+@media(max-width:900px){.book-shell{display:block;max-width:800px;padding:20px 16px 60px}.book-nav{position:static;max-height:none;border:1px solid var(--line);border-radius:5px;background:white;padding:12px 20px;margin-bottom:18px}.book-nav ol{columns:2;column-gap:28px}.book-nav li{break-inside:avoid}.book-cover,.chapter,.figure-index{padding:28px}.book-cover h1{font-size:2rem}.deck{font-size:18px}}
+@media(max-width:520px){body{font-size:16px}.book-shell{padding:12px 10px 60px}.book-nav{padding:10px 18px;font-size:13px}.book-nav ol{columns:1}.book-cover,.chapter,.figure-index{padding:24px 18px;margin-bottom:16px}.book-cover h1{font-size:1.9rem}h1{font-size:1.65rem}h2{font-size:1.3rem}h3{font-size:1.08rem}.deck{font-size:17px}.status-note{padding:12px 14px;font-size:14px}figure{padding:5px;margin:1.4em -7px}figcaption{font-size:13px}pre{padding:14px;font-size:13px}th,td{padding:9px 11px;min-width:92px}.back-to-top{right:12px;bottom:12px}}
+@media print{@page{size:A4;margin:16mm 15mm}html{scroll-behavior:auto}body{background:white;font-size:10.5pt;line-height:1.75}.book-shell{display:block;max-width:none;padding:0}.book-nav,.back-to-top,.skip-link,.figure-tools,.chapter-footer{display:none}.book-cover,.chapter,.figure-index{border:0;border-radius:0;padding:0;margin:0;break-before:page}.book-cover{break-before:auto}.book-cover h1{font-size:26pt}.book-cover{padding-top:20mm;min-height:230mm}.chapter{padding-top:3mm}h1{font-size:20pt}h2{font-size:15pt}h3{font-size:12pt}h1,h2,h3,h4{break-after:avoid}pre{white-space:pre-wrap;font-size:8.5pt;padding:12px}pre code{white-space:pre-wrap;overflow-wrap:anywhere}figure{border:0;padding:0;break-inside:avoid;margin:6mm 0}figure img{max-height:208mm;object-fit:contain}figcaption{font-size:9pt}.table-scroll{overflow:visible}table{font-size:9pt}th,td{padding:6px;min-width:0}tr{break-inside:avoid}a{color:inherit;text-decoration:none}.status-note{font-size:10pt}.book-footer{margin-top:10mm}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body id="book-top"><a class="skip-link" href="#book-main">跳到正文</a><div class="book-shell"><nav class="book-nav" aria-label="阅读目录" id="contents"><details open><summary>阅读目录</summary><p class="nav-meta">图文制作准备 · 仅展示统一配图与阅读版式</p><ol><li><a href="#sample">两幅公共图，先验证如何读清楚</a></li><li><a href="#figure-index">图表目录（2 幅）</a></li></ol><p class="nav-meta">点击图片打开大图。<br>可使用浏览器的打印功能。</p></details></nav><main class="book-main" id="book-main"><header class="book-cover"><p class="eyebrow">AI 编程 · 智慧校园</p><h1>公共图与阅读版样张</h1><p class="deck">图文制作准备 · 仅展示统一配图与阅读版式</p><div class="status-note"><p>此页为第一阶段排版样张，包含两幅公共示意图。它不是 12 章教材成稿，不代表教学工程、实验或试讲已验证。</p></div></header><section class="chapter" aria-label="两幅公共图，先验证如何读清楚"><p class="chapter-meta">版式样张 · 实验未验证</p><h1 id="sample">两幅公共图，先验证如何读清楚</h1>
+<p>这是图文制作准备阶段的版式样张。正文、表格、代码、配图、图注和目录使用同一套样式；这里的示例不替代正在编写的章节。</p>
+<h2 id="sample-先看请求经过哪些边界">先看请求经过哪些边界</h2>
+<p>图中的学生前端通过后端访问数据。后端决定操作者是否可以执行某项业务，再检查参数、状态和版本。本地数据库保存映射、演练事件、设备责任与时间线；数据源端口负责读取教学模拟数据，真实 AIRIOT 只读接入保留为课外选做。</p>
+<figure id="fig-shared-01-教学工程边界"><a class="figure-open" href="__archive_images__/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png" download="shared-01-教学工程边界.png" aria-label="保存大图：前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口"><img src="__archive_images__/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png" alt="前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口" width="2560" height="1936" decoding="async"></a><figcaption><span class="figure-badge">教学示意</span>公共图 01　教学工程：请求与数据的边界。蓝色为界面，青色为后端业务与本地持久化，灰蓝色为读取端口，金色虚线为选做只读接入。箭头说明请求方向；教学示意，非运行证据。</figcaption><div class="figure-tools"><a href="__archive_images__/375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba.png" download="shared-01-教学工程边界.png">保存 PNG 大图</a><a href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22120%22%3E%3Crect%20width%3D%22640%22%20height%3D%22120%22%20fill%3D%22%23f1f5f9%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2265%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EArchived%20image%20omitted%20for%20privacy%20review.%3C%2Ftext%3E%3C%2Fsvg%3E" download="shared-01-教学工程边界.svg">保存 SVG 矢量图</a></div></figure>
+<p>阅读箭头时，应先说明“谁向谁提出请求”，再说明“谁拥有最终决定权”。前端隐藏入口不能替代后端授权；来源标签也不能单独证明设备是真实设备。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>图中的位置</th>
+<th>学生需要解释的问题</th>
+<th>本轮材料的状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>前端</td>
+<td>加载失败、空列表与有效零怎样区分？</td>
+<td>教学设计，待实现和实测</td>
+</tr>
+<tr>
+<td>后端</td>
+<td>权限与版本在哪里最终判断？</td>
+<td>教学设计，待实现和实测</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>主记录与时间线为什么同事务提交？</td>
+<td>需后续真实数据库证据</td>
+</tr>
+<tr>
+<td>数据端口</td>
+<td>为什么上游失败不能静默切换成模拟成功？</td>
+<td>AIRIOT 只读接入为选做</td>
+</tr>
+</tbody></table>
+</div><h2 id="sample-再看建议如何变成可检查的工作">再看建议如何变成可检查的工作</h2>
+<p>网页 AI 返回的是建议和代码草稿。学生需要主动审查，再将采用的修改写入本地文件并执行核验。图中的“通过”是一个条件分支；这幅示意图本身不是测试通过的证据。</p>
+<figure id="fig-shared-02-网页AI协作"><a class="figure-open" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22120%22%3E%3Crect%20width%3D%22640%22%20height%3D%22120%22%20fill%3D%22%23f1f5f9%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2265%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EArchived%20image%20omitted%20for%20privacy%20review.%3C%2Ftext%3E%3C%2Fsvg%3E" download="shared-02-网页AI协作.png" aria-label="保存大图：学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22120%22%3E%3Crect%20width%3D%22640%22%20height%3D%22120%22%20fill%3D%22%23f1f5f9%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2265%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EArchived%20image%20omitted%20for%20privacy%20review.%3C%2Ftext%3E%3C%2Fsvg%3E" alt="学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正" width="2560" height="2182" decoding="async"></a><figcaption><span class="figure-badge">教学示意</span>公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。</figcaption><div class="figure-tools"><a href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22120%22%3E%3Crect%20width%3D%22640%22%20height%3D%22120%22%20fill%3D%22%23f1f5f9%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2265%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EArchived%20image%20omitted%20for%20privacy%20review.%3C%2Ftext%3E%3C%2Fsvg%3E" download="shared-02-网页AI协作.png">保存 PNG 大图</a><a href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22120%22%3E%3Crect%20width%3D%22640%22%20height%3D%22120%22%20fill%3D%22%23f1f5f9%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2265%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EArchived%20image%20omitted%20for%20privacy%20review.%3C%2Ftext%3E%3C%2Fsvg%3E" download="shared-02-网页AI协作.svg">保存 SVG 矢量图</a></div></figure>
+<p>下面是可复制到网页 AI 的任务提示样例，不是实际执行日志：</p>
+<pre><code class="language-text">任务：解释一次 expectedVersion 冲突应该怎样处理。
+边界：只根据提供的教学合同，不改角色、状态或接口字段。
+要求：区分学生需要执行的操作与尚未验证的预期结果。
+验收：旧版本返回 409；保留输入、回读新记录；不自动重放旧决定。
+</code></pre>
+<blockquote>
+<p>人工检查点：读者能否指着图说清，谁提出建议、谁执行本地修改、谁负责保存实际证据？</p>
+</blockquote>
+<h2 id="sample-页面核验与接力">页面核验与接力</h2>
+<ol>
+<li>查看两幅图的中文、节点和箭头，确认没有裁切或重叠。</li>
+<li>在窄屏打开图片大图，检查细节文字；页面表格和代码可以独立横向滚动。</li>
+<li>用目录跳回<a href="#sample-先看请求经过哪些边界">请求边界</a>，确认章节锚点有效。</li>
+<li>使用浏览器打印预览检查正文与图注，保留“实验未验证”的状态说明。</li>
+</ol>
+<p>正式统稿将在三组正文交稿并收到第二阶段接力指令后进行。整书入口固定为 <code>reading/index.html</code>，图片放在课程 <code>illustrations/</code>。</p>
+<p class="chapter-footer"><a href="#contents">返回目录</a> · 源稿：tools/fixtures/reader-sample.md</p></section><section class="figure-index" id="figure-index"><h2>图表目录</h2><p>图像均为教学示意；PNG 供直接阅读，SVG 保留矢量文字与图形。</p><ol><li><a href="#fig-shared-01-教学工程边界">公共图 01　教学工程：请求与数据的边界。蓝色为界面，青色为后端业务与本地持久化，灰蓝色为读取端口，金色虚线为选做只读接入。箭头说明请求方向；教学示意，非运行证据。</a></li><li><a href="#fig-shared-02-网页AI协作">公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。</a></li></ol></section><footer class="book-footer">版本状态：ILLUSTRATION_PREPARATION · lab_verified=false。此状态不因图文渲染成功而改变。</footer></main></div><a class="back-to-top" href="#contents">回到目录</a></body></html>

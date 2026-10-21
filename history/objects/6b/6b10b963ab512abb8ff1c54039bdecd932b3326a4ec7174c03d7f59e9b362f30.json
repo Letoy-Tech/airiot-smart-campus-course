@@ -1,0 +1,129 @@
+{
+  "at": "2026-10-19T12:25:08.557126+00:00",
+  "scope": "Beginner AI ideation, requirements and design walkthrough; not a full rewrite of coding chapters",
+  "source_parts": 4,
+  "complete_markdown_examples": 11,
+  "figures": 9,
+  "web_checks_passed": true,
+  "model_session_executed": false,
+  "classroom_trial": false,
+  "old_zip_unchanged": true,
+  "old_zip_sha256": "1083e348cca3085b802f04c76971635883af65c58324e323d82244039206c1d5",
+  "modified_preexisting": [
+    "07-图文初稿阅读指南.md",
+    "reading/index.html",
+    "reading/index.build.json",
+    "tools/build-reader.mjs"
+  ],
+  "visual_review": [
+    "8 SVG/PNG overview: labels readable, arrows do not cross labels, no clipping",
+    "Desktop entry: navigation and start action visible",
+    "390px entry and save dialog: no page overflow, controls wrap and remain visible",
+    "Save tool screenshot: fixed filename, pasted content and actions visible"
+  ],
+  "closed_review_findings": [
+    "R02 local location binding propagated from scope through design",
+    "Frozen route and request fields supplied directly in prompt",
+    "first-chain versus teacher-db prerequisite explicit",
+    "Saved-file tool and complete-document corrections consistent",
+    "Quality thresholds provided before AI specification generation"
+  ],
+  "artifacts": [
+    {
+      "file": "walkthroughs/00-第一次用AI做项目.md",
+      "sha256": "b1f906156c30c6dcfc63c28526fa9a1ae99fda0480701a2f0fb17938911d7f04"
+    },
+    {
+      "file": "walkthroughs/01-从想法到项目任务书.md",
+      "sha256": "01b3376c1c43176a7997c753a64fd7dfb2ce9ce84da21594797d574759c3c1cc"
+    },
+    {
+      "file": "walkthroughs/02-从项目任务书到需求规格.md",
+      "sha256": "e4d2ef6788472fa9f8dcd8dfc42838ea6d69e99cadb6ebd571fe652f36763b3e"
+    },
+    {
+      "file": "walkthroughs/03-从需求规格到系统设计.md",
+      "sha256": "cbcdc6442db26934aeddc6f5dd485935481d7c50ec32595d97aa65c7208cadb3"
+    },
+    {
+      "file": "walkthroughs/README.md",
+      "sha256": "05686fde38c8d34269941be34c15bb52859876c91bcd1bd76b45a8776db504c1"
+    },
+    {
+      "file": "walkthroughs/build.json",
+      "sha256": "748b7b27b995e957b8692426b6024199710d082e1df9dbbaf30018b4110a29f8"
+    },
+    {
+      "file": "walkthroughs/figures/01-操作循环.png",
+      "sha256": "24af2c3262799d1b2bdf20626145739876c652333c9b024b00bf7b75dff6c255"
+    },
+    {
+      "file": "walkthroughs/figures/01-操作循环.svg",
+      "sha256": "4fac072789da2d36e37b06ff7c17240ea927d5055e49ad44a6bab6dcd45d5c00"
+    },
+    {
+      "file": "walkthroughs/figures/02-文件位置.png",
+      "sha256": "2792b9b2d7678bd5bda455a3735184d5f59c3fdfe313cf01c9faaa60820e0c47"
+    },
+    {
+      "file": "walkthroughs/figures/02-文件位置.svg",
+      "sha256": "3987dcfbcb39bde9ac4796aabdaf971427d614fda63f3abb2d58d26bce9c7ecc"
+    },
+    {
+      "file": "walkthroughs/figures/03-对话到文件.png",
+      "sha256": "c60776a638cc35ba1fe0c4a404fbcb740dd9a9bd6e42b13b67b1cdd218c83a8d"
+    },
+    {
+      "file": "walkthroughs/figures/03-对话到文件.svg",
+      "sha256": "9c5f3d428ce7eb03b2421979108a339c3fe291b0d1d419cb2bcffbd131e7a021"
+    },
+    {
+      "file": "walkthroughs/figures/04-范围取舍.png",
+      "sha256": "7f59f8b0178d85fdf5ebffd959a7a979418cccd333c22e2bcf9d1fdd2980bc55"
+    },
+    {
+      "file": "walkthroughs/figures/04-范围取舍.svg",
+      "sha256": "3fa288f0825f5c20d09a27de616dbd5f8cb232cb447ac903686d542f1f54338c"
+    },
+    {
+      "file": "walkthroughs/figures/05-需求判断.png",
+      "sha256": "c343e3007234dc5d65a3c0c7cb6bace4b12e6b1a264dedfbf0f09b1bcbc7c6c7"
+    },
+    {
+      "file": "walkthroughs/figures/05-需求判断.svg",
+      "sha256": "2fd2e6994b598131a77d4b2e66a39d362ee42c59cc55b4162ff38bec75a48692"
+    },
+    {
+      "file": "walkthroughs/figures/06-页面草图.png",
+      "sha256": "406d4477ad66ec114c7423ba8fc5d9b87e4f8b74c6ac5e7e910a550d8982f084"
+    },
+    {
+      "file": "walkthroughs/figures/06-页面草图.svg",
+      "sha256": "ad4be49eef842c8f5cd5b17e79c4d4b7f266b5c2e96feadceaaa4a8b07466fa4"
+    },
+    {
+      "file": "walkthroughs/figures/07-接口传话.png",
+      "sha256": "1ac65e62a4ed3f0f753cabcf0dc7e5ea7e9177c710269d148786063dd1ed78bc"
+    },
+    {
+      "file": "walkthroughs/figures/07-接口传话.svg",
+      "sha256": "de6f1b9a897a217c59688cb741cf10df462efb7e46f47bde78c042830089be49"
+    },
+    {
+      "file": "walkthroughs/figures/08-贯穿追踪.png",
+      "sha256": "78a936f0ae56dc8927c5172a1b6d6cf240b8bb7203e46ced91bb28810d75bb64"
+    },
+    {
+      "file": "walkthroughs/figures/08-贯穿追踪.svg",
+      "sha256": "684b3282f428e9d7a4dab1e8ae801dfb9d40d05f34d042f354c0eb2b8041116b"
+    },
+    {
+      "file": "walkthroughs/figures/09-保存工具实图.png",
+      "sha256": "1c0d024b2c8a9d61a5e8c586ea9f8a4eb0152f7f05f616ddd6cf2d5df923f40a"
+    },
+    {
+      "file": "walkthroughs/index.html",
+      "sha256": "f4571db6df3dcddf6b57a2396399b4a21297aa1b05cec9b76b9699abaf9e33c0"
+    }
+  ]
+}

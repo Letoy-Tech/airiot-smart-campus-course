@@ -1,0 +1,6 @@
+export PATH="/Users/learner/.nvm/versions/node/v22.21.1/bin:$PATH"
+node --version
+which node
+java -version
+echo "$JAVA_HOME"
+pwd

@@ -1,0 +1,1 @@
+Runtime config now uses the lab-only SELECT/INSERT/UPDATE/DELETE account; immutable migration/test config files preserved.

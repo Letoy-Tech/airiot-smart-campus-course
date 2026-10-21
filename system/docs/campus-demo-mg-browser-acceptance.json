@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-05T03:36:58.584342+08:00",
+  "release": "REL_20261005-0338-MG-UI",
+  "base": "https://demo.example.invalid/campus-demo/",
+  "scope": "Logged-out public browser checks; no account or business data writes.",
+  "checks": [
+    {
+      "name": "Public login renders current brand and network animation",
+      "pass": true
+    },
+    {
+      "name": "Light to dark and dark to light via theme button",
+      "pass": true
+    },
+    {
+      "name": "390 x 844 mobile layout, fields, login, demo notice and theme accessible",
+      "pass": true
+    },
+    {
+      "name": "Empty form login remains disabled",
+      "pass": true
+    },
+    {
+      "name": "Blank password visibility toggle labels change show/hide correctly",
+      "pass": true
+    }
+  ],
+  "authenticatedBrowserFlows": "Not exercised in this MG-only update; role/data/API checks in public acceptance report.",
+  "screenshots": [
+    {
+      "path": "campus-demo-mg-login-light.png",
+      "sha256": "29545587a85d47a44048b602900011dce8f1822b5e6c52fc303eae49af49a193"
+    },
+    {
+      "path": "campus-demo-mg-login-dark.png",
+      "sha256": "105a1915b9e79f6b66f461f1c872f40d9f17373121b166f5645c21c76d3f33b1"
+    },
+    {
+      "path": "campus-demo-mg-login-mobile-light.png",
+      "sha256": "f26e3d7377f98536bc79df08355f4363d7fd1d5663bd0d0a0edfb6d8fafdda21"
+    },
+    {
+      "path": "campus-demo-mg-login-mobile-dark.png",
+      "sha256": "f95ae25742149945ce8211965410e37105dbb2eb8e0587705a9fc9cecca7185a"
+    }
+  ],
+  "sourceVerification": {
+    "typeCheck": "PASS",
+    "productionBuild": "PASS",
+    "unitTests": {
+      "passed": 27,
+      "files": 5
+    },
+    "sourceAdjustment": "Locations tree tooltip renders editable names with richText."
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

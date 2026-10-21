@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant G as 教师并发模板
+    participant R1 as ADMIN 请求一 目标 A
+    participant R2 as ADMIN 请求二 目标 B
+    participant D as 真实 MySQL
+    participant Q as 独立回读连接
+    Note over R1,R2: 均已读取版本 n，权限与参数有效
+    G->>R1: 屏障放行
+    G->>R2: 屏障放行
+    R1->>D: 事务一锁定责任行
+    D-->>R1: 取得锁，当前版本 n
+    R2->>D: 事务二尝试锁定同一行
+    Note over R2,D: 等待事务一释放锁
+    R1->>D: 改为 A，版本 n+1，追加历史并提交
+    D-->>R1: 成功
+    D-->>R2: 取得锁，当前版本 n+1
+    Note over R2,D: 与 expectedVersion=n 不匹配，不更新
+    R2-->>G: 409 VERSION_CONFLICT
+    R1-->>G: 业务成功
+    G->>Q: 两请求结束后查询
+    Q->>D: 新连接读取主行与历史
+    D-->>Q: owner=A，version=n+1，仅新增一条历史
+    Note over R1,Q: 谁先成功不固定；本图仅示意一种顺序

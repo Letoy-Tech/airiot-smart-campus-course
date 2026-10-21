@@ -1,0 +1,232 @@
+{
+  "status": "PASS_SOURCE_BUILD_CHECKS",
+  "startedAt": "2026-10-19T15:35:04.740Z",
+  "node": "v22.21.1",
+  "platform": "darwin",
+  "isolatedCopy": true,
+  "dependencyInstall": "npm ci from frozen lock; existing npm download cache may be reused",
+  "sourceManifestSha256": "f0c97649ed0357dd1e2c8822f2bb00a69a13efe783dc886f421a61ce7b6a3c37",
+  "toolTests": {
+    "label": "progress-tool-tests",
+    "command": [
+      "node",
+      "--test",
+      "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/resources/project-journey/authoring/progress.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationMs": 89,
+    "log": "evidence/progress-tool-tests.txt"
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "label": "stage-01-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 2368,
+      "log": "evidence/stage-01-verify.txt",
+      "sourceFingerprint": "264418a35d9807959113cb179aa49a89d07469be5c879f114e976c3a92f94fc8",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 2,
+      "label": "stage-02-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 2825,
+      "log": "evidence/stage-02-verify.txt",
+      "sourceFingerprint": "45cfffcdf69fcc4e5fbb25983b37115d6b6c25bff930a688865cd70b24369060",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 3,
+      "label": "stage-03-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 3060,
+      "log": "evidence/stage-03-verify.txt",
+      "sourceFingerprint": "e88f31486bc48396feb2ffb393cbd0a736aa97e9f9f8fd782f67356fa867648a",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 4,
+      "label": "stage-04-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 3102,
+      "log": "evidence/stage-04-verify.txt",
+      "sourceFingerprint": "20daaeb06d6b19b132e7d35482873719812d1c2159d48bd6aa939e3bc223ab35",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 5,
+      "label": "stage-05-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4306,
+      "log": "evidence/stage-05-verify.txt",
+      "sourceFingerprint": "9bd767042d2a792b79adefc3ad7656f5e6f5c011d7afa8baa902fff4431baf8f",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 6,
+      "label": "stage-06-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4316,
+      "log": "evidence/stage-06-verify.txt",
+      "sourceFingerprint": "67550533e7cd9dd406d7996f22fe66fac89d53e8a1d38db16f8b3e89b0045806",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 7,
+      "label": "stage-07-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4344,
+      "log": "evidence/stage-07-verify.txt",
+      "sourceFingerprint": "7ce69b77113fe41a814016d5f39dff6e77a8720819fcbe03578d02538d9c165f",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 8,
+      "label": "stage-08-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4488,
+      "log": "evidence/stage-08-verify.txt",
+      "sourceFingerprint": "bca6c24987ac16deca238e2270b6c573a4a8ed6894f9e6b07db2aa4b5f57b8f5",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 9,
+      "label": "stage-09-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4479,
+      "log": "evidence/stage-09-verify.txt",
+      "sourceFingerprint": "f0e5bc2214e426e37a5d1c0f9386ce4c95e0d1dfe111ebb4ca9ba15352262d0f",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 10,
+      "label": "stage-10-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 4610,
+      "log": "evidence/stage-10-verify.txt",
+      "sourceFingerprint": "4602604d34c45b4435ca3cd9e689656666e269af96bd85b427fea84acc9c0ab9",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 11,
+      "label": "stage-11-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 5175,
+      "log": "evidence/stage-11-verify.txt",
+      "sourceFingerprint": "bf22a66382780037fdfff146d335825cf11e0b5f310bcf5861177fb882156029",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    },
+    {
+      "stage": 12,
+      "label": "stage-12-verify",
+      "command": [
+        "node",
+        "tools/progress.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "durationMs": 5167,
+      "log": "evidence/stage-12-verify.txt",
+      "sourceFingerprint": "b728af42ce84174039125447f9ede4105ef1d77f6bb2690933421ed25e29a262",
+      "settingsPreserved": true,
+      "manualBusinessAcceptance": "NOT_RUN"
+    }
+  ],
+  "backend": {
+    "label": "backend-package",
+    "command": [
+      "sh",
+      "./mvnw",
+      "package"
+    ],
+    "exitCode": 0,
+    "durationMs": 5095,
+    "log": "evidence/backend-package.txt"
+  },
+  "browser": "NOT_RUN",
+  "database": "NOT_RUN",
+  "windows": "NOT_RUN",
+  "actualWorkDirectory": "/tmp/demo-workspace",
+  "install": {
+    "label": "npm-ci",
+    "command": [
+      "npm",
+      "ci",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "exitCode": 0,
+    "durationMs": 777,
+    "log": "evidence/npm-ci.txt"
+  },
+  "finishedAt": "2026-10-19T15:35:59.582Z",
+  "finalSourceManifestSha256": "073768bb0e301178174c77351b49446686b9ac9dfb08aa38247431185b6b0c77",
+  "documentationOnlyRebind": "doc-only-rebind.json"
+}

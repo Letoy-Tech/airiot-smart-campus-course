@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "at": "2026-10-18T18:49:20.473Z",
+  "sha256": "bdd52e70acde10c1b7125db00107d3cf47538d0726a506c1dfc95b9b8eb1fea7",
+  "checks": [
+    {
+      "width": 1440,
+      "lessons": 12,
+      "images": 12,
+      "noOverflow": true,
+      "noRemoteRequests": true,
+      "allNavigationLinks": true
+    },
+    {
+      "width": 390,
+      "lessons": 12,
+      "images": 12,
+      "noOverflow": true,
+      "noRemoteRequests": true,
+      "allNavigationLinks": true
+    }
+  ]
+}

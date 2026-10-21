@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="840" viewBox="0 0 1280 840" role="img" aria-labelledby="title desc">
+  <title id="title">图 07-01 同一观察时刻下的质量对照</title>
+  <desc id="desc">固定观察时刻 O。合法零与恰好六十秒为 fresh，六十秒加一毫秒为 stale；缺失为 missing，未来五秒以内按容差处理，未来五秒加一毫秒和数值字符串为 invalid。</desc>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #19334a; }
+    .title { font-size: 28px; font-weight: 700; }
+    .body { font-size: 21px; }
+    .small { font-size: 19px; }
+    .head { font-size: 21px; font-weight: 600; }
+    .muted { fill: #4c6274; }
+    .grid { stroke: #c2cfd8; stroke-width: 1.5; }
+  </style>
+  <rect width="1280" height="840" fill="#f6f9fb"/>
+  <text x="36" y="49" class="title">有效零、缺失与过期不能用同一种默认值</text>
+  <text x="36" y="88" class="body">教学样例 · O = observedAt · 每行只改变一个关键条件</text>
+  <rect x="36" y="118" width="1208" height="588" rx="8" fill="#fff" stroke="#aabfce"/>
+  <path d="M36 118 H1244 V174 H36 Z" fill="#e4eef5"/>
+  <text x="55" y="155" class="head">输入 value</text>
+  <text x="270" y="155" class="head">采样 time（毫秒）</text>
+  <text x="590" y="155" class="head">后端质量</text>
+  <text x="824" y="155" class="head">页面解释</text>
+  <path d="M36 250H1244 M36 326H1244 M36 402H1244 M36 478H1244 M36 554H1244 M36 630H1244" class="grid"/>
+  <path d="M250 118V706 M570 118V706 M804 118V706" class="grid"/>
+  <text x="55" y="220" class="body">0</text><text x="270" y="220" class="body">O</text><text x="590" y="220" class="body">fresh</text><text x="824" y="220" class="body">有效零，照常显示</text>
+  <text x="55" y="296" class="body">1.2</text><text x="270" y="296" class="body">O − 60000</text><text x="590" y="296" class="body">fresh</text><text x="824" y="296" class="body">等于 60 秒，仍新鲜</text>
+  <text x="55" y="372" class="body">1.2</text><text x="270" y="372" class="body">O − 60001</text><text x="590" y="372" class="body">stale</text><text x="824" y="372" class="body">保留值，明确过期</text>
+  <text x="55" y="448" class="body">null</text><text x="270" y="448" class="body">O</text><text x="590" y="448" class="body">missing</text><text x="824" y="448" class="body">缺失，不改成零</text>
+  <text x="55" y="524" class="body">1.2</text><text x="270" y="524" class="body">O + 5000</text><text x="590" y="524" class="body">fresh</text><text x="824" y="524" class="body">容差内，保留原时间</text>
+  <text x="55" y="600" class="body">1.2</text><text x="270" y="600" class="body">O + 5001</text><text x="590" y="600" class="body">invalid</text><text x="824" y="600" class="body">超出未来时间容差</text>
+  <text x="55" y="676" class="body">"1.2" 字符串</text><text x="270" y="676" class="body">O</text><text x="590" y="676" class="body">invalid</text><text x="824" y="676" class="body">类型错误，不强转</text>
+  <text x="36" y="754" class="body">先核对后端质量，再核对值、采样时间、观察时间与来源。</text>
+  <text x="36" y="793" class="small muted">边界来自共享教学合同；前端不自行改质量。混合异常的优先级由教师资源统一冻结。</text>
+</svg>

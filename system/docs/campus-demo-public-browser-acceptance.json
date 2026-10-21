@@ -1,0 +1,546 @@
+{
+  "checkedAt": 1791136585313,
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "pass": true,
+  "origin": "https://demo.example.invalid/campus-demo/",
+  "role": "DEMO administrator, human-assisted actual page login",
+  "recording": "d7dafad3e15ec",
+  "desktopViewport": [
+    1798,
+    1025
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "observed": [
+    "public login and hydrated operations page",
+    "new communication case auto assigned from persisted owner",
+    "case reassigned to admin then started, NOTE saved, local DEMO recovered, server recovery verified, disposition closed",
+    "each UI action confirms read-back version1 through7",
+    "deep-link reload persists CLOSED and version7 with zero forms",
+    "admin device detail facility_demo_01 has zero control forms and view-only notice",
+    "overview actual4spaces16devices28fresh points, four original history series and quality ring",
+    "space matrix environment+demo_room_103 drills to one matching device",
+    "390px owners page has16 cards and document width390, registration view reads owner/version1/history1",
+    "mobile navigation overlay opens and selecting operations dismisses it",
+    "CLOSED status button filters actual queue to two closed records, chart0/0/0/2",
+    "final logout goes to /campus-demo/login"
+  ],
+  "caseId": "e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+  "caseFinalVersion": 7,
+  "caseFinalState": "CLOSED",
+  "screenshots": [
+    "screenshots/campus-demo-public-overview.png",
+    "screenshots/campus-demo-public-operations.png",
+    "screenshots/campus-demo-public-closed-case.png",
+    "screenshots/campus-demo-public-mobile-owners.png",
+    "screenshots/campus-demo-public-mobile-operations.png"
+  ],
+  "apiMetadata": [
+    {
+      "id": "d7dafad3e15ec:n13",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/capabilities",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136187150.0
+    },
+    {
+      "id": "d7dafad3e15ec:n28",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136187420.0
+    },
+    {
+      "id": "d7dafad3e15ec:n29",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136187420.0
+    },
+    {
+      "id": "d7dafad3e15ec:n30",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo/status",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136187420.0
+    },
+    {
+      "id": "d7dafad3e15ec:n32",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136217510.0
+    },
+    {
+      "id": "d7dafad3e15ec:n33",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 502,
+      "state": "complete",
+      "started_at": 1791136247575.0
+    },
+    {
+      "id": "d7dafad3e15ec:n34",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136277617.0
+    },
+    {
+      "id": "d7dafad3e15ec:n35",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136308018.0
+    },
+    {
+      "id": "d7dafad3e15ec:n46",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/capabilities",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136314315.0
+    },
+    {
+      "id": "d7dafad3e15ec:n61",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136314428.0
+    },
+    {
+      "id": "d7dafad3e15ec:n62",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136314428.0
+    },
+    {
+      "id": "d7dafad3e15ec:n63",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo/status",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136314428.0
+    },
+    {
+      "id": "d7dafad3e15ec:n65",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo-alarm-scenarios/communication-patrol/trigger",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136328511.0
+    },
+    {
+      "id": "d7dafad3e15ec:n66",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136328625.0
+    },
+    {
+      "id": "d7dafad3e15ec:n69",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136328735.0
+    },
+    {
+      "id": "d7dafad3e15ec:n70",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136328735.0
+    },
+    {
+      "id": "d7dafad3e15ec:n71",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e/assign",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136343661.0
+    },
+    {
+      "id": "d7dafad3e15ec:n72",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136343751.0
+    },
+    {
+      "id": "d7dafad3e15ec:n73",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e/start",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136354386.0
+    },
+    {
+      "id": "d7dafad3e15ec:n74",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136354510.0
+    },
+    {
+      "id": "d7dafad3e15ec:n75",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e/notes",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136367026.0
+    },
+    {
+      "id": "d7dafad3e15ec:n76",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136367158.0
+    },
+    {
+      "id": "d7dafad3e15ec:n77",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo-alarm-events/e0d02400-629e-4cfe-b7f8-93d38532dd4e/recover",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136373163.0
+    },
+    {
+      "id": "d7dafad3e15ec:n78",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136373236.0
+    },
+    {
+      "id": "d7dafad3e15ec:n79",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e/verify-recovery",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136377927.0
+    },
+    {
+      "id": "d7dafad3e15ec:n80",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136377996.0
+    },
+    {
+      "id": "d7dafad3e15ec:n81",
+      "method": "POST",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e/close",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136385332.0
+    },
+    {
+      "id": "d7dafad3e15ec:n82",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136385442.0
+    },
+    {
+      "id": "d7dafad3e15ec:n93",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/capabilities",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136409639.0
+    },
+    {
+      "id": "d7dafad3e15ec:n106",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/e0d02400-629e-4cfe-b7f8-93d38532dd4e",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136409742.0
+    },
+    {
+      "id": "d7dafad3e15ec:n107",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136409742.0
+    },
+    {
+      "id": "d7dafad3e15ec:n116",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136421778.0
+    },
+    {
+      "id": "d7dafad3e15ec:n117",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/history?deviceId=facility_demo_01&tagId=run_state&from=1791135522057&to=1791136422057",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136422058.0
+    },
+    {
+      "id": "d7dafad3e15ec:n120",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136432903.0
+    },
+    {
+      "id": "d7dafad3e15ec:n121",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/history?deviceId=env_demo_01&tagId=temperature_c&from=1791135533155&to=1791136433155",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136433175.0
+    },
+    {
+      "id": "d7dafad3e15ec:n122",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/history?deviceId=env_demo_02&tagId=temperature_c&from=1791135533155&to=1791136433155",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136433175.0
+    },
+    {
+      "id": "d7dafad3e15ec:n123",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/history?deviceId=env_demo_03&tagId=temperature_c&from=1791135533155&to=1791136433155",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136433175.0
+    },
+    {
+      "id": "d7dafad3e15ec:n124",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/history?deviceId=env_demo_04&tagId=temperature_c&from=1791135533155&to=1791136433155",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136433175.0
+    },
+    {
+      "id": "d7dafad3e15ec:n127",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136440340.0
+    },
+    {
+      "id": "d7dafad3e15ec:n128",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136455597.0
+    },
+    {
+      "id": "d7dafad3e15ec:n131",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136458010.0
+    },
+    {
+      "id": "d7dafad3e15ec:n132",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/device-owners",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136458010.0
+    },
+    {
+      "id": "d7dafad3e15ec:n133",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136458010.0
+    },
+    {
+      "id": "d7dafad3e15ec:n134",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/device-owners/energy_demo_01",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136465595.0
+    },
+    {
+      "id": "d7dafad3e15ec:n135",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/device-owners",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136488078.0
+    },
+    {
+      "id": "d7dafad3e15ec:n136",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/overview",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136488321.0
+    },
+    {
+      "id": "d7dafad3e15ec:n139",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136491211.0
+    },
+    {
+      "id": "d7dafad3e15ec:n140",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136491211.0
+    },
+    {
+      "id": "d7dafad3e15ec:n141",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo/status",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136491211.0
+    },
+    {
+      "id": "d7dafad3e15ec:n142",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&state=CLOSED&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136520986.0
+    },
+    {
+      "id": "d7dafad3e15ec:n143",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&state=CLOSED&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136521284.0
+    },
+    {
+      "id": "d7dafad3e15ec:n153",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/capabilities",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136530854.0
+    },
+    {
+      "id": "d7dafad3e15ec:n168",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136530982.0
+    },
+    {
+      "id": "d7dafad3e15ec:n169",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases/handlers",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136530982.0
+    },
+    {
+      "id": "d7dafad3e15ec:n170",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/demo/status",
+      "status": 200,
+      "state": "complete",
+      "started_at": 1791136530982.0
+    }
+  ],
+  "non200Requests": [
+    {
+      "id": "d7dafad3e15ec:n33",
+      "method": "GET",
+      "url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "status": 502,
+      "state": "complete",
+      "started_at": 1791136247575.0
+    }
+  ],
+  "consoleErrorMetadata": [
+    {
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/",
+      "level": "error",
+      "at": 1791136020476.0
+    },
+    {
+      "source": "website",
+      "source_url": "https://demo.example.invalid/campus-demo/api/campus/alarm-cases?sourceType=DEMO&skip=0&limit=50",
+      "level": "error",
+      "at": 1791136247613.0
+    },
+    {
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/",
+      "level": "error",
+      "at": 1791136314235.0
+    },
+    {
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/",
+      "level": "error",
+      "at": 1791136409577.0
+    },
+    {
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/",
+      "level": "error",
+      "at": 1791136530807.0
+    }
+  ],
+  "deploymentWindow": "BE single-instance restart produced temporary502; old queue remained labelled failed/last-success and trigger disabled. After final release health and reload, all exercised pages/actions have no alert. Original failures retained.",
+  "limits": [
+    "Browser tested admin on public origin; viewer browser UI tested locally, other roles on public API.",
+    "390px is Chrome CDP emulation, not physical iPhone/WeChat.",
+    "Screenshots are viewport coverage; nested main scroll prevents a complete full-page capture.",
+    "No request headers, response bodies, credentials or tokens exported."
+  ],
+  "captureCoverage": [
+    "from_start",
+    "task_tab",
+    "text_bodies_bounded",
+    "time_window_not_causality",
+    "page_main_frame",
+    "worker_targets_not_captured",
+    "manual_main_frame_only",
+    "initial_load_not_recorded"
+  ],
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

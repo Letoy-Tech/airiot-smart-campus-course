@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:13:05.223Z",
+  "scope": "Author local browser check and chapter11 deliberate defect/repair; not student classroom trial. No real AIRIOT.",
+  "checks": [
+    {
+      "name": "actual UI login and device ledger",
+      "passed": true,
+      "detail": "Own isolated teaching accounts; password absent from screenshots"
+    },
+    {
+      "name": "page locations",
+      "passed": true,
+      "detail": "空间归属"
+    },
+    {
+      "name": "page overview",
+      "passed": true,
+      "detail": "校园监测"
+    },
+    {
+      "name": "page history",
+      "passed": true,
+      "detail": "历史样本"
+    },
+    {
+      "name": "page cases",
+      "passed": true,
+      "detail": "事件工作台"
+    },
+    {
+      "name": "chapter11 deliberate defect",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "code": 0,
+        "items": 16,
+        "targetedTestExit": 1,
+        "pageFailed": true
+      }
+    },
+    {
+      "name": "chapter11 minimal repair",
+      "passed": true,
+      "detail": {
+        "targetedTestExit": 0,
+        "ledgerRestored": true
+      }
+    }
+  ]
+}

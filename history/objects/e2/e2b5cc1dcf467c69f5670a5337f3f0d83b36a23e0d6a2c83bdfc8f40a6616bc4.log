@@ -1,0 +1,38 @@
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend[39m
+
+ [32m✓[39m src/tests/journey-start.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m   Start at [22m 01:23:46
+[2m   Duration [22m 363ms[2m (transform 40ms, setup 0ms, import 86ms, tests 12ms, environment 206ms)[22m
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 22 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.47 kB │ gzip:  0.34 kB
+dist/assets/index-CQLMl6UL.css  21.87 kB │ gzip:  5.26 kB
+dist/assets/index-9yafhDHf.js   67.16 kB │ gzip: 26.95 kB
+✓ built in 322ms
+第01站前端检查通过，接受当前学生实现。
+尚未替你验收：改项目名后页面更新；两台设备与模拟标识清楚
+请把实际操作写到 evidence/stage-01.md，再运行 accept 01 evidence/stage-01.md。人工记录不等于工具证明。

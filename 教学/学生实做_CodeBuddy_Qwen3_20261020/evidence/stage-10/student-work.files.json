@@ -1,0 +1,7 @@
+[
+  "docs/项目卡.md",
+  "frontend/src/views/AuditView.vue",
+  "frontend/src/views/IntegrationView.vue",
+  "frontend/src/views/OwnersView.vue",
+  "journey-state.json"
+]

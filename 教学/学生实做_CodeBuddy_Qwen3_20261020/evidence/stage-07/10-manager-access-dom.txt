@@ -1,0 +1,97 @@
+跳到主要内容
+校
+校园实验室
+AI 编程 · 智慧校园
+管理人员 A
+校园管理人员
+退出 / 切换身份
+02
+首次读取
+03
+设备台账
+04
+空间归属
+05
+校园概览
+05
+能源点位
+06
+历史样本
+06
+原始报警
+07
+身份与权限
+
+第07站 · 身份与权限验证
+
+换一个人登录，权限也要换
+
+身份来自 GET /api/auth/me，能力来自 GET /api/campus/capabilities。 只有 JSON Boolean true 才显示“允许”；roles 只用于显示，不能当布尔权限。 页面只解释权限，最终判定始终在服务端。
+
+重新读取身份
+管理人员 A
+当前用户（服务端 /api/auth/me）
+manager-a
+登录账号
+1
+角色数（仅显示，不授权）
+2 / 7
+Boolean true 允许 / 能力项
+当前身份
+用户名、账号与角色都取自服务端会话；切换身份后需重新读取。
+显示名
+管理人员 A
+登录账号
+manager-a
+uid
+manager-a
+角色（仅中文标签）
+校园管理人员（CAMPUS_MANAGER）
+能力接口返回的 roles
+CAMPUS_MANAGER
+会话来源
+TEACHING_MOCK
+服务端返回的每项能力
+判定函数 strictCapability(value)：value === true 才是“允许”。
+能力值来自服务端响应；字符串 "true"、数字 1、null、undefined 与缺失字段都不是“允许”。 判定基于字段值本身，与 roles 数组无关。
+能力	字段	当前值	判定	对应入口
+
+读取校园数据
+	
+canRead
+	true	允许	GET /api/campus/**；401 与 403 分开处理
+
+控制设备
+	
+canControl
+	false	不据此授权	远端控制与外部通知关闭，服务端恒为 false
+
+维护位置
+	
+canAdmin
+	false	不据此授权	创建校园/楼栋、绑定空间等写入口
+
+查看命令审计
+	
+canAudit
+	false	不据此授权	GET /api/campus/command-audit
+
+处理事件
+	
+canHandleAlarms
+	true	允许	开始/记录/核实/关闭；CAMPUS_MANAGER 仅限本人被分派的事件
+
+分派事件
+	
+canAssignAlarms
+	false	不据此授权	把事件分派给处理人
+
+触发演练场景
+	
+canRunDemoScenarios
+	false	不据此授权	本地 DEMO 演练，仅在演示开启时允许
+
+能力在 api/auth.ts 边界已用 strictCapability 逐项归一化，本页用同一函数再次判定； 403 表示服务端按当前角色拒绝，隐藏按钮不能代替 403；401 表示会话失效，需退出后重新登录。 身份切换时 store 会清空旧 user、capabilities 与设备数据。
+
+AI 编程课程资源
+先预测 · 再操作 · 留证据

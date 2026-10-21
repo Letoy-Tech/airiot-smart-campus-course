@@ -1,0 +1,58 @@
+{
+  "version": "2.0.1",
+  "date": "2026-10-20",
+  "backend": [
+    {
+      "name": "cn.campus.course.AuthServiceTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.CaseRulesTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.InputValidationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "clean_export_backend": [
+    {
+      "name": "cn.campus.course.AuthServiceTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.CaseRulesTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.campus.course.InputValidationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "api_checks": 73,
+  "mock_checks": 18,
+  "export_guard_checks": 9,
+  "source_files": 39,
+  "reader_visual_review": false,
+  "student_codebuddy_full_run": false,
+  "windows_tested": false,
+  "docker_tested": false
+}

@@ -1,0 +1,69 @@
+{
+  "javaVersion" : "17.0.12",
+  "mysqlVersion" : "8.4.10",
+  "scenarios" : [ {
+    "scenario" : "owner_timeline_rollback",
+    "objectId" : "teaching_env_01",
+    "httpStatus" : 500,
+    "faultHit" : true,
+    "rowsAffectedBeforeFault" : 1,
+    "versionObservedInsideTransaction" : 1,
+    "connectionIds" : {
+      "before" : 20,
+      "normalControlRead" : 22,
+      "after" : 21,
+      "fault" : 16
+    },
+    "versionBefore" : 0,
+    "versionAfterFailure" : 0,
+    "timelineBefore" : 0,
+    "timelineAfterFailure" : 0,
+    "masterSnapshotUnchanged" : true,
+    "timelineSnapshotUnchanged" : true,
+    "normalControl" : {
+      "timeline" : 1,
+      "version" : 1,
+      "httpStatus" : 200
+    }
+  }, {
+    "timelineAdded" : 1,
+    "mysqlConnections" : [ 16, 17 ],
+    "versionAfter" : 1,
+    "statuses" : [ 409, 200 ],
+    "priorEventUnchanged" : true,
+    "scenario" : "owner_concurrent_update"
+  }, {
+    "scenario" : "event_timeline_rollback",
+    "objectId" : "a2dabe6a-11b8-46b0-bcd9-c0c867d525d1",
+    "httpStatus" : 500,
+    "faultHit" : true,
+    "rowsAffectedBeforeFault" : 1,
+    "versionObservedInsideTransaction" : 8,
+    "connectionIds" : {
+      "before" : 23,
+      "normalControlRead" : 25,
+      "after" : 24,
+      "fault" : 16
+    },
+    "versionBefore" : 7,
+    "versionAfterFailure" : 7,
+    "timelineBefore" : 7,
+    "timelineAfterFailure" : 7,
+    "masterSnapshotUnchanged" : true,
+    "timelineSnapshotUnchanged" : true,
+    "normalControl" : {
+      "timeline" : 8,
+      "version" : 8,
+      "httpStatus" : 200
+    }
+  }, {
+    "timelineAdded" : 1,
+    "mysqlConnections" : [ 16, 17 ],
+    "versionAfter" : 8,
+    "statuses" : [ 200, 409 ],
+    "versionBefore" : 7,
+    "scenario" : "event_concurrent_notes"
+  } ],
+  "database" : "campus_course_test",
+  "recordedAt" : "2026-10-19T15:33:31.747045Z"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:58:17.488Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "05 create campus/building and persist binding through UI",
+      "detail": {
+        "campus": "G01教学园区",
+        "building": "G01实验楼",
+        "floor": "1"
+      },
+      "passed": true
+    }
+  ]
+}

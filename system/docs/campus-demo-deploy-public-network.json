@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-05T01:56:07.230611+08:00",
+  "clientDNS": [
+    "192.0.2.206"
+  ],
+  "checks": [
+    {
+      "path": "/campus-demo/",
+      "curlExit": 0,
+      "httpTLSRemote": "200 0 192.0.2.206",
+      "bytes": 1033,
+      "sha256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b",
+      "pass": true
+    },
+    {
+      "path": "/campus-demo/campus/overview",
+      "curlExit": 0,
+      "httpTLSRemote": "200 0 192.0.2.206",
+      "bytes": 1033,
+      "sha256": "64887f4bfe1fff980c1e94384d1148e3df0b5a336012817e85b8b6208cd52d0b",
+      "pass": true
+    },
+    {
+      "path": "/campus-demo/api/actuator/health",
+      "curlExit": 0,
+      "httpTLSRemote": "200 0 192.0.2.206",
+      "bytes": 15,
+      "sha256": "647a83cca85203d6d4eb07eea84ef6eb91d5c6482eaff2ac8bb65a342b9f2946",
+      "pass": true
+    },
+    {
+      "path": "/campus-demo/assets/index-CB7Isnes.js",
+      "curlExit": 0,
+      "httpTLSMime": "200 0 application/javascript",
+      "sha256": "8221aae54f4c48988e93eaac894d258fca50902ec2ce1f422a885d53339f702d",
+      "pass": true,
+      "httpTLSRemote": "200 0 192.0.2.206",
+      "bytes": 158882
+    }
+  ],
+  "notes": [
+    "本机198.18/15地址是代理fake-IP，不能作为公网DNS或学校外网直连证据。",
+    "本机正常域名HTTPS、证书校验及文档/API/module哈希均通过。",
+    "城大服务器DNS同为192.0.2.233，接口地址主要为192.0.2.123和WireGuard192.0.2.189，未发现frps/frpc运行。公网NAT/边界网关配置未在本次范围内核实。",
+    "服务器访问自己公网域名超时（curl28）；学校外部网络没有实际验收。保留这项网络覆盖缺口，不把本机成功或回环SNI检查等同于外校网络验收。"
+  ],
+  "release": "REL_20261005-0151-SCHOOL-DEMO",
+  "publicDNS": {
+    "resolver": "AliDNS DoH",
+    "hostname": "demo.example.invalid",
+    "A": [
+      "192.0.2.233"
+    ],
+    "TTL": 600,
+    "kind": "public recursive resolver response, not authoritative nameserver"
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

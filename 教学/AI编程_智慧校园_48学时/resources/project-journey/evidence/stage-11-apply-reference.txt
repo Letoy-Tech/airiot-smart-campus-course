@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 11
+已导入完整参考：第11站。
+
+备份：journey-backups/2026-10-19T15-35-44-085Z-stage-11-apply-28f0cb
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。

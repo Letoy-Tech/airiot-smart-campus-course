@@ -1,0 +1,65 @@
+[
+  {
+    "time": 1792524027053,
+    "actor": "admin",
+    "action": "case.assign",
+    "targetId": "case-34586bbc372f",
+    "note": "分派给 manager"
+  },
+  {
+    "time": 1792524049629,
+    "actor": "manager",
+    "action": "case.start",
+    "targetId": "case-34586bbc372f",
+    "note": "开始处理"
+  },
+  {
+    "time": 1792524062806,
+    "actor": "manager",
+    "action": "case.note",
+    "targetId": "case-34586bbc372f",
+    "note": "填写处置记录"
+  },
+  {
+    "time": 1792524792774,
+    "actor": "admin",
+    "action": "case.recover",
+    "targetId": "case-34586bbc372f",
+    "note": "本地演练来源已恢复"
+  },
+  {
+    "time": 1792524818643,
+    "actor": "manager",
+    "action": "case.verify",
+    "targetId": "case-34586bbc372f",
+    "note": "核实本地演练来源恢复"
+  },
+  {
+    "time": 1792524819008,
+    "actor": "manager",
+    "action": "case.close",
+    "targetId": "case-34586bbc372f",
+    "note": "关闭事件"
+  },
+  {
+    "time": 1792526014156,
+    "actor": "admin",
+    "action": "space.update",
+    "targetId": "s1",
+    "note": "楼栋 教学楼 A（审计核对），楼层 1层"
+  },
+  {
+    "time": 1792526037413,
+    "actor": "admin",
+    "action": "owner.save",
+    "targetId": "d01",
+    "note": "负责人 manager，版本 4"
+  },
+  {
+    "time": 1792526038439,
+    "actor": "admin",
+    "action": "case.create",
+    "targetId": "case-cdb7152ececf",
+    "note": "设备 d01"
+  }
+]

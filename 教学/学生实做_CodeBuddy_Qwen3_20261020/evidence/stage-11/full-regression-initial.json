@@ -1,0 +1,25 @@
+{
+  "tests": 74,
+  "passed": 57,
+  "failed": 17,
+  "failingCases": [
+    "FAIL  src/tests/case-trigger-race.test.ts > 新建演练接管详情请求 > 旧事件详情迟到 success 不覆盖或清除新事件，也不留下旧错误",
+    "FAIL  src/tests/case-trigger-race.test.ts > 新建演练接管详情请求 > 旧事件详情迟到 forbidden 不覆盖或清除新事件，也不留下旧错误",
+    "FAIL  src/tests/case-trigger-race.test.ts > 新建演练接管详情请求 > 旧事件详情迟到 network-error 不覆盖或清除新事件，也不留下旧错误",
+    "FAIL  src/tests/case-trigger-race.test.ts > 新建演练接管详情请求 > 新事件不继承上一个事件尚未提交的分派人",
+    "FAIL  src/tests/monitoring-views.test.ts > 监测、台账和点位历史连续导航 > 概览空间与类型统计有真实筛选链接；能源四空间区分0与未知并切单位",
+    "FAIL  src/tests/monitoring-views.test.ts > 监测、台账和点位历史连续导航 > 台账读hash联合筛选，可切卡片，点位链接带稳定deviceId/tagId",
+    "FAIL  src/tests/monitoring-views.test.ts > 监测、台账和点位历史连续导航 > 历史恢复直达点位，未知ID明确错误而不查询第一台",
+    "FAIL  src/tests/monitoring-views.test.ts > 监测、台账和点位历史连续导航 > 台账两类读取均完成后15秒轮询，离页停止",
+    "FAIL  src/tests/read-pages.test.ts > 只读报警与命令审计 > 分页失败保留带原页码快照，成功空结果不伪装失败",
+    "FAIL  src/tests/read-pages.test.ts > 只读报警与命令审计 > 审计仅Boolean管理员能力可读取，权限变更清除数据",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 任意有效负责人筛选与本页状态按钮都从第一页查询",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 事件列表403清除已选详情、输入和写入口，重新登录前不重发",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 责任列表403清除缓存详情、负责人和理由，不重发变更",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > NOTE 收到409后回读新版本、保留输入，确认前不允许重放",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 责任变更409保留人选和理由，回读失败不能解除冲突",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 从URL恢复合法state但忽略旧skip，状态改变后查询skip=0",
+    "FAIL  src/tests/workflow-views.test.ts > 事件和责任的冲突交互 > 只读身份不显示业务写入口"
+  ],
+  "testsChangedByOperator": false
+}

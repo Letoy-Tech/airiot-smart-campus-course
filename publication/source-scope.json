@@ -1,0 +1,3493 @@
+{
+  "scope": "Whole AIRIOT alliance project: course, complete system, alliance documents and useful historical packages",
+  "sourceWasGitRepository": false,
+  "originalProjectPreserved": true,
+  "sourceCopiedFileCount": 12293,
+  "omissionsAndDeferredArchiveEntries": [
+    {
+      "path": "output/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "tmp/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": ".DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "AIRIOT大灣區高校產業聯盟_高校加入協議_範本.docx",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "共建协议_粤炬(澳门)科技有限公司_联盟合作修订版.docx",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "system/.private/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "system/Letoy WAGF BE/.idea/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF BE/log/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF BE/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF MG/.idea/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF MG/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF MG/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "system/Letoy WAGF MG/src/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "system/docs/campus-demo-mg-login-dark.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/campus-demo-mg-login-light.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/campus-demo-mg-login-mobile-dark.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/campus-demo-mg-login-mobile-light.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/campus-demo-mg-ui-before.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-before-visualization.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-detail-history-six-hours.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-detail-visualization-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-devices-cards-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-devices-visualization-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-devices-visualization-mobile-before.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-devices-visualization-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-energy-visualization-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-energy-visualization-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-history-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-locations-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-manager-mobile-control.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-manager-mobile-menu.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-distribution-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-mobile-final.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-visualization-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-overview-visualization-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-refresh-recovered.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/ui-viewer-mobile-detail.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-local-mobile-owners.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-local-operations.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-public-closed-case.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-public-mobile-operations.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-public-mobile-owners.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-public-operations.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/docs/screenshots/campus-demo-public-overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "system/scripts/__pycache__/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_CodeBuddy学生起点_V1.2.1.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_学生空白起点_V2.0.0.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_学生空白起点_V2.0.1.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_学生空白起点_V2.0.2.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V0.1.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V0.2_图文初稿.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V0.3_第二轮图文稿.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V0.4_图文与起步资源.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.0.1_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.0.2_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.0_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.1.0_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.1.1_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.2.0_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时_V1.2.1_完整教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_V2.0.0_手把手教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_V2.0.1_手把手教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_V2.0.2_手把手教学包.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_第04章学生起点_V0.4.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_第04至12章学生起点_V1.0.1.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_第04至12章学生起点_V1.0.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/智能软件工程教材大纲_通用版.docx",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/deliverables/学生实做源码_64步_20261021-2.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/deliverables/学生实做源码_64步_20261021.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021-2.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/deliverables/实做报告与证据_64步_20261021.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-00-ai-completion-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-10-owner-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-11-refresh-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-11-refresh-mobile-copy.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-12-export-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-12-handoff-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-12-handoff-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-file-offline-handoff.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.0.2-reader-shots/reader-v202-final-teacher-record-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/debug-image-paint.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/debug-image-viewport.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/book-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-01.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-02.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-03.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-04.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-05.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-06.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-07.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-08.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-09.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/contact-sheets/sheet-10.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/api-contract-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/api-contract-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-05-prompt-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-05-prompt-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/chapter-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/class-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/class-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/code-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/code-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/figure-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/figure-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/prompt-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/prompt-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/vue-template-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-book/vue-template-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/api-contract-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/api-contract-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/chapter-entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/chapter-entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/chapter-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/chapter-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/class-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/class-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/code-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/code-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/figure-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/figure-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/prompt-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/prompt-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-sample/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/api-contract-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/api-contract-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-05-prompt-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-05-prompt-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/chapter-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/class-task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/class-task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/code-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/code-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/figure-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/figure-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/prompt-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/prompt-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/vue-template-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round2-standalone/vue-template-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/catalog-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/catalog-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-resources/task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round3-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/catalog-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/catalog-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-resources/task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round4-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/catalog-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/catalog-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-resources/task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round5-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/catalog-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/catalog-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/task-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-resources/task-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round6-standalone/standalone-download-check.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch03-02-local-records-er-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch05-01-device-request-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch06-01-device-wireframe-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch07-01-quality-cases-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch09-02-close-gates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch10-02-future-assignment-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/ch11-02-concurrent-updates-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-01-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-01-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/round8-book/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-1.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-2.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-3.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-5.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-page-6.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/print-preview.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/sample/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/standalone/figure-in-reader.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/standalone/reader-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/illustrations/qa/standalone/reader-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/01-设备卡片.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/02-设备点位历史.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/03-校园概览与环境趋势.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/04-能源部分失败保留快照.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/05-电压同单位比较.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/06-原始报警失败保留快照.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/07-命令审计历史样本.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/08-事件处理人和状态筛选.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/09-能源390px视口.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/round10/10-只读身份审计拒绝.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/student-feedback-v121/handoff/closed-reloaded-v7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/student-feedback-v121/runtime/cases-closed-v7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/student-feedback-v121/runtime/first-read-failure.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/student-feedback-v121/runtime/migrate.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/journey/qa/student-feedback-v121/runtime/mysql-tests.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/AI编程智慧校园48学时教案.docx",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/AI编程智慧校园48学时教案.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/lesson-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/lesson-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/lessons-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/lessons-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/AI编程智慧校园48学时教案.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-1.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-10.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-11.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-12.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-13.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-14.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-15.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-17.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-18.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-19.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-2.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-20.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-21.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-22.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-23.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-24.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-25.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-3.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-5.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-6.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-8.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render/page-9.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/AI编程智慧校园48学时教案.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-1.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-10.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-11.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-12.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-13.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-14.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-15.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-17.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-18.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-19.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-2.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-20.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-21.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-22.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-23.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-24.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-25.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-26.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-27.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-28.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-29.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-3.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-30.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-31.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-32.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-33.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-34.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-35.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-36.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-37.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-5.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-6.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-8.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-final/page-9.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/AI编程智慧校园48学时教案.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-1.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-10.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-11.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-12.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-13.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-14.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-15.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-17.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-18.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-19.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-2.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-20.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-21.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-22.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-23.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-24.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-25.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-3.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-5.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-6.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-8.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/render-v2/page-9.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-html/lesson-09-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-html/lesson-09-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-html/lessons-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-html/lessons-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/AI编程智慧校园48学时教案.pdf",
+      "reason": "document-pending-metadata-review"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-1.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-10.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-11.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-12.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-13.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-14.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-15.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-17.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-18.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-19.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-2.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-20.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-21.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-22.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-23.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-24.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-25.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-26.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-27.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-28.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-29.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-3.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-30.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-31.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-32.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-33.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-34.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-35.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-36.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-37.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-5.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-6.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-8.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/lesson-plans/qa/round5-render/page-9.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/.private/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/frontend/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/campus-ai-course/frontend/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/from-zero-v2/teacher-reference/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/from-zero-v2/teacher-reference/.env",
+      "reason": "local-environment"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/from-zero-v2/teacher-reference/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/student-project/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/student-project/frontend/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/student-project/frontend/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/student-workspace/frontend/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/resources/student-workspace/frontend/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab/.env",
+      "reason": "local-environment"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab-handoff/.env",
+      "reason": "local-environment"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/campus-lab-handoff/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/__pycache__/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/keepalive.stop",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-parts/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/Docker-official.dmg",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/Docker.dmg",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-range.byte",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/01-01-browser.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/01-01-codebuddy-done.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/01-02-narrow.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/01-03-narrow.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/01-final-narrow.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/02-energy-four.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/03-d01-owner-detail-fresh.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/03-d01-owner-detail.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/03-owner-route-target.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-03-energy-power.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-04-voltage.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-d03-missing-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-d03-missing.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-d05-zero-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/04-d05-zero.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-02-history-d05-power.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-04-history-fixed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-04-power-comparison.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-04-power-fixed-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-04-voltage-before-fix.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/05-04-voltage-fixed-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-03-case1-v4.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-04-case1-closed-v7.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-05-attempt1-create-audit-missing.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-05-create-audit-fixed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-admin.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-case1-closed-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-energy-comparison.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-overview-fixed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/06-06-overview-nine-menus.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/07-04-browser-health-up.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/07-05-backend-connected.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/07-05-backend-recovered.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/07-05-backend-unavailable.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-03-health-after-migration.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-04-api-d03-null-d04-false.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-04-api-visible.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-05-device-mixed-sources.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-06-B-recovered.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-06-B-stopped-stale.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-06-first-failure-no-mock.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/08-06-mysql-restarted-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-02-health-UP.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-03-devices-unauthenticated.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-04-admin-device-detail.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-04-refresh-needs-login.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-05-admin-duty.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-05-manager-duty.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-05-viewer-duty.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-06-before-redis-restart.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-06-redis-restart-401-login.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/09-06-relogin-devices-still16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-01-healthy-ui-still-demo-overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-backend-overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-backend-power-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-backend-voltage-chart-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-backend-voltage.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-demo-energy-before-remedy.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-demo-energy-restored.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-demo-overview-before-remedy.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-demo-overview-restored.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-energy-backend-down-stale.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-energy-recovery-cleared.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-energy-visible-failure-after-fix.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-overview-backend-down-stale.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-02-overview-card-d05-detail.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-alarm-a01-d01-detail.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-d03-missing-mysql.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-d05-points-mysql-after-remedy.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-device-d05-power-history-initial.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-device-detail-initial.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-energy-d06-voltage-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-final-alarm-d01-points-mysql.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-original-alarm-readonly.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-03-point-backend-down-no-mock.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-04-admin-saved.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-04-viewer-readonly.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/10-05-stale-conflict.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-01-created-cases.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-02-manager-v4-timeline.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-03-closed-state.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-03-closed-timeline.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-03-manager-before-recovery.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-03-manager-missing-conditions.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-03-relogin-complete-timeline.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-04-admin-real-audit.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-04-viewer-audit-denied.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-down-before-visible-refresh-settled.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-down-before-visible-refresh.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-reread-baseline.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-reread-down-stale-list.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-reread-down-stale.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-05-restored-cleared.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-audit.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-closed-timeline.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-device-to-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-viewer-closed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/11-06-viewer-readonly-audit403.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-03-fresh-devices.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-03-fresh-events-empty.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-closed-after-relogin-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-d01-temperature-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-fresh-audit-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-new-auto-assigned.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-new-event-closed-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-space-after-relogin.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/12-04-viewer-audit403-full.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/docker-agreement-pending.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/docker-engine-running.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-10-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-10-version-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-10-version-prompt.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-11-create-prompt.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-12-handoff-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-12-handoff-mobile-anchored.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-12-handoff-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-00-ai-completion-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-10-owner-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-11-refresh-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-11-refresh-mobile-copy.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-12-export-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-12-handoff-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-12-handoff-mobile.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-file-offline-handoff.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/screenshots/reader-v202-final-teacher-record-desktop.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/04-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/05-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/06-completed-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/07-completed-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/08-source-public.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/09-source-public.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/10-source-public.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/11-04-attempt-1-source-public.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/11-source-public.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter01-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter02-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/snapshots/chapter03-public-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/tools/.cache/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/tools/__pycache__/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/tools/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/01-桌面入口.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/02-保存工具.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/03-手机入口.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/04-手机保存.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/05-手机正文.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/06-配图总览.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-04-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-04-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-11-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-11-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-12-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/chapter-12-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/entry-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/entry-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/resources-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/resources-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/teaching-1440.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/entry/teaching-390.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/01-设备台账.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/02-成功回信与页面失败.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/03-修复后设备台账.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/cases.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/locations.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round8-lab-browser/overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/04-first-chain.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/05-location-binding.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/07-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/09-closed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/10-conflict-after-ack.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/http/12-pagination.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/01-设备台账.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/02-成功回信与页面失败.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/03-修复后设备台账.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/cases.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/locations.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/lab-browser/overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/receiver-http/07-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/receiver-http/09-closed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/AI编程_智慧校园_48学时/walkthroughs/qa/round9/receiver-http/10-conflict-after-ack.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/.DS_Store",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/app/.private/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/app/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/app/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/app/frontend/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/model-check-deepseek-success.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/setup-codebuddy-login.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-01-student-page.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-backend-failure.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-device-response.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-pinia-hasSucceeded.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-recovered-success.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-recovery-pending.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-repaired-failure.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-02-student-http-success.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-03-detail-reloaded.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-03-full-16.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-04-binding-reloaded-confirmed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-04-binding-reloaded.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-04-viewer-confirmed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-04-viewer.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-05-energy-kw.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-05-energy-v.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-05-overview.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-06-compare-partial-failure.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-06-history-chart-visible.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-06-history-gap-zero.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-06-raw-alarms.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-07-admin-access.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-08-a-note-persisted.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-09-closed-reloaded.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-10-historical-audit.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-10-integration-pending.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-10-owner-409.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-11-case-409.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-11-catalog-points.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-11-energy-scope-fixed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-11-owner-409.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-12-fresh-closed.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/screenshots/stage-12-fresh-history.png",
+      "reason": "raw-screen-evidence-retained-locally"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-01/08-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-01/09-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/03-init.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/04-course-build.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/07-course-build-after-model.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/08-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/19-verify-after-repair.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-02/23-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/00-teacher-db-init.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/03-teacher-migrate.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/05-runtime-config.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/08-teacher-db-verification.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/09-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/18-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-03/19-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/07-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/12-negative-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/13-negative-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-04/14-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/12-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-05/13-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/24-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-06/25-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/06-viewer-write-403.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/13-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/14-access-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-07/15-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/15-permission-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/18-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-08/19-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/06-unrecovered-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/10-unverified-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/12-empty-conclusion-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/15-closed-note-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/17-no-note-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/18-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-09/19-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/22-owner-no-replay-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/24-owner-final-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/25-admin-only-read-http.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/29-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-10/30-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/04-http-baseline.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/06-http-intentional-failure.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/08-http-fault-confirmed.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/10-single-diagnosis-test.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/12-full-frontend-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/14-mysql-full.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/17-workflow-operator-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/24-pre-final-check.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/27-final-build.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/28-final-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-11/30-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/02-begin.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/04-original-db-stop.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/08-course-check.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/09-course-build.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/10-first-hand-in.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/12-fresh-install.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/13-fresh-doctor.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/14-fresh-account-init.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/15-fresh-check.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/16-fresh-build.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/17-fresh-db-init.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/18-fresh-migrate.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/19-fresh-runtime-config.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/30-fresh-db-stop.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/31-final-verify.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/33-accept.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/36-final-status.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/37-final-hand-in.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/evidence/stage-12/38-delivery-package.exit",
+      "reason": "os-or-runtime-artifact"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/.private/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/.runtime/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/backend/target/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/frontend/dist/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/handoff-run/app/frontend/node_modules/",
+      "reason": "local-runtime-dependency-cache-or-original-output"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-evidence.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/delivery/codebuddy-deepseek-source.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/share/codebuddy-deepseek-evidence.zip",
+      "reason": "archive-to-reviewed-history"
+    },
+    {
+      "path": "教学/学生实做_CodeBuddy_Qwen3_20261020/output/share/codebuddy-deepseek-source.zip",
+      "reason": "archive-to-reviewed-history"
+    }
+  ],
+  "archivePolicy": "Reviewed source contents are stored under history with current content hashes; original ZIPs stay local.",
+  "documentsPolicy": "Four DOCX and one official PDF are sanitized and retained; duplicate QA PDFs remain local.",
+  "localEditorSettingsOmitted": [
+    "system/Letoy WAGF MG/.vscode/settings.json"
+  ]
+}

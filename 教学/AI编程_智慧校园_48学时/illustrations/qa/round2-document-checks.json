@@ -1,0 +1,337 @@
+{
+  "version": "0.3",
+  "stage": "FINAL",
+  "status": "PASS",
+  "checked_at": "2026-10-18T11:47:09.271924+00:00",
+  "lab_verified": false,
+  "total_class_hours": 48,
+  "chapters": [
+    {
+      "file": "manuscript/01-软件工程入门与网页AI协作.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5385,
+      "sha256": "24e5fc23c3f97c5a6c4b73e7c54387609d6374da9fd3631004a1dbf11c0191ca"
+    },
+    {
+      "file": "manuscript/02-需求分析与项目计划.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5895,
+      "sha256": "ed3602e1157b0d6473c62a03c4a6fd3d26bac12166f50c109986c038babc9455"
+    },
+    {
+      "file": "manuscript/03-架构数据与接口设计.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 4,
+      "chinese_characters": 4903,
+      "sha256": "c85efaca9b871b1345a37373a0de44e1531ca497b6f2b51988461835c6b8dedb"
+    },
+    {
+      "file": "manuscript/04-开发环境版本控制与首次贯通.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 6248,
+      "sha256": "a6dbab48d79130c6189f7fa371077bb2b30a73ae40a6544712c78f5a14762b95"
+    },
+    {
+      "file": "manuscript/05-后端空间与设备接口.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5236,
+      "sha256": "0d389f3789a9abd57c771de168e3dd249da6a0b61a499dfc4df74b1e096f9aed"
+    },
+    {
+      "file": "manuscript/06-前端设备台账与自主UI.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5192,
+      "sha256": "c9438249b078f9da709cade0ce1b3e87513e62880688ffa0fad2eda05d98ad16"
+    },
+    {
+      "file": "manuscript/07-实时监测历史与数据质量.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5004,
+      "sha256": "45ffb310942c254d9d6c486b0443336ec790eb1746c6cc4b8f54b5fe663cef96"
+    },
+    {
+      "file": "manuscript/08-登录角色与权限验证.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5795,
+      "sha256": "d96f3e7b1f00074d7c43c72bd7b36fffcfd67ba86fc5a6fba04897f2e9218cc3"
+    },
+    {
+      "file": "manuscript/09-演练事件与状态机.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5375,
+      "sha256": "ba9dccdc27a38d5646e41c7e61bfaca62ad5092eaa39ace420431b5a8910d3c0"
+    },
+    {
+      "file": "manuscript/10-设备责任与审计追踪.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 4945,
+      "sha256": "072edb54a1176be7535ac3863763b3e2656c9cc96feb5caa40a9c29e73a6ca95"
+    },
+    {
+      "file": "manuscript/11-测试调试与质量改进.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 4,
+      "chinese_characters": 5844,
+      "sha256": "f132ea0090e9804190c9940cf9405107d37de4c372be62ab6f73d4d011e8ce64"
+    },
+    {
+      "file": "manuscript/12-构建交付变更与答辩.md",
+      "class_hours": 4,
+      "module_hours": [
+        1,
+        2,
+        1
+      ],
+      "task_cards": 1,
+      "figures": 3,
+      "chinese_characters": 5662,
+      "sha256": "2be87a8cbeeedd027220a71c17577a9bf681ad483662f3558ecb03af4435f0f5"
+    }
+  ],
+  "chapter_task_cards": 12,
+  "total_chinese_characters": 65484,
+  "chapter_figures": 38,
+  "shared_figures": 2,
+  "json_examples_parsed": 7,
+  "structural_errors": [],
+  "markdown_files": 66,
+  "local_links_checked": 650,
+  "missing_packaged_links": [],
+  "references_requiring_original_project": [
+    {
+      "from": "README.md",
+      "target": "../智能软件工程教材大纲_通用版.docx"
+    },
+    {
+      "from": "appendices/AIRIOT进阶选做.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotClient.java"
+    },
+    {
+      "from": "appendices/AIRIOT进阶选做.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/airiot/AiriotProperties.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/README.md"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/docs/api-contract.md"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../智能软件工程教材大纲_通用版.docx"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/types/campus.ts"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/api/campus.ts"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusDtos.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/dto/CampusAlarmDtos.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/store/campus.ts"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAlarmService.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V9__smart_campus_business.sql"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/resources/db/migration/V10__campus_demo_operations.sql"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/views/campus/CaseDetail.vue"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/service/CampusAlarmTests.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF BE/src/test/java/com/letoy/main/campus/controller/CampusAlarmHttpTests.java"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/__tests__/campus.spec.ts"
+    },
+    {
+      "from": "appendices/现有平台与原大纲映射.md",
+      "target": "../../../system/Letoy WAGF MG/src/__tests__/campus-navigation.spec.ts"
+    },
+    {
+      "from": "chapters/05-后端空间与设备接口.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    },
+    {
+      "from": "chapters/05-后端空间与设备接口.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusLocationService.java"
+    },
+    {
+      "from": "chapters/06-前端设备台账与自主UI.md",
+      "target": "../../../system/Letoy WAGF MG/src/views/campus/Devices.vue"
+    },
+    {
+      "from": "chapters/06-前端设备台账与自主UI.md",
+      "target": "../../../system/Letoy WAGF MG/src/types/campus.ts"
+    },
+    {
+      "from": "chapters/07-实时监测历史与数据质量.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusMonitoringService.java"
+    },
+    {
+      "from": "chapters/07-实时监测历史与数据质量.md",
+      "target": "../../../system/Letoy WAGF MG/src/composables/useResource.ts"
+    },
+    {
+      "from": "chapters/08-登录角色与权限验证.md",
+      "target": "../../../system/Letoy WAGF BE/src/main/java/com/letoy/main/campus/service/CampusAccess.java"
+    },
+    {
+      "from": "chapters/08-登录角色与权限验证.md",
+      "target": "../../../system/Letoy WAGF MG/src/store/campus.ts"
+    },
+    {
+      "from": "contracts/教学接口约定.md",
+      "target": "../../../system/docs/api-contract.md"
+    }
+  ],
+  "fence_errors": [],
+  "unchanged_figure_assets_vs_v02": 177,
+  "changed_figure_assets": [],
+  "historical_v02_reader": [
+    {
+      "file": "reading/AI编程图文初稿_V0.2_单文件.build.json",
+      "unchanged": true
+    },
+    {
+      "file": "reading/AI编程图文初稿_V0.2_单文件.html",
+      "unchanged": true
+    }
+  ],
+  "v02_archive_unchanged": true,
+  "readers": [
+    {
+      "file": "reading/index.html",
+      "sha256": "09d4f2ea00c5ddab01c27adab87ba3dc35339db5c54bc01c940ddc1cd3acfe8b",
+      "chapters": 12,
+      "figures": 40,
+      "resources": 10,
+      "qa": "illustrations/qa/round2-book/verification.json",
+      "status": "PASS"
+    },
+    {
+      "file": "reading/AI编程图文稿_V0.3_单文件.html",
+      "sha256": "a71e7141f64da81c1721c6a9167ad4507410ad9fff7fec1cf4d91ff687a9695c",
+      "chapters": 12,
+      "figures": 40,
+      "resources": 10,
+      "qa": "illustrations/qa/round2-standalone/verification.json",
+      "status": "PASS"
+    }
+  ],
+  "visual_review": "illustrations/qa/round2-visual-review.json",
+  "scope": "文稿/片段/离线阅读器与资料包检查；教学工程、实验、课堂耗时和正式教案尚未验证"
+}

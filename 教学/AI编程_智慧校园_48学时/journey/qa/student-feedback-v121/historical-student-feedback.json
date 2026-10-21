@@ -1,0 +1,144 @@
+{
+  "kind": "HISTORICAL_STUDENT_RUN_V1_2_0",
+  "date": "2026-10-20",
+  "selectedModelLabel": "CodeBuddy built-in Deepseek-V4.1-Flash",
+  "completedResponses": 44,
+  "uiCredits": 45.54,
+  "aliYunQwenRequested": false,
+  "originalReportSha256": "21adcce78666a23b6846130da3d368e4931da14d7f818bfb35c6c607a99bdab3",
+  "findings": [
+    {
+      "id": "ENV-01",
+      "stage": "02",
+      "kind": "tutorial-environment",
+      "problem": "Setting JAVA_HOME alone did not change java on PATH from 21 to17.",
+      "resolution": "Prepended $JAVA_HOME/bin in exercise terminals only.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BUILD-01",
+      "stage": "02",
+      "kind": "tutorial-ordering",
+      "problem": "The course build-before-implementation step encountered TS2614 because FirstDeviceRead stub did not export onlineLabel required by existing test.",
+      "resolution": "Fed exact error to IDE model; target implementation supplied the named export.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "UX-01",
+      "stage": "02",
+      "kind": "real-business-bug",
+      "problem": "31 passing tests did not reveal that a failed refresh silently retained the old two-device table.",
+      "resolution": "Stopped owned backend, reproduced, used Vue DevTools diagnostics, IDE model repaired independent error/stale rendering; stopped/restarted backend proof passed.",
+      "status": "RESOLVED",
+      "externalRepairRounds": 1
+    },
+    {
+      "id": "SCOPE-01",
+      "stage": "02",
+      "kind": "model-scope-deviation",
+      "problem": "Model created then deleted a temporary test despite target-only instruction.",
+      "resolution": "Preserved visible raw activity; final diff leaves tests unchanged. Future prompts explicitly forbid temporary test creation/deletion.",
+      "status": "RECORDED"
+    },
+    {
+      "id": "DB-01",
+      "stage": "03",
+      "kind": "compatibility-warning",
+      "problem": "Bundled Flyway warns MySQL8.4 newer than tested8.1.",
+      "resolution": "Two migrations actually succeeded on isolated8.4.10; frozen dependencies retained.",
+      "status": "LIMITATION_RECORDED"
+    },
+    {
+      "id": "TOOL-01",
+      "stage": "04",
+      "kind": "operator-observation",
+      "problem": "Background browser accessibility tree could lag actual DOM and capture bootstrap login transition.",
+      "resolution": "Use realtime visible DOM and verified screenshots; independent authenticated HTTP confirms persistence/403/404. Historical intermediate captures retained.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "CHECK-01",
+      "stage": "04",
+      "kind": "model-check-command",
+      "problem": "Model attempted npm test although only test:unit is defined.",
+      "resolution": "Official progress verify actually ran46tests with correct command; future prompts specify exact script.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "FLOW-01",
+      "stage": "06",
+      "kind": "cross-station-integration",
+      "problem": "Stage03 DeviceCatalog has no point-history link, Stage05 Energy has no CompareHistory wiring, despite stage06 manual flow requiring both.",
+      "resolution": "Two additional IDE model repairs: actual device/tag history links in DeviceCatalog and CompareHistory wiring in Energy. Browser tested full path, 4 success curves, one controlled failure preserving other results, and V switch. No operator business implementation.",
+      "status": "RESOLVED",
+      "externalRepairRounds": 2
+    },
+    {
+      "id": "CONTEXT-01",
+      "stage": "06",
+      "kind": "operator-rule-hardening",
+      "problem": "Teacher CODEBUDDY.md allowed reference reads in the generic course; this evaluation user forbids them. Per-prompt prohibition existed from the start, but generic metadata line could confuse future runs.",
+      "resolution": "Operator replaced only that project rule with the stricter user evaluation rule and added lesson-bundles/**/files/ to local .gitignore. No teacher answer read or imported by operator. Visible tool records do not show a forbidden full path; collapsed search tool outputs are not a forensic isolation proof.",
+      "status": "RECORDED",
+      "isOsIsolation": false
+    },
+    {
+      "id": "FLOW-02",
+      "stage": "09",
+      "kind": "cross-station-integration",
+      "problem": "begin09 enables closurePanel, but student CasesView only renders a stale placeholder and no component or recover/verify/close actions. Target-only CloseChecklist generation cannot complete the tutorial business flow.",
+      "resolution": "Separate IDE model repair wired the read-only CloseChecklist and recover/verify/close API operations in CasesView. Full UI close flow and five independent HTTP rejection probes passed; teacher backend and assembly unchanged.",
+      "status": "RESOLVED",
+      "externalRepairRounds": 1
+    },
+    {
+      "id": "REGRESSION-01",
+      "stage": "11",
+      "kind": "expanded-regression",
+      "problem": "New full suite expanded from46 to74 tests: initial57pass17fail. Failures included missing generic DOM hooks/copy plus request-race,403 clearing,409 acknowledgement lock, dual catalog reads and audit permission invalidation gaps.",
+      "resolution": "IDE-only repairs in8views; final formal verify74pass; tests/API/tools/backend byte unchanged.",
+      "status": "RESOLVED",
+      "initial": {
+        "tests": 74,
+        "passed": 57,
+        "failed": 17
+      }
+    },
+    {
+      "id": "REGRESSION-02",
+      "stage": "11",
+      "kind": "manual-business-regression",
+      "problem": "Monitoring repair derived Energy point options from all device categories. Real browser default became temperature and included humidity/lighting; unit suite fixture has onlyenergy devices and missed this.",
+      "resolution": "Extra IDE-only Energy scope repair; real16device browser showed onlypower/voltage, defaultpower and actual0kW.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "INJECT-01",
+      "stage": "11",
+      "kind": "operator-attempt",
+      "problem": "First keyboard-based fault replacement made no source change; its10pass run is not fault proof.",
+      "resolution": "Native Find/Replace One confirmed exact one-line change, then2fail/8pass; single diagnostic1fail9skipped; IDE model restored bytes exactly.",
+      "status": "RECORDED"
+    },
+    {
+      "id": "DELIVERY-01",
+      "stage": "12",
+      "kind": "export-scope",
+      "problem": "Teacher public hand-in entries included lesson-bundles, incompatible with this evaluation no-answer-export rule. Not executed before review.",
+      "resolution": "IDE-only tool repair then two real source exports; final163file manifest has no lesson-bundles/private/runtime/dependency/build paths.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "DELIVERY-02",
+      "stage": "12",
+      "kind": "first-receiver-instructions",
+      "problem": "Generated README retained generic show/apply teacher-answer instructions, duplicated backend startup and overstated DB helper existing.private refusal.",
+      "resolution": "IDE corrected README/docs before fresh execution; real fresh run succeeded; final docs include actual same-operator results and accepted12 receipt.",
+      "status": "RESOLVED"
+    }
+  ],
+  "limits": [
+    "This is historical V1.2.0 evidence, not a new AI session on V1.2.1",
+    "Same operator fresh-directory handoff, not another human/Windows/campus/AIRIOT"
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "checkedAt": 1791106842221,
+  "scope": "local TEST accounts and fixed simulated AIRIOT project",
+  "checks": [
+    {
+      "name": "live 4 spaces / 16 devices / 28 points",
+      "pass": true,
+      "counts": {
+        "expectedSpaces": 4,
+        "expectedDevices": 16,
+        "expectedPoints": 28,
+        "actualSpaces": 4,
+        "actualDevices": 16,
+        "actualPoints": 28
+      }
+    },
+    {
+      "name": "28 point qualities fresh",
+      "pass": true,
+      "qualities": [
+        "fresh"
+      ]
+    },
+    {
+      "name": "no overview issues",
+      "pass": true,
+      "issues": []
+    },
+    {
+      "name": "dedicated non-super machine identity",
+      "pass": true,
+      "identityId": "450f9cbfe167b5f30ba9cd41",
+      "isSuper": false
+    },
+    {
+      "name": "raw history env_demo_01/temperature_c",
+      "pass": true,
+      "sampleCount": 720,
+      "truncated": false
+    },
+    {
+      "name": "raw history energy_demo_01/power_kw",
+      "pass": true,
+      "sampleCount": 360,
+      "truncated": false
+    },
+    {
+      "name": "raw history facility_demo_01/run_state",
+      "pass": true,
+      "sampleCount": 720,
+      "truncated": false
+    },
+    {
+      "name": "raw history light_demo_01/illuminance_lux",
+      "pass": true,
+      "sampleCount": 720,
+      "truncated": false
+    },
+    {
+      "name": "scoped real alarm read",
+      "pass": true,
+      "sampleCount": 0,
+      "total": 0,
+      "statuses": [],
+      "levels": []
+    },
+    {
+      "name": "admin capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "SUPER_ADMIN",
+          "ADMIN",
+          "USER"
+        ],
+        "canRead": true,
+        "canControl": true,
+        "canAdmin": true,
+        "canAudit": true
+      }
+    },
+    {
+      "name": "admin self identity",
+      "pass": true
+    },
+    {
+      "name": "manager capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "CAMPUS_MANAGER"
+        ],
+        "canRead": true,
+        "canControl": true,
+        "canAdmin": false,
+        "canAudit": false
+      }
+    },
+    {
+      "name": "manager self identity",
+      "pass": true
+    },
+    {
+      "name": "viewer capability matrix",
+      "pass": true,
+      "capabilities": {
+        "roles": [
+          "CAMPUS_VIEWER"
+        ],
+        "canRead": true,
+        "canControl": false,
+        "canAdmin": false,
+        "canAudit": false
+      }
+    },
+    {
+      "name": "viewer self identity",
+      "pass": true
+    },
+    {
+      "name": "manager blocked /roles",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /groups",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /users/organization/all",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /security/api-rules",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /campus/audit",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager blocked /campus/integrations/airiot/status",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot create user",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "manager cannot map campus",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /roles",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /groups",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /users/organization/all",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /security/api-rules",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /campus/audit",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer blocked /campus/integrations/airiot/status",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot create user",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot map campus",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "viewer cannot switch",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "invalid token rejected",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "anonymous rejected",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "strict Boolean validation",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "non-control device blocked",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "unknown object blocked",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "self profile cannot change group permissions",
+      "pass": true,
+      "httpStatus": 400
+    },
+    {
+      "name": "normal refresh issues usable access token",
+      "pass": true
+    },
+    {
+      "name": "pure ADMIN disabled loses management",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "pure ADMIN disabled cannot reactivate self role",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "disabled role immediately loses capability",
+      "pass": true
+    },
+    {
+      "name": "disabled role immediately loses data",
+      "pass": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "locked account rejects existing token",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "locked account rejects login",
+      "pass": true,
+      "httpStatus": 401
+    },
+    {
+      "name": "8 initial strict Boolean states",
+      "pass": true,
+      "states": {
+        "facility_demo_01": false,
+        "facility_demo_02": false,
+        "facility_demo_03": false,
+        "facility_demo_04": false,
+        "light_demo_01": false,
+        "light_demo_02": false,
+        "light_demo_03": false,
+        "light_demo_04": false
+      }
+    },
+    {
+      "name": "facility_demo_01 write then readback",
+      "pass": true,
+      "auditId": "88fd7ef3-dbb2-4b4e-8611-34defe642bf8"
+    },
+    {
+      "name": "facility_demo_01 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "facility_demo_01 initial state restored",
+      "pass": true,
+      "auditId": "40edc959-5a49-4eb0-8d05-80ccb059cd05"
+    },
+    {
+      "name": "facility_demo_02 write then readback",
+      "pass": true,
+      "auditId": "05a2c77b-ca08-4a01-95d3-97af6c98d929"
+    },
+    {
+      "name": "facility_demo_02 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "facility_demo_02 initial state restored",
+      "pass": true,
+      "auditId": "8adc99de-d3ef-4dbf-8ba4-08322ae9722e"
+    },
+    {
+      "name": "facility_demo_03 write then readback",
+      "pass": true,
+      "auditId": "7fb9002b-d091-4f9c-9b84-c8e6eb6482f2"
+    },
+    {
+      "name": "facility_demo_03 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "facility_demo_03 initial state restored",
+      "pass": true,
+      "auditId": "620752d9-8e9a-4903-aafa-d8494a778aae"
+    },
+    {
+      "name": "facility_demo_04 write then readback",
+      "pass": true,
+      "auditId": "1a8623d0-e906-444c-88eb-c7fda5abd425"
+    },
+    {
+      "name": "facility_demo_04 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "facility_demo_04 initial state restored",
+      "pass": true,
+      "auditId": "0e3963fd-8f44-4577-a383-2e1ea2ddd6ca"
+    },
+    {
+      "name": "light_demo_01 write then readback",
+      "pass": true,
+      "auditId": "7e0e06a7-e0f0-42c8-9d3c-4b6535cc2e77"
+    },
+    {
+      "name": "light_demo_01 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "light_demo_01 initial state restored",
+      "pass": true,
+      "auditId": "b58e3590-e841-45fe-b360-94aeb5923e5f"
+    },
+    {
+      "name": "light_demo_02 write then readback",
+      "pass": true,
+      "auditId": "5827bf23-df3d-4876-8f12-0f89db02da90"
+    },
+    {
+      "name": "light_demo_02 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "light_demo_02 initial state restored",
+      "pass": true,
+      "auditId": "7bb76d22-27a9-464e-a1af-34571a2639d9"
+    },
+    {
+      "name": "light_demo_03 write then readback",
+      "pass": true,
+      "auditId": "0b9c0e84-0140-466e-b6e3-48126165e742"
+    },
+    {
+      "name": "light_demo_03 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "light_demo_03 initial state restored",
+      "pass": true,
+      "auditId": "76df2777-fd2b-4c06-8f7e-4b9074d6b1c3"
+    },
+    {
+      "name": "light_demo_04 write then readback",
+      "pass": true,
+      "auditId": "470843f3-c2d9-468b-9673-aa253706b825"
+    },
+    {
+      "name": "light_demo_04 seven other objects unchanged",
+      "pass": true
+    },
+    {
+      "name": "light_demo_04 initial state restored",
+      "pass": true,
+      "auditId": "d1781771-bdf7-415c-90d5-aae3593da062"
+    },
+    {
+      "name": "command audits persisted",
+      "pass": true,
+      "total": 22,
+      "outcomes": [
+        "CONFIRMED",
+        "DENIED"
+      ]
+    }
+  ],
+  "pass": true,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

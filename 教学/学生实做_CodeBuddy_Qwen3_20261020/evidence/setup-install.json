@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-19T16:36:42.144074+00:00",
+  "source": "https://www.codebuddy.cn/downloads/",
+  "download": "/Users/learner/Downloads/CodeBuddy-darwin-arm64-4.12.2.41207131-425ab70e-cn.dmg",
+  "sha256": "25c5aad51c8acec247e7bec048b80d50de6872effd13813f0300ec397bcadcf4",
+  "appPath": "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/CodeBuddy CN.app",
+  "version": "4.12.2",
+  "bundleId": "com.tencent.codebuddycn",
+  "commands": [
+    {
+      "args": [
+        "hdiutil",
+        "attach",
+        "-nobrowse",
+        "-readonly",
+        "-mountpoint",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount",
+        "/Users/learner/Downloads/CodeBuddy-darwin-arm64-4.12.2.41207131-425ab70e-cn.dmg"
+      ],
+      "exitCode": 0,
+      "output": "正在检查“Protective Master Boot Record（MBR：0）”的校验和…\nProtective Master Boot Record（MBR：0）：已验证CRC32 $19F5B4E1\n正在检查“GPT Header（Primary GPT Header：1）”的校验和…\n    GPT Header（Primary GPT Header：1）：已验证CRC32 $3A3C900B\n正在检查“GPT Partition Data（Primary GPT Table：2）”的校验和…\nGPT Partition Data（Primary GPT Table：已验证CRC32 $3FDCBFB5\n正在检查“（Apple_Free：3）”的校验和…\n                      （Apple_Free：3）：已验证CRC32 $00000000\n正在检查“disk image（Apple_HFS：4）”的校验和…\n             disk image（Apple_HFS：4）：已验证CRC32 $0E081092\n正在检查“（Apple_Free：5）”的校验和…\n                      （Apple_Free：5）：已验证CRC32 $00000000\n正在检查“GPT Partition Data（Backup GPT Table：6）”的校验和…\nGPT Partition Data（Backup GPT Table：：已验证CRC32 $3FDCBFB5\n正在检查“GPT Header（Backup GPT Header：7）”的校验和…\n     GPT Header（Backup GPT Header：7）：已验证CRC32 $5CF010E1\n已验证CRC32 $CC9BF9BC\nhdiutil: WARNING: 'hdiutil attach -nobrowse -readonly -mountpoint ...' is deprecated. Please use 'diskutil image attach --mountOptions nobrowse --readOnly --mountPoint ...' instead.\n/dev/disk10         \tGUID_partition_scheme          \t\n/dev/disk10s1       \tApple_HFS                      \t/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount\n"
+    },
+    {
+      "args": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount/CodeBuddy CN.app"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "args": [
+        "codesign",
+        "-dv",
+        "--verbose=2",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount/CodeBuddy CN.app"
+      ],
+      "exitCode": 0,
+      "output": "Executable=/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount/CodeBuddy CN.app/Contents/MacOS/Electron\nIdentifier=com.tencent.codebuddycn\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=771 flags=0x10000(runtime) hashes=13+7 location=embedded\nSignature size=9111\nAuthority=Developer ID Application: Tencent Technology (Shanghai) Company Limited (FN2V63AD2J)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=Oct 13, 2026 at 23:07:08\nNotarization Ticket=stapled\nInfo.plist entries=36\nTeamIdentifier=FN2V63AD2J\nRuntime Version=15.4.0\nSealed Resources version=2 rules=13 files=5158\nInternal requirements count=1 size=184\nTotal signatures=1\nChosen signature=1\n"
+    },
+    {
+      "args": [
+        "ditto",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount/CodeBuddy CN.app",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/CodeBuddy CN.app"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "args": [
+        "hdiutil",
+        "detach",
+        "/Users/learner/projects/airiot-smart-campus-course/教学/学生实做_CodeBuddy_Qwen3_20261020/.setup/mount"
+      ],
+      "exitCode": 0,
+      "output": "hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.\n\"disk10\" ejected.\n"
+    }
+  ],
+  "launched": false,
+  "modelCallExecuted": false
+}

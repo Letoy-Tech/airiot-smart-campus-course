@@ -1,0 +1,12 @@
+{
+  "status": "PASS_DOCUMENTATION_ONLY_REBIND",
+  "runtimeCodeChanged": false,
+  "executedSourceManifestSha256": "d67dc2cdddd7ef6b3a0de39395db1ecbc2fd574efdccee162e3aefa4ddca8336",
+  "finalSourceManifestSha256": "65fd71caed55554e7632beb4c0685a469db03497524e31ca3c36104063c6821e",
+  "changedGeneratedFiles": [
+    "README.md",
+    "reference/README.md"
+  ],
+  "unchangedGeneratedFileCount": 570,
+  "explanation": "只更新当前QA路径说明；源README变更及生成器README字符串变化逐项复核；所有非Markdown生成文件与已执行版本逐字节一致；不改写作者执行报告。"
+}

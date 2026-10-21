@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 2,
+  "version": "V0.3 · 第二轮修订",
+  "generatedAt": "2026-10-18T11:43:02.162Z",
+  "output": "illustrations/qa/round2-sample/reader-sample.html",
+  "sha256": "ef460510abd7b70add3ee1054235ce14301ca962b5196a9aad733bab3b31497b",
+  "mode": "SAMPLE_ONLY",
+  "embeddedImages": false,
+  "chapters": 0,
+  "figures": 1,
+  "resources": 10,
+  "dependency": {
+    "marked": "16.4.2"
+  },
+  "labVerified": false,
+  "documents": [
+    {
+      "file": "tools/fixtures/reader-round2-sample.md",
+      "frontmatterRemoved": false,
+      "sha256": "7c3d5ae9489135b021357fd7611d549ee4d5686512fe205706527e742b9c7bde",
+      "id": "sample",
+      "chapter": null,
+      "resource": false,
+      "headings": [
+        {
+          "text": "第二轮阅读器验证样张",
+          "depth": 1,
+          "slug": "第二轮阅读器验证样张",
+          "id": "sample"
+        },
+        {
+          "text": "本章任务卡",
+          "depth": 2,
+          "slug": "本章任务卡",
+          "id": "sample-本章任务卡"
+        },
+        {
+          "text": "模块一 阅读图与合同（1 学时）",
+          "depth": 2,
+          "slug": "模块一-阅读图与合同1-学时",
+          "id": "sample-模块一-阅读图与合同1-学时"
+        },
+        {
+          "text": "模块二 网页 AI 提示与代码（2 学时）",
+          "depth": 2,
+          "slug": "模块二-网页-ai-提示与代码2-学时",
+          "id": "sample-模块二-网页-ai-提示与代码2-学时"
+        },
+        {
+          "text": "网页 AI 提示",
+          "depth": 3,
+          "slug": "网页-ai-提示",
+          "id": "sample-网页-ai-提示"
+        },
+        {
+          "text": "教学代码",
+          "depth": 3,
+          "slug": "教学代码",
+          "id": "sample-教学代码"
+        },
+        {
+          "text": "结构示例",
+          "depth": 3,
+          "slug": "结构示例",
+          "id": "sample-结构示例"
+        },
+        {
+          "text": "模块三 验收与解释（1 学时）",
+          "depth": 2,
+          "slug": "模块三-验收与解释1-学时",
+          "id": "sample-模块三-验收与解释1-学时"
+        },
+        {
+          "text": "最小实验与验收",
+          "depth": 3,
+          "slug": "最小实验与验收",
+          "id": "sample-最小实验与验收"
+        },
+        {
+          "text": "课后练习",
+          "depth": 2,
+          "slug": "课后练习",
+          "id": "sample-课后练习"
+        },
+        {
+          "text": "交给下一章",
+          "depth": 2,
+          "slug": "交给下一章",
+          "id": "sample-交给下一章"
+        }
+      ],
+      "title": "第二轮阅读器验证样张",
+      "images": [
+        {
+          "id": "fig-shared-02-网页AI协作",
+          "chapter": null,
+          "stem": "shared-02-网页AI协作",
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "caption": "公共图 02　网页 AI 协作。箭头按消息发生顺序编号；一次修正仍须回到人工审查与本地核验。此图说明教学协作方法，不表示课程实验已经通过。",
+          "file": "illustrations/shared-02-网页AI协作.png",
+          "pngSha256": "542e1da3f9b576f718ad164df50decb2aa4baa8933eeec32d5771156fe880929",
+          "width": 2560,
+          "height": 2182
+        }
+      ]
+    },
+    {
+      "file": "01-课程大纲.md",
+      "frontmatterRemoved": false,
+      "sha256": "0e3d8bcbdfe0b644b4a6f0181fa4bc37fd04ea44ffacdbda822ea61e3b0bf421",
+      "id": "resource-course-outline",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "AI 编程课程大纲",
+          "depth": 1,
+          "slug": "ai-编程课程大纲",
+          "id": "resource-course-outline"
+        },
+        {
+          "text": "一 课程定位",
+          "depth": 2,
+          "slug": "一-课程定位",
+          "id": "resource-course-outline-一-课程定位"
+        },
+        {
+          "text": "二 课程完成后的能力",
+          "depth": 2,
+          "slug": "二-课程完成后的能力",
+          "id": "resource-course-outline-二-课程完成后的能力"
+        },
+        {
+          "text": "三 48 学时结构",
+          "depth": 2,
+          "slug": "三-48-学时结构",
+          "id": "resource-course-outline-三-48-学时结构"
+        },
+        {
+          "text": "四 必修作品与进阶作品",
+          "depth": 2,
+          "slug": "四-必修作品与进阶作品",
+          "id": "resource-course-outline-四-必修作品与进阶作品"
+        },
+        {
+          "text": "五 项目推进方式",
+          "depth": 2,
+          "slug": "五-项目推进方式",
+          "id": "resource-course-outline-五-项目推进方式"
+        },
+        {
+          "text": "六 学时负担与降级方法",
+          "depth": 2,
+          "slug": "六-学时负担与降级方法",
+          "id": "resource-course-outline-六-学时负担与降级方法"
+        },
+        {
+          "text": "七 成果与后续编写",
+          "depth": 2,
+          "slug": "七-成果与后续编写",
+          "id": "resource-course-outline-七-成果与后续编写"
+        }
+      ],
+      "title": "AI 编程课程大纲",
+      "images": []
+    },
+    {
+      "file": "contracts/教学接口约定.md",
+      "frontmatterRemoved": false,
+      "sha256": "370a4528505839de554516511a722cb06b0911172f822e9fc28d72d0c5d6a326",
+      "id": "resource-api-contract",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "教学接口约定",
+          "depth": 1,
+          "slug": "教学接口约定",
+          "id": "resource-api-contract"
+        },
+        {
+          "text": "通用约定",
+          "depth": 2,
+          "slug": "通用约定",
+          "id": "resource-api-contract-通用约定"
+        },
+        {
+          "text": "教学版与现有合同的明确差异",
+          "depth": 2,
+          "slug": "教学版与现有合同的明确差异",
+          "id": "resource-api-contract-教学版与现有合同的明确差异"
+        },
+        {
+          "text": "核心读取对象",
+          "depth": 2,
+          "slug": "核心读取对象",
+          "id": "resource-api-contract-核心读取对象"
+        },
+        {
+          "text": "接口模块",
+          "depth": 2,
+          "slug": "接口模块",
+          "id": "resource-api-contract-接口模块"
+        },
+        {
+          "text": "角色矩阵",
+          "depth": 2,
+          "slug": "角色矩阵",
+          "id": "resource-api-contract-角色矩阵"
+        },
+        {
+          "text": "状态和并发",
+          "depth": 2,
+          "slug": "状态和并发",
+          "id": "resource-api-contract-状态和并发"
+        },
+        {
+          "text": "教学参数与夹具基线",
+          "depth": 2,
+          "slug": "教学参数与夹具基线",
+          "id": "resource-api-contract-教学参数与夹具基线"
+        },
+        {
+          "text": "审计范围",
+          "depth": 2,
+          "slug": "审计范围",
+          "id": "resource-api-contract-审计范围"
+        }
+      ],
+      "title": "教学接口约定",
+      "images": []
+    },
+    {
+      "file": "04-考核与验收.md",
+      "frontmatterRemoved": false,
+      "sha256": "a74ded1dbeab984035c316c74b50446a40d3013c55303ada0d7ab502e01c8801",
+      "id": "resource-assessment",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "考核与验收",
+          "depth": 1,
+          "slug": "考核与验收",
+          "id": "resource-assessment"
+        },
+        {
+          "text": "评价什么",
+          "depth": 2,
+          "slug": "评价什么",
+          "id": "resource-assessment-评价什么"
+        },
+        {
+          "text": "评分建议",
+          "depth": 2,
+          "slug": "评分建议",
+          "id": "resource-assessment-评分建议"
+        },
+        {
+          "text": "评分尺度与反馈写法",
+          "depth": 2,
+          "slug": "评分尺度与反馈写法",
+          "id": "resource-assessment-评分尺度与反馈写法"
+        },
+        {
+          "text": "必修验收基线",
+          "depth": 2,
+          "slug": "必修验收基线",
+          "id": "resource-assessment-必修验收基线"
+        },
+        {
+          "text": "独立预期与避免同源错误",
+          "depth": 2,
+          "slug": "独立预期与避免同源错误",
+          "id": "resource-assessment-独立预期与避免同源错误"
+        },
+        {
+          "text": "证据等级",
+          "depth": 2,
+          "slug": "证据等级",
+          "id": "resource-assessment-证据等级"
+        },
+        {
+          "text": "答辩题示例",
+          "depth": 2,
+          "slug": "答辩题示例",
+          "id": "resource-assessment-答辩题示例"
+        },
+        {
+          "text": "最终交付清单",
+          "depth": 2,
+          "slug": "最终交付清单",
+          "id": "resource-assessment-最终交付清单"
+        }
+      ],
+      "title": "考核与验收",
+      "images": []
+    },
+    {
+      "file": "appendices/48学时实施分工.md",
+      "frontmatterRemoved": false,
+      "sha256": "45b2d44261a2cb4e6d39ecb153ad88347da58a9b14fd6b59930bd4a6abcb2c86",
+      "id": "resource-class-workload",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "48 学时实施分工",
+          "depth": 1,
+          "slug": "48-学时实施分工",
+          "id": "resource-class-workload"
+        },
+        {
+          "text": "让学生做业务判断，让重复配置有统一起点",
+          "depth": 2,
+          "slug": "让学生做业务判断让重复配置有统一起点",
+          "id": "resource-class-workload-让学生做业务判断让重复配置有统一起点"
+        },
+        {
+          "text": "一章只追踪一个任务单",
+          "depth": 2,
+          "slug": "一章只追踪一个任务单",
+          "id": "resource-class-workload-一章只追踪一个任务单"
+        },
+        {
+          "text": "超时先处理什么",
+          "depth": 2,
+          "slug": "超时先处理什么",
+          "id": "resource-class-workload-超时先处理什么"
+        },
+        {
+          "text": "转正式实验前要补齐的四项记录",
+          "depth": 2,
+          "slug": "转正式实验前要补齐的四项记录",
+          "id": "resource-class-workload-转正式实验前要补齐的四项记录"
+        }
+      ],
+      "title": "48 学时实施分工",
+      "images": []
+    },
+    {
+      "file": "templates/课堂任务单.md",
+      "frontmatterRemoved": false,
+      "sha256": "548a452ce4f6b426188d26bcb2381c3aa6d45d6c9b97c99686613526b9bf75df",
+      "id": "resource-class-task",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "课堂任务单",
+          "depth": 1,
+          "slug": "课堂任务单",
+          "id": "resource-class-task"
+        },
+        {
+          "text": "本次只完成什么",
+          "depth": 2,
+          "slug": "本次只完成什么",
+          "id": "resource-class-task-本次只完成什么"
+        },
+        {
+          "text": "先预测，再执行",
+          "depth": 2,
+          "slug": "先预测再执行",
+          "id": "resource-class-task-先预测再执行"
+        },
+        {
+          "text": "AI 建议和我的决定",
+          "depth": 2,
+          "slug": "ai-建议和我的决定",
+          "id": "resource-class-task-ai-建议和我的决定"
+        },
+        {
+          "text": "结束时交给下一位",
+          "depth": 2,
+          "slug": "结束时交给下一位",
+          "id": "resource-class-task-结束时交给下一位"
+        }
+      ],
+      "title": "课堂任务单",
+      "images": []
+    },
+    {
+      "file": "templates/AI任务卡.md",
+      "frontmatterRemoved": false,
+      "sha256": "6d287f0ed932c14f76b99c2412afc49da69dd18ae00cf18e50865a6402f5c031",
+      "id": "resource-ai-task",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "AI 任务卡模板",
+          "depth": 1,
+          "slug": "ai-任务卡模板",
+          "id": "resource-ai-task"
+        },
+        {
+          "text": "基本信息",
+          "depth": 2,
+          "slug": "基本信息",
+          "id": "resource-ai-task-基本信息"
+        },
+        {
+          "text": "本次只做什么",
+          "depth": 2,
+          "slug": "本次只做什么",
+          "id": "resource-ai-task-本次只做什么"
+        },
+        {
+          "text": "验收条件",
+          "depth": 2,
+          "slug": "验收条件",
+          "id": "resource-ai-task-验收条件"
+        },
+        {
+          "text": "发给网页 AI 的要求",
+          "depth": 2,
+          "slug": "发给网页-ai-的要求",
+          "id": "resource-ai-task-发给网页-ai-的要求"
+        },
+        {
+          "text": "实施后补填",
+          "depth": 2,
+          "slug": "实施后补填",
+          "id": "resource-ai-task-实施后补填"
+        }
+      ],
+      "title": "AI 任务卡模板",
+      "images": []
+    },
+    {
+      "file": "templates/AI接力包.md",
+      "frontmatterRemoved": false,
+      "sha256": "8054a6ff2414d6d8748eb74fe51208f5a85608461d559b5d65f18639db337f97",
+      "id": "resource-ai-handoff",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "AI 接力包模板",
+          "depth": 1,
+          "slug": "ai-接力包模板",
+          "id": "resource-ai-handoff"
+        },
+        {
+          "text": "稳定上下文",
+          "depth": 2,
+          "slug": "稳定上下文",
+          "id": "resource-ai-handoff-稳定上下文"
+        },
+        {
+          "text": "当前状态",
+          "depth": 2,
+          "slug": "当前状态",
+          "id": "resource-ai-handoff-当前状态"
+        },
+        {
+          "text": "下一步",
+          "depth": 2,
+          "slug": "下一步",
+          "id": "resource-ai-handoff-下一步"
+        },
+        {
+          "text": "交给下一位 AI 的开场语",
+          "depth": 2,
+          "slug": "交给下一位-ai-的开场语",
+          "id": "resource-ai-handoff-交给下一位-ai-的开场语"
+        },
+        {
+          "text": "接力记录",
+          "depth": 2,
+          "slug": "接力记录",
+          "id": "resource-ai-handoff-接力记录"
+        }
+      ],
+      "title": "AI 接力包模板",
+      "images": []
+    },
+    {
+      "file": "templates/需求与测试追踪表.md",
+      "frontmatterRemoved": false,
+      "sha256": "cd9f6a6ca35b4a426532f9c60c987940b77d1bcf1812596d5ff95a404b85d0fe",
+      "id": "resource-traceability",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "需求与测试追踪表",
+          "depth": 1,
+          "slug": "需求与测试追踪表",
+          "id": "resource-traceability"
+        },
+        {
+          "text": "单条用例写法",
+          "depth": 2,
+          "slug": "单条用例写法",
+          "id": "resource-traceability-单条用例写法"
+        }
+      ],
+      "title": "需求与测试追踪表",
+      "images": []
+    },
+    {
+      "file": "appendices/Qwen与网页工具说明.md",
+      "frontmatterRemoved": false,
+      "sha256": "8fd506b03e4e157ccaee36a06b8206db486be53e1bc06e45759ac0b3df3c623d",
+      "id": "resource-web-ai",
+      "chapter": null,
+      "resource": true,
+      "audience": "student",
+      "headings": [
+        {
+          "text": "Qwen 与网页工具说明",
+          "depth": 1,
+          "slug": "qwen-与网页工具说明",
+          "id": "resource-web-ai"
+        },
+        {
+          "text": "区分产品模型与工具",
+          "depth": 2,
+          "slug": "区分产品模型与工具",
+          "id": "resource-web-ai-区分产品模型与工具"
+        },
+        {
+          "text": "学生如何开始",
+          "depth": 2,
+          "slug": "学生如何开始",
+          "id": "resource-web-ai-学生如何开始"
+        },
+        {
+          "text": "一次课堂工具检查",
+          "depth": 2,
+          "slug": "一次课堂工具检查",
+          "id": "resource-web-ai-一次课堂工具检查"
+        },
+        {
+          "text": "可选接入路线",
+          "depth": 2,
+          "slug": "可选接入路线",
+          "id": "resource-web-ai-可选接入路线"
+        }
+      ],
+      "title": "Qwen 与网页工具说明",
+      "images": []
+    },
+    {
+      "file": "appendices/教师资源制作清单.md",
+      "frontmatterRemoved": false,
+      "sha256": "8db27ae33aac8887a0a6fab37d3b93df8600f524aa36abc36605d8a50f6d35db",
+      "id": "resource-teacher-resources",
+      "chapter": null,
+      "resource": true,
+      "audience": "teacher",
+      "headings": [
+        {
+          "text": "教师资源制作清单",
+          "depth": 1,
+          "slug": "教师资源制作清单",
+          "id": "resource-teacher-resources"
+        },
+        {
+          "text": "开课前必需资源",
+          "depth": 2,
+          "slug": "开课前必需资源",
+          "id": "resource-teacher-resources-开课前必需资源"
+        },
+        {
+          "text": "教师保留与学生获得的内容",
+          "depth": 2,
+          "slug": "教师保留与学生获得的内容",
+          "id": "resource-teacher-resources-教师保留与学生获得的内容"
+        },
+        {
+          "text": "待实测的运行约束",
+          "depth": 2,
+          "slug": "待实测的运行约束",
+          "id": "resource-teacher-resources-待实测的运行约束"
+        },
+        {
+          "text": "资源版本记录",
+          "depth": 2,
+          "slug": "资源版本记录",
+          "id": "resource-teacher-resources-资源版本记录"
+        }
+      ],
+      "title": "教师资源制作清单",
+      "images": []
+    }
+  ],
+  "fileDependencies": [
+    {
+      "from": "sample",
+      "target": "02-项目范围与教学架构.md",
+      "kind": "course-package"
+    },
+    {
+      "from": "resource-course-outline",
+      "target": "05-编写进度与教案转换.md",
+      "kind": "course-package"
+    },
+    {
+      "from": "resource-api-contract",
+      "target": "../../../system/docs/api-contract.md",
+      "kind": "original-project"
+    },
+    {
+      "from": "resource-web-ai",
+      "target": "03-AI协作与接力规范.md",
+      "kind": "course-package"
+    }
+  ],
+  "warnings": [
+    "需原项目的参考链接：../../../system/docs/api-contract.md"
+  ]
+}

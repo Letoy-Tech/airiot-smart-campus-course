@@ -1,0 +1,162 @@
+{
+  "state": "restore verified",
+  "checkedAt": "2026-10-05T01:49:01.598698+08:00",
+  "source": "/srv/campus-demo/backups/database-20261004T174834Z-acc30f/smart_campus_demo.sql.gz",
+  "temporaryDatabase": "campus_demo_restore_cd4d160a27ed",
+  "tableCount": 18,
+  "tableNamesEqual": true,
+  "rows": [
+    {
+      "table": "api_rule",
+      "liveRows": 63,
+      "snapshotRows": 63,
+      "restoredRows": 63,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_alarm_case",
+      "liveRows": 3,
+      "snapshotRows": 3,
+      "restoredRows": 3,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_alarm_case_event",
+      "liveRows": 11,
+      "snapshotRows": 11,
+      "restoredRows": 11,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_command_audit",
+      "liveRows": 0,
+      "snapshotRows": 0,
+      "restoredRows": 0,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_control_lock",
+      "liveRows": 8,
+      "snapshotRows": 8,
+      "restoredRows": 8,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_device_owner",
+      "liveRows": 16,
+      "snapshotRows": 16,
+      "restoredRows": 16,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_device_owner_event",
+      "liveRows": 16,
+      "snapshotRows": 16,
+      "restoredRows": 16,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_local_building",
+      "liveRows": 1,
+      "snapshotRows": 1,
+      "restoredRows": 1,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_local_campus",
+      "liveRows": 1,
+      "snapshotRows": 1,
+      "restoredRows": 1,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "campus_local_space_binding",
+      "liveRows": 4,
+      "snapshotRows": 4,
+      "restoredRows": 4,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "flyway_schema_history",
+      "liveRows": 10,
+      "snapshotRows": 10,
+      "restoredRows": 10,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "groups_info",
+      "liveRows": 5,
+      "snapshotRows": 5,
+      "restoredRows": 5,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "refresh_token",
+      "liveRows": 6,
+      "snapshotRows": 6,
+      "restoredRows": 6,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "sys_role",
+      "liveRows": 5,
+      "snapshotRows": 5,
+      "restoredRows": 5,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "sys_user_role",
+      "liveRows": 6,
+      "snapshotRows": 6,
+      "restoredRows": 6,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "token_info",
+      "liveRows": 4,
+      "snapshotRows": 4,
+      "restoredRows": 4,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "user_behavior_log",
+      "liveRows": 88,
+      "snapshotRows": 88,
+      "restoredRows": 88,
+      "snapshotEqual": true,
+      "liveEqual": true
+    },
+    {
+      "table": "user_info",
+      "liveRows": 4,
+      "snapshotRows": 4,
+      "restoredRows": 4,
+      "snapshotEqual": true,
+      "liveEqual": true
+    }
+  ],
+  "liveDatabaseRestored": false,
+  "snapshotRowCountsVerified": true,
+  "temporaryDatabaseRemoved": true,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

@@ -1,0 +1,16 @@
+Executable=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228/process/environment/docker-mount/Docker.app/Contents/MacOS/com.docker.backend
+Identifier=com.docker.docker
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20500 size=1714877 flags=0x10000(runtime) hashes=53579+7 location=embedded
+Signature size=8970
+Authority=Developer ID Application: Docker Inc (9BNSXJN65R)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Oct 19, 2026 at 15:29:48
+Info.plist entries=31
+TeamIdentifier=9BNSXJN65R
+Runtime Version=15.5.0
+Sealed Resources version=2 rules=13 files=87
+Internal requirements count=1 size=180
+Total signatures=1
+Chosen signature=1

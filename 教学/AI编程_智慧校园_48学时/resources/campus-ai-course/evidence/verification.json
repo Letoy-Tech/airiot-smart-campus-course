@@ -1,0 +1,54 @@
+{
+  "version": "0.4",
+  "generatedAt": "2026-10-18T15:25:46.273924+00:00",
+  "status": "PASS_WITH_EXPLICIT_SCOPE",
+  "scope": "first-chain local teacher reference only",
+  "courseLabVerified": false,
+  "backend": {
+    "tests": 13,
+    "result": "PASS",
+    "jdk": "17.0.6",
+    "maven": "3.8.6"
+  },
+  "frontend": {
+    "tests": 24,
+    "result": "PASS",
+    "node": "22.21.1",
+    "versions": {
+      "vue": "3.5.44",
+      "vite": "7.3.7",
+      "vitest": "4.1.12"
+    },
+    "lockSha256": "c4251b4445b3012fdf23add54639702f338e0f323cd746b02459aa1e991f156c",
+    "npmAuditTotal": 0,
+    "npmAuditProduction": 0,
+    "lockGenerator": "npm11.16.0 on Node22.21.1",
+    "installVerification": "npm10.9.4 ci on Node22.21.1"
+  },
+  "fixtures": {
+    "checkGroups": 9,
+    "qualityCases": 15,
+    "negativeCases": 14,
+    "result": "PASS"
+  },
+  "studentStart": {
+    "build": "PASS",
+    "testTotal": 24,
+    "passed": 18,
+    "expectedFailed": 6,
+    "status": "TODO_NOT_COMPLETED",
+    "verifiedAgainstFinalLock": true
+  },
+  "browserReport": "browser/verification.json",
+  "windowsVerified": false,
+  "mysqlVerified": false,
+  "airiotVerified": false,
+  "classroomTrial": false,
+  "limitations": [
+    "Windows实机未验证",
+    "教师MySQL未连接",
+    "完整事件/责任业务未实现",
+    "后端依赖/JDK未做SCA审计",
+    "课堂未试讲"
+  ]
+}

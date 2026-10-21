@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-21T04:47:26.859683",
+  "freshGeneratedOnce": true,
+  "credentialValuesCopied": false,
+  "allFourDifferentFromOriginal": true,
+  "lengths": {
+    "DB_PASSWORD": 40,
+    "MYSQL_ROOT_PASSWORD": 40,
+    "REDIS_PASSWORD": 40,
+    "DEMO_PASSWORD": 20
+  },
+  "modes": {
+    "campus-lab": "0o600",
+    "campus-lab-handoff": "0o600"
+  },
+  "envFileHashes": {
+    "campus-lab": "REDACTED_ENV_FINGERPRINT",
+    "campus-lab-handoff": "REDACTED_ENV_FINGERPRINT"
+  }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.letoy.main.behavior.mapper.UserBehaviorLogMapper">
+
+    <insert id="insertIgnore" parameterType="com.letoy.main.behavior.entity.UserBehaviorLog">
+        INSERT IGNORE INTO user_behavior_log (
+            id,
+            trace_id,
+            uid,
+            username,
+            request_method,
+            request_uri,
+            query_string,
+            request_target,
+            client_ip,
+            user_agent,
+            platform,
+            app_version,
+            outcome,
+            risk_level,
+            http_status,
+            business_code,
+            error_message,
+            duration_ms,
+            created_at
+        ) VALUES (
+            #{id},
+            #{traceId},
+            #{uid},
+            #{username},
+            #{requestMethod},
+            #{requestUri},
+            #{queryString},
+            #{requestTarget},
+            #{clientIp},
+            #{userAgent},
+            #{platform},
+            #{appVersion},
+            #{outcome},
+            #{riskLevel},
+            #{httpStatus},
+            #{businessCode},
+            #{errorMessage},
+            #{durationMs},
+            #{createdAt}
+        )
+    </insert>
+</mapper>

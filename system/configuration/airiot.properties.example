@@ -1,0 +1,7 @@
+# Copy to system/.private/airiot.properties, mode 0600, and enter your own dedicated example gateway.
+# No usable credentials are included. Leave control disabled.
+campus.airiot.base-url=
+campus.airiot.project-id=000000000000000000000001
+campus.airiot.app-key=
+campus.airiot.app-secret=
+campus.airiot.control-enabled=false

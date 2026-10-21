@@ -1,0 +1,38 @@
+$ node tools/progress.mjs verify
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+
+> campus-ai-course-frontend@0.1.0 test:unit
+> vitest --run
+
+
+ RUN  v4.1.12 /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/stage-build/app/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  06:17:20
+   Duration  319ms (transform 32ms, setup 0ms, import 72ms, tests 9ms, environment 186ms)
+
+
+> campus-ai-course-frontend@0.1.0 build
+> npm run type-check && vite build
+
+
+> campus-ai-course-frontend@0.1.0 type-check
+> vue-tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 22 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.47 kB │ gzip:  0.34 kB
+dist/assets/index-CQLMl6UL.css  21.87 kB │ gzip:  5.26 kB
+dist/assets/index-BVKZ-nT2.js   66.47 kB │ gzip: 26.65 kB
+✓ built in 232ms
+第01站前端检查通过，接受当前学生实现。
+尚未替你验收：改项目名后页面更新；两台设备与模拟标识清楚
+请把实际操作写到 evidence/stage-01.md，再运行 accept 01 evidence/stage-01.md。人工记录不等于工具证明。

@@ -1,0 +1,217 @@
+[
+  {
+    "path": ".env.example",
+    "bytes": 1476,
+    "sha256": "7f45f13f78ca05a19fffe98fe0ad89eb58573dc1e0f271e90c4828f5bdc87ebf"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 321,
+    "sha256": "6e5d953632b1f9f3c6a6f4a863428118fc808c5b97dfe067eb1f66d423089b32"
+  },
+  {
+    "path": "README.md",
+    "bytes": 659,
+    "sha256": "451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8"
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.jar",
+    "bytes": 58727,
+    "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+  },
+  {
+    "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+    "bytes": 233,
+    "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+  },
+  {
+    "path": "backend/mvnw",
+    "bytes": 10284,
+    "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+  },
+  {
+    "path": "backend/mvnw.cmd",
+    "bytes": 6734,
+    "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+  },
+  {
+    "path": "backend/pom.xml",
+    "bytes": 2434,
+    "sha256": "3f6559400755f49229608e2eb31dc66c159592e14c2e0b30c948c3af57608057"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/CampusApplication.java",
+    "bytes": 428,
+    "sha256": "fbee9eb971ab241146d666d278ae9c3666fbd6331be2b00d44b22db20a80b672"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/Device.java",
+    "bytes": 363,
+    "sha256": "490d8bbf52ec17c9c44b3bf2716328957f6d94a524798d6faa803dc15585e827"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceRepository.java",
+    "bytes": 775,
+    "sha256": "0c807650dd745732a16692e322f328cf1f188117869de14844c3b14fde84fdc1"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceRowMapper.java",
+    "bytes": 1251,
+    "sha256": "d15ac40e069948938b5e250f63e047a01940636e958f314c6ab10406ebf8f1f1"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/device/DeviceService.java",
+    "bytes": 537,
+    "sha256": "6d7007ccefba0d6ba2356e443ab062c714353e78e5b6446327ad45a639f20674"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/ApiResponse.java",
+    "bytes": 290,
+    "sha256": "629d14236dd3a3dc09dacfaeb1cc58549e6ed4e4c36852857f9f9cad317bea48"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/DeviceController.java",
+    "bytes": 862,
+    "sha256": "5635da330296ed21e3c9c17ec4c5baf8d2b19e75dc1b05d93e6332ffc8805bfc"
+  },
+  {
+    "path": "backend/src/main/java/edu/campus/v2/web/HealthController.java",
+    "bytes": 558,
+    "sha256": "fff40b1fcfd0c3e2b2b629d1d9456850afe45a02270cb7cd3976f11e2a18aabf"
+  },
+  {
+    "path": "backend/src/main/resources/application.properties",
+    "bytes": 1547,
+    "sha256": "ba71552c94b7bb91ef853bc69367ad404d7dbceff67b600431a5e7d7ca723069"
+  },
+  {
+    "path": "backend/src/main/resources/db/migration/V1__init_spaces_devices.sql",
+    "bytes": 2896,
+    "sha256": "81d93f33426fe1e336a7550aff0370afc26c0e2fd5d290c93e921cd9f96d721d"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/device/DeviceRowMapperTest.java",
+    "bytes": 1861,
+    "sha256": "29cf93685bbc95dce6c1932e77d4b12945e09545a71e5c4c729bba29cc463728"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/DeviceControllerTest.java",
+    "bytes": 2951,
+    "sha256": "7f39e570fb67c718c6c310dbeab58d0107468f8a22d03b9827aaa955ed22513f"
+  },
+  {
+    "path": "backend/src/test/java/edu/campus/v2/web/HealthControllerTest.java",
+    "bytes": 1294,
+    "sha256": "6ac97806b2433ac9234143861c795bebb5301d6b9a6a4db2b7fa45bb4f7cb6d9"
+  },
+  {
+    "path": "compose.yaml",
+    "bytes": 2042,
+    "sha256": "eaed9c5d944ba9f5c0794afd3dcab2acdd4d42e36db926fe0b879fd44ee8af7c"
+  },
+  {
+    "path": "docs/后端启动笔记.md",
+    "bytes": 12624,
+    "sha256": "c4c266d9cf02c4a245457800e9fad64c7bf39b234778af7b7493d82f55f22edd"
+  },
+  {
+    "path": "docs/页面需要的数据.md",
+    "bytes": 12108,
+    "sha256": "d20716ca82d0a9c3d4488bbb9b923a16230cb5cc86db95697477bc94cdf654b5"
+  },
+  {
+    "path": "frontend/app.js",
+    "bytes": 184216,
+    "sha256": "8b376d3ce295d7364fbcdd93324577587006362e0b33af4213ec2c7ed874e41d"
+  },
+  {
+    "path": "frontend/data-service.js",
+    "bytes": 25618,
+    "sha256": "5548d026ad0c798e17ce686a5088b9e9779755404eec4fafd36a93ae54a189fd"
+  },
+  {
+    "path": "frontend/index.html",
+    "bytes": 3817,
+    "sha256": "e474932cbfd556c1259ccb3933f3429dda5f9d9ac5108ac14ad48bb742d1c603"
+  },
+  {
+    "path": "frontend/mock-data.js",
+    "bytes": 23945,
+    "sha256": "bbec73eca47f167d197dfec9a8caeb91a69b0db9d4ba21ffbb28322193d7fcd3"
+  },
+  {
+    "path": "frontend/styles.css",
+    "bytes": 39855,
+    "sha256": "29448f57eab3208ec510ba32bb67ccd2f1911411de4f60d997ec9029e3f31660"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.jar",
+    "bytes": 58727,
+    "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+  },
+  {
+    "path": "materials/maven-wrapper/.mvn/wrapper/maven-wrapper.properties",
+    "bytes": 233,
+    "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw",
+    "bytes": 10284,
+    "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+  },
+  {
+    "path": "materials/maven-wrapper/mvnw.cmd",
+    "bytes": 6734,
+    "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+  },
+  {
+    "path": "materials/mock-campus.json",
+    "bytes": 23788,
+    "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3"
+  },
+  {
+    "path": "materials/约定卡.md",
+    "bytes": 7816,
+    "sha256": "603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83"
+  },
+  {
+    "path": "notes/01-我的第一张页面.md",
+    "bytes": 360,
+    "sha256": "c1f96690fe7900c4f5c449d1e87f01af143ab3e455f7260d5856c848f88df995"
+  },
+  {
+    "path": "notes/02-设备台账.md",
+    "bytes": 300,
+    "sha256": "42b4b65cd62d92d43a17cf9e67eeb302e8854536df3c504782c7fc7a151950da"
+  },
+  {
+    "path": "notes/03-位置和责任.md",
+    "bytes": 335,
+    "sha256": "5e2dbddadca46fe31cd51a3175a789fd5eedc007dbaadc5c4601adb8921a3543"
+  },
+  {
+    "path": "notes/04-读数和能源.md",
+    "bytes": 910,
+    "sha256": "83258a7aff5ef2574db08c5f765e96884b76bfc789249f476f080f7601a9aadd"
+  },
+  {
+    "path": "notes/05-历史和报警.md",
+    "bytes": 1841,
+    "sha256": "0654fd848537cd3d24552666a78943bd305f6316292d32da8d360bdb44ccb450"
+  },
+  {
+    "path": "notes/06-前端需要的数据.md",
+    "bytes": 5772,
+    "sha256": "88555b20dca630560c55b2a0b63328093facb8f07fb038979665788f262fb239"
+  },
+  {
+    "path": "tools/serve.mjs",
+    "bytes": 6686,
+    "sha256": "33bdb66badd2fcc3a41d4d50e4e2b87de3283027f754c73a19a3af7b512930e4"
+  },
+  {
+    "path": "tools/setup-env.mjs",
+    "bytes": 4006,
+    "sha256": "a9f37681c048f12985479a3159dc209e932865323ce6aacde0d3553056222438"
+  }
+]

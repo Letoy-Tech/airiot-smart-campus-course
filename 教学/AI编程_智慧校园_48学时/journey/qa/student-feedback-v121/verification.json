@@ -1,0 +1,1135 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T22:35:20.566559+00:00",
+  "scope": "V1.2.1学生实做反馈作者修订验证，不是新AI学生会话",
+  "currentBuildManifestSHA256": "65fd71caed55554e7632beb4c0685a469db03497524e31ca3c36104063c6821e",
+  "tools": {
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0
+  },
+  "stages": 12,
+  "referenceImportedByAuthorFixture": true,
+  "frontend": {
+    "passed": 79,
+    "failed": 0,
+    "files": 18,
+    "typeCheck": true,
+    "build": true
+  },
+  "ordinaryBackend": {
+    "tests": 50,
+    "skipped": 16,
+    "build": true
+  },
+  "mysql": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browserChecks": [
+    {
+      "label": "刷新失败保留旧快照且明确错误",
+      "status": "PASS",
+      "evidence": "runtime/first-read-backend-stopped.txt"
+    },
+    {
+      "label": "16设备目录能源范围",
+      "status": "PASS",
+      "evidence": "runtime/energy-mixed-directory.txt"
+    },
+    {
+      "label": "四空间历史比较",
+      "status": "PASS",
+      "evidence": "runtime/compare-four-success.txt"
+    },
+    {
+      "label": "部分失败保留成功快照",
+      "status": "PASS",
+      "evidence": "runtime/compare-partial-failure.txt"
+    },
+    {
+      "label": "单位切换清空旧曲线",
+      "status": "PASS",
+      "evidence": "runtime/energy-voltage-cleared.txt"
+    },
+    {
+      "label": "旧台账接入同设备点历史",
+      "status": "PASS",
+      "evidence": "runtime/catalog-to-history.txt"
+    },
+    {
+      "label": "完整关闭链及刷新持久化",
+      "status": "PASS",
+      "evidence": "runtime/cases-reloaded-v7.txt"
+    },
+    {
+      "label": "全新目录账号和库复现",
+      "status": "PASS",
+      "evidence": "handoff/closed-reloaded-v7.txt"
+    }
+  ],
+  "handoff": {
+    "status": "PASS",
+    "at": "2026-10-19T22:33:28.999026+00:00",
+    "sameOperatorAuthorReproduction": true,
+    "newDirectoryBuildActuallyExecuted": true,
+    "freshAccounts": true,
+    "freshPhysicalDatabase": true,
+    "secretsCopied": false,
+    "isolatedDatabasePort": 23491,
+    "databaseDataDirectory": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data",
+    "frontendPassed": 79,
+    "frontendTypeCheck": "PASS",
+    "frontendBuild": "PASS",
+    "backendBuild": "PASS",
+    "initialCaseCount": 0,
+    "closedVersion": 7,
+    "closedRecordPersistsAfterReload": true,
+    "historySamples": 4,
+    "nullAndZeroPreserved": true,
+    "browserErrors": [],
+    "services": {
+      "8091": [
+        {
+          "pid": 58166,
+          "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app",
+          "command": "/Users/learner/Library/Java/JavaVirtualMachines/jbr-17.0.12/Contents/Home/bin/java -jar /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/backend/target/campus-ai-course-0.1.0.jar"
+        }
+      ],
+      "5178": [
+        {
+          "pid": 58407,
+          "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/frontend",
+          "command": "node /Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/frontend/node_modules/.bin/vite"
+        }
+      ],
+      "23491": [
+        {
+          "pid": 57267,
+          "cwd": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data",
+          "command": "/opt/homebrew/opt/mysql@8.4/bin/mysqld --no-defaults --datadir=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/data --socket=/tmp/student-codebuddy-f482420fdb72/mysql.sock --pid-file=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/mysqld.pid --log-error=/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/.runtime/student-feedback-v121/handoff/app/.runtime/course-mysql/mysql.log --bind-address=127.0.0.1 --port=23491 --mysqlx=0 --secure-file-priv=NULL --innodb-buffer-pool-size=128M --max-connections=30 --skip-log-bin"
+        }
+      ]
+    },
+    "limitations": [
+      "未由另一真人接手",
+      "未执行Windows实机",
+      "未进行新的CodeBuddy模型生成会话"
+    ]
+  },
+  "cleanup": {
+    "status": "PASS",
+    "scope": "本轮作者组装与新目录交接的专属服务",
+    "ports": [
+      8091,
+      5178,
+      23491
+    ],
+    "listenersRemaining": [],
+    "historicalOrSharedServicesStopped": false
+  },
+  "testedRuntimeFiles": [
+    {
+      "path": "backend/.gitignore",
+      "sha256": "483268a8019758313942f7f069316095b2aa06f175d5b91dbd266439cc44be3a"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.jar",
+      "sha256": "46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be"
+    },
+    {
+      "path": "backend/docs/full-api.json",
+      "sha256": "8e81ddd4dc57b7538575032a4fdd173ea1fb8fcd02443572a46ae03f3bea1b7d"
+    },
+    {
+      "path": "backend/docs/round10-read-api.json",
+      "sha256": "64f354f49086c151f0647c2081358a4f2fdf61e5577a60116b3e1241be1b3502"
+    },
+    {
+      "path": "backend/mvnw",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f"
+    },
+    {
+      "path": "backend/mvnw.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9"
+    },
+    {
+      "path": "backend/pom.xml",
+      "sha256": "3f225f8176eff5795f0fc0730c7ccd0ed4436f486f5fb848aaebfb536403da89"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/Access.java",
+      "sha256": "9bac7e07eb3e605084c40d6bbf74f8e8f638ec74a3d260ccb328c02a34c5d223"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AccountAdmin.java",
+      "sha256": "b9e8feb082be58e073db8021230b1578606f94576b6faae3e3772b13b1ece3e9"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AccountDirectory.java",
+      "sha256": "89a0b555b96faf85ec313c2f0fc63c7cc37a3cb2fd085fdf04d2920ba0576e31"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AiriotReadOnlyProvider.java",
+      "sha256": "b15f3ecf911acef0e2527c47317b03000c1d8e0135c3b6ba2b6bc9703713d9ec"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiErrors.java",
+      "sha256": "e4622af3860ed2d85dc00d1b116be587ca7b4dfe0904a128030661ffa1057183"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiFailure.java",
+      "sha256": "55a12b26f7d32fd43d0d356fa76606a8c48390be741a7a3c78543c4d34060702"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/ApiResponse.java",
+      "sha256": "1905636e4d129d1fc0f04345e78f7a811af8263a795ff0368890957e64f58efb"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/AuthController.java",
+      "sha256": "2276ef34a0ce22b4ebca5eef1eb5888c34209bf0af3baa07245cf29dbbc948a9"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusController.java",
+      "sha256": "f83c3da8c1ba94f3d00322cab09733ac1864f3629fab8b6ad0ed3e7d000c042f"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusMapper.java",
+      "sha256": "e2df2450e17d6b8a0f0eca56b631aa600b075aaa3c740221e42d7c7845d280f6"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CampusProvider.java",
+      "sha256": "2d0c744ced0c574f328f4cdb96f2be53038e05e73a943d7e6a0d3b468cc63a16"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CatalogReader.java",
+      "sha256": "58e94bb8d5e9ced413c5e8fbdf88735d8be38c8f2dec8918e35c1aadbf000477"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CommandAuditController.java",
+      "sha256": "e3ea82e8a8e7715d44fa134c07c776b0a722538eb6824bfa72c649aaf54e41e1"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CoreBeans.java",
+      "sha256": "13ab8818c8c28fb4e7265aa20f7d68f6352d24d8f86e613f5aec46dffbbaa807"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CourseApplication.java",
+      "sha256": "47784795de77186cc48aaf1eb78898e279ab289f9f72855eda0ffb231a68b07a"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/CourseModels.java",
+      "sha256": "27f87d34ae68451905458189a1d4a13b210a3ebc1196a7e7f15120767e41a091"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/DatabaseSetup.java",
+      "sha256": "000e15b2c497b9ac3f5a9f77de17c06a730ef6f390ea2d8ab51eb1184c2c6535"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/DbAccountDirectory.java",
+      "sha256": "264b259bcd9bf6a5fb989eed5de25d33266629327b75bf0ead4dc250e09ba439"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/FullCampusController.java",
+      "sha256": "7df09d834888928aff70a268ce3ae283165e65f19e88a0cce7c8b1b30888b4b0"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/Inputs.java",
+      "sha256": "cf8b31d71fb96946c094afa416042cbea1d11c3e6841862cc92b9e55fb6aeb3d"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/LocalAccountDirectory.java",
+      "sha256": "adf1a3c4574fbf7b30b72ecb18d7149647159d6e1f403b382c18a8e74786ede3"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/LocationService.java",
+      "sha256": "be964353f7a612d02a01048f5fb921746d03e93f9b20fe214318cafca236cfb0"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/MockCampusProvider.java",
+      "sha256": "ed12054489a9986f13e6817bad71935bf64dc017426618bf2703535dc1b6c99a"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/OperationsService.java",
+      "sha256": "524f1daf9009e3b785a02f7e9d291444afda9b7f20cca34fedc131bc15c74d62"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+      "sha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SecurityConfiguration.java",
+      "sha256": "f864291ea7f2eb4c85a107d4ba74f7bc75168eeeef85357536dc1ccdd55ca000"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/SelectedCampusProvider.java",
+      "sha256": "c265a98bc8c3ca6fbc5a4e8aff6a29799247adc950af092dcc193bb57476db49"
+    },
+    {
+      "path": "backend/src/main/java/edu/campus/course/TeachingReadSamples.java",
+      "sha256": "6889af5ee91fdc100af770450b40e9300edcd3d3bacf53d1c35d6dbe23d51b8e"
+    },
+    {
+      "path": "backend/src/main/resources/application-first-chain.properties",
+      "sha256": "ce1ff86340be8b69f48fdd66b3112401ba6e3d2de98679161f07f4d21a02f3ef"
+    },
+    {
+      "path": "backend/src/main/resources/application-teacher-db.properties",
+      "sha256": "37e74edf18568d72507f90e8ddc692bc1614b6907dad9096efd0d8de7f8b4738"
+    },
+    {
+      "path": "backend/src/main/resources/application.properties",
+      "sha256": "81068d1660f254479b1bd81ade370285ce6d0e902bd0251478bfdd3a73c734ad"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V1__local_campus.sql",
+      "sha256": "c8860c953592a68124e4e3281e558068c405d1beef7f9c4f453978aff8a15973"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V2__full_teaching_business.sql",
+      "sha256": "728584ded2633e58994e3458f1f70f6e25c9e6521c4caea02f7b368d00870184"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/CatalogReaderTest.java",
+      "sha256": "bc1a85d614dd5268cb34d8a000818cf6f1ac195213337b4e7ed26c0659580258"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/CloseRulesTest.java",
+      "sha256": "1b756cb6e80bffd9883319e7fe5e5e177f22dcb3db32f0e4f88390c473a5ad9e"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/FirstChainTest.java",
+      "sha256": "d2a29c4ffbcf9fcfb1818de16f4c24b17059aee5b68002c598d5589e96abdc0c"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/HistoryFixtureTest.java",
+      "sha256": "9114913dc20e3f3ec982122c5d20e86e627e354263e3e3f2560c2534e89980c0"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/LocalAccountDirectoryTest.java",
+      "sha256": "06743b20fa9723e56ffab47bf29abab0c614ee8766c403e1d3af69a345b2ebf7"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/QualityPolicyTest.java",
+      "sha256": "2a39058bd28e7db6422201835298615c9f665f11269d1789a9203a8c11de2103"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/ReadFixtureValidationTest.java",
+      "sha256": "2a63521a0f59509f3f9ed171d93860998c94e320dd9bc2d502bd5300956f7e78"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/ReadOnlyModelsTest.java",
+      "sha256": "76a1be28fa76f07400cc246b18f2c5ee2e4a1648c146c97a2cf10693c05116dd"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/SnapshotConsistencyTest.java",
+      "sha256": "5d19722e2682c5cc5bca6253ae19aa8bb7c00e5ad01a466a41e924e838bfd1e2"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/SourceSelectionTest.java",
+      "sha256": "86ef636ca1d89a106a5a084c1ea95ca2e7a3322860eeb355cb56781ba4f9f841"
+    },
+    {
+      "path": "backend/src/test/java/edu/campus/course/TeacherDbTest.java",
+      "sha256": "c831d2b28b334170fcf45e669d73d8830a7d7a5ba24d6fdd25bad22119f1c1ed"
+    },
+    {
+      "path": "backend/src/test/resources/catalog-test.json",
+      "sha256": "86a6767908fb65c7543b61fff856c2f95c30561709f59c3c0d2b141c5a983890"
+    },
+    {
+      "path": "backend/tools/account-admin.mjs",
+      "sha256": "2a551c880ed82e42eff73175886453ffab4f9d8fa2035268c53126e870e483d9"
+    },
+    {
+      "path": "backend/tools/test-mysql.mjs",
+      "sha256": "a745b93016081ab2a510ba4707f80cc24a33b532e3ee91db19071b9f0dd12ef9"
+    },
+    {
+      "path": "fixtures/catalog.json",
+      "sha256": "bb99df57d84a9d2b9a89806ca8f73618012fb315a28f37f312250a6086d15e32"
+    },
+    {
+      "path": "fixtures/command-audit.json",
+      "sha256": "d6bd36b74766830f69ec5f974c5b0c2a1b412b96ab4edd307371650afb1889cb"
+    },
+    {
+      "path": "fixtures/concurrency-rollback-scenarios.json",
+      "sha256": "df3268239d838bb3236302485d69a186f7e225077a09bb9ce1b49928ede25787"
+    },
+    {
+      "path": "fixtures/history-cases.json",
+      "sha256": "0bd348b9419652d5be20849cae5764c46293f01553183b06c2902684ffb02c0e"
+    },
+    {
+      "path": "fixtures/history-series.json",
+      "sha256": "736b0c7b91db9b2e6f1f54ab54a3f81590d9ac20d1e7f49eb224578a7f0e29b6"
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "sha256": "4c9bcf1775a69cfe228c07094a8dcbd2723b89cf6a03b5886e6f2d4669d4b494"
+    },
+    {
+      "path": "fixtures/pagination-scenarios.json",
+      "sha256": "443f2540929cae509223ec64b94736fd4f829b94bc930def4db000575a58bdc2"
+    },
+    {
+      "path": "fixtures/permission-scenarios.json",
+      "sha256": "99d6453d9d067bd6543627f20f53037aeddfb1e275ca383ba2bd3d4fcdaebea4"
+    },
+    {
+      "path": "fixtures/quality-cases.json",
+      "sha256": "8645cdc3790b61ff45528fd7c692e34b5b4439a35dfeaf738c8a848058cf1278"
+    },
+    {
+      "path": "fixtures/raw-alarms.json",
+      "sha256": "4bdce72d851f7350dec8cf362068e37e14a033386f1bde22936586da3b959b26"
+    },
+    {
+      "path": "fixtures/selectors.json",
+      "sha256": "d61b6df8c6075bea7121d940990188bdf56a45353fcfb219c3bbe11cd6df37db"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "sha256": "5531971dcbe48bf8bc7ba4ca998f385c23b759dba9e06b4f74b09e6e035ca156"
+    },
+    {
+      "path": "frontend/src/api/auth.ts",
+      "sha256": "7e2850d0ba36b83652d4c1920a249dc2c051d02461b1b7de68bfb5bdc34e8262"
+    },
+    {
+      "path": "frontend/src/api/campus.ts",
+      "sha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886"
+    },
+    {
+      "path": "frontend/src/api/full.ts",
+      "sha256": "bd7c5d50fd16175c7f9820688c9cd6180625d37ef0cfee90f04209bd01c67b36"
+    },
+    {
+      "path": "frontend/src/api/http.ts",
+      "sha256": "e147f1b1367f39e352ef5779a96b51cdf324936c6f4df3b063a6879356a1ed3a"
+    },
+    {
+      "path": "frontend/src/api/read-models.ts",
+      "sha256": "5276a0a4faa810fef46fa67b75039ea51a6057631a176669c3df920d25668816"
+    },
+    {
+      "path": "frontend/src/components/CompareHistory.vue",
+      "sha256": "7b3966e7678cd9d89d9a8557dc6d4bb043413cc9667dabb0d0f875deb96be93f"
+    },
+    {
+      "path": "frontend/src/components/HistoryChart.vue",
+      "sha256": "d62129735b2b71eda146186c8d3630d6c5fd8463502a3e75e1a6f892a5760b6e"
+    },
+    {
+      "path": "frontend/src/components/ReadStatus.vue",
+      "sha256": "bb43f8b42a04daafcdca179ddc5d9143d788210f938dd10aa49850ee375890f5"
+    },
+    {
+      "path": "frontend/src/components/SourceBanner.vue",
+      "sha256": "832dc0f1a9f4e8dc1d2a473e465cd9f8d38da7ec88f5f43b5569360cb69e46d3"
+    },
+    {
+      "path": "frontend/src/composables/useReadPage.ts",
+      "sha256": "098f0efac8970ccf9bd5bc4e76c241fcaa0ae6f260d96b77bdf679ece8e80948"
+    },
+    {
+      "path": "frontend/src/composables/useRequestScope.ts",
+      "sha256": "ae06f71dfdd4ae4f147aa73ba2defdd6e4ccddf5766f2bc9c9eb8de52da1589c"
+    },
+    {
+      "path": "frontend/src/domain/course.ts",
+      "sha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df"
+    },
+    {
+      "path": "frontend/src/domain/read-models.ts",
+      "sha256": "623d3be162a3499cc494c89fa0b5a58bf8ab45cec82e6a74a53d0bb36230746f"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382"
+    },
+    {
+      "path": "frontend/src/stores/campus.ts",
+      "sha256": "1dc26b18e488fd802665b4d5e5502b554541636d81f970ae01979f6e21a59140"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9"
+    },
+    {
+      "path": "frontend/src/tests/case-trigger-race.test.ts",
+      "sha256": "feeeeb591e010ba963fa3e3d21e286e339e754cfd939f1ce4e3f5248afa1a493"
+    },
+    {
+      "path": "frontend/src/tests/catalog-navigation.test.ts",
+      "sha256": "516e408cdc9fb9cd2322f96c4599b5a2a70b8741dd674e0378dfa59596107893"
+    },
+    {
+      "path": "frontend/src/tests/closure-wiring.test.ts",
+      "sha256": "0970202bed89cf2fe3303cbcae5688051a7f5362af9c02d58fc6100d384f443c"
+    },
+    {
+      "path": "frontend/src/tests/comparison.test.ts",
+      "sha256": "452b89887eaafe185f453ca245ceb28ff35ec5a5905a4992b5bc427c5813f3e8"
+    },
+    {
+      "path": "frontend/src/tests/course-domain.test.ts",
+      "sha256": "0708d723eac4e546386cb073849a381a379860423a3f74a6cb297fd637f9ba67"
+    },
+    {
+      "path": "frontend/src/tests/energy-scope.test.ts",
+      "sha256": "b2a2b84c5825a611fc3e28862f0efe59c81c086d9b0a4f406eee8e4a1e4b5bd6"
+    },
+    {
+      "path": "frontend/src/tests/first-device-view.test.ts",
+      "sha256": "5bee297ba6341df5cb5f9d1a14ace568a5903e965b40e014e6d9fd015cbf58c9"
+    },
+    {
+      "path": "frontend/src/tests/http.test.ts",
+      "sha256": "96abd40650f370de81e8a13a413ddd46a4092aacaf6ce6e49f0d3f81aece8d70"
+    },
+    {
+      "path": "frontend/src/tests/monitoring-views.test.ts",
+      "sha256": "a2f32cdda4f0a19d5c1420ca7f6417d0b8de9db611aed1388f187a14a5726f2c"
+    },
+    {
+      "path": "frontend/src/tests/read-api.test.ts",
+      "sha256": "da55c33b1020124aa5d62ced29d1b9ab839751f0a07f85631676ec5db59ba850"
+    },
+    {
+      "path": "frontend/src/tests/read-models.test.ts",
+      "sha256": "27b363c75452a4af5d55e8737790960eab33d0ba4c8850b158224050465adb93"
+    },
+    {
+      "path": "frontend/src/tests/read-pages.test.ts",
+      "sha256": "7235756d03c901f7d08a5f5f3e9492fad2c10f4fd2d7c412ebeb56f5da105244"
+    },
+    {
+      "path": "frontend/src/tests/request-scope.test.ts",
+      "sha256": "d092ee659e8d7a7dc74f4d78add8c8a86e08f904866dab820c220194d3d1165a"
+    },
+    {
+      "path": "frontend/src/tests/request-timeout.test.ts",
+      "sha256": "64c8e7f6759ac75f593049c620bb5b8a3e3b573f7a6f972c558f8ed82cc3e73e"
+    },
+    {
+      "path": "frontend/src/tests/session-races.test.ts",
+      "sha256": "ba920c0e163740c82bf17e7a3090daabcf767ef43c70c0d2679c05fc1b65b849"
+    },
+    {
+      "path": "frontend/src/tests/workflow-views.test.ts",
+      "sha256": "795e3e9155b22f6229e49e702f7f2c81cc18c50b912ec02c4dfe9fb17a9b8a09"
+    },
+    {
+      "path": "frontend/src/types/campus.ts",
+      "sha256": "1f86657ccd5443d9a4e30bd119d34e3224f1caf0ba5f978aedb89bf727f778b0"
+    },
+    {
+      "path": "frontend/src/types/full.ts",
+      "sha256": "c00d1e200b1c833ea57fb655d494e566581877515647a0e1862269f8c1ceade7"
+    },
+    {
+      "path": "frontend/src/types/read-models.ts",
+      "sha256": "637844b31931e08182aed12d419b1d321ed5bbe979196237a63a9b63447e9d28"
+    },
+    {
+      "path": "frontend/src/views/AuditView.vue",
+      "sha256": "caef39a74f5b12484767cd1ca80b4adb5e10e6a7756659e62ccf664805de0073"
+    },
+    {
+      "path": "frontend/src/views/CasesView.vue",
+      "sha256": "20f7663b20b5bd5bdb79b90c31c53b9319b49d61437288a2b1380f27c4786eab"
+    },
+    {
+      "path": "frontend/src/views/DeviceCatalog.vue",
+      "sha256": "5b03ba88a61d1e0c6f447c4e104a66b267781454ba6436a8785880e3c3b72226"
+    },
+    {
+      "path": "frontend/src/views/EnergyView.vue",
+      "sha256": "56762c83338313edbbe6f268d0e7f4500a2981a6454637eaf837ef1450fdd07f"
+    },
+    {
+      "path": "frontend/src/views/FirstDeviceRead.vue",
+      "sha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda"
+    },
+    {
+      "path": "frontend/src/views/FullWorkspace.vue",
+      "sha256": "c866b477e6f4f460bebd776a8f5ce7d7fcbba2b58b73df4373824cc55cf810d1"
+    },
+    {
+      "path": "frontend/src/views/HistoryView.vue",
+      "sha256": "5e4cef22ef4a1e73a4f93f24fefe6566bc9b380c89837918901b2fd1e0d06b44"
+    },
+    {
+      "path": "frontend/src/views/IntegrationView.vue",
+      "sha256": "6392314c106ea43d9a86809f33ce3bc3f4230fd08febc236b0791073fb9734d0"
+    },
+    {
+      "path": "frontend/src/views/LocationsView.vue",
+      "sha256": "a6cfc7b8490449964081b32c46d56f1703bafc156d2f066c21065c29fa8737d6"
+    },
+    {
+      "path": "frontend/src/views/OverviewView.vue",
+      "sha256": "5da7b1b72466910f0b0a8c27b079b9231d4d6714c06b94a74d22c66e5f0385f9"
+    },
+    {
+      "path": "frontend/src/views/OwnersView.vue",
+      "sha256": "cac9beeb16a01a64e84cf06423dbafd9e53d1c7285d9be0b03bb97d4c58a4f3b"
+    },
+    {
+      "path": "frontend/src/views/RawAlarmsView.vue",
+      "sha256": "5444da3e3f8224c42fd96ca396c4f92b4e057aa9e12e26833ffecf4ca0770550"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0"
+    },
+    {
+      "path": "frontend/src/domain/journey-exercises.ts",
+      "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7"
+    },
+    {
+      "path": "frontend/src/views/StaticDevices.vue",
+      "sha256": "cef840cc1b08b1e9b97f95030668ea6e0fe0966a2ea43531e99f904eb2b2a455"
+    },
+    {
+      "path": "frontend/src/tests/journey-start.test.ts",
+      "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555"
+    },
+    {
+      "path": "frontend/src/tests/journey-navigation.test.ts",
+      "sha256": "3b9138876e04e60adba577e2c5634b72d5216b9a71a139a9bd779892e828ff91"
+    },
+    {
+      "path": "frontend/src/views/AccessView.vue",
+      "sha256": "1aa9380b923bdc75eea53c6170d27969b6bd3b8211cb8f47937c00a442dfc75e"
+    },
+    {
+      "path": "frontend/src/views/CloseChecklist.vue",
+      "sha256": "185ccd623fcfaf5a81d7bc8415724bc98bc289dc13c32a26488930ad07d9c05f"
+    },
+    {
+      "path": "tools/progress.mjs",
+      "sha256": "084c635139fa3cbb3bfbc91df3e5400a694b26f725eb122343391a49d0618165"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "62da89bd80bab37b268ee08e2ca872bc243130acad5dc0f8e63c590f3f6cb256"
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30"
+    },
+    {
+      "path": "tools/course.mjs",
+      "sha256": "b1073e4167d43eba60c62d5bda5d8264f880201223b1148ecb1e6f952d9431da"
+    },
+    {
+      "path": "tools/private-json.mjs",
+      "sha256": "bcdcb8caf03ae3703ae70c62d0bab131ef77009ba0dad2bd7f6ffcbd4c2b0d66"
+    },
+    {
+      "path": "tools/validate-fixtures.mjs",
+      "sha256": "164ebad2c686b96635faab41a584545243f857cce103522b5ee2056bbd43a786"
+    },
+    {
+      "path": "frontend/src/journey/registry.ts",
+      "sha256": "b69ab5e4a8fb39a37f7fd5c87f0870c9c46c76eee2f82f29253112f28f32d179"
+    },
+    {
+      "path": "frontend/src/journey/features.ts",
+      "sha256": "02c22cb01796ed97ded7993d2adf661cfff42bf44fad5847d1923971bce77b09"
+    },
+    {
+      "path": "tools/hand-in.mjs",
+      "sha256": "61e4983efe83b4b2d04cd76e37d5b0134109f518ed7aeb221f8b9b4e2e7b7d6c"
+    }
+  ],
+  "knownIntentionalSourceDifference": {
+    "path": "frontend/src/project-settings.ts",
+    "reason": "12站连续验证保留个人项目名，未覆盖为参考默认名"
+  },
+  "artifacts": [
+    {
+      "path": "build/author-verification.json",
+      "sha256": "5715d7457a0d80a5164bc10c6178d8f48a15690983823fa5dae4f357b764c243",
+      "bytes": 7328
+    },
+    {
+      "path": "build/backend-package.txt",
+      "sha256": "6cdf372795aacaded033fec0e1049907cc25d33cfd64472a46228148bc79c351",
+      "bytes": 9096
+    },
+    {
+      "path": "build/documentation-rebind-final.json",
+      "sha256": "7f532b6afc3e94db1bb465ae664c0b9d1862ab71c9a81f552c265805485ddb96",
+      "bytes": 607
+    },
+    {
+      "path": "build/documentation-rebind.json",
+      "sha256": "26e6d5094d5836aad8f6acf1b1e9d5a8d6a3c791e0205e66f2a173dbc3a6f509",
+      "bytes": 652
+    },
+    {
+      "path": "build/executed-source-manifest.json",
+      "sha256": "d67dc2cdddd7ef6b3a0de39395db1ecbc2fd574efdccee162e3aefa4ddca8336",
+      "bytes": 140178
+    },
+    {
+      "path": "build/npm-ci.txt",
+      "sha256": "87f8a934e4f9e286fd29809e4a6498b38009895c647822b69a26f4ae541955e1",
+      "bytes": 336
+    },
+    {
+      "path": "build/progress-tool-tests.txt",
+      "sha256": "57599b9cc0402a17f85ac4a1b5fe762792f516bb4ee598e5a560523b12d742a2",
+      "bytes": 5644
+    },
+    {
+      "path": "build/stage-01-verify.txt",
+      "sha256": "5ba61ea4dfe123bb2cfc1a80dfb199d176418ecd0a2939d3821a0eade3814326",
+      "bytes": 1252
+    },
+    {
+      "path": "build/stage-02-apply-reference.txt",
+      "sha256": "d45cdeb40b53ad7865bb70400a143f3ac2523b03433b969d0bac2d50341d3df2",
+      "bytes": 273
+    },
+    {
+      "path": "build/stage-02-begin.txt",
+      "sha256": "01a2d71726548b6fd536e03049c57263c30bc3b9b8e7d51deb0248691171a67d",
+      "bytes": 4481
+    },
+    {
+      "path": "build/stage-02-build-backend-before-business.txt",
+      "sha256": "d0931494c2efaed84ab3ef00e09dd71b9ccfacc22d48d6f94b5b8a89a1d30d4d",
+      "bytes": 9616
+    },
+    {
+      "path": "build/stage-02-environment.txt",
+      "sha256": "c83550bd4ab250f37b8e8775083ec93ff4f9903fe2062ac8e6d6abb7b4f0852e",
+      "bytes": 200
+    },
+    {
+      "path": "build/stage-02-verify.txt",
+      "sha256": "a713d47d089b985219f006f84b13ed62f80fa9297704328cc84a780c78032b4b",
+      "bytes": 1356
+    },
+    {
+      "path": "build/stage-03-apply-reference.txt",
+      "sha256": "009920662612473b5d8d33e46747b5d1df37e53961b8a3ec23d557f101a3147c",
+      "bytes": 271
+    },
+    {
+      "path": "build/stage-03-begin.txt",
+      "sha256": "48a0ac4cf9eaecfe806746db0dce8151725b10c7622c4a15a257953218be31f9",
+      "bytes": 663
+    },
+    {
+      "path": "build/stage-03-verify.txt",
+      "sha256": "85d37cc3d5f440d3051897af9c4456604fb707d337a164b334ea0218e3be413c",
+      "bytes": 1720
+    },
+    {
+      "path": "build/stage-04-apply-reference.txt",
+      "sha256": "b922bf5c5e70945fb3f25cce52c6b0e44518d717f260639ceaa56a86f0083986",
+      "bytes": 271
+    },
+    {
+      "path": "build/stage-04-begin.txt",
+      "sha256": "f03e0018db8d3d4afd5ac60d2a0b8fb9e1263bdb4551b2b4cc36cceb838726ca",
+      "bytes": 335
+    },
+    {
+      "path": "build/stage-04-verify.txt",
+      "sha256": "35a314b63346f25c9849453fefa9016034dbbe6f3d57c772f07860f0560c3275",
+      "bytes": 1921
+    },
+    {
+      "path": "build/stage-05-apply-reference.txt",
+      "sha256": "b694f559d083f6ad50546d3edfb22b96f192d8ac95cf3276256f6fda5ebe00c1",
+      "bytes": 306
+    },
+    {
+      "path": "build/stage-05-begin.txt",
+      "sha256": "934ddfbfa7661b7ae31b23ad62c82d50bc61de1a60ae00c1c7b7089a65038574",
+      "bytes": 500
+    },
+    {
+      "path": "build/stage-05-verify.txt",
+      "sha256": "cbf8c827da2a1bed09eb05bd663a58fa1c9a17234a9d252d301f25defc60c344",
+      "bytes": 2803
+    },
+    {
+      "path": "build/stage-06-apply-reference.txt",
+      "sha256": "eb7618a9e3bae78b7836e8b078d9e90494f9b78eec0e64b6273c85a6ae25dcbb",
+      "bytes": 308
+    },
+    {
+      "path": "build/stage-06-begin.txt",
+      "sha256": "8323f6c10e5be036948c786f2b8d71824326f613c4927734d0591ec7d5bfe9b0",
+      "bytes": 649
+    },
+    {
+      "path": "build/stage-06-verify.txt",
+      "sha256": "beac6622bc5f95afb6c79e68bdf8f38c0f0fec39d68d01014d140bd8765a1143",
+      "bytes": 3135
+    },
+    {
+      "path": "build/stage-07-apply-reference.txt",
+      "sha256": "d6a64782558b6815f75e8316f618b9af6cb1d29e51960dc03451534714c28a59",
+      "bytes": 268
+    },
+    {
+      "path": "build/stage-07-begin.txt",
+      "sha256": "a2da6059a529b331aa34a635a98c73d7505d947419031b725b870da56828b16e",
+      "bytes": 332
+    },
+    {
+      "path": "build/stage-07-verify.txt",
+      "sha256": "43d8207933e549976f760fa0f9c01a66c70bb69671a31a53a2f9d82e4b3ef3ef",
+      "bytes": 3227
+    },
+    {
+      "path": "build/stage-08-apply-reference.txt",
+      "sha256": "5232711f024e82a81bcf6c10a94d82c13b8b62775be84e269429de88fdf45d85",
+      "bytes": 267
+    },
+    {
+      "path": "build/stage-08-begin.txt",
+      "sha256": "222143a641d3a08fda27280d576b90c57e0482235921a06a8f924e41ac606251",
+      "bytes": 378
+    },
+    {
+      "path": "build/stage-08-verify.txt",
+      "sha256": "eb474cda8b936b7c485d0a1b3a7f7925963184dbfa14772936817e9a2a0fc580",
+      "bytes": 3347
+    },
+    {
+      "path": "build/stage-09-apply-reference.txt",
+      "sha256": "2fbba20c038d4f2c317b647164acd1fe074ced3143cd7af4665d3bd4bcdeb5f5",
+      "bytes": 272
+    },
+    {
+      "path": "build/stage-09-begin.txt",
+      "sha256": "7d7a5a06e6760ac958d644c0b3b679d4c07b5d57f5b130942f0f81c72c012ad2",
+      "bytes": 345
+    },
+    {
+      "path": "build/stage-09-verify.txt",
+      "sha256": "07245c43462d20b3c0a90994c6be3e9e10b4d7464ee34f5e26a4d055cedba740",
+      "bytes": 3337
+    },
+    {
+      "path": "build/stage-10-apply-reference.txt",
+      "sha256": "1c1bf8d2e9684412c3cb3c0f8c8bd75ae3ee0dd61d358bea695aacda42201ca3",
+      "bytes": 344
+    },
+    {
+      "path": "build/stage-10-begin.txt",
+      "sha256": "f8e4b13c7f5233717fc8a8aee081c769216f659932d073b4cc8fd5d1454724d5",
+      "bytes": 540
+    },
+    {
+      "path": "build/stage-10-verify.txt",
+      "sha256": "d8cafa70a7ac9dbe1dc7ea0cb5c020bd31d1b0ad039d0ae351d4e318def228b5",
+      "bytes": 3905
+    },
+    {
+      "path": "build/stage-11-apply-reference.txt",
+      "sha256": "f0803df6f4b4f32cff05040171f9c1388ef98399e5fb91a0c1a2bac7ce0d8693",
+      "bytes": 233
+    },
+    {
+      "path": "build/stage-11-begin.txt",
+      "sha256": "89d1e4ba393f42000b4c2aee0948d89d8a808a73ad224f7de595a38ee0f8faa9",
+      "bytes": 284
+    },
+    {
+      "path": "build/stage-11-verify.txt",
+      "sha256": "86b820d95af4f6d15a2c2dadadb99a5c7bea762bba85f5a8236a088f66da99c4",
+      "bytes": 3876
+    },
+    {
+      "path": "build/stage-12-apply-reference.txt",
+      "sha256": "5efc48614c02d74f9bf179f03bcb51bad82ffb0ac29575fd04269aa768664537",
+      "bytes": 233
+    },
+    {
+      "path": "build/stage-12-begin.txt",
+      "sha256": "4b0502fa82a8965d26f2494382b2166311350e5f40176c303029c2501220013b",
+      "bytes": 327
+    },
+    {
+      "path": "build/stage-12-verify.txt",
+      "sha256": "7f523e3eb56138ed4a64eb696d1ed7f744a05de2c8f229baf454af844bfc1b19",
+      "bytes": 3886
+    },
+    {
+      "path": "cleanup.json",
+      "sha256": "4a1860f0e5bf572923e15e2cc2d3f05aafc60985a6d4e6a764cb8ceeb3927210",
+      "bytes": 211
+    },
+    {
+      "path": "handoff/backend-db.txt",
+      "sha256": "9acfc80f49c0d057e9cdb5e8a60487b30c20b15d69222b540a93c854da081b41",
+      "bytes": 4372
+    },
+    {
+      "path": "handoff/build.txt",
+      "sha256": "3b1953a0420f95b03f84ad4f2ea0ef314d59b58e8cd122f3d9fd7bd434ca9e66",
+      "bytes": 12364
+    },
+    {
+      "path": "handoff/cases-empty.txt",
+      "sha256": "2839f1a24962aec6d2ab0b4d0aaa3bd6be299c0ef3ba1a4d038f2ebe8e5b524a",
+      "bytes": 1500
+    },
+    {
+      "path": "handoff/check.txt",
+      "sha256": "ff560652a383d7c446135cd7847a2a7010c964ad67ade65599609956dafadb2c",
+      "bytes": 9370
+    },
+    {
+      "path": "handoff/closed-reloaded-v7.png",
+      "sha256": "a2f867c1e90ee2d4a19e61476534ffdb8150aca4681aac22325cfa4a46127477",
+      "bytes": 162587
+    },
+    {
+      "path": "handoff/closed-reloaded-v7.txt",
+      "sha256": "300758a5e584658a88ca97d8f8a92fdeaee4de0ac41a4d324b0d634b6d2f5194",
+      "bytes": 2959
+    },
+    {
+      "path": "handoff/closed-v7.txt",
+      "sha256": "7e6c15554266db6fe81b2279ab2db8512af1e2ad7a8b6d50bae2e8e4359f7d53",
+      "bytes": 3019
+    },
+    {
+      "path": "handoff/commands.json",
+      "sha256": "2998a04b3ecf67a5fbd43c08ccf71474ca14b0440e66ea245bf9002aeab3b5f0",
+      "bytes": 1173
+    },
+    {
+      "path": "handoff/doctor.txt",
+      "sha256": "3edee7c1643f172f0e362a6617c229ee0652a33d93943df3a86927c709e9bba9",
+      "bytes": 172
+    },
+    {
+      "path": "handoff/frontend.txt",
+      "sha256": "932d6bba8254774b07389a6be4b1e91f7dbac72209b5b2c6ebc786a45ad360be",
+      "bytes": 155
+    },
+    {
+      "path": "handoff/history-fresh-directory.txt",
+      "sha256": "edd0860ea022770cfd9a854a14f0ea9c380d2dd30149b44480e4cb1326a8f58f",
+      "bytes": 1934
+    },
+    {
+      "path": "handoff/init.txt",
+      "sha256": "36d14218ce4510bd656360b529e0306b287d14726f0760bbee85926573e1090e",
+      "bytes": 142
+    },
+    {
+      "path": "handoff/migrate.txt",
+      "sha256": "c3cc964bbc721c6acdfc93e1c996cf83f5e2f6d2833f6c7cf6dfd1dc412055be",
+      "bytes": 4198
+    },
+    {
+      "path": "handoff/npm-ci.txt",
+      "sha256": "f7bdc453798cdc048715b6a5daced97a4ae80f434b6ae0aeb0cd86ae58f9ab67",
+      "bytes": 306
+    },
+    {
+      "path": "handoff/rebuild-summary.json",
+      "sha256": "5c30dd5422033b3d54f5c646db422ebeb33ec6c501b7e0e412ce072280b7e571",
+      "bytes": 2889
+    },
+    {
+      "path": "historical-student-feedback.json",
+      "sha256": "ec8fb388099395cba658bb55a6809472fe4a2accd149ced4874f1436b8c865ea",
+      "bytes": 7420
+    },
+    {
+      "path": "runtime/account-init.txt",
+      "sha256": "2d7662176edc7e59d87d3810e299531da371f0a3871a69e69e2926037e9122f3",
+      "bytes": 307
+    },
+    {
+      "path": "runtime/backend-db.txt",
+      "sha256": "49fde8bc4e4625d78e8ecdedcf77aaa060d2fc5977369639afb4c71afc2b333d",
+      "bytes": 4381
+    },
+    {
+      "path": "runtime/cases-closed-v7.png",
+      "sha256": "dee86b83f8bb8186cbca21fecf68a355486de9c41f27956caa7ee676049b3615",
+      "bytes": 168638
+    },
+    {
+      "path": "runtime/cases-closed-v7.txt",
+      "sha256": "eaa029332a180f7d6de87b3a81d517e9f2da85352a3fbc3877c0a29f9997126e",
+      "bytes": 3043
+    },
+    {
+      "path": "runtime/cases-empty-new-database.txt",
+      "sha256": "2839f1a24962aec6d2ab0b4d0aaa3bd6be299c0ef3ba1a4d038f2ebe8e5b524a",
+      "bytes": 1500
+    },
+    {
+      "path": "runtime/cases-reloaded-v7.txt",
+      "sha256": "88cf9b7304c71763bda032a04bf5a858f90b1bb02df54d2238eacca67fdc9260",
+      "bytes": 2983
+    },
+    {
+      "path": "runtime/catalog-to-history.txt",
+      "sha256": "a1e32ce0b25dcbf7f1f64e08a6190a7705089da3633ac08b81f617b2465c5aeb",
+      "bytes": 1934
+    },
+    {
+      "path": "runtime/compare-four-success.txt",
+      "sha256": "e69f9237d42942ec615e203b64bc47f809f632812c9f9cae66561e7d146ebedc",
+      "bytes": 2718
+    },
+    {
+      "path": "runtime/compare-partial-failure.txt",
+      "sha256": "270490e73591673f14a34ad89d0653c837263a0b4fa51a3fbe47587cd76487d0",
+      "bytes": 2926
+    },
+    {
+      "path": "runtime/database-init.txt",
+      "sha256": "5a4a9d84838564cac456d7dfd90376735f349c63976f8a46a3456987a2d54410",
+      "bytes": 179
+    },
+    {
+      "path": "runtime/energy-mixed-directory.txt",
+      "sha256": "8d9154fe999429f6f485994aca1a7586e8cb1f36aa7501454bce0570ef067be8",
+      "bytes": 2422
+    },
+    {
+      "path": "runtime/energy-voltage-cleared.txt",
+      "sha256": "fc96456812316a4b567eda3347f1cb0e310a24b10a06fd3da9bd75b926dae04d",
+      "bytes": 2418
+    },
+    {
+      "path": "runtime/first-chain.log",
+      "sha256": "f0ff37263bbbd704521f9ee728317505919261d33e8631bd0a71ac657da525c7",
+      "bytes": 3504
+    },
+    {
+      "path": "runtime/first-read-backend-stopped.txt",
+      "sha256": "c433c14b6bc2ad9102111709ea443d9dd4494f3220c790404baf00a9a059ddc5",
+      "bytes": 2057
+    },
+    {
+      "path": "runtime/first-read-failure.png",
+      "sha256": "fc7bcc6828b3318535bda3b3a4bb0aa58f6593f9a2512842f515f25fb5c746f8",
+      "bytes": 77884
+    },
+    {
+      "path": "runtime/first-read-success.txt",
+      "sha256": "5c84c95db90b7d9eba6bf8145af4887eaef1ee13cf86f9412832cdabf9fb875e",
+      "bytes": 1859
+    },
+    {
+      "path": "runtime/frontend.log",
+      "sha256": "97b5255b7b3d5a99a8ab825d4d82873dfd7eb3aebe3c7ccf75dac0dc60a03824",
+      "bytes": 492
+    },
+    {
+      "path": "runtime/handoff-export.json",
+      "sha256": "37171b6080c4a4591a609a78135d6dcce4cec855606e6c829c5f2ad6f06bb125",
+      "bytes": 402
+    },
+    {
+      "path": "runtime/migrate.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "runtime/migrate.txt",
+      "sha256": "1499290211ddd74d3dc8bbe7c198aad914870c96ff3ca4a07d77ca73372bf02f",
+      "bytes": 4205
+    },
+    {
+      "path": "runtime/mysql-snapshot-evidence.json",
+      "sha256": "b6331683322e0c49f1f34c1e4e2f03b6da9e4f83e01de1041a7be2fe0a8f175f",
+      "bytes": 1207
+    },
+    {
+      "path": "runtime/mysql-test-summary.json",
+      "sha256": "a29aee762def7a522365e8bb95a1e57f54400dd937942ecc69e65a066d9681c6",
+      "bytes": 1787
+    },
+    {
+      "path": "runtime/mysql-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "runtime/mysql-tests.txt",
+      "sha256": "bc7bb24fcf8bf5e695707e7a7603ca1b9acf06ce2f2a32313edeed388608a283",
+      "bytes": 16105
+    },
+    {
+      "path": "runtime/mysql-transaction-evidence.json",
+      "sha256": "081b28845846b25ce67802a160a43650279c36050ce16e4eabbded347b434835",
+      "bytes": 1824
+    },
+    {
+      "path": "runtime/runtime-config.txt",
+      "sha256": "317bc00853e182a9f5ce400b7a9f65d7cd018d2446dd5d7987c9e9e0d2c16e1f",
+      "bytes": 123
+    },
+    {
+      "path": "runtime/tool-tests.txt",
+      "sha256": "1e20c1fb680adaad86d10ec1b3cde5a011b85ed7395c17f33ff869a1c2de34c5",
+      "bytes": 6778
+    }
+  ],
+  "authorReportLogResolution": "build/author-verification.json保留执行时内容；其中evidence/日志在本目录build/下按同名解析。",
+  "limitations": {
+    "offlineHtmlBrowserRetestedThisRound": false,
+    "offlineHtmlStaticOnly": true,
+    "windowsPhysicalMachine": false,
+    "anotherHumanHandoff": false,
+    "classroomTrial": false,
+    "schoolDatabase": false,
+    "realAiriot": false,
+    "realQwenSessionThisRevision": false,
+    "realCodeBuddyStudentSessionThisRevision": false,
+    "realModelThisRevision": "NOT_RUN",
+    "historicalStudentRunPreserved": true,
+    "sameOperatorAuthorHandoff": true
+  }
+}

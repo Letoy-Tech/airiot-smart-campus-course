@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "scope": "No-DB Maven test. MySQL suites skipped by environment gate; MockMvc is in-process, no service/socket started.",
+  "java": "Oracle JDK17.0.6",
+  "totals": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 16
+  },
+  "executed": 34,
+  "suites": [
+    {
+      "name": "edu.campus.course.CatalogReaderTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.016"
+    },
+    {
+      "name": "edu.campus.course.CloseRulesTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.002"
+    },
+    {
+      "name": "edu.campus.course.FirstChainTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.01"
+    },
+    {
+      "name": "edu.campus.course.HistoryFixtureTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.128"
+    },
+    {
+      "name": "edu.campus.course.LocalAccountDirectoryTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.331"
+    },
+    {
+      "name": "edu.campus.course.QualityPolicyTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.017"
+    },
+    {
+      "name": "edu.campus.course.ReadFixtureValidationTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.024"
+    },
+    {
+      "name": "edu.campus.course.ReadOnlyModelsTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.249"
+    },
+    {
+      "name": "edu.campus.course.SnapshotConsistencyTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "5",
+      "time": "0.0"
+    },
+    {
+      "name": "edu.campus.course.SourceSelectionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.475"
+    },
+    {
+      "name": "edu.campus.course.TeacherDbTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "11",
+      "time": "0.0"
+    }
+  ],
+  "log": "maven-test.txt",
+  "secrets": "No Surefire system properties copied"
+}

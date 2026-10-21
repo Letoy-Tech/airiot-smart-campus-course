@@ -1,0 +1,15 @@
+
+> campus-ai-course-frontend@0.1.0 dev
+> vite
+
+
+  VITE v7.3.7  ready in 115 ms
+
+  ➜  Local:   http://127.0.0.1:5178/
+  ➜  press h + enter to show help
+6:22:24 AM [vite] http proxy error: /api/campus/devices
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+6:22:24 AM [vite] http proxy error: /api/campus/spaces
+Error: connect ECONNREFUSED 127.0.0.1:8091
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)

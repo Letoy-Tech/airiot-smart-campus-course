@@ -1,0 +1,30 @@
+{
+  "observedAt": 1791107243897,
+  "completeness": {
+    "expectedSpaces": 4,
+    "expectedDevices": 16,
+    "expectedPoints": 28,
+    "actualSpaces": 4,
+    "actualDevices": 16,
+    "actualPoints": 28
+  },
+  "qualities": [
+    "fresh"
+  ],
+  "issues": [],
+  "switchStates": {
+    "facility_demo_01": false,
+    "facility_demo_02": false,
+    "facility_demo_03": false,
+    "facility_demo_04": false,
+    "light_demo_01": false,
+    "light_demo_02": false,
+    "light_demo_03": false,
+    "light_demo_04": false
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

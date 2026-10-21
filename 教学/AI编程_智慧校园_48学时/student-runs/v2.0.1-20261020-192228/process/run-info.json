@@ -1,0 +1,16 @@
+{
+  "path": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_智慧校园_48学时/student-runs/v2.0.1-20261020-192228",
+  "blank_file_count": 9,
+  "zip_origin": "/Users/learner/projects/airiot-smart-campus-course/教学/AI编程_学生空白起点_V2.0.1.zip",
+  "zip_sha256": "c4a2f53ef9cbc665dd056bf294d1ab785119b898fa4927c57dc4ccc78a3e3177",
+  "zip_match": true,
+  "codebuddy_model_observed": "Deepseek-V4.1-Flash 300K",
+  "ports_initially_free": [
+    5188,
+    8098,
+    23501,
+    23502
+  ],
+  "node_default_observed": "v26.3.0",
+  "docker_installed_observed": false
+}

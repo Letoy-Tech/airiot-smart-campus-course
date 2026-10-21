@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "topLevelSymlinkRefused": true,
+  "secondHandoffPreservesDesign": true,
+  "crlfPreparationPreservesLineEndings": true,
+  "at": "2026-10-19T13:21:11.462Z",
+  "checks": [
+    {
+      "chapter": "04",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "05",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "06",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "07",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "08",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "09",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "10",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "11",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    },
+    {
+      "chapter": "12",
+      "repeatedPreparePreservesReferenceEquivalentSolution": true
+    }
+  ],
+  "unpreparedCustomBlockRefused": true,
+  "statePreservedInHandoff": true
+}

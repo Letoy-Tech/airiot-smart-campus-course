@@ -1,0 +1,98 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "f209910e78c16f50c3a2f678626c35846ecf897bbc705ed8718796e3b033c655"
+  },
+  {
+    "path": ".nvmrc",
+    "sha256": "0775c6feb7638122e8b68d611cd709bf270f7b5adb5d0d2baa9afab8a6c0fc42"
+  },
+  {
+    "path": "CODEBUDDY.md",
+    "sha256": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb"
+  },
+  {
+    "path": "README.md",
+    "sha256": "df0a6db424a4a357bf52f8a846af8e4055bb6f7331f2b9614c106ca49cfc6821"
+  },
+  {
+    "path": "docs/接口与数据.md",
+    "sha256": "945aa1a84542ea05c119eeb934cc2a90dd35dc075a1ce0bd1f4b103e70b78991"
+  },
+  {
+    "path": "docs/项目卡.md",
+    "sha256": "de7293d669e86c98ccd764735aaf9569d3d4dce837922b2c5421d1500072f5fe"
+  },
+  {
+    "path": "frontend/.gitignore",
+    "sha256": "44b22f785790e704ff7b5c2d187b2aa7b5b947dc231fd03c5ce3d18e485b4403"
+  },
+  {
+    "path": "frontend/DESIGN.md",
+    "sha256": "602ffd55ec47e8ad413726124fb40af4bfc5185c33e09175e8f5de9d9c17466c"
+  },
+  {
+    "path": "frontend/PRODUCT.md",
+    "sha256": "07e55b50b05c0476ddd499ccc70a19008fde22639c1a9823e6dfcee0e4a61300"
+  },
+  {
+    "path": "frontend/index.html",
+    "sha256": "5309810da994990e9aab3de77d22d04a209fb052cb329701eb4afc729895f43b"
+  },
+  {
+    "path": "frontend/package-lock.json",
+    "sha256": "4f3549bc5d2ca21ec828f7636ac68fef5563ba3f5ffeef54f36c33debc7261e7"
+  },
+  {
+    "path": "frontend/package.json",
+    "sha256": "8a4e5fdc7a8908e330bcb8426df52521e446ee9240acab2a6c6304d0e5d667d5"
+  },
+  {
+    "path": "frontend/src/App.vue",
+    "sha256": "fa602ddb19e9142e1a1360cf13c13d11e9e8aba6dd85f56b8b0b8c52e2edec83"
+  },
+  {
+    "path": "frontend/src/domain/journey-exercises.ts",
+    "sha256": "5652045d305b25739c4ca520b2ef7ff7e5998873c6a9ab3aee3c005a141e76c7"
+  },
+  {
+    "path": "frontend/src/main.ts",
+    "sha256": "affbb7aa0bc515b18e6842fc1620cc3a66c96c9781dbd886a464669e6fa12382"
+  },
+  {
+    "path": "frontend/src/project-settings.ts",
+    "sha256": "b80734d1e32b98efd106b60a51113200d779cee85f16568c28847d76661b58c5"
+  },
+  {
+    "path": "frontend/src/style.css",
+    "sha256": "2c5ccb0fc4cce1a5655d1626802f2ce0976f730135d0e38835b0f71dd0e6aaf9"
+  },
+  {
+    "path": "frontend/src/tests/journey-start.test.ts",
+    "sha256": "8c0b30641fc1b16ee231d8bb12969f43f430541bb05d43dc54a852127c2a4555"
+  },
+  {
+    "path": "frontend/src/views/StaticDevices.vue",
+    "sha256": "7860ada9d95a14c72401ff7268dbf2f1fbd4456dfe98fc8e4ff58f3fa4de7ce5"
+  },
+  {
+    "path": "frontend/tsconfig.json",
+    "sha256": "a9904e052d4153a474be82478b3088fb57420bb897963c0453c76a7529a12999"
+  },
+  {
+    "path": "frontend/vite.config.ts",
+    "sha256": "2b747b5f7f2c3463e7c57ca4857dd6ca5fd734349026907234fce2986e0665a0"
+  },
+  {
+    "path": "journey-state.json",
+    "sha256": "b3f1e6d996f878b901a29dc2d0a8fbbd5e236e31aa9562d216a5180f1034a50b"
+  },
+  {
+    "path": "package.json",
+    "sha256": "6cfbe1324148cf9a6b72afd8f842edc1cca094e30cef09cafcb3da28b24b2f30"
+  },
+  {
+    "path": "tools/progress.mjs",
+    "sha256": "52cbebce598584e23c9224aea5485e9dd54b1679c4e56f42bd8ee6c645b17127"
+  }
+]

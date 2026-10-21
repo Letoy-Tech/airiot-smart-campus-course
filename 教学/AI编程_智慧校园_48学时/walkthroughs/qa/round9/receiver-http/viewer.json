@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T14:08:43.468Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "receiver viewer UI hides write controls and server independently refuses valid write",
+      "detail": {
+        "status": 403,
+        "unchanged": true
+      },
+      "passed": true
+    }
+  ]
+}

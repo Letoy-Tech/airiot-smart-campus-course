@@ -1,0 +1,22 @@
+stateDiagram-v2
+    direction LR
+    state "NEW 待分派" as NEW
+    state "ASSIGNED 待处理" as ASSIGNED
+    state "IN_PROGRESS 处理中" as IN_PROGRESS
+    state "CLOSED 已关闭" as CLOSED
+    [*] --> NEW: 创建时无有效责任人
+    [*] --> ASSIGNED: 创建时有有效责任人
+    NEW --> ASSIGNED: 管理员分派
+    ASSIGNED --> ASSIGNED: 管理员重新分派
+    ASSIGNED --> IN_PROGRESS: 有权处理者开始
+    IN_PROGRESS --> IN_PROGRESS: 追加处置记录
+    IN_PROGRESS --> ASSIGNED: 管理员重新分派
+    IN_PROGRESS --> CLOSED: 全部关闭门槛满足
+    note right of IN_PROGRESS
+        来源状态另存
+        来源恢复不自动关闭
+    end note
+    note right of CLOSED
+        禁止后续修改
+        也不允许重复恢复
+    end note

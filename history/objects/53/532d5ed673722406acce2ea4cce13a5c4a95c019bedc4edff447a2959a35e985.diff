@@ -1,0 +1,74 @@
+--- course-common-tool
++++ isolated-teacher-tool
+@@ -1,10 +1,10 @@
+ """Author-only isolated MySQL 8.4 fixture. Never targets the original platform DB."""
+ from pathlib import Path
+ import json, os, secrets, socket, subprocess, sys, time, hashlib
+-ROOT=Path(__file__).resolve().parent.parent
++ROOT=Path(__file__).resolve().parent.parent/'app'
+ PRIVATE=ROOT/'.private'; RUN=ROOT/'.runtime/course-mysql'; DATA=RUN/'data'
+-BIN=Path('/opt/homebrew/opt/mysql@8.4/bin'); PORT=13328
+-SOCKET_DIR=Path('/tmp')/('campus-course-'+hashlib.sha256(str(ROOT).encode()).hexdigest()[:12])
++BIN=Path('/opt/homebrew/opt/mysql@8.4/bin'); PORT=23491
++SOCKET_DIR=Path('/tmp')/('student-codebuddy-'+hashlib.sha256(str(ROOT).encode()).hexdigest()[:12])
+ SOCKET=SOCKET_DIR/'mysql.sock'; PID=RUN/'mysqld.pid'; CFG=PRIVATE/'local-mysql-admin.cnf'
+ 
+ def execute(sql):
+@@ -12,7 +12,7 @@
+     if CFG.exists(): args+=['--defaults-extra-file='+str(CFG)]
+     args+=['--protocol=socket','--socket='+str(SOCKET),'-uroot','--batch','--skip-column-names']
+     result=subprocess.run(args,input=sql,text=True,capture_output=True)
+-    if result.returncode: raise RuntimeError('Local fixture SQL failed; sensitive SQL deliberately not printed. '+result.stderr[:300])
++    if result.returncode: raise RuntimeError('Local fixture SQL failed; sensitive SQL and server error deliberately not printed. Exit '+str(result.returncode))
+     return result.stdout.strip()
+ def alive():
+     if not PID.exists(): return False
+@@ -53,18 +53,43 @@
+     if CFG.exists() or not DATA.exists(): raise RuntimeError('Bootstrap only resumes an unconfigured fixture')
+     launch(True)
+     if execute("SELECT COUNT(*) FROM information_schema.schemata WHERE schema_name NOT IN ('mysql','sys','information_schema','performance_schema')") != "0": raise RuntimeError('Unexpected schemas; refusing bootstrap')
+-    admin=secrets.token_hex(24); password=secrets.token_hex(24)
+-    execute("CREATE DATABASE campus_course_lab CHARACTER SET utf8mb4; CREATE DATABASE campus_course_test CHARACTER SET utf8mb4; CREATE USER 'course_local'@'127.0.0.1' IDENTIFIED BY '"+password+"'; GRANT ALL PRIVILEGES ON campus_course_lab.* TO 'course_local'@'127.0.0.1'; GRANT ALL PRIVILEGES ON campus_course_test.* TO 'course_local'@'127.0.0.1'; ALTER USER 'root'@'localhost' IDENTIFIED BY '"+admin+"';")
++    admin=secrets.token_hex(24)
++    runtime_password=secrets.token_hex(24)
++    migration_password=secrets.token_hex(24)
++    test_password=secrets.token_hex(24)
++    execute("CREATE DATABASE campus_course_lab CHARACTER SET utf8mb4; CREATE DATABASE campus_course_test CHARACTER SET utf8mb4; CREATE DATABASE campus_course_other CHARACTER SET utf8mb4; "
++      "CREATE USER 'course_student'@'127.0.0.1' IDENTIFIED BY '"+runtime_password+"'; "
++      "GRANT SELECT,INSERT,UPDATE,DELETE ON campus_course_lab.* TO 'course_student'@'127.0.0.1'; "
++      "CREATE USER 'course_migrate'@'127.0.0.1' IDENTIFIED BY '"+migration_password+"'; "
++      "GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,ALTER,INDEX,REFERENCES ON campus_course_lab.* TO 'course_migrate'@'127.0.0.1'; "
++      "CREATE USER 'course_test'@'127.0.0.1' IDENTIFIED BY '"+test_password+"'; "
++      "GRANT ALL PRIVILEGES ON campus_course_test.* TO 'course_test'@'127.0.0.1'; "
++      "ALTER USER 'root'@'localhost' IDENTIFIED BY '"+admin+"';")
+     CFG.write_text('[client]\npassword='+admin+'\n'); CFG.chmod(0o600)
+-    for name,schema in [('database.json','campus_course_lab'),('test-database.json','campus_course_test')]:
++    configs=[('runtime-database.json','campus_course_lab','course_student',runtime_password),('migration-database.json','campus_course_lab','course_migrate',migration_password),('test-database.json','campus_course_test','course_test',test_password)]
++    for name,schema,user,password in configs:
+         p=PRIVATE/name
+         if p.exists(): raise RuntimeError('Refusing to replace database settings')
+-        p.write_text(json.dumps({'purpose':'Isolated author validation only; not the teacher classroom database','url':f'jdbc:mysql://127.0.0.1:{PORT}/{schema}?sslMode=DISABLED&allowPublicKeyRetrieval=true&serverTimezone=UTC','username':'course_local','password':password,('allowTestReset' if name=='test-database.json' else 'allowAccountAdministration'):True},indent=2)+'\n'); p.chmod(0o600)
+-    stop(); launch(); print('Created course-only lab/test schemas on 127.0.0.1:13328; credentials stored privately, not printed')
++        value={'purpose':'Isolated student exercise on this Mac only; not a school or original platform database','url':f'jdbc:mysql://127.0.0.1:{PORT}/{schema}?sslMode=DISABLED&allowPublicKeyRetrieval=true&serverTimezone=UTC','username':user,'password':password,'allowAccountAdministration':False}
++        if name=='test-database.json': value['allowTestReset']=True
++        p.write_text(json.dumps(value,indent=2)+'\n'); p.chmod(0o600)
++    active=PRIVATE/'database.json'
++    if active.exists(): raise RuntimeError('Refusing to replace active settings')
++    active.write_bytes((PRIVATE/'migration-database.json').read_bytes()); active.chmod(0o600)
++    stop(); launch(); print('Created isolated lab/test/denied-probe schemas on 127.0.0.1:23491. Migration credentials active only for the teacher migrate step; secrets not printed.')
++def use_runtime():
++    source=PRIVATE/'runtime-database.json'
++    if not source.exists() or not CFG.exists(): raise RuntimeError('Initialize this isolated fixture first')
++    target=PRIVATE/'database.json'
++    temp=PRIVATE/'database.json.next'
++    with temp.open('xb') as f: f.write(source.read_bytes())
++    temp.chmod(0o600); temp.replace(target)
++    print('Runtime config now uses the lab-only SELECT/INSERT/UPDATE/DELETE account; immutable migration/test config files preserved.')
+ if __name__=='__main__':
+     cmd=sys.argv[1] if len(sys.argv)>1 else 'status'
+     if cmd=='init': init()
+     elif cmd=='bootstrap': bootstrap()
++    elif cmd=='use-runtime': use_runtime()
+     elif cmd=='start': launch(); print('Isolated course DB started')
+     elif cmd=='stop': stop()
+     elif cmd=='status': print({'running':alive(),'port':PORT,'version':execute('SELECT VERSION()') if alive() else None})

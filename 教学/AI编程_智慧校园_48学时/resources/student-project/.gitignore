@@ -1,0 +1,12 @@
+node_modules/
+target/
+dist/
+.private/
+.runtime/
+.env
+.env.*
+!.env.example
+evidence/local-*/
+.DS_Store
+
+.lesson-backups/

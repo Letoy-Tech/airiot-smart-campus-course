@@ -1,0 +1,16 @@
+sequenceDiagram
+    autonumber
+    participant UI as 设备页面
+    participant C as Controller
+    participant S as Service
+    participant A as CampusAccess
+    participant P as CampusDataProvider
+    UI->>C: GET /campus/devices
+    C->>S: 请求设备列表
+    S->>A: 校验当前身份及读取资格
+    A-->>S: 允许
+    S->>P: 读取教学设备
+    P-->>S: 原始设备记录
+    S->>S: 核对类型并映射 DTO
+    S-->>C: items 与 observedAt
+    C-->>UI: code、message、data

@@ -1,0 +1,11 @@
+[
+  ".gitignore",
+  "CODEBUDDY.md",
+  "docs/接口与数据.md",
+  "docs/项目卡.md",
+  "frontend/src/views/DeviceCatalog.vue",
+  "frontend/src/views/EnergyView.vue",
+  "frontend/src/views/HistoryView.vue",
+  "frontend/src/views/RawAlarmsView.vue",
+  "journey-state.json"
+]

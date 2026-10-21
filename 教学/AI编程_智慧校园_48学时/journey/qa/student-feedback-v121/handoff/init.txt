@@ -1,0 +1,1 @@
+已生成 .private/accounts.json。用本机编辑器查看；密码不输出到终端。Windows文件权限沿用本机用户目录权限。

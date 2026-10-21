@@ -1,0 +1,12 @@
+{
+  "scenario": "close-no-note",
+  "caseId": "f09aaa5d-faa4-48cd-b863-91213e6ea562",
+  "httpStatus": 409,
+  "businessMessage": "STATE_CONFLICT",
+  "expectedStatus": 409,
+  "stateVersionTimelineUnchanged": true,
+  "state": "IN_PROGRESS",
+  "version": 5,
+  "passed": true,
+  "recordedAt": "2026-10-19T18:24:17.230400+00:00"
+}

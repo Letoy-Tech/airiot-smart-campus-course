@@ -1,0 +1,606 @@
+{
+  "version": 1,
+  "saved_at": 1792526155222.0,
+  "run": {
+    "id": "db2c1dbe3a809",
+    "session_id": "qvuv",
+    "tab_id": 1075951426,
+    "name": "student-v201-11-04-viewer-audit-denied",
+    "url": "http://127.0.0.1:5188/",
+    "started_at": 1792526154678.0,
+    "stopped_at": 1792526155213.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 1,
+    "operations": 2,
+    "errors": 2,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 22,
+    "active_rules": 0,
+    "saved_at": 1792526155214.0,
+    "storage": {
+      "bytes": 2070,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 1
+    },
+    "environment": {
+      "extension_version": "0.3.3",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [
+    {
+      "id": "db2c1dbe3a809:n1",
+      "run_id": "db2c1dbe3a809",
+      "sequence": 21,
+      "started_at": 1792526154788.0,
+      "finished_at": 1792526154796.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:5188/api/audit",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "FC9EC4382E3345E69F4B36A85A2CDB92",
+      "loader_id": "29CF714F54A6231282D664D75886CF13",
+      "status": 403,
+      "mime_type": "application/json",
+      "duration_ms": 4.48,
+      "transfer_bytes": 247.0,
+      "decoded_bytes": 70.0,
+      "from_service_worker": false,
+      "initiator": "requestAdminReadApi http://127.0.0.1:5188/data-service.js:1832",
+      "request_headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "authorization": "[redacted]",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:5188",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:5188/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "connection": "keep-alive",
+        "content-length": "70",
+        "content-type": "application/json;charset=UTF-8",
+        "date": "Tue, 20 Oct 2026 19:55:54 GMT",
+        "keep-alive": "timeout=60"
+      },
+      "timing": {
+        "connectEnd": 0.92,
+        "connectStart": 0.731,
+        "dnsEnd": 0.731,
+        "dnsStart": 0.596,
+        "proxyEnd": 0.461,
+        "proxyStart": 0.458,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 3.877,
+        "receiveHeadersStart": 3.859,
+        "requestTime": 825838.489039,
+        "sendEnd": 1.003,
+        "sendStart": 0.958,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"code\":403,\"message\":\"已登录但无权执行该操作\",\"data\":null}",
+        "chars": 48,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "db2c1dbe3a809:a1",
+      "run_id": "db2c1dbe3a809",
+      "sequence": 17,
+      "method": "tool.click",
+      "target": "管理",
+      "source": "agent",
+      "started_at": 1792526154756.0,
+      "finished_at": 1792526154892.0,
+      "window_end": 1792526154984.0,
+      "state": "completed",
+      "before": {
+        "at": 1792526154747.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "after": {
+        "at": 1792526154984.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792526154984.0,
+      "request_ids": [
+        "db2c1dbe3a809:n1"
+      ],
+      "console_ids": [
+        "db2c1dbe3a809:c1",
+        "db2c1dbe3a809:c2"
+      ],
+      "truncated": false
+    },
+    {
+      "id": "db2c1dbe3a809:a2",
+      "run_id": "db2c1dbe3a809",
+      "sequence": 22,
+      "method": "tool.wheel",
+      "source": "agent",
+      "started_at": 1792526154992.0,
+      "finished_at": 1792526155028.0,
+      "window_end": 1792526155213.0,
+      "state": "completed",
+      "before": {
+        "at": 1792526154984.0,
+        "state": "available",
+        "url": "http://127.0.0.1:5188/",
+        "title": "晨光校园值班台",
+        "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+        "truncated": false,
+        "fields": [
+          {
+            "key": "http://127.0.0.1:5188/||id:data-mode",
+            "name": "data-mode",
+            "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+            "value": "backend",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:demo-identity",
+            "name": "demo-identity",
+            "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+            "value": "admin",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:username",
+            "name": "username",
+            "label": "用户名",
+            "value": "viewer",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|login-form|name:password",
+            "name": "password",
+            "label": "密码",
+            "state": "redacted"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+            "name": "case-device",
+            "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+            "value": "d01",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+            "name": "case-message",
+            "label": "这次练习要处理什么",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-manager",
+            "name": "case-manager",
+            "label": "处理人 managermanager（处理人）",
+            "value": "manager",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-assign-note",
+            "name": "case-assign-note",
+            "label": "分派说明",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-note",
+            "name": "case-note",
+            "label": "处置记录",
+            "value": "",
+            "state": "available"
+          },
+          {
+            "key": "http://127.0.0.1:5188/||id:case-close-note",
+            "name": "case-close-note",
+            "label": "关闭结论",
+            "value": "",
+            "state": "available"
+          }
+        ],
+        "fields_partial": true,
+        "navigation": "reload"
+      },
+      "observation_end": 1792526170028.0,
+      "request_ids": [],
+      "console_ids": [],
+      "truncated": false
+    }
+  ],
+  "console": [
+    {
+      "id": "db2c1dbe3a809:c1",
+      "at": 1792526154796.0,
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "count": 1,
+      "last_at": 1792526154796.0,
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/api/audit"
+    },
+    {
+      "id": "db2c1dbe3a809:c2",
+      "at": 1792526154796.0,
+      "level": "error",
+      "text": "审计读取失败 AdminReadApiError: 已登录但无权执行该操作\n    at adminReadError (http://127.0.0.1:5188/data-service.js:1748:17)\n    at requestAdminReadApi (http://127.0.0.1:5188/data-service.js:1865:13)\n    at async getAuditFromServer (http://127.0.0.1:5188/data-service.js:1899:16)\n    at async loadAdminAudit (http://127.0.0.1:5188/app.js:2338:33)",
+      "count": 1,
+      "last_at": 1792526154796.0,
+      "stack": "loadAdminAudit http://127.0.0.1:5188/app.js:2380:13",
+      "source": "website",
+      "source_url": "http://127.0.0.1:5188/app.js"
+    }
+  ],
+  "pages": [
+    {
+      "at": 1792526154705.0,
+      "state": "available",
+      "url": "http://127.0.0.1:5188/",
+      "title": "晨光校园值班台",
+      "text": "晨光校园值班台\n教学模拟项目\n后端连接\n检查连接\n尚未检查\n数据方式\n当前：连接后端（已登录，设备、概览与能源读数读取本机 MySQL）\n已登录：viewer（VIEWER）\n退出\n概览\n设备\n空间\n能源\n历史\n原始报警\n演练事件\n设备责任\n管理\n管理\n职责表（第09课）\n当前角色来自 GET /api/me 实际返回：VIEWER（账号 viewer）。职责说明以这个角色为准。\n角色职责与本课接通状态\n角色\n可以做什么\n本课接通状态\nADMIN\n登记空间位置、登记设备责任；建立演练事件；把事件分派给处理人；模拟来源恢复；也可以处置事件。\n读取设备、空间、责任与演练事件：已接通（需登录）。建立、分派、开始、记录、恢复、核实、关闭：已接通（写入本机 MySQL）。\nMANAGER\n只处理已经分派给自己的事件：开始处理、填写处置记录、核实来源恢复、填写关闭结论。\n读取设备与演练事件：已接通（需登录）。开始、记录、核实、关闭：已接通（仅限分派给自己的事件）。\nVIEWER\n当前角色\n只看资料：可以查看页面与设备列表，不登记、不处置。\n读取：已接通（需登录）。改动按钮不显示；后端按登录角色拒绝无权写操作（403）。\n三个账号都能读取设备、空间、责任与演练事件（需登录，后端按会话放行）。写入权限由后端判断：空间、责任、演练事件只有 ADMIN 能改，MANAGER 只能处理分派给自己的事件，VIEWER 只读；审计只有 ADMIN 能读，接入状态三种角色都能读。\n演示身份与用途\n当前登录账号：viewer（角色 VIEWER，来自 /api/me）\n浏览器演示模式下，顶部“演示身份”选择框只切换本页显示，不登录、不校验口令；连接后端模式下，这里显示的是后端登录账号，演示选择框会被移除。\n管理员 admin\nADMIN\n登记空间位置与设备责任，创建分派，并登记恢复演练来源。\n处理人 manager\nMANAGER\n处置已分派给自己的演练事件。\n查看者 viewer\nVIEWER\n只查看页面内容，不登记、不处置。\n前端演示的角色开关不等于后端权限保护，只影响本页显示。后端已按登录会话校验读写：审计只有 ADMIN 能读，接入状态三种角色都能读；页面隐藏按钮不能代替后端权限检查。\n接入状态\n以下状态来自本机后端 GET /api/integration：三种登录角色都可读，只说明教学模拟，未连接真实校园或 AIRIOT。\n数据来源\n教学模拟数据（TEACHING_MOCK，不是 AIRIOT）\n是否模拟\n是（simulated=true）\n设备控制\n未启用（controlEnabled=false，不控制真实设备）\n外部通知\n未启用（notificationsEnabled=false，不发外部通知）\n接入状态来自本机后端 GET /api/integration（只读，不写数据库）\n操作记录（真实审计）\n审计由后端在成功事务中写入：成功的空间修改、责任登记、事件创建与事件动作各记一条，失败的操作没有成功事务，不会出现在这里；过去的事件不补造审计。此接口仅 ADMIN 可读（GET /api/audit）。\n重新读取审计\n无权查看审计：已登录但无权执行该操作。已清除本页原先显示的审计记录；接入状态三种角色都能读，仍可在上方查看。\n重试",
+      "truncated": false,
+      "fields": [
+        {
+          "key": "http://127.0.0.1:5188/||id:data-mode",
+          "name": "data-mode",
+          "label": "数据方式\n          \n            浏览器演示\n            连接后端",
+          "value": "backend",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:demo-identity",
+          "name": "demo-identity",
+          "label": "演示身份\n          \n            管理员 admin\n            处理人 manager\n            查看者 viewer",
+          "value": "admin",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:username",
+          "name": "username",
+          "label": "用户名",
+          "value": "viewer",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|login-form|name:password",
+          "name": "password",
+          "label": "密码",
+          "state": "redacted"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-device",
+          "name": "case-device",
+          "label": "设备请选择设备d01 温湿度01d02 温湿度02d03 温湿度03d04 温湿度04d05 电表01d06 电表02d07 电表03d08 电表04d09 设施01d10 设施02d11 设施03d12 设施04d13 灯光01d14 灯",
+          "value": "d01",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/|case-form|id:case-message",
+          "name": "case-message",
+          "label": "这次练习要处理什么",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-manager",
+          "name": "case-manager",
+          "label": "处理人 managermanager（处理人）",
+          "value": "manager",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-assign-note",
+          "name": "case-assign-note",
+          "label": "分派说明",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-note",
+          "name": "case-note",
+          "label": "处置记录",
+          "value": "",
+          "state": "available"
+        },
+        {
+          "key": "http://127.0.0.1:5188/||id:case-close-note",
+          "name": "case-close-note",
+          "label": "关闭结论",
+          "value": "",
+          "state": "available"
+        }
+      ],
+      "fields_partial": true
+    }
+  ],
+  "rules": [],
+  "replays": [],
+  "performance": [
+    {
+      "id": "db2c1dbe3a809:p1",
+      "document_key": "1792525962909.7:0",
+      "sequence": 19,
+      "time_origin": 1792525962909.7,
+      "started_at": 1792526154703.8,
+      "observed_at": 1792526155212.0,
+      "url": "http://127.0.0.1:5188/",
+      "navigation": "reload",
+      "state": "completed",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1792526154703.8,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 34.299999952316284,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 56.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 56.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 56.10000002384186,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 4.5,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "version": "1.1",
+  "generatedAt": "2026-10-18T16:20:12.010Z",
+  "purpose": "独立章节任务起点；前后章基础由教师预置，不代表从零独立实现整个系统",
+  "chapters": [
+    {
+      "chapter": "04",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "frontend/src/api/campus.ts",
+          "marker": "A",
+          "referenceSha256": "28e2b21eaf337778c81651a653e279d25654041621e7afc4d33d71019d885886",
+          "studentSha256": "fab7812935e50f250d2fe019ee71e920a7a2e826571a7b9753e417cfa647ad95"
+        },
+        {
+          "file": "frontend/src/views/FirstDeviceRead.vue",
+          "marker": "B",
+          "referenceSha256": "2685a6339582131c4c11736a5157bc517ff6996a8dd6d113ad8644c8cf659eda",
+          "studentSha256": "ac97952794c8fbdf49705abdf9e4bc1bfe47f759c4c7915c980221b21a471e00"
+        }
+      ]
+    },
+    {
+      "chapter": "05",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "backend/src/main/java/edu/campus/course/LocationService.java",
+          "marker": "C05",
+          "referenceSha256": "0bb3f12c71eefc95854f7b2625261f5a7cf3463ccbde1267f5f6de73fca78453",
+          "studentSha256": "bbe422e6fd0c8f1b647b07aa779bcf8cadd4857b0d95fa327908be81c0d8ee44"
+        }
+      ]
+    },
+    {
+      "chapter": "06",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "frontend/src/domain/course.ts",
+          "marker": "C06",
+          "referenceSha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+          "studentSha256": "aac34d2824730f7e3b41ed80275284fe483ec16a48381ab624780927eb83c31e"
+        }
+      ]
+    },
+    {
+      "chapter": "07",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "backend/src/main/java/edu/campus/course/QualityPolicy.java",
+          "marker": "C07",
+          "referenceSha256": "8c98d4186c028fccffb8b3dc0c72ab2e35d5f630cf7d1bf10783233627b7a418",
+          "studentSha256": "80e21d9efa53cc185ce2d10b960704a081e52323408d767947d58b7b21181b41"
+        }
+      ]
+    },
+    {
+      "chapter": "08",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "frontend/src/domain/course.ts",
+          "marker": "C08",
+          "referenceSha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+          "studentSha256": "5ecb3974b747a6617a35ab0f6246dec931ed41d3afa35e1627f696445e318f37"
+        }
+      ]
+    },
+    {
+      "chapter": "09",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "backend/src/main/java/edu/campus/course/OperationsService.java",
+          "marker": "C09",
+          "referenceSha256": "4891a2ea98c1461d62d2619aa941ddc762d7bfd954b4382a571e3ba2e9dc144c",
+          "studentSha256": "32b03bd01459da731d69aa3636455cd60e7ecda7047d18c98bf2c0e1c04114f9"
+        }
+      ]
+    },
+    {
+      "chapter": "10",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "backend/src/main/java/edu/campus/course/OperationsService.java",
+          "marker": "C10",
+          "referenceSha256": "4891a2ea98c1461d62d2619aa941ddc762d7bfd954b4382a571e3ba2e9dc144c",
+          "studentSha256": "a047651cdd560d8e1ee6b786a1f2088dbdae6736841c52e8db4635e195c490fe"
+        }
+      ]
+    },
+    {
+      "chapter": "11",
+      "files": 119,
+      "linkAdjustments": 3,
+      "markers": []
+    },
+    {
+      "chapter": "12",
+      "files": 118,
+      "linkAdjustments": 3,
+      "markers": [
+        {
+          "file": "frontend/src/domain/course.ts",
+          "marker": "C12",
+          "referenceSha256": "8986875649bdcc94c5d89c3d0396730f554f860a32f260508b5c46873861a6df",
+          "studentSha256": "166ace596e29d30713a124556802404f53f729b8747d2372a5f0020534860550"
+        }
+      ]
+    }
+  ],
+  "docsSynchronizedAt": "2026-10-18T16:22:04.045Z"
+}

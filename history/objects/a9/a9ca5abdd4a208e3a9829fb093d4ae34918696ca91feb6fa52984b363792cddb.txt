@@ -1,0 +1,8 @@
+
+当前第01站：先做出两台设备。
+请先读 CODEBUDDY.md、journey-state.json，再读取 docs/项目卡.md、docs/接口与数据.md、frontend/src/views/StaticDevices.vue、frontend/src/project-settings.ts。
+本次只修改：frontend/src/views/StaticDevices.vue。
+只做一个Vue3+TypeScript设备页。显示平台名称和两台教学模拟设备：一台online=true，一台online=null。用严格比较显示在线/离线/未知。不要请求后端，不加路由或依赖。直接修改本次目标文件，完成后列出修改位置和实际运行结果。
+先告诉我你准备改哪里，再执行。不要读.private，不升级依赖，不自动推进下一站。
+完成后列改动和实际检查；业务验收留给我亲手操作。
+补充本次人工验收要求：页面平台名为“我的校园值班台”。只修改 frontend/src/views/StaticDevices.vue，项目卡已保存，不再改docs。不要读 lesson-bundles/*/files、reference、journey-backups 或 .private；只允许读取 stage-01/manifest.json 的元数据。不要运行 progress apply，不改测试预期。

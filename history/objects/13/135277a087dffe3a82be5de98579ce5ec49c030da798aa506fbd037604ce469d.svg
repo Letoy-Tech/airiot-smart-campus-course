@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">图 06-01 设备台账的信息优先级 教学界面示意</title>
+  <desc id="desc">桌面为搜索筛选和设备表格，窄屏为相同信息的卡片。来源、模拟标记及通信未知文字清楚可见。显示两条示例记录，不是运行截图。</desc>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #16324a; }
+    .title { font-size: 28px; font-weight: 700; }
+    .heading { font-size: 24px; font-weight: 600; }
+    .body { font-size: 20px; }
+    .small { font-size: 17px; }
+    .muted { fill: #526777; }
+    .line { stroke: #b5c6d1; stroke-width: 2; }
+    .box { fill: #fff; stroke: #b5c6d1; stroke-width: 2; }
+    .chip { fill: #e9f1f6; stroke: #95aebe; stroke-width: 1; }
+  </style>
+  <rect width="1280" height="820" fill="#f5f8fa"/>
+  <text x="36" y="48" class="title">设备台账：信息相同，布局可以自主设计</text>
+  <text x="36" y="80" class="body muted">教学界面示意 · 非运行截图 · 以下为两条虚构展示记录</text>
+  <rect x="32" y="110" width="816" height="590" rx="14" class="box"/>
+  <text x="58" y="151" class="small muted">桌面布局示意</text>
+  <text x="58" y="192" class="heading">设备台账</text>
+  <rect x="598" y="163" width="222" height="38" rx="7" class="chip"/>
+  <text x="614" y="188" class="small">教学模拟数据 · 只读巡查</text>
+  <text x="58" y="237" class="small">名称</text>
+  <text x="338" y="237" class="small">类别</text>
+  <text x="520" y="237" class="small">空间</text>
+  <rect x="58" y="249" width="256" height="44" rx="5" class="box"/>
+  <text x="72" y="277" class="small muted">输入设备名称</text>
+  <rect x="338" y="249" width="158" height="44" rx="5" class="box"/>
+  <text x="352" y="277" class="small">全部类别</text>
+  <rect x="520" y="249" width="166" height="44" rx="5" class="box"/>
+  <text x="534" y="277" class="small">全部空间</text>
+  <rect x="708" y="249" width="112" height="44" rx="5" fill="#e8eff4" stroke="#95aebe"/>
+  <text x="728" y="277" class="small">清除筛选</text>
+  <text x="58" y="334" class="body">当前显示 2 / 2 条</text>
+  <text x="320" y="334" class="small muted">数量来自本次响应与筛选结果</text>
+  <rect x="58" y="357" width="762" height="46" fill="#e9f1f6"/>
+  <text x="72" y="387" class="small">设备名称</text>
+  <text x="335" y="387" class="small">空间</text>
+  <text x="520" y="387" class="small">通信状态</text>
+  <text x="717" y="387" class="small">操作</text>
+  <line x1="58" y1="479" x2="820" y2="479" class="line"/>
+  <line x1="58" y1="555" x2="820" y2="555" class="line"/>
+  <text x="72" y="435" class="body">教学环境传感器</text>
+  <text x="72" y="461" class="small muted">模拟设备</text>
+  <text x="335" y="442" class="small">教学空间 01</text>
+  <text x="520" y="442" class="body">在线</text>
+  <text x="717" y="442" class="body" text-decoration="underline">查看详情</text>
+  <text x="72" y="511" class="body">教学功率表</text>
+  <text x="72" y="537" class="small muted">模拟设备</text>
+  <text x="335" y="518" class="small">教学空间 01</text>
+  <text x="520" y="510" class="body">未知</text>
+  <text x="520" y="537" class="small muted">未提供通信时间</text>
+  <text x="717" y="518" class="body" text-decoration="underline">查看详情</text>
+  <text x="58" y="601" class="body">加载、空目录、无匹配与失败需要不同反馈。</text>
+  <text x="58" y="638" class="small muted">列表和卡片共享设备 ID、三态显示及详情目标。</text>
+  <rect x="880" y="110" width="368" height="590" rx="14" class="box"/>
+  <text x="904" y="151" class="small muted">窄屏布局示意</text>
+  <text x="904" y="192" class="heading">设备台账</text>
+  <text x="904" y="223" class="small">教学模拟数据</text>
+  <rect x="904" y="243" width="320" height="44" rx="5" class="box"/>
+  <text x="918" y="271" class="small muted">搜索设备名称</text>
+  <rect x="904" y="303" width="150" height="42" rx="5" class="box"/>
+  <text x="918" y="331" class="small">全部类别</text>
+  <rect x="1074" y="303" width="150" height="42" rx="5" class="box"/>
+  <text x="1088" y="331" class="small">全部空间</text>
+  <text x="904" y="382" class="small">2 / 2 条</text>
+  <text x="1130" y="382" class="small" text-decoration="underline">清除筛选</text>
+  <rect x="904" y="405" width="320" height="219" rx="8" class="box"/>
+  <text x="924" y="442" class="body">教学功率表</text>
+  <text x="924" y="475" class="small muted">模拟 · 教学空间 01</text>
+  <text x="924" y="511" class="body">通信未知</text>
+  <text x="924" y="541" class="small muted">未提供通信时间</text>
+  <text x="924" y="588" class="body" text-decoration="underline">查看详情</text>
+  <text x="904" y="662" class="small muted">保留文字、焦点和操作入口</text>
+  <text x="36" y="749" class="body">读图任务：找出来源、筛选条件、实际数量、未知状态和详情入口。</text>
+  <text x="36" y="784" class="small muted">颜色和卡片外形可改变；接口事实和关键任务必须保持清楚。</text>
+</svg>

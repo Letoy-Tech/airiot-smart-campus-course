@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-10-19T13:21:11.512Z",
+  "sources": [
+    {
+      "file": "00-第一次用AI做项目.md",
+      "sha256": "8cbd14bc0db9f535e89b7bd46953517bfa36c11d0ecdc6b9e829c3cd984eb40f"
+    },
+    {
+      "file": "01-从想法到项目任务书.md",
+      "sha256": "01b3376c1c43176a7997c753a64fd7dfb2ce9ce84da21594797d574759c3c1cc"
+    },
+    {
+      "file": "02-从项目任务书到需求规格.md",
+      "sha256": "e4d2ef6788472fa9f8dcd8dfc42838ea6d69e99cadb6ebd571fe652f36763b3e"
+    },
+    {
+      "file": "03-从需求规格到系统设计.md",
+      "sha256": "ee4793526ff35ad45dde3e17ef5c522bd88fa9096ab0a923b5724a219e3ed73b"
+    },
+    {
+      "file": "04-安装工具与第一次改代码.md",
+      "sha256": "97c94e1d00e7eeadff9cd7274f3da67da23e94776dbb52a93706d773ccfdcd68"
+    },
+    {
+      "file": "05-后端空间与设备接口.md",
+      "sha256": "21113afed20a8f3f076586b4d65ec91cf4d019e3fe79316e859978d1756b0c68"
+    },
+    {
+      "file": "06-设备台账与自主UI.md",
+      "sha256": "8dc50d164527d57d3409e48bfa9171595aea39215923ce6efaebe5b91a029844"
+    },
+    {
+      "file": "07-监测历史与数据质量.md",
+      "sha256": "d027016f73427257d73e858bfa5be6e5f011e1916dba115f31d4e6ba4b56c30e"
+    },
+    {
+      "file": "08-登录权限与失败排查.md",
+      "sha256": "ad3f7396c5d20a84498d9b8ca71e3d6b57eee5e55e84b1952b39dbc06a7e046f"
+    },
+    {
+      "file": "09-演练事件与关闭规则.md",
+      "sha256": "1c3e10ee971f268a6c62bb5f97bf3fdc554a5ac3a3935b7a324f4f285d77eb1d"
+    },
+    {
+      "file": "10-设备责任与时间线.md",
+      "sha256": "c104494eb8ba30c17a2813cdc18bae2443dc27d907c4d9a7cf3f5fc64f9b72e2"
+    },
+    {
+      "file": "11-调试测试与证据.md",
+      "sha256": "c97c3ebf75bd243c31f839701fa42bdcf6b7b208d9d580dd0f89a228e5305468"
+    },
+    {
+      "file": "12-构建交付与接力.md",
+      "sha256": "6a017a647676f420a43c1f34b3f77092fad16f24c57871395abc18f0eccbcc07"
+    }
+  ],
+  "sha256": "a1ca65463239b61a7bc46636b381bce9ecd879ea87cb8808d9ce035a72764b66",
+  "files": [
+    "00-保存练习.md",
+    "01-项目想法.md",
+    "02-范围确认.md",
+    "03-项目任务书.md",
+    "04-角色与场景.md",
+    "05-验收条件.md",
+    "06-异常与优先级.md",
+    "07-需求规格.md",
+    "08-页面与流程.md",
+    "09-数据字典.md",
+    "10-接口约定.md",
+    "11-开发任务.md"
+  ],
+  "codeBlocks": 224,
+  "labVerified": false,
+  "modelSessionExecuted": false
+}

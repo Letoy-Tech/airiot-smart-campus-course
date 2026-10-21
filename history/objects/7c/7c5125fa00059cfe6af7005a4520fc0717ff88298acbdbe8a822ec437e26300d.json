@@ -1,0 +1,50 @@
+{
+  "id": "case-a4b66d456baa",
+  "deviceId": "d01",
+  "message": "新目录接手温度巡查演练",
+  "state": "CLOSED",
+  "assignee": "manager",
+  "sourceState": "RECOVERED",
+  "verified": true,
+  "note": "新目录实际检查温度样本，记录本次教学巡查",
+  "conclusion": "新目录演练已核查完成，处置记录与恢复核实一致",
+  "version": 6,
+  "timeline": [
+    {
+      "time": 1792529935479,
+      "action": "create",
+      "actor": "admin",
+      "note": "创建教学模拟演练事件，按已登记责任人分派给 manager"
+    },
+    {
+      "time": 1792529959598,
+      "action": "start",
+      "actor": "manager",
+      "note": "开始处理"
+    },
+    {
+      "time": 1792529968087,
+      "action": "note",
+      "actor": "manager",
+      "note": "新目录实际检查温度样本，记录本次教学巡查"
+    },
+    {
+      "time": 1792529987878,
+      "action": "recover",
+      "actor": "admin",
+      "note": "本地演练来源标记为已恢复（教学模拟，不声称真实设备恢复）"
+    },
+    {
+      "time": 1792530011502,
+      "action": "verify",
+      "actor": "manager",
+      "note": "已核实本地演练来源恢复（教学模拟）"
+    },
+    {
+      "time": 1792530011954,
+      "action": "close",
+      "actor": "manager",
+      "note": "新目录演练已核查完成，处置记录与恢复核实一致"
+    }
+  ]
+}

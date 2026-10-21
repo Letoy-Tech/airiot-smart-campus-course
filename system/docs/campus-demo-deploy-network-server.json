@@ -1,0 +1,67 @@
+{
+  "serverDNS": [
+    "192.0.2.233"
+  ],
+  "serverIPv4": [
+    {
+      "interface": "wg0",
+      "addresses": [
+        "192.0.2.189"
+      ]
+    },
+    {
+      "interface": "lo",
+      "addresses": []
+    },
+    {
+      "interface": "eno1",
+      "addresses": [
+        "192.0.2.123"
+      ]
+    },
+    {
+      "interface": "docker0",
+      "addresses": [
+        "192.0.2.8"
+      ]
+    },
+    {
+      "interface": "br-71313bc21863",
+      "addresses": [
+        "192.0.2.201"
+      ]
+    },
+    {
+      "interface": "br-a04ecd910c4d",
+      "addresses": [
+        "192.0.2.208"
+      ]
+    },
+    {
+      "interface": "br-75f67434f6fc",
+      "addresses": [
+        "192.0.2.99"
+      ]
+    },
+    {
+      "interface": "br-9cf9ed20be80",
+      "addresses": [
+        "192.0.2.205"
+      ]
+    }
+  ],
+  "frpUnits": [],
+  "frpProcessCounts": {
+    "frps": 0,
+    "frpc": 0
+  },
+  "serverPublicHTTPS": {
+    "exit": 28,
+    "metadata": "000 0"
+  },
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

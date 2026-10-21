@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant U as 浏览器页面
+    participant V as 前端开发代理
+    participant B as Spring Boot 后端
+    participant M as 教学模拟提供器
+    Note over U,B: 前提：已有教师教学登录会话
+    U->>V: GET /api/campus/devices
+    V->>B: 保留前缀：GET /api/campus/devices
+    B->>B: 校验身份与校园读取权限
+    B->>M: 读取最小模拟设备集
+    M-->>B: 两台模拟设备，一项 online 为 null
+    B-->>V: code=0，data.items 与 observedAt
+    V-->>U: 返回 JSON
+    U->>U: 显示标签、模拟标记与时间
+    Note over U,M: 教学时序示意，不代表实验已经执行

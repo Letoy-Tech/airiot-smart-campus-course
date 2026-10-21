@@ -1,0 +1,23 @@
+# 本地配置与运行产物（一律不提交）
+
+# 私密配置：只留根目录 .env.example 作为说明
+.env
+.env.*
+!.env.example
+
+# 本机私有目录
+.private/
+.runtime/
+
+# 依赖与构建产物
+node_modules/
+backend/target/
+target/
+
+# 日志
+*.log
+logs/
+
+# 交付临时输出与系统文件
+delivery/
+.DS_Store

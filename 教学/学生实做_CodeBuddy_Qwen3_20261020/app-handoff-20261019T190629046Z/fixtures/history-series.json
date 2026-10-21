@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "kind": "MULTI_DEVICE_HISTORY_SAMPLES",
+  "source": "TEACHING_MOCK",
+  "simulated": true,
+  "observedAt": 1792303200000,
+  "description": "固定环境/能源同单位多设备历史；energy01/power仍单独使用原history-cases.json四点，未改写。",
+  "series": [
+    {
+      "deviceId": "teaching_env_01",
+      "tagId": "temperature",
+      "unit": "°C",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 23.4
+        },
+        {
+          "time": 1792301400000,
+          "value": 23.5
+        },
+        {
+          "time": 1792302300000,
+          "value": 23.6
+        },
+        {
+          "time": 1792302600000,
+          "value": 23.7
+        },
+        {
+          "time": 1792302900000,
+          "value": 23.8
+        },
+        {
+          "time": 1792303140000,
+          "value": 23.9
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_01",
+      "tagId": "humidity",
+      "unit": "%",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 50.4
+        },
+        {
+          "time": 1792301400000,
+          "value": 50.5
+        },
+        {
+          "time": 1792302300000,
+          "value": 50.6
+        },
+        {
+          "time": 1792302600000,
+          "value": 50.7
+        },
+        {
+          "time": 1792302900000,
+          "value": 50.8
+        },
+        {
+          "time": 1792303140000,
+          "value": 50.9
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_01",
+      "tagId": "voltage",
+      "unit": "V",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 220.4
+        },
+        {
+          "time": 1792301400000,
+          "value": 220.5
+        },
+        {
+          "time": 1792302300000,
+          "value": 220.6
+        },
+        {
+          "time": 1792302600000,
+          "value": 220.7
+        },
+        {
+          "time": 1792302900000,
+          "value": 220.8
+        },
+        {
+          "time": 1792303140000,
+          "value": 220.9
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_02",
+      "tagId": "temperature",
+      "unit": "°C",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 23.8
+        },
+        {
+          "time": 1792301400000,
+          "value": 23.9
+        },
+        {
+          "time": 1792302300000,
+          "value": 24.0
+        },
+        {
+          "time": 1792302600000,
+          "value": 24.1
+        },
+        {
+          "time": 1792302900000,
+          "value": 24.2
+        },
+        {
+          "time": 1792303140000,
+          "value": 24.3
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_02",
+      "tagId": "humidity",
+      "unit": "%",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 50.8
+        },
+        {
+          "time": 1792301400000,
+          "value": 50.9
+        },
+        {
+          "time": 1792302300000,
+          "value": null
+        },
+        {
+          "time": 1792302600000,
+          "value": 51.1
+        },
+        {
+          "time": 1792302900000,
+          "value": 51.2
+        },
+        {
+          "time": 1792303140000,
+          "value": 51.3
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_02",
+      "tagId": "voltage",
+      "unit": "V",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 220.8
+        },
+        {
+          "time": 1792301400000,
+          "value": 220.9
+        },
+        {
+          "time": 1792302300000,
+          "value": 221.0
+        },
+        {
+          "time": 1792302600000,
+          "value": 221.1
+        },
+        {
+          "time": 1792302900000,
+          "value": 221.2
+        },
+        {
+          "time": 1792303140000,
+          "value": 221.3
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_02",
+      "tagId": "power",
+      "unit": "kW",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 1.8
+        },
+        {
+          "time": 1792301400000,
+          "value": 1.9
+        },
+        {
+          "time": 1792302300000,
+          "value": 2.0
+        },
+        {
+          "time": 1792302600000,
+          "value": 2.1
+        },
+        {
+          "time": 1792302900000,
+          "value": 0
+        },
+        {
+          "time": 1792303140000,
+          "value": 2.3
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_03",
+      "tagId": "temperature",
+      "unit": "°C",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 24.2
+        },
+        {
+          "time": 1792301400000,
+          "value": 24.3
+        },
+        {
+          "time": 1792302300000,
+          "value": 24.4
+        },
+        {
+          "time": 1792302600000,
+          "value": 24.5
+        },
+        {
+          "time": 1792302900000,
+          "value": 24.6
+        },
+        {
+          "time": 1792303140000,
+          "value": 24.7
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_03",
+      "tagId": "humidity",
+      "unit": "%",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 51.2
+        },
+        {
+          "time": 1792301400000,
+          "value": 51.3
+        },
+        {
+          "time": 1792302300000,
+          "value": 51.4
+        },
+        {
+          "time": 1792302600000,
+          "value": 51.5
+        },
+        {
+          "time": 1792302900000,
+          "value": 51.6
+        },
+        {
+          "time": 1792303140000,
+          "value": 51.7
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_03",
+      "tagId": "voltage",
+      "unit": "V",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 221.2
+        },
+        {
+          "time": 1792301400000,
+          "value": 221.3
+        },
+        {
+          "time": 1792302300000,
+          "value": 221.4
+        },
+        {
+          "time": 1792302600000,
+          "value": 221.5
+        },
+        {
+          "time": 1792302900000,
+          "value": 221.6
+        },
+        {
+          "time": 1792303140000,
+          "value": 221.7
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_03",
+      "tagId": "power",
+      "unit": "kW",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 2.2
+        },
+        {
+          "time": 1792301400000,
+          "value": 2.3
+        },
+        {
+          "time": 1792302300000,
+          "value": null
+        },
+        {
+          "time": 1792302600000,
+          "value": 2.5
+        },
+        {
+          "time": 1792302900000,
+          "value": 2.6
+        },
+        {
+          "time": 1792303140000,
+          "value": 2.7
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_04",
+      "tagId": "temperature",
+      "unit": "°C",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 24.6
+        },
+        {
+          "time": 1792301400000,
+          "value": 24.7
+        },
+        {
+          "time": 1792302300000,
+          "value": 24.8
+        },
+        {
+          "time": 1792302600000,
+          "value": null
+        },
+        {
+          "time": 1792302900000,
+          "value": 25.0
+        },
+        {
+          "time": 1792303140000,
+          "value": 25.1
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_env_04",
+      "tagId": "humidity",
+      "unit": "%",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 51.6
+        },
+        {
+          "time": 1792301400000,
+          "value": 51.7
+        },
+        {
+          "time": 1792302300000,
+          "value": 51.8
+        },
+        {
+          "time": 1792302600000,
+          "value": 51.9
+        },
+        {
+          "time": 1792302900000,
+          "value": 52.0
+        },
+        {
+          "time": 1792303140000,
+          "value": 52.1
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_04",
+      "tagId": "voltage",
+      "unit": "V",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 221.6
+        },
+        {
+          "time": 1792301400000,
+          "value": 221.7
+        },
+        {
+          "time": 1792302300000,
+          "value": 221.8
+        },
+        {
+          "time": 1792302600000,
+          "value": 221.9
+        },
+        {
+          "time": 1792302900000,
+          "value": 222.0
+        },
+        {
+          "time": 1792303140000,
+          "value": 222.1
+        }
+      ]
+    },
+    {
+      "deviceId": "teaching_energy_04",
+      "tagId": "power",
+      "unit": "kW",
+      "samples": [
+        {
+          "time": 1792299600000,
+          "value": 2.6
+        },
+        {
+          "time": 1792301400000,
+          "value": 2.7
+        },
+        {
+          "time": 1792302300000,
+          "value": 2.8
+        },
+        {
+          "time": 1792302600000,
+          "value": 2.9
+        },
+        {
+          "time": 1792302900000,
+          "value": 3.0
+        },
+        {
+          "time": 1792303140000,
+          "value": 3.1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+flowchart LR
+    subgraph Source[教学数据源 只读]
+        Space[Space 空间]
+        Device[Device 设备]
+        Device -->|spaceId 可空| Space
+    end
+    subgraph Local[本组教学数据库]
+        Campus[Campus 校园]
+        Building[Building 楼栋]
+        Binding["Binding 空间绑定<br/>含 floor 楼层文本"]
+        Building -->|campusId| Campus
+        Binding -->|buildingId| Building
+    end
+    Binding -.->|spaceId 逻辑引用| Space

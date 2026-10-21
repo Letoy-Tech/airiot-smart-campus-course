@@ -1,0 +1,11 @@
+{
+  "ssh_host": "REPLACE_WITH_SSH_ALIAS",
+  "ssh_config": "~/.ssh/config",
+  "expected_hostname": "REPLACE_WITH_TARGET_HOSTNAME",
+  "public_host": "demo.example.invalid",
+  "upload_user": "REPLACE_WITH_UPLOAD_USER",
+  "mysql_image": "mysql@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "airiot_base_url": "https://airiot.example.invalid/rest",
+  "shared_compose_project": "",
+  "shared_entries": []
+}

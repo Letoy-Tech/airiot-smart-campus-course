@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "at": "2026-10-19T13:58:47.683Z",
+  "scope": "Student app HTTP browser only; offline tutorial browser not accessed",
+  "checks": [
+    {
+      "name": "05 exact tutorial Console scripts",
+      "detail": {
+        "missingBuilding": 404,
+        "missingSpace": 404,
+        "viewer": 403,
+        "admin": 200,
+        "bindingUnchanged": true
+      },
+      "passed": true
+    }
+  ]
+}

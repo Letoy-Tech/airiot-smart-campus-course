@@ -1,0 +1,90 @@
+{
+  "status": "PASS_WITH_EXPLICIT_SCOPE",
+  "version": "1.0.1",
+  "at": "2026-10-18T18:52:39.490773+00:00",
+  "counts": {
+    "backendTests": 39,
+    "backendRealMysqlTests": 16,
+    "frontendTests": 54,
+    "privateJsonTests": 10,
+    "studentCheckpoints": 9,
+    "lessonPlanPages": 37,
+    "courseFigures": 40
+  },
+  "environment": {
+    "os": "macOS arm64",
+    "node": "22.21.1",
+    "java": "17.0.6",
+    "mysql": "8.4.10",
+    "browser": "Chromium 151.0.7922.34"
+  },
+  "currentChecks": [
+    {
+      "file": "resources/campus-ai-course/backend/evidence/round5/verification.json",
+      "sha256": "1675b6d0cf4f66930c4b03caef5f7774208228a2bf4f9f43a364ae7ec9f6dc4e"
+    },
+    {
+      "file": "resources/campus-ai-course/evidence/round5-frontend-tools.json",
+      "sha256": "aaa8a00831c9eb789a470f464dacd1e5a27351c8d0162148cbfadb240b0fbc9f"
+    },
+    {
+      "file": "resources/student-chapters/verification.json",
+      "sha256": "8e96a653d284fea60b5d76810f2bd498dd05badd973954adbaa6db550659b279"
+    },
+    {
+      "file": "lesson-plans/qa/round5-final-artifacts.json",
+      "sha256": "9f6392a7a87488ec38771076376ae0b457ef5f9e44e5758d5bf08eda4cbbe790"
+    },
+    {
+      "file": "lesson-plans/qa/round5-html/html-verification.json",
+      "sha256": "71735c127bbfaf24714c3d3c8ef62262672abc94702578e00faa0053cb91769b"
+    },
+    {
+      "file": "illustrations/qa/round5-book/verification.json",
+      "sha256": "2eaf0cca793a1553d301d7be2c8a364dd6659eef32d0f37b31cf9bdb414b4625"
+    },
+    {
+      "file": "illustrations/qa/round5-standalone/verification.json",
+      "sha256": "154d78503fa74ee592f770020b6edbf0366dd6925eedef0060f40700b9496e27"
+    },
+    {
+      "file": "illustrations/qa/round5-figure-manifest.json",
+      "sha256": "e909fc8197fb10fcd615af18e8a0a0ffb3610e97efa89653972292e4ebe44c2b"
+    },
+    {
+      "file": "illustrations/qa/round5-python-author.json",
+      "sha256": "97fe1495652366df1b00fd8a4d115440e5bcb9cf5f7a5d41216126028d0927f9"
+    },
+    {
+      "file": "handoffs/round5-student-sync.json",
+      "sha256": "251de03ab6350b45077e4c8fdd99f867d96d10e1a3aadb4da8b2722bec3440a6"
+    },
+    {
+      "file": "illustrations/qa/round5-resources/verification.json",
+      "sha256": "b32d9233d750aa0ab4600ec01c2df13070fab3d72b2c52b093b9cf500d20678e"
+    }
+  ],
+  "scope": "Current source regression, isolated real MySQL, student starter compile and exact expected task failures, new reader/lesson rendering. V1.0 full browser/API/persistence evidence is historical and was not rerun this round.",
+  "studentValidationMeaning": "Each unfilled task still fails the specific expected assertion; ch11 preserves blank individual prediction tasks. ch11 ordinary backend run passed23 and explicitly skipped16 DB tests; full teacher DB run39 had no skips.",
+  "dependencyAudit": {
+    "authorTools": {
+      "high": 0,
+      "moderate": 0,
+      "low": 2
+    },
+    "meaning": "Mermaid upgraded within11.x; two low KaTeX/Mermaid findings remain. No claim of zero vulnerability or backend SCA."
+  },
+  "unverified": [
+    "Windows physical hardware",
+    "school database and network",
+    "real student/classroom timing",
+    "real AIRIOT integration",
+    "physical printed lesson plan"
+  ],
+  "lab_verified": false,
+  "authorOwnedDbStateAtCompletion": {
+    "running": false,
+    "port": 13328,
+    "originalSystemServices": "untouched"
+  }
+}

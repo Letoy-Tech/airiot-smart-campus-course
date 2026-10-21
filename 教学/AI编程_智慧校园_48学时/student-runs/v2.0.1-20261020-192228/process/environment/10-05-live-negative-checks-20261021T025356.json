@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-21T02:53:56.344631+08:00",
+  "success": true,
+  "checks": [
+    {
+      "check": "spoofed admin role",
+      "username": "viewer",
+      "status": 403,
+      "expected": 403,
+      "pass": true,
+      "message": "已登录但无权执行该操作"
+    },
+    {
+      "check": "spoofed admin role",
+      "username": "manager",
+      "status": 403,
+      "expected": 403,
+      "pass": true,
+      "message": "已登录但无权执行该操作"
+    },
+    {
+      "check": "stale integer",
+      "username": "admin",
+      "status": 409,
+      "expected": 409,
+      "pass": true,
+      "message": "负责人记录已被其他人更新，请重新读取后再决定"
+    },
+    {
+      "check": "fraction",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "请求体格式不正确"
+    },
+    {
+      "check": "numeric string",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "请求体格式不正确"
+    },
+    {
+      "check": "boolean",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "请求体格式不正确"
+    },
+    {
+      "check": "negative",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "请求体格式不正确"
+    },
+    {
+      "check": "null",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "expectedVersion 必须是 JSON 非负整数"
+    },
+    {
+      "check": "missing",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "expectedVersion 必须是 JSON 非负整数"
+    },
+    {
+      "check": "overflow",
+      "username": "admin",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "message": "请求体格式不正确"
+    }
+  ]
+}

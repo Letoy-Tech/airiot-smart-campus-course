@@ -1,0 +1,94 @@
+{
+  "runId": "d3edc147b50b0",
+  "requests": [
+    {
+      "id": "d3edc147b50b0:n27",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d3edc147b50b0:n28",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d3edc147b50b0:n29",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/devices/light_demo_02/simulated-switch",
+      "status": 200,
+      "state": "complete",
+      "data": {
+        "auditId": "b39fc4d1-1364-4b04-a5b8-a606976930f4",
+        "deviceId": "light_demo_02",
+        "before": false,
+        "requested": true,
+        "confirmed": true,
+        "observedAt": 1791107114158
+      }
+    },
+    {
+      "id": "d3edc147b50b0:n30",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d3edc147b50b0:n31",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d3edc147b50b0:n33",
+      "method": "POST",
+      "url": "http://127.0.0.1:5173/api/campus/devices/light_demo_02/simulated-switch",
+      "status": 200,
+      "state": "complete",
+      "data": {
+        "auditId": "99a8a62c-04de-4bf7-af35-7e862838a273",
+        "deviceId": "light_demo_02",
+        "before": true,
+        "requested": false,
+        "confirmed": false,
+        "observedAt": 1791107133315
+      }
+    },
+    {
+      "id": "d3edc147b50b0:n34",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    },
+    {
+      "id": "d3edc147b50b0:n35",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "status": 200,
+      "state": "complete"
+    }
+  ],
+  "coverage": [
+    "from_start",
+    "task_tab",
+    "text_bodies_bounded",
+    "time_window_not_causality",
+    "page_main_frame",
+    "worker_targets_not_captured",
+    "manual_main_frame_only",
+    "initial_load_not_recorded"
+  ],
+  "droppedRequests": 0,
+  "droppedOperations": 0,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

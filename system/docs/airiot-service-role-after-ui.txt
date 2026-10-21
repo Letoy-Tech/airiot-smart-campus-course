@@ -1,0 +1,477 @@
+@vom 1
+@view 1798x1025
+@layers 1 focus=L1
+L1 page
+  RootWebArea "城大智慧校园中间件演示"
+    img
+    heading "城大智慧校园中间件演示"
+      StaticText "城大智慧校园中间件演示"
+    @e1 menuitem "数据管理" [ctx: 城大智慧校园中间件演示]
+    @e2 menuitem "设备监控 [has-submenu]"
+    @e3 menuitem "报警管理 [has-submenu]"
+    @e4 menuitem "数据分析 [has-submenu]"
+    @e5 menuitem "AI仓库" [ctx: 城大智慧校园中间件演示]
+    @e6 menuitem "可视化" [ctx: 城大智慧校园中间件演示]
+    @e7 menuitem "业务流程 [has-submenu]"
+    @e8 menuitem "扩展开发 [expanded]"
+      [§ active: 扩展开发 [expanded]]
+        开发文档
+    @e9 menuitem "数据接口" [ctx: 城大智慧校园中间件演示]
+    @e10 menuitem "通用功能 [has-submenu]"
+    @e11 menuitem "日志管理 [has-submenu]"
+    @e12 menuitem "权限管理 [has-submenu]"
+    @e13 menuitem "系统设置" [ctx: 城大智慧校园中间件演示]
+    @e14 menuitem "备份管理 [has-submenu]"
+    @e15 menuitem "消息" [ctx: 城大智慧校园中间件演示]
+    @e16 menuitem "帮助中心 [has-submenu]"
+    @e17 menuitem "admin [has-submenu]"
+    @e18 button "城大智慧校园中间件演示"
+    @e19 button "返回"
+    StaticText "修改 角色 智慧校园BE专用服务"
+    group
+      @e20 tab "基本信息"
+        [§ active: 基本信息]
+          名称
+          描述
+          用户列表
+          角色权限
+          禁用
+          黑名单
+          保 存
+          取 消
+          请选择用户
+          通用功能
+          系统设置
+          设备监控
+          权限管理
+          表管理
+          可视化
+          数据分析
+          业务流程
+          二次开发
+          数据接口
+          视频权限
+          其他
+          全选
+          操作日志
+          查看
+          导出
+          清除日志
+          添加
+          编辑
+          删除
+          一键清除
+          日志归档信息
+          恢复
+          日志归档操作
+          修改
+          一键归档
+          数据字典
+          创建
+          媒体库
+          上传
+          文件权限
+      @e21 tab "前台系统菜单"
+      @e22 tab "高级设置"
+    tabpanel "基本信息"
+      form "* 名称 : * 描述 : 用户列表 : 请选择用户 角色权限 : 全选 操作日志 查看 导出 清除日志 查看 添加 编辑 删除 一键清除 日志归档信息 查看 删除 恢复 日志归档操作 查看 添加 删除 修改 一键归档 数据字典 查看 创建 修改 删除 媒体库 查看 上传 修改 删除 文件权限 允许查看全部用户文件 系统主题 查看 创建 修改 删除 授权信息 查看授权信息 升级授权信息 文件下载 下载 实时数据及历史数据查询 数据查询 备份与还原 查看 删除 下载 还原 上传"
+        LabelText "* 名称 :"
+          StaticText "*"
+          StaticText ":"
+          StaticText "名称"
+          image "question-circle"
+        @e23 textbox "智慧校园BE专用服务" [default] ="智慧校园BE专用服务"
+        LabelText "* 描述 :"
+          StaticText "*"
+          StaticText ":"
+          StaticText "描述"
+          image "question-circle"
+        @e24 textbox "MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。" [default] ="MG经BE读取本演示项目五表、实时历史和报警；仅设施及照明八模拟对象普通状态写入，不授予系统管理或驱动控制。"
+        LabelText "用户列表 :"
+          StaticText ":"
+          StaticText "用户列表"
+          image "question-circle"
+        @e25 combobox
+        StaticText "请选择用户"
+        LabelText "角色权限 :"
+          StaticText ":"
+          StaticText "角色权限"
+        @e26 textbox "搜索权限" [empty] placeholder="搜索权限"
+        @e27 button "search"
+        @e28 tab "通用功能" [ctx: 名称]
+          [§ active: 通用功能]
+            全选
+            操作日志
+            查看
+            导出
+            清除日志
+            添加
+            编辑
+            删除
+            一键清除
+            日志归档信息
+            恢复
+            日志归档操作
+            修改
+            一键归档
+            数据字典
+            创建
+            媒体库
+            上传
+            文件权限
+            允许查看全部用户文件
+            系统主题
+            授权信息
+            查看授权信息
+            升级授权信息
+            文件下载
+            下载
+            实时数据及历史数据查询
+            数据查询
+            备份与还原
+            还原
+            一键备份
+            清除
+            周期备份
+            周期备份查看
+            周期备份添加
+            周期备份删除
+            周期备份编辑
+            数据库备份
+            备份
+            数据库备份FTP
+        @e29 tab "系统设置" [ctx: 名称]
+        @e30 tab "设备监控" [ctx: 名称]
+        @e31 tab "权限管理" [ctx: 名称]
+        @e32 tab "表管理"
+        @e33 tab "可视化" [ctx: 名称]
+        @e34 tab "数据分析" [ctx: 名称]
+        @e35 tab "业务流程" [ctx: 名称]
+        @e36 tab "二次开发"
+        @e37 tab "数据接口" [ctx: 名称]
+        @e38 tab "视频权限"
+        @e39 tab "其他"
+        img "ellipsis"
+        tabpanel "通用功能"
+          LabelText "全选"
+            @e40 button "全选" [ctx: 名称]
+            @e41 checkbox "全选" [ctx: 名称] [unchecked] ="on"
+            @e42 button "全选" [ctx: 名称]
+          LabelText "操作日志"
+            @e43 button "操作日志" [ctx: 名称]
+            @e44 checkbox "操作日志" [ctx: 名称] [unchecked] ="on"
+            @e45 button "操作日志" [ctx: 名称]
+          LabelText "查看"
+            @e46 button "查看" [ctx: 名称]
+            @e47 checkbox "查看" [ctx: 名称] [unchecked] ="log.view"
+            @e48 button "查看" [ctx: 名称]
+          LabelText "导出"
+            @e49 button "导出" [ctx: 名称]
+            @e50 checkbox "导出" [ctx: 名称] [unchecked] ="log.export"
+            @e51 button "导出" [ctx: 名称]
+          LabelText "清除日志"
+            @e52 button "清除日志" [ctx: 名称]
+            @e53 checkbox "清除日志" [ctx: 名称] [unchecked] ="on"
+            @e54 button "清除日志" [ctx: 名称]
+          LabelText "查看"
+            @e55 button "查看" [ctx: 名称]
+            @e56 checkbox "查看" [ctx: 名称] [unchecked] ="cleancycle.view"
+            @e57 button "查看" [ctx: 名称]
+          LabelText "添加"
+            @e58 button "添加" [ctx: 名称]
+            @e59 checkbox "添加" [ctx: 名称] [unchecked] ="cleancycle.add"
+            @e60 button "添加" [ctx: 名称]
+          LabelText "编辑"
+            @e61 button "编辑" [ctx: 名称]
+            @e62 checkbox "编辑" [ctx: 名称] [unchecked] ="cleancycle.edit"
+            @e63 button "编辑" [ctx: 名称]
+          LabelText "删除"
+            @e64 button "删除" [ctx: 名称]
+            @e65 checkbox "删除" [ctx: 名称] [unchecked] ="cleancycle.delete"
+            @e66 button "删除" [ctx: 名称]
+          LabelText "一键清除"
+            @e67 button "一键清除" [ctx: 名称]
+            @e68 checkbox "一键清除" [ctx: 名称] [unchecked] ="cleancycle.instant"
+            @e69 button "一键清除" [ctx: 名称]
+          LabelText "日志归档信息"
+            @e70 button "日志归档信息" [ctx: 名称]
+            @e71 checkbox "日志归档信息" [ctx: 名称] [unchecked] ="on"
+            @e72 button "日志归档信息" [ctx: 名称]
+          LabelText "查看"
+            @e73 button "查看" [ctx: 名称]
+            @e74 checkbox "查看" [ctx: 名称] [unchecked] ="archivedlog.view"
+            @e75 button "查看" [ctx: 名称]
+          LabelText "删除"
+            @e76 button "删除" [ctx: 名称]
+            @e77 checkbox "删除" [ctx: 名称] [unchecked] ="archivedlog.delete"
+            @e78 button "删除" [ctx: 名称]
+          LabelText "恢复"
+            @e79 button "恢复" [ctx: 名称]
+            @e80 checkbox "恢复" [ctx: 名称] [unchecked] ="archivedlog.add"
+            @e81 button "恢复" [ctx: 名称]
+          LabelText "日志归档操作"
+            @e82 button "日志归档操作" [ctx: 名称]
+            @e83 checkbox "日志归档操作" [ctx: 名称] [unchecked] ="on"
+            @e84 button "日志归档操作" [ctx: 名称]
+          LabelText "查看"
+            @e85 button "查看" [ctx: 名称]
+            @e86 checkbox "查看" [ctx: 名称] [unchecked] ="archivecycle.view"
+            @e87 button "查看" [ctx: 名称]
+          LabelText "添加"
+            @e88 button "添加" [ctx: 名称]
+            @e89 checkbox "添加" [ctx: 名称] [unchecked] ="archivecycle.add"
+            @e90 button "添加" [ctx: 名称]
+          LabelText "删除"
+            @e91 button "删除" [ctx: 名称]
+            @e92 checkbox "删除" [ctx: 名称] [unchecked] ="archivecycle.delete"
+            @e93 button "删除" [ctx: 名称]
+          LabelText "修改"
+            @e94 button "修改" [ctx: 名称]
+            @e95 checkbox "修改" [ctx: 名称] [unchecked] ="archivecycle.edit"
+            @e96 button "修改" [ctx: 名称]
+          LabelText "一键归档"
+            @e97 button "一键归档" [ctx: 名称]
+            @e98 checkbox "一键归档" [ctx: 名称] [unchecked] ="archivecycle.instant"
+            @e99 button "一键归档" [ctx: 名称]
+          LabelText "数据字典"
+            @e100 button "数据字典" [ctx: 名称]
+            @e101 checkbox "数据字典" [ctx: 名称] [unchecked] ="on"
+            @e102 button "数据字典" [ctx: 名称]
+          LabelText "查看"
+            @e103 button "查看" [ctx: 名称]
+            @e104 checkbox "查看" [ctx: 名称] [unchecked] ="systemvariable.view"
+            @e105 button "查看" [ctx: 名称]
+          LabelText "创建"
+            @e106 button "创建" [ctx: 名称]
+            @e107 checkbox "创建" [ctx: 名称] [unchecked] ="systemvariable.add"
+            @e108 button "创建" [ctx: 名称]
+          LabelText "修改"
+            @e109 button "修改" [ctx: 名称]
+            @e110 checkbox "修改" [ctx: 名称] [unchecked] ="systemvariable.edit"
+            @e111 button "修改" [ctx: 名称]
+          LabelText "删除"
+            @e112 button "删除" [ctx: 名称]
+            @e113 checkbox "删除" [ctx: 名称] [unchecked] ="systemvariable.delete"
+            @e114 button "删除" [ctx: 名称]
+          LabelText "媒体库"
+            @e115 button "媒体库" [ctx: 名称]
+            @e116 checkbox "媒体库" [ctx: 名称] [unchecked] ="on"
+            @e117 button "媒体库" [ctx: 名称]
+          LabelText "查看"
+            @e118 button "查看" [ctx: 名称]
+            @e119 checkbox "查看" [ctx: 名称] [unchecked] ="medialibrary.view"
+            @e120 button "查看" [ctx: 名称]
+          LabelText "上传"
+            @e121 button "上传" [ctx: 名称]
+            @e122 checkbox "上传" [ctx: 名称] [unchecked] ="medialibrary.add"
+            @e123 button "上传" [ctx: 名称]
+          LabelText "修改"
+            @e124 button "修改" [ctx: 名称]
+            @e125 checkbox "修改" [ctx: 名称] [unchecked] ="medialibrary.edit"
+            @e126 button "修改" [ctx: 名称]
+          LabelText "删除"
+            @e127 button "删除" [ctx: 名称]
+            @e128 checkbox "删除" [ctx: 名称] [unchecked] ="medialibrary.delete"
+            @e129 button "删除" [ctx: 名称]
+          LabelText "文件权限"
+            @e130 button "文件权限" [ctx: 名称]
+            @e131 checkbox "文件权限" [ctx: 名称] [unchecked] ="medialibrary.dirSetting"
+            @e132 button "文件权限" [ctx: 名称]
+          LabelText "允许查看全部用户文件"
+            @e133 button "允许查看全部用户文件" [ctx: 名称]
+            @e134 checkbox "允许查看全部用户文件" [ctx: 名称] [unchecked] ="medialibrary.userFileview"
+            @e135 button "允许查看全部用户文件" [ctx: 名称]
+          LabelText "系统主题"
+            @e136 button "系统主题" [ctx: 名称]
+            @e137 checkbox "系统主题" [ctx: 名称] [unchecked] ="on"
+            @e138 button "系统主题" [ctx: 名称]
+          LabelText "查看"
+            @e139 button "查看" [ctx: 名称]
+            @e140 checkbox "查看" [ctx: 名称] [unchecked] ="theme.view"
+            @e141 button "查看" [ctx: 名称]
+          LabelText "创建"
+            @e142 button "创建" [ctx: 名称]
+            @e143 checkbox "创建" [ctx: 名称] [unchecked] ="theme.add"
+            @e144 button "创建" [ctx: 名称]
+          LabelText "修改"
+            @e145 button "修改" [ctx: 名称]
+            @e146 checkbox "修改" [ctx: 名称] [unchecked] ="theme.edit"
+            @e147 button "修改" [ctx: 名称]
+          LabelText "删除"
+            @e148 button "删除" [ctx: 名称]
+            @e149 checkbox "删除" [ctx: 名称] [unchecked] ="theme.delete"
+            @e150 button "删除" [ctx: 名称]
+          LabelText "授权信息"
+            @e151 button "授权信息" [ctx: 名称]
+            @e152 checkbox "授权信息" [ctx: 名称] [unchecked] ="on"
+            @e153 button "授权信息" [ctx: 名称]
+          LabelText "查看授权信息"
+            @e154 button "查看授权信息" [ctx: 名称]
+            @e155 checkbox "查看授权信息" [ctx: 名称] [unchecked] ="license.view"
+            @e156 button "查看授权信息" [ctx: 名称]
+          LabelText "升级授权信息"
+            @e157 button "升级授权信息" [ctx: 名称]
+            @e158 checkbox "升级授权信息" [ctx: 名称] [unchecked] ="license.upgrade"
+            @e159 button "升级授权信息" [ctx: 名称]
+          LabelText "文件下载"
+            @e160 button "文件下载" [ctx: 名称]
+            @e161 checkbox "文件下载" [ctx: 名称] [unchecked] ="on"
+            @e162 button "文件下载" [ctx: 名称]
+          LabelText "下载"
+            @e163 button "下载" [ctx: 名称]
+            @e164 checkbox "下载" [ctx: 名称] [unchecked] ="fileServer.view"
+            @e165 button "下载" [ctx: 名称]
+          LabelText "实时数据及历史数据查询"
+            @e166 button "实时数据及历史数据查询" [ctx: 名称]
+            @e167 checkbox "实时数据及历史数据查询" [ctx: 名称] [checked] ="on"
+            @e168 button "实时数据及历史数据查询" [ctx: 名称]
+          LabelText "数据查询"
+            @e169 button "数据查询" [ctx: 名称]
+            @e170 checkbox "数据查询" [ctx: 名称] [checked] ="data.view"
+            @e171 button "数据查询" [ctx: 名称]
+          LabelText "备份与还原"
+            @e172 button "备份与还原" [ctx: 名称]
+            @e173 checkbox "备份与还原" [ctx: 名称] [unchecked] ="on"
+            @e174 button "备份与还原" [ctx: 名称]
+          LabelText "查看"
+            @e175 button "查看" [ctx: 名称]
+            @e176 checkbox "查看" [ctx: 名称] [unchecked] ="backup.view"
+            @e177 button "查看" [ctx: 名称]
+          LabelText "删除"
+            @e178 button "删除" [ctx: 名称]
+            @e179 checkbox "删除" [ctx: 名称] [unchecked] ="backup.delete"
+            @e180 button "删除" [ctx: 名称]
+          LabelText "下载"
+            @e181 button "下载" [ctx: 名称]
+            @e182 checkbox "下载" [ctx: 名称] [unchecked] ="backup.download"
+            @e183 button "下载" [ctx: 名称]
+          LabelText "还原"
+            @e184 button "还原" [ctx: 名称]
+            @e185 checkbox "还原" [ctx: 名称] [unchecked] ="backup.import"
+            @e186 button "还原" [ctx: 名称]
+          LabelText "上传"
+            @e187 button "上传" [ctx: 名称]
+            @e188 checkbox "上传" [ctx: 名称] [unchecked] ="backup.upload"
+            @e189 button "上传" [ctx: 名称]
+          LabelText "一键备份"
+            @e190 button "一键备份" [ctx: 名称]
+            @e191 checkbox "一键备份" [ctx: 名称] [unchecked] ="backup.export"
+            @e192 button "一键备份" [ctx: 名称]
+          LabelText "清除"
+            @e193 button "清除" [ctx: 名称]
+            @e194 checkbox "清除" [ctx: 名称] [unchecked] ="backup.corebackupclean"
+            @e195 button "清除" [ctx: 名称]
+          LabelText "周期备份"
+            @e196 button "周期备份" [ctx: 名称]
+            @e197 checkbox "周期备份" [ctx: 名称] [unchecked] ="on"
+            @e198 button "周期备份" [ctx: 名称]
+            @e199 button "周期备份" [ctx: 名称]
+          LabelText "周期备份查看"
+            @e200 button "周期备份查看" [ctx: 名称]
+            @e201 checkbox "周期备份查看" [ctx: 名称] [unchecked] ="backupCycle.view"
+            @e202 button "周期备份查看" [ctx: 名称]
+            @e203 button "周期备份查看" [ctx: 名称]
+          LabelText "周期备份添加"
+            @e204 button "周期备份添加" [ctx: 名称]
+            @e205 checkbox "周期备份添加" [ctx: 名称] [unchecked] ="backupCycle.add"
+            @e206 button "周期备份添加" [ctx: 名称]
+            @e207 button "周期备份添加" [ctx: 名称]
+          LabelText "周期备份删除"
+            @e208 button "周期备份删除" [ctx: 名称]
+            @e209 checkbox "周期备份删除" [ctx: 名称] [unchecked] ="backupCycle.delete"
+            @e210 button "周期备份删除" [ctx: 名称]
+            @e211 button "周期备份删除" [ctx: 名称]
+          LabelText "周期备份编辑"
+            @e212 button "周期备份编辑" [ctx: 名称]
+            @e213 checkbox "周期备份编辑" [ctx: 名称] [unchecked] ="backupCycle.edit"
+            @e214 button "周期备份编辑" [ctx: 名称]
+            @e215 button "周期备份编辑" [ctx: 名称]
+          LabelText "数据库备份"
+            @e216 button "数据库备份" [ctx: 名称]
+            @e217 checkbox "数据库备份" [ctx: 名称] [unchecked] ="on"
+            @e218 button "数据库备份" [ctx: 名称]
+            @e219 button "数据库备份" [ctx: 名称]
+          LabelText "查看"
+            @e220 button "查看" [ctx: 名称]
+            @e221 checkbox "查看" [ctx: 名称] [unchecked] ="dbBackup.view"
+            @e222 button "查看" [ctx: 名称]
+            @e223 button "查看" [ctx: 名称]
+          LabelText "删除"
+            @e224 button "删除" [ctx: 名称]
+            @e225 checkbox "删除" [ctx: 名称] [unchecked] ="dbBackup.delete"
+            @e226 button "删除" [ctx: 名称]
+            @e227 button "删除" [ctx: 名称]
+          LabelText "下载"
+            @e228 button "下载" [ctx: 名称]
+            @e229 checkbox "下载" [ctx: 名称] [unchecked] ="dbBackup.download"
+            @e230 button "下载" [ctx: 名称]
+            @e231 button "下载" [ctx: 名称]
+          LabelText "还原"
+            @e232 button "还原" [ctx: 名称]
+            @e233 checkbox "还原" [ctx: 名称] [unchecked] ="dbBackup.restore"
+            @e234 button "还原" [ctx: 名称]
+            @e235 button "还原" [ctx: 名称]
+          LabelText "上传"
+            @e236 button "上传" [ctx: 名称]
+            @e237 checkbox "上传" [ctx: 名称] [unchecked] ="dbBackup.upload"
+            @e238 button "上传" [ctx: 名称]
+            @e239 button "上传" [ctx: 名称]
+          LabelText "备份"
+            @e240 button "备份" [ctx: 名称]
+            @e241 checkbox "备份" [ctx: 名称] [unchecked] ="dbBackup.dump"
+            @e242 button "备份" [ctx: 名称]
+            @e243 button "备份" [ctx: 名称]
+          LabelText "周期备份"
+            @e244 button "周期备份" [ctx: 名称]
+            @e245 checkbox "周期备份" [ctx: 名称] [unchecked] ="dbBackup.cycle"
+            @e246 button "周期备份" [ctx: 名称]
+            @e247 button "周期备份" [ctx: 名称]
+          LabelText "清除"
+            @e248 button "清除" [ctx: 名称]
+            @e249 checkbox "清除" [ctx: 名称] [unchecked] ="dbBackup.dbbackupclean"
+            @e250 button "清除" [ctx: 名称]
+            @e251 button "清除" [ctx: 名称]
+          LabelText "数据库备份FTP"
+            @e252 button "数据库备份FTP" [ctx: 名称]
+            @e253 checkbox "数据库备份FTP" [ctx: 名称] [unchecked] ="on"
+            @e254 button "数据库备份FTP" [ctx: 名称]
+            @e255 button "数据库备份FTP" [ctx: 名称]
+          LabelText "FTP配置"
+            @e256 button "FTP配置" [ctx: 名称]
+            @e257 checkbox "FTP配置" [ctx: 名称] [unchecked] ="dbBackupFtp.config"
+            @e258 button "FTP配置" [ctx: 名称]
+            @e259 button "FTP配置" [ctx: 名称]
+          LabelText "FTP查看"
+            @e260 button "FTP查看" [ctx: 名称]
+            @e261 checkbox "FTP查看" [ctx: 名称] [unchecked] ="dbBackupFtp.view"
+            @e262 button "FTP查看" [ctx: 名称]
+            @e263 button "FTP查看" [ctx: 名称]
+          LabelText "FTP删除"
+            @e264 button "FTP删除" [ctx: 名称]
+            @e265 checkbox "FTP删除" [ctx: 名称] [unchecked] ="dbBackupFtp.delete"
+            @e266 button "FTP删除" [ctx: 名称]
+            @e267 button "FTP删除" [ctx: 名称]
+          LabelText "FTP下载"
+            @e268 button "FTP下载" [ctx: 名称]
+            @e269 checkbox "FTP下载" [ctx: 名称] [unchecked] ="dbBackupFtp.download"
+            @e270 button "FTP下载" [ctx: 名称]
+            @e271 button "FTP下载" [ctx: 名称]
+          LabelText "FTP还原"
+            @e272 button "FTP还原" [ctx: 名称]
+            @e273 checkbox "FTP还原" [ctx: 名称] [unchecked] ="dbBackupFtp.restore"
+            @e274 button "FTP还原" [ctx: 名称]
+            @e275 button "FTP还原" [ctx: 名称]
+        LabelText "禁用"
+          @e276 button "禁用" [ctx: 描述]
+          @e277 checkbox "禁用" [ctx: 描述] [unchecked] ="false"
+          @e278 button "禁用" [ctx: 描述]
+          @e279 button "禁用" [ctx: 描述]
+        image "question-circle"
+        LabelText "黑名单"
+          @e280 button "黑名单" [ctx: 用户列表 请选择用户]
+          @e281 checkbox "黑名单" [ctx: 用户列表 请选择用户] [unchecked] ="false"
+          @e282 button "黑名单" [ctx: 用户列表 请选择用户]
+          @e283 button "黑名单" [ctx: 用户列表 请选择用户]
+        @e284 button "保 存"
+        @e285 button "取 消"
+    @e286 menuitem "开发文档" [ctx: 城大智慧校园中间件演示 修改 角色 智慧校园BE专用服务 * 名称 : * 描述 : 用户列表 : 请选择用户 角色权限 : 全选 操作日志 查看 导出 清除日志 查看 添加 编辑 删除 一键清除 日志归档信息 查看 删除 恢复 日志归档操作 查看 添加 删除 修改 一键归档 数据字典 查看 创建 修改 删除 媒体库 查看 上传 修改 删除 文件权限 允许查看全部用户文件 系统主题 查看 创建 修改 删除 授权信息 查看授权信息 升级授权信息 文件下载 下载 实时数据及历史数]

@@ -1,0 +1,2 @@
+请画出校园、楼栋、来源空间的关系。只列id、name、campusId、buildingId、spaceId、floor，并说明创建顺序。不存在的楼栋不能绑定，查看者不能保存。
+这是本轮第04站的需求澄清，仅回答，不修改文件。不读取 .private、lesson-bundles/*/files、journey-backups 或教师参考实现。

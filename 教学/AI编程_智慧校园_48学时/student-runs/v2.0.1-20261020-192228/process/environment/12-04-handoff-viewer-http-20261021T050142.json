@@ -1,0 +1,300 @@
+{
+  "at": "2026-10-21T05:01:41.977440",
+  "sourceDirectory": "campus-lab-handoff",
+  "success": true,
+  "actualStatus": 403,
+  "action": "VIEWER PUT /api/spaces/s1 with spoofed body role",
+  "allFourPublicSnapshotsUnchanged": true,
+  "baseline": {
+    "/api/spaces": [
+      {
+        "id": "s1",
+        "name": "101教室",
+        "building": "交接教学楼",
+        "floor": "3层"
+      },
+      {
+        "id": "s2",
+        "name": "201教室",
+        "building": "教学楼",
+        "floor": "2"
+      },
+      {
+        "id": "s3",
+        "name": "101实验室",
+        "building": "实验楼",
+        "floor": "1"
+      },
+      {
+        "id": "s4",
+        "name": "201实验室",
+        "building": "实验楼",
+        "floor": "2"
+      }
+    ],
+    "/api/owners": [
+      {
+        "deviceId": "d01",
+        "username": "manager",
+        "note": "新目录接手巡查责任",
+        "version": 1
+      }
+    ],
+    "/api/cases": [
+      {
+        "id": "case-a4b66d456baa",
+        "deviceId": "d01",
+        "message": "新目录接手温度巡查演练",
+        "state": "CLOSED",
+        "assignee": "manager",
+        "sourceState": "RECOVERED",
+        "verified": true,
+        "note": "新目录实际检查温度样本，记录本次教学巡查",
+        "conclusion": "新目录演练已核查完成，处置记录与恢复核实一致",
+        "version": 6,
+        "timeline": [
+          {
+            "time": 1792529935479,
+            "action": "create",
+            "actor": "admin",
+            "note": "创建教学模拟演练事件，按已登记责任人分派给 manager"
+          },
+          {
+            "time": 1792529959598,
+            "action": "start",
+            "actor": "manager",
+            "note": "开始处理"
+          },
+          {
+            "time": 1792529968087,
+            "action": "note",
+            "actor": "manager",
+            "note": "新目录实际检查温度样本，记录本次教学巡查"
+          },
+          {
+            "time": 1792529987878,
+            "action": "recover",
+            "actor": "admin",
+            "note": "本地演练来源标记为已恢复（教学模拟，不声称真实设备恢复）"
+          },
+          {
+            "time": 1792530011502,
+            "action": "verify",
+            "actor": "manager",
+            "note": "已核实本地演练来源恢复（教学模拟）"
+          },
+          {
+            "time": 1792530011954,
+            "action": "close",
+            "actor": "manager",
+            "note": "新目录演练已核查完成，处置记录与恢复核实一致"
+          }
+        ]
+      }
+    ],
+    "/api/audit": [
+      {
+        "time": 1792529921156,
+        "actor": "admin",
+        "action": "space.update",
+        "targetId": "s1",
+        "note": "楼栋 交接教学楼，楼层 3层"
+      },
+      {
+        "time": 1792529934095,
+        "actor": "admin",
+        "action": "owner.save",
+        "targetId": "d01",
+        "note": "负责人 manager，版本 1"
+      },
+      {
+        "time": 1792529935479,
+        "actor": "admin",
+        "action": "case.create",
+        "targetId": "case-a4b66d456baa",
+        "note": "设备 d01"
+      },
+      {
+        "time": 1792529959598,
+        "actor": "manager",
+        "action": "case.start",
+        "targetId": "case-a4b66d456baa",
+        "note": "开始处理"
+      },
+      {
+        "time": 1792529968087,
+        "actor": "manager",
+        "action": "case.note",
+        "targetId": "case-a4b66d456baa",
+        "note": "填写处置记录"
+      },
+      {
+        "time": 1792529987878,
+        "actor": "admin",
+        "action": "case.recover",
+        "targetId": "case-a4b66d456baa",
+        "note": "本地演练来源已恢复"
+      },
+      {
+        "time": 1792530011502,
+        "actor": "manager",
+        "action": "case.verify",
+        "targetId": "case-a4b66d456baa",
+        "note": "核实本地演练来源恢复"
+      },
+      {
+        "time": 1792530011954,
+        "actor": "manager",
+        "action": "case.close",
+        "targetId": "case-a4b66d456baa",
+        "note": "关闭事件"
+      }
+    ]
+  },
+  "readback": {
+    "/api/spaces": [
+      {
+        "id": "s1",
+        "name": "101教室",
+        "building": "交接教学楼",
+        "floor": "3层"
+      },
+      {
+        "id": "s2",
+        "name": "201教室",
+        "building": "教学楼",
+        "floor": "2"
+      },
+      {
+        "id": "s3",
+        "name": "101实验室",
+        "building": "实验楼",
+        "floor": "1"
+      },
+      {
+        "id": "s4",
+        "name": "201实验室",
+        "building": "实验楼",
+        "floor": "2"
+      }
+    ],
+    "/api/owners": [
+      {
+        "deviceId": "d01",
+        "username": "manager",
+        "note": "新目录接手巡查责任",
+        "version": 1
+      }
+    ],
+    "/api/cases": [
+      {
+        "id": "case-a4b66d456baa",
+        "deviceId": "d01",
+        "message": "新目录接手温度巡查演练",
+        "state": "CLOSED",
+        "assignee": "manager",
+        "sourceState": "RECOVERED",
+        "verified": true,
+        "note": "新目录实际检查温度样本，记录本次教学巡查",
+        "conclusion": "新目录演练已核查完成，处置记录与恢复核实一致",
+        "version": 6,
+        "timeline": [
+          {
+            "time": 1792529935479,
+            "action": "create",
+            "actor": "admin",
+            "note": "创建教学模拟演练事件，按已登记责任人分派给 manager"
+          },
+          {
+            "time": 1792529959598,
+            "action": "start",
+            "actor": "manager",
+            "note": "开始处理"
+          },
+          {
+            "time": 1792529968087,
+            "action": "note",
+            "actor": "manager",
+            "note": "新目录实际检查温度样本，记录本次教学巡查"
+          },
+          {
+            "time": 1792529987878,
+            "action": "recover",
+            "actor": "admin",
+            "note": "本地演练来源标记为已恢复（教学模拟，不声称真实设备恢复）"
+          },
+          {
+            "time": 1792530011502,
+            "action": "verify",
+            "actor": "manager",
+            "note": "已核实本地演练来源恢复（教学模拟）"
+          },
+          {
+            "time": 1792530011954,
+            "action": "close",
+            "actor": "manager",
+            "note": "新目录演练已核查完成，处置记录与恢复核实一致"
+          }
+        ]
+      }
+    ],
+    "/api/audit": [
+      {
+        "time": 1792529921156,
+        "actor": "admin",
+        "action": "space.update",
+        "targetId": "s1",
+        "note": "楼栋 交接教学楼，楼层 3层"
+      },
+      {
+        "time": 1792529934095,
+        "actor": "admin",
+        "action": "owner.save",
+        "targetId": "d01",
+        "note": "负责人 manager，版本 1"
+      },
+      {
+        "time": 1792529935479,
+        "actor": "admin",
+        "action": "case.create",
+        "targetId": "case-a4b66d456baa",
+        "note": "设备 d01"
+      },
+      {
+        "time": 1792529959598,
+        "actor": "manager",
+        "action": "case.start",
+        "targetId": "case-a4b66d456baa",
+        "note": "开始处理"
+      },
+      {
+        "time": 1792529968087,
+        "actor": "manager",
+        "action": "case.note",
+        "targetId": "case-a4b66d456baa",
+        "note": "填写处置记录"
+      },
+      {
+        "time": 1792529987878,
+        "actor": "admin",
+        "action": "case.recover",
+        "targetId": "case-a4b66d456baa",
+        "note": "本地演练来源已恢复"
+      },
+      {
+        "time": 1792530011502,
+        "actor": "manager",
+        "action": "case.verify",
+        "targetId": "case-a4b66d456baa",
+        "note": "核实本地演练来源恢复"
+      },
+      {
+        "time": 1792530011954,
+        "actor": "manager",
+        "action": "case.close",
+        "targetId": "case-a4b66d456baa",
+        "note": "关闭事件"
+      }
+    ]
+  }
+}

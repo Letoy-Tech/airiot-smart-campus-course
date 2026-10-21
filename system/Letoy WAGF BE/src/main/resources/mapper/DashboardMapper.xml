@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.letoy.main.dashboard.mapper.DashboardMapper">
+
+    <select id="countTotalUsers" resultType="long">
+        SELECT COUNT(1) FROM user_info
+    </select>
+
+    <select id="countActiveUsers" resultType="long">
+        SELECT COUNT(1) FROM user_info WHERE active = 1
+    </select>
+
+    <select id="countLockedUsers" resultType="long">
+        SELECT COUNT(1) FROM user_info WHERE account_locked = 1
+    </select>
+
+    <select id="countNewUsersSince" resultType="long">
+        SELECT COUNT(1)
+        FROM user_info
+        WHERE create_time >= #{startTime}
+    </select>
+
+    <select id="countOnlineSessions" resultType="long">
+        SELECT COUNT(1)
+        FROM refresh_token
+        WHERE revoked = 0
+          AND expires_at > NOW()
+    </select>
+
+    <select id="countOnlineUsers" resultType="long">
+        SELECT COUNT(DISTINCT uid)
+        FROM refresh_token
+        WHERE revoked = 0
+          AND expires_at > NOW()
+    </select>
+
+    <select id="countEnabledApiRules" resultType="long">
+        SELECT COUNT(1) FROM api_rule WHERE enabled = 1
+    </select>
+
+    <select id="countGroups" resultType="long">
+        SELECT COUNT(1) FROM groups_info
+    </select>
+
+    <select id="countEnabledGroups" resultType="long">
+        SELECT COUNT(1) FROM groups_info WHERE status = 1
+    </select>
+
+    <select id="countRoles" resultType="long">
+        SELECT COUNT(1) FROM sys_role
+    </select>
+
+    <select id="countEnabledRoles" resultType="long">
+        SELECT COUNT(1) FROM sys_role WHERE status = 1
+    </select>
+
+    <select id="countPasswordChangedSince" resultType="long">
+        SELECT COUNT(1)
+        FROM user_info
+        WHERE last_password_change_at IS NOT NULL
+          AND last_password_change_at >= #{startTime}
+    </select>
+
+    <select id="countUserGrowthByDate" resultType="com.letoy.main.dashboard.dto.response.DashboardTrendPointResponse">
+        SELECT DATE_FORMAT(create_time, '%Y-%m-%d') AS date, COUNT(1) AS value
+        FROM user_info
+        WHERE create_time >= #{startTime}
+        GROUP BY DATE_FORMAT(create_time, '%Y-%m-%d')
+        ORDER BY date ASC
+    </select>
+
+    <select id="countOnlineUserTrendByDate" resultType="com.letoy.main.dashboard.dto.response.DashboardTrendPointResponse">
+        SELECT DATE_FORMAT(created_at, '%Y-%m-%d') AS date, COUNT(DISTINCT uid) AS value
+        FROM refresh_token
+        WHERE created_at >= #{startTime}
+        GROUP BY DATE_FORMAT(created_at, '%Y-%m-%d')
+        ORDER BY date ASC
+    </select>
+
+    <select id="countUsersByRole" resultType="com.letoy.main.dashboard.dto.response.DashboardDistributionItemResponse">
+        SELECT r.role_code AS name, COUNT(DISTINCT ur.uid) AS value
+        FROM sys_role r
+        LEFT JOIN sys_user_role ur ON ur.role_code = r.role_code
+        GROUP BY r.role_code, r.sort_order, r.id
+        ORDER BY r.sort_order ASC, r.id ASC
+    </select>
+
+</mapper>

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-18T10:23:16.820Z",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS_FOR_PREPARATION_SAMPLE",
+  "reviewer": "Codex actual image inspection; not classroom or business acceptance",
+  "figures": [
+    {
+      "id": "公共图 01",
+      "png": "illustrations/shared-01-教学工程边界.png",
+      "pngSha256": "375908ca6b268a20fbc9e1f0b31a6df5a48dcc4d90f5aec0d0beaa5431bf00ba",
+      "source": "figure-sources/shared/shared-01-教学工程边界.svg",
+      "sourceSha256": "38357a8c9fd445283c0e38e170fd36d9a0ac8ac0662dbefcd9a16431051ad929",
+      "reviewed": true,
+      "checks": [
+        "中文可读，无可见缺字",
+        "无文字裁切或节点重叠",
+        "请求/消息箭头和层级清楚",
+        "教学示意标签和来源边界明确"
+      ],
+      "limitations": [
+        "只验证这两幅公共样图",
+        "不计入正式章节至少 36 幅图的要求"
+      ]
+    },
+    {
+      "id": "公共图 02",
+      "png": "illustrations/shared-02-网页AI协作.png",
+      "pngSha256": "ac27b450a21184646c04080a868814eefaccaf6b3dd27f9c4b5ebf396460d75a",
+      "source": "figure-sources/shared/shared-02-网页AI协作.mmd",
+      "sourceSha256": "7d68b9e58368a69e08cbcc39d340d028a6befe969102d223d0f14773a7ef0228",
+      "reviewed": true,
+      "checks": [
+        "中文可读，无可见缺字",
+        "无文字裁切或节点重叠",
+        "请求/消息箭头和层级清楚",
+        "教学示意标签和来源边界明确"
+      ],
+      "limitations": [
+        "只验证这两幅公共样图",
+        "不计入正式章节至少 36 幅图的要求"
+      ]
+    }
+  ],
+  "reader": {
+    "relative": "illustrations/reader-sample.html",
+    "standalone": "illustrations/reader-sample-standalone.html",
+    "viewports": [
+      1440,
+      390
+    ],
+    "imagesLoaded": 2,
+    "externalRequests": 0,
+    "brokenAnchors": 0,
+    "horizontalOverflow": false,
+    "verification": [
+      "illustrations/qa/sample/verification.json",
+      "illustrations/qa/standalone/verification.json",
+      "illustrations/qa/standalone/interaction.json"
+    ]
+  },
+  "printPreview": {
+    "file": "illustrations/qa/sample/print-preview.pdf",
+    "pagesViewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "result": "未见缺字、裁切或图注分离",
+    "warnings": [
+      "Poppler 两次 Syntax Warning: Bad bounding box in Type 3 glyph；视觉页检查未见相关缺字。"
+    ],
+    "status": "LAYOUT_QA_ONLY"
+  },
+  "strictModeNegativeCheck": {
+    "input": "tools/fixtures",
+    "expected": "没有正文时拒绝生成",
+    "result": "PASS",
+    "wroteOutput": false
+  },
+  "fixesVerified": [
+    "保留 Mermaid 根 SVG id 以维持嵌套 SVG 样式选择器",
+    "时序编号改为白色，提升对比度"
+  ],
+  "wholeBookVerified": false,
+  "labVerified": false
+}

@@ -1,0 +1,39 @@
+# 校园值班台 · 本课程专用本地容器（第08课第2步：只加 MySQL 8.4）
+# 在项目根目录使用：
+#   docker compose up -d          启动本课程 mysql
+#   docker compose ps             查看状态（starting / healthy）
+#   docker compose stop           结束本课服务（保留数据）
+# 约定：只连本机课程容器；不连学校或已有数据库；不使用 down -v，不删卷重做。
+
+name: campus-v2
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: campus-v2-mysql
+    restart: unless-stopped
+    environment:
+      # 口令只从项目根 .env 读取，不写在本文件里
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?缺少 MYSQL_ROOT_PASSWORD，请先确认根目录 .env 已生成}
+      MYSQL_DATABASE: campus_course
+      MYSQL_USER: campus
+      MYSQL_PASSWORD: ${DB_PASSWORD:?缺少 DB_PASSWORD，请先确认根目录 .env 已生成}
+      TZ: Asia/Shanghai
+    ports:
+      # 只监听本机回环地址，不暴露到局域网
+      - "127.0.0.1:23501:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      # 镜像自带的检查脚本：能连上且 InnoDB 初始化完成才算就绪
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      # 首次建库需要初始化数据目录，给足启动窗口；此期间状态是 starting
+      start_period: 60s
+
+volumes:
+  # 只声明键，不写 name、不写 external：
+  # Compose 会自动命名为 campus-v2_mysql-data，随项目名变化，便于第12课独立交付环境
+  mysql-data:

@@ -1,0 +1,7 @@
+[
+  ".gitignore",
+  "CODEBUDDY.md",
+  "frontend/src/views/DeviceCatalog.vue",
+  "frontend/src/views/EnergyView.vue",
+  "journey-state.json"
+]

@@ -1,0 +1,847 @@
+{
+  "runId": "dc779998d064e",
+  "campusRequestPaginationComplete": true,
+  "requests": [
+    {
+      "id": "dc779998d064e:n48",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768412.0,
+      "finished_at": 1791110768426.0,
+      "duration_ms": 10.48
+    },
+    {
+      "id": "dc779998d064e:n79",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768499.0,
+      "finished_at": 1791110768896.0,
+      "duration_ms": 376.7
+    },
+    {
+      "id": "dc779998d064e:n81",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_01&tagId=temperature_c&from=1791109868877&to=1791110768877",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768895.0,
+      "finished_at": 1791110769012.0,
+      "duration_ms": 109.73
+    },
+    {
+      "id": "dc779998d064e:n82",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_02&tagId=temperature_c&from=1791109868877&to=1791110768877",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768895.0,
+      "finished_at": 1791110769006.0,
+      "duration_ms": 109.42
+    },
+    {
+      "id": "dc779998d064e:n83",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_03&tagId=temperature_c&from=1791109868877&to=1791110768877",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768895.0,
+      "finished_at": 1791110769005.0,
+      "duration_ms": 108.67
+    },
+    {
+      "id": "dc779998d064e:n84",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_04&tagId=temperature_c&from=1791109868877&to=1791110768877",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110768896.0,
+      "finished_at": 1791110768977.0,
+      "duration_ms": 81.96
+    },
+    {
+      "id": "dc779998d064e:n85",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110783898.0,
+      "finished_at": 1791110784290.0,
+      "duration_ms": 379.8
+    },
+    {
+      "id": "dc779998d064e:n86",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_01&tagId=humidity_pct&from=1791109898529&to=1791110798529",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110798532.0,
+      "finished_at": 1791110798720.0,
+      "duration_ms": 180.93
+    },
+    {
+      "id": "dc779998d064e:n87",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_02&tagId=humidity_pct&from=1791109898529&to=1791110798529",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110798532.0,
+      "finished_at": 1791110798689.0,
+      "duration_ms": 157.03
+    },
+    {
+      "id": "dc779998d064e:n88",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_03&tagId=humidity_pct&from=1791109898529&to=1791110798529",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110798532.0,
+      "finished_at": 1791110798616.0,
+      "duration_ms": 84.52
+    },
+    {
+      "id": "dc779998d064e:n89",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_04&tagId=humidity_pct&from=1791109898529&to=1791110798529",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110798532.0,
+      "finished_at": 1791110798688.0,
+      "duration_ms": 156.73
+    },
+    {
+      "id": "dc779998d064e:n90",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110799293.0,
+      "finished_at": 1791110799660.0,
+      "duration_ms": 355.97
+    },
+    {
+      "id": "dc779998d064e:n91",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_03&tagId=humidity_pct&from=1791109903262&to=1791110803262",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110803264.0,
+      "finished_at": 1791110803408.0,
+      "duration_ms": 140.11
+    },
+    {
+      "id": "dc779998d064e:n92",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110814662.0,
+      "finished_at": 1791110815072.0,
+      "duration_ms": 399.9
+    },
+    {
+      "id": "dc779998d064e:n93",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110830074.0,
+      "finished_at": 1791110830474.0,
+      "duration_ms": 388.95
+    },
+    {
+      "id": "dc779998d064e:n95",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110837325.0,
+      "finished_at": 1791110837721.0,
+      "duration_ms": 382.8
+    },
+    {
+      "id": "dc779998d064e:n96",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_01&tagId=temperature_c&from=1791109937709&to=1791110837709",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110837721.0,
+      "finished_at": 1791110837841.0,
+      "duration_ms": 116.28
+    },
+    {
+      "id": "dc779998d064e:n97",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_02&tagId=temperature_c&from=1791109937709&to=1791110837709",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110837721.0,
+      "finished_at": 1791110837836.0,
+      "duration_ms": 116.03
+    },
+    {
+      "id": "dc779998d064e:n98",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_03&tagId=temperature_c&from=1791109937709&to=1791110837709",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110837721.0,
+      "finished_at": 1791110837810.0,
+      "duration_ms": 89.49
+    },
+    {
+      "id": "dc779998d064e:n99",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_04&tagId=temperature_c&from=1791109937709&to=1791110837709",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110837721.0,
+      "finished_at": 1791110837836.0,
+      "duration_ms": 115.43
+    },
+    {
+      "id": "dc779998d064e:n100",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110852722.0,
+      "finished_at": 1791110853079.0,
+      "duration_ms": 345.82
+    },
+    {
+      "id": "dc779998d064e:n101",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110868081.0,
+      "finished_at": 1791110868501.0,
+      "duration_ms": 407.75
+    },
+    {
+      "id": "dc779998d064e:n104",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110871191.0,
+      "finished_at": 1791110871570.0,
+      "duration_ms": 373.02
+    },
+    {
+      "id": "dc779998d064e:n105",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110886572.0,
+      "finished_at": 1791110886947.0,
+      "duration_ms": 369.7
+    },
+    {
+      "id": "dc779998d064e:n106",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110901949.0,
+      "finished_at": 1791110902309.0,
+      "duration_ms": 355.48
+    },
+    {
+      "id": "dc779998d064e:n107",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110917312.0,
+      "finished_at": 1791110917711.0,
+      "duration_ms": 393.71
+    },
+    {
+      "id": "dc779998d064e:n108",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110932712.0,
+      "finished_at": 1791110933139.0,
+      "duration_ms": 421.17
+    },
+    {
+      "id": "dc779998d064e:n109",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110948142.0,
+      "finished_at": 1791110948490.0,
+      "duration_ms": 340.11
+    },
+    {
+      "id": "dc779998d064e:n110",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110963491.0,
+      "finished_at": 1791110963845.0,
+      "duration_ms": 346.73
+    },
+    {
+      "id": "dc779998d064e:n111",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110978847.0,
+      "finished_at": 1791110979226.0,
+      "duration_ms": 372.42
+    },
+    {
+      "id": "dc779998d064e:n114",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110990920.0,
+      "finished_at": 1791110991346.0,
+      "duration_ms": 419.23
+    },
+    {
+      "id": "dc779998d064e:n161",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110991718.0,
+      "finished_at": 1791110991740.0,
+      "duration_ms": 11.06
+    },
+    {
+      "id": "dc779998d064e:n191",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791110991784.0,
+      "finished_at": 1791110992158.0,
+      "duration_ms": 368.49
+    },
+    {
+      "id": "dc779998d064e:n192",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111007161.0,
+      "finished_at": 1791111007534.0,
+      "duration_ms": 367.23
+    },
+    {
+      "id": "dc779998d064e:n193",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111022535.0,
+      "finished_at": 1791111022879.0,
+      "duration_ms": 339.03
+    },
+    {
+      "id": "dc779998d064e:n194",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111037883.0,
+      "finished_at": 1791111038292.0,
+      "duration_ms": 404.58
+    },
+    {
+      "id": "dc779998d064e:n200",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111049565.0,
+      "finished_at": 1791111049945.0,
+      "duration_ms": 370.61
+    },
+    {
+      "id": "dc779998d064e:n201",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_01&tagId=power_kw&from=1791110149935&to=1791111049935",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111049945.0,
+      "finished_at": 1791111050036.0,
+      "duration_ms": 82.75
+    },
+    {
+      "id": "dc779998d064e:n202",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_02&tagId=power_kw&from=1791110149935&to=1791111049935",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111049945.0,
+      "finished_at": 1791111050002.0,
+      "duration_ms": 57.35
+    },
+    {
+      "id": "dc779998d064e:n203",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_03&tagId=power_kw&from=1791110149935&to=1791111049935",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111049945.0,
+      "finished_at": 1791111050007.0,
+      "duration_ms": 63.02
+    },
+    {
+      "id": "dc779998d064e:n204",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_04&tagId=power_kw&from=1791110149935&to=1791111049935",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111049945.0,
+      "finished_at": 1791111050004.0,
+      "duration_ms": 59.46
+    },
+    {
+      "id": "dc779998d064e:n205",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111064947.0,
+      "finished_at": 1791111065356.0,
+      "duration_ms": 399.66
+    },
+    {
+      "id": "dc779998d064e:n206",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111080361.0,
+      "finished_at": 1791111080766.0,
+      "duration_ms": 395.91
+    },
+    {
+      "id": "dc779998d064e:n207",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111095769.0,
+      "finished_at": 1791111096197.0,
+      "duration_ms": 418.92
+    },
+    {
+      "id": "dc779998d064e:n208",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_01&tagId=voltage_v&from=1791110205472&to=1791111105472",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111105480.0,
+      "finished_at": 1791111105587.0,
+      "duration_ms": 107.31
+    },
+    {
+      "id": "dc779998d064e:n209",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_02&tagId=voltage_v&from=1791110205472&to=1791111105472",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111105480.0,
+      "finished_at": 1791111105555.0,
+      "duration_ms": 81.09
+    },
+    {
+      "id": "dc779998d064e:n210",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_03&tagId=voltage_v&from=1791110205472&to=1791111105472",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111105481.0,
+      "finished_at": 1791111105555.0,
+      "duration_ms": 80.95
+    },
+    {
+      "id": "dc779998d064e:n211",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_04&tagId=voltage_v&from=1791110205472&to=1791111105472",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111105481.0,
+      "finished_at": 1791111105555.0,
+      "duration_ms": 81.31
+    },
+    {
+      "id": "dc779998d064e:n212",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111111200.0,
+      "finished_at": 1791111111528.0,
+      "duration_ms": 321.63
+    },
+    {
+      "id": "dc779998d064e:n213",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111126529.0,
+      "finished_at": 1791111126903.0,
+      "duration_ms": 362.76
+    },
+    {
+      "id": "dc779998d064e:n214",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111141905.0,
+      "finished_at": 1791111142281.0,
+      "duration_ms": 366.85
+    },
+    {
+      "id": "dc779998d064e:n215",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111157284.0,
+      "finished_at": 1791111157645.0,
+      "duration_ms": 350.61
+    },
+    {
+      "id": "dc779998d064e:n216",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111172647.0,
+      "finished_at": 1791111173042.0,
+      "duration_ms": 383.57
+    },
+    {
+      "id": "dc779998d064e:n217",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111188045.0,
+      "finished_at": 1791111188415.0,
+      "duration_ms": 360.98
+    },
+    {
+      "id": "dc779998d064e:n219",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_01&tagId=voltage_v&from=1791110291407&to=1791111191407",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111191411.0,
+      "finished_at": 1791111191522.0,
+      "duration_ms": 106.75
+    },
+    {
+      "id": "dc779998d064e:n220",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_02&tagId=voltage_v&from=1791110291407&to=1791111191407",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111191411.0,
+      "finished_at": 1791111191497.0,
+      "duration_ms": 82.36
+    },
+    {
+      "id": "dc779998d064e:n221",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_03&tagId=voltage_v&from=1791110291407&to=1791111191407",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111191411.0,
+      "finished_at": 1791111191496.0,
+      "duration_ms": 79.9
+    },
+    {
+      "id": "dc779998d064e:n222",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=energy_demo_04&tagId=voltage_v&from=1791110291407&to=1791111191407",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111191412.0,
+      "finished_at": 1791111191517.0,
+      "duration_ms": 105.74
+    },
+    {
+      "id": "dc779998d064e:n225",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111203418.0,
+      "finished_at": 1791111203773.0,
+      "duration_ms": 347.07
+    },
+    {
+      "id": "dc779998d064e:n226",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111218776.0,
+      "finished_at": 1791111219183.0,
+      "duration_ms": 391.18
+    },
+    {
+      "id": "dc779998d064e:n227",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111234187.0,
+      "finished_at": 1791111234614.0,
+      "duration_ms": 411.83
+    },
+    {
+      "id": "dc779998d064e:n274",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111238637.0,
+      "finished_at": 1791111238648.0,
+      "duration_ms": 11.2
+    },
+    {
+      "id": "dc779998d064e:n307",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111238700.0,
+      "finished_at": 1791111239114.0,
+      "duration_ms": 392.07
+    },
+    {
+      "id": "dc779998d064e:n308",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_01&tagId=temperature_c&from=1791110339093&to=1791111239093",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111239114.0,
+      "finished_at": 1791111239228.0,
+      "duration_ms": 104.99
+    },
+    {
+      "id": "dc779998d064e:n309",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_02&tagId=temperature_c&from=1791110339093&to=1791111239093",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111239114.0,
+      "finished_at": 1791111239219.0,
+      "duration_ms": 104.72
+    },
+    {
+      "id": "dc779998d064e:n310",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_03&tagId=temperature_c&from=1791110339093&to=1791111239093",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111239114.0,
+      "finished_at": 1791111239190.0,
+      "duration_ms": 76.33
+    },
+    {
+      "id": "dc779998d064e:n311",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/history?deviceId=env_demo_04&tagId=temperature_c&from=1791110339093&to=1791111239093",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111239114.0,
+      "finished_at": 1791111239218.0,
+      "duration_ms": 104.35
+    },
+    {
+      "id": "dc779998d064e:n312",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111254117.0,
+      "finished_at": 1791111254534.0,
+      "duration_ms": 404.8
+    },
+    {
+      "id": "dc779998d064e:n313",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111269539.0,
+      "finished_at": 1791111269909.0,
+      "duration_ms": 357.14
+    },
+    {
+      "id": "dc779998d064e:n314",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111284914.0,
+      "finished_at": 1791111285315.0,
+      "duration_ms": 386.08
+    },
+    {
+      "id": "dc779998d064e:n315",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111300321.0,
+      "finished_at": 1791111300740.0,
+      "duration_ms": 409.3
+    },
+    {
+      "id": "dc779998d064e:n316",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111315747.0,
+      "finished_at": 1791111316170.0,
+      "duration_ms": 414.57
+    },
+    {
+      "id": "dc779998d064e:n317",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111331173.0,
+      "finished_at": 1791111331613.0,
+      "duration_ms": 426.29
+    },
+    {
+      "id": "dc779998d064e:n318",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111346616.0,
+      "finished_at": 1791111346971.0,
+      "duration_ms": 342.28
+    },
+    {
+      "id": "dc779998d064e:n319",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111361975.0,
+      "finished_at": 1791111362390.0,
+      "duration_ms": 401.85
+    },
+    {
+      "id": "dc779998d064e:n320",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111377393.0,
+      "finished_at": 1791111377810.0,
+      "duration_ms": 403.56
+    },
+    {
+      "id": "dc779998d064e:n368",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/capabilities",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111386314.0,
+      "finished_at": 1791111386339.0,
+      "duration_ms": 16.77
+    },
+    {
+      "id": "dc779998d064e:n396",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111386383.0,
+      "finished_at": 1791111386801.0,
+      "duration_ms": 410.69
+    },
+    {
+      "id": "dc779998d064e:n398",
+      "method": "GET",
+      "url": "http://127.0.0.1:5173/api/campus/overview",
+      "state": "complete",
+      "status": 200,
+      "started_at": 1791111401804.0,
+      "finished_at": 1791111402244.0,
+      "duration_ms": 432.75
+    }
+  ],
+  "consoleWarningsAndErrors": [
+    {
+      "at": 1791110768410.0,
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "count": 1,
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/"
+    },
+    {
+      "at": 1791110991715.0,
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "count": 1,
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/"
+    },
+    {
+      "at": 1791111238643.0,
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "count": 1,
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/"
+    },
+    {
+      "at": 1791111386311.0,
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "count": 1,
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/"
+    }
+  ],
+  "consolePaginationComplete": true,
+  "captureCoverage": [
+    "from_start",
+    "task_tab",
+    "text_bodies_bounded",
+    "time_window_not_causality",
+    "page_main_frame",
+    "worker_targets_not_captured",
+    "manual_main_frame_only",
+    "initial_load_not_recorded"
+  ],
+  "capturedAt": 1791111408223.0,
+  "publicationCopy": {
+    "sanitized": true,
+    "historical": true,
+    "notice": "Original observation times and test conclusions are historical. Infrastructure addresses and identity values were replaced; credential fingerprints were removed. This is not a deployment verification of the public source copy."
+  }
+}

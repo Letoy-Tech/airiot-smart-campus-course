@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>晨光校园值班台</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <h1>晨光校园值班台</h1>
+      <p class="tag">教学模拟项目</p>
+    </header>
+
+    <div class="body">
+      <aside class="sidebar">
+        <nav class="menu" aria-label="主导航">
+          <button class="menu-item" type="button" data-view="dashboard" aria-current="page">概览</button>
+          <button class="menu-item" type="button" data-view="devices">设备</button>
+          <button class="menu-item" type="button" data-view="spaces">空间</button>
+          <button class="menu-item" type="button" data-view="energy">能源</button>
+          <button class="menu-item" type="button" data-view="history">历史</button>
+          <button class="menu-item" type="button" data-view="alarms">原始报警</button>
+          <button class="menu-item" type="button" data-view="cases">演练事件</button>
+          <button class="menu-item" type="button" data-view="owners">设备责任</button>
+          <button class="menu-item" type="button" data-view="admin">管理</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="panel view" id="view-dashboard" aria-labelledby="view-title">
+          <h2 id="view-title">概览</h2>
+          <p>我们将在下一课放入校园设备</p>
+
+          <ul class="cards">
+            <li>
+              <button class="card card-button" type="button" id="open-devices-card">
+                <span class="card-label">设备总数</span>
+                <span class="card-value" id="stat-devices">正在读取</span>
+              </button>
+            </li>
+            <li class="card">
+              <p class="card-label">空间总数</p>
+              <p class="card-value" id="stat-spaces">正在读取</p>
+            </li>
+            <li class="card">
+              <p class="card-label">点位总数</p>
+              <p class="card-value" id="stat-points">正在读取</p>
+            </li>
+          </ul>
+
+          <section class="next-up" aria-labelledby="next-up-title">
+            <h3 id="next-up-title">今天先做什么</h3>
+            <p>先查看设备，再了解读数，发现问题后登记演练事件</p>
+          </section>
+
+          <p class="data-note" id="data-note">数据方式：浏览器演示（教学模拟）</p>
+        </section>
+
+        <div id="view-outlet"></div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

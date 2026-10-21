@@ -1,0 +1,686 @@
+{
+  "formatVersion": 1,
+  "package": "AI编程_智慧校园_V2.0.1_手把手教学包--33fc6fc94f",
+  "sourceArchive": "教学/AI编程_智慧校园_V2.0.1_手把手教学包.zip",
+  "sourceArchiveSha256": "33fc6fc94f5ee98edcfc4810a0fea7660f0262085bd1323f6704d506ed2c3cc2",
+  "sourceHashPurpose": "local historical input identity only; not the hash of any published derivative",
+  "publicationStatus": "sanitization-reviewed-hashes-finalized",
+  "entries": [
+    {
+      "path": "AI编程_手把手课程_V2.0.1/01-课程大纲.md",
+      "object": "objects/fb/fbd4105c245eacfd8e324e57a239bda94264226783b8d10736757f6865bd74f4.md",
+      "sha256": "fbd4105c245eacfd8e324e57a239bda94264226783b8d10736757f6865bd74f4",
+      "bytes": 453,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/02-项目范围与教学架构.md",
+      "object": "objects/41/41b005a28ffc5083d80a56e4ccd676023f0a7295c694bdeb0503a8eaf5330e65.md",
+      "sha256": "41b005a28ffc5083d80a56e4ccd676023f0a7295c694bdeb0503a8eaf5330e65",
+      "bytes": 730,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/03-AI协作与接力规范.md",
+      "object": "objects/cb/cb29e15974e21752fc885cbb954f63464e826da18b55f4a7ee54444c485f583c.md",
+      "sha256": "cb29e15974e21752fc885cbb954f63464e826da18b55f4a7ee54444c485f583c",
+      "bytes": 519,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/04-考核与验收.md",
+      "object": "objects/54/549c5ddebf2b1c0577fb00fe99ebc59a3a264e83d3ca00814856acfb25844205.md",
+      "sha256": "549c5ddebf2b1c0577fb00fe99ebc59a3a264e83d3ca00814856acfb25844205",
+      "bytes": 519,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/README.md",
+      "object": "objects/b1/b1fd59a07d804049ca6d26e18ef62cddb06e33d5c4ee50e0984460b395714a39.md",
+      "sha256": "b1fd59a07d804049ca6d26e18ef62cddb06e33d5c4ee50e0984460b395714a39",
+      "bytes": 1506,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/course-index-v2.json",
+      "object": "objects/18/18ea5a7713140c238299d317656176a741584e408c949ea0c1d28594ccdc7502.json",
+      "sha256": "18ea5a7713140c238299d317656176a741584e408c949ea0c1d28594ccdc7502",
+      "bytes": 3035,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/00-先准备再开始.md",
+      "object": "objects/e4/e4cc71512f69bec32196484a611d8d74594c1de185f810e2ee373323c25e9283.md",
+      "sha256": "e4cc71512f69bec32196484a611d8d74594c1de185f810e2ee373323c25e9283",
+      "bytes": 8191,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/DESIGN.md",
+      "object": "objects/42/42a40607773734f5367e24c7bc27d45f76203f384f6cfc9133b4be829ae72272.md",
+      "sha256": "42a40607773734f5367e24c7bc27d45f76203f384f6cfc9133b4be829ae72272",
+      "bytes": 455,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/README.md",
+      "object": "objects/e6/e6c1f1ad414c38ffb7b4911169f775fd9231bbec7dc69a998d516f02b9974599.md",
+      "sha256": "e6c1f1ad414c38ffb7b4911169f775fd9231bbec7dc69a998d516f02b9974599",
+      "bytes": 811,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/api-results.json",
+      "object": "objects/23/23251641b32e777815fb5deb433d56ed36595c74ebac045ddaf24f0ce4a94a12.json",
+      "sha256": "23251641b32e777815fb5deb433d56ed36595c74ebac045ddaf24f0ce4a94a12",
+      "bytes": 2688,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/backend-tests.json",
+      "object": "objects/00/00490cef03c0e758a8478319438b75508c62dddedaa6f8bdbf72f6f32d9e5958.json",
+      "sha256": "00490cef03c0e758a8478319438b75508c62dddedaa6f8bdbf72f6f32d9e5958",
+      "bytes": 503,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/browser-results.json",
+      "object": "objects/80/806c097500b1c3a025d53ccefe4261c03bcaebe5757b482c7f7edf7c5c4f6247.json",
+      "sha256": "806c097500b1c3a025d53ccefe4261c03bcaebe5757b482c7f7edf7c5c4f6247",
+      "bytes": 2035,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/handoff-results.json",
+      "object": "objects/9c/9c147581cf6ada7a97ac2c989287a713e800a069634ad1c9337a4b560fbdee3e.json",
+      "sha256": "9c147581cf6ada7a97ac2c989287a713e800a069634ad1c9337a4b560fbdee3e",
+      "bytes": 548,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/mock-results.json",
+      "object": "objects/c5/c572c43543b67d5590eb5c76a77f6d4606bff498a1563bbfee8b36ca2ec94c13.json",
+      "sha256": "c572c43543b67d5590eb5c76a77f6d4606bff498a1563bbfee8b36ca2ec94c13",
+      "bytes": 127,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/recheck-api-results.json",
+      "object": "objects/25/2577d357bc001e8c06bd1dc6a8ddba3379e0f551875a0030a3f9220b7cba3f4b.json",
+      "sha256": "2577d357bc001e8c06bd1dc6a8ddba3379e0f551875a0030a3f9220b7cba3f4b",
+      "bytes": 2977,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/recheck-export-results.json",
+      "object": "objects/73/73e02c5a72d1c6de0178c94d14d457c507fb3d152f7f5f1ff593feb400701bcb.json",
+      "sha256": "73e02c5a72d1c6de0178c94d14d457c507fb3d152f7f5f1ff593feb400701bcb",
+      "bytes": 1029,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/recheck-results.json",
+      "object": "objects/44/4449dbfbb0de50816dc760d9be551da34d9e4eff5a65083436b4ea12888e930a.json",
+      "sha256": "4449dbfbb0de50816dc760d9be551da34d9e4eff5a65083436b4ea12888e930a",
+      "bytes": 1208,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/recheck-static-results.json",
+      "object": "objects/d1/d1071313a92768c9d29cf7b9221545a288f562c561f5e01c50ecf3ec4f3cd7e5.json",
+      "sha256": "d1071313a92768c9d29cf7b9221545a288f562c561f5e01c50ecf3ec4f3cd7e5",
+      "bytes": 2328,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/static-results.json",
+      "object": "objects/be/be1dcd468139f30a95bfa22bfd6be75470788c4a6bdf7f2410b5dfcebcee1811.json",
+      "sha256": "be1dcd468139f30a95bfa22bfd6be75470788c4a6bdf7f2410b5dfcebcee1811",
+      "bytes": 1301,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/共享约定.md",
+      "object": "objects/ac/ac5f49b0fb46bc0ac4f127fc0be35dda2d97e6d58aeb99ade3de5260c7042f5b.md",
+      "sha256": "ac5f49b0fb46bc0ac4f127fc0be35dda2d97e6d58aeb99ade3de5260c7042f5b",
+      "bytes": 7759,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/index.html",
+      "object": "objects/9a/9a53b1236c781ff6d9fa09d8a4a24005c94728f88b45a0f734913dbc21df90ad.html",
+      "sha256": "9a53b1236c781ff6d9fa09d8a4a24005c94728f88b45a0f734913dbc21df90ad",
+      "bytes": 205997,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/01-从空白页面做出概览.md",
+      "object": "objects/1d/1d4bddf397cc71825316aa4d1a1d2ef49082017d6b396cfe473fe7f6df0a0099.md",
+      "sha256": "1d4bddf397cc71825316aa4d1a1d2ef49082017d6b396cfe473fe7f6df0a0099",
+      "bytes": 11906,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/02-把设备放进台账.md",
+      "object": "objects/02/02314e033aa1a5cbf6afe292525d7a6c1c1141b2f16c89ba3ac5ec87bc02902d.md",
+      "sha256": "02314e033aa1a5cbf6afe292525d7a6c1c1141b2f16c89ba3ac5ec87bc02902d",
+      "bytes": 10180,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/03-给设备安排位置和负责人.md",
+      "object": "objects/1c/1c9f33ae15b258abd2270df7db75a93c4d6aae2c3d56c409f4f473d609ebb81b.md",
+      "sha256": "1c9f33ae15b258abd2270df7db75a93c4d6aae2c3d56c409f4f473d609ebb81b",
+      "bytes": 9647,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/04-看懂读数再做能源页.md",
+      "object": "objects/9f/9fd18092127e8c4e9843e9277ca34281a1f29f41762f7a1856942022752bf4ca.md",
+      "sha256": "9fd18092127e8c4e9843e9277ca34281a1f29f41762f7a1856942022752bf4ca",
+      "bytes": 9465,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/05-把历史和原始报警接到页面.md",
+      "object": "objects/90/9081f09ba2d61a671e5b4c4d883479c2bf0a5c0d4108c55fbf4a5499bb26a214.md",
+      "sha256": "9081f09ba2d61a671e5b4c4d883479c2bf0a5c0d4108c55fbf4a5499bb26a214",
+      "bytes": 9835,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/06-走完演练事件并串起整个前端.md",
+      "object": "objects/af/af90dc6681adf35fbdfaeba3dcfdb407ef4e0960c4f2baf8ee42469e470c15b4.md",
+      "sha256": "af90dc6681adf35fbdfaeba3dcfdb407ef4e0960c4f2baf8ee42469e470c15b4",
+      "bytes": 16673,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/07-看着页面做第一个后端.md",
+      "object": "objects/36/3635752a8c2a1e9f7fc764bd352c0529da53ceae0d61e2a187a81ea6c2eec173.md",
+      "sha256": "3635752a8c2a1e9f7fc764bd352c0529da53ceae0d61e2a187a81ea6c2eec173",
+      "bytes": 11367,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/08-把设备保存到MySQL.md",
+      "object": "objects/c5/c5e3a5185b403f986b161ec072e197772529c36b5d83f8c0238b6fa3c3a726b0.md",
+      "sha256": "c5e3a5185b403f986b161ec072e197772529c36b5d83f8c0238b6fa3c3a726b0",
+      "bytes": 13420,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/09-用Redis记住短时登录.md",
+      "object": "objects/79/798e29d19129656e4c77a8592029bebb15d68c46dc8d9cecef7d94c54d05c85c.md",
+      "sha256": "798e29d19129656e4c77a8592029bebb15d68c46dc8d9cecef7d94c54d05c85c",
+      "bytes": 13038,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/10-逐页接回真实后端.md",
+      "object": "objects/88/8893283d134bc12cc66ecd4b5c67dbc92bc7b20358fd3837c78714305e55fe6e.md",
+      "sha256": "8893283d134bc12cc66ecd4b5c67dbc92bc7b20358fd3837c78714305e55fe6e",
+      "bytes": 10998,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/11-让一件演练有始有终.md",
+      "object": "objects/a9/a90751158dae711249fdc0bdaa59aacbd7fdf231b0907a68df924df8abe88cb5.md",
+      "sha256": "a90751158dae711249fdc0bdaa59aacbd7fdf231b0907a68df924df8abe88cb5",
+      "bytes": 13487,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/lessons/12-把作品交到新目录.md",
+      "object": "objects/60/60fa7400ec466a16a63658c532b12804949c4f45b9a0659b0401329a5089050c.md",
+      "sha256": "60fa7400ec466a16a63658c532b12804949c4f45b9a0659b0401329a5089050c",
+      "bytes": 16102,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/交付包说明.md",
+      "object": "objects/b1/b1fd59a07d804049ca6d26e18ef62cddb06e33d5c4ee50e0984460b395714a39.md",
+      "sha256": "b1fd59a07d804049ca6d26e18ef62cddb06e33d5c4ee50e0984460b395714a39",
+      "bytes": 1506,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/从空白开始_手把手教程_V2.0.1.html",
+      "object": "objects/5e/5ef92979791e8a2c749acd6301503cc5d815c991d90f7e11b7c47b9324466032.html",
+      "sha256": "5ef92979791e8a2c749acd6301503cc5d815c991d90f7e11b7c47b9324466032",
+      "bytes": 226260,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/教师安排.md",
+      "object": "objects/42/42c76a3927e40c2e6600e96b703b8613aa8ef9059eaa8ec2b46bdd94067a7d76.md",
+      "sha256": "42c76a3927e40c2e6600e96b703b8613aa8ef9059eaa8ec2b46bdd94067a7d76",
+      "bytes": 4965,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/教师验证记录.md",
+      "object": "objects/2f/2f9b51921de81cea4862d14e4186d24fc5aa9f1523169e0c1aed29d582da8542.md",
+      "sha256": "2f9b51921de81cea4862d14e4186d24fc5aa9f1523169e0c1aed29d582da8542",
+      "bytes": 8606,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/index.html",
+      "object": "objects/63/638c32743c5a4196f971f3872023bea0e92439831067e4206ccfcb3178f6003b.html",
+      "sha256": "638c32743c5a4196f971f3872023bea0e92439831067e4206ccfcb3178f6003b",
+      "bytes": 394,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/.gitignore",
+      "object": "objects/3f/3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b.txt",
+      "sha256": "3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b",
+      "bytes": 73,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/README.md",
+      "object": "objects/45/451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8.md",
+      "sha256": "451f232f6704eb271a9c2f55034c02d2330f3f11324331e7bf7d6310853ab5f8",
+      "bytes": 659,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/frontend/index.html",
+      "object": "objects/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/maven-wrapper/.mvn/wrapper/maven-wrapper.properties",
+      "object": "objects/75/75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/maven-wrapper/mvnw",
+      "object": "objects/45/4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f.txt",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/maven-wrapper/mvnw.cmd",
+      "object": "objects/6d/6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/mock-campus.json",
+      "object": "objects/3f/3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3.json",
+      "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3",
+      "bytes": 23788,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/约定卡.md",
+      "object": "objects/60/603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83.md",
+      "sha256": "603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83",
+      "bytes": 7816,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/.env.example",
+      "object": "objects/93/93d258da49bf83bc46deecfe866b20d6bd0ff0c0e54d71cd38ef524402e16438.example",
+      "sha256": "93d258da49bf83bc46deecfe866b20d6bd0ff0c0e54d71cd38ef524402e16438",
+      "bytes": 326,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/.gitignore",
+      "object": "objects/3f/3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b.txt",
+      "sha256": "3f0d1785038bc1e13d4c3a11cced1de3bbc0adf5bf572a31f1131bd6fe9b386b",
+      "bytes": 73,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/README.md",
+      "object": "objects/81/81f7aeb61d442f7f622069f259f658c1a2e6b2f24b370703eefc160e458d2ace.md",
+      "sha256": "81f7aeb61d442f7f622069f259f658c1a2e6b2f24b370703eefc160e458d2ace",
+      "bytes": 5746,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/.mvn/wrapper/maven-wrapper.properties",
+      "object": "objects/75/75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be.properties",
+      "sha256": "75f91f99d181ac94167d1c89493856d2150e1503e389550c1efe38480b7375be",
+      "bytes": 233,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/README.md",
+      "object": "objects/7a/7a70a0e115154d5050364771d0e19a044f8e327725f4ccd8976ee802fe1d129e.md",
+      "sha256": "7a70a0e115154d5050364771d0e19a044f8e327725f4ccd8976ee802fe1d129e",
+      "bytes": 1757,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/mvnw",
+      "object": "objects/45/4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f.txt",
+      "sha256": "4591ada725d05dbb596064ff1540d673a6252036699596d279ce8117606e823f",
+      "bytes": 10284,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/mvnw.cmd",
+      "object": "objects/6d/6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9.cmd",
+      "sha256": "6d19e53372cb157e46f62b648832d34ab12f0e6b6b9f5f10b643f1f010bcc4c9",
+      "bytes": 6734,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/pom.xml",
+      "object": "objects/aa/aa6d36dc8e8f720f319927f8c21d33814d1ba97c393de8d05781f16b47045b23.xml",
+      "sha256": "aa6d36dc8e8f720f319927f8c21d33814d1ba97c393de8d05781f16b47045b23",
+      "bytes": 1889,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/Api.java",
+      "object": "objects/e3/e3aa2166c9fa73897093bd89902403e50514b927486d924b344f659f444437c5.java",
+      "sha256": "e3aa2166c9fa73897093bd89902403e50514b927486d924b344f659f444437c5",
+      "bytes": 175,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/ApiErrors.java",
+      "object": "objects/4e/4ee3ae775a2cce1c8bfab974eb67d098eb1122be0d2f95ee47c1daeaefb801ed.java",
+      "sha256": "4ee3ae775a2cce1c8bfab974eb67d098eb1122be0d2f95ee47c1daeaefb801ed",
+      "bytes": 2006,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/ApiException.java",
+      "object": "objects/92/92f13c2a735baa2c4d8f5ff173db22232211252dac466ffe69ab3c42a4059ba2.java",
+      "sha256": "92f13c2a735baa2c4d8f5ff173db22232211252dac466ffe69ab3c42a4059ba2",
+      "bytes": 283,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/AuthService.java",
+      "object": "objects/80/80f0815af26fea66168953431cb529073116f5c3cb95498e5d44db93cdad0acd.java",
+      "sha256": "80f0815af26fea66168953431cb529073116f5c3cb95498e5d44db93cdad0acd",
+      "bytes": 3257,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/CampusApplication.java",
+      "object": "objects/0a/0a8a0bc21d5d9800ec084c9d31777ce80492309d7c23407e04513686094e8d2e.java",
+      "sha256": "0a8a0bc21d5d9800ec084c9d31777ce80492309d7c23407e04513686094e8d2e",
+      "bytes": 319,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/CampusController.java",
+      "object": "objects/a3/a32eee8377bef1f56640070b549891d5df7662d992e9221228aa5684ea25a30a.java",
+      "sha256": "a32eee8377bef1f56640070b549891d5df7662d992e9221228aa5684ea25a30a",
+      "bytes": 4072,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/CampusService.java",
+      "object": "objects/6c/6c9a50fee142c3cc30ac504f4ae86bd9cd17a32c6a1811fb5a8d3f00d37b6954.java",
+      "sha256": "6c9a50fee142c3cc30ac504f4ae86bd9cd17a32c6a1811fb5a8d3f00d37b6954",
+      "bytes": 8692,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/CaseRecord.java",
+      "object": "objects/89/8952c9429f70434f75519d39b30accba7af56fa1cbb91f6a42039ef0f2db670b.java",
+      "sha256": "8952c9429f70434f75519d39b30accba7af56fa1cbb91f6a42039ef0f2db670b",
+      "bytes": 465,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/CaseRules.java",
+      "object": "objects/7a/7a621e91e73a8a0145882056db5159d9d15b521637fad08d98f7b0ea23921136.java",
+      "sha256": "7a621e91e73a8a0145882056db5159d9d15b521637fad08d98f7b0ea23921136",
+      "bytes": 3555,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/SeedData.java",
+      "object": "objects/62/62f33b96ab7d731781924b2dd559be479e21ac748ce4c008b6b38ae596f6269d.java",
+      "sha256": "62f33b96ab7d731781924b2dd559be479e21ac748ce4c008b6b38ae596f6269d",
+      "bytes": 3322,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/User.java",
+      "object": "objects/a6/a6061ea82edd5950f4922b4d53ec29f74687953efd2de68f72f21dd992cac456.java",
+      "sha256": "a6061ea82edd5950f4922b4d53ec29f74687953efd2de68f72f21dd992cac456",
+      "bytes": 563,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/java/cn/campus/course/WebConfig.java",
+      "object": "objects/d8/d8b1321644f46f657873611e20aaf9708f112f1309f4b67d802ce5b4b94447ee.java",
+      "sha256": "d8b1321644f46f657873611e20aaf9708f112f1309f4b67d802ce5b4b94447ee",
+      "bytes": 1154,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/resources/application.properties",
+      "object": "objects/78/78ae04d232b995c1016aba60a6b3c8710e2dac6de8d346768a2f303bf2cf17e8.properties",
+      "sha256": "78ae04d232b995c1016aba60a6b3c8710e2dac6de8d346768a2f303bf2cf17e8",
+      "bytes": 793,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/resources/data/mock-campus.json",
+      "object": "objects/3f/3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3.json",
+      "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3",
+      "bytes": 23788,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/main/resources/db/migration/V1__course_tables.sql",
+      "object": "objects/52/525488f87dc31ee6cba148ee3256c2dc30c39eba6b8b500120ec2f955124045e.sql",
+      "sha256": "525488f87dc31ee6cba148ee3256c2dc30c39eba6b8b500120ec2f955124045e",
+      "bytes": 2662,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/test/java/cn/campus/course/AuthServiceTest.java",
+      "object": "objects/89/899035ec6004ee6fc24516eb1c66ded665788d7e1d3d2d2ab4100ece19dd8767.java",
+      "sha256": "899035ec6004ee6fc24516eb1c66ded665788d7e1d3d2d2ab4100ece19dd8767",
+      "bytes": 3776,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/test/java/cn/campus/course/CaseRulesTest.java",
+      "object": "objects/80/80813dd10393a3ad79181b0bd100d3e7002a68fdd17fc3341a29b0604839bac9.java",
+      "sha256": "80813dd10393a3ad79181b0bd100d3e7002a68fdd17fc3341a29b0604839bac9",
+      "bytes": 5037,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/src/test/java/cn/campus/course/InputValidationTest.java",
+      "object": "objects/9b/9b8d0a553dda1ca2705253feaef3a501f794b125c70416e021216ea7adf34f03.java",
+      "sha256": "9b8d0a553dda1ca2705253feaef3a501f794b125c70416e021216ea7adf34f03",
+      "bytes": 827,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/compose.yaml",
+      "object": "objects/5e/5e9c8ff56901e289f24c23328f891e3fea31f4d1fa02efb585edeca509f76f1c.yaml",
+      "sha256": "5e9c8ff56901e289f24c23328f891e3fea31f4d1fa02efb585edeca509f76f1c",
+      "bytes": 1082,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/docs/交付说明.md",
+      "object": "objects/a4/a41302379b8ba6bcc67f94d5f1ead44875b216c455d29efbcd6c837c09916c3a.md",
+      "sha256": "a41302379b8ba6bcc67f94d5f1ead44875b216c455d29efbcd6c837c09916c3a",
+      "bytes": 345,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/docs/本组实做记录.md",
+      "object": "objects/9b/9bc1469a6c61323c779af761a326e696b439c9aeef6893c002cab83acc59759d.md",
+      "sha256": "9bc1469a6c61323c779af761a326e696b439c9aeef6893c002cab83acc59759d",
+      "bytes": 656,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/frontend/app.js",
+      "object": "objects/f9/f9cb312911d43a45541fb197b1a9763eb64167494a897f22c4011978b7cdaa16.js",
+      "sha256": "f9cb312911d43a45541fb197b1a9763eb64167494a897f22c4011978b7cdaa16",
+      "bytes": 28867,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/frontend/data-service.js",
+      "object": "objects/38/38fe43ba2cf06a3f63726b38a718a983cf930cb6b62e6d1a43ccabb377906c7f.js",
+      "sha256": "38fe43ba2cf06a3f63726b38a718a983cf930cb6b62e6d1a43ccabb377906c7f",
+      "bytes": 6203,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/frontend/index.html",
+      "object": "objects/93/93231bf9bcfc4a8f4d0b49eb642db3d16e92848115ce800bbcd1ffcc6a3e329a.html",
+      "sha256": "93231bf9bcfc4a8f4d0b49eb642db3d16e92848115ce800bbcd1ffcc6a3e329a",
+      "bytes": 1038,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/frontend/mock-data.js",
+      "object": "objects/16/16768e7a390770f1165a2b3b3e83597db18ac93bda9047f50c42b5608ab8b295.js",
+      "sha256": "16768e7a390770f1165a2b3b3e83597db18ac93bda9047f50c42b5608ab8b295",
+      "bytes": 23815,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/frontend/styles.css",
+      "object": "objects/de/de9ea2ac47211218d2fcc669ca1cceb9fecab525d23155aa52a13f28ed9ab117.css",
+      "sha256": "de9ea2ac47211218d2fcc669ca1cceb9fecab525d23155aa52a13f28ed9ab117",
+      "bytes": 5102,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/materials/mock-campus.json",
+      "object": "objects/3f/3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3.json",
+      "sha256": "3f5cfa5af2d625dc9ae4113ac7646088ab76c2038e2ea900f74e697c5b1a97f3",
+      "bytes": 23788,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/materials/约定卡.md",
+      "object": "objects/60/603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83.md",
+      "sha256": "603f5b66aa42fc9042d3a18cfbe8642af1acfda4832fe7ecb468a76d60491f83",
+      "bytes": 7816,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/tools/export-source.mjs",
+      "object": "objects/67/671977ee8bdfb31c51e84c380d95573e1cd6f687276144e98748c6bb9fe21281.mjs",
+      "sha256": "671977ee8bdfb31c51e84c380d95573e1cd6f687276144e98748c6bb9fe21281",
+      "bytes": 3855,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/tools/serve.mjs",
+      "object": "objects/f7/f7f48064f846686eda835d93c4476c4ea90dd83ef201eeed8cdff58b37bcb79c.mjs",
+      "sha256": "f7f48064f846686eda835d93c4476c4ea90dd83ef201eeed8cdff58b37bcb79c",
+      "bytes": 2027,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/tools/setup-env.mjs",
+      "object": "objects/bf/bf3ee737d2c8fbe66a3acea91af154902f1c37870f5ca55088a7a6e55418372e.mjs",
+      "sha256": "bf3ee737d2c8fbe66a3acea91af154902f1c37870f5ca55088a7a6e55418372e",
+      "bytes": 1098,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/build-reader.mjs",
+      "object": "objects/5b/5b7b65770e19a8846d59fcfbaba1e7e885ec4ba0985d527ff28b0234482c13ad.mjs",
+      "sha256": "5b7b65770e19a8846d59fcfbaba1e7e885ec4ba0985d527ff28b0234482c13ad",
+      "bytes": 8704,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/package-course.py",
+      "object": "objects/d0/d0d2e8969aee5f3274d186c1f877630f2d3c3d682edb993417106601d7e743b9.py",
+      "sha256": "d0d2e8969aee5f3274d186c1f877630f2d3c3d682edb993417106601d7e743b9",
+      "bytes": 3064,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/package-lock.json",
+      "object": "objects/16/165c4930754174c2bad04fa967ec2a03703134e28ccdbfcf525ae552b83fe4ab.json",
+      "sha256": "165c4930754174c2bad04fa967ec2a03703134e28ccdbfcf525ae552b83fe4ab",
+      "bytes": 667,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/package.json",
+      "object": "objects/cf/cfc1c87ef898b8154425f7d42bdca01ec7ed49aa798278ea3acf098d4297000a.json",
+      "sha256": "cfc1c87ef898b8154425f7d42bdca01ec7ed49aa798278ea3acf098d4297000a",
+      "bytes": 130,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/verify-course.py",
+      "object": "objects/90/90499f5d58c559f1bc577e4c32a888d9102e7253cad5dcfe18f460b325339444.py",
+      "sha256": "90499f5d58c559f1bc577e4c32a888d9102e7253cad5dcfe18f460b325339444",
+      "bytes": 4382,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/verify-export.mjs",
+      "object": "objects/df/dfb4ebbc70a56773f070ac0cb7f7152d05e64fa3a8d84025eab3b5b192324913.mjs",
+      "sha256": "dfb4ebbc70a56773f070ac0cb7f7152d05e64fa3a8d84025eab3b5b192324913",
+      "bytes": 4741,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/tools/v2/verify-mock.mjs",
+      "object": "objects/f0/f0c47dd0df0f58e8daa2b66b54d26fe6dc10e7577f41515d08aa408c55da405d.mjs",
+      "sha256": "f0c47dd0df0f58e8daa2b66b54d26fe6dc10e7577f41515d08aa408c55da405d",
+      "bytes": 2917,
+      "executable": false
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/先打开这里.html",
+      "object": "objects/63/638c32743c5a4196f971f3872023bea0e92439831067e4206ccfcb3178f6003b.html",
+      "sha256": "638c32743c5a4196f971f3872023bea0e92439831067e4206ccfcb3178f6003b",
+      "bytes": 394,
+      "executable": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "AI编程_手把手课程_V2.0.1/handbook-v2/author/evidence/参考工程浏览器实测.png",
+      "reason": "unreviewed-native-browser-or-other-image"
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/student-start/materials/maven-wrapper/.mvn/wrapper/maven-wrapper.jar",
+      "reason": "generated-dependency-or-installation-binary"
+    },
+    {
+      "path": "AI编程_手把手课程_V2.0.1/resources/from-zero-v2/teacher-reference/backend/.mvn/wrapper/maven-wrapper.jar",
+      "reason": "generated-dependency-or-installation-binary"
+    },
+    {
+      "path": "PACKAGE-MANIFEST.json",
+      "reason": "original-integrity-manifest-stale-after-sanitization"
+    }
+  ],
+  "nestedPackages": [],
+  "embeddedImageTransforms": {
+    "allowed": 0,
+    "omitted": 1,
+    "externalized": 0
+  },
+  "integrityScope": "sha256 describes this sanitized derivative, not the original source ZIP members"
+}

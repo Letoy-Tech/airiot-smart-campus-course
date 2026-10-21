@@ -1,0 +1,1768 @@
+{
+  "generatedAt": "2026-10-19T13:21:37.282Z",
+  "input": "reading/index.html",
+  "inputSha256": "2e2719e9ddd863c339cf46af473fdfda6f4fe553b8d2ab5b9768542ef945acaa",
+  "pdfGenerated": false,
+  "browser": "151.0.7922.34",
+  "status": "PASS",
+  "scope": "HTML 文件的本地离线显示、资源、目录点击、锚点与尺寸检查；不验证课程实验",
+  "visualReview": "REQUIRES_IMAGE_VIEW",
+  "labVerified": false,
+  "checks": [
+    {
+      "width": 1440,
+      "title": "AI 编程——以智慧校园平台重建为例 · V1.1.0 · 完整教学资源与教案",
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "images": [
+        {
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "width": 2560,
+          "height": 2182,
+          "caption": true
+        },
+        {
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "loaded": true,
+          "width": 2560,
+          "height": 1936,
+          "caption": true
+        },
+        {
+          "alt": "使用问题依次进入需求、设计、实现、验证和交付；验证发现偏差后回到需求或设计，交付后的新问题开始下一轮。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "含糊提示只有“完整、专业”，输出范围无法判断；明确提示包含目标、输入、规则、边界和验收，可逐项核对模型建议。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1900,
+          "caption": true
+        },
+        {
+          "alt": "学生提供目标和合同，网页 AI 给建议，学生审查并应用，再在本地核验；不符时回传证据，符合时记录结果并交接。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "查看者需要设备和监测，管理人员需要本人事件处理，管理员需要映射、分派与责任管理；AIRIOT 只读接入是选做，真实控制、外部通知和真实学生信息不纳入基础范围。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1894,
+          "caption": true
+        },
+        {
+          "alt": "R06 演练闭环连接业务规则与事务任务，分别连接 AC07 闭环、AC08 并发和 AC09 回滚；执行后才产生响应、回读和时间线证据。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1118,
+          "caption": true
+        },
+        {
+          "alt": "M1 第 01—03 章定义项目，M2 第 04—06 章让设备可见，M3 第 07—08 章让数据可信，M4 第 09—10 章完成业务闭环，M5 第 11—12 章测试交付；选做接入不阻塞主线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2692,
+          "caption": true
+        },
+        {
+          "alt": "Vue 前端调用 Spring Boot 后端；后端独立处理授权、业务和数据库持久化，并通过 CampusDataProvider 读取 TeachingMockProvider；AiriotProvider 只读接入是可选分支。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2804,
+          "caption": true
+        },
+        {
+          "alt": "纳入教学集的设备预建一条责任主记录，初始版本为零且历史为空；设备可关联多条演练事件。每条事件至少有创建时间线，责任主记录可有零到多条变更历史。设备为提供器逻辑引用，不是已建本地设备表。",
+          "loaded": true,
+          "width": 2560,
+          "height": 4066,
+          "caption": true
+        },
+        {
+          "alt": "处置从待分派走向待处理、处理中，满足关闭关卡才到已关闭；管理员恢复来源后还需处理者请求服务端核实，恢复本身没有直达关闭的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2432,
+          "caption": true
+        },
+        {
+          "alt": "A 和 B 都读取版本 3；A 锁定记录，修改至 4 并插入时间线后提交；B 等待取得锁，发现当前为 4，返回 409，不再修改主记录或追加成功时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2436,
+          "caption": true
+        },
+        {
+          "alt": "工作区经 git add 进入暂存区，经 git commit 形成提交；两种 diff 检查不同边界，已提交错误可通过新修正提交保留历史。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1840,
+          "caption": true
+        },
+        {
+          "alt": "浏览器向前端开发服务请求带 api 前缀的设备地址，代理保留前缀后转到后端；后端检查身份和读取权限，再读取教学提供器，返回标准 JSON，前端从 data.items 显示两条模拟设备。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2118,
+          "caption": true
+        },
+        {
+          "alt": "先检查 Network 是否有请求；无请求看前端事件，有请求则区分 HTML、身份权限拒绝、服务错误与合法 JSON；最后分别检查代理、登录授权、后端日志或页面解析。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2460,
+          "caption": true
+        },
+        {
+          "alt": "页面经控制器进入服务，服务先检查读取权限，再调用数据端口，将返回记录映射为 DTO 后响应。这里没有前端直连数据源的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1644,
+          "caption": true
+        },
+        {
+          "alt": "设备属于来源空间，本地楼栋属于校园，绑定保存来源空间标识、楼栋标识和楼层；跨数据源关联用虚线表示，不能在本地数据库直接建立指向外部服务的数据库外键。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1182,
+          "caption": true
+        },
+        {
+          "alt": "管理员通过授权、来源空间和本地关系检查后，仅向本地数据库保存绑定；成功响应之后，再次发起读取核对当前关系。图中没有修改来源空间的调用。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2070,
+          "caption": true
+        },
+        {
+          "alt": "左侧桌面布局依次为标题、教学模拟来源、搜索和筛选、结果数量及两条设备行；右侧窄屏保留相同操作和一张设备卡片。示例显示两条返回记录，不代表最终十六台设备已加载。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1640,
+          "caption": true
+        },
+        {
+          "alt": "API 产生原始资源，用户输入产生筛选条件，二者共同计算列表与数量；请求状态决定反馈，设备标识决定详情目标。图中没有修改原始列表来完成筛选的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2420,
+          "caption": true
+        },
+        {
+          "alt": "首次读取进入加载，成功后区分原始空目录、筛选无匹配和正常列表；首次失败展示错误，已有结果的再次读取失败保留带说明的旧快照。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1900,
+          "caption": true
+        },
+        {
+          "alt": "观察时间固定为 O，合法零在 O 时刻是 fresh；O 减 60000 毫秒仍 fresh，减 60001 毫秒为 stale；缺失值为 missing；O 加 5000 毫秒在容差内，加 5001 毫秒为 invalid。另列数值字符串为无效类型。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1680,
+          "caption": true
+        },
+        {
+          "alt": "T0 的 0 kW 保留在零刻度；T0 加 60 秒为 null，曲线在此断开；加 120 秒和加 180 秒分别为 1.2、0.9 kW，可以视觉连线，右侧表保留四条原始记录。横轴为相对 T0 的秒，仅用于读图，接口时间仍为 epoch 毫秒。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1600,
+          "caption": true
+        },
+        {
+          "alt": "请求完成后才开始十五秒等待；页面离开时清理等待器并取消进行中的请求，已经失效的响应也不能重新写入状态。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2110,
+          "caption": true
+        },
+        {
+          "alt": "三个角色都可读取，管理员具有管理资格；管理员和本人范围内的管理人员仍须通过事件业务检查；查看者及处理他人事件的管理人员被拒绝，所有角色的设备控制关闭。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2926,
+          "caption": true
+        },
+        {
+          "alt": "无有效身份的请求返回 401；角色或适用对象范围不符返回 403；授权通过后仍检查参数和业务条件，只有全部满足才执行操作。被拒绝的写请求不得产生业务记录。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2680,
+          "caption": true
+        },
+        {
+          "alt": "管理员请求尚未返回时先退出并切到查看者；前端接受当前身份的能力，丢弃旧管理员的迟到响应，管理入口不会恢复。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2726,
+          "caption": true
+        },
+        {
+          "alt": "事件创建后按责任人有效性进入待分派或待处理；分派进入待处理，开始进入处理中，重新分派回到待处理，满足全部门槛后关闭，关闭后禁止修改。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2340,
+          "caption": true
+        },
+        {
+          "alt": "合法请求先经过身份权限和版本检查，再检查处理中、至少一条处置记录、本地演练已有效恢复、服务端核实通过且时间有效、关闭结论非空；满足全部条件才能提交关闭与时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 3220,
+          "caption": true
+        },
+        {
+          "alt": "A 在未恢复时核实得到 UNKNOWN；管理员恢复并重置核实结果，按匹配版本重复恢复不产生新记录；A 再核实得到 PASS，然后提交结论关闭。各有效修改在主记录与时间线同一事务内保存。",
+          "loaded": true,
+          "width": 2560,
+          "height": 3240,
+          "caption": true
+        },
+        {
+          "alt": "设备关联一条当前责任记录，责任记录对应多条责任变更历史；事件创建时读取责任作为分派依据，之后保存独立负责人，事件再对应自己的动作时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2300,
+          "caption": true
+        },
+        {
+          "alt": "ADMIN 登记 A 并创建 E1，A 开始处理后为 IN_PROGRESS、事件版本 2；随后设备责任改为 B，E1 的负责人、状态、版本和历史保持该基线；新建 E2 分派给 B，事件版本为 1。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2378,
+          "caption": true
+        },
+        {
+          "alt": "初始责任为空且版本为零；第一条历史记录管理员将空责任改为 A 并附原因；第二条记录将 A 改为 B。当前责任显示 B，但旧历史继续保留前后 uid、操作者、说明与各自版本。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1760,
+          "caption": true
+        },
+        {
+          "alt": "需求规则分别连接构建与单元、真实数据库、带身份 API、浏览器流程及选做外部接入；每类证据只支持其覆盖范围，不能用 mock 证明锁或事务，也不能用构建代替浏览器验收。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2140,
+          "caption": true
+        },
+        {
+          "alt": "两个管理员请求经屏障放行并使用版本 n；第一个获得锁后提交负责人 A、版本 n 加一及一条历史；第二个等待后读取新版本，返回 409；独立连接确认仅有一次修改。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2340,
+          "caption": true
+        },
+        {
+          "alt": "先记录主行和历史基线，业务事务锁行并更新主行，时间线插入发生测试注入失败，异常触发回滚；请求结束后独立连接读取，与基线比较字段、版本和历史均未变。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "保存失败，固定最小复现，从事实形成假设并补观察，定位后进行最小修改，再运行原失败与相邻回归；若未解释失败则继续定位，解释成立后记录缺陷关闭证据。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2324,
+          "caption": true
+        },
+        {
+          "alt": "确认源码与依赖基线后执行检查构建，取得带标识的产物；在独立环境启动，再用真实身份验证业务；同伴根据说明复现并提交问题记录，形成可交接包。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2392,
+          "caption": true
+        },
+        {
+          "alt": "接收筛选需求后写验收条件，核对现有合同与影响范围，保存基线，再修改页面与测试；通过受影响检查和浏览器验证后更新交付说明，失败则保留证据继续修复。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "变更失败后先保存证据并判断是否改变数据结构或数据；代码问题在兼容性确认后恢复旧代码并回归，数据恢复则需要受审查的备份与隔离恢复流程，不能直接清库覆盖。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2320,
+          "caption": true
+        }
+      ],
+      "brokenAnchors": [],
+      "duplicateIds": [],
+      "hasScopeBoundary": true,
+      "rawFrontmatterVisible": false,
+      "documentSections": 35,
+      "chapters": 12,
+      "embeddedImages": false,
+      "figureIds": [
+        "fig-shared-02-网页AI协作",
+        "fig-shared-01-教学工程边界",
+        "fig-ch01-01-engineering-cycle",
+        "fig-ch01-02-prompt-comparison",
+        "fig-ch01-03-ai-evidence-loop",
+        "fig-ch02-01-scope-map",
+        "fig-ch02-02-traceability",
+        "fig-ch02-03-milestones",
+        "fig-ch03-01-architecture",
+        "fig-ch03-02-local-records-er",
+        "fig-ch03-03-two-state-axes",
+        "fig-ch03-04-version-transaction",
+        "fig-ch04-01-git-workflow",
+        "fig-ch04-02-first-request",
+        "fig-ch04-03-debug-path",
+        "fig-ch05-01-device-request",
+        "fig-ch05-02-space-relations",
+        "fig-ch05-03-binding-readback",
+        "fig-ch06-01-device-wireframe",
+        "fig-ch06-02-components-state",
+        "fig-ch06-03-page-states",
+        "fig-ch07-01-quality-cases",
+        "fig-ch07-02-history-gaps",
+        "fig-ch07-03-refresh-lifecycle",
+        "fig-ch08-01-role-scope",
+        "fig-ch08-02-denial-path",
+        "fig-ch08-03-identity-race",
+        "fig-ch09-01-state-machine",
+        "fig-ch09-02-close-gates",
+        "fig-ch09-03-recovery-sequence",
+        "fig-ch10-01-owner-event-model",
+        "fig-ch10-02-future-assignment",
+        "fig-ch10-03-responsibility-timeline",
+        "fig-ch11-01-evidence-layers",
+        "fig-ch11-02-concurrent-updates",
+        "fig-ch11-03-transaction-rollback",
+        "fig-ch11-04-debugging-loop",
+        "fig-ch12-01-delivery-flow",
+        "fig-ch12-02-controlled-change",
+        "fig-ch12-03-code-data-recovery"
+      ],
+      "visitedChapterLinks": [
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块一把代码放回工程过程1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块二与网页-ai-完成一个小任务2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-16-最小实验留下可复查的三轮记录",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块三把结论变成证据与交接1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-18-接力不是复制聊天的最后一句",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-人工检查常见错误与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-课后巩固",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块一把人的问题写成项目边界1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块二写验收条件再拆分版本2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块三评审需求并处理变更1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-最小实验与人工检查",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块一先划分职责再选择实现1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块二把业务事实变成数据与-api2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块三用样例评审合同1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块一环境清单与-git-基线1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-43-不依赖工程的文字版本练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块二让一次读取穿过前后端2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-46-独立练习一个显示函数也需要边界",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块三定位问题提交与复现1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块一-把一个问题拆成边界清楚的请求1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块二-完成读取与本地空间映射2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块三-用证据判断接口是否完成1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-31-最小实验与人工检查点",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块一-从巡查任务设计信息结构1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块二-实现设备列表-筛选与详情2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-26-最小实验与网页-ai-小任务",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块三-检查交互与解释页面状态1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-31-让同学完成一个具体任务",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块一-读数成立需要哪些条件1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块二-从最新值走到可信的历史展示2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-25-最小实验与网页-ai-协作",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块三-用故障判断页面有没有误导1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-31-人工核验顺序",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块一-从业务规则得到权限矩阵1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块二-让身份-能力与服务端拒绝连起来2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-25-最小实验按身份和接口展开",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块三-用拒绝证据证明边界1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-31-一条拒绝需要三类证据",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块一-从业务叙述建立状态机1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块二-实现并观察一个完整闭环2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-23-按版本账本完成最小实验",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块三-审查-ai-建议并完成核验1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-32-以反例检查真实行为",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块一-设计可以追溯的责任关系1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块二-登记责任并验证新旧事件的差异2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-23-用-e1-和-e2-完成最小实验",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块三-通过时间线重建事实1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-33-验收与常见错误定位",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块一-从风险建立独立的测试预期1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块二-执行并发回滚与缺陷修复2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块三-交叉审查证据与质量结论1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-32-同伴审查从证据缺口入手",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块一-记录起点完成-c12-并形成基线-b1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块二-交付复现与第一轮展示2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块三-演示个人答辩与复盘1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-33-验收表与常见交付故障",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-课程交接与完成边界",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        }
+      ],
+      "externalRequests": [],
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "title": "AI 编程——以智慧校园平台重建为例 · V1.1.0 · 完整教学资源与教案",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "images": [
+        {
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "width": 2560,
+          "height": 2182,
+          "caption": true
+        },
+        {
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "loaded": true,
+          "width": 2560,
+          "height": 1936,
+          "caption": true
+        },
+        {
+          "alt": "使用问题依次进入需求、设计、实现、验证和交付；验证发现偏差后回到需求或设计，交付后的新问题开始下一轮。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "含糊提示只有“完整、专业”，输出范围无法判断；明确提示包含目标、输入、规则、边界和验收，可逐项核对模型建议。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1900,
+          "caption": true
+        },
+        {
+          "alt": "学生提供目标和合同，网页 AI 给建议，学生审查并应用，再在本地核验；不符时回传证据，符合时记录结果并交接。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "查看者需要设备和监测，管理人员需要本人事件处理，管理员需要映射、分派与责任管理；AIRIOT 只读接入是选做，真实控制、外部通知和真实学生信息不纳入基础范围。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1894,
+          "caption": true
+        },
+        {
+          "alt": "R06 演练闭环连接业务规则与事务任务，分别连接 AC07 闭环、AC08 并发和 AC09 回滚；执行后才产生响应、回读和时间线证据。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1118,
+          "caption": true
+        },
+        {
+          "alt": "M1 第 01—03 章定义项目，M2 第 04—06 章让设备可见，M3 第 07—08 章让数据可信，M4 第 09—10 章完成业务闭环，M5 第 11—12 章测试交付；选做接入不阻塞主线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2692,
+          "caption": true
+        },
+        {
+          "alt": "Vue 前端调用 Spring Boot 后端；后端独立处理授权、业务和数据库持久化，并通过 CampusDataProvider 读取 TeachingMockProvider；AiriotProvider 只读接入是可选分支。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2804,
+          "caption": true
+        },
+        {
+          "alt": "纳入教学集的设备预建一条责任主记录，初始版本为零且历史为空；设备可关联多条演练事件。每条事件至少有创建时间线，责任主记录可有零到多条变更历史。设备为提供器逻辑引用，不是已建本地设备表。",
+          "loaded": true,
+          "width": 2560,
+          "height": 4066,
+          "caption": true
+        },
+        {
+          "alt": "处置从待分派走向待处理、处理中，满足关闭关卡才到已关闭；管理员恢复来源后还需处理者请求服务端核实，恢复本身没有直达关闭的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2432,
+          "caption": true
+        },
+        {
+          "alt": "A 和 B 都读取版本 3；A 锁定记录，修改至 4 并插入时间线后提交；B 等待取得锁，发现当前为 4，返回 409，不再修改主记录或追加成功时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2436,
+          "caption": true
+        },
+        {
+          "alt": "工作区经 git add 进入暂存区，经 git commit 形成提交；两种 diff 检查不同边界，已提交错误可通过新修正提交保留历史。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1840,
+          "caption": true
+        },
+        {
+          "alt": "浏览器向前端开发服务请求带 api 前缀的设备地址，代理保留前缀后转到后端；后端检查身份和读取权限，再读取教学提供器，返回标准 JSON，前端从 data.items 显示两条模拟设备。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2118,
+          "caption": true
+        },
+        {
+          "alt": "先检查 Network 是否有请求；无请求看前端事件，有请求则区分 HTML、身份权限拒绝、服务错误与合法 JSON；最后分别检查代理、登录授权、后端日志或页面解析。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2460,
+          "caption": true
+        },
+        {
+          "alt": "页面经控制器进入服务，服务先检查读取权限，再调用数据端口，将返回记录映射为 DTO 后响应。这里没有前端直连数据源的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1644,
+          "caption": true
+        },
+        {
+          "alt": "设备属于来源空间，本地楼栋属于校园，绑定保存来源空间标识、楼栋标识和楼层；跨数据源关联用虚线表示，不能在本地数据库直接建立指向外部服务的数据库外键。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1182,
+          "caption": true
+        },
+        {
+          "alt": "管理员通过授权、来源空间和本地关系检查后，仅向本地数据库保存绑定；成功响应之后，再次发起读取核对当前关系。图中没有修改来源空间的调用。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2070,
+          "caption": true
+        },
+        {
+          "alt": "左侧桌面布局依次为标题、教学模拟来源、搜索和筛选、结果数量及两条设备行；右侧窄屏保留相同操作和一张设备卡片。示例显示两条返回记录，不代表最终十六台设备已加载。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1640,
+          "caption": true
+        },
+        {
+          "alt": "API 产生原始资源，用户输入产生筛选条件，二者共同计算列表与数量；请求状态决定反馈，设备标识决定详情目标。图中没有修改原始列表来完成筛选的箭头。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2420,
+          "caption": true
+        },
+        {
+          "alt": "首次读取进入加载，成功后区分原始空目录、筛选无匹配和正常列表；首次失败展示错误，已有结果的再次读取失败保留带说明的旧快照。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1900,
+          "caption": true
+        },
+        {
+          "alt": "观察时间固定为 O，合法零在 O 时刻是 fresh；O 减 60000 毫秒仍 fresh，减 60001 毫秒为 stale；缺失值为 missing；O 加 5000 毫秒在容差内，加 5001 毫秒为 invalid。另列数值字符串为无效类型。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1680,
+          "caption": true
+        },
+        {
+          "alt": "T0 的 0 kW 保留在零刻度；T0 加 60 秒为 null，曲线在此断开；加 120 秒和加 180 秒分别为 1.2、0.9 kW，可以视觉连线，右侧表保留四条原始记录。横轴为相对 T0 的秒，仅用于读图，接口时间仍为 epoch 毫秒。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1600,
+          "caption": true
+        },
+        {
+          "alt": "请求完成后才开始十五秒等待；页面离开时清理等待器并取消进行中的请求，已经失效的响应也不能重新写入状态。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2110,
+          "caption": true
+        },
+        {
+          "alt": "三个角色都可读取，管理员具有管理资格；管理员和本人范围内的管理人员仍须通过事件业务检查；查看者及处理他人事件的管理人员被拒绝，所有角色的设备控制关闭。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2926,
+          "caption": true
+        },
+        {
+          "alt": "无有效身份的请求返回 401；角色或适用对象范围不符返回 403；授权通过后仍检查参数和业务条件，只有全部满足才执行操作。被拒绝的写请求不得产生业务记录。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2680,
+          "caption": true
+        },
+        {
+          "alt": "管理员请求尚未返回时先退出并切到查看者；前端接受当前身份的能力，丢弃旧管理员的迟到响应，管理入口不会恢复。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2726,
+          "caption": true
+        },
+        {
+          "alt": "事件创建后按责任人有效性进入待分派或待处理；分派进入待处理，开始进入处理中，重新分派回到待处理，满足全部门槛后关闭，关闭后禁止修改。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2340,
+          "caption": true
+        },
+        {
+          "alt": "合法请求先经过身份权限和版本检查，再检查处理中、至少一条处置记录、本地演练已有效恢复、服务端核实通过且时间有效、关闭结论非空；满足全部条件才能提交关闭与时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 3220,
+          "caption": true
+        },
+        {
+          "alt": "A 在未恢复时核实得到 UNKNOWN；管理员恢复并重置核实结果，按匹配版本重复恢复不产生新记录；A 再核实得到 PASS，然后提交结论关闭。各有效修改在主记录与时间线同一事务内保存。",
+          "loaded": true,
+          "width": 2560,
+          "height": 3240,
+          "caption": true
+        },
+        {
+          "alt": "设备关联一条当前责任记录，责任记录对应多条责任变更历史；事件创建时读取责任作为分派依据，之后保存独立负责人，事件再对应自己的动作时间线。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2300,
+          "caption": true
+        },
+        {
+          "alt": "ADMIN 登记 A 并创建 E1，A 开始处理后为 IN_PROGRESS、事件版本 2；随后设备责任改为 B，E1 的负责人、状态、版本和历史保持该基线；新建 E2 分派给 B，事件版本为 1。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2378,
+          "caption": true
+        },
+        {
+          "alt": "初始责任为空且版本为零；第一条历史记录管理员将空责任改为 A 并附原因；第二条记录将 A 改为 B。当前责任显示 B，但旧历史继续保留前后 uid、操作者、说明与各自版本。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1760,
+          "caption": true
+        },
+        {
+          "alt": "需求规则分别连接构建与单元、真实数据库、带身份 API、浏览器流程及选做外部接入；每类证据只支持其覆盖范围，不能用 mock 证明锁或事务，也不能用构建代替浏览器验收。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2140,
+          "caption": true
+        },
+        {
+          "alt": "两个管理员请求经屏障放行并使用版本 n；第一个获得锁后提交负责人 A、版本 n 加一及一条历史；第二个等待后读取新版本，返回 409；独立连接确认仅有一次修改。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2340,
+          "caption": true
+        },
+        {
+          "alt": "先记录主行和历史基线，业务事务锁行并更新主行，时间线插入发生测试注入失败，异常触发回滚；请求结束后独立连接读取，与基线比较字段、版本和历史均未变。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "保存失败，固定最小复现，从事实形成假设并补观察，定位后进行最小修改，再运行原失败与相邻回归；若未解释失败则继续定位，解释成立后记录缺陷关闭证据。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2324,
+          "caption": true
+        },
+        {
+          "alt": "确认源码与依赖基线后执行检查构建，取得带标识的产物；在独立环境启动，再用真实身份验证业务；同伴根据说明复现并提交问题记录，形成可交接包。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2392,
+          "caption": true
+        },
+        {
+          "alt": "接收筛选需求后写验收条件，核对现有合同与影响范围，保存基线，再修改页面与测试；通过受影响检查和浏览器验证后更新交付说明，失败则保留证据继续修复。",
+          "loaded": true,
+          "width": 2560,
+          "height": 1992,
+          "caption": true
+        },
+        {
+          "alt": "变更失败后先保存证据并判断是否改变数据结构或数据；代码问题在兼容性确认后恢复旧代码并回归，数据恢复则需要受审查的备份与隔离恢复流程，不能直接清库覆盖。",
+          "loaded": true,
+          "width": 2560,
+          "height": 2320,
+          "caption": true
+        }
+      ],
+      "brokenAnchors": [],
+      "duplicateIds": [],
+      "hasScopeBoundary": true,
+      "rawFrontmatterVisible": false,
+      "documentSections": 35,
+      "chapters": 12,
+      "embeddedImages": false,
+      "figureIds": [
+        "fig-shared-02-网页AI协作",
+        "fig-shared-01-教学工程边界",
+        "fig-ch01-01-engineering-cycle",
+        "fig-ch01-02-prompt-comparison",
+        "fig-ch01-03-ai-evidence-loop",
+        "fig-ch02-01-scope-map",
+        "fig-ch02-02-traceability",
+        "fig-ch02-03-milestones",
+        "fig-ch03-01-architecture",
+        "fig-ch03-02-local-records-er",
+        "fig-ch03-03-two-state-axes",
+        "fig-ch03-04-version-transaction",
+        "fig-ch04-01-git-workflow",
+        "fig-ch04-02-first-request",
+        "fig-ch04-03-debug-path",
+        "fig-ch05-01-device-request",
+        "fig-ch05-02-space-relations",
+        "fig-ch05-03-binding-readback",
+        "fig-ch06-01-device-wireframe",
+        "fig-ch06-02-components-state",
+        "fig-ch06-03-page-states",
+        "fig-ch07-01-quality-cases",
+        "fig-ch07-02-history-gaps",
+        "fig-ch07-03-refresh-lifecycle",
+        "fig-ch08-01-role-scope",
+        "fig-ch08-02-denial-path",
+        "fig-ch08-03-identity-race",
+        "fig-ch09-01-state-machine",
+        "fig-ch09-02-close-gates",
+        "fig-ch09-03-recovery-sequence",
+        "fig-ch10-01-owner-event-model",
+        "fig-ch10-02-future-assignment",
+        "fig-ch10-03-responsibility-timeline",
+        "fig-ch11-01-evidence-layers",
+        "fig-ch11-02-concurrent-updates",
+        "fig-ch11-03-transaction-rollback",
+        "fig-ch11-04-debugging-loop",
+        "fig-ch12-01-delivery-flow",
+        "fig-ch12-02-controlled-change",
+        "fig-ch12-03-code-data-recovery"
+      ],
+      "visitedChapterLinks": [
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块一把代码放回工程过程1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块二与网页-ai-完成一个小任务2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-16-最小实验留下可复查的三轮记录",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-模块三把结论变成证据与交接1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-18-接力不是复制聊天的最后一句",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-人工检查常见错误与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-课后巩固",
+          "found": true
+        },
+        {
+          "href": "#chapter-01-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块一把人的问题写成项目边界1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块二写验收条件再拆分版本2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-模块三评审需求并处理变更1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-最小实验与人工检查",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-02-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-01",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块一先划分职责再选择实现1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块二把业务事实变成数据与-api2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-模块三用样例评审合同1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-03-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-02",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块一环境清单与-git-基线1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-43-不依赖工程的文字版本练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块二让一次读取穿过前后端2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-46-独立练习一个显示函数也需要边界",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-模块三定位问题提交与复现1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-最小实验与验收",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-03",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块一-把一个问题拆成边界清楚的请求1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块二-完成读取与本地空间映射2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-模块三-用证据判断接口是否完成1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-31-最小实验与人工检查点",
+          "found": true
+        },
+        {
+          "href": "#chapter-05-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-04",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块一-从巡查任务设计信息结构1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块二-实现设备列表-筛选与详情2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-26-最小实验与网页-ai-小任务",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-模块三-检查交互与解释页面状态1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-31-让同学完成一个具体任务",
+          "found": true
+        },
+        {
+          "href": "#chapter-06-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-05",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块一-读数成立需要哪些条件1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块二-从最新值走到可信的历史展示2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-25-最小实验与网页-ai-协作",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-模块三-用故障判断页面有没有误导1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-31-人工核验顺序",
+          "found": true
+        },
+        {
+          "href": "#chapter-07-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-06",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块一-从业务规则得到权限矩阵1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块二-让身份-能力与服务端拒绝连起来2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-25-最小实验按身份和接口展开",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-模块三-用拒绝证据证明边界1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-31-一条拒绝需要三类证据",
+          "found": true
+        },
+        {
+          "href": "#chapter-08-33-练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-07",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块一-从业务叙述建立状态机1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块二-实现并观察一个完整闭环2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-23-按版本账本完成最小实验",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-模块三-审查-ai-建议并完成核验1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-32-以反例检查真实行为",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-09-交给下一章",
+          "found": true
+        },
+        {
+          "href": "#chapter-08",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块一-设计可以追溯的责任关系1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块二-登记责任并验证新旧事件的差异2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-23-用-e1-和-e2-完成最小实验",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-模块三-通过时间线重建事实1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-33-验收与常见错误定位",
+          "found": true
+        },
+        {
+          "href": "#chapter-10-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-09",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块一-从风险建立独立的测试预期1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块二-执行并发回滚与缺陷修复2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-模块三-交叉审查证据与质量结论1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-32-同伴审查从证据缺口入手",
+          "found": true
+        },
+        {
+          "href": "#chapter-11-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-10",
+          "found": true
+        },
+        {
+          "href": "#chapter-12",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-本章任务卡",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块一-记录起点完成-c12-并形成基线-b1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块二-交付复现与第一轮展示2-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-模块三-演示个人答辩与复盘1-学时",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-33-验收表与常见交付故障",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-课后练习",
+          "found": true
+        },
+        {
+          "href": "#chapter-12-课程交接与完成边界",
+          "found": true
+        },
+        {
+          "href": "#chapter-11",
+          "found": true
+        }
+      ],
+      "externalRequests": [],
+      "pageErrors": []
+    }
+  ],
+  "failures": []
+}

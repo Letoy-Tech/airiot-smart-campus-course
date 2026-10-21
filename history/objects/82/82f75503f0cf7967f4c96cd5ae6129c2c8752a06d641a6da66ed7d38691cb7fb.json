@@ -1,0 +1,82 @@
+{
+  "at": "2026-10-18T16:19:02.953Z",
+  "platform": "darwin/arm64",
+  "browser": "149.0.7827.55",
+  "scope": "真实本机前后端HTTP与Chromium；固定mock；不连接MySQL/AIRIOT；非Windows实机",
+  "checks": [
+    {
+      "name": "真实HTTP身份/CSRF/读取/退出",
+      "passed": true,
+      "identity": "admin",
+      "roles": [
+        "ADMIN",
+        "CAMPUS_VIEWER"
+      ],
+      "cookieHttpOnly": true,
+      "cookieSameSite": "Strict",
+      "sessionIdRotated": true,
+      "writeStatus": 501,
+      "writeScope": "未实现的校园写入桩，非数据库业务验收"
+    },
+    {
+      "name": "真实HTTP身份/CSRF/读取/退出",
+      "passed": true,
+      "identity": "manager-a",
+      "roles": [
+        "CAMPUS_MANAGER"
+      ],
+      "cookieHttpOnly": true,
+      "cookieSameSite": "Strict",
+      "sessionIdRotated": true,
+      "writeStatus": 403,
+      "writeScope": "未实现的校园写入桩，非数据库业务验收"
+    },
+    {
+      "name": "真实HTTP身份/CSRF/读取/退出",
+      "passed": true,
+      "identity": "manager-b",
+      "roles": [
+        "CAMPUS_MANAGER"
+      ],
+      "cookieHttpOnly": true,
+      "cookieSameSite": "Strict",
+      "sessionIdRotated": true,
+      "writeStatus": 403,
+      "writeScope": "未实现的校园写入桩，非数据库业务验收"
+    },
+    {
+      "name": "真实HTTP身份/CSRF/读取/退出",
+      "passed": true,
+      "identity": "viewer",
+      "roles": [
+        "CAMPUS_VIEWER"
+      ],
+      "cookieHttpOnly": true,
+      "cookieSameSite": "Strict",
+      "sessionIdRotated": true,
+      "writeStatus": 403,
+      "writeScope": "未实现的校园写入桩，非数据库业务验收"
+    },
+    {
+      "name": "真实页面读取/筛选/失败快照/恢复/退出/尺寸",
+      "passed": true,
+      "width": 1440,
+      "identity": "admin",
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "storageKeysEmpty": true,
+      "fault": "浏览器级阻断设备GET，非后端真实故障"
+    },
+    {
+      "name": "真实页面读取/筛选/失败快照/恢复/退出/尺寸",
+      "passed": true,
+      "width": 390,
+      "identity": "viewer",
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "storageKeysEmpty": true,
+      "fault": "浏览器级阻断设备GET，非后端真实故障"
+    }
+  ],
+  "status": "PASS"
+}

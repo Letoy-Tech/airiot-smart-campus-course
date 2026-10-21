@@ -1,0 +1,11 @@
+第08站 事件接收与处理
+模式：teacher-db
+目标：场景、列表、分派、开始、NOTE
+  阶段装配  frontend/src/journey/registry.ts
+  阶段装配  frontend/src/journey/features.ts
+  学生业务  frontend/src/views/CasesView.vue
+
+本次契约：演练是DEMO/LOCAL_DEMO；expectedVersion；本人已分派范围
+人工过关：创建→分派A→A开始/NOTE；B拒绝；来源与业务状态分开
+完整参考：lesson-bundles/stage-08/files/
+先读 plan；begin 只准备底座与业务骨架。apply 是完整参考恢复，不是 AI 自动生成。

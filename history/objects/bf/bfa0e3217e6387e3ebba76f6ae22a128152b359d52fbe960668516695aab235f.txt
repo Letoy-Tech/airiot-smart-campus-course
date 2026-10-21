@@ -1,0 +1,3 @@
+PASS: 9 fixture validation groups; catalog 4 spaces / 16 devices / 28 unique points.
+PASS: first-chain 1 / 2 / 4; 15 quality cases; 4 history samples; 14 damaged-catalog rejection checks.
+SCOPE: standalone files and scenario specifications only. No HTTP/provider/database/browser checks; lab_verified=false.

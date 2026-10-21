@@ -1,0 +1,2 @@
+docker compose ps
+docker inspect --format '{{json .State.Health}}' campus-v2-mysql

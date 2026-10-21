@@ -1,0 +1,112 @@
+--- before/docs/项目卡.md
++++ after/docs/项目卡.md
+@@ -1,3 +1,10 @@
++
++
++## 第01站项目卡（CodeBuddy 内置 DeepSeek 生成）
++
++使用者：值班老师。要做的事：先查校园设备清单与在线状态，再看每台设备读数是否超阈值，异常时分派处理并记录结果。完成判断：设备可查、读数可看、异常可分派且留痕；模拟设备走通即算完成，真实AIRIOT接入选做，页面外观不限。
++
++查设备 → 看读数 → 处理事件。
+ # 我的校园平台
+ 
+ 使用者：待填写。
+--- before/frontend/src/views/StaticDevices.vue
++++ after/frontend/src/views/StaticDevices.vue
+@@ -1,16 +1,68 @@
+ <script setup lang="ts">
+ import { communicationLabel } from '../domain/journey-exercises'
+-const devices = [
++
++const platformName = '我的校园值班台'
++
++type DeviceOnline = boolean | null
++
++const devices: Array<{ id: string; name: string; online: DeviceOnline }> = [
+   { id: 'teaching_env_01', name: '环境传感器01（模拟）', online: true },
+   { id: 'teaching_energy_01', name: '电能监测器01（模拟）', online: null },
+ ]
++
++function statusKey(value: DeviceOnline): 'online' | 'offline' | 'unknown' {
++  if (value === true) return 'online'
++  if (value === false) return 'offline'
++  return 'unknown'
++}
+ </script>
++
+ <template>
+   <section class="workspace full-page" data-testid="static-devices">
+-    <p class="eyebrow">第01站 · 静态页面</p><h1>先看见两台设备</h1>
+-    <p class="source-pill">TEACHING_MOCK · 这里只显示教学样例，尚未发送HTTP请求</p>
+-    <table class="data-table"><thead><tr><th>设备</th><th>编号</th><th>通信状态</th></tr></thead>
+-      <tbody><tr v-for="device in devices" :key="device.id"><td>{{ device.name }}</td><td>{{ device.id }}</td><td>{{ communicationLabel(device.online) }}</td></tr></tbody>
+-    </table><p>未知不等于离线。下一站再把静态列表接到后端。</p>
++    <header class="page-heading">
++      <div>
++        <p class="eyebrow">第01站 · 静态设备页</p>
++        <h1>{{ platformName }}</h1>
++        <p class="muted">值班老师先看设备清单和通信状态，下一站再看读数。</p>
++      </div>
++    </header>
++
++    <div class="source-banner">
++      <div>
++        <strong>TEACHING_MOCK</strong>
++        <span>两台教学模拟设备，尚未发送 HTTP 请求</span>
++      </div>
++      <p>在线为 true，离线为 false，未知为 null；用严格比较区分，未知不等于离线。</p>
++    </div>
++
++    <div class="ledger">
++      <div class="table-scroll">
++        <table class="data-table">
++          <caption>教学样例设备（共 {{ devices.length }} 台）</caption>
++          <thead>
++            <tr>
++              <th scope="col">设备名称</th>
++              <th scope="col">设备编号</th>
++              <th scope="col">通信状态</th>
++            </tr>
++          </thead>
++          <tbody>
++            <tr v-for="device in devices" :key="device.id">
++              <td>
++                <strong>{{ device.name }}</strong>
++                <small>模拟设备 · 不连真实 AIRIOT</small>
++              </td>
++              <td><code>{{ device.id }}</code></td>
++              <td>
++                <span class="status" :class="statusKey(device.online)">
++                  <span class="dot" :class="statusKey(device.online)"></span>
++                  {{ communicationLabel(device.online) }}
++                </span>
++              </td>
++            </tr>
++          </tbody>
++        </table>
++      </div>
++    </div>
+   </section>
+ </template>
+--- before/journey-state.json
++++ after/journey-state.json
+@@ -27,7 +27,18 @@
+     "evidence/README.md": "7a9b8fc014b5bfc1657fcebd7ad8c6f98e85edd73c3231f44ce7442e03fb8f4e",
+     "CODEBUDDY.md": "e58c05643e81dffbba67080567b24ee140b4364b5ebd5f733ddbc8ca2e3f2cbb"
+   },
+-  "verification": null,
++  "verification": {
++    "stage": 1,
++    "at": "2026-10-19T17:23:48.334Z",
++    "sourceFingerprint": "8c23bb398c57378d61293ae88aa87236c85c17b07d62dd1c0ca0935971930032",
++    "typeCheck": "PASS",
++    "unitTests": "PASS",
++    "frontendBuild": "PASS",
++    "backendBuild": "NOT_CHECKED",
++    "businessAcceptance": "NOT_CHECKED",
++    "node": "v22.21.1",
++    "platform": "darwin"
++  },
+   "manualAcceptance": null,
+   "history": [
+     {

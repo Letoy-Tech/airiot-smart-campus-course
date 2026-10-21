@@ -1,0 +1,126 @@
+:root {
+  /* 主色调 (Sky Blue - 精致办公) */
+  --primary-color: #0ea5e9;
+  --primary-hover: #0284c7;
+  --primary-light: rgba(14, 165, 233, 0.08);
+  --primary-glass: rgba(14, 165, 233, 0.04);
+
+  /* 状态色 - 基于 Sky Blue 审美调优，保持一致的明度与饱和度逻辑 */
+  --success-color: #10b981; /* Emerald - 积极且专业 */
+  --warning-color: #f59e0b; /* Amber - 暖色调提醒 */
+  --error-color: #f43f5e;   /* Rose - 现代感的高级红 */
+  --info-color: #6366f1;    /* Indigo - 略偏紫的蓝，区分于主色 */
+
+  /* 业务扩展色 - 专为医疗/商城场景设计的辅助色系 */
+  --shipping-color: #8b5cf6; /* Violet - 物流/快递 */
+  --pickup-color: #06b6d4;   /* Cyan - 门店/自提 (与 Sky Blue 呼应) */
+  --service-color: #f97316;  /* Orange - 预约/服务 */
+  --refund-color: #d946ef;   /* Fuchsia - 退款/售后 (比 Rose 更柔和) */
+  --done-color: #22c55e;     /* Green - 完成/结束 */
+
+  /* 文字颜色 - 使用更深的 Slate */
+  --text-main: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+
+  /* 背景与边框 */
+  --bg-page: #f4f7fa; 
+  --bg-card: #ffffff;
+  --bg-sidebar: rgba(255, 255, 255, 0.95);
+  --bg-header: rgba(255, 255, 255, 0.7);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --border-base: #f1f5f9;
+  --border-strong: #e2e8f0;
+
+  /* 高级玻璃拟态 */
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  /* 高级扩散阴影 */
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.02), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+
+  /* 布局结构尺寸 (此前被引用但缺失定义，会导致侧边栏无宽度 / 高度计算为 NaN) */
+  --sidebar-width: 248px;
+  --header-height: 64px;
+  --header-height-mobile: 56px;
+  --layout-gutter: 12px;
+
+  /* 遮罩层 */
+  --bg-mask: rgba(15, 23, 42, 0.35);
+
+  /* 补齐被引用但缺失的语义色 / 阴影 */
+  --text-disabled: #cbd5e1;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+  /* 安全区域 (iOS 刘海屏 / 手势条)，需配合 index.html 的 viewport-fit=cover */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* 触控目标最小尺寸 (WCAG 2.5.5 / iOS HIG 建议 44px) */
+  --tap-target: 44px;
+  --tap-target-lg: 48px;
+
+  /* 移动端字号：iOS Safari 在 <16px 的输入框聚焦时会强制放大页面 */
+  --font-size-input-mobile: 16px;
+
+  /* 尺寸 */
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --radius-pill: 999px;
+  
+  /* 间距 */
+  --space-page: 24px;
+  --space-card: 24px;
+  --space-gap: 16px;
+
+  /* 字体 */
+  --font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  --font-family-sans: var(--font-family);
+  --font-family-number: 'Manrope', 'DIN Alternate', 'PingFang SC', sans-serif;
+  --font-size-base: 14px;
+
+  /* 动画 */
+  --transition-fast: 0.12s ease;
+  --transition-base: 0.2s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* 兼容 School common 组件 token 命名 */
+  --color-primary: var(--primary-color);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-light);
+  --color-primary-glass: var(--primary-glass);
+  --color-success: var(--success-color);
+  --color-warning: var(--warning-color);
+  --color-error: var(--error-color);
+  --color-info: #6366f1;
+  --color-text-primary: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-bg-page: var(--bg-page);
+  --color-bg-card: var(--bg-card);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-bg-header: var(--bg-header);
+  --color-bg-soft: #f8fafc;
+  --color-border-light: var(--border-light);
+  --color-border-base: var(--border-base);
+  --color-border-strong: var(--border-strong);
+}
+
+/* ---------------------------------------------------------------
+   移动端 token 重载：收紧间距，让 375px 宽度下的有效内容区更大
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --space-page: 16px;
+    --space-card: 16px;
+    --space-gap: 12px;
+    --layout-gutter: 10px;
+    --radius-lg: 14px;
+  }
+}

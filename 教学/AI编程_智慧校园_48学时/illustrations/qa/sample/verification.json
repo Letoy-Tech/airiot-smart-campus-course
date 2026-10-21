@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-10-18T10:19:19.088Z",
+  "input": "illustrations/reader-sample.html",
+  "browser": "149.0.7827.55",
+  "status": "PASS",
+  "scope": "HTML 文件的本地离线显示、资源、锚点与尺寸检查；不验证课程实验",
+  "visualReview": "REQUIRES_IMAGE_VIEW",
+  "labVerified": false,
+  "checks": [
+    {
+      "width": 1440,
+      "title": "公共图与阅读版样张",
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "images": [
+        {
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "loaded": true,
+          "width": 2560,
+          "height": 1936,
+          "caption": true
+        },
+        {
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "width": 2560,
+          "height": 2182,
+          "caption": true
+        }
+      ],
+      "brokenAnchors": [],
+      "duplicateIds": [],
+      "hasUnverifiedLabel": true,
+      "documentSections": 1,
+      "chapters": 0,
+      "externalRequests": [],
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "title": "公共图与阅读版样张",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "images": [
+        {
+          "alt": "前端请求经过后端授权与校验，再进入本地数据库或显式选择的数据源端口",
+          "loaded": true,
+          "width": 2560,
+          "height": 1936,
+          "caption": true
+        },
+        {
+          "alt": "学生审查网页 AI 建议后亲自操作本地工程，依据实际结果保存证据或继续修正",
+          "loaded": true,
+          "width": 2560,
+          "height": 2182,
+          "caption": true
+        }
+      ],
+      "brokenAnchors": [],
+      "duplicateIds": [],
+      "hasUnverifiedLabel": true,
+      "documentSections": 1,
+      "chapters": 0,
+      "externalRequests": [],
+      "pageErrors": []
+    }
+  ],
+  "failures": []
+}

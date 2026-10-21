@@ -1,0 +1,5 @@
+$ node tools/progress.mjs apply 04
+已导入完整参考：第04站。
+  frontend/src/views/LocationsView.vue
+备份：journey-backups/2026-10-19T22-17-33-771Z-stage-04-apply-9c6e9e
+这不是构建或业务验收通过。下一步编辑业务文件，再运行 verify。
