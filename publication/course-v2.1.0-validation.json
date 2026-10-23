@@ -6,14 +6,14 @@
   "structureEvidence": "../教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.1.0-static-results.json",
   "archives": [
     {
-      "file": "AI编程_智慧校园_V2.1.0_手把手教学包.zip",
-      "files": 143,
+      "file": "AI编程_学生空白起点_V2.1.0.zip",
+      "files": 11,
       "crcHashesAndSourceMatch": true,
       "privatePathsAbsent": true
     },
     {
-      "file": "AI编程_学生空白起点_V2.1.0.zip",
-      "files": 11,
+      "file": "AI编程_智慧校园_V2.1.0_手把手教学包.zip",
+      "files": 143,
       "crcHashesAndSourceMatch": true,
       "privatePathsAbsent": true
     }
@@ -21,18 +21,18 @@
   "assets": [
     {
       "name": "airiot-course-reader-v2.1.0.html",
-      "bytes": 818986,
-      "sha256": "1b5e50ecc739b06647cd496736ff588599a6db78d938fac33c08798a8bd11c33"
+      "bytes": 819129,
+      "sha256": "6166df1f8ec8580985ba6e32775d9bf39cc25d9e86fab178043ec1b9b1bd4db6"
     },
     {
       "name": "airiot-smart-campus-course-v2.1.0.zip",
-      "bytes": 820695,
-      "sha256": "c36d94b05f59ea74eba2565d24d96f017eea037379d22bf3b8b6e8e738125b6d"
+      "bytes": 820923,
+      "sha256": "f884b1a142e3c659106e506a701042bb1e4e8d697c990a70e16d9140f12d1247"
     },
     {
       "name": "airiot-student-start-v2.1.0.zip",
       "bytes": 73745,
-      "sha256": "828e05b0725acd974fc225c93f322b38b7523c279d73901614633e0fc339fb3b"
+      "sha256": "3b961d9c863c1e54c96f0afb1a347d78f0196c0c32e4f9a39928936d1d4a9813"
     }
   ],
   "privacy": {
