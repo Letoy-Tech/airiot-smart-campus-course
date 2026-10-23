@@ -42,9 +42,28 @@ def alive(entry):
 
 def executable(value, default):
     found = value or shutil.which(default)
-    if not found or not Path(found).is_file():
+    if not found or not Path(found).is_file() or not os.access(found, os.X_OK):
         raise ValueError(f'未找到 {default}；请教师先安装，再指定可执行文件的完整路径。')
     return str(Path(found).resolve())
+
+
+def mysql_client(value, mysqld):
+    sibling = Path(mysqld).with_name('mysql')
+    candidate = value or (str(sibling) if sibling.is_file() and os.access(sibling, os.X_OK) else None)
+    return executable(candidate, 'mysql')
+
+
+def version_output(binary):
+    return subprocess.check_output([binary, '--version'], text=True, timeout=12)
+
+
+def guard_runtime(runtime):
+    # A private parent does not make nested links safe. Never follow a linked
+    # log/config/data path into another project, including when stopping.
+    for parent, directories, files in os.walk(runtime, followlinks=False):
+        for name in directories + files:
+            if (Path(parent)/name).is_symlink():
+                raise ValueError('native 运行资料含符号链接，已停止操作；请教师检查，勿删除或重置已有数据。')
 
 
 def main():
@@ -52,6 +71,7 @@ def main():
     ap.add_argument('action', choices=['init', 'start', 'status', 'stop', 'restart-redis'])
     ap.add_argument('--root', type=Path, help='课程根目录；默认为 materials 的上级目录')
     ap.add_argument('--mysqld', help='MySQL 8.4 mysqld 完整路径，仅 init 使用')
+    ap.add_argument('--mysql', help='MySQL 8.4 mysql 客户端完整路径，仅 init 使用；默认同目录或 PATH')
     ap.add_argument('--redis-server', help='Redis 7.2+ 可执行文件完整路径，仅 init 使用')
     ap.add_argument('--mysql-port', type=int, default=23501)
     ap.add_argument('--redis-port', type=int, default=23502)
@@ -71,18 +91,23 @@ def main():
     config_file = runtime/'configuration.json'
     if any(p.is_symlink() for p in [root/'.runtime', runtime, state_file, config_file, root/'.env']):
         raise ValueError('拒绝符号链接配置或运行目录。')
+    guard_runtime(runtime)
     if a.action == 'init':
         if (root/'.env').exists() or runtime.exists():
             raise ValueError('已有 .env 或 native 数据，已保留；不要重新生成口令。已有项目请 start/status。')
         if not (1024 <= a.mysql_port <= 65535 and 1024 <= a.redis_port <= 65535) or a.mysql_port == a.redis_port:
             raise ValueError('两项端口须为不同的 1024–65535 整数。')
         mysqld = executable(a.mysqld, 'mysqld')
+        mysql = mysql_client(a.mysql, mysqld)
         redis = executable(a.redis_server, 'redis-server')
-        mysql_version = subprocess.check_output([mysqld, '--version'], text=True)
-        redis_version = subprocess.check_output([redis, '--version'], text=True)
+        mysql_version = version_output(mysqld)
+        client_version = version_output(mysql)
+        redis_version = version_output(redis)
         import re
         if not re.search(r'\b8\.4\.', mysql_version):
             raise ValueError('备用路线要求 MySQL 8.4，请用 --mysqld 指定该版本。')
+        if not re.search(r'\b8\.4\.', client_version):
+            raise ValueError('备用路线要求 MySQL 8.4 客户端，请用 --mysql 指定该版本。')
         match = re.search(r'v=(\d+)\.(\d+)', redis_version)
         if not match or tuple(map(int, match.groups())) < (7, 2):
             raise ValueError('备用路线要求 Redis 7.2 或更新版本，推荐 7.4。')
@@ -98,7 +123,7 @@ def main():
         env += '\n'.join(f'{k}={v}' for k, v in values.items())
         env += f'\nDB_URL=jdbc:mysql://127.0.0.1:{a.mysql_port}/campus_course?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false\nDB_USER=campus\nREDIS_PORT={a.redis_port}\nCOURSE_RUNTIME=native\n'
         private_write(root/'.env', env)
-        private_write(runtime/'configuration.json', json.dumps({'root': str(root), 'mysqld': mysqld, 'redis': redis,
+        private_write(runtime/'configuration.json', json.dumps({'root': str(root), 'mysqld': mysqld, 'mysql': mysql, 'redis': redis,
                       'mysqlPort': a.mysql_port, 'redisPort': a.redis_port}, indent=2))
         # Put socket in the private runtime, not a global /tmp path. Short socket name avoids OS length limits.
         mysql_cfg = f'[mysqld]\nbind-address=127.0.0.1\nport={a.mysql_port}\ndatadir="{runtime}/mysql-data"\nsocket="{runtime}/mysql.sock"\npid-file="{runtime}/mysql.pid"\nlog-error="{runtime}/mysql-error.log"\nmysqlx=0\n'
@@ -140,7 +165,7 @@ def main():
 
     def check_ready(name):
         if name == 'mysql':
-            mysql = str(Path(cfg['mysqld']).with_name('mysql'))
+            mysql = mysql_client(cfg.get('mysql'), cfg['mysqld'])
             result = subprocess.run([mysql, f'--defaults-file={runtime}/mysql-client.cnf', '--no-login-paths',
                                     '--protocol=TCP', '--host=127.0.0.1', f"--port={cfg['mysqlPort']}",
                                     '-Nse', 'SELECT @@datadir'], capture_output=True, timeout=15)
@@ -163,7 +188,11 @@ def main():
                     raise ValueError('Redis 就绪检查未通过。')
 
     def start_one(name):
+        guard_runtime(runtime)
         port = cfg['mysqlPort' if name == 'mysql' else 'redisPort']
+        if name == 'mysql':
+            # Validate before spawning; older configurations have no mysql key.
+            mysql_client(cfg.get('mysql'), cfg['mysqld'])
         if not alive(state.get(name)):
             if not free(port):
                 raise ValueError(f'{name} 端口被其他进程占用；不会停止它。')

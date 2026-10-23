@@ -169,6 +169,47 @@ def check_engineering():
             "openapi_matches_reference_controller": True}
 
 
+def check_contract_boundaries(text):
+    """Guard the teaching rules that previously disappeared from AI input cards."""
+    requirements = {
+        "assign": ["仅ADMIN", "username=manager", "非空", "NEW或ASSIGNED", "IN_PROGRESS不可重新分派"],
+        "start": ["ADMIN或本事件的manager", "要求ASSIGNED", "IN_PROGRESS"],
+        "note": ["ADMIN或本事件的manager", "IN_PROGRESS", "非空", "verified=false"],
+        "recover": ["仅ADMIN", "IN_PROGRESS", "RECOVERED", "verified=false", "重复recover"],
+        "verify": ["ADMIN或本事件的manager", "IN_PROGRESS", "非空", "RECOVERED", "verified=true"],
+        "close": ["ADMIN或本事件的manager", "IN_PROGRESS", "非空", "RECOVERED", "verified=true", "conclusion", "CLOSED"],
+    }
+    for action, required in requirements.items():
+        lines = re.findall(r"^- " + action + r"：(.+)$", text, re.M)
+        assert len(lines) == 1 and all(token in lines[0] for token in required), ("contract-action-rule", action)
+    for statement in ["核实后改写note或再次recover必须重新verify才能close", "拒绝不增加版本",
+                      "新建事件与空间说明编辑不带expectedVersion", "首次登记提交expectedVersion=0"]:
+        assert statement in text, ("contract-boundary", statement)
+    return sorted(requirements)
+
+
+def check_public_templates(starter, reference):
+    expected = {"需求与用例记录.md", "模型说明记录.md", "API核对记录.md", "测试记录.md", "交接与个人证据.md", "同伴评审记录.md"}
+    for name in expected:
+        path = ENGINEERING / "templates" / name
+        assert path.is_file() and path.read_text().strip(), ("missing-engineering-template", name)
+    required = {"DB_PASSWORD", "MYSQL_ROOT_PASSWORD", "REDIS_PASSWORD", "DEMO_PASSWORD"}
+    for directory in (starter, reference):
+        path = directory / ".env.example"
+        assert path.is_file(), (directory.name, "missing-public-env-template")
+        values = dict(re.findall(r"^([A-Z_]+)=([^\n]*)$", path.read_text(), re.M))
+        assert required <= set(values), (directory.name, "missing-env-template-key")
+        assert all(values[key] == "GENERATED_LOCALLY" for key in required), (directory.name, "non-placeholder-env-template")
+    return sorted(expected)
+
+
+def offline_node_report(name):
+    """Run isolated behavioral checks, never the browser or shared runtime."""
+    result = subprocess.run(["node", str(ROOT / "tools/v2" / name)], check=True,
+                            capture_output=True, text=True, timeout=30)
+    return json.loads(result.stdout)
+
+
 lessons = sorted((BOOK / "lessons").glob("[0-9][0-9]-*.md"))
 assert len(lessons) == 12
 detail = []
@@ -216,6 +257,10 @@ contracts = [
     reference / "materials/约定卡.md",
 ]
 assert len({p.read_text().split("## 主线", 1)[1] for p in contracts}) == 1
+contract_actions = check_contract_boundaries(contracts[0].read_text())
+templates = check_public_templates(starter, reference)
+data_service_regression = offline_node_report("verify-data-service.mjs")
+mock_regression = offline_node_report("verify-mock.mjs")
 fixture = json.loads(fixtures[0].read_text())
 assert [len(fixture[x]) for x in ["spaces", "devices", "points"]] == [4, 16, 28]
 helper_files = ["check-environment.mjs", "native-runtime.py"]
@@ -233,6 +278,11 @@ report = {
     "steps": 64,
     "starter_empty": True,
     "fixtures_and_contract_bodies_identical": True,
+    "contract_action_boundaries_checked": contract_actions,
+    "engineering_templates_checked": templates,
+    "public_env_templates_checked": ["student-start/.env.example", "teacher-reference/.env.example"],
+    "data_service_offline_regression": data_service_regression,
+    "mock_offline_regression": mock_regression,
     "per_step_engineering_activities_and_time_tables_checked": True,
     "engineering": engineering,
     "environment_helper_copies_identical": helper_files,
@@ -277,4 +327,5 @@ REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 subprocess.run(["node", str(builder)], check=True)  # Embed the completed evidence.
 shutil.copyfile(ROOT / "course-index-v2.json", ROOT / "course-index.json")
 print("PASS: 12 lessons, 64 engineering/time allocations, 12 x 180 minutes, 8 engineering documents, 7 offline SVGs, "
-      "OpenAPI 14 paths/15 operations, helper copies, Markdown destinations, starter, fixtures/contracts, reader links and specific-step navigation.")
+      "OpenAPI 14 paths/15 operations, helper copies, Markdown destinations, starter, fixtures/contracts, templates, "
+      "offline request/mock regressions, reader links and specific-step navigation.")

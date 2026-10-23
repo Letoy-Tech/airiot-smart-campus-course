@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "version": "2.1.1",
+  "checkedAt": "2026-10-23T07:13:27.507058+00:00",
+  "scope": "Isolated fake-executable guards and synthetic source copies; no database or application services started",
+  "testSuites": {
+    "nativeRuntime": {
+      "tests": 10,
+      "failures": 0
+    },
+    "environmentCheck": {
+      "tests": 5,
+      "failures": 0
+    },
+    "sourceExport": {
+      "tests": 6,
+      "failures": 0
+    }
+  },
+  "totalGuardTests": 21,
+  "nativeRuntime": {
+    "nestedSymlinksRefusedBeforeFileAccess": true,
+    "unrelatedSentinelContentsAndModePreserved": true,
+    "splitServerClientInstallSupported": true,
+    "explicitClientVersionCheckedBeforeConfiguration": true,
+    "legacyClientResolutionFallbackChecked": true,
+    "missingClientLeavesNoEnvironmentOrRuntime": true,
+    "versionProbeTimeoutSeconds": 12,
+    "existingEnvironmentAndStalePidProtectionRetained": true
+  },
+  "sourceExport": {
+    "normalManifestHashesVerified": true,
+    "environmentVariantsExcluded": true,
+    "nestedArchivesKeysBackupsRefused": true,
+    "renamedArchiveContentRefused": true,
+    "onlyPinnedExistingMavenWrapperAllowed": true,
+    "modifiedWrapperRefused": true,
+    "existingOutputAndSymlinkRefusalsRetained": true
+  },
+  "generator": {
+    "changed": false,
+    "filesCreated": 3,
+    "tests": 7,
+    "intendedFailures": 1,
+    "existingTargetRefused": true,
+    "repositoryTargetRefused": true
+  },
+  "syntaxAndWhitespaceChecks": "PASS",
+  "materialsCopiesMatchCanonical": true,
+  "notVerified": [
+    "actual database startup after this patch",
+    "Windows native runtime (unsupported)",
+    "Docker engine acceptance",
+    "full student classroom run"
+  ]
+}

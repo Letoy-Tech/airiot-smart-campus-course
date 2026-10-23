@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "智慧校园 V2 手把手课程 API 接口合同",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "教师参考工程最终状态，共 14 个路径、15 个 HTTP 操作。与逐课建设中的学生工程区分：第 08 课设备可暂公开，第 09 课后除 health/login 外全需登录。所有示例为教学构造值，不是实测结果或可用凭据。请求 schema 表示客户端合同；严格整数由 JsonInputConfig 配置，并有 VersionJsonBoundaryTest 的 MockMvc 原始 JSON 边界覆盖；不代表已完成真实数据库联调。"
   },
   "servers": [
@@ -2069,7 +2069,7 @@
       "post": {
         "operationId": "createCase",
         "summary": "创建本地演练",
-        "description": "仅 ADMIN。已有责任人自动 ASSIGNED，否则 NEW；version=1，来源 ACTIVE，未核验。事务写入事件和审计；不改原始报警。 所有示例均为教学构造值。",
+        "description": "仅 ADMIN。已有责任人自动 ASSIGNED，否则 NEW；version=1，来源 ACTIVE，未核验。事务写入事件和审计；不改原始报警。所有示例均为教学构造值。NEW 示例假设 d01 尚未登记责任人，与 owners 登记示例独立；若已登记则返回 ASSIGNED 和 assignee=manager，应以实际返回状态和版本从 start 开始。",
         "responses": {
           "200": {
             "description": "成功；创建、更新和退出也返回 HTTP 200。",

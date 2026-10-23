@@ -1,4 +1,4 @@
-import {cp,mkdir,readdir,writeFile,lstat,readFile,realpath} from 'node:fs/promises';
+import {cp,mkdir,readdir,writeFile,lstat,readFile,realpath,open} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -27,6 +27,37 @@ try{await lstat(out);throw Error('输出目录已存在；请换一个新名字�
 const allow=['frontend','backend/src','backend/pom.xml','backend/mvnw','backend/mvnw.cmd','backend/.mvn','tools','materials','docs','compose.yaml','.env.example','.gitignore','README.md'];
 const excluded=new Set(['.private','.runtime','node_modules','target','dist','.git','__pycache__','.DS_Store','.codebuddy']);
 const skip=(name)=>excluded.has(name)||name==='.env'||name.startsWith('.env.')||name.endsWith('.log');
+const forbiddenExtensions=new Set(['.zip','.tar','.gz','.bz2','.xz','.7z','.rar','.tgz','.tbz','.tbz2','.txz',
+  '.zst','.pem','.key','.p12','.pfx','.jks','.keystore','.db','.sqlite','.sqlite3','.dump','.bak','.backup','.old']);
+const forbiddenNames=new Set(['.npmrc','.netrc','.pypirc','id_rsa','id_dsa','id_ecdsa','id_ed25519']);
+function rejectNonSource(p){
+  const name=path.basename(p).toLowerCase();
+  if(forbiddenExtensions.has(path.extname(name))||forbiddenNames.has(name)||name.endsWith('~')||
+     /(?:^|[._-])(?:backup|dump)(?=[._-]|$).*\.sql$/.test(name)){
+    throw Error('交付拒绝归档、密钥或备份文件：'+path.relative(root,p)+'；请保留原资料，将公开源码整理到指定目录再导出');
+  }
+}
+async function rejectArchiveContent(p){
+  // The existing course Maven launcher needs this reviewed binary. Only this
+  // exact artifact is allowed, never an arbitrary JAR or an archive at its path.
+  if(path.relative(root,p).split(path.sep).join('/')==='backend/.mvn/wrapper/maven-wrapper.jar'){
+    const digest=createHash('sha256').update(await readFile(p)).digest('hex');
+    if(digest!=='46b0acdfe3da08b3f40d25bd135858b6014ee62b92883768995c946a3b446bd6'){
+      throw Error('Maven wrapper 与本课已核对版本不一致；停止导出，请教师核对来源，勿使用其他归档替代');
+    }
+    return;
+  }
+  const file=await open(p,'r');
+  const header=Buffer.alloc(512);
+  let size;
+  try {size=(await file.read(header,0,header.length,0)).bytesRead;} finally {await file.close();}
+  const signatures=['504b0304','504b0506','504b0708','1f8b','425a68','fd377a585a00',
+    '377abcaf271c','526172211a07','28b52ffd','53514c69746520666f726d6174203300'];
+  if(signatures.some(hex=>{const magic=Buffer.from(hex,'hex');return size>=magic.length&&header.subarray(0,magic.length).equals(magic);})||
+     (size>=262&&header.toString('ascii',257,262)==='ustar')){
+    throw Error('交付拒绝归档或数据库内容：'+path.relative(root,p)+'；更改扩展名不能把运行资料变成源码');
+  }
+}
 
 // Validate required sources before creating an output directory.
 for(const item of allow){
@@ -34,6 +65,7 @@ for(const item of allow){
 }
 async function cleanCopy(from,to){
   await checkPath(from);
+  rejectNonSource(from);
   const s=await lstat(from);
   if(s.isDirectory()){
     await mkdir(to,{recursive:true});
@@ -42,6 +74,7 @@ async function cleanCopy(from,to){
       await cleanCopy(path.join(from,name),path.join(to,name));
     }
   }else if(s.isFile()){
+    await rejectArchiveContent(from);
     await mkdir(path.dirname(to),{recursive:true});
     await cp(from,to,{errorOnExist:true,force:false});
   }else throw Error('交付只接受普通文件：'+path.relative(root,from));
@@ -74,5 +107,5 @@ async function walk(dir){
   }
 }
 await walk(out);
-await writeFile(path.join(out,'SOURCE-MANIFEST.json'),JSON.stringify({version:'2.1.0',files},null,2)+'\n');
+await writeFile(path.join(out,'SOURCE-MANIFEST.json'),JSON.stringify({version:'2.1.1',files},null,2)+'\n');
 console.log('已导出 '+files.length+' 个源码文件到 '+path.relative(root,out)+'。未包含本机.env或运行数据。请按README在新目录验证。');

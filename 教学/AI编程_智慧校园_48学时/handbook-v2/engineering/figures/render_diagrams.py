@@ -2,7 +2,9 @@
 """Rebuild the seven editable, offline SVG teaching diagrams (Python stdlib only)."""
 from pathlib import Path
 from html import escape
+import json
 P = Path(__file__).resolve().parent
+VERSION = json.loads((P.parents[2] / 'tools/v2/course-config.json').read_text())['version']
 FONT = 'system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif'
 class Figure:
     def __init__(self,name,title,subtitle,h):
@@ -26,7 +28,7 @@ class Figure:
         self.items.append(f'<circle cx="{x}" cy="{y}" r="16" fill="#e5f0ec" stroke="#406b72" stroke-width="2"/><path d="M{x},{y+16}v43 M{x-27},{y+34}h54 M{x},{y+59}l-25,34 M{x},{y+59}l25,34" fill="none" stroke="#406b72" stroke-width="2"/>')
         self.text(x,y+121,label,'head','middle')
     def save(self):
-        self.text(36,self.h-22,'AIRIOT 智慧校园课堂 · V2.1.0 · 本地教学样本 / 可编辑 SVG','small')
+        self.text(36,self.h-22,f'AIRIOT 智慧校园课堂 · V{VERSION} · 本地教学样本 / 可编辑 SVG','small')
         (P/(self.name+'.svg')).write_text(''.join(self.items)+'</svg>',encoding='utf-8')
 
 f=Figure('use-cases','用例图｜角色、目标与系统边界','边界内是课堂业务；所有登录角色可读，写入和审计按角色限制。',910)

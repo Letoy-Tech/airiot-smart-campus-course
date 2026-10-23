@@ -1,0 +1,831 @@
+{
+  "version": "2.1.1",
+  "status": "FAIL",
+  "platform": "Darwin arm64",
+  "ports": {
+    "mysql": 24511,
+    "redis": 24512,
+    "backend": 24599
+  },
+  "notVerified": [
+    "Docker Desktop runtime",
+    "Windows classroom",
+    "Linux runtime",
+    "student or CodeBuddy execution from blank",
+    "real AIRIOT or physical devices",
+    "browser UI acceptance"
+  ],
+  "sourceExport": {
+    "fileCount": 43,
+    "sourceAndBothCopiesMatch": true,
+    "manifestSha256": "66088b366f44e59fdc1f41cd2ebafac9b9cc56a9495c17764bf497523cb0c767",
+    "mavenWrapperExecutable": true,
+    "initiallyNoRuntimeOrEnv": true
+  },
+  "maven": {
+    "command": "sh ./mvnw -B clean package",
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "jarSha256": "c4468a2dea017a8ad84bd964686c8b8866dd9c16a95ae5f82b97c46dcb272704"
+  },
+  "versions": {
+    "mysql": "8.4.10",
+    "redis": "7.2.6",
+    "node": "22.21.1",
+    "java": "17"
+  },
+  "healthAndFreshSeed": true,
+  "counts": {
+    "spaces": 4,
+    "devices": 16,
+    "points": 28
+  },
+  "threeRolesAndPermissionDenials": true,
+  "strictVersionHttpBoundary": true,
+  "manualEventLifecycleFinalVersion": 7,
+  "automaticOwnerAssignment": true,
+  "reverificationAfterNoteAndRecovery": true,
+  "rejectedActionsPreserveRecordTimelineAndAudit": true,
+  "redisRestartInvalidatesSessionsAndPreservesMysqlBusiness": true,
+  "exportedSourceUnchangedAfterExecution": true,
+  "boundary": "Isolated author reference integration on macOS; not student, Docker, Windows, or browser acceptance",
+  "cleanup": {
+    "allOwnServicesStopped": false,
+    "isolatedDataRetained": true,
+    "errors": [
+      "own-port-still-occupied"
+    ]
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/overview",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/integration",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/owners",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400,
+      "expected": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/owners",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{manual-lifecycle}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 409,
+      "expected": 409
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/{reverification}/actions",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/logout",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "method": "GET",
+      "path": "/owners",
+      "status": 200,
+      "expected": 200
+    }
+  ]
+}

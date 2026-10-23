@@ -58,7 +58,7 @@
 分支：下文setup-env任务仅Docker执行。原生只核对已提供native-runtime.py、.env.example与.gitignore，由我运行native init，不创建或运行setup-env；两路都不覆盖已有.env。
 新建tools/setup-env.mjs，使用Node自带crypto随机生成足够长的口令，
 在项目根生成.env：DB_PASSWORD、MYSQL_ROOT_PASSWORD、REDIS_PASSWORD、DEMO_PASSWORD。
-已有.env时拒绝覆盖，不打印口令。新建.env.example，只放说明和占位文字。
+已有.env时拒绝覆盖，不打印口令。保留空白起点已提供的.env.example，只补必要说明和占位文字，不写真实值。
 重复运行的提示与示例都说明保留现有配置、继续练习，不建议为了重做练习删除.env或重新生成口令。
 把.env、.private、.runtime、backend/target、node_modules和日志加入.gitignore。
 不要读取已有私密配置，不要把口令写入前端、README或回复。

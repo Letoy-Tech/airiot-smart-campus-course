@@ -7,10 +7,21 @@ const persist=()=>localStorage.setItem('campus-v2-demo',JSON.stringify(state));
 const failure=(status,message)=>{const e=new Error(message);e.status=status;throw e};
 function allow(roles){if(!user||!roles.includes(user.role))failure(403,'当前角色不能进行这个操作。')}
 async function request(url,method='GET',body){
- const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);let r;try{r=await fetch('/api'+url,{signal:controller.signal,method,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},...(body?{body:JSON.stringify(body)}:{})})}catch(e){failure(503,e.name==='AbortError'?'等待超过5秒，请检查后端后重试。':'后端连接中断，请检查 B-后端。')}finally{clearTimeout(timeout)}
- let j;try{j=await r.json()}catch{failure(r.status,'服务没有返回正确的数据，请查看 B-后端终端。')}
- if(!r.ok||j.code!==0){if(r.status===401){token=null;user=null}failure(r.status,j.message||'请求失败')}
- return j.data;
+ const controller=new AbortController();let timeout,timedOut=false;
+ // One deadline covers both response headers and body; receiving headers is not completion.
+ const deadline=new Promise((_,reject)=>{timeout=setTimeout(()=>{timedOut=true;controller.abort();reject(new Error('request timeout'))},5000)});
+ const interrupted=e=>timedOut||e.name==='AbortError';
+ const interruptedMessage=()=>timedOut?'等待超过5秒，请检查后端后重试。':'请求读取已中断，请检查后端后重试。';
+ try{
+  let r;
+  try{r=await Promise.race([fetch('/api'+url,{signal:controller.signal,method,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},...(body?{body:JSON.stringify(body)}:{})}),deadline])}
+  catch(e){failure(503,interrupted(e)?interruptedMessage():'后端连接中断，请检查 B-后端。')}
+  let j;
+  try{j=await Promise.race([r.json(),deadline])}
+  catch(e){if(interrupted(e))failure(503,interruptedMessage());failure(r.ok?502:r.status,'服务没有返回正确的数据，请查看 B-后端终端。')}
+  if(!r.ok||j?.code!==0){if(r.status===401){token=null;user=null}failure(r.ok?502:r.status,j?.message||'请求失败')}
+  return j.data;
+ }finally{clearTimeout(timeout)}
 }
 function audit(action,note){state.audit.unshift({action,note,username:user.username,time:Date.now()});persist()}
 export const dataService={

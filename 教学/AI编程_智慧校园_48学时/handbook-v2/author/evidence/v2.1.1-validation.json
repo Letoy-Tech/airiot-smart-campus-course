@@ -1,0 +1,52 @@
+{
+  "version": "2.1.1",
+  "date": "2026-10-23",
+  "status": "PASS",
+  "course": {
+    "lessons": 12,
+    "classHours": 48,
+    "steps": 64,
+    "minutesPerLesson": 180
+  },
+  "maven": {
+    "command": "sh ./mvnw -B clean package",
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "jarSha256": "c4468a2dea017a8ad84bd964686c8b8866dd9c16a95ae5f82b97c46dcb272704"
+  },
+  "offlineChecks": {
+    "dataService": 10,
+    "mockBehavior": 28,
+    "nativeGuards": 10,
+    "environmentDetection": 5,
+    "newExportGuards": 6,
+    "existingExportBoundaries": 11,
+    "readerAndPackagingGuards": 9
+  },
+  "integration": {
+    "newDirectoryHttpRequests": 128,
+    "freshSourceFiles": 43,
+    "freshMysqlRedisSeed": true,
+    "existingNativeConfigurationCompatible": true,
+    "reverificationRules": true,
+    "redisSessionExpiryAndBusinessPersistence": true,
+    "ownServicesStopped": true
+  },
+  "evidence": [
+    "v2.1.1-static-results.json",
+    "v2.1.1-native-results.json",
+    "v2.1.1-handoff-results.json",
+    "v2.1.1-handoff-initial-cleanup-check.json",
+    "v2.1.1-guard-results.json",
+    "v2.1.1-export-results.json",
+    "v2.1.1-package-tool-results.json"
+  ],
+  "notVerified": [
+    "New V2.1.1 student or CodeBuddy end-to-end run from blank",
+    "New Docker, Windows, Linux or physical classroom acceptance",
+    "New browser visual acceptance",
+    "Real AIRIOT or physical device integration"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23T07:15:24.643Z",
+  "passed": 11,
+  "results": [
+    {
+      "check": "normal export includes docs and root template; excludes root/nested env variants; manifest hashes match",
+      "passed": true
+    },
+    {
+      "check": "existing output rejected",
+      "passed": true
+    },
+    {
+      "check": "outside output rejected",
+      "passed": true
+    },
+    {
+      "check": "source file symlink rejected",
+      "passed": true
+    },
+    {
+      "check": "allowlisted source ancestor symlink rejected",
+      "passed": true
+    },
+    {
+      "check": "output ancestor symlink rejected without writing destination",
+      "passed": true
+    },
+    {
+      "check": "runtime directory symlink rejected",
+      "passed": true
+    },
+    {
+      "check": "fake credential leakage detected without printing value",
+      "passed": true
+    },
+    {
+      "check": "private config symlink rejected",
+      "passed": true
+    },
+    {
+      "check": "documented loopback URL is not confused with a credential",
+      "passed": true
+    },
+    {
+      "check": "credential-bearing connection URL still rejected",
+      "passed": true
+    }
+  ],
+  "scope": "isolated synthetic fixtures; no real credentials or services"
+}

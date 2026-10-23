@@ -1,8 +1,8 @@
-# 工程图示源文件 · V2.1.0
+# 工程图示源文件 · V2.1.1
 
 七张 SVG 可直接离线打开，正文以图片引用。SVG 是可编辑的 XML；`render_diagrams.py` 保存各图文字、布局、节点和连线，是统一重建源，不依赖网络、浏览器、Mermaid 或第三方 Python 包。
 
-教师在本目录运行 `python3 render_diagrams.py` 可重建七张 SVG；会覆盖同名图，修改时应先改源脚本，再检查输出。不要只改 SVG 而不更新脚本。
+教师在完整课程目录的本目录运行 `python3 render_diagrams.py` 可重建七张 SVG；页脚版本读取课程的 `tools/v2/course-config.json`。会覆盖同名图，修改时应先改源脚本，再检查输出。不要只改 SVG 而不更新脚本。
 
 | 文件 | 解释内容 |
 | --- | --- |
