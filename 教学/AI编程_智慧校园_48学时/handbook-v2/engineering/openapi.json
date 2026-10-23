@@ -1,0 +1,4241 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "智慧校园 V2 手把手课程 API 接口合同",
+    "version": "2.1.0",
+    "description": "教师参考工程最终状态，共 14 个路径、15 个 HTTP 操作。与逐课建设中的学生工程区分：第 08 课设备可暂公开，第 09 课后除 health/login 外全需登录。所有示例为教学构造值，不是实测结果或可用凭据。请求 schema 表示客户端合同；严格整数由 JsonInputConfig 配置，并有 VersionJsonBoundaryTest 的 MockMvc 原始 JSON 边界覆盖；不代表已完成真实数据库联调。"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:5188/api",
+      "description": "经 Node 页面服务同源转发"
+    },
+    {
+      "url": "http://127.0.0.1:8098/api",
+      "description": "本机后端直连"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "health",
+        "summary": "查看后端健康状态",
+        "description": "公开，仅检查请求到达后端，不查询 MySQL/Redis。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/healthResponse"
+                },
+                "examples": {
+                  "up": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "status": "UP"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "security": []
+      }
+    },
+    "/login": {
+      "post": {
+        "operationId": "login",
+        "summary": "教学账号登录",
+        "description": "公开。数据库验证 BCrypt 口令，Redis 保存随机会话，固定 TTL 1800 秒；返回规范账号名。示例口令和令牌均不可使用。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。 令牌示例以 x-redacted-examples 保存脱敏占位；它不是可提交或符合令牌正则的真实值，标准 schema 保留真实格式约束。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loginResponse"
+                },
+                "x-redacted-examples": {
+                  "admin": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "token": "<本机登录返回的令牌>",
+                        "user": {
+                          "username": "admin",
+                          "role": "ADMIN"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        },
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              },
+              "examples": {
+                "admin": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "username": "admin",
+                    "password": "<本机DEMO_PASSWORD>"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "operationId": "logout",
+        "summary": "退出当前会话",
+        "description": "需要有效会话，删除当前 Redis key，无请求体；无效/过期会话先返回 401。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/logoutResponse"
+                },
+                "examples": {
+                  "logout": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "loggedOut": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/me": {
+      "get": {
+        "operationId": "me",
+        "summary": "读取当前身份",
+        "description": "所有登录角色；返回 Redis 会话身份，读取不续期。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/meResponse"
+                },
+                "examples": {
+                  "manager": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "username": "manager",
+                        "role": "MANAGER"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/devices": {
+      "get": {
+        "operationId": "devices",
+        "summary": "读取设备台账",
+        "description": "最终参考实现需登录，按 id 排序，无分页/过滤；第 08 课可暂公开，第 09 课后鉴权。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/devicesResponse"
+                },
+                "examples": {
+                  "devices": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": [
+                        {
+                          "id": "d01",
+                          "name": "温湿度01",
+                          "category": "environment",
+                          "spaceId": "s1",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d02",
+                          "name": "温湿度02",
+                          "category": "environment",
+                          "spaceId": "s2",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d03",
+                          "name": "温湿度03",
+                          "category": "environment",
+                          "spaceId": "s3",
+                          "online": null,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d04",
+                          "name": "温湿度04",
+                          "category": "environment",
+                          "spaceId": "s4",
+                          "online": false,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d05",
+                          "name": "电表01",
+                          "category": "energy",
+                          "spaceId": "s1",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d06",
+                          "name": "电表02",
+                          "category": "energy",
+                          "spaceId": "s2",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d07",
+                          "name": "电表03",
+                          "category": "energy",
+                          "spaceId": "s3",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d08",
+                          "name": "电表04",
+                          "category": "energy",
+                          "spaceId": "s4",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d09",
+                          "name": "设施01",
+                          "category": "facility",
+                          "spaceId": "s1",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d10",
+                          "name": "设施02",
+                          "category": "facility",
+                          "spaceId": "s2",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d11",
+                          "name": "设施03",
+                          "category": "facility",
+                          "spaceId": "s3",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d12",
+                          "name": "设施04",
+                          "category": "facility",
+                          "spaceId": "s4",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d13",
+                          "name": "灯光01",
+                          "category": "lighting",
+                          "spaceId": "s1",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d14",
+                          "name": "灯光02",
+                          "category": "lighting",
+                          "spaceId": "s2",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d15",
+                          "name": "灯光03",
+                          "category": "lighting",
+                          "spaceId": "s3",
+                          "online": true,
+                          "simulated": true
+                        },
+                        {
+                          "id": "d16",
+                          "name": "灯光04",
+                          "category": "lighting",
+                          "spaceId": "s4",
+                          "online": true,
+                          "simulated": true
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/overview": {
+      "get": {
+        "operationId": "overview",
+        "summary": "读取教学数据集合",
+        "description": "所有登录角色。包含五类数组；没有独立 points/history/alarms 接口。原始报警只读。保留 null、0、采样时间和质量。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/overviewResponse"
+                },
+                "examples": {
+                  "overview": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "spaces": [
+                          {
+                            "id": "s1",
+                            "name": "101教室",
+                            "building": "教学楼",
+                            "floor": "1"
+                          },
+                          {
+                            "id": "s2",
+                            "name": "201教室",
+                            "building": "教学楼",
+                            "floor": "2"
+                          },
+                          {
+                            "id": "s3",
+                            "name": "101实验室",
+                            "building": "实验楼",
+                            "floor": "1"
+                          },
+                          {
+                            "id": "s4",
+                            "name": "201实验室",
+                            "building": "实验楼",
+                            "floor": "2"
+                          }
+                        ],
+                        "devices": [
+                          {
+                            "id": "d01",
+                            "name": "温湿度01",
+                            "category": "environment",
+                            "spaceId": "s1",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d02",
+                            "name": "温湿度02",
+                            "category": "environment",
+                            "spaceId": "s2",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d03",
+                            "name": "温湿度03",
+                            "category": "environment",
+                            "spaceId": "s3",
+                            "online": null,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d04",
+                            "name": "温湿度04",
+                            "category": "environment",
+                            "spaceId": "s4",
+                            "online": false,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d05",
+                            "name": "电表01",
+                            "category": "energy",
+                            "spaceId": "s1",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d06",
+                            "name": "电表02",
+                            "category": "energy",
+                            "spaceId": "s2",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d07",
+                            "name": "电表03",
+                            "category": "energy",
+                            "spaceId": "s3",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d08",
+                            "name": "电表04",
+                            "category": "energy",
+                            "spaceId": "s4",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d09",
+                            "name": "设施01",
+                            "category": "facility",
+                            "spaceId": "s1",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d10",
+                            "name": "设施02",
+                            "category": "facility",
+                            "spaceId": "s2",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d11",
+                            "name": "设施03",
+                            "category": "facility",
+                            "spaceId": "s3",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d12",
+                            "name": "设施04",
+                            "category": "facility",
+                            "spaceId": "s4",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d13",
+                            "name": "灯光01",
+                            "category": "lighting",
+                            "spaceId": "s1",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d14",
+                            "name": "灯光02",
+                            "category": "lighting",
+                            "spaceId": "s2",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d15",
+                            "name": "灯光03",
+                            "category": "lighting",
+                            "spaceId": "s3",
+                            "online": true,
+                            "simulated": true
+                          },
+                          {
+                            "id": "d16",
+                            "name": "灯光04",
+                            "category": "lighting",
+                            "spaceId": "s4",
+                            "online": true,
+                            "simulated": true
+                          }
+                        ],
+                        "points": [
+                          {
+                            "deviceId": "d01",
+                            "tagId": "temperature",
+                            "value": 24.0,
+                            "unit": "°C",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d01",
+                            "tagId": "humidity",
+                            "value": 61.0,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d02",
+                            "tagId": "temperature",
+                            "value": 24.2,
+                            "unit": "°C",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d02",
+                            "tagId": "humidity",
+                            "value": 61.2,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d03",
+                            "tagId": "temperature",
+                            "value": null,
+                            "unit": "°C",
+                            "time": null,
+                            "quality": "missing"
+                          },
+                          {
+                            "deviceId": "d03",
+                            "tagId": "humidity",
+                            "value": 61.4,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d04",
+                            "tagId": "temperature",
+                            "value": 24.6,
+                            "unit": "°C",
+                            "time": 1792454400000,
+                            "quality": "stale"
+                          },
+                          {
+                            "deviceId": "d04",
+                            "tagId": "humidity",
+                            "value": 61.6,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "stale"
+                          },
+                          {
+                            "deviceId": "d05",
+                            "tagId": "power",
+                            "value": 0,
+                            "unit": "kW",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d05",
+                            "tagId": "voltage",
+                            "value": 220.0,
+                            "unit": "V",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d06",
+                            "tagId": "power",
+                            "value": 1.6,
+                            "unit": "kW",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d06",
+                            "tagId": "voltage",
+                            "value": 220.2,
+                            "unit": "V",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d07",
+                            "tagId": "power",
+                            "value": 1.8,
+                            "unit": "kW",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d07",
+                            "tagId": "voltage",
+                            "value": 220.4,
+                            "unit": "V",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d08",
+                            "tagId": "power",
+                            "value": 2.0,
+                            "unit": "kW",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d08",
+                            "tagId": "voltage",
+                            "value": 220.6,
+                            "unit": "V",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d09",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d10",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d11",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d12",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d13",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d13",
+                            "tagId": "brightness",
+                            "value": 75.0,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d14",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d14",
+                            "tagId": "brightness",
+                            "value": 75.2,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d15",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d15",
+                            "tagId": "brightness",
+                            "value": 75.4,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d16",
+                            "tagId": "status",
+                            "value": 1,
+                            "unit": "",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          },
+                          {
+                            "deviceId": "d16",
+                            "tagId": "brightness",
+                            "value": 75.6,
+                            "unit": "%",
+                            "time": 1792454400000,
+                            "quality": "fresh"
+                          }
+                        ],
+                        "history": [
+                          {
+                            "deviceId": "d01",
+                            "tagId": "temperature",
+                            "unit": "°C",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 24.0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 24.0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 24.0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 24.0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d01",
+                            "tagId": "humidity",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 61.0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 61.0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 61.0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 61.0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d02",
+                            "tagId": "temperature",
+                            "unit": "°C",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 24.2
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 24.2
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 24.2
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 24.2
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d02",
+                            "tagId": "humidity",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 61.2
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 61.2
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 61.2
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 61.2
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d03",
+                            "tagId": "temperature",
+                            "unit": "°C",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 24.4
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 24.4
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 24.4
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 24.4
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d03",
+                            "tagId": "humidity",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 61.4
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 61.4
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 61.4
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 61.4
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d04",
+                            "tagId": "temperature",
+                            "unit": "°C",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 24.6
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 24.6
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 24.6
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 24.6
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d04",
+                            "tagId": "humidity",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 61.6
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 61.6
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 61.6
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 61.6
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d05",
+                            "tagId": "power",
+                            "unit": "kW",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d05",
+                            "tagId": "voltage",
+                            "unit": "V",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 220.0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 220.0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 220.0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 220.0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d06",
+                            "tagId": "power",
+                            "unit": "kW",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1.6
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1.6
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1.6
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1.6
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d06",
+                            "tagId": "voltage",
+                            "unit": "V",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 220.2
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 220.2
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 220.2
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 220.2
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d07",
+                            "tagId": "power",
+                            "unit": "kW",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1.8
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1.8
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1.8
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1.8
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d07",
+                            "tagId": "voltage",
+                            "unit": "V",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 220.4
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 220.4
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 220.4
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 220.4
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d08",
+                            "tagId": "power",
+                            "unit": "kW",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 2.0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 2.0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 2.0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 2.0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d08",
+                            "tagId": "voltage",
+                            "unit": "V",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 220.6
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 220.6
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 220.6
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 220.6
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d09",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d10",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d11",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d12",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d13",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d13",
+                            "tagId": "brightness",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 75.0
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 75.0
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 75.0
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 75.0
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d14",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d14",
+                            "tagId": "brightness",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 75.2
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 75.2
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 75.2
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 75.2
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d15",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d15",
+                            "tagId": "brightness",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 75.4
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 75.4
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 75.4
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 75.4
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d16",
+                            "tagId": "status",
+                            "unit": "",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 1
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 1
+                              }
+                            ]
+                          },
+                          {
+                            "deviceId": "d16",
+                            "tagId": "brightness",
+                            "unit": "%",
+                            "samples": [
+                              {
+                                "time": 1792452900000,
+                                "value": 75.6
+                              },
+                              {
+                                "time": 1792453200000,
+                                "value": 75.6
+                              },
+                              {
+                                "time": 1792453500000,
+                                "value": null
+                              },
+                              {
+                                "time": 1792453800000,
+                                "value": 0
+                              },
+                              {
+                                "time": 1792454100000,
+                                "value": 75.6
+                              },
+                              {
+                                "time": 1792454400000,
+                                "value": 75.6
+                              }
+                            ]
+                          }
+                        ],
+                        "alarms": [
+                          {
+                            "id": "a01",
+                            "deviceId": "d01",
+                            "message": "教学样本：温度提醒；不表示真实校园故障",
+                            "status": "SAMPLE_ACTIVE",
+                            "level": "NOTICE",
+                            "time": 1792454400000,
+                            "simulated": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/spaces": {
+      "get": {
+        "operationId": "spaces",
+        "summary": "读取空间",
+        "description": "所有登录角色，按 id 排序。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/spacesResponse"
+                },
+                "examples": {
+                  "spaces": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": [
+                        {
+                          "id": "s1",
+                          "name": "101教室",
+                          "building": "教学楼",
+                          "floor": "1"
+                        },
+                        {
+                          "id": "s2",
+                          "name": "201教室",
+                          "building": "教学楼",
+                          "floor": "2"
+                        },
+                        {
+                          "id": "s3",
+                          "name": "101实验室",
+                          "building": "实验楼",
+                          "floor": "1"
+                        },
+                        {
+                          "id": "s4",
+                          "name": "201实验室",
+                          "building": "实验楼",
+                          "floor": "2"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/spaces/{id}": {
+      "put": {
+        "operationId": "updateSpace",
+        "summary": "修改空间楼栋和楼层",
+        "description": "仅 ADMIN。字符串去首尾空白；不改名称；无版本校验，成功写审计。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/updateSpaceResponse"
+                },
+                "examples": {
+                  "updated": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "s1",
+                        "name": "101教室",
+                        "building": "教学楼A",
+                        "floor": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error403"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error404"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpaceEdit"
+              },
+              "examples": {
+                "edit": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "building": "教学楼A",
+                    "floor": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "使用读取/创建响应中已有记录的 id。"
+          }
+        ]
+      }
+    },
+    "/owners": {
+      "get": {
+        "operationId": "owners",
+        "summary": "读取设备责任记录",
+        "description": "所有登录角色，按 device_id 排序。初始为空，未登记设备不补 version=0 行。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ownersResponse"
+                },
+                "examples": {
+                  "initial": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": []
+                    }
+                  },
+                  "registered": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": [
+                        {
+                          "deviceId": "d01",
+                          "username": "manager",
+                          "note": "本课巡查负责人",
+                          "version": 1
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/owners/{deviceId}": {
+      "put": {
+        "operationId": "updateOwner",
+        "summary": "登记或修改设备责任",
+        "description": "仅 ADMIN，username=manager。已有设备；责任未登记时 expectedVersion=0，否则使用回读版本。成功加 1；不重新分派旧事件。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/updateOwnerResponse"
+                },
+                "examples": {
+                  "registered": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "deviceId": "d01",
+                        "username": "manager",
+                        "note": "本课巡查负责人",
+                        "version": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error403"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error404"
+          },
+          "409": {
+            "$ref": "#/components/responses/Error409"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OwnerEdit"
+              },
+              "examples": {
+                "register": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "username": "manager",
+                    "note": "本课巡查负责人",
+                    "expectedVersion": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "使用读取/创建响应中已有记录的 deviceId。"
+          }
+        ]
+      }
+    },
+    "/cases": {
+      "get": {
+        "operationId": "cases",
+        "summary": "读取演练及时间线",
+        "description": "所有登录角色读取全部事件；本人范围仅限制 MANAGER 写入。按字符串 id 降序，不能当作创建时间排序；无分页或单条详情接口。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/casesResponse"
+                },
+                "examples": {
+                  "initial": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": []
+                    }
+                  },
+                  "closed": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": [
+                        {
+                          "id": "00000000-0000-4000-8000-000000000001",
+                          "deviceId": "d01",
+                          "message": "课堂演练：检查样本温度",
+                          "state": "CLOSED",
+                          "assignee": "manager",
+                          "sourceState": "RECOVERED",
+                          "verified": true,
+                          "note": "已检查练习数据并记录处置",
+                          "conclusion": "课堂演练已独立核验并完成",
+                          "version": 7,
+                          "timeline": [
+                            {
+                              "time": 1792454400000,
+                              "username": "admin",
+                              "action": "create",
+                              "note": "仅课堂演练，不是上游报警",
+                              "version": 1
+                            },
+                            {
+                              "time": 1792454460000,
+                              "username": "admin",
+                              "action": "assign",
+                              "note": "请进行课堂巡查",
+                              "version": 2
+                            },
+                            {
+                              "time": 1792454520000,
+                              "username": "manager",
+                              "action": "start",
+                              "note": "",
+                              "version": 3
+                            },
+                            {
+                              "time": 1792454580000,
+                              "username": "manager",
+                              "action": "note",
+                              "note": "已检查练习数据并记录处置",
+                              "version": 4
+                            },
+                            {
+                              "time": 1792454640000,
+                              "username": "admin",
+                              "action": "recover",
+                              "note": "",
+                              "version": 5
+                            },
+                            {
+                              "time": 1792454700000,
+                              "username": "manager",
+                              "action": "verify",
+                              "note": "",
+                              "version": 6
+                            },
+                            {
+                              "time": 1792454760000,
+                              "username": "manager",
+                              "action": "close",
+                              "note": "课堂演练已独立核验并完成",
+                              "version": 7
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      },
+      "post": {
+        "operationId": "createCase",
+        "summary": "创建本地演练",
+        "description": "仅 ADMIN。已有责任人自动 ASSIGNED，否则 NEW；version=1，来源 ACTIVE，未核验。事务写入事件和审计；不改原始报警。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/createCaseResponse"
+                },
+                "examples": {
+                  "withoutOwner": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "NEW",
+                        "assignee": null,
+                        "sourceState": "ACTIVE",
+                        "verified": false,
+                        "note": "",
+                        "conclusion": "",
+                        "version": 1,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "withOwner": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "ASSIGNED",
+                        "assignee": "manager",
+                        "sourceState": "ACTIVE",
+                        "verified": false,
+                        "note": "",
+                        "conclusion": "",
+                        "version": 1,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error403"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error404"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseCreate"
+              },
+              "examples": {
+                "create": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "deviceId": "d01",
+                    "message": "课堂演练：检查样本温度"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cases/{id}/actions": {
+      "post": {
+        "operationId": "caseAction",
+        "summary": "推进演练动作",
+        "description": "权限→版本→已关闭检查→动作条件。成功版本加 1，保存事件、时间线、审计于同一事务。409 后 GET /cases 并重新决定，不能自动重发。六组示例由无责任人的 NEW v1 连续到 CLOSED v7。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/caseActionResponse"
+                },
+                "examples": {
+                  "assign": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "ASSIGNED",
+                        "assignee": "manager",
+                        "sourceState": "ACTIVE",
+                        "verified": false,
+                        "note": "",
+                        "conclusion": "",
+                        "version": 2,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "start": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "IN_PROGRESS",
+                        "assignee": "manager",
+                        "sourceState": "ACTIVE",
+                        "verified": false,
+                        "note": "",
+                        "conclusion": "",
+                        "version": 3,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          },
+                          {
+                            "time": 1792454520000,
+                            "username": "manager",
+                            "action": "start",
+                            "note": "",
+                            "version": 3
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "note": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "IN_PROGRESS",
+                        "assignee": "manager",
+                        "sourceState": "ACTIVE",
+                        "verified": false,
+                        "note": "已检查练习数据并记录处置",
+                        "conclusion": "",
+                        "version": 4,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          },
+                          {
+                            "time": 1792454520000,
+                            "username": "manager",
+                            "action": "start",
+                            "note": "",
+                            "version": 3
+                          },
+                          {
+                            "time": 1792454580000,
+                            "username": "manager",
+                            "action": "note",
+                            "note": "已检查练习数据并记录处置",
+                            "version": 4
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "recover": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "IN_PROGRESS",
+                        "assignee": "manager",
+                        "sourceState": "RECOVERED",
+                        "verified": false,
+                        "note": "已检查练习数据并记录处置",
+                        "conclusion": "",
+                        "version": 5,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          },
+                          {
+                            "time": 1792454520000,
+                            "username": "manager",
+                            "action": "start",
+                            "note": "",
+                            "version": 3
+                          },
+                          {
+                            "time": 1792454580000,
+                            "username": "manager",
+                            "action": "note",
+                            "note": "已检查练习数据并记录处置",
+                            "version": 4
+                          },
+                          {
+                            "time": 1792454640000,
+                            "username": "admin",
+                            "action": "recover",
+                            "note": "",
+                            "version": 5
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "verify": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "IN_PROGRESS",
+                        "assignee": "manager",
+                        "sourceState": "RECOVERED",
+                        "verified": true,
+                        "note": "已检查练习数据并记录处置",
+                        "conclusion": "",
+                        "version": 6,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          },
+                          {
+                            "time": 1792454520000,
+                            "username": "manager",
+                            "action": "start",
+                            "note": "",
+                            "version": 3
+                          },
+                          {
+                            "time": 1792454580000,
+                            "username": "manager",
+                            "action": "note",
+                            "note": "已检查练习数据并记录处置",
+                            "version": 4
+                          },
+                          {
+                            "time": 1792454640000,
+                            "username": "admin",
+                            "action": "recover",
+                            "note": "",
+                            "version": 5
+                          },
+                          {
+                            "time": 1792454700000,
+                            "username": "manager",
+                            "action": "verify",
+                            "note": "",
+                            "version": 6
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "close": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "id": "00000000-0000-4000-8000-000000000001",
+                        "deviceId": "d01",
+                        "message": "课堂演练：检查样本温度",
+                        "state": "CLOSED",
+                        "assignee": "manager",
+                        "sourceState": "RECOVERED",
+                        "verified": true,
+                        "note": "已检查练习数据并记录处置",
+                        "conclusion": "课堂演练已独立核验并完成",
+                        "version": 7,
+                        "timeline": [
+                          {
+                            "time": 1792454400000,
+                            "username": "admin",
+                            "action": "create",
+                            "note": "仅课堂演练，不是上游报警",
+                            "version": 1
+                          },
+                          {
+                            "time": 1792454460000,
+                            "username": "admin",
+                            "action": "assign",
+                            "note": "请进行课堂巡查",
+                            "version": 2
+                          },
+                          {
+                            "time": 1792454520000,
+                            "username": "manager",
+                            "action": "start",
+                            "note": "",
+                            "version": 3
+                          },
+                          {
+                            "time": 1792454580000,
+                            "username": "manager",
+                            "action": "note",
+                            "note": "已检查练习数据并记录处置",
+                            "version": 4
+                          },
+                          {
+                            "time": 1792454640000,
+                            "username": "admin",
+                            "action": "recover",
+                            "note": "",
+                            "version": 5
+                          },
+                          {
+                            "time": 1792454700000,
+                            "username": "manager",
+                            "action": "verify",
+                            "note": "",
+                            "version": 6
+                          },
+                          {
+                            "time": 1792454760000,
+                            "username": "manager",
+                            "action": "close",
+                            "note": "课堂演练已独立核验并完成",
+                            "version": 7
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error403"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error404"
+          },
+          "409": {
+            "$ref": "#/components/responses/Error409"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseAction"
+              },
+              "examples": {
+                "assign": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "assign",
+                    "expectedVersion": 1,
+                    "username": "manager",
+                    "note": "请进行课堂巡查"
+                  }
+                },
+                "start": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "start",
+                    "expectedVersion": 2
+                  }
+                },
+                "note": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "note",
+                    "expectedVersion": 3,
+                    "note": "已检查练习数据并记录处置"
+                  }
+                },
+                "recover": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "recover",
+                    "expectedVersion": 4
+                  }
+                },
+                "verify": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "verify",
+                    "expectedVersion": 5
+                  }
+                },
+                "close": {
+                  "summary": "教学构造示例，非实测结果",
+                  "value": {
+                    "action": "close",
+                    "expectedVersion": 6,
+                    "note": "课堂演练已独立核验并完成"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "使用读取/创建响应中已有记录的 id。"
+          }
+        ]
+      }
+    },
+    "/audit": {
+      "get": {
+        "operationId": "audit",
+        "summary": "读取成功业务写入审计",
+        "description": "仅 ADMIN，按 id 降序。字段为 detail；当前实现不记录登录、读取或失败请求。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/auditResponse"
+                },
+                "examples": {
+                  "initial": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": []
+                    }
+                  },
+                  "spaceUpdate": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": [
+                        {
+                          "id": 1,
+                          "time": 1792454400000,
+                          "username": "admin",
+                          "action": "space.update",
+                          "target": "s1",
+                          "detail": "更新楼栋和楼层"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error403"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    },
+    "/integration": {
+      "get": {
+        "operationId": "integration",
+        "summary": "读取教学接入标识",
+        "description": "所有登录角色，固定教学状态，不探测真实 AIRIOT。登录仍依赖 Redis。 所有示例均为教学构造值。",
+        "responses": {
+          "200": {
+            "description": "成功；创建、更新和退出也返回 HTTP 200。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/integrationResponse"
+                },
+                "examples": {
+                  "teaching": {
+                    "summary": "教学构造示例，非实测结果",
+                    "value": {
+                      "code": 0,
+                      "message": "ok",
+                      "data": {
+                        "source": "TEACHING_MOCK",
+                        "simulated": true,
+                        "controlEnabled": false,
+                        "notificationsEnabled": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error401"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          },
+          "503": {
+            "$ref": "#/components/responses/Error503"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authorization: Bearer <token>；Bearer 后一空格，43 字符 Base64URL。TTL 1800 秒，无续期；浏览器只存内存，刷新后重登。"
+      }
+    },
+    "schemas": {
+      "ExpectedVersion": {
+        "type": "integer",
+        "format": "int64",
+        "minimum": 0,
+        "maximum": 9223372036854775807,
+        "description": "必须为原始 JSON 非负整数，范围为 Java long；禁止数字字符串、布尔、小数形式（含 1.0）、null 或缺省。JSON Schema integer 按数学值判断，不能区分 1 与 1.0；需 HTTP 原始 JSON 验收。"
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "数据库中的规范账号名。"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ADMIN",
+              "MANAGER",
+              "VIEWER"
+            ]
+          }
+        },
+        "required": [
+          "username",
+          "role"
+        ]
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "\\S",
+            "description": "填写本机 DEMO_PASSWORD；文档示例不含真实口令。",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "username",
+          "password"
+        ]
+      },
+      "LoginResult": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{43}$",
+            "description": "32 随机字节编码的 Base64URL，非 JWT；TTL 1800 秒，读取不续期。"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "required": [
+          "token",
+          "user"
+        ]
+      },
+      "Space": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "building": {
+            "type": "string"
+          },
+          "floor": {
+            "type": "string",
+            "description": "字符串楼层。"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "building",
+          "floor"
+        ]
+      },
+      "Device": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "environment",
+              "energy",
+              "facility",
+              "lighting"
+            ]
+          },
+          "spaceId": {
+            "type": "string"
+          },
+          "online": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "simulated": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "category",
+          "spaceId",
+          "online",
+          "simulated"
+        ]
+      },
+      "Point": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string"
+          },
+          "tagId": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": "string"
+          },
+          "time": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64"
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "fresh",
+              "stale",
+              "missing",
+              "invalid"
+            ]
+          }
+        },
+        "required": [
+          "deviceId",
+          "tagId",
+          "value",
+          "unit",
+          "time",
+          "quality"
+        ]
+      },
+      "HistorySample": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Unix 毫秒。"
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "time",
+          "value"
+        ]
+      },
+      "History": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string"
+          },
+          "tagId": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "samples": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HistorySample"
+            }
+          }
+        },
+        "required": [
+          "deviceId",
+          "tagId",
+          "unit",
+          "samples"
+        ]
+      },
+      "Alarm": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "deviceId": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "simulated": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "id",
+          "deviceId",
+          "message",
+          "status",
+          "level",
+          "time",
+          "simulated"
+        ]
+      },
+      "Overview": {
+        "type": "object",
+        "properties": {
+          "spaces": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Space"
+            }
+          },
+          "devices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Device"
+            }
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Point"
+            }
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/History"
+            }
+          },
+          "alarms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Alarm"
+            }
+          }
+        },
+        "required": [
+          "spaces",
+          "devices",
+          "points",
+          "history",
+          "alarms"
+        ],
+        "description": "后端仅返回五个数组，不附加样本文件根部的 source、simulated、observedAt。"
+      },
+      "SpaceEdit": {
+        "type": "object",
+        "properties": {
+          "building": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "floor": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          }
+        },
+        "required": [
+          "building",
+          "floor"
+        ],
+        "description": "仅更新楼栋和楼层；没有 expectedVersion。"
+      },
+      "Owner": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string",
+            "const": "manager"
+          },
+          "note": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "deviceId",
+          "username",
+          "note",
+          "version"
+        ]
+      },
+      "OwnerEdit": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "const": "manager",
+            "maxLength": 40
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          }
+        },
+        "required": [
+          "username",
+          "note",
+          "expectedVersion"
+        ]
+      },
+      "CaseCreate": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          }
+        },
+        "required": [
+          "deviceId",
+          "message"
+        ]
+      },
+      "TimelineItem": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "create",
+              "assign",
+              "start",
+              "note",
+              "recover",
+              "verify",
+              "close"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "time",
+          "username",
+          "action",
+          "note",
+          "version"
+        ]
+      },
+      "CaseRecord": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "deviceId": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "NEW",
+              "ASSIGNED",
+              "IN_PROGRESS",
+              "CLOSED"
+            ]
+          },
+          "assignee": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceState": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "RECOVERED"
+            ]
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string",
+            "description": "最新处置记录。"
+          },
+          "conclusion": {
+            "type": "string",
+            "description": "关闭结论。"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1
+          },
+          "timeline": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimelineItem"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "deviceId",
+          "message",
+          "state",
+          "assignee",
+          "sourceState",
+          "verified",
+          "note",
+          "conclusion",
+          "version",
+          "timeline"
+        ]
+      },
+      "Audit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "space.update",
+              "owner.update",
+              "case.create",
+              "case.assign",
+              "case.start",
+              "case.note",
+              "case.recover",
+              "case.verify",
+              "case.close"
+            ]
+          },
+          "target": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "time",
+          "username",
+          "action",
+          "target",
+          "detail"
+        ]
+      },
+      "Integration": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "const": "TEACHING_MOCK"
+          },
+          "simulated": {
+            "type": "boolean",
+            "const": true
+          },
+          "controlEnabled": {
+            "type": "boolean",
+            "const": false
+          },
+          "notificationsEnabled": {
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "required": [
+          "source",
+          "simulated",
+          "controlEnabled",
+          "notificationsEnabled"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "enum": [
+              400,
+              401,
+              403,
+              404,
+              405,
+              409,
+              500,
+              503
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ],
+        "description": "HTTP 状态等于 code；data=null。没有独立字符串错误码。"
+      },
+      "ActionAssign": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "assign",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "username": {
+            "type": "string",
+            "const": "manager",
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion",
+          "note",
+          "username"
+        ],
+        "description": "仅 ADMIN；NEW 或 ASSIGNED；username=manager，note 非空；写 assignee 和 ASSIGNED。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "ActionStart": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "start",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion"
+        ],
+        "description": "ADMIN 或本人已分派事件的 MANAGER；仅 ASSIGNED；写 IN_PROGRESS。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "ActionNote": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "note",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion",
+          "note"
+        ],
+        "description": "ADMIN 或本人已分派事件的 MANAGER；仅 IN_PROGRESS；note 非空，覆盖处置记录，verified=false。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "ActionRecover": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "recover",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion"
+        ],
+        "description": "仅 ADMIN；仅 IN_PROGRESS；写 sourceState=RECOVERED、verified=false；不改原始报警。重复恢复仍加版本并清除核验。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "ActionVerify": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "verify",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion"
+        ],
+        "description": "ADMIN 或本人已分派事件的 MANAGER；仅 IN_PROGRESS、处置记录非空且来源 RECOVERED；写 verified=true。重复核验仍加版本。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "ActionClose": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "const": "close",
+            "maxLength": 20
+          },
+          "expectedVersion": {
+            "$ref": "#/components/schemas/ExpectedVersion"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "\\S",
+            "description": "不得只含空白。长度校验先于去除首尾空白。"
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "action",
+          "expectedVersion",
+          "note"
+        ],
+        "description": "ADMIN 或本人已分派事件的 MANAGER；仅 IN_PROGRESS、处置记录非空、来源 RECOVERED、verified=true；note 为必填关闭结论，写 conclusion、CLOSED。 版本须匹配；CLOSED 一律拒绝；成功版本加 1 并追加时间线。"
+      },
+      "CaseAction": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ActionAssign"
+          },
+          {
+            "$ref": "#/components/schemas/ActionStart"
+          },
+          {
+            "$ref": "#/components/schemas/ActionNote"
+          },
+          {
+            "$ref": "#/components/schemas/ActionRecover"
+          },
+          {
+            "$ref": "#/components/schemas/ActionVerify"
+          },
+          {
+            "$ref": "#/components/schemas/ActionClose"
+          }
+        ],
+        "description": "六个已实现动作。非 assign 的 username 不影响处理人；可选 note 若提供，会进入该次时间线/审计。"
+      },
+      "healthResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "const": "UP"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "loginResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginResult"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "logoutResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "loggedOut": {
+                "type": "boolean",
+                "const": true
+              }
+            },
+            "required": [
+              "loggedOut"
+            ]
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "meResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "devicesResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Device"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "overviewResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Overview"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "spacesResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Space"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "updateSpaceResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Space"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "ownersResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Owner"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "updateOwnerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Owner"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "casesResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseRecord"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "createCaseResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CaseRecord"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "caseActionResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CaseRecord"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "auditResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Audit"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      },
+      "integrationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "const": 0
+          },
+          "message": {
+            "type": "string",
+            "const": "ok"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Integration"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ]
+      }
+    },
+    "responses": {
+      "Error400": {
+        "description": "400：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "invalid": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "请检查输入：必填内容、长度和版本号必须符合要求",
+                  "data": null
+                }
+              },
+              "owner": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "本课责任人请填写 manager",
+                  "data": null
+                }
+              },
+              "assignment": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "本课请分派给 manager",
+                  "data": null
+                }
+              },
+              "assignNote": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "请填写分派说明",
+                  "data": null
+                }
+              },
+              "note": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "请填写处置记录",
+                  "data": null
+                }
+              },
+              "conclusion": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "请填写关闭结论",
+                  "data": null
+                }
+              },
+              "action": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 400,
+                  "message": "不支持这个事件动作",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error401": {
+        "description": "401：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "missing": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 401,
+                  "message": "请先登录",
+                  "data": null
+                }
+              },
+              "credentials": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 401,
+                  "message": "用户名或口令不正确",
+                  "data": null
+                }
+              },
+              "expired": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 401,
+                  "message": "登录已过期，请重新登录",
+                  "data": null
+                }
+              },
+              "invalid": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 401,
+                  "message": "登录状态无效，请重新登录",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error403": {
+        "description": "403：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "admin": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 403,
+                  "message": "这个操作需要管理员账户",
+                  "data": null
+                }
+              },
+              "handler": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 403,
+                  "message": "管理人员只能处理分派给自己的事件；查看者不能修改",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error404": {
+        "description": "404：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "device": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 404,
+                  "message": "没有找到这个设备",
+                  "data": null
+                }
+              },
+              "space": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 404,
+                  "message": "没有找到这个空间",
+                  "data": null
+                }
+              },
+              "case": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 404,
+                  "message": "没有找到这个演练事件",
+                  "data": null
+                }
+              },
+              "route": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 404,
+                  "message": "没有找到这个接口",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error405": {
+        "description": "405：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "method": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 405,
+                  "message": "这个接口不支持该操作",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error409": {
+        "description": "409：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "ownerVersion": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "责任记录已更新，请刷新后重新决定；不要直接重复提交",
+                  "data": null
+                }
+              },
+              "caseVersion": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "记录已被更新，请刷新页面后重新决定；不要直接重复提交",
+                  "data": null
+                }
+              },
+              "closed": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "事件已经关闭，不能继续修改",
+                  "data": null
+                }
+              },
+              "reassign": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "开始处理后不能重新分派",
+                  "data": null
+                }
+              },
+              "start": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "请先分派，再开始处理",
+                  "data": null
+                }
+              },
+              "note": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "请先开始处理，再填写处置记录",
+                  "data": null
+                }
+              },
+              "recover": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "请先开始处理，再模拟来源恢复",
+                  "data": null
+                }
+              },
+              "verify": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "先完成处置记录并由管理员模拟来源恢复，再单独核验",
+                  "data": null
+                }
+              },
+              "close": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 409,
+                  "message": "关闭前需要处置记录、来源恢复和单独核验",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "500：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "unexpected": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 500,
+                  "message": "后端处理失败，请在后端终端检查错误并联系教师",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error503": {
+        "description": "503：见 message；示例非实测结果。",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "examples": {
+              "storage": {
+                "summary": "教学构造示例，非实测结果",
+                "value": {
+                  "code": 503,
+                  "message": "数据库或登录服务暂时不可用，请检查本课程 MySQL 和 Redis",
+                  "data": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-scope-notes": [
+    "成功均为 HTTP 200、code=0；ApiErrors 失败为对应 HTTP 状态、同值 code、data=null。",
+    "不承诺服务器拒绝所有 schema 外字段。",
+    "JSON Schema integer 无法区分原始 JSON 的 1 与 1.0，须另外检验。",
+    "文档依据源码和公开教学样本；示例不构成服务实测。"
+  ],
+  "x-validation-notes": [
+    "JsonInputConfig 禁止浮点数、字符串、空字符串、布尔值自动转换为整数。",
+    "VersionJsonBoundaryTest 用 MockMvc 检查两类写入口的非法版本与缺省，400 且不调用服务；责任写入口另外检查 0、1、long 最大值。",
+    "JSON Schema 的 integer 按数学值判断，仍需原始 JSON 1.0 的请求边界测试。"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "2.1.0",
+  "checkedOn": "2026-10-23",
+  "status": "PASS",
+  "sourceEvidence": "../教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.1.0-validation.json",
+  "structureEvidence": "../教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.1.0-static-results.json",
+  "archives": [
+    {
+      "file": "AI编程_智慧校园_V2.1.0_手把手教学包.zip",
+      "files": 143,
+      "crcHashesAndSourceMatch": true,
+      "privatePathsAbsent": true
+    },
+    {
+      "file": "AI编程_学生空白起点_V2.1.0.zip",
+      "files": 11,
+      "crcHashesAndSourceMatch": true,
+      "privatePathsAbsent": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "airiot-course-reader-v2.1.0.html",
+      "bytes": 818986,
+      "sha256": "1b5e50ecc739b06647cd496736ff588599a6db78d938fac33c08798a8bd11c33"
+    },
+    {
+      "name": "airiot-smart-campus-course-v2.1.0.zip",
+      "bytes": 820695,
+      "sha256": "c36d94b05f59ea74eba2565d24d96f017eea037379d22bf3b8b6e8e738125b6d"
+    },
+    {
+      "name": "airiot-student-start-v2.1.0.zip",
+      "bytes": 73745,
+      "sha256": "828e05b0725acd974fc225c93f322b38b7523c279d73901614633e0fc339fb3b"
+    }
+  ],
+  "privacy": {
+    "gitleaksStaged": "PASS",
+    "publicationPathAndCredentialScan": "PASS",
+    "packagePathAndTextScan": "PASS"
+  },
+  "scope": {
+    "courseUpdated": true,
+    "completeSystemChanged": false,
+    "historicalStudentRunsChanged": false
+  },
+  "limits": [
+    "New V2.1.0 prompts have not been independently retried end-to-end from blank.",
+    "Native runtime tested on macOS; no new Docker, Windows, Linux or physical classroom acceptance."
+  ]
+}

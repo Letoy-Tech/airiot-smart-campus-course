@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "platform": "macOS arm64",
+  "mysql": "8.4.10",
+  "redis": "7.2.6",
+  "java": "17",
+  "node": "22.21.1",
+  "isolatedNativeServices": true,
+  "strictVersionHttpBoundary": true,
+  "eventLifecycleAndRoleChecks": true,
+  "redisRestartInvalidatesSessionAndPreservesBusiness": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/overview",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/owners",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/f18b2f59-201e-4dd6-96e9-9731fbd6920c/actions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200
+    }
+  ],
+  "notVerified": [
+    "Windows classroom",
+    "Linux runtime",
+    "new V2.1.0 student end-to-end execution"
+  ]
+}

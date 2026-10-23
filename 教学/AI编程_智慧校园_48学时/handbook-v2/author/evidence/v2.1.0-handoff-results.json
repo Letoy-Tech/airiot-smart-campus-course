@@ -1,0 +1,309 @@
+{
+  "status": "PASS",
+  "version": "2.1.0",
+  "scope": "exported teacher-reference in independent new native environment",
+  "platform": "macOS arm64",
+  "ports": {
+    "mysql": 24511,
+    "redis": 24512,
+    "backend": 24599
+  },
+  "startedAt": "2026-10-23T06:15:25.003986+00:00",
+  "notVerified": [
+    "Windows",
+    "Linux",
+    "new V2.1.0 student from-blank run",
+    "human classroom timing"
+  ],
+  "export": {
+    "manifestVersion": "2.1.0",
+    "files": 43,
+    "hashesVerified": true,
+    "excludedEnvironmentRuntimeTarget": true,
+    "sourcePasswordValuesAbsent": true,
+    "freshDestinationBeforeInit": true
+  },
+  "maven": {
+    "cleanPackage": true,
+    "suiteCount": 4,
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "freshInitialization": {
+    "newCredentialsIndependent": true,
+    "secondInitRefusedWithoutChangingEnvironment": true,
+    "repeatStartReadyChecksPass": true,
+    "databaseTablesBeforeBackend": 0,
+    "redisKeysBeforeBackend": 0,
+    "environmentMode600": true
+  },
+  "freshSeed": {
+    "seedMarkerCount": 1,
+    "devices": 16,
+    "spaces": 4,
+    "points": 28,
+    "initialCases": 0,
+    "initialOwners": 0,
+    "initialAudit": 0
+  },
+  "http": {
+    "roleRejects": true,
+    "strictExpectedVersionInputs": true,
+    "staleVersionRejects": true,
+    "missingCloseConditionsReject": true,
+    "fullLifecycleClosed": true,
+    "spaceIndependentReadback": true,
+    "auditRecorded": true,
+    "redisRestartInvalidatesOldSession": true,
+    "redisRestartPreservesMysqlBusiness": true
+  },
+  "repeatOpen": {
+    "existingConfigurationPreserved": true,
+    "sameClosedEventAndVersionPreserved": true,
+    "spaceEditPreserved": true,
+    "logoutInvalidatesSession": true
+  },
+  "cleanup": {
+    "ownBackendAndNativeStopped": true,
+    "allDedicatedPortsFree": true,
+    "nativeStateEmpty": true,
+    "sourceEnvironmentUnchanged": true,
+    "sourceNativeStillStopped": true,
+    "oldAndNewDataRetained": true
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/overview",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/owners",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/spaces/s1",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/spaces/s1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/spaces",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 400
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/owners/d01",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/cases",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 403
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/cases/67432759-6a8c-461d-9bfd-4678b2e6fab2/actions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/spaces",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cases",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/spaces",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/logout",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/devices",
+      "status": 401
+    }
+  ],
+  "completedAt": "2026-10-23T06:15:38.676050+00:00"
+}

@@ -2,25 +2,60 @@
 
 今天先在自己的电脑准备一个课程专用数据库，再让“设备台账”真正读到它。其他页面暂时继续用浏览器演示，页面会清楚标明数据来源。
 
-本课4学时，共180分钟。六步建议用时：25、30、35、30、40、20分钟。
+本课4学时，共180分钟。六步建议用时：25、25、40、30、35、25分钟。
 
-课前应已装好 Docker Desktop，打开后等它显示引擎正在运行。它负责帮我们运行课程数据库；现在不用掌握容器的全部知识。继续使用同一个 `campus-lab`。
+课前已按所选路线完成准入。Docker 路线打开 Docker Desktop并等引擎运行；原生路线使用教师已验收的 MySQL 8.4、Redis 7.2+（推荐7.4）与 Python 3。本课继续同一个 `campus-lab`，先配置再启动。
 
 **重新开课，先准备三个窗口：**
 
 1. 用 CodeBuddy 打开原 `campus-lab`。若 A 已停止，新建 A-页面，在项目根运行 `node tools/serve.mjs`，浏览器打开 `http://127.0.0.1:5188`；原 A 仍在运行就沿用，不重复启动。
 2. 准备 B-后端。若自己的旧后端还在运行，先在它原来的 B 按 Ctrl+C。新建 B 时，按[第07课第2步](07-看着页面做第一个后端.md#第2步准备后端终端确认它用的是-java-17)在**这个新窗口**设置 `JAVA_HOME` 和 `PATH`，亲自执行 `java -version`，确认是17。不能沿用上一个已关闭窗口的环境。
 3. B 从项目根进入后端：macOS 执行 `cd backend`，Windows PowerShell 执行 `Set-Location backend`；已经在 `backend` 就不再进入一次。B 此时保持停止，第3步才运行修改后的后端。
-4. 新建 C-工具，确认在 `campus-lab` 根目录。首次做到本课时还没有 `.env` 和 `compose.yaml`，先按第1、2步生成，不提前执行 Compose。若是继续上次未完成的本课，保留已有 `.env`，从未完成的小步继续，不重新生成密码。
+4. 新建 C-工具，确认在 `campus-lab` 根目录。首次做到本课时还没有 `.env`，先按第1步的所选路线初始化；Docker 路线第2步再生成 `compose.yaml`，原生路线直接使用公开运行工具，不执行 Compose。若是继续上次未完成的本课，保留已有 `.env`，从未完成的小步继续，不重新生成密码。
+
+
+**环境分支：** 沿用开课前已选路线，详见[环境准入与备用路线](../engineering/07-环境准入与备用路线.md)。只执行自己这一列，不在同一工程混用两套配置。
+
+| 动作 | Docker 路线 | 原生备用路线（已验收的 macOS/Linux 实验机） |
+| --- | --- | --- |
+| 启动、查看状态 | 本课对应的 `docker compose up -d …`、`docker compose ps` | 项目根 `python3 materials/native-runtime.py start`、`python3 materials/native-runtime.py status` |
+| 停止课程数据库 | 本课对应的 `docker compose stop` | 项目根 `python3 materials/native-runtime.py stop` |
+| 首次配置 | 第08课只运行一次 `node tools/setup-env.mjs` | 第08课只运行一次 `python3 materials/native-runtime.py init`，不再运行 setup-env |
+
+原生路线不执行 Compose，不操作系统全局数据库。`status` 仅报告本目录进程，后端连接、登录、写入回读仍按正文亲自验证。Windows 无 Docker 时由教师提供上述已验收实验机；没有可用路线则环境仍未准备完成。
+
+| 步骤 | 工程训练（分钟） | 编码与验证（分钟） | 合计（分钟） |
+| --- | ---: | ---: | ---: |
+| 1 | 4 | 21 | 25 |
+| 2 | 4 | 21 | 25 |
+| 3 | 10 | 30 | 40 |
+| 4 | 6 | 24 | 30 |
+| 5 | 4 | 31 | 35 |
+| 6 | 5 | 20 | 25 |
+| 合计 | 33 | 147 | 180 |
+
+**本课工程训练：** 33分钟，已包含在上述180分钟；编码与运行操作共147分钟。下文每步先做“先想”，其余工程活动穿插在本步编码、检查之后完成，不另外增加课时。文档只写本次最小记录，沿用同一份 `docs` 文件；材料与模板从教材链接读取，工程内没有 `docs` 时先建目录。
+
+**本课提示词用法：** 先读 `materials/约定卡.md` 和当前文件，只改当前步指定范围，保留已完成业务。AI须实际保存文件、简报修改与已执行检查、列出还需学生亲自验证的项目；学生按下文运行并填写事实。常驻服务由学生操作，不因AI回复结束而停掉。补救提示只在对应失败发生时发送。
 
 ## 第1步：生成自己的本机配置
+
+**本步时间：** 25分钟 = 工程训练4分钟 + 编码/操作21分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 配置值与可提交模板为什么要分开？
+- **亲手做：** 按已选环境路线亲手初始化，并用 git status 核对.env未进入待提交项，不展示内容。
+- **解释：** 解释重新生成密码为什么可能与已有数据不匹配。
+- **证据：** 在 docs/后端启动笔记.md 仅记录路线与初始化结果；只记实际结果，不写口令或token。
 
 **现在在哪：** CodeBuddy 打开 `campus-lab`。A 正在跑页面；B 已确认 Java 17并停止在 `backend` 目录；C-工具的工作目录是 `campus-lab`。
 
 **发给 CodeBuddy：**
 
 ```text
-请按materials/约定卡.md为课程准备本地配置工具，但这一步不生成业务代码。
+目标：按已选路线准备本机配置，不生成业务代码。
+修改范围：配置工具、模板、.gitignore。
+必要约束：
+分支：下文setup-env任务仅Docker执行。原生只核对已提供native-runtime.py、.env.example与.gitignore，由我运行native init，不创建或运行setup-env；两路都不覆盖已有.env。
 新建tools/setup-env.mjs，使用Node自带crypto随机生成足够长的口令，
 在项目根生成.env：DB_PASSWORD、MYSQL_ROOT_PASSWORD、REDIS_PASSWORD、DEMO_PASSWORD。
 已有.env时拒绝覆盖，不打印口令。新建.env.example，只放说明和占位文字。
@@ -28,15 +63,19 @@
 把.env、.private、.runtime、backend/target、node_modules和日志加入.gitignore。
 不要读取已有私密配置，不要把口令写入前端、README或回复。
 不要替我运行生成工具，我会亲自运行。
+验收：配置随机且不覆盖，秘密未提交。
 ```
 
-**等 AI 完成并保存：** 打开脚本看看它是否使用随机生成，检查 `.env.example` 里没有真实口令。此时没有 `.env` 是正常的，还没有执行生成。
+**等 AI 完成并保存：** Docker 路线查看新配置脚本；原生路线查看已提供的 `materials/native-runtime.py`。只检查随机生成与拒绝覆盖逻辑，确认公开 `.env.example` 没有真实口令；此时尚未执行初始化。
 
-**亲自操作：** C、`campus-lab` 根目录，两种系统相同：
+**亲自操作：** C、`campus-lab` 根目录，只选自己路线的一条。
 
-```text
-node tools/setup-env.mjs
-```
+| 路线 | 首次初始化命令 |
+| --- | --- |
+| Docker（macOS/Windows） | `node tools/setup-env.mjs` |
+| 原生（macOS/Linux） | `python3 materials/native-runtime.py init` |
+
+原生初始化会同时准备独立数据配置和随机 `.env`，之后不再运行 `setup-env.mjs`。若原生工具找不到已安装的二进制，使用教师按[备用路线](../engineering/07-环境准入与备用路线.md)确认的路径参数。已有 `.env` 时先核对是否为本课程已初始化配置；保留它，不删除重做、不把另一条路线的配置强行混用。
 
 **应该看见：** 工具提示本地配置已生成，但不显示口令。左侧文件树出现 `.env`。如果提示文件已存在，保留它，直接继续，不能为重做练习删除配置。
 
@@ -44,7 +83,7 @@ node tools/setup-env.mjs
 
 ```text
 配置工具运行后出现【不含口令的错误】。
-请只修复setup-env.mjs，不读取或覆盖已有.env，不输出其中的值。
+请按我已选的Docker/原生路线定位配置工具或缺少的环境；不读取或覆盖已有.env，不输出其中的值。
 我需要它在缺文件时生成，在已有文件时明确保留。
 ```
 
@@ -52,12 +91,22 @@ node tools/setup-env.mjs
 
 ## 第2步：让课程 MySQL 运行起来
 
-**现在在哪：** C 仍在 `campus-lab` 根目录。不要关闭 Docker Desktop。
+**本步时间：** 25分钟 = 工程训练4分钟 + 编码/操作21分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 数据目录、端口和服务进程是否都属于本课程？
+- **亲手做：** 对照[环境准入与备用路线](../engineering/07-环境准入与备用路线.md)检查23501与本课程隔离位置，再亲手启动所选路线。
+- **解释：** 说明停止服务与删除数据的区别。
+- **证据：** 在 docs/后端启动笔记.md 留服务状态和路线，不记口令；只记实际结果，不写口令或token。
+
+**现在在哪：** C 仍在 `campus-lab` 根目录。Docker 路线保持引擎运行；原生路线沿用第1步的独立配置。
 
 **发给 CodeBuddy：**
 
 ```text
-请新建根目录compose.yaml，项目名campus-v2。
+目标：按已选路线准备课程MySQL运行环境。
+修改范围：所选路线的数据库配置说明。
+必要约束：
+分支：Docker新建compose.yaml，项目名campus-v2，执行下文Compose任务。原生只核对native-runtime.py说明：独立.runtime/native、23501/23502、start/status；不改工具、不执行Compose。原生可同时起Redis，本课不做登录。
 服务不设置固定container_name，容器名称由Compose按项目名生成，以便第12课隔离新目录。
 本步定义MySQL8.4服务mysql：只映射127.0.0.1:23501到容器3306，
 数据库campus_course、用户campus，口令从.env读取DB_PASSWORD和MYSQL_ROOT_PASSWORD。
@@ -68,11 +117,14 @@ node tools/setup-env.mjs
 Redis留到下一课加入，本步不要提前启动它。
 请告诉我docker compose ps中怎样分辨starting与healthy。
 不要替我启动服务，不使用down -v。
+验收：课程MySQL就绪且隔离。
 ```
 
-**等 AI 完成并保存：** 看见 `compose.yaml` 新增后再运行。配置文件只引用变量名，不应写出真实口令。
+**等 AI 完成并保存：** Docker 路线确认新 `compose.yaml` 只引用变量名；原生路线确认初始化成功及运行说明。任何配置说明都不应展示真实口令。
 
-**亲自操作：** C、`campus-lab` 根目录，两种系统相同：
+**亲自操作：** C、`campus-lab` 根目录，只执行对应路线。
+
+Docker 路线：
 
 ```text
 docker version
@@ -80,32 +132,47 @@ docker compose up -d mysql
 docker compose ps
 ```
 
-首次需要下载 MySQL 镜像。第一次 `ps` 若显示 `starting`，过一会再执行同一条 `docker compose ps`。看到 `healthy` 再继续。
+原生路线：
 
-**应该看见：** 只有本课程 MySQL 使用本机 `23501` 端口。`up -d` 会返回输入提示符，MySQL 在 Docker 中继续运行；这与 B 里持续显示日志的 Java 程序不同。
+```sh
+python3 materials/native-runtime.py start
+python3 materials/native-runtime.py status
+```
+
+Docker 首次需要下载 MySQL 镜像，`ps` 若为 `starting`，稍后再查，看到 `healthy` 再继续。原生 `start` 完成后查看 `status`，确认本目录服务在运行；第3步后端启动将进一步验证数据库连接和迁移。原生工具同时启动 Redis 是环境准备，本课不增加登录业务。
+
+**应该看见：** 本课程 MySQL 使用本机 `23501` 端口；所选启动命令返回提示符后，本课程数据库继续运行，B 中的Java程序仍需要下一步另行启动。原生状态不是接口验收，不能据此填写业务通过。
 
 **失败时，只发这段修复提示：**
 
 ```text
-我在项目根运行docker compose up -d mysql后出现【不含口令的错误】，
-docker compose ps显示【状态】。
-请先区分Docker没启动、镜像下载失败、端口占用、数据库尚未就绪。
-只修改本课程配置；不结束未知进程，不删除卷，不输出.env。
+我的路线是【Docker/原生】，在项目根执行【本步对应命令】后出现【去敏错误】，状态显示【结果】。
+请区分Docker引擎/下载问题、原生二进制未准备、端口占用或数据库未就绪，只检查所选路线。
+不结束未知进程，不删除数据，不输出.env，不切换路线绕过问题。
 ```
 
-**下一步：** MySQL 显示 `healthy` 后，才让 Java 连进去。
+**下一步：** 所选路线启动与状态检查完成后，让 Java 连接并验证迁移；Docker须先等 `healthy`。
 
 ## 第3步：让 Java 认识数据库，并建立设备表
+
+**本步时间：** 40分钟 = 工程训练10分钟 + 编码/操作30分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 空间和设备是什么关系，哪一列防止设备指向不存在空间？
+- **亲手做：** 按[数据模型与字典](../engineering/03-数据模型与字典.md)画 Space 1→多 Device 的ER图，标PK/FK、online可空与初始化约束，再对照V1。
+- **解释：** 解释迁移记录为何不能靠重写旧V1修补。
+- **证据：** 在 docs/模型说明.md 留ER图与迁移作用；只记实际结果，不写口令或token。
 
 **现在在哪：** B 已停止，工作目录为 `campus-lab/backend`。C 中的 MySQL 保持运行。
 
 **发给 CodeBuddy：**
 
 ```text
-请给现有最小后端加入JdbcTemplate、MySQL驱动和Flyway所需依赖，
+目标：给现有最小后端加入JdbcTemplate、MySQL驱动和Flyway所需依赖。
+修改范围：backend依赖、配置、V1迁移。
+必要约束：
 沿用Java17、Spring Boot3.4.2。
 application.properties从optional:file:../.env[.properties]导入本机配置，
-连接127.0.0.1:23501/campus_course，用户名campus，使用DB_PASSWORD占位，
+默认连接127.0.0.1:23501/campus_course，用户名campus；连接URL与用户名允许DB_URL、DB_USER环境配置覆盖，密码使用DB_PASSWORD占位，
 不得读取或复制.env的真实内容。
 optional只表示文件导入可选，不代表当前数据源和Flyway可缺少配置；
 注释需说明第08课仍要保留本机.env并先启动健康MySQL。
@@ -114,6 +181,7 @@ optional只表示文件导入可选，不代表当前数据源和Flyway可缺少
 online未知必须是SQL NULL，模拟标记保留，device的spaceId须能找到空间。
 迁移只在第一次使用这个数据库时建立和填充，不在每次启动时删除重建。
 本步保留health接口，不实现其他页面接口。不要启动常驻服务。
+验收：迁移4空间16设备，不重复清库。
 ```
 
 **等 AI 完成并保存：** 查看新的迁移文件，找到 `d01`、`d16` 与四个空间。看不懂全部 SQL 没关系，先确认这些是自己的练习数据。
@@ -143,7 +211,7 @@ Windows PowerShell，工作目录为 `campus-lab/backend`：
 **失败时，只发这段修复提示：**
 
 ```text
-MySQL已healthy，但后端启动出现【不含口令的第一段错误】。
+MySQL按所选路线完成启动和状态检查，但后端出现【不含口令的第一段错误】。
 请检查.env相对backend的导入路径、23501端口、数据库名与Flyway配置。
 不要硬编码口令，不删除数据库，不让启动失败自动退回模拟成功。
 如果V1已执行，后续修正用新的迁移文件，不篡改已执行的V1。
@@ -153,12 +221,21 @@ MySQL已healthy，但后端启动出现【不含口令的第一段错误】。
 
 ## 第4步：让设备接口读出十六台设备
 
+**本步时间：** 30分钟 = 工程训练6分钟 + 编码/操作24分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 数据库的可空布尔字段如何进入JSON？
+- **亲手做：** 写true/false/null三行字段映射，指着controller/service/query各找一处职责。
+- **解释：** 解释SQL绑定与页面字段为何需要合同。
+- **证据：** 在 docs/API核对.md 留设备响应和三态测试结果；只记实际结果，不写口令或token。
+
 **现在在哪：** 先在 B 按 Ctrl+C 停自己的后端。A、MySQL 保持运行。
 
 **发给 CodeBuddy：**
 
 ```text
-请在现有后端实现GET /api/devices。
+目标：在现有后端实现GET /api/devices。
+修改范围：设备查询分层与测试。
+必要约束：
 本课暂时允许未登录读取，下一课再加登录。
 使用JdbcTemplate从MySQL的devices表查询，按id排序；
 返回{code:0,message:"ok",data:[设备数组]}，字段按约定卡。
@@ -166,6 +243,7 @@ online为NULL时返回JSON null，不能变成false；simulated保持true。
 控制器接收请求，服务组织结果，查询代码单独放置，用简短注释说明各自作用。
 增加测试检查true、false和null都能保持原意。
 不要从mock-campus.json临时返回数据，不实现其他接口，不启动服务。
+验收：MySQL查询正确，三态测试通过。
 ```
 
 **等 AI 完成并保存：** 看 AI 列出的修改文件，再做一次“测试→启动”。新 Java 代码只有重新启动 B 后才生效。
@@ -193,12 +271,21 @@ online为NULL时返回JSON null，不能变成false；simulated保持true。
 
 ## 第5步：只把设备页接到新接口
 
+**本步时间：** 35分钟 = 工程训练4分钟 + 编码/操作31分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 同一详情里是否还有未接后端的分区？
+- **亲手做：** 对照数据清单标“已接基本信息/仍演示读数历史责任”，亲手核对页面标签。
+- **解释：** 说明局部联调成功为什么不能声称全站接通。
+- **证据：** 在 docs/页面需要的数据.md 更新实际进度；只记实际结果，不写口令或token。
+
 **现在在哪：** CodeBuddy 打开 `frontend/data-service.js` 和设备页相关代码。A、B、MySQL 都保持运行。
 
 **发给 CodeBuddy：**
 
 ```text
-请只把现有设备台账和详情中的设备基本信息改为读取同源GET /api/devices：
+目标：只把现有设备台账和详情中的设备基本信息改为读取同源GET /api/devices。
+修改范围：设备基本信息的数据来源。
+必要约束：
 ID、名称、类别、spaceId、online、simulated来自MySQL。
 在data-service.js实现请求与响应检查；其他页面的浏览器演示暂时保留。
 设备详情里的点位读数、历史、责任信息本课还未有对应接口，
@@ -208,7 +295,8 @@ ID、名称、类别、spaceId、online、simulated来自MySQL。
 首次失败显示可重试的错误；成功后再失败时保留旧列表并明确标“上次成功结果”，
 不能假装刷新成功、不能自动回退为模拟数据。
 成功刷新后清除旧错误，显示本次读取时间；该时间不能冒充设备采样时间。
-不要启动服务，告诉我具体点击哪里检查。
+不要启动服务。
+验收：基本信息接后端，失败不回mock。
 ```
 
 **等 AI 完成并保存：** 回复结束后保存并刷新校园网页。前端文件变了，不必重启 B。
@@ -229,12 +317,21 @@ ID、名称、类别、spaceId、online、simulated来自MySQL。
 
 ## 第6步：确认数据保存了，失败也说清楚了
 
+**本步时间：** 25分钟 = 工程训练5分钟 + 编码/操作20分钟（含AI生成等待、亲自运行与本步业务验收）。
+
+- **先想：** 服务重启、网页刷新和清空数据库是否同一件事？
+- **亲手做：** 亲手完成本步断开/恢复/数据库重启/首次失败四项检查并记录真实结果。
+- **解释：** 解释MySQL为什么能在重启后保留设备。
+- **证据：** 在 docs/测试记录.md 留四项观察与未通过项；只记实际结果，不写口令或token。
+
 **现在在哪：** 浏览器停在已经成功读取的设备页，不关闭标签。
 
 **发给 CodeBuddy：**
 
 ```text
-请在docs/页面需要的数据.md更新实际进度：
+目标：在docs/页面需要的数据.md更新实际进度。
+修改范围：数据清单与启动笔记。
+必要约束：
 设备台账和详情中的设备基本信息已接到MySQL；
 详情中的点位读数、历史、责任仍为教学样本或浏览器演示，直到第10课才接通。
 其他页面也按当前代码注明来源。
@@ -242,8 +339,9 @@ ID、名称、类别、spaceId、online、simulated来自MySQL。
 成功读取、后端停止后在页内重新读取、后端恢复后刷新、MySQL重启后再次读取。
 另列“后端停止后整页刷新”的首次读取失败：旧列表只在内存，
 此时应显示错误和重试，不能要求它保留刷新前列表，也不能回退为模拟列表。
-MySQL重启检查写清：先停B，重启数据库等healthy，再启动B并读取。
+MySQL重启检查按已选路线写清：先停B；Docker重启mysql等healthy；原生运行native-runtime.py stop再start/status；随后启动B并读取。保留本目录数据，不重新init。
 不要替我编写通过结论，不修改业务代码或启动服务。
+验收：重启数据仍在，失败状态准确。
 ```
 
 **等 AI 完成并保存：** 看到四类检查及单列的“整页刷新后首次失败”，结果仍待填写，再亲手操作。
@@ -252,7 +350,7 @@ MySQL重启检查写清：先停B，重启数据库等healthy，再启动B并读
 
 1. 在 B 按 Ctrl+C；设备页点击刷新，应保留旧结果并提示失败。
 2. B 仍在 `backend`，执行本课第4步的启动命令；等启动完再刷新，应恢复正常。
-3. 再停止 B。C 在项目根运行 `docker compose restart mysql`，随后执行 `docker compose ps`，等 `healthy`。
+3. 再停止 B。C 在项目根：Docker 路线运行 `docker compose restart mysql`、`docker compose ps` 并等 `healthy`；原生路线运行 `python3 materials/native-runtime.py stop`，再运行 `python3 materials/native-runtime.py start`、`python3 materials/native-runtime.py status`。原生此操作会重启本课程两个进程，不重新初始化，不删除数据。
 4. 在 B 重新启动后端，设备页再次读取，确认仍是16台。
 5. 再停止 B，整页刷新并进入设备页，确认首次读取只显示错误和重试、没有模拟列表。把上述实际结果填入笔记。
 
@@ -262,8 +360,8 @@ MySQL重启检查写清：先停B，重启数据库等healthy，再启动B并读
 
 ```text
 我执行到人工检查第【序号】项，实际看到【结果】。
-请检查课程MySQL命名卷、启动迁移或设备页失败状态中与该现象有关的一处。
+请检查课程MySQL命名卷（Docker）或本目录.runtime/native数据（原生）、启动迁移或设备页失败状态中与该现象有关的一处。
 不要删除卷，不用重新导入一份临时数据冒充持久保存。
 ```
 
-**下一步：** 下一课增加登录，Redis 才开始发挥作用。下课停止自己的 A、B；C 在项目根运行 `docker compose stop`，数据卷保留。
+**下一步：** 下一课增加登录，Redis 才开始发挥作用。下课停止自己的 A、B；C 在项目根按所选路线运行 `docker compose stop` 或 `python3 materials/native-runtime.py stop`，课程数据保留。

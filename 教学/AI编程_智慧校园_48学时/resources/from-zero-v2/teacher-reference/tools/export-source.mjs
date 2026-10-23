@@ -54,8 +54,10 @@ try{
   await checkPath(path.join(root,'.env'));
   for(const line of (await readFile(path.join(root,'.env'),'utf8')).split(/\r?\n/)){
     if(line&&!line.startsWith('#')&&line.includes('=')){
-      const value=line.slice(line.indexOf('=')+1);
-      if(value.length>=12)privateValues.push(value);
+      const key=line.slice(0,line.indexOf('=')),value=line.slice(line.indexOf('=')+1);
+      // A documented loopback JDBC URL contains no credential and also appears in the source defaults.
+      const publicLocalUrl=key==='DB_URL'&&/^jdbc:mysql:\/\/127\.0\.0\.1:\d+\/campus_course\?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false$/.test(value);
+      if(value.length>=12&&!publicLocalUrl)privateValues.push(value);
     }
   }
 }catch(e){if(e.code!=='ENOENT')throw e}
@@ -72,5 +74,5 @@ async function walk(dir){
   }
 }
 await walk(out);
-await writeFile(path.join(out,'SOURCE-MANIFEST.json'),JSON.stringify({version:'2.0.1',files},null,2)+'\n');
+await writeFile(path.join(out,'SOURCE-MANIFEST.json'),JSON.stringify({version:'2.1.0',files},null,2)+'\n');
 console.log('已导出 '+files.length+' 个源码文件到 '+path.relative(root,out)+'。未包含本机.env或运行数据。请按README在新目录验证。');

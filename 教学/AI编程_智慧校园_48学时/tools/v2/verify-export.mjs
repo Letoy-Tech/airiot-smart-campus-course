@@ -55,6 +55,16 @@ dir=await fixture('leak');await writeFile(path.join(dir,'docs/readme.md'),'passw
 const leak=execute(dir);denied(leak,/发现配置值进入交付文件/);assert.ok(!leak.stderr.includes('temporary-fixture-value-12345'));pass('fake credential leakage detected without printing value');
 dir=await fixture('private-link');await rename(path.join(dir,'.env'),path.join(dir,'private-config'));await symlink('private-config',path.join(dir,'.env'));
 denied(execute(dir),/拒绝符号链接/);pass('private config symlink rejected');
+dir=await fixture('public-loopback-url');
+const localUrl='jdbc:mysql://127.0.0.1:23501/campus_course?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false';
+await writeFile(path.join(dir,'.env'),'DB_URL='+localUrl+'\nDEMO_PASSWORD=temporary-fixture-value-12345\n');
+await writeFile(path.join(dir,'backend/src/App.java'),'documented local default: '+localUrl);
+assert.equal(execute(dir).status,0);pass('documented loopback URL is not confused with a credential');
+dir=await fixture('credential-bearing-url');
+const privateUrl='jdbc:mysql://127.0.0.1:23501/campus_course?password=temporary-fixture-value-12345';
+await writeFile(path.join(dir,'.env'),'DB_URL='+privateUrl+'\n');
+await writeFile(path.join(dir,'backend/src/App.java'),privateUrl);
+denied(execute(dir),/发现配置值进入交付文件/);pass('credential-bearing connection URL still rejected');
 const report={date:new Date().toISOString(),passed:results.length,results,scope:'isolated synthetic fixtures; no real credentials or services'};
 await writeFile(path.join(runtime,'export-results.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

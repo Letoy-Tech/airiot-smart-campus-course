@@ -1,0 +1,102 @@
+{
+  "version": "2.1.0",
+  "checkedOn": "2026-10-23",
+  "scope": "Author verification of current textbook and teacher reference; not a new student trial",
+  "status": "PASS for listed checks",
+  "course": {
+    "lessons": 12,
+    "classHours": 48,
+    "steps": 64,
+    "minutesPerLesson": 180,
+    "engineeringMinutesWithinCourse": 394,
+    "codingAndVerificationMinutes": 1766
+  },
+  "backend": {
+    "java": "17",
+    "tests": [
+      {
+        "name": "cn.campus.course.VersionJsonBoundaryTest",
+        "tests": "16",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "cn.campus.course.AuthServiceTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "cn.campus.course.CaseRulesTest",
+        "tests": "9",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "cn.campus.course.InputValidationTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      }
+    ],
+    "total": 30,
+    "status": "PASS"
+  },
+  "nativeRuntime": {
+    "platform": "macOS arm64",
+    "mysql": "8.4.10",
+    "redis": "7.2.6",
+    "httpAndPersistence": "PASS",
+    "guardTests": 5,
+    "details": "v2.1.0-native-results.json"
+  },
+  "export": {
+    "checks": 11,
+    "status": "PASS",
+    "details": "v2.1.0-export-results.json"
+  },
+  "testingLab": {
+    "initialTests": 7,
+    "expectedInitialFailures": 1,
+    "afterRepairPassed": 7,
+    "afterAddedRegressionPassed": 8,
+    "status": "PASS"
+  },
+  "gitLab": {
+    "firstCommit": true,
+    "featureBranchAndMerge": true,
+    "deliberateConflictAndResolution": true,
+    "status": "PASS",
+    "scope": "isolated temporary exercise repositories"
+  },
+  "reader": {
+    "desktopVisualReview": true,
+    "narrowViewportCssPixels": 390,
+    "diagramHorizontalScroll": true,
+    "fileProtocolStandaloneNavigationAndEmbeddedSvg": true,
+    "physicalPhoneTest": false,
+    "allLocalAssetsEmbedded": true
+  },
+  "limits": [
+    "No fresh V2.1.0 CodeBuddy or human-student 64-step trial",
+    "No new Docker run",
+    "No Windows or Linux runtime validation",
+    "No other physical computer or physical phone acceptance",
+    "Classroom timings are planned allocations, not measured sessions",
+    "Complete system and historical student implementations unchanged"
+  ],
+  "nativeHandoff": {
+    "status": "PASS",
+    "exportedFiles": 43,
+    "newDirectoryCleanPackageTests": 30,
+    "newDatabaseAndRedisEmptyBeforeSeed": true,
+    "freshSeedAndCompleteEventLifecycle": true,
+    "stopStartPreservesBusinessAndConfiguration": true,
+    "dedicatedProcessesStopped": true,
+    "details": "v2.1.0-handoff-results.json"
+  }
+}

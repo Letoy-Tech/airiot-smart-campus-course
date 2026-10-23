@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": "2.0.2",
+  "version": "2.1.0",
   "course_title": "从空白页面做出智慧校园",
   "total_class_hours": 48,
   "minutes_per_class_hour": 45,
@@ -90,6 +90,16 @@
       "class_hours": 4,
       "student_trial_verified": false
     }
+  ],
+  "engineering_documents": [
+    "handbook-v2/engineering/01-需求规格与用例.md",
+    "handbook-v2/engineering/02-架构与设计取舍.md",
+    "handbook-v2/engineering/03-数据模型与字典.md",
+    "handbook-v2/engineering/04-API接口手册.md",
+    "handbook-v2/engineering/05-Git协作实训.md",
+    "handbook-v2/engineering/06-测试设计与故障定位.md",
+    "handbook-v2/engineering/07-环境准入与备用路线.md",
+    "handbook-v2/engineering/08-评价量规与工程交付.md"
   ],
   "entry": "handbook-v2/index.html"
 }

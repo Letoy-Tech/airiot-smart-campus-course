@@ -1,4 +1,6 @@
 .env
+.env.*
+!.env.example
 .private/
 .runtime/
 node_modules/

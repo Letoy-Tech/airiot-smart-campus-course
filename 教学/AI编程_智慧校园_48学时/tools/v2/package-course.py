@@ -1,14 +1,20 @@
 """Package only V2 public teaching files. Never packages runtime data or local credentials."""
 from pathlib import Path
-import hashlib,json,zipfile,datetime,sys
+import hashlib,json,zipfile,datetime,sys,argparse
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT.parent
-VERSION='2.0.2'
+VERSION=json.loads((ROOT/'tools/v2/course-config.json').read_text())['version']
+ap=argparse.ArgumentParser()
+ap.add_argument('--check-only',action='store_true')
+ap.add_argument('--output-dir',type=Path,default=ROOT.parents[1]/'output/releases'/('v'+VERSION))
+args=ap.parse_args()
+OUT=args.output_dir.resolve()
+if any(p.is_symlink() for p in [args.output_dir,*args.output_dir.parents]):raise RuntimeError('Refusing symlink output')
 IGNORE={'.env','.private','.runtime','.git','node_modules','target','dist','__pycache__','.DS_Store','.codebuddy'}
 def assert_regular_source(p):
  if p.is_symlink() or any(parent.is_symlink() for parent in p.parents):
   raise RuntimeError('Refusing symlink path '+str(p))
  if not p.is_file():raise RuntimeError('Not a regular source file '+str(p))
+ if p.suffix.lower() in {'.zip','.tar','.gz','.7z','.rar','.bak','.pem','.key','.p12','.pfx','.jks','.keystore'}:raise RuntimeError('Refusing nested archive, backup or secret file '+str(p))
 def files(base):
  return sorted(p for p in base.rglob('*') if p.is_file() and not any(c in IGNORE for c in p.relative_to(base).parts) and not p.name.endswith('.log') and not (p.name.startswith('.env') and p.name!='.env.example') and not (p.name.startswith('从空白开始_手把手教程_V') and p.name!=f'从空白开始_手把手教程_V{VERSION}.html'))
 def write_zip(dest,mapping):
@@ -27,7 +33,7 @@ def write_zip(dest,mapping):
  with zipfile.ZipFile(dest) as z:
   assert z.testzip() is None
   for x in manifest:assert hashlib.sha256(z.read(x['path'])).hexdigest()==x['sha256']
- return {'file':str(dest.resolve()),'bytes':dest.stat().st_size,'files':len(manifest),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()}
+ return {'file':dest.name,'bytes':dest.stat().st_size,'files':len(manifest),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()}
 base=ROOT/'resources/from-zero-v2/student-start'
 student_mapping=[('campus-lab/'+str(p.relative_to(base)),p) for p in files(base)]
 mapping=[];prefix=f'AI编程_手把手课程_V{VERSION}/'
@@ -41,13 +47,14 @@ for archive_mapping in [student_mapping,mapping]:
   if name in seen:raise RuntimeError('Duplicate archive path '+name)
   seen.add(name)
   assert_regular_source(src)
-if '--check-only' in sys.argv:
+if args.check_only:
  print(json.dumps({'version':VERSION,'student_files':len(student_mapping),'full_files':len(mapping),'checked':'paths only; no archives written'},ensure_ascii=False))
  raise SystemExit(0)
+OUT.mkdir(parents=True,exist_ok=True)
 for name in [f'AI编程_学生空白起点_V{VERSION}.zip',f'AI编程_智慧校园_V{VERSION}_手把手教学包.zip']:
  if (OUT/name).exists():raise RuntimeError('Refusing to replace existing archive: '+str(OUT/name))
 student=write_zip(OUT/f'AI编程_学生空白起点_V{VERSION}.zip',student_mapping)
 full=write_zip(OUT/f'AI编程_智慧校园_V{VERSION}_手把手教学包.zip',mapping)
-result={'version':VERSION,'created':datetime.datetime.now().isoformat(),'archives':[student,full]}
+result={'version':VERSION,'created':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),'archives':[student,full]}
 (OUT/f'AI编程_智慧校园_V{VERSION}_交付校验.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 print(json.dumps(result,ensure_ascii=False,indent=2))
