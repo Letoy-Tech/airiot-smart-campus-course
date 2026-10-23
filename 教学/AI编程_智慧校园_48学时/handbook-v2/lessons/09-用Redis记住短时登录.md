@@ -228,11 +228,18 @@ token只保存在data-service.js的内存变量，不能写localStorage/sessionS
 **亲自操作：**
 
 1. 确认顶部数据方式是“连接后端”。在 CodeBuddy **本机编辑器**打开自己的 `.env`，找到 `DEMO_PASSWORD`，只在本机查看。
-2. 浏览器输入用户名 `admin`，手动填入该密码并登录。不要把 `.env` 或密码发给 AI。
-3. 点击“设备”，确认16台设备重新出现。
-4. 点击退出，应回到登录。再登录一次，然后刷新整个网页，应再次要求登录。
+2. 打开浏览器开发者工具的“网络/Network”，输入用户名 `admin`，在密码框故意把正确口令的一个字符改错后登录；不要修改 `.env`。只看 `login` 请求的“状态/Status”列，应为401，页面应显示登录失败，不能出现受保护的设备内容。不要展开、复制或截图请求载荷、响应和Authorization。
+3. 改用正确口令登录，`login` 状态应为200；不要把 `.env` 或密码发给 AI。关闭开发者工具，点击“设备”，确认16台设备重新出现。
+4. 点击退出，应回到登录并清除已登录内容。在 **C-工具、`campus-lab` 根目录**执行下面的命令。macOS、Windows PowerShell与原生Linux使用同一条Node22命令；它直接请求本课程B后端，不带Authorization，不读取 `.env` 或浏览器存储：
 
-**应该看见：** 登录区显示真实账号 `admin`、角色 `ADMIN`；设备页显示后端来源。刷新要求重登是设计好的流程，不是丢失了 MySQL 数据。
+   ```text
+   node --input-type=module -e "const r=await fetch('http://127.0.0.1:8098/api/devices',{signal:AbortSignal.timeout(5000)});const j=await r.json();console.log({httpStatus:r.status,code:j.code,message:j.message});if(r.status!==401||j.code!==401)process.exitCode=1"
+   ```
+
+   应看到 `httpStatus: 401`、`code: 401` 和登录提示；若连接失败，先确认本课程B仍在运行，不能把连接失败算作401。此结果只证明**匿名请求被拒**；退出前旧token是否撤销需要独立会话测试，未执行就写“未验证”，不把令牌抄入命令。
+5. 回到浏览器，再正确登录一次，然后刷新整个网页，应再次要求登录。把错误登录、正确登录、匿名读取和刷新四项的预期/实际写入已有 `docs/测试记录.md`。
+
+**应该看见：** 错误密码401且未登录；正确登录后显示真实账号 `admin`、角色 `ADMIN`和后端设备；退出后的匿名读取401；刷新后需重登。这些动作计入本步原有8分钟测试练习，不另加步骤或时间，也不替代第6步的Redis重启实验。刷新要求重登是设计好的流程，不是丢失了 MySQL 数据。
 
 **失败时，只发这段修复提示：**
 

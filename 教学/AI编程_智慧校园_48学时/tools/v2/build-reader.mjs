@@ -26,7 +26,7 @@ const VERSION=config.version;
 await readSource(fileURLToPath(import.meta.url));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const lessonFiles=(await fs.readdir(path.join(base,'lessons'))).filter(x=>/^\d\d-.*\.md$/.test(x)).sort();
-const files=['00-先准备再开始.md',...lessonFiles.map(x=>'lessons/'+x),...config.engineering_documents.map(x=>'engineering/'+x),'教师安排.md','教师验证记录.md'];
+const files=['00-先准备再开始.md',...lessonFiles.map(x=>'lessons/'+x),...config.engineering_documents.map(x=>'engineering/'+x),...(config.supplementary_documents||[]),'教师安排.md','教师验证记录.md'];
 const items=[];for(let i=0;i<files.length;i++){const text=(await readSource(path.join(base,files[i]))).toString('utf8');items.push({id:'chapter-'+i,file:files[i],title:text.split('\n')[0].replace(/^# /,''),text})}
 const slug=s=>s.toLowerCase().replace(/<[^>]+>/g,'').replace(/[^\p{L}\p{N}\s_-]/gu,'').replace(/\s/g,'-');
 let steps=0;
@@ -78,7 +78,7 @@ for(const match of [...html.matchAll(/(href|src)="([^"]+)"/g)]){
   const extra=attr==='href'?'download="'+esc(path.basename(file))+'" ':'';
   standalone=standalone.replaceAll(full,extra+attr+'="data:'+mime+';base64,'+data+'"');
 }
-const index=JSON.stringify({schema_version:2,version:VERSION,course_title:'从空白页面做出智慧校园',total_class_hours:48,minutes_per_class_hour:45,steps,chapters:items.slice(1,13).map(x=>({id:x.file.slice(8,10),title:x.title,file:'handbook-v2/'+x.file,class_hours:4,student_trial_verified:false})),engineering_documents:config.engineering_documents.map(x=>'handbook-v2/engineering/'+x),entry:'handbook-v2/index.html'},null,2)+'\n';
+const index=JSON.stringify({schema_version:2,version:VERSION,course_title:'从空白页面做出智慧校园',total_class_hours:48,minutes_per_class_hour:45,steps,chapters:items.slice(1,13).map(x=>({id:x.file.slice(8,10),title:x.title,file:'handbook-v2/'+x.file,class_hours:4,student_trial_verified:false})),engineering_documents:config.engineering_documents.map(x=>'handbook-v2/engineering/'+x),supplementary_documents:(config.supplementary_documents||[]).map(x=>'handbook-v2/'+x),entry:'handbook-v2/index.html'},null,2)+'\n';
 const outputs={'handbook-v2/index.html':html,[`handbook-v2/从空白开始_手把手教程_V${VERSION}.html`]:standalone,'course-index-v2.json':index};
 // Check every destination before writing any output, preserving unrelated symlink targets.
 for(const relative of [...Object.keys(outputs),'tools/v2/reader-build-manifest.json']){

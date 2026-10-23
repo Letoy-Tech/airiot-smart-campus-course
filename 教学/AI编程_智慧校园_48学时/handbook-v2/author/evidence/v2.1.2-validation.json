@@ -1,0 +1,45 @@
+{
+  "version": "2.1.2",
+  "date": "2026-10-23",
+  "basisVersion": "2.1.1",
+  "status": "PASS",
+  "scope": "Feedback-to-text audit and document/tool checks; no services started",
+  "course": {
+    "lessons": 12,
+    "classHours": 48,
+    "steps": 64
+  },
+  "referenceAndRuntimeFilesUnchanged": true,
+  "mainPromptsUnchanged": true,
+  "promptLength": {
+    "unit": "non-whitespace Unicode characters including code",
+    "count": 64,
+    "median": 379.0,
+    "max": 1088,
+    "over200": 64
+  },
+  "changes": [
+    "student use-case sketch and design-document checklist",
+    "black-box/white-box and boundary/invalid-class distinction",
+    "wrong-password and anonymous-request instructions",
+    "HTML/CSS/JavaScript preflight diagnosis",
+    "12-issue feedback matrix in reader"
+  ],
+  "packageToolRegression": {
+    "checks": 9,
+    "failures": 0,
+    "includesSupplementaryInputStaleness": true
+  },
+  "retainedDecisions": [
+    "12 lessons and 48 class hours",
+    "staged mock-to-backend route",
+    "distributed modeling instead of an additional 2-hour UML lesson"
+  ],
+  "remaining": [
+    "prompt length only partially addressed",
+    "no new student or CodeBuddy end-to-end run",
+    "no new physical classroom timing or independent learning assessment",
+    "no new Docker, Windows, Linux, browser or native database acceptance"
+  ],
+  "historicalIntegrationEvidence": "v2.1.1-validation.json"
+}

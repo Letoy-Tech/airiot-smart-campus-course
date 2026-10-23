@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "智慧校园 V2 手把手课程 API 接口合同",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "description": "教师参考工程最终状态，共 14 个路径、15 个 HTTP 操作。与逐课建设中的学生工程区分：第 08 课设备可暂公开，第 09 课后除 health/login 外全需登录。所有示例为教学构造值，不是实测结果或可用凭据。请求 schema 表示客户端合同；严格整数由 JsonInputConfig 配置，并有 VersionJsonBoundaryTest 的 MockMvc 原始 JSON 边界覆盖；不代表已完成真实数据库联调。"
   },
   "servers": [

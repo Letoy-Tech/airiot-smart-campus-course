@@ -1,0 +1,331 @@
+{
+  "method": {
+    "unit": "non-whitespace Unicode characters including code",
+    "count": 64,
+    "median": 379.0,
+    "max": 1088,
+    "over200": 64
+  },
+  "rows": [
+    {
+      "lesson": "01",
+      "step": 1,
+      "charactersWithoutWhitespace": 386
+    },
+    {
+      "lesson": "01",
+      "step": 2,
+      "charactersWithoutWhitespace": 346
+    },
+    {
+      "lesson": "01",
+      "step": 3,
+      "charactersWithoutWhitespace": 216
+    },
+    {
+      "lesson": "01",
+      "step": 4,
+      "charactersWithoutWhitespace": 389
+    },
+    {
+      "lesson": "01",
+      "step": 5,
+      "charactersWithoutWhitespace": 300
+    },
+    {
+      "lesson": "02",
+      "step": 1,
+      "charactersWithoutWhitespace": 530
+    },
+    {
+      "lesson": "02",
+      "step": 2,
+      "charactersWithoutWhitespace": 393
+    },
+    {
+      "lesson": "02",
+      "step": 3,
+      "charactersWithoutWhitespace": 254
+    },
+    {
+      "lesson": "02",
+      "step": 4,
+      "charactersWithoutWhitespace": 352
+    },
+    {
+      "lesson": "02",
+      "step": 5,
+      "charactersWithoutWhitespace": 206
+    },
+    {
+      "lesson": "03",
+      "step": 1,
+      "charactersWithoutWhitespace": 287
+    },
+    {
+      "lesson": "03",
+      "step": 2,
+      "charactersWithoutWhitespace": 329
+    },
+    {
+      "lesson": "03",
+      "step": 3,
+      "charactersWithoutWhitespace": 374
+    },
+    {
+      "lesson": "03",
+      "step": 4,
+      "charactersWithoutWhitespace": 390
+    },
+    {
+      "lesson": "03",
+      "step": 5,
+      "charactersWithoutWhitespace": 222
+    },
+    {
+      "lesson": "04",
+      "step": 1,
+      "charactersWithoutWhitespace": 376
+    },
+    {
+      "lesson": "04",
+      "step": 2,
+      "charactersWithoutWhitespace": 280
+    },
+    {
+      "lesson": "04",
+      "step": 3,
+      "charactersWithoutWhitespace": 295
+    },
+    {
+      "lesson": "04",
+      "step": 4,
+      "charactersWithoutWhitespace": 244
+    },
+    {
+      "lesson": "04",
+      "step": 5,
+      "charactersWithoutWhitespace": 219
+    },
+    {
+      "lesson": "05",
+      "step": 1,
+      "charactersWithoutWhitespace": 328
+    },
+    {
+      "lesson": "05",
+      "step": 2,
+      "charactersWithoutWhitespace": 330
+    },
+    {
+      "lesson": "05",
+      "step": 3,
+      "charactersWithoutWhitespace": 402
+    },
+    {
+      "lesson": "05",
+      "step": 4,
+      "charactersWithoutWhitespace": 337
+    },
+    {
+      "lesson": "05",
+      "step": 5,
+      "charactersWithoutWhitespace": 310
+    },
+    {
+      "lesson": "06",
+      "step": 1,
+      "charactersWithoutWhitespace": 442
+    },
+    {
+      "lesson": "06",
+      "step": 2,
+      "charactersWithoutWhitespace": 651
+    },
+    {
+      "lesson": "06",
+      "step": 3,
+      "charactersWithoutWhitespace": 794
+    },
+    {
+      "lesson": "06",
+      "step": 4,
+      "charactersWithoutWhitespace": 756
+    },
+    {
+      "lesson": "06",
+      "step": 5,
+      "charactersWithoutWhitespace": 404
+    },
+    {
+      "lesson": "06",
+      "step": 6,
+      "charactersWithoutWhitespace": 375
+    },
+    {
+      "lesson": "07",
+      "step": 1,
+      "charactersWithoutWhitespace": 426
+    },
+    {
+      "lesson": "07",
+      "step": 2,
+      "charactersWithoutWhitespace": 360
+    },
+    {
+      "lesson": "07",
+      "step": 3,
+      "charactersWithoutWhitespace": 459
+    },
+    {
+      "lesson": "07",
+      "step": 4,
+      "charactersWithoutWhitespace": 231
+    },
+    {
+      "lesson": "07",
+      "step": 5,
+      "charactersWithoutWhitespace": 256
+    },
+    {
+      "lesson": "08",
+      "step": 1,
+      "charactersWithoutWhitespace": 532
+    },
+    {
+      "lesson": "08",
+      "step": 2,
+      "charactersWithoutWhitespace": 724
+    },
+    {
+      "lesson": "08",
+      "step": 3,
+      "charactersWithoutWhitespace": 570
+    },
+    {
+      "lesson": "08",
+      "step": 4,
+      "charactersWithoutWhitespace": 320
+    },
+    {
+      "lesson": "08",
+      "step": 5,
+      "charactersWithoutWhitespace": 395
+    },
+    {
+      "lesson": "08",
+      "step": 6,
+      "charactersWithoutWhitespace": 411
+    },
+    {
+      "lesson": "09",
+      "step": 1,
+      "charactersWithoutWhitespace": 513
+    },
+    {
+      "lesson": "09",
+      "step": 2,
+      "charactersWithoutWhitespace": 327
+    },
+    {
+      "lesson": "09",
+      "step": 3,
+      "charactersWithoutWhitespace": 623
+    },
+    {
+      "lesson": "09",
+      "step": 4,
+      "charactersWithoutWhitespace": 565
+    },
+    {
+      "lesson": "09",
+      "step": 5,
+      "charactersWithoutWhitespace": 247
+    },
+    {
+      "lesson": "09",
+      "step": 6,
+      "charactersWithoutWhitespace": 224
+    },
+    {
+      "lesson": "10",
+      "step": 1,
+      "charactersWithoutWhitespace": 382
+    },
+    {
+      "lesson": "10",
+      "step": 2,
+      "charactersWithoutWhitespace": 497
+    },
+    {
+      "lesson": "10",
+      "step": 3,
+      "charactersWithoutWhitespace": 532
+    },
+    {
+      "lesson": "10",
+      "step": 4,
+      "charactersWithoutWhitespace": 368
+    },
+    {
+      "lesson": "10",
+      "step": 5,
+      "charactersWithoutWhitespace": 456
+    },
+    {
+      "lesson": "11",
+      "step": 1,
+      "charactersWithoutWhitespace": 464
+    },
+    {
+      "lesson": "11",
+      "step": 2,
+      "charactersWithoutWhitespace": 547
+    },
+    {
+      "lesson": "11",
+      "step": 3,
+      "charactersWithoutWhitespace": 649
+    },
+    {
+      "lesson": "11",
+      "step": 4,
+      "charactersWithoutWhitespace": 404
+    },
+    {
+      "lesson": "11",
+      "step": 5,
+      "charactersWithoutWhitespace": 366
+    },
+    {
+      "lesson": "11",
+      "step": 6,
+      "charactersWithoutWhitespace": 268
+    },
+    {
+      "lesson": "12",
+      "step": 1,
+      "charactersWithoutWhitespace": 1088
+    },
+    {
+      "lesson": "12",
+      "step": 2,
+      "charactersWithoutWhitespace": 744
+    },
+    {
+      "lesson": "12",
+      "step": 3,
+      "charactersWithoutWhitespace": 539
+    },
+    {
+      "lesson": "12",
+      "step": 4,
+      "charactersWithoutWhitespace": 280
+    },
+    {
+      "lesson": "12",
+      "step": 5,
+      "charactersWithoutWhitespace": 315
+    }
+  ]
+}

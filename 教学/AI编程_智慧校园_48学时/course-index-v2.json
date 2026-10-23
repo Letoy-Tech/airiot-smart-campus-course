@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": "2.1.1",
+  "version": "2.1.2",
   "course_title": "从空白页面做出智慧校园",
   "total_class_hours": 48,
   "minutes_per_class_hour": 45,
@@ -100,6 +100,9 @@
     "handbook-v2/engineering/06-测试设计与故障定位.md",
     "handbook-v2/engineering/07-环境准入与备用路线.md",
     "handbook-v2/engineering/08-评价量规与工程交付.md"
+  ],
+  "supplementary_documents": [
+    "handbook-v2/反馈修复对照.md"
   ],
   "entry": "handbook-v2/index.html"
 }

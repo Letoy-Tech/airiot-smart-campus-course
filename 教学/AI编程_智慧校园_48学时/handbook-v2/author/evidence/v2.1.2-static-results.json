@@ -1,0 +1,425 @@
+{
+  "version": "2.1.2",
+  "lessons": [
+    {
+      "lesson": "01-从空白页面做出概览.md",
+      "steps": 5,
+      "minutes": [
+        45,
+        35,
+        25,
+        45,
+        30
+      ],
+      "engineering_minutes": [
+        15,
+        6,
+        4,
+        6,
+        5
+      ],
+      "coding_and_verification_minutes": [
+        30,
+        29,
+        21,
+        39,
+        25
+      ]
+    },
+    {
+      "lesson": "02-把设备放进台账.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        35,
+        40,
+        45,
+        30
+      ],
+      "engineering_minutes": [
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "coding_and_verification_minutes": [
+        24,
+        29,
+        36,
+        39,
+        26
+      ]
+    },
+    {
+      "lesson": "03-给设备安排位置和负责人.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        35,
+        35,
+        45,
+        35
+      ],
+      "engineering_minutes": [
+        5,
+        6,
+        5,
+        8,
+        5
+      ],
+      "coding_and_verification_minutes": [
+        25,
+        29,
+        30,
+        37,
+        30
+      ]
+    },
+    {
+      "lesson": "04-看懂读数再做能源页.md",
+      "steps": 5,
+      "minutes": [
+        40,
+        35,
+        35,
+        35,
+        35
+      ],
+      "engineering_minutes": [
+        10,
+        5,
+        6,
+        5,
+        4
+      ],
+      "coding_and_verification_minutes": [
+        30,
+        30,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "lesson": "05-把历史和原始报警接到页面.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        45,
+        30,
+        40,
+        35
+      ],
+      "engineering_minutes": [
+        6,
+        5,
+        6,
+        4,
+        6
+      ],
+      "coding_and_verification_minutes": [
+        24,
+        40,
+        24,
+        36,
+        29
+      ]
+    },
+    {
+      "lesson": "06-走完演练事件并串起整个前端.md",
+      "steps": 6,
+      "minutes": [
+        20,
+        25,
+        35,
+        40,
+        25,
+        35
+      ],
+      "engineering_minutes": [
+        4,
+        5,
+        5,
+        8,
+        4,
+        8
+      ],
+      "coding_and_verification_minutes": [
+        16,
+        20,
+        30,
+        32,
+        21,
+        27
+      ]
+    },
+    {
+      "lesson": "07-看着页面做第一个后端.md",
+      "steps": 5,
+      "minutes": [
+        35,
+        25,
+        40,
+        40,
+        40
+      ],
+      "engineering_minutes": [
+        10,
+        3,
+        6,
+        5,
+        6
+      ],
+      "coding_and_verification_minutes": [
+        25,
+        22,
+        34,
+        35,
+        34
+      ]
+    },
+    {
+      "lesson": "08-把设备保存到MySQL.md",
+      "steps": 6,
+      "minutes": [
+        25,
+        25,
+        40,
+        30,
+        35,
+        25
+      ],
+      "engineering_minutes": [
+        4,
+        4,
+        10,
+        6,
+        4,
+        5
+      ],
+      "coding_and_verification_minutes": [
+        21,
+        21,
+        30,
+        24,
+        31,
+        20
+      ]
+    },
+    {
+      "lesson": "09-用Redis记住短时登录.md",
+      "steps": 6,
+      "minutes": [
+        20,
+        30,
+        40,
+        40,
+        25,
+        25
+      ],
+      "engineering_minutes": [
+        4,
+        5,
+        7,
+        8,
+        5,
+        5
+      ],
+      "coding_and_verification_minutes": [
+        16,
+        25,
+        33,
+        32,
+        20,
+        20
+      ]
+    },
+    {
+      "lesson": "10-逐页接回真实后端.md",
+      "steps": 5,
+      "minutes": [
+        35,
+        30,
+        30,
+        40,
+        45
+      ],
+      "engineering_minutes": [
+        5,
+        4,
+        4,
+        15,
+        10
+      ],
+      "coding_and_verification_minutes": [
+        30,
+        26,
+        26,
+        25,
+        35
+      ]
+    },
+    {
+      "lesson": "11-让一件演练有始有终.md",
+      "steps": 6,
+      "minutes": [
+        25,
+        30,
+        30,
+        25,
+        45,
+        25
+      ],
+      "engineering_minutes": [
+        4,
+        5,
+        5,
+        5,
+        20,
+        6
+      ],
+      "coding_and_verification_minutes": [
+        21,
+        25,
+        25,
+        20,
+        25,
+        19
+      ]
+    },
+    {
+      "lesson": "12-把作品交到新目录.md",
+      "steps": 5,
+      "minutes": [
+        30,
+        30,
+        50,
+        40,
+        30
+      ],
+      "engineering_minutes": [
+        6,
+        5,
+        6,
+        5,
+        10
+      ],
+      "coding_and_verification_minutes": [
+        24,
+        25,
+        44,
+        35,
+        20
+      ]
+    }
+  ],
+  "steps": 64,
+  "starter_empty": true,
+  "fixtures_and_contract_bodies_identical": true,
+  "contract_action_boundaries_checked": [
+    "assign",
+    "close",
+    "note",
+    "recover",
+    "start",
+    "verify"
+  ],
+  "engineering_templates_checked": [
+    "API核对记录.md",
+    "交接与个人证据.md",
+    "同伴评审记录.md",
+    "模型说明记录.md",
+    "测试记录.md",
+    "需求与用例记录.md"
+  ],
+  "public_env_templates_checked": [
+    "student-start/.env.example",
+    "teacher-reference/.env.example"
+  ],
+  "data_service_offline_regression": {
+    "scope": "offline VM with mocked fetch and virtual timers; no backend/browser acceptance",
+    "checks": 10,
+    "results": [
+      {
+        "name": "headers succeed but body never settles: deadline still returns 503",
+        "status": "passed"
+      },
+      {
+        "name": "one five-second budget covers headers and body together",
+        "status": "passed"
+      },
+      {
+        "name": "body AbortError is a local 503 and clears the deadline",
+        "status": "passed"
+      },
+      {
+        "name": "valid JSON returns data and clears the deadline",
+        "status": "passed"
+      },
+      {
+        "name": "non-JSON HTTP 200 is a local malformed-response 502",
+        "status": "passed"
+      },
+      {
+        "name": "non-JSON HTTP error retains its response status",
+        "status": "passed"
+      },
+      {
+        "name": "network failure is a local 503 and clears the deadline",
+        "status": "passed"
+      },
+      {
+        "name": "valid HTTP error envelope preserves status and message",
+        "status": "passed"
+      },
+      {
+        "name": "headers never arrive: the same deadline returns 503",
+        "status": "passed"
+      },
+      {
+        "name": "HTTP success with a null or failed envelope is a local 502",
+        "status": "passed"
+      }
+    ]
+  },
+  "mock_offline_regression": {
+    "passed": 28,
+    "scope": "browser mock data and behavior; in-memory localStorage only"
+  },
+  "per_step_engineering_activities_and_time_tables_checked": true,
+  "engineering": {
+    "documents": [
+      "01-需求规格与用例.md",
+      "02-架构与设计取舍.md",
+      "03-数据模型与字典.md",
+      "04-API接口手册.md",
+      "05-Git协作实训.md",
+      "06-测试设计与故障定位.md",
+      "07-环境准入与备用路线.md",
+      "08-评价量规与工程交付.md"
+    ],
+    "figures": [
+      "architecture-deployment.svg",
+      "concept-classes.svg",
+      "er-model.svg",
+      "event-sequence.svg",
+      "event-state.svg",
+      "login-sequence.svg",
+      "use-cases.svg"
+    ],
+    "openapi_paths": 14,
+    "openapi_operations": 15,
+    "openapi_internal_refs": 121,
+    "openapi_matches_reference_controller": true
+  },
+  "environment_helper_copies_identical": [
+    "check-environment.mjs",
+    "native-runtime.py"
+  ],
+  "markdown_files_checked": 69,
+  "markdown_local_destinations_checked": 281,
+  "reader_static_checked": true,
+  "reader_visual_review_in_this_check": false,
+  "reader_unique_ids": 170
+}

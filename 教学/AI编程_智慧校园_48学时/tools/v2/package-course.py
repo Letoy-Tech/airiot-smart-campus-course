@@ -47,6 +47,7 @@ def current_reader():
                 'handbook-v2/00-先准备再开始.md', 'handbook-v2/教师安排.md', 'handbook-v2/教师验证记录.md'}
     expected.update(p.relative_to(ROOT).as_posix() for p in lessons)
     expected.update('handbook-v2/engineering/' + name for name in CONFIG['engineering_documents'])
+    expected.update('handbook-v2/' + name for name in CONFIG.get('supplementary_documents', []))
     if len(lessons) != CONFIG['lessons'] or not expected <= set(manifest.get('sources', {})):
         raise RuntimeError('阅读版未包含当前全部课程来源；' + hint)
     outputs = {'handbook-v2/index.html', f'handbook-v2/从空白开始_手把手教程_V{VERSION}.html', 'course-index-v2.json'}

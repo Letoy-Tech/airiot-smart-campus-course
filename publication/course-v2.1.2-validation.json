@@ -1,0 +1,65 @@
+{
+  "version": "2.1.2",
+  "checkedOn": "2026-10-23",
+  "status": "PASS",
+  "sourceEvidence": "../教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.1.2-validation.json",
+  "structureEvidence": "../教学/AI编程_智慧校园_48学时/handbook-v2/author/evidence/v2.1.2-static-results.json",
+  "scope": {
+    "courseDocumentsUpdated": true,
+    "completeSystemChanged": false,
+    "referenceRuntimeChanged": false,
+    "historicalStudentRunsChanged": false
+  },
+  "limits": [
+    "prompt length only partially addressed",
+    "no new student or CodeBuddy end-to-end run",
+    "no new physical classroom timing or independent learning assessment",
+    "no new Docker, Windows, Linux, browser or native database acceptance"
+  ],
+  "archives": [
+    {
+      "file": "AI编程_学生空白起点_V2.1.2.zip",
+      "files": 12,
+      "crcHashesAndSourceMatch": true,
+      "privatePathsAbsent": true
+    },
+    {
+      "file": "AI编程_智慧校园_V2.1.2_手把手教学包.zip",
+      "files": 161,
+      "crcHashesAndSourceMatch": true,
+      "privatePathsAbsent": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "airiot-course-reader-v2.1.2.html",
+      "bytes": 1138174,
+      "sha256": "b683623a48510c9827de743753f9b68c39799552ba26acd7982ac2111ec74fcc"
+    },
+    {
+      "name": "airiot-smart-campus-course-v2.1.2.zip",
+      "bytes": 940357,
+      "sha256": "d311b8e4d8cc0c42fd73b471e8306354fed33ee83c12278d33d793594357a1da"
+    },
+    {
+      "name": "airiot-student-start-v2.1.2.zip",
+      "bytes": 76455,
+      "sha256": "ad4909612e09636e73057f6d039304549477f29ae1e84504b3933920f7854801"
+    }
+  ],
+  "privacy": {
+    "gitleaksStaged": "PASS",
+    "gitleaksReleaseArchives": "PASS",
+    "publicationPathAndCredentialScan": "PASS",
+    "packagePathAndTextScan": "PASS"
+  },
+  "actualExtractedPackageCheck": {
+    "version": "2.1.2",
+    "student_files": 12,
+    "full_files": 161,
+    "reader_sources_verified": 67,
+    "checked": "reader hashes and paths; no files written",
+    "status": "PASS",
+    "scope": "Actual distributed ZIP extracted without rebuilding; reader includes the feedback matrix"
+  }
+}

@@ -222,18 +222,27 @@ class PackageCourseTests(unittest.TestCase):
         if not node or not (dependencies / 'marked/package.json').is_file():
             self.skipTest('Optional real builder check requires local Node and already-installed marked')
         (self.root / 'tools/v2/node_modules').symlink_to(dependencies, target_is_directory=True)
+        supplement = 'handbook-v2/feedback-review.md'
+        self.write(supplement, '# Feedback review\n\nVerified findings and remaining limits.\n')
+        config_path = self.root / 'tools/v2/course-config.json'
+        config = json.loads(config_path.read_text())
+        config['supplementary_documents'] = ['feedback-review.md']
+        config_path.write_text(json.dumps(config))
         built = subprocess.run([node, str(self.root / 'tools/v2/build-reader.mjs')],
                                cwd=self.root, text=True, capture_output=True, timeout=30)
         self.assertEqual(built.returncode, 0, built.stderr)
         manifest = json.loads((self.root / MANIFEST).read_text())
-        self.assertEqual(set(manifest['sources']), set(CORE_SOURCES + ASSETS))
+        self.assertEqual(set(manifest['sources']), set(CORE_SOURCES + ASSETS + [supplement]))
         self.assertEqual(set(manifest['outputs']), set(OUTPUTS))
         for group in ['sources', 'outputs']:
             for name, digest in manifest[group].items():
                 self.assertEqual(digest, sha(self.root / name))
         self.assertEqual(self.run_package('--check-only').returncode, 0)
-        self.write(ASSETS[1], 'export const fixture = 2;\n')
-        self.assert_rejected_without_release(self.run_package(), ASSETS[1])
+        for changed in [ASSETS[1], supplement]:
+            original = (self.root / changed).read_bytes()
+            self.write(changed, 'Changed after reader build.\n')
+            self.assert_rejected_without_release(self.run_package(), changed)
+            (self.root / changed).write_bytes(original)
 
 
 if __name__ == '__main__':

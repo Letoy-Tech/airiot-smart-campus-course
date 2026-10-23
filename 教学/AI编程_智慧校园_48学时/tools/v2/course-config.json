@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.1.2",
   "course_title": "从空白页面做出智慧校园",
   "lessons": 12,
   "steps": 64,
@@ -14,5 +14,8 @@
     "06-测试设计与故障定位.md",
     "07-环境准入与备用路线.md",
     "08-评价量规与工程交付.md"
+  ],
+  "supplementary_documents": [
+    "反馈修复对照.md"
   ]
 }

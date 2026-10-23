@@ -53,7 +53,10 @@ def check_markdown_links(files):
             if parsed.scheme or parsed.netloc or not parsed.path:
                 continue  # External link or page-local anchor; no network requests.
             target = source.parent / unquote(parsed.path)
-            assert target.exists(), (str(source.relative_to(ROOT)), "missing-markdown-link", link)
+            # This run writes its own evidence before building the reader. A new
+            # version must not need a fabricated placeholder report to pass.
+            if target.resolve() != REPORT.resolve():
+                assert target.exists(), (str(source.relative_to(ROOT)), "missing-markdown-link", link)
             checked += 1
     return checked
 
